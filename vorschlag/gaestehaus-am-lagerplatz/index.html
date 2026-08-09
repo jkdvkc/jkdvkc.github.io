@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gästehaus am Lagerplatz Winterthur – Zimmer für Kurz- und Langzeitgäste</title>
+<meta name="description" content="Gästehaus am Lagerplatz, Tössfeldstrasse 21–23, Winterthur: eigenes Zimmer statt Hotelnummer, für eine Nacht, eine Woche oder einen Monat. Auf dem ehemaligen Sulzer-Areal.">
+<meta property="og:title" content="Gästehaus am Lagerplatz – Winterthur">
+<meta property="og:description" content="Professionelles Gästehaus für Kurz- und Langzeitgäste auf dem Lagerplatz-Areal. Eigenes Zimmer, eigener Rhythmus.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Gästehaus am Lagerplatz",
+  "description": "Professionelles Gästehaus für Kurz- und Langzeitgäste auf dem Lagerplatz-Areal in Winterthur.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tössfeldstrasse 21–23",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41525510930",
+  "email": "info@amlagerplatz.ch",
+  "url": "https://www.amlagerplatz.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "7"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#e8e4dc;
+  --surface:#f6f4ef;
+  --fg:#211f1b;
+  --muted:#5a564e;
+  --brand:#26302a;
+  --accent:#b1552e;
+  --line:rgba(33,31,27,0.14);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'Public Sans',system-ui,sans-serif;
+  font-size:clamp(15px,0.3vw + 14.4px,17px);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,
+h2,
+h3{
+  font-family:'Archivo',system-ui,sans-serif;
+  letter-spacing:-0.01em;
+  font-weight:700;
+  line-height:1.02;
+  margin:0;
+  color:var(--brand);
+}
+
+h1{
+  font-size:clamp(2.6rem,6.4vw + 1rem,6rem);
+  letter-spacing:-0.02em;
+}
+
+h2{
+  font-size:clamp(1.9rem,3vw + 1rem,3rem);
+}
+
+h3{
+  font-size:clamp(1.15rem,1vw + 1rem,1.5rem);
+}
+
+.mono{
+  font-family:'JetBrains Mono',monospace;
+}
+
+p{
+  margin:0 0 1em;
+}
+
+a{
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  background:var(--brand);
+  color:#fff;
+  padding:0.8em 1.2em;
+  z-index:200;
+}
+
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+}
+
+:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+.wrap{
+  max-width:1180px;
+  margin:0 auto;
+  padding-inline:clamp(1.2rem,4vw,3rem);
+}
+
+header.site{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(232,228,220,0.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding-block:0.9rem;
+}
+
+.brandmark{
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
+}
+
+.brandmark img{
+  height:34px;
+  width:auto;
+}
+
+.brandmark-text{
+  font-family:'Archivo',sans-serif;
+  font-weight:700;
+  font-size:1rem;
+  letter-spacing:-0.01em;
+}
+
+.nav-links{
+  display:flex;
+  gap:clamp(1rem,2vw,2rem);
+  align-items:center;
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-size:0.92rem;
+}
+
+.nav-links a{
+  text-decoration:none;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+.nav-phone{
+  font-family:'JetBrains Mono',monospace;
+  background:var(--brand);
+  color:#f6f4ef;
+  padding:0.55em 1em;
+  text-decoration:none;
+  font-size:0.85rem;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+@media (max-width:640px){
+  .nav-links{
+    display:none;
+  }
+}
+
+main{
+  display:block;
+}
+
+section{
+  padding-block:clamp(3rem,7vw,6rem);
+}
+
+/* HERO */
+.hero{
+  border-bottom:1px solid var(--line);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+}
+
+.hero-kicker{
+  font-family:'JetBrains Mono',monospace;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-size:0.78rem;
+  color:var(--accent);
+  font-weight:600;
+  margin-bottom:1.2rem;
+}
+
+.hero h1{
+  margin-bottom:1.1rem;
+}
+
+.hero .lead{
+  font-size:clamp(1.05rem,0.5vw + 1rem,1.3rem);
+  color:var(--muted);
+  max-width:42ch;
+}
+
+.hero .lead-2{
+  font-size:1rem;
+  color:var(--muted);
+  max-width:48ch;
+}
+
+.hero-facts{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-top:2.4rem;
+}
+
+.hero-fact{
+  background:var(--surface);
+  padding:1.1rem 1.3rem;
+}
+
+.hero-fact .n{
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  font-size:1.5rem;
+  color:var(--brand);
+  display:block;
+}
+
+.hero-fact .l{
+  font-size:0.82rem;
+  color:var(--muted);
+}
+
+/* DURATION SPINE — signature module */
+.spine{
+  background:var(--surface);
+  border-bottom:1px solid var(--line);
+}
+
+.spine-head{
+  max-width:56ch;
+  margin-bottom:2.4rem;
+}
+
+.spine-head p{
+  color:var(--muted);
+}
+
+.spine-track{
+  position:relative;
+  display:flex;
+  border:1px solid var(--brand);
+  margin-bottom:0;
+}
+
+.spine-stop{
+  flex:1;
+  background:none;
+  border:0;
+  cursor:pointer;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  font-size:clamp(0.85rem,1vw,1rem);
+  padding:1rem 0.6rem;
+  color:var(--brand);
+  position:relative;
+  border-right:1px solid var(--brand);
+  transition:background .2s ease,color .2s ease;
+}
+
+.spine-stop:last-child{
+  border-right:0;
+}
+
+.spine-stop[aria-selected="true"]{
+  background:var(--brand);
+  color:#f6f4ef;
+}
+
+.spine-stop:hover:not([aria-selected="true"]){
+  background:rgba(38,48,42,0.08);
+}
+
+.spine-stop .u{
+  display:block;
+  font-size:0.68rem;
+  opacity:0.75;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  margin-top:0.2rem;
+}
+
+.spine-panels{
+  border:1px solid var(--brand);
+  border-top:0;
+  padding:clamp(1.6rem,4vw,2.8rem);
+  background:var(--bg);
+}
+
+.spine-panel{
+  display:none;
+}
+
+.spine-panel.active{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.2rem;
+  animation:fadein .35s ease;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .spine-panel.active{
+    animation:none;
+  }
+}
+
+@keyframes fadein{
+  from{ opacity:0; transform:translateY(6px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+.spine-panel h3{
+  margin-bottom:0.6rem;
+}
+
+.spine-panel .price-note{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.82rem;
+  color:var(--accent);
+  border-top:1px dashed var(--line);
+  padding-top:0.9rem;
+  margin-top:0.4rem;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2.4rem;
+}
+
+@media (min-width:760px){
+  .about-grid{
+    grid-template-columns:0.9fr 1.1fr;
+    align-items:start;
+  }
+}
+
+.usp-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.usp-list li{
+  background:var(--surface);
+  padding:1.2rem 1.4rem;
+  display:flex;
+  gap:0.9rem;
+  align-items:baseline;
+}
+
+.usp-list .idx{
+  font-family:'JetBrains Mono',monospace;
+  color:var(--accent);
+  font-weight:700;
+  font-size:0.85rem;
+}
+
+/* NEIGHBOURHOOD */
+.area{
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+
+.area-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+}
+
+@media (min-width:760px){
+  .area-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.area-card{
+  border-top:2px solid var(--brand);
+  padding-top:1.1rem;
+}
+
+.area-card h3{
+  font-size:1.05rem;
+  margin-bottom:0.5rem;
+}
+
+.area-card p{
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* LOCATION */
+.location{
+  background:var(--brand);
+  color:#f0ede4;
+}
+
+.location h2{
+  color:#f0ede4;
+}
+
+.location .muted-l{
+  color:rgba(240,237,228,0.72);
+}
+
+.loc-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+}
+
+@media (min-width:760px){
+  .loc-grid{
+    grid-template-columns:1fr 1.2fr;
+  }
+}
+
+.loc-address{
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.loc-address strong{
+  display:block;
+  font-family:'Archivo',sans-serif;
+  font-size:1.3rem;
+  margin-bottom:0.4rem;
+}
+
+.map-frame{
+  border:1px solid rgba(240,237,228,0.25);
+  height:300px;
+  overflow:hidden;
+}
+
+.map-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  filter:grayscale(0.15);
+}
+
+/* RATING */
+.rating-strip{
+  border-bottom:1px solid var(--line);
+}
+
+.rating-box{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:0.9rem 1.6rem;
+}
+
+.rating-box .score{
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  font-size:2.6rem;
+  color:var(--brand);
+}
+
+.rating-box .stars{
+  color:var(--accent);
+  letter-spacing:0.05em;
+  font-size:1.1rem;
+}
+
+.rating-box .count{
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.6rem;
+}
+
+@media (min-width:640px){
+  .contact-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+.contact-card{
+  border:1px solid var(--line);
+  background:var(--surface);
+  padding:1.6rem;
+}
+
+.contact-card .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--muted);
+  margin-bottom:0.5rem;
+}
+
+.contact-card a{
+  font-size:1.15rem;
+  font-weight:600;
+  text-decoration:none;
+  color:var(--brand);
+}
+
+.contact-card a:hover{
+  color:var(--accent);
+}
+
+.contact-note{
+  margin-top:1.6rem;
+  font-size:0.9rem;
+  color:var(--muted);
+  max-width:52ch;
+}
+
+footer{
+  background:var(--brand);
+  color:rgba(240,237,228,0.75);
+  padding-block:2.4rem;
+}
+
+footer .wrap{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:1rem;
+  font-size:0.85rem;
+}
+
+footer a{
+  color:rgba(240,237,228,0.9);
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+
+.reveal.in{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+}
+
+.mobile-bar{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:150;
+  display:flex;
+  background:var(--brand);
+  border-top:1px solid rgba(240,237,228,0.2);
+}
+
+.mobile-bar a{
+  flex:1;
+  text-align:center;
+  padding:0.95rem 0.6rem;
+  color:#f6f4ef;
+  text-decoration:none;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  font-size:0.9rem;
+}
+
+.mobile-bar a:first-child{
+  border-right:1px solid rgba(240,237,228,0.2);
+  background:var(--accent);
+}
+
+@media (min-width:900px){
+  .mobile-bar{
+    display:none;
+  }
+}
+
+@media (max-width:899px){
+  body{
+    padding-bottom:58px;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+<header class="site">
+  <div class="wrap nav-row">
+    <div class="brandmark">
+      <img src="https://static.wixstatic.com/media/6a264c_b4e39c19d47848f7b2e4f10405682486~mv2.png/v1/fill/w_200,h_110,al_c,lg_1,q_85,enc_avif,quality_auto/GaL_Logo_Pos_s-white.png" alt="Gästehaus am Lagerplatz" onerror="this.parentElement.style.display='none'">
+      <span class="brandmark-text">Am Lagerplatz</span>
+    </div>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-links">
+        <li><a href="#aufenthalt">Aufenthalt</a></li>
+        <li><a href="#haus">Das Haus</a></li>
+        <li><a href="#lage">Lage</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-phone" href="tel:+41525510930">052 551 09 30</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Gästehaus · Tössfeldstrasse · Lagerplatz-Areal</p>
+        <h1>Ein eigenes Zimmer,<br>kein Hotelzimmer.</h1>
+        <p class="lead">Das Gästehaus am Lagerplatz bietet Lösungen für Reisende, die Unterkunft mit Bezug zu ihrem eigenen Raum suchen und sich wie zu Hause fühlen möchten.</p>
+        <p class="lead-2">Auf dem ehemaligen Sulzer-Industrieareal in Winterthur — professionell geführt, für eine Nacht ebenso gedacht wie für einen Monat.</p>
+        <div class="hero-facts">
+          <div class="hero-fact"><span class="n mono">4.6</span><span class="l">Google-Bewertung, 7 Rezensionen</span></div>
+          <div class="hero-fact"><span class="n mono">8400</span><span class="l">Winterthur, Tössfeldstrasse 21–23</span></div>
+          <div class="hero-fact"><span class="n mono">N / W / M</span><span class="l">Nacht, Woche oder Monat</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spine" id="aufenthalt">
+    <div class="wrap reveal">
+      <div class="spine-head">
+        <h2>Wie lange bleiben Sie?</h2>
+        <p>Das Haus ist für beides gebaut — für die eine Nacht und für das Ankommen über Wochen und Monate. Wählen Sie, was auf Sie zutrifft, und lesen Sie, wofür das Zimmer gedacht ist.</p>
+      </div>
+      <div class="spine-track" role="tablist" aria-label="Aufenthaltsdauer">
+        <button class="spine-stop" role="tab" id="tab-nacht" aria-selected="true" aria-controls="panel-nacht">Nacht<span class="u">kurz</span></button>
+        <button class="spine-stop" role="tab" id="tab-woche" aria-selected="false" aria-controls="panel-woche">Woche<span class="u">ankommen</span></button>
+        <button class="spine-stop" role="tab" id="tab-monat" aria-selected="false" aria-controls="panel-monat">Monat<span class="u">wohnen</span></button>
+      </div>
+      <div class="spine-panels">
+        <div class="spine-panel active" id="panel-nacht" role="tabpanel" aria-labelledby="tab-nacht">
+          <h3>Für die kurze Etappe</h3>
+          <p>Auch für eine einzelne Nacht bekommen Sie ein eigenes Zimmer statt einer Nummer im Korridor — professionell geführt, ohne Lobby-Betrieb und ohne Umwege.</p>
+          <p class="price-note">Preise und Verfügbarkeit auf Anfrage — direkt beim Haus.</p>
+        </div>
+        <div class="spine-panel" id="panel-woche" role="tabpanel" aria-labelledby="tab-woche">
+          <h3>Für die Woche</h3>
+          <p>Wer für ein Projekt, einen Einsatz oder eine Übergangszeit in Winterthur ist, bekommt Raum zum Auspacken statt eines Koffers, der offen bleibt.</p>
+          <p class="price-note">Preise und Verfügbarkeit auf Anfrage — direkt beim Haus.</p>
+        </div>
+        <div class="spine-panel" id="panel-monat" role="tabpanel" aria-labelledby="tab-monat">
+          <h3>Für den Monat</h3>
+          <p>Langzeitmieten mit eigenem Raum: die eigentliche Ausrichtung des Hauses. Gedacht für Gäste, die eine Zeit lang in Winterthur leben, nicht nur übernachten.</p>
+          <p class="price-note">Preise und Verfügbarkeit auf Anfrage — direkt beim Haus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="haus">
+    <div class="wrap about-grid reveal">
+      <div>
+        <h2>Das Haus</h2>
+        <p>Ein professionelles Gästehaus für Kurz- und Langzeitgäste. Kein Lobby-Hotel, sondern eigener Raum mit eigenem Rhythmus — für Reisende, die Kontakt zu ihrer eigenen Umgebung suchen und sich wie zu Hause fühlen möchten.</p>
+        <p>Die Ausrichtung ist bewusst schmal: kurze Aufenthalte funktionieren, gedacht ist das Haus aber für Gäste, die bleiben.</p>
+      </div>
+      <ul class="usp-list">
+        <li><span class="idx mono">01</span><span>Professionelles Gästehaus für Kurz- und Langzeitaufenthalte</span></li>
+        <li><span class="idx mono">02</span><span>Langzeitmieten mit eigenem Raum</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="wrap area-grid reveal">
+      <div class="area-card">
+        <h3>Der Lagerplatz</h3>
+        <p>Das frühere Sulzer-Industrieareal ist heute ein Quartier aus Werkhallen, Ateliers, Gastronomie und Wohnen — Fussdistanz statt Vorortlage.</p>
+      </div>
+      <div class="area-card">
+        <h3>Eigener Raum</h3>
+        <p>Kein geteiltes Zimmer, keine Etagenlösung als Notlösung — der eigene Raum ist der Ausgangspunkt, nicht die Ausnahme.</p>
+      </div>
+      <div class="area-card">
+        <h3>Ohne Umwege</h3>
+        <p>Anfrage direkt per Telefon oder E-Mail — kein Buchungsportal, kein Zwischenschritt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rating-strip">
+    <div class="wrap reveal">
+      <div class="rating-box">
+        <span class="score">4.6</span>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="count">7 Google-Rezensionen</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="location" id="lage">
+    <div class="wrap loc-grid reveal">
+      <div>
+        <h2>Lage</h2>
+        <p class="muted-l">Auf dem Lagerplatz — dem ehemaligen Sulzer-Industrieareal, heute ein Quartier aus Werkhallen, Ateliers und Wohnen.</p>
+        <div class="loc-address">
+          <strong>Gästehaus am Lagerplatz</strong>
+          Tössfeldstrasse 21–23<br>8400 Winterthur
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=T%C3%B6ssfeldstrasse%2021-23%2C%208400%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Gästehaus am Lagerplatz" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap reveal">
+      <h2 style="margin-bottom:1.6rem;">Kontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="label">Telefon</div>
+          <a href="tel:+41525510930">+41 52 551 09 30</a>
+        </div>
+        <div class="contact-card">
+          <div class="label">E-Mail</div>
+          <a href="mailto:info@amlagerplatz.ch">info@amlagerplatz.ch</a>
+        </div>
+      </div>
+      <p class="contact-note">Zimmertypen und Preise werden individuell abgesprochen — am einfachsten telefonisch oder per E-Mail, mit Angabe der gewünschten Aufenthaltsdauer.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Gästehaus am Lagerplatz · Tössfeldstrasse 21–23 · 8400 Winterthur</span>
+    <span>Design-Vorschlag · unverbindliches Muster</span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525510930">Anrufen</a>
+  <a href="mailto:info@amlagerplatz.ch">E-Mail</a>
+</div>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.spine-stop');
+  var panels = {
+    'tab-nacht':'panel-nacht',
+    'tab-woche':'panel-woche',
+    'tab-monat':'panel-monat'
+  };
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      Object.values(panels).forEach(function(id){
+        document.getElementById(id).classList.remove('active');
+      });
+      document.getElementById(panels[tab.id]).classList.add('active');
+    });
+  });
+
+  if('IntersectionObserver' in window){
+    var els = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>

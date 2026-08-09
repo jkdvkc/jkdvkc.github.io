@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Goldenberg – Blick über Winterthur · Süsenbergstrasse 17</title>
+<meta name="description" content="Restaurant Goldenberg auf dem Goldenberg über Winterthur: Hausmannskost zwischen Weinberg und Wald, Panoramablick über die Stadt, Garten und Säle für Anlässe. Süsenbergstrasse 17, 8400 Winterthur.">
+<meta property="og:title" content="Restaurant Goldenberg – Blick über Winterthur">
+<meta property="og:description" content="Zwischen Weinberg und Wald: Hausmannskost mit Panoramablick über Winterthur. Garten, Säle, Terrasse.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web6-1024x682-1.jpg">
+<meta property="og:url" content="https://restaurantgoldenberg.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,420;9..144,560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Goldenberg",
+  "image": "https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web6-1024x682-1.jpg",
+  "servesCuisine": ["Swiss", "Home-style cooking"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Süsenbergstrasse 17",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41 52 242 02 02",
+  "email": "info@goldenberg-winterthur.ch",
+  "url": "https://restaurantgoldenberg.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "1509"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "23:00"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#f7f3ea;
+    --surface:#fffdf8;
+    --fg:#241f19;
+    --muted:#5c5344;
+    --brand:#a9781f;
+    --accent:#3f5b6b;
+    --line:rgba(36,31,25,.13);
+    --dusk-bg:#1b2430;
+    --dusk-fg:#f2ede0;
+    --dusk-line:rgba(242,237,224,.18);
+    --maxw:1280px;
+  }
+  *,*::before,*::after{
+    box-sizing:border-box
+  }
+  html{
+    scroll-behavior:smooth
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{
+      scroll-behavior:auto
+    }
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:clamp(15px, .35vw + 14.2px, 17px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',Georgia,serif;
+    line-height:1.04;
+    margin:0;
+    font-weight:560;
+    letter-spacing:-.01em
+  }
+  p{
+    margin:0 0 1.1em
+  }
+  a{
+    color:inherit
+  }
+  img{
+    max-width:100%;
+    display:block
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 clamp(1.15rem,4vw,3.2rem)
+  }
+  :focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:3px
+  }
+  .sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    white-space:nowrap
+  }
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:80;
+    background:rgba(247,243,234,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line)
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.8rem clamp(1.15rem,4vw,3.2rem);
+    gap:1rem
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    gap:.65rem;
+    text-decoration:none
+  }
+  .brandmark img{
+    height:30px;
+    width:auto
+  }
+  .brandmark span{
+    font-family:'Fraunces',serif;
+    font-weight:560;
+    font-size:1.15rem;
+    letter-spacing:-.01em;
+    color:var(--fg)
+  }
+  .navlinks{
+    display:none;
+    gap:clamp(1rem,2vw,1.8rem);
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:.88rem;
+    letter-spacing:.02em
+  }
+  .navlinks a{
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .2s
+  }
+  .navlinks a:hover{
+    color:var(--fg)
+  }
+  @media(min-width:880px){
+    .navlinks{
+      display:flex
+    }
+  }
+  .navcta{
+    display:flex;
+    align-items:center;
+    gap:.7rem
+  }
+  .badge-open{
+    display:flex;
+    align-items:center;
+    gap:.45rem;
+    font-size:.78rem;
+    padding:.4rem .75rem;
+    border-radius:99px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    white-space:nowrap
+  }
+  .badge-open .dot{
+    width:.5rem;
+    height:.5rem;
+    border-radius:50%;
+    background:#8a9a5b;
+    flex:none
+  }
+  .badge-open.closed .dot{
+    background:#a15b4a
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    padding:.65rem 1.15rem;
+    border-radius:2px;
+    background:var(--fg);
+    color:var(--bg);
+    text-decoration:none;
+    font-size:.85rem;
+    letter-spacing:.03em;
+    font-weight:600;
+    border:1px solid var(--fg);
+    transition:transform .2s,background .2s
+  }
+  .btn:hover{
+    transform:translateY(-1px);
+    background:var(--brand);
+    border-color:var(--brand)
+  }
+  .btn.ghost{
+    background:transparent;
+    color:var(--fg)
+  }
+  .navburger{
+    display:inline-flex;
+    border:1px solid var(--line);
+    background:var(--surface);
+    padding:.5rem;
+    border-radius:2px
+  }
+  @media(min-width:880px){
+    .navburger{
+      display:none
+    }
+  }
+  .mobilepanel{
+    display:none;
+    flex-direction:column;
+    gap:.9rem;
+    padding:1rem clamp(1.15rem,4vw,3.2rem) 1.4rem;
+    border-top:1px solid var(--line);
+    background:var(--bg)
+  }
+  .mobilepanel.open{
+    display:flex
+  }
+  .mobilepanel a{
+    text-decoration:none;
+    color:var(--fg);
+    font-size:1rem
+  }
+  @media(min-width:880px){
+    .mobilepanel{
+      display:none !important
+    }
+  }
+  /* ---------- horizon device ---------- */
+  .band{
+    position:relative;
+    width:100%;
+    overflow:hidden
+  }
+  .band img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block
+  }
+  .horizon-line{
+    position:absolute;
+    left:0;
+    right:0;
+    top:47%;
+    height:1px;
+    background:rgba(247,243,234,.55);
+    pointer-events:none;
+    z-index:3
+  }
+  .horizon-line::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:-1px;
+    height:3px;
+    width:100%;
+    background:linear-gradient(to bottom, rgba(0,0,0,.08), transparent)
+  }
+  .horizon-tag{
+    position:absolute;
+    right:clamp(1.15rem,4vw,3.2rem);
+    top:47%;
+    transform:translateY(-100%);
+    color:#f2ede0;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    z-index:4;
+    padding-bottom:.35rem;
+    font-weight:600;
+    text-shadow:0 1px 6px rgba(0,0,0,.4)
+  }
+  /* ---------- hero ---------- */
+  .hero{
+    height:min(88vh,780px);
+    min-height:460px
+  }
+  .hero .scrim{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(20,16,10,.15) 0%,rgba(20,16,10,.08) 40%,rgba(20,16,10,.55) 100%);
+    z-index:2
+  }
+  .hero-inner{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:5;
+    padding:clamp(1.6rem,5vw,3.5rem) clamp(1.15rem,4vw,3.2rem) clamp(2.2rem,6vw,4rem)
+  }
+  .hero-inner .eyebrow{
+    color:#e9dfc7;
+    font-size:.8rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:.9rem;
+    font-weight:600
+  }
+  .hero-inner h1{
+    color:#fff;
+    font-size:clamp(2.5rem,6.4vw,5.4rem);
+    max-width:16ch;
+    text-wrap:balance
+  }
+  .hero-inner p.lead{
+    color:#f2ede0;
+    max-width:46ch;
+    margin-top:1rem;
+    font-size:clamp(1rem,1.1vw + .6rem,1.2rem)
+  }
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.9rem;
+    margin-top:1.6rem
+  }
+  /* ---------- sections generic ---------- */
+  main section{
+    padding:clamp(3.2rem,8vw,6.5rem) 0
+  }
+  .kicker{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--brand);
+    font-weight:700;
+    margin-bottom:.9rem
+  }
+  h2.headline{
+    font-size:clamp(1.9rem,3.6vw,3rem);
+    max-width:20ch
+  }
+  .split{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:clamp(2rem,5vw,4rem);
+    align-items:center
+  }
+  @media(min-width:860px){
+    .split{
+      grid-template-columns:1.05fr .95fr
+    }
+  }
+  .split.reverse .split-media{
+    order:-1
+  }
+  @media(min-width:860px){
+    .split.reverse .split-media{
+      order:2
+    }
+  }
+  .split-media{
+    position:relative;
+    border-radius:2px;
+    overflow:hidden;
+    aspect-ratio:4/3
+  }
+  .split-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover
+  }
+  .usp-list{
+    list-style:none;
+    margin:1.6rem 0 0;
+    padding:0;
+    display:grid;
+    gap:.85rem
+  }
+  .usp-list li{
+    display:flex;
+    gap:.8rem;
+    align-items:flex-start;
+    font-size:1rem;
+    color:var(--fg)
+  }
+  .usp-list li::before{
+    content:"";
+    width:.5rem;
+    height:.5rem;
+    margin-top:.5em;
+    border-radius:50%;
+    background:var(--brand);
+    flex:none
+  }
+  /* ---------- panorama scrubber (signature module) ---------- */
+  .pano{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:2px;
+    overflow:hidden
+  }
+  .pano-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:#111
+  }
+  .pano-frame img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity .5s ease
+  }
+  @media (prefers-reduced-motion:reduce){
+    .pano-frame img{
+      transition:none
+    }
+  }
+  .pano-frame img.active{
+    opacity:1
+  }
+  .pano-hline{
+    position:absolute;
+    left:0;
+    right:0;
+    top:47%;
+    height:1px;
+    background:rgba(247,243,234,.6);
+    z-index:3;
+    pointer-events:none
+  }
+  .pano-caption{
+    position:absolute;
+    left:clamp(1rem,3vw,2rem);
+    bottom:clamp(1rem,3vw,2rem);
+    z-index:4;
+    color:#fff;
+    font-size:.85rem;
+    letter-spacing:.03em;
+    text-shadow:0 1px 8px rgba(0,0,0,.5)
+  }
+  .pano-controls{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    padding:1.1rem clamp(1rem,3vw,2rem)
+  }
+  .pano-controls input[type=range]{
+    flex:1;
+    appearance:none;
+    height:2px;
+    background:var(--line);
+    border-radius:99px;
+    outline-offset:6px
+  }
+  .pano-controls input[type=range]::-webkit-slider-thumb{
+    appearance:none;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:var(--brand);
+    border:2px solid var(--surface);
+    box-shadow:0 0 0 1px var(--brand);
+    cursor:pointer;
+    margin-top:-7px
+  }
+  .pano-controls input[type=range]::-moz-range-thumb{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:var(--brand);
+    border:2px solid var(--surface);
+    cursor:pointer
+  }
+  .pano-btn{
+    border:1px solid var(--line);
+    background:var(--bg);
+    width:2.4rem;
+    height:2.4rem;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:none;
+    cursor:pointer;
+    font-size:1rem
+  }
+  .pano-btn:hover{
+    background:var(--brand);
+    border-color:var(--brand);
+    color:#fff
+  }
+  .pano-count{
+    font-size:.78rem;
+    color:var(--muted);
+    min-width:4.4rem;
+    text-align:right;
+    font-variant-numeric:tabular-nums
+  }
+  /* ---------- rooms strip ---------- */
+  .rooms-strip{
+    display:flex;
+    gap:1.1rem;
+    overflow-x:auto;
+    padding:.4rem clamp(1.15rem,4vw,3.2rem) 1rem;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch
+  }
+  .rooms-strip::-webkit-scrollbar{
+    height:6px
+  }
+  .rooms-strip::-webkit-scrollbar-thumb{
+    background:var(--line);
+    border-radius:99px
+  }
+  .room-card{
+    scroll-snap-align:start;
+    flex:0 0 clamp(220px,60vw,300px);
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:1.4rem
+  }
+  .room-card h3{
+    font-size:1.15rem;
+    margin-bottom:.4rem
+  }
+  .room-card .cap{
+    font-size:.82rem;
+    color:var(--brand);
+    font-weight:600;
+    letter-spacing:.03em
+  }
+  .room-card p{
+    font-size:.9rem;
+    color:var(--muted);
+    margin:.6rem 0 0
+  }
+  /* ---------- kitchen / menu teaser ---------- */
+  .kitchen{
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line)
+  }
+  .dish-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem 2.4rem;
+    margin-top:1.8rem
+  }
+  .dish-list .dish{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(1.4rem,2.4vw,2rem);
+    color:var(--fg);
+    position:relative;
+    padding-bottom:.3rem
+  }
+  .dish-list .dish::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:2.2rem;
+    height:2px;
+    background:var(--brand)
+  }
+  /* ---------- gallery bands ---------- */
+  .gallery-band{
+    height:clamp(260px,44vw,520px);
+    margin-top:.5rem
+  }
+  .gallery-band:first-child{
+    margin-top:0
+  }
+  /* ---------- reviews ---------- */
+  .reviews{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:1.4rem 2.2rem
+  }
+  .rating-num{
+    font-family:'Fraunces',serif;
+    font-size:clamp(3.2rem,7vw,5.4rem);
+    line-height:1
+  }
+  .stars{
+    color:var(--brand);
+    font-size:1.3rem;
+    letter-spacing:.15em
+  }
+  .reviews .rtext{
+    color:var(--muted);
+    max-width:34ch
+  }
+  /* ---------- contact ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.2rem
+  }
+  @media(min-width:860px){
+    .contact-grid{
+      grid-template-columns:1fr 1.2fr
+    }
+  }
+  .facts dt{
+    font-size:.78rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:1.2rem
+  }
+  .facts dt:first-child{
+    margin-top:0
+  }
+  .facts dd{
+    margin:.3rem 0 0;
+    font-size:1.05rem
+  }
+  .facts a{
+    text-decoration:none;
+    border-bottom:1px solid var(--line)
+  }
+  .mapwrap{
+    border-radius:2px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    aspect-ratio:4/3
+  }
+  .mapwrap iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block
+  }
+  .hourstable{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:1.2rem
+  }
+  .hourstable td{
+    padding:.5rem 0;
+    border-top:1px solid var(--line);
+    font-size:1rem
+  }
+  .hourstable td:last-child{
+    text-align:right;
+    font-variant-numeric:tabular-nums
+  }
+  /* ---------- dusk footer ---------- */
+  footer.dusk{
+    background:var(--dusk-bg);
+    color:var(--dusk-fg);
+    padding:clamp(3rem,7vw,5rem) 0 2rem;
+    position:relative
+  }
+  footer.dusk::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(233,223,199,.5),transparent)
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.4rem
+  }
+  @media(min-width:780px){
+    .footer-grid{
+      grid-template-columns:1.3fr 1fr 1fr
+    }
+  }
+  footer.dusk .brandmark span{
+    color:var(--dusk-fg)
+  }
+  footer.dusk img.foot-logo{
+    height:34px;
+    width:auto;
+    margin-bottom:1rem
+  }
+  footer.dusk h4{
+    font-size:.78rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#c9c0a8;
+    margin:0 0 1rem
+  }
+  footer.dusk ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:.6rem;
+    font-size:.95rem
+  }
+  footer.dusk a{
+    text-decoration:none;
+    color:var(--dusk-fg)
+  }
+  footer.dusk a:hover{
+    color:var(--brand)
+  }
+  .foot-bottom{
+    margin-top:3rem;
+    padding-top:1.4rem;
+    border-top:1px solid var(--dusk-line);
+    display:flex;
+    flex-wrap:wrap;
+    gap:.7rem 1.4rem;
+    justify-content:space-between;
+    font-size:.8rem;
+    color:#a79f8b
+  }
+  /* ---------- reveal ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .7s ease,transform .7s ease
+  }
+  .reveal.in{
+    opacity:1;
+    transform:none
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{
+      opacity:1;
+      transform:none;
+      transition:none
+    }
+  }
+  /* ---------- mobile call bar ---------- */
+  .mobilebar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:90;
+    display:flex;
+    background:var(--fg);
+    border-top:1px solid var(--line)
+  }
+  .mobilebar a{
+    flex:1;
+    text-align:center;
+    padding:.9rem 1rem;
+    color:var(--bg);
+    text-decoration:none;
+    font-size:.92rem;
+    font-weight:600;
+    letter-spacing:.02em
+  }
+  .mobilebar a.alt{
+    background:var(--brand)
+  }
+  @media(min-width:880px){
+    .mobilebar{
+      display:none
+    }
+  }
+  @media(max-width:879px){
+    body{
+      padding-bottom:56px
+    }
+  }
+  @media(max-width:400px){
+    .hero-inner h1{
+      font-size:2.2rem
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brandmark" href="#top">
+      <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/logo-1.svg" alt="Restaurant Goldenberg Logo" onerror="this.style.display='none'">
+      <span>Goldenberg</span>
+    </a>
+    <ul class="navlinks">
+      <li><a href="#aussicht">Aussicht</a></li>
+      <li><a href="#anlaesse">Anlässe</a></li>
+      <li><a href="#kueche">Küche</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="navcta">
+      <span class="badge-open" id="openBadge"><span class="dot"></span><span id="openText">…</span></span>
+      <a class="btn ghost" style="display:none" id="navcall-desktop" href="tel:+41522420202">Anrufen</a>
+      <button class="navburger" id="burgerBtn" aria-expanded="false" aria-controls="mobilepanel" aria-label="Menü öffnen">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobilepanel" id="mobilepanel">
+    <a href="#aussicht">Aussicht</a>
+    <a href="#anlaesse">Anlässe</a>
+    <a href="#kueche">Küche</a>
+    <a href="#bewertungen">Bewertungen</a>
+    <a href="#kontakt">Kontakt</a>
+    <a class="btn" href="tel:+41522420202">+41 52 242 02 02 anrufen</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="band hero" aria-label="Ansicht über Winterthur">
+    <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web6-1024x682-1.jpg" alt="Blick vom Restaurant Goldenberg über Winterthur bei goldenem Licht" onerror="this.closest('section').style.display='none'">
+    <div class="scrim"></div>
+    <div class="horizon-line" aria-hidden="true"></div>
+    <span class="horizon-tag">Winterthur, von oben</span>
+    <div class="hero-inner">
+      <p class="eyebrow">Auf dem Goldenberg über Winterthur</p>
+      <h1>Für ein unvergessliches Erlebnis</h1>
+      <p class="lead">Das Restaurant Goldenberg liegt zwischen Weinberg und Wald mit stilvoller Ausstattung und schönem Garten. Geniessen Sie Hausmannskost und lassen Sie sich vom Blick über Winterthur davontragen.</p>
+      <div class="hero-actions">
+        <a class="btn" href="tel:+41522420202">+41 52 242 02 02</a>
+        <a class="btn ghost" style="border-color:rgba(255,255,255,.5);color:#fff" href="#aussicht">Die Aussicht ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <div class="wrap split">
+      <div>
+        <p class="kicker">Über das Goldenberg</p>
+        <h2 class="headline reveal">Zwischen Weinberg und Wald, mit der Stadt zu Füssen</h2>
+        <p style="margin-top:1.3rem;max-width:52ch">Das Restaurant Goldenberg liegt zwischen Weinberg und Wald mit stilvoller Ausstattung und schönem Garten. Geniessen Sie Hausmannskost und lassen Sie sich vom Blick über Winterthur davontragen.</p>
+        <ul class="usp-list reveal">
+          <li>Panoramablick über Winterthur</li>
+          <li>Lage in historischem, denkmalgeschütztem Gebäude</li>
+          <li>Umgeben von Weinberg und Wald</li>
+          <li>Mehrere Räume für Anlässe</li>
+          <li>Aussenbereich mit Garten</li>
+        </ul>
+      </div>
+      <div class="split-media reveal">
+        <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web7-1024x682-1.jpg" alt="Innenraum des Restaurants Goldenberg mit stilvoller Ausstattung" onerror="this.closest('.split-media').style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section id="aussicht" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="kicker">Die Aussicht</p>
+      <h2 class="headline reveal">Ein Panorama, das man sich erlaufen muss – hier können Sie es erblättern</h2>
+      <p style="margin-top:1.1rem;max-width:56ch" class="reveal">Acht Ansichten vom Goldenberg über Winterthur. Ziehen Sie den Regler oder nutzen Sie die Pfeile, um von Bild zu Bild zu blenden – die Horizontlinie bleibt dabei immer an derselben Stelle.</p>
+
+      <div class="pano reveal" style="margin-top:2rem">
+        <div class="pano-frame" id="panoFrame">
+          <img class="active" data-i="0" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/IMG_7091-2_2-2_3-2_fused-1024x682-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 1" onerror="this.style.display='none'">
+          <img data-i="1" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web5-1024x683-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 2" onerror="this.style.display='none'">
+          <img data-i="2" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web4-1024x683-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 3" onerror="this.style.display='none'">
+          <img data-i="3" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web3-1024x683-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 4" onerror="this.style.display='none'">
+          <img data-i="4" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web2-1024x682-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 5" onerror="this.style.display='none'">
+          <img data-i="5" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web1-1024x683-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 6" onerror="this.style.display='none'">
+          <img data-i="6" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web8-1024x683-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 7" onerror="this.style.display='none'">
+          <img data-i="7" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web9-1024x682-1.jpg" alt="Panoramablick über Winterthur vom Goldenberg, Ansicht 8" onerror="this.style.display='none'">
+          <div class="pano-hline" aria-hidden="true"></div>
+          <div class="pano-caption" id="panoCaption">Ansicht 1 von 8</div>
+        </div>
+        <div class="pano-controls">
+          <button class="pano-btn" id="panoPrev" type="button" aria-label="Vorheriges Bild">‹</button>
+          <input type="range" id="panoRange" min="0" max="7" value="0" step="1" aria-label="Panorama durchblättern">
+          <button class="pano-btn" id="panoNext" type="button" aria-label="Nächstes Bild">›</button>
+          <span class="pano-count" id="panoCount">01 / 08</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="anlaesse">
+    <div class="wrap">
+      <p class="kicker">Räume &amp; Anlässe</p>
+      <h2 class="headline reveal">Vier Räume, ein Garten, ein Blick</h2>
+      <p style="margin-top:1.1rem;max-width:56ch" class="reveal">Vom kleinen Kreis bis zur grossen Gesellschaft – das Goldenberg bietet mehrere Räume mit unterschiedlicher Kapazität sowie Garten und überdachten Aussenbereich.</p>
+    </div>
+    <div class="rooms-strip reveal" role="list">
+      <div class="room-card" role="listitem">
+        <h3>Salon</h3>
+        <p class="cap">bis 42 Gäste</p>
+        <p>Repräsentativer Raum für grössere Gesellschaften.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <h3>Jakob Bretscher Stube</h3>
+        <p class="cap">bis 12 Gäste</p>
+        <p>Historische Stube für kleinere, private Runden.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <h3>Lebrecht Völkl Saal</h3>
+        <p class="cap">bis 42 Gäste</p>
+        <p>Saal für Feiern und grössere Anlässe.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <h3>Restaurant</h3>
+        <p class="cap">bis 44 Gäste</p>
+        <p>Der Hauptraum mit Blick über Winterthur.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <h3>Garten &amp; Terrasse</h3>
+        <p class="cap">im Freien</p>
+        <p>Gartenbereich und überdachter Aussenbereich.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kueche" class="kitchen">
+    <div class="wrap">
+      <p class="kicker">Aus der Küche</p>
+      <h2 class="headline reveal">Hausmannskost, wie man sie sich vom Goldenberg wünscht</h2>
+      <div class="dish-list reveal">
+        <span class="dish">Pasta</span>
+        <span class="dish">Steaks</span>
+        <span class="dish">Salate</span>
+      </div>
+      <p style="margin-top:1.8rem;max-width:52ch;color:var(--muted)">Die aktuelle Karte mit Preisen erhalten Sie im Restaurant oder telefonisch unter <a href="tel:+41522420202" style="color:inherit">+41 52 242 02 02</a>.</p>
+    </div>
+  </section>
+
+  <div class="band gallery-band">
+    <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web10-1024x682-1.jpg" alt="Gastraum im Restaurant Goldenberg" loading="lazy" onerror="this.closest('.gallery-band').style.display='none'">
+    <div class="horizon-line" aria-hidden="true"></div>
+  </div>
+  <div class="band gallery-band">
+    <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/web11-1024x682-1.jpg" alt="Terrasse und Garten des Restaurants Goldenberg" loading="lazy" onerror="this.closest('.gallery-band').style.display='none'">
+    <div class="horizon-line" aria-hidden="true"></div>
+  </div>
+  <div class="band gallery-band">
+    <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/IMG_7409-1024x682-1.jpg" alt="Detailansicht des Restaurants Goldenberg" loading="lazy" onerror="this.closest('.gallery-band').style.display='none'">
+    <div class="horizon-line" aria-hidden="true"></div>
+  </div>
+
+  <section id="bewertungen">
+    <div class="wrap">
+      <p class="kicker">Bewertungen</p>
+      <div class="reviews reveal">
+        <span class="rating-num">4.3</span>
+        <div>
+          <div class="stars" aria-hidden="true">★★★★☆</div>
+          <p class="rtext">4.3 von 5 auf Google, basierend auf 1509 Bewertungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="band gallery-band" style="height:clamp(320px,52vw,600px)">
+    <img src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/IMG_7088-2_89-2_90-2_fused-Bearbeitet-1024x682-1.jpg" alt="Abendstimmung über Winterthur vom Goldenberg aus gesehen" loading="lazy" onerror="this.closest('.gallery-band').style.display='none'">
+    <div class="horizon-line" aria-hidden="true"></div>
+  </div>
+
+  <section id="kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker">Kontakt &amp; Lage</p>
+        <h2 class="headline reveal">Süsenbergstrasse 17, auf dem Goldenberg</h2>
+        <dl class="facts reveal">
+          <dt>Adresse</dt>
+          <dd>Süsenbergstrasse 17, 8400 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522420202">+41 52 242 02 02</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@goldenberg-winterthur.ch">info@goldenberg-winterthur.ch</a></dd>
+          <dt>Facebook</dt>
+          <dd><a href="https://www.facebook.com/GoldenbergWinterthur/" target="_blank" rel="noopener">facebook.com/GoldenbergWinterthur</a></dd>
+        </dl>
+        <table class="hourstable reveal">
+          <tbody>
+            <tr><td>Mo–So</td><td>10:00–23:00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mapwrap reveal">
+        <iframe src="https://maps.google.com/maps?q=Restaurant%20Goldenberg%20S%C3%BCsenbergstrasse%2017%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Restaurant Goldenberg, Süsenbergstrasse 17, Winterthur" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dusk">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="foot-logo" src="https://restaurantgoldenberg.ch/wp-content/uploads/2025/02/logo_white.svg" alt="Restaurant Goldenberg Logo" onerror="this.style.display='none'">
+      <p style="max-width:38ch;color:#cfc6ab">Zwischen Weinberg und Wald, mit dem Blick über Winterthur zu Füssen.</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+41522420202">+41 52 242 02 02</a></li>
+        <li><a href="mailto:info@goldenberg-winterthur.ch">info@goldenberg-winterthur.ch</a></li>
+        <li><a href="https://www.facebook.com/GoldenbergWinterthur/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <ul>
+        <li>Süsenbergstrasse 17</li>
+        <li>8400 Winterthur</li>
+        <li>Mo–So 10:00–23:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© Restaurant Goldenberg</span>
+    <span>Design-Vorschlag · unverbindliches Muster</span>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a href="tel:+41522420202">Anrufen</a>
+  <a class="alt" href="https://maps.google.com/maps?q=Restaurant%20Goldenberg%20S%C3%BCsenbergstrasse%2017%20Winterthur" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* mobile nav */
+  var burger = document.getElementById('burgerBtn');
+  var panel = document.getElementById('mobilepanel');
+  if(burger && panel){
+    burger.addEventListener('click', function(){
+      var open = panel.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  /* scroll reveals */
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduceMotion || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -6% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* live "jetzt offen" badge — computed from real hours data (Mo–So 10:00–23:00) */
+  var openBadge = document.getElementById('openBadge');
+  var openText = document.getElementById('openText');
+  var HOURS = { openMin: 10*60, closeMin: 23*60 }; // 10:00–23:00, every day
+  function updateOpenBadge(){
+    var now = new Date();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var isOpen = mins >= HOURS.openMin && mins < HOURS.closeMin;
+    if(openBadge && openText){
+      openBadge.classList.toggle('closed', !isOpen);
+      openText.textContent = isOpen ? 'Jetzt geöffnet · bis 23:00' : 'Aktuell geschlossen · ab 10:00';
+    }
+  }
+  updateOpenBadge();
+  setInterval(updateOpenBadge, 60000);
+
+  /* panorama scrubber — signature module built from real images */
+  var frame = document.getElementById('panoFrame');
+  if(frame){
+    var imgs = Array.prototype.slice.call(frame.querySelectorAll('img[data-i]'));
+    var range = document.getElementById('panoRange');
+    var caption = document.getElementById('panoCaption');
+    var count = document.getElementById('panoCount');
+    var prevBtn = document.getElementById('panoPrev');
+    var nextBtn = document.getElementById('panoNext');
+    var total = imgs.length;
+
+    function pad(n){ return (n<10?'0':'')+n; }
+    function show(i){
+      i = Math.max(0, Math.min(total-1, i));
+      imgs.forEach(function(img){ img.classList.toggle('active', Number(img.dataset.i) === i); });
+      caption.textContent = 'Ansicht ' + (i+1) + ' von ' + total;
+      count.textContent = pad(i+1) + ' / ' + pad(total);
+      if(range) range.value = i;
+    }
+    if(range){ range.addEventListener('input', function(){ show(Number(range.value)); }); }
+    if(prevBtn){ prevBtn.addEventListener('click', function(){ show(Number(range.value) - 1); }); }
+    if(nextBtn){ nextBtn.addEventListener('click', function(){ show(Number(range.value) + 1); }); }
+    show(0);
+  }
+})();
+</script>
+</body>
+</html>

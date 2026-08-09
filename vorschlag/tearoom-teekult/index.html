@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tearoom Teekult · Über 180 Teesorten in der Winterthurer Altstadt</title>
+<meta name="description" content="Tearoom Teekult an der Steinberggasse 21 in Winterthur: über 180 Teesorten, Teezubehör und persönliche Beratung. Öffnungszeiten, Lage und Teekategorien im Überblick.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Tearoom Teekult, Winterthur — über 180 Teesorten">
+<meta property="og:description" content="Spezialisierte Teekultur an der Steinberggasse 21: über 180 Teesorten, Teezubehör, Beratung und ein Tearoom im Obergeschoss.">
+<meta property="og:locale" content="de_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..600;1,9..144,400..500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Tearoom Teekult",
+  "description": "Über 180 Teesorten und Zubehör für Teeliebhaber",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Steinberggasse 21",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41 52 212 20 47",
+  "email": "tee@teekult.ch",
+  "url": "https://teekult.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "163"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:30", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ],
+  "sameAs": [
+    "https://instagram.com/teekult",
+    "https://facebook.com/teekult.ch"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#faf7f1;
+    --surface:#f2ecdf;
+    --fg:#1e2a20;
+    --muted:#4c5b51;
+    --brand:#4a7c59;
+    --brand-ink:#355a40;
+    --accent:#d4af8e;
+    --line: rgba(30,42,32,.14);
+
+    --c-schwarz:#7c3323;
+    --c-gruen:#5e7a38;
+    --c-weiss:#efe6cb;
+    --c-oolong:#a0651e;
+    --c-herbal:#95314a;
+    --c-kaffee:#5f4028;
+
+    --radius: 2px;
+    --maxw: 74rem;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Work Sans', system-ui, sans-serif;
+    font-size: clamp(15px, 0.94vw + 12px, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.serif{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:560;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    color:var(--fg);
+    margin:0;
+  }
+
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline: clamp(1.1rem, 4vw, 2.75rem); }
+
+  :focus-visible{
+    outline: 3px solid var(--brand-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,247,241,.92);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block: 0.85rem;
+  }
+  .brandmark{
+    display:flex; align-items:baseline; gap:.55rem;
+    text-decoration:none;
+    font-family:'Fraunces', serif;
+    font-weight:560;
+    font-size: clamp(1.15rem, 1.4vw, 1.5rem);
+  }
+  .brandmark .dot{
+    width:.5em; height:.5em; border-radius:50%;
+    background: conic-gradient(var(--c-schwarz), var(--c-gruen), var(--c-weiss), var(--c-oolong), var(--c-herbal), var(--c-schwarz));
+    display:inline-block;
+    flex:none;
+  }
+  .brandmark small{
+    font-family:'Work Sans',sans-serif;
+    font-weight:500;
+    font-size:.62rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  nav.main-links{
+    display:flex; gap: clamp(1rem, 2vw, 2rem);
+    list-style:none; margin:0; padding:0;
+  }
+  nav.main-links a{
+    text-decoration:none;
+    font-size:.86rem;
+    font-weight:500;
+    letter-spacing:.02em;
+    color:var(--fg);
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+  }
+  nav.main-links a:hover{ border-color: var(--brand); }
+
+  .nav-actions{ display:flex; align-items:center; gap:.75rem; }
+  .btn-call{
+    display:inline-flex; align-items:center; gap:.4rem;
+    background:var(--brand);
+    color:#fff;
+    text-decoration:none;
+    font-size:.82rem; font-weight:600;
+    padding:.6rem 1rem;
+    border-radius: var(--radius);
+    white-space:nowrap;
+  }
+  .btn-call:hover{ background:var(--brand-ink); }
+
+  .menu-toggle{
+    display:none;
+    background:none; border:1px solid var(--line);
+    width:2.4rem; height:2.4rem;
+    align-items:center; justify-content:center;
+    border-radius: var(--radius);
+    cursor:pointer;
+  }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
+    content:""; display:block; width:1.15rem; height:2px; background:var(--fg);
+    position:relative; transition: transform .2s ease, opacity .2s ease;
+  }
+  .menu-toggle span::before{ position:absolute; top:-6px; }
+  .menu-toggle span::after{ position:absolute; top:6px; }
+
+  @media (max-width: 760px){
+    nav.main-links{
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      flex-direction:column;
+      padding: 1rem clamp(1.1rem,4vw,2.75rem) 1.4rem;
+      gap:.9rem;
+      display:none;
+    }
+    nav.main-links.open{ display:flex; }
+    .menu-toggle{ display:inline-flex; }
+    .btn-call.desktop-only{ display:none; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding-block: clamp(3rem, 8vw, 6.5rem) clamp(2.5rem, 6vw, 4rem);
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items:end;
+  }
+  .eyebrow{
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--brand-ink);
+    font-weight:600;
+    margin-bottom: 1rem;
+  }
+  .hero h1{
+    font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+    max-width: 14ch;
+  }
+  .hero-lede{
+    margin-top:1.4rem;
+    max-width:42ch;
+    color:var(--muted);
+    font-size: clamp(1rem, 1.1vw, 1.15rem);
+  }
+  .hero-aside{
+    border-left: 1px solid var(--line);
+    padding-left: clamp(1.25rem, 2vw, 2rem);
+  }
+  .rating-block{
+    display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap;
+  }
+  .rating-num{
+    font-family:'Fraunces', serif;
+    font-size: clamp(2.2rem, 3.2vw, 2.9rem);
+    font-weight:560;
+  }
+  .stars{ color:var(--brand-ink); letter-spacing:.05em; font-size:1rem; }
+  .rating-sub{ font-size:.85rem; color:var(--muted); margin-top:.35rem; }
+  .hero-addr{
+    margin-top:1.6rem; font-size:.92rem; color:var(--muted);
+  }
+  .hero-addr strong{ display:block; color:var(--fg); font-weight:600; margin-bottom:.15rem; }
+
+  .liquor-strip{
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    overflow:hidden;
+  }
+  .liquor-strip span{
+    height: clamp(2.2rem, 4vw, 3.2rem);
+    display:block;
+  }
+  .liquor-strip .cap{
+    grid-column: 1 / -1;
+    display:flex; justify-content:space-between;
+    font-size:.68rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); padding:.5rem .1rem 0;
+  }
+
+  @media (max-width: 820px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero-aside{ border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:1.5rem; }
+  }
+
+  /* ---------- generic section scaffolding ---------- */
+  section{ padding-block: clamp(3rem, 6vw, 5.5rem); }
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:2rem; margin-bottom: clamp(2rem, 4vw, 3rem);
+    flex-wrap:wrap;
+  }
+  .section-head h2{ font-size: clamp(1.8rem, 3vw, 2.6rem); max-width:16ch; }
+  .section-num{
+    font-family:'Fraunces', serif; font-style:italic;
+    color:var(--accent);
+    -webkit-text-stroke: 1px var(--brand-ink);
+    color: transparent;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height:1;
+  }
+  .kicker{
+    font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--brand-ink); font-weight:600; margin-bottom:.6rem; display:block;
+  }
+
+  hr.rule{ border:none; border-top:1px solid var(--line); margin:0; }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ---------- usps ---------- */
+  .usp-list{
+    list-style:none; margin:0; padding:0;
+    display:grid; grid-template-columns: repeat(5, 1fr);
+    border-top:1px solid var(--line);
+  }
+  .usp-list li{
+    padding: 1.6rem 1.1rem 1.6rem 0;
+    border-right:1px solid var(--line);
+  }
+  .usp-list li:last-child{ border-right:none; }
+  .usp-list .num{
+    font-family:'Fraunces', serif; font-weight:560; font-size:1.05rem;
+    color:var(--brand-ink); display:block; margin-bottom:.6rem;
+  }
+  .usp-list p{ margin:0; font-size:.92rem; color:var(--fg); }
+  @media (max-width: 900px){
+    .usp-list{ grid-template-columns: repeat(2, 1fr); }
+    .usp-list li{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:1.4rem 1rem; }
+  }
+  @media (max-width: 480px){
+    .usp-list{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid; grid-template-columns: 0.4fr 1fr; gap: clamp(2rem,5vw,4rem);
+  }
+  .about-copy p{
+    max-width:60ch;
+    font-size: clamp(1rem, 1.05vw, 1.12rem);
+  }
+  .about-copy p::first-letter{
+    font-family:'Fraunces', serif;
+    font-size:3.4em;
+    float:left;
+    line-height:.82;
+    padding-right:.1em;
+    margin-top:.05em;
+    color:var(--brand-ink);
+    font-weight:560;
+  }
+  .about-figures{
+    display:flex; flex-direction:column; gap:1.6rem;
+  }
+  .fig{
+    border-top:1px solid var(--line);
+    padding-top:1rem;
+  }
+  .fig .num{
+    font-family:'Fraunces', serif; font-size:1.8rem; color:var(--brand-ink); font-weight:560;
+  }
+  .fig .cap{ font-size:.82rem; color:var(--muted); }
+  @media (max-width: 760px){
+    .about-grid{ grid-template-columns:1fr; }
+    .about-figures{ flex-direction:row; flex-wrap:wrap; }
+    .fig{ flex:1 1 40%; }
+  }
+
+  /* ---------- category explorer (signature module) ---------- */
+  .explorer{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    overflow:hidden;
+  }
+  .explorer-inner{ padding: clamp(1.4rem, 3vw, 2.5rem); }
+  .tabs{
+    display:flex; flex-wrap:wrap; gap:.6rem;
+    list-style:none; margin:0 0 1.75rem; padding:0;
+  }
+  .tabs button{
+    font-family:'Work Sans', sans-serif;
+    font-size:.86rem; font-weight:600;
+    background:var(--bg);
+    border:1px solid var(--line);
+    padding:.65rem 1.1rem;
+    border-radius: 999px;
+    cursor:pointer;
+    display:flex; align-items:center; gap:.55rem;
+    color:var(--fg);
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .tabs button .swatch{
+    width:.7rem; height:.7rem; border-radius:50%; flex:none;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+  }
+  .tabs button[aria-selected="true"]{
+    background:var(--fg); color:#fff; border-color:var(--fg);
+  }
+  .tabs button:hover{ border-color:var(--brand-ink); }
+
+  .panel-stage{
+    display:grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    align-items:stretch;
+    min-height: 15rem;
+  }
+  .cup{
+    border-radius: var(--radius);
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding: clamp(1.4rem, 2.5vw, 2rem);
+    position:relative;
+    overflow:hidden;
+    transition: background-color .35s ease;
+  }
+  .cup .cup-label{
+    font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; opacity:.85;
+  }
+  .cup .cup-name{
+    font-family:'Fraunces', serif; font-weight:560;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-top:auto;
+  }
+  .cup .steam{
+    position:absolute; top:-1.5rem; right:-1.5rem;
+    width:9rem; height:9rem; border-radius:50%;
+    background: radial-gradient(circle, rgba(255,255,255,.22), transparent 65%);
+  }
+  .panel-copy{ display:flex; flex-direction:column; justify-content:center; }
+  .panel-copy p.desc{
+    font-size: clamp(1.02rem, 1.3vw, 1.25rem);
+    max-width:46ch;
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    color:var(--fg);
+  }
+  .panel-copy .meta{
+    margin-top:1.4rem;
+    display:flex; gap:1.6rem; flex-wrap:wrap;
+    font-size:.82rem; color:var(--muted);
+  }
+  .panel-copy .meta strong{ color:var(--fg); display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; font-weight:600; margin-bottom:.2rem; }
+
+  @media (max-width: 720px){
+    .panel-stage{ grid-template-columns:1fr; }
+    .cup{ min-height:8rem; }
+  }
+
+  /* ---------- notice ---------- */
+  .notice{
+    display:grid; grid-template-columns: auto 1fr; gap:1.5rem;
+    border:1px solid var(--brand-ink);
+    background: color-mix(in srgb, var(--brand) 8%, var(--bg));
+    padding: clamp(1.3rem, 3vw, 2rem);
+    border-radius: var(--radius);
+    align-items:start;
+  }
+  .notice .mark{
+    font-family:'Fraunces', serif; font-size:2.2rem; color:var(--brand-ink); line-height:1;
+  }
+  .notice h3{ font-size:1.15rem; margin-bottom:.5rem; }
+  .notice p{ margin:0; color:var(--fg); max-width:56ch; font-size:.95rem; }
+  .notice .dates{ margin-top:.7rem; font-size:.85rem; color:var(--muted); }
+
+  /* ---------- hours ---------- */
+  .hours-wrap{
+    display:grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,4vw,4rem);
+  }
+  table.hours{
+    width:100%; border-collapse:collapse;
+  }
+  table.hours caption{ text-align:left; margin-bottom:1rem; }
+  table.hours th, table.hours td{
+    text-align:left; padding:.85rem 0; border-bottom:1px solid var(--line);
+    font-size:.95rem;
+  }
+  table.hours th{ font-weight:600; color:var(--fg); width:40%; }
+  table.hours td{ color:var(--muted); }
+  tr.is-today th, tr.is-today td{ color:var(--fg); font-weight:600; }
+
+  .status-badge{
+    display:inline-flex; align-items:center; gap:.5rem;
+    font-size:.85rem; font-weight:600;
+    padding:.5rem .9rem;
+    border-radius:999px;
+    border:1px solid var(--line);
+    margin-bottom:1.5rem;
+  }
+  .status-badge .dot{ width:.55rem; height:.55rem; border-radius:50%; background:var(--muted); flex:none; }
+  .status-badge[data-open="true"]{ border-color: var(--brand); color:var(--brand-ink); }
+  .status-badge[data-open="true"] .dot{ background:var(--brand); }
+  .status-badge[data-open="false"]{ border-color: var(--c-schwarz); color:var(--c-schwarz); }
+  .status-badge[data-open="false"] .dot{ background:var(--c-schwarz); }
+
+  .review-card{
+    border:1px solid var(--line); border-radius:var(--radius);
+    padding: clamp(1.3rem, 3vw, 2rem);
+    background:var(--surface);
+    align-self:start;
+  }
+  .review-card .stars{ font-size:1.2rem; }
+  .review-card .rating-num{ font-size:2.4rem; }
+  .review-card p{ font-size:.85rem; color:var(--muted); margin-top:.6rem; }
+
+  @media (max-width: 760px){ .hours-wrap{ grid-template-columns:1fr; } }
+
+  /* ---------- location ---------- */
+  .loc-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,4vw,3.5rem);
+    align-items:stretch;
+  }
+  .loc-info dl{
+    display:grid; grid-template-columns: auto 1fr; gap: .6rem 1.4rem;
+    margin:0;
+  }
+  .loc-info dt{
+    font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding-top:.15rem;
+  }
+  .loc-info dd{
+    margin:0; font-size:1rem;
+  }
+  .loc-info a{ text-decoration:underline; text-decoration-color: var(--accent); text-underline-offset:3px; }
+  .map-frame{
+    border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; min-height:20rem; background:var(--surface);
+  }
+  .map-frame iframe{ width:100%; height:100%; min-height:20rem; border:0; display:block; }
+  .socials{ display:flex; gap:1rem; margin-top:1.6rem; }
+  .socials a{
+    text-decoration:none; font-size:.85rem; font-weight:600;
+    border:1px solid var(--line); padding:.55rem 1rem; border-radius:999px;
+  }
+  .socials a:hover{ border-color:var(--brand-ink); }
+  @media (max-width: 820px){ .loc-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- footer ---------- */
+  footer.site{
+    border-top:1px solid var(--line);
+    padding-block: clamp(2.5rem, 5vw, 3.5rem) calc(clamp(2.5rem,5vw,3.5rem) + 4rem);
+    font-size:.85rem; color:var(--muted);
+  }
+  .footer-grid{
+    display:grid; grid-template-columns: 1.3fr 1fr 1fr; gap:2rem;
+  }
+  .footer-grid h3{
+    font-family:'Work Sans', sans-serif; font-size:.78rem; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--fg); margin-bottom:.9rem; font-weight:600;
+  }
+  .footer-grid p, .footer-grid li{ margin:0 0 .4rem; }
+  .footer-grid ul{ list-style:none; padding:0; }
+  .footer-grid a{ text-decoration:none; }
+  .footer-grid a:hover{ text-decoration:underline; }
+  .footer-bottom{
+    margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:.6rem;
+  }
+  @media (max-width: 700px){ .footer-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- sticky mobile call bar ---------- */
+  .mobile-bar{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--fg); color:#fff;
+    padding: .85rem clamp(1rem,4vw,2rem);
+    align-items:center; justify-content:space-between;
+    gap:1rem;
+  }
+  .mobile-bar a{
+    text-decoration:none; color:#fff; font-weight:600; font-size:.95rem;
+    display:flex; align-items:center; gap:.5rem;
+  }
+  .mobile-bar span.small{ font-size:.72rem; color:var(--accent); display:block; letter-spacing:.06em; text-transform:uppercase; }
+  .mobile-bar .call-btn{
+    background:var(--brand); padding:.65rem 1.2rem; border-radius:999px;
+  }
+  @media (max-width: 760px){
+    .mobile-bar{ display:flex; }
+    body{ padding-bottom: 4.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="brandmark" href="#top">
+      <span class="dot" aria-hidden="true"></span>
+      Teekult <small>Winterthur</small>
+    </a>
+    <nav class="main-links" id="mainNav" aria-label="Hauptnavigation">
+      <a href="#teesorten">Teesorten</a>
+      <a href="#haus">Das Haus</a>
+      <a href="#tearoom">Tearoom &amp; Zeiten</a>
+      <a href="#lage">Lage &amp; Kontakt</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn-call desktop-only" href="tel:+41522122047">Anrufen</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span class="visually-hidden">Menü öffnen</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Steinberggasse 21 · Winterthurer Altstadt</span>
+        <h1>Über 180 Teesorten und Zubehör für Teeliebhaber.</h1>
+        <p class="hero-lede">Tearoom Teekult ist spezialisiert auf eine umfassende Auswahl an Tees, Teezubehör und Accessoires — mit professioneller Beratung für alle, die Tee ernst nehmen.</p>
+      </div>
+      <div class="hero-aside">
+        <div class="rating-block">
+          <span class="rating-num">4.7</span>
+          <span>
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="rating-sub">163 Google-Bewertungen</span>
+          </span>
+        </div>
+        <div class="hero-addr">
+          <strong>Steinberggasse 21, 8400 Winterthur</strong>
+          <a href="tel:+41522122047">+41 52 212 20 47</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="liquor-strip" role="img" aria-label="Farbstreifen der Teekategorien: Schwarztee, Grüntee, Weisstee, Oolong, Herbal-Tees, Eiskaffee">
+        <span style="background:var(--c-schwarz)"></span>
+        <span style="background:var(--c-gruen)"></span>
+        <span style="background:var(--c-weiss)"></span>
+        <span style="background:var(--c-oolong)"></span>
+        <span style="background:var(--c-herbal)"></span>
+        <span style="background:var(--c-kaffee)"></span>
+        <span class="cap"><em>Die Farbe der Tasse</em><em>— sechs Kategorien</em></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- USPS -->
+  <section aria-label="Was das Haus auszeichnet">
+    <div class="wrap">
+      <ul class="usp-list reveal">
+        <li><span class="num">01</span><p>Über 180 Teesorten zur Auswahl</p></li>
+        <li><span class="num">02</span><p>Professionelles Teezubehör und Accessoires</p></li>
+        <li><span class="num">03</span><p>Spezialisierte Beratung</p></li>
+        <li><span class="num">04</span><p>Atmosphärisches Tearoom</p></li>
+        <li><span class="num">05</span><p>Eiskaffee und Erfrischungen</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="haus">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker">Das Haus</span>
+          <h2>Teekultur in der Altstadt.</h2>
+        </div>
+        <span class="section-num" aria-hidden="true">01</span>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-figures">
+          <div class="fig">
+            <span class="num">180+</span>
+            <span class="cap">Teesorten im Sortiment</span>
+          </div>
+          <div class="fig">
+            <span class="num">4.7</span>
+            <span class="cap">Google-Bewertung aus 163 Rezensionen</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p>Tearoom Teekult ist spezialisiert auf eine umfassende Auswahl von über 180 Teesorten, Teezubehör und Accessoires. Das Geschäft bietet auch Eiskaffee an und betreibt ein Tearoom auf der ersten Etage mit gediegener Atmosphäre. Der Laden und Retail-Bereich bieten professionelle Beratung für Teeliebhaber, Gourmet-Produkte und hochwertige Teebedarfsartikel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- SIGNATURE MODULE: TEA CATEGORY EXPLORER -->
+  <section id="teesorten">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker">Sortiment</span>
+          <h2>Die Kategorien, eine Tasse nach der anderen.</h2>
+        </div>
+        <span class="section-num" aria-hidden="true">02</span>
+      </div>
+
+      <div class="explorer reveal">
+        <div class="explorer-inner">
+          <ul class="tabs" role="tablist" aria-label="Teekategorien" id="tabList">
+            <li><button type="button" role="tab" aria-selected="true" aria-controls="panel-0" id="tab-0" data-index="0">
+              <span class="swatch" style="background:var(--c-schwarz)"></span>Schwarztee</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-1" id="tab-1" data-index="1">
+              <span class="swatch" style="background:var(--c-gruen)"></span>Grüntee</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" data-index="2">
+              <span class="swatch" style="background:var(--c-weiss)"></span>Weisstee</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" data-index="3">
+              <span class="swatch" style="background:var(--c-oolong)"></span>Oolong</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" data-index="4">
+              <span class="swatch" style="background:var(--c-herbal)"></span>Herbal-Tees</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-5" id="tab-5" data-index="5">
+              <span class="swatch" style="background:var(--c-kaffee)"></span>Getränke</button></li>
+          </ul>
+
+          <div class="panel-stage">
+            <div class="cup" id="cupStage" style="background:var(--c-schwarz); color:#fff;">
+              <span class="steam" aria-hidden="true"></span>
+              <span class="cup-label" id="cupLabel">Teeauswahl</span>
+              <span class="cup-name" id="cupName">Schwarztee</span>
+            </div>
+            <div class="panel-copy">
+              <p class="desc" id="panelDesc">«Verschiedene Sorten aus aller Welt»</p>
+              <div class="meta">
+                <div>
+                  <strong>Rubrik</strong>
+                  <span id="panelSection">Teeauswahl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div role="tabpanel" id="panel-0" aria-labelledby="tab-0" hidden data-desc="Verschiedene Sorten aus aller Welt" data-section="Teeauswahl"></div>
+          <div role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden data-desc="Klassische und spezielle Variationen" data-section="Teeauswahl"></div>
+          <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden data-desc="Feine und delicate Sorten" data-section="Teeauswahl"></div>
+          <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden data-desc="Exklusives Sortiment" data-section="Teeauswahl"></div>
+          <div role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden data-desc="Kräuter- und Früchtetees" data-section="Teeauswahl"></div>
+          <div role="tabpanel" id="panel-5" aria-labelledby="tab-5" hidden data-desc="Eiskaffee — kalter Erfrischungsgetränk" data-section="Getränke"></div>
+        </div>
+      </div>
+      <p class="rating-sub" style="margin-top:1rem;">Alle Angaben aus der aktuellen Sortimentsübersicht. Einzelpreise werden im Laden an der Steinberggasse 21 beraten.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- TEAROOM NOTICE + HOURS -->
+  <section id="tearoom">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker">Tearoom &amp; Öffnungszeiten</span>
+          <h2>Wann bei uns die Tasse dampft.</h2>
+        </div>
+        <span class="section-num" aria-hidden="true">03</span>
+      </div>
+
+      <div class="notice reveal" style="margin-bottom: clamp(2rem,4vw,3rem);">
+        <span class="mark" aria-hidden="true">i</span>
+        <div>
+          <h3>Tearoom im Obergeschoss vorübergehend geschlossen</h3>
+          <p>Das Tearoom auf der ersten Etage ist derzeit geschlossen und öffnet ab dem 1. Juli 2026 wieder, Montag bis Samstag. Der Verkaufsladen im Erdgeschoss ist wie gewohnt zu den regulären Öffnungszeiten für Sie da.</p>
+          <div class="dates">Geschlossen bis 30.06.2026 · wieder geöffnet ab 01.07.2026, Mo–Sa</div>
+        </div>
+      </div>
+
+      <div class="hours-wrap reveal">
+        <div>
+          <span class="status-badge" id="statusBadge" data-open="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="statusText">Öffnungsstatus wird berechnet …</span>
+          </span>
+          <table class="hours" id="hoursTable">
+            <caption class="kicker">Reguläre Öffnungszeiten — Verkaufsladen</caption>
+            <tbody>
+              <tr data-days="Mo"><th scope="row">Montag</th><td>11:30–18:30</td></tr>
+              <tr data-days="Di-Fr"><th scope="row">Dienstag – Freitag</th><td>09:00–18:30</td></tr>
+              <tr data-days="Sa"><th scope="row">Samstag</th><td>09:00–17:00</td></tr>
+              <tr data-days="So"><th scope="row">Sonntag</th><td>Geschlossen</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="review-card">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <div class="rating-num">4.7 <span style="font-size:1rem; font-weight:400; color:var(--muted);">/ 5</span></div>
+          <p>Basierend auf 163 Google-Bewertungen. Die Einschätzung von Gästen zu Sortiment, Beratung und Atmosphäre des Ladens an der Steinberggasse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- LOCATION / CONTACT -->
+  <section id="lage">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker">Lage &amp; Kontakt</span>
+          <h2>Mitten in der Altstadt.</h2>
+        </div>
+        <span class="section-num" aria-hidden="true">04</span>
+      </div>
+      <div class="loc-grid reveal">
+        <div class="loc-info">
+          <dl>
+            <dt>Adresse</dt>
+            <dd>Steinberggasse 21<br>8400 Winterthur</dd>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+41522122047">+41 52 212 20 47</a></dd>
+            <dt>E-Mail</dt>
+            <dd><a href="mailto:tee@teekult.ch">tee@teekult.ch</a></dd>
+            <dt>Website</dt>
+            <dd><a href="https://teekult.ch/" rel="noopener">teekult.ch</a></dd>
+          </dl>
+          <div class="socials">
+            <a href="https://instagram.com/teekult" rel="noopener">Instagram · @teekult</a>
+            <a href="https://facebook.com/teekult.ch" rel="noopener">Facebook</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=Teekult+Winterthur+Steinberggasse+21&amp;z=16&amp;output=embed"
+            title="Karte: Tearoom Teekult, Steinberggasse 21, 8400 Winterthur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Tearoom Teekult</h3>
+        <p>Steinberggasse 21, 8400 Winterthur</p>
+        <p><a href="tel:+41522122047">+41 52 212 20 47</a></p>
+        <p><a href="mailto:tee@teekult.ch">tee@teekult.ch</a></p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#teesorten">Teesorten</a></li>
+          <li><a href="#haus">Das Haus</a></li>
+          <li><a href="#tearoom">Tearoom &amp; Zeiten</a></li>
+          <li><a href="#lage">Lage &amp; Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Öffnungszeiten</h3>
+        <ul>
+          <li>Mo 11:30–18:30</li>
+          <li>Di–Fr 09:00–18:30</li>
+          <li>Sa 09:00–17:00</li>
+          <li>So geschlossen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+      <span>© <span id="year">2026</span> Tearoom Teekult, Winterthur</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <span>
+    <span class="small">Tearoom Teekult</span>
+    Steinberggasse 21
+  </span>
+  <a class="call-btn" href="tel:+41522122047">Anrufen</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* year */
+  var y = document.getElementById('year');
+  if (y) { y.textContent = new Date().getFullYear(); }
+
+  /* mobile nav toggle */
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* reveal on scroll */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- signature module: tea category explorer ---------- */
+  var categories = [
+    { name: 'Schwarztee',   label: 'Teeauswahl', color: 'var(--c-schwarz)', text: '#fff' },
+    { name: 'Grüntee',      label: 'Teeauswahl', color: 'var(--c-gruen)',  text: '#fff' },
+    { name: 'Weisstee',     label: 'Teeauswahl', color: 'var(--c-weiss)', text: '#1e2a20' },
+    { name: 'Oolong',       label: 'Teeauswahl', color: 'var(--c-oolong)', text: '#fff' },
+    { name: 'Herbal-Tees',  label: 'Teeauswahl', color: 'var(--c-herbal)', text: '#fff' },
+    { name: 'Eiskaffee',    label: 'Getränke',   color: 'var(--c-kaffee)', text: '#fff' }
+  ];
+
+  var tabs = document.querySelectorAll('#tabList button[role="tab"]');
+  var cupStage = document.getElementById('cupStage');
+  var cupLabel = document.getElementById('cupLabel');
+  var cupName = document.getElementById('cupName');
+  var panelDesc = document.getElementById('panelDesc');
+  var panelSection = document.getElementById('panelSection');
+
+  function activate(index){
+    tabs.forEach(function(t){
+      var selected = (t.getAttribute('data-index') === String(index));
+      t.setAttribute('aria-selected', selected ? 'true' : 'false');
+    });
+    var panel = document.getElementById('panel-' + index);
+    var cat = categories[index];
+    if (!panel || !cat) { return; }
+
+    cupStage.style.background = cat.color;
+    cupStage.style.color = cat.text;
+    cupLabel.textContent = cat.label;
+    cupName.textContent = cat.name;
+    panelDesc.textContent = '«' + panel.getAttribute('data-desc') + '»';
+    panelSection.textContent = panel.getAttribute('data-section');
+  }
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      activate(tab.getAttribute('data-index'));
+    });
+    tab.addEventListener('keydown', function(e){
+      var list = Array.prototype.slice.call(tabs);
+      var i = list.indexOf(tab);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        var next = list[(i + 1) % list.length];
+        next.focus(); next.click();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        var prev = list[(i - 1 + list.length) % list.length];
+        prev.focus(); prev.click();
+      }
+    });
+  });
+
+  /* ---------- open-now badge, computed from the real hours table ---------- */
+  var hoursSpec = [
+    { days: [1],          open: '11:30', close: '18:30' }, // Montag
+    { days: [2,3,4,5],    open: '09:00', close: '18:30' }, // Dienstag–Freitag
+    { days: [6],          open: '09:00', close: '17:00' }, // Samstag
+    { days: [0],          open: null,    close: null }     // Sonntag geschlossen
+  ];
+
+  function toMinutes(hhmm){
+    var parts = hhmm.split(':');
+    return (parseInt(parts[0], 10) * 60) + parseInt(parts[1], 10);
+  }
+
+  function computeStatus(){
+    var now = new Date();
+    var day = now.getDay();
+    var minutesNow = (now.getHours() * 60) + now.getMinutes();
+    var todaySpec = null;
+    for (var i = 0; i < hoursSpec.length; i++) {
+      if (hoursSpec[i].days.indexOf(day) !== -1) { todaySpec = hoursSpec[i]; break; }
+    }
+    var badge = document.getElementById('statusBadge');
+    var text = document.getElementById('statusText');
+    if (!todaySpec || !todaySpec.open) {
+      badge.setAttribute('data-open', 'false');
+      text.textContent = 'Heute geschlossen';
+      return;
+    }
+    var openMin = toMinutes(todaySpec.open);
+    var closeMin = toMinutes(todaySpec.close);
+    if (minutesNow >= openMin && minutesNow < closeMin) {
+      badge.setAttribute('data-open', 'true');
+      text.textContent = 'Jetzt geöffnet — bis ' + todaySpec.close + ' Uhr';
+    } else if (minutesNow < openMin) {
+      badge.setAttribute('data-open', 'false');
+      text.textContent = 'Geschlossen — öffnet um ' + todaySpec.open + ' Uhr';
+    } else {
+      badge.setAttribute('data-open', 'false');
+      text.textContent = 'Geschlossen für heute';
+    }
+  }
+  computeStatus();
+
+  /* highlight today's row in the hours table */
+  var dayMap = { 0:'So', 1:'Mo', 2:'Di-Fr', 3:'Di-Fr', 4:'Di-Fr', 5:'Di-Fr', 6:'Sa' };
+  var todayKey = dayMap[new Date().getDay()];
+  var rows = document.querySelectorAll('#hoursTable tr[data-days]');
+  rows.forEach(function(row){
+    if (row.getAttribute('data-days') === todayKey) { row.classList.add('is-today'); }
+  });
+
+})();
+</script>
+
+</body>
+</html>

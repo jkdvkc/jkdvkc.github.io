@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wirtshaus zur Krone — das älteste Restaurant Winterthurs, seit 1448</title>
+<meta name="description" content="Wirtshaus zur Krone in der Winterthurer Altstadt: das älteste Restaurant der Stadt, seit 1448. Schweizer und österreichische Klassiker, Weinkarte, Kronesaal für Anlässe.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Wirtshaus zur Krone — Esskultur seit 1448">
+<meta property="og:description" content="Das älteste Restaurant Winterthurs: Schweizer und österreichische Klassiker, kuratierte Weinkarte, Terrasse in der Altstadt.">
+<meta property="og:url" content="https://kronewinterthur.ch/">
+<meta property="og:image" content="https://kronewinterthur.ch/wp-content/uploads/2018/10/krone_Winterthur_Poulet.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Wirtshaus zur Krone",
+  "servesCuisine": "Schweizer und österreichische Klassiker",
+  "url": "https://kronewinterthur.ch/",
+  "telephone": "+41 52 208 18 18",
+  "image": [
+    "https://kronewinterthur.ch/wp-content/uploads/2018/10/krone_Winterthur_Poulet.jpg",
+    "https://kronewinterthur.ch/wp-content/uploads/2017/10/130_bildvorlage2spaltig_unterseiten8.jpg",
+    "https://kronewinterthur.ch/wp-content/uploads/2017/10/130_bildvorlage2spaltig_unterseiten.jpg"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "226"
+  }
+}
+</script>
+
+<style>
+  /*
+    Design system — Wirtshaus zur Krone
+    ------------------------------------
+    Six tokens, all sourced from the business JSON's brand_colors
+    (heraldic red/gold for a 1448 Wirtshaus) plus a warm dark ground
+    that lets the gold read as metal, not paper.
+
+    --bg      page ground, near-black warm brown
+    --surface card/panel ground, one step lighter than bg
+    --fg      primary text, warm cream — never pure white
+    --muted   secondary text, still ≥4.5:1 on bg and surface
+    --brand   heraldic red — CTAs, the crest
+    --accent  heraldic gold — the year, the timeline, small emphasis
+
+    Type pairing: Fraunces (a contemporary serif with real weight)
+    carries every headline; Public Sans carries every paragraph.
+    No blackletter, no parchment texture — gravitas comes from
+    scale, spacing and the 1448 → today span, not from pastiche.
+  */
+  :root{
+    --bg:#1c1310;
+    --surface:#271a16;
+    --fg:#f4ebdd;
+    --muted:#c2ac95;
+    --brand:#8a1f2b;
+    --accent:#c9a227;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Public Sans', system-ui, sans-serif;
+    font-size:clamp(15px, 0.35vw + 14px, 17.5px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  ul{ margin:0; padding:0; list-style:none; }
+
+  h1,h2,h3,.display{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    line-height:1.05;
+    margin:0;
+  }
+
+  :focus-visible{ outline:3px solid var(--accent); outline-offset:3px; }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding-inline:clamp(1.1rem, 4vw, 2.6rem); }
+
+  .skip-link{
+    position:absolute; left:1rem; top:-3.4rem; background:var(--accent); color:#241505;
+    padding:0.6rem 1rem; font-weight:700; z-index:100; transition:top .2s ease; border-radius:3px;
+  }
+  .skip-link:focus{ top:1rem; }
+
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  .eyebrow{
+    font-size:0.74rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); font-weight:700;
+    display:block; margin-bottom:0.7rem;
+  }
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(28,19,16,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(244,235,221,0.1);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:1rem; position:relative; }
+  .wordmark{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.35rem; text-decoration:none; color:var(--fg);
+    letter-spacing:0.01em; display:inline-flex; align-items:center; gap:0.55rem;
+  }
+  .wordmark span{ color:var(--accent); }
+  /* heraldic crest — a flat CSS shield, not an illustration; echoes "Krone" without pastiche */
+  .crest{
+    width:1.3rem; height:1.5rem; flex:none;
+    background:var(--brand);
+    border:1.5px solid var(--accent);
+    clip-path:polygon(0% 0%, 100% 0%, 100% 55%, 50% 100%, 0% 55%);
+  }
+  header.site.is-scrolled{ box-shadow:0 8px 20px -14px rgba(0,0,0,0.6); }
+  nav.primary{ display:flex; gap:clamp(0.9rem,2vw,1.8rem); }
+  nav.primary a{
+    text-decoration:none; font-weight:500; font-size:0.88rem; color:var(--muted); border-bottom:1px solid transparent;
+  }
+  nav.primary a:hover{ color:var(--fg); border-color:var(--accent); }
+  nav.primary a[aria-current="true"]{ color:var(--accent); border-color:var(--accent); }
+  .nav-call{
+    display:inline-flex; align-items:center; gap:0.5rem; border:1px solid var(--accent); color:var(--accent);
+    text-decoration:none; font-weight:600; font-size:0.82rem; padding:0.5rem 0.95rem; border-radius:2px;
+    white-space:nowrap;
+  }
+  .nav-call:hover{ background:var(--accent); color:#241505; }
+  .nav-toggle{
+    display:none; align-items:center; justify-content:center;
+    width:2.4rem; height:2.4rem; border-radius:2px; flex:none;
+    border:1px solid rgba(244,235,221,0.3); background:transparent; color:var(--fg); cursor:pointer;
+  }
+  .nav-toggle:hover{ border-color:var(--accent); color:var(--accent); }
+  .nav-toggle svg{ width:1.2rem; height:1.2rem; }
+  .nav-toggle[aria-expanded="true"] .icon-open{ display:none; }
+  .nav-toggle:not([aria-expanded="true"]) .icon-close{ display:none; }
+  @media (max-width:800px){
+    nav.primary{
+      display:none; position:absolute; left:0; right:0; top:100%;
+      flex-direction:column; gap:0; background:var(--surface);
+      border-bottom:1px solid rgba(244,235,221,0.12);
+      box-shadow:0 16px 24px -18px rgba(0,0,0,0.5);
+    }
+    nav.primary.is-open{ display:flex; }
+    nav.primary a{ padding:0.95rem clamp(1.1rem,4vw,2.6rem); border-bottom:1px solid rgba(244,235,221,0.08); }
+    .nav-toggle{ display:inline-flex; }
+  }
+
+  /* ---------- hero: the year as graphic anchor ---------- */
+  .hero{ padding-block:clamp(3rem,7vw,6rem) clamp(2.4rem,5vw,4rem); position:relative; overflow:hidden; }
+  .hero-year{
+    font-family:'Fraunces', serif; font-weight:700; font-variant-numeric:tabular-nums;
+    font-size:clamp(5rem, 19vw, 13rem); line-height:0.8; color:transparent;
+    -webkit-text-stroke:1.5px rgba(201,162,39,0.55);
+    letter-spacing:-0.02em; user-select:none; margin-bottom:-0.1em;
+  }
+  .hero h1{ font-size:clamp(2.1rem,4.4vw,3.6rem); max-width:16ch; color:var(--fg); }
+  .hero h1 em{ font-style:italic; color:var(--accent); }
+  .hero .tag{ color:var(--muted); font-size:clamp(1rem,1.4vw,1.2rem); max-width:52ch; margin-top:1.1rem; }
+  .cta-row{ display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:2rem; }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; font-weight:600;
+    padding:0.85rem 1.5rem; font-size:0.92rem; border-radius:2px;
+  }
+  .btn-primary{ background:var(--brand); color:#fbe9ea; }
+  .btn-primary:hover{ background:#a3232f; }
+  .btn-ghost{ background:transparent; color:var(--fg); border:1px solid rgba(244,235,221,0.4); }
+  .btn-ghost:hover{ border-color:var(--fg); }
+
+  .years-live{
+    display:inline-flex; align-items:baseline; gap:0.5rem; margin-top:1.6rem; font-family:'Fraunces',serif;
+  }
+  .years-live .n{ font-size:2.1rem; font-weight:700; color:var(--accent); }
+  .years-live .t{ font-size:0.85rem; color:var(--muted); font-family:'Public Sans',sans-serif; }
+
+  /* ---------- century timeline — structural rhythm ---------- */
+  section{ padding-block:clamp(2.6rem,5.5vw,4.6rem); scroll-margin-top:4.5rem; }
+  .timeline-wrap{ overflow-x:auto; padding-bottom:0.6rem; }
+  .timeline{
+    display:flex; align-items:flex-end; gap:0; min-width:640px; border-bottom:1px solid rgba(244,235,221,0.18);
+    padding-bottom:1.6rem; position:relative;
+  }
+  .tick{
+    flex:1; text-align:center; position:relative;
+    background:none; border:none; padding:0 0 0.2rem; cursor:pointer; font:inherit;
+  }
+  .tick:hover .yr{ color:var(--fg); }
+  .tick::before{
+    content:""; position:absolute; left:50%; bottom:-1.6rem; width:1px; height:0.9rem; background:rgba(244,235,221,0.3);
+    transform:translateX(-50%);
+  }
+  .tick.major::before{ height:1.4rem; background:var(--accent); width:2px; }
+  .tick .yr{ font-family:'Fraunces',serif; font-size:0.95rem; color:var(--muted); }
+  .tick.major .yr{ color:var(--accent); font-weight:700; font-size:1.05rem; }
+  .tick.now .yr{ color:var(--fg); font-weight:700; }
+  .timeline-caption{ margin-top:2rem; color:var(--muted); font-size:0.95rem; max-width:60ch; }
+  .timeline-caption strong{ color:var(--fg); }
+
+  /* ---------- about ---------- */
+  #haus{ position:relative; overflow:hidden; }
+  #haus::before{
+    content:""; position:absolute; top:-4rem; right:clamp(-6rem,-2vw,-2rem); z-index:0;
+    width:min(60vw,420px); height:min(70vw,480px);
+    border:1.5px solid rgba(201,162,39,0.14);
+    clip-path:polygon(0% 0%, 100% 0%, 100% 55%, 50% 100%, 0% 55%);
+    pointer-events:none;
+  }
+  .about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(1.6rem,4vw,3.2rem); align-items:start; position:relative; z-index:1; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid p{ font-size:1.05rem; color:#e6dccb; }
+  .pull-quote{
+    border-left:3px solid var(--accent); padding-left:1.3rem; font-family:'Fraunces',serif; font-style:italic;
+    font-size:1.25rem; color:var(--fg); line-height:1.4;
+  }
+
+  /* ---------- usps ---------- */
+  .usp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.1rem; }
+  .usp-card{
+    background:var(--surface); border:1px solid rgba(244,235,221,0.08); border-radius:4px; padding:1.3rem 1.4rem;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .usp-card:hover{ border-color:rgba(201,162,39,0.4); transform:translateY(-3px); }
+  @media (prefers-reduced-motion: reduce){ .usp-card:hover{ transform:none; } }
+  .usp-card .idx{ font-family:'Fraunces',serif; color:var(--accent); font-size:1.4rem; font-weight:700; display:block; margin-bottom:0.5rem; }
+  .usp-card p{ font-size:0.94rem; color:var(--muted); margin:0; }
+  .usp-card--wide{ min-width:0; }
+  .usp-card--wide .idx{ font-size:1.1rem; letter-spacing:0.02em; }
+  .usp-card--wide p{ font-size:0.98rem; color:#dccfba; }
+
+  /* ---------- honesty section ---------- */
+  .honest{
+    background:var(--surface); border:1px solid rgba(201,162,39,0.3); border-radius:6px;
+    padding:clamp(1.6rem,3vw,2.4rem); display:grid; grid-template-columns:1fr auto; gap:1.6rem; align-items:center;
+  }
+  @media (max-width:700px){ .honest{ grid-template-columns:1fr; } }
+  .honest h3{ font-size:1.3rem; color:var(--fg); margin-bottom:0.5rem; }
+  .honest p{ color:var(--muted); font-size:0.96rem; margin:0; max-width:56ch; }
+
+  .faq{ margin-top:1.4rem; display:flex; flex-direction:column; gap:0.6rem; }
+  .faq details{
+    background:var(--surface); border:1px solid rgba(244,235,221,0.08); border-radius:4px; padding:0.2rem 1.2rem;
+  }
+  .faq summary{
+    cursor:pointer; padding:0.9rem 0; font-weight:600; font-size:0.98rem; color:var(--fg);
+    list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{
+    content:"+"; font-family:'Fraunces',serif; font-size:1.3rem; color:var(--accent); flex:none;
+  }
+  .faq details[open] summary::after{ content:"–"; }
+  .faq p{ color:var(--muted); font-size:0.93rem; margin:0 0 1.1rem; max-width:60ch; }
+
+  /* ---------- rating ---------- */
+  .rating-row{ display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap; }
+  .rating-badge{
+    display:inline-flex; align-items:center; gap:0.9rem; border:1px solid rgba(201,162,39,0.4); border-radius:3px;
+    padding:0.9rem 1.5rem;
+  }
+  .rating-badge .num{ font-family:'Fraunces',serif; font-weight:700; font-size:1.8rem; color:var(--accent); }
+  .rating-badge .stars{ color:var(--accent); letter-spacing:0.05em; }
+  .rating-badge .cnt{ font-size:0.85rem; color:var(--muted); }
+
+  /* ---------- gallery ---------- */
+  .gallery-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem; }
+  @media (max-width:700px){ .gallery-row{ grid-template-columns:1fr 1fr; } }
+  .photo{ border-radius:4px; overflow:hidden; background:#2c1f1a; aspect-ratio:4/5; }
+  .photo img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .photo:hover img{ transform:scale(1.04); }
+  @media (prefers-reduced-motion: reduce){ .photo:hover img{ transform:none; } }
+  .gallery-row .photo:first-child{ grid-row:span 2; aspect-ratio:auto; }
+  @media (max-width:700px){ .gallery-row .photo:first-child{ grid-row:auto; aspect-ratio:4/5; grid-column:span 2; } }
+
+  /* ---------- contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; }
+  @media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
+  .map-frame{ border-radius:6px; overflow:hidden; border:1px solid rgba(244,235,221,0.12); aspect-ratio:4/3; }
+  .map-frame iframe{ width:100%; height:100%; border:0; }
+  .contact-info dt{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-top:1.1rem; }
+  .contact-info dt:first-child{ margin-top:0; }
+  .contact-info dd{ margin:0.25rem 0 0; font-weight:600; font-size:1.15rem; font-family:'Fraunces',serif; }
+  .contact-info a{ text-decoration:none; color:var(--fg); }
+  .contact-info a:hover{ color:var(--accent); }
+
+  /* ---------- closing cta ---------- */
+  .closing-cta{
+    text-align:center; border-top:1px solid rgba(244,235,221,0.12); padding-top:clamp(2rem,5vw,3.2rem);
+  }
+  .closing-kicker{
+    font-family:'Fraunces', serif; font-style:italic; font-size:clamp(1.2rem,2.4vw,1.6rem);
+    color:var(--muted); margin:0 0 1.4rem;
+  }
+
+  /* ---------- footer ---------- */
+  footer.site{ padding-block:2.6rem 6.5rem; border-top:1px solid rgba(244,235,221,0.1); margin-top:2rem; }
+  .footer-grid{ display:flex; justify-content:space-between; gap:1.2rem; flex-wrap:wrap; font-size:0.82rem; color:var(--muted); }
+  .footer-grid a{ text-decoration:underline; }
+  .footer-note{ margin-top:1.1rem; font-size:0.72rem; color:var(--muted); opacity:0.8; }
+
+  /* ---------- mobile bottom bar ---------- */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:60; display:flex;
+    border-top:1px solid rgba(244,235,221,0.15); background:var(--brand);
+  }
+  .mobile-bar a{
+    flex:1; text-align:center; padding:0.9rem 0.5rem; font-weight:700; text-transform:uppercase;
+    font-size:0.85rem; letter-spacing:0.03em; text-decoration:none; color:#fbe9ea;
+  }
+  .mobile-bar a.alt{ background:var(--accent); color:#241505; }
+  @media (min-width:760px){ .mobile-bar{ display:none; } }
+  @media (max-width:759px){ body{ padding-bottom:3.6rem; } }
+
+  /* ---------- small-phone refinements (down to 360px) ---------- */
+  @media (max-width:400px){
+    .wordmark{ font-size:1.15rem; }
+    .hero-year{ font-size:clamp(4rem,26vw,6rem); }
+    .hero h1{ font-size:clamp(1.7rem,7.5vw,2.2rem); }
+    .years-live .n{ font-size:1.6rem; }
+    .cta-row .btn, .mobile-bar a{ font-size:0.8rem; padding-inline:1.1rem; }
+    .rating-badge .num{ font-size:1.4rem; }
+    .usp-card{ padding:1.05rem 1.1rem; }
+    .honest{ padding:1.3rem; }
+    .wrap{ padding-inline:1rem; }
+  }
+
+  /* ---------- print ---------- */
+  @media print{
+    .mobile-bar, header.site, .skip-link{ display:none; }
+    body{ background:#fff; color:#111; }
+    .hero-year{ -webkit-text-stroke:1px #333; }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top"><span class="crest" aria-hidden="true"></span>Zur Krone<span>.</span></a>
+    <nav class="primary" id="primary-nav" aria-label="Hauptnavigation">
+      <a href="#zeitspanne">1448</a>
+      <a href="#haus">Das Haus</a>
+      <a href="#angebot">Angebot</a>
+      <a href="#anfrage">Speisekarte</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="nav-call" href="tel:+41522081818">052 208 18 18</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO — 1448 as graphic anchor -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-year reveal" aria-hidden="true">1448</div>
+      <div class="reveal" style="transition-delay:.08s">
+        <span class="eyebrow" style="text-align:left;">Esskultur im ältesten Restaurant Winterthurs</span>
+        <h1>Das älteste Restaurant <em>Winterthurs.</em></h1>
+        <p class="tag">Seit 1448 leben wir Gastfreundschaft mit Charakter — Schweizer und österreichische Klassiker, frisch gekocht, mit zeitgemässen Akzenten interpretiert.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+41522081818">052 208 18 18 anrufen</a>
+          <a class="btn btn-ghost" href="#anfrage">Speisekarte auf Anfrage</a>
+        </div>
+        <div class="years-live">
+          <span class="n" id="years-count">–</span>
+          <span class="t">Jahre Gastfreundschaft in der Winterthurer Altstadt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENTURY TIMELINE — structural rhythm -->
+  <section id="zeitspanne">
+    <div class="wrap reveal">
+      <span class="eyebrow">Zeitspanne</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:1.8rem;">Sechs Jahrhunderte, ein Haus.</h2>
+      <div class="timeline-wrap">
+        <div class="timeline" id="timeline"></div>
+      </div>
+      <p class="timeline-caption">Von <strong>1448</strong> bis heute steht die Krone an derselben Stelle in der Altstadt — durch <strong id="century-count">–</strong> Jahrhunderte hindurch ein Ort zum Verweilen und Geniessen.</p>
+      <p class="timeline-caption" id="tick-detail" aria-live="polite">Auf eine Jahreszahl klicken für den Abstand zu heute.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="haus">
+    <div class="wrap about-grid reveal">
+      <div>
+        <span class="eyebrow">Das Haus</span>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem); margin-bottom:1.1rem;">Esskultur mit Charakter.</h2>
+        <p>Willkommen in der Krone – dem ältesten Restaurant Winterthurs. Seit 1448 leben wir Gastfreundschaft mit Charakter und servieren Schweizer und österreichische Klassiker, frisch gekocht und mit zeitgemässen Akzenten interpretiert. Dazu passend: eine sorgfältig kuratierte Weinkarte, die Tradition und Genuss verbindet.</p>
+        <p>Ob zum Kaffee auf der Terrasse, für einen entspannten Lunch oder einen Apéro mitten in der Winterthurer Altstadt – die Krone ist ein Ort zum Verweilen und Geniessen.</p>
+      </div>
+      <blockquote class="pull-quote">„Eine Institution seit 1448 – das älteste Restaurant Winterthurs.“</blockquote>
+    </div>
+  </section>
+
+  <!-- USPS -->
+  <section id="angebot">
+    <div class="wrap reveal">
+      <span class="eyebrow">Was die Krone ausmacht</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:1.6rem;">Klassiker, Weinkarte, Terrasse.</h2>
+      <div class="usp-grid">
+        <div class="usp-card"><span class="idx">01</span><p>Schweizer und österreichische Klassiker, frisch gekocht</p></div>
+        <div class="usp-card"><span class="idx">02</span><p>Sorgfältig kuratierte Weinkarte, die Tradition und Genuss verbindet</p></div>
+        <div class="usp-card"><span class="idx">03</span><p>Terrasse mitten in der Winterthurer Altstadt</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galerie">
+    <div class="wrap reveal">
+      <span class="eyebrow">Impressionen</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:1.6rem;">Aus dem Haus.</h2>
+      <div class="gallery-row">
+        <div class="photo"><img src="https://kronewinterthur.ch/wp-content/uploads/2018/10/krone_Winterthur_Poulet.jpg" alt="Gericht aus der Krone-Küche" loading="lazy" onerror="this.closest('.photo').style.display='none'"></div>
+        <div class="photo"><img src="https://kronewinterthur.ch/wp-content/uploads/2017/10/130_bildvorlage2spaltig_unterseiten8.jpg" alt="Innenraum Wirtshaus zur Krone" loading="lazy" onerror="this.closest('.photo').style.display='none'"></div>
+        <div class="photo"><img src="https://kronewinterthur.ch/wp-content/uploads/2018/10/130_Aussenbestuhlung_header.jpg" alt="Terrasse Wirtshaus zur Krone" loading="lazy" onerror="this.closest('.photo').style.display='none'"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOUSE — Kronesaal for events, shared with the Boutique-Hotel Krone -->
+  <section id="haus-heute">
+    <div class="wrap reveal">
+      <span class="eyebrow">Mehr als ein Wirtshaus</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:1.6rem;">Ein Haus, zwei Adressen.</h2>
+      <div class="usp-grid">
+        <div class="usp-card usp-card--wide">
+          <span class="idx">Kronesaal</span>
+          <p>Wirtshaus und Kronesaal stehen für Feiern, Events und Meetings zur Verfügung — mitten in der Altstadt, im selben Haus wie das Wirtshaus.</p>
+        </div>
+        <div class="usp-card usp-card--wide">
+          <span class="idx">Hotel</span>
+          <p>Im selben Haus führt das Boutique-Hotel Krone (4 Sterne) seine Zimmer — eine Liegenschaft, in der seit 1448 Gäste empfangen werden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONESTY — no menu, no hours -->
+  <section id="anfrage">
+    <div class="wrap reveal">
+      <div class="honest">
+        <div>
+          <h3>Speisekarte &amp; Öffnungszeiten auf Anfrage</h3>
+          <p>Unsere aktuelle Speisekarte und die Öffnungszeiten führen wir hier bewusst nicht auf, damit nichts Veraltetes kursiert. Am zuverlässigsten erfahren Sie beides direkt am Telefon.</p>
+        </div>
+        <a class="btn btn-primary" href="tel:+41522081818">052 208 18 18</a>
+      </div>
+
+      <div class="faq" role="group" aria-label="Häufige Fragen">
+        <details>
+          <summary>Gibt es die Speisekarte online?</summary>
+          <p>Nein — sie wechselt und wird bewusst nicht hier veröffentlicht. Bitte telefonisch erfragen: 052 208 18 18.</p>
+        </details>
+        <details>
+          <summary>Wo genau liegt die Krone?</summary>
+          <p>Mitten in der Winterthurer Altstadt. Eine genaue Adresse ist hier nicht hinterlegt — folgen Sie der Karte weiter unten oder rufen Sie an.</p>
+        </details>
+        <details>
+          <summary>Kann ich online reservieren?</summary>
+          <p>Eine Online-Reservierung bieten wir hier nicht an. Reservationen laufen telefonisch über 052 208 18 18.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATING -->
+  <section id="bewertung">
+    <div class="wrap reveal">
+      <div class="rating-row">
+        <div class="rating-badge">
+          <span class="num">4.5</span>
+          <div><span class="stars" aria-hidden="true">★★★★★</span><div class="cnt">226 Google-Bewertungen</div></div>
+        </div>
+        <p style="color:var(--muted); max-width:48ch; margin:0;">Über zwei Jahrzehnte Google-Bewertungen bestätigen, was die Altstadt seit 1448 weiss.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="wrap reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:1.6rem;">Mitten in der Altstadt.</h2>
+      <div class="contact-grid">
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=Wirtshaus%20zur%20Krone%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Wirtshaus zur Krone, Winterthur" loading="lazy"></iframe>
+        </div>
+        <div class="contact-info">
+          <dl>
+            <dt>Telefon</dt><dd><a href="tel:+41522081818">052 208 18 18</a></dd>
+            <dt>Adresse</dt><dd style="font-family:'Public Sans',sans-serif; font-weight:400; font-size:0.94rem; color:var(--muted);">Keine Adresse hinterlegt — bitte telefonisch erfragen oder der Karte folgen.</dd>
+            <dt>Website</dt><dd style="font-size:0.94rem;"><a href="https://kronewinterthur.ch/" rel="noopener">kronewinterthur.ch</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="abschluss">
+    <div class="wrap reveal closing-cta">
+      <p class="closing-kicker">Seit 1448 — und noch immer für Sie geöffnet</p>
+      <a class="btn btn-primary" href="tel:+41522081818">052 208 18 18 anrufen</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span>Wirtshaus zur Krone · Winterthurer Altstadt · seit 1448</span>
+      <a href="tel:+41522081818">052 208 18 18</a>
+      <a href="#top">Nach oben ↑</a>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522081818">Anrufen</a>
+  <a class="alt" href="https://maps.google.com/maps?q=Wirtshaus%20zur%20Krone%20Winterthur&amp;z=16">Route</a>
+</div>
+
+<script>
+(function(){
+  var FOUNDED = 1448;
+  var now = new Date();
+  var currentYear = now.getFullYear();
+  var years = currentYear - FOUNDED;
+  var centuries = Math.floor(years/100);
+
+  var yc = document.getElementById("years-count");
+  if (yc) yc.textContent = years;
+  var cc = document.getElementById("century-count");
+  if (cc) cc.textContent = centuries;
+
+  /* ---------------- Century timeline build ---------------- */
+  var timeline = document.getElementById("timeline");
+  if (timeline){
+    var startCentury = Math.floor(FOUNDED/100)*100; // 1400
+    var marks = [];
+    for (var y = FOUNDED; y < currentYear; y += 100){
+      marks.push(y);
+    }
+    marks.push(currentYear);
+    var detail = document.getElementById("tick-detail");
+    marks.forEach(function(yr, i){
+      var isMajor = (yr % 100 === 0) || yr === FOUNDED;
+      var isNow = (yr === currentYear);
+      var tick = document.createElement("button");
+      tick.type = "button";
+      tick.className = "tick" + (isMajor ? " major" : "") + (isNow ? " now" : "");
+      var span = document.createElement("span");
+      span.className = "yr";
+      span.textContent = isNow ? ("Heute · " + yr) : yr;
+      tick.appendChild(span);
+      tick.addEventListener("click", function(){
+        if (!detail) return;
+        var diff = currentYear - yr;
+        detail.textContent = isNow
+          ? "Heute, " + currentYear + " — " + years + " Jahre nach der Gründung 1448."
+          : yr + " — vor " + diff + " Jahren, " + Math.floor(diff/100) + " Jahrhunderte vor heute.";
+      });
+      timeline.appendChild(tick);
+    });
+  }
+
+  /* ---------------- Header scroll shadow ---------------- */
+  var siteHeader = document.querySelector("header.site");
+  if (siteHeader){
+    var onScroll = function(){
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive:true });
+  }
+
+  /* ---------------- Mobile nav toggle ---------------- */
+  var toggle = document.getElementById("nav-toggle");
+  var primaryNav = document.getElementById("primary-nav");
+  if (toggle && primaryNav){
+    toggle.addEventListener("click", function(){
+      var open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!open));
+      toggle.setAttribute("aria-label", open ? "Menü öffnen" : "Menü schliessen");
+      primaryNav.classList.toggle("is-open", !open);
+    });
+    primaryNav.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", function(){
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Menü öffnen");
+        primaryNav.classList.remove("is-open");
+      });
+    });
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true"){
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Menü öffnen");
+        primaryNav.classList.remove("is-open");
+        toggle.focus();
+      }
+    });
+    document.addEventListener("click", function(e){
+      if (toggle.getAttribute("aria-expanded") !== "true") return;
+      if (!primaryNav.contains(e.target) && e.target !== toggle){
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Menü öffnen");
+        primaryNav.classList.remove("is-open");
+      }
+    });
+  }
+
+  /* ---------------- Scrollspy ---------------- */
+  var navLinks = document.querySelectorAll("nav.primary a[href^='#']");
+  var spySections = [];
+  navLinks.forEach(function(a){
+    var id = a.getAttribute("href").slice(1);
+    var target = document.getElementById(id);
+    if (target) spySections.push({ link:a, el:target });
+  });
+  if (spySections.length && "IntersectionObserver" in window){
+    var spyIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var match = spySections.filter(function(s){ return s.el === entry.target; })[0];
+        if (!match) return;
+        if (entry.isIntersecting){
+          navLinks.forEach(function(a){ a.removeAttribute("aria-current"); });
+          match.link.setAttribute("aria-current", "true");
+        }
+      });
+    }, { rootMargin:"-45% 0px -50% 0px", threshold:0 });
+    spySections.forEach(function(s){ spyIo.observe(s.el); });
+  }
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
+      });
+    }, { threshold:0.12 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+
+</body>
+</html>

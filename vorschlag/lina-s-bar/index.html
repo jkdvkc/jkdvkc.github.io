@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lina's Bar Winterthur — Wohnzimmer-Kneipe mit Gartenterrasse</title>
+<meta name="description" content="Lina's Bar an der Wartstrasse 38 in Winterthur: Cocktails, Bier und Wein in gemütlicher Wohnzimmer-Atmosphäre, drinnen wie im ruhigen Hintergarten. 4.7★ bei Google, 265 Bewertungen.">
+<meta property="og:title" content="Lina's Bar Winterthur — Deine Lieblingskneipe wie im eigenen Wohnzimmer">
+<meta property="og:description" content="Cocktails, Bier, Wein und kleine Snacks — drinnen im Wohnzimmer oder draussen im ruhigen Hintergarten. Wartstrasse 38, 8400 Winterthur.">
+<meta property="og:type" content="business.business">
+<meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-t/1d/c4/96/37/gastraum.jpg">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Lina's Bar",
+  "image": [
+    "https://media-cdn.tripadvisor.com/media/photo-t/1d/c4/96/37/gastraum.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60924004.thumb.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60924016.thumb.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60923977.thumb.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60923992.thumb.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60923951.thumb.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60923958.thumb.jpg",
+    "https://foto1.sluurpy.com/locali/ch/7026308/60923967.thumb.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wartstrasse 38",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "email": "info@linas-bar.ch",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "265"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "16:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday"], "opens": "16:00", "closes": "02:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "16:00", "closes": "23:59" }
+  ],
+  "sameAs": ["https://www.instagram.com/linas-bar/"]
+}
+</script>
+<style>
+  /* ============ tokens ============ */
+  :root{
+    --bg:#faf5ea;
+    --surface:#fffdf8;
+    --fg:#2c2c2c;
+    --muted:#5c574d;
+    --brand:#2c2c2c;
+    --accent:#b8895a;
+    --accent-soft:#c4a574;
+    --sage:#6f7d5e;
+    --line: rgba(44,44,44,0.12);
+    --radius: 18px;
+    --shadow: 0 18px 40px -22px rgba(44,32,18,0.35);
+    --maxw: 1180px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Karla', system-ui, sans-serif;
+    font-size:clamp(15px, 0.95vw + 0.7rem, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0 0 0.5em;
+    color:var(--brand);
+    letter-spacing:-0.01em;
+  }
+
+  p{ margin:0 0 1em; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding-inline:clamp(1.1rem, 4vw, 3rem);
+  }
+
+  .eyebrow{
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    color:var(--accent);
+  }
+
+  .muted{ color:var(--muted); }
+
+  :focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5em;
+    padding:0.85em 1.5em;
+    border-radius:999px;
+    font-weight:700;
+    font-size:0.95rem;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  @media (prefers-reduced-motion: reduce){ .btn{ transition:none; } }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-solid{ background:var(--brand); color:var(--bg); }
+  .btn-solid:hover{ background:#1a1a1a; }
+  .btn-line{ border-color:var(--brand); color:var(--brand); background:transparent; }
+  .btn-line:hover{ background:var(--brand); color:var(--bg); }
+  .btn-accent{ background:var(--accent); color:#2a1a0e; }
+  .btn-accent:hover{ background:#a67548; }
+
+  /* ============ reveal ============ */
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ============ header ============ */
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(250,245,234,0.92);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:0.85rem;
+    gap:1rem;
+  }
+  .brandmark{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-style:italic;
+    font-size:clamp(1.3rem, 2vw, 1.7rem);
+    text-decoration:none;
+    color:var(--brand);
+    display:flex;
+    align-items:baseline;
+    gap:0.4rem;
+  }
+  .brandmark small{
+    font-family:'Karla', sans-serif;
+    font-style:normal;
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:0.6rem;
+    color:var(--accent);
+  }
+  nav.primary{ display:flex; align-items:center; gap:1.6rem; }
+  nav.primary a{
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.92rem;
+    color:var(--fg);
+    padding:0.3rem 0.1rem;
+    border-bottom:2px solid transparent;
+  }
+  nav.primary a:hover{ border-color:var(--accent); }
+  .open-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:0.45em;
+    font-size:0.78rem;
+    font-weight:700;
+    padding:0.4em 0.85em;
+    border-radius:999px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    white-space:nowrap;
+  }
+  .open-pill .dot{ width:8px; height:8px; border-radius:50%; background:#8a8a8a; flex:none; }
+  .open-pill.is-open .dot{ background:#5c7a4a; box-shadow:0 0 0 3px rgba(92,122,74,0.18); }
+  .open-pill.is-closed .dot{ background:#b8583f; }
+  .nav-toggle{
+    display:none;
+    background:none; border:1.5px solid var(--brand); border-radius:10px;
+    width:42px; height:38px; cursor:pointer; padding:0;
+    align-items:center; justify-content:center;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+    content:''; display:block; width:20px; height:2px; background:var(--brand); position:relative;
+  }
+  .nav-toggle span::before{ position:absolute; top:-6px; }
+  .nav-toggle span::after{ position:absolute; top:6px; }
+
+  @media (max-width: 860px){
+    nav.primary{
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--surface);
+      flex-direction:column; align-items:flex-start;
+      padding:1rem clamp(1.1rem,4vw,3rem) 1.5rem;
+      border-bottom:1px solid var(--line);
+      gap:0.9rem;
+      display:none;
+    }
+    nav.primary.is-open{ display:flex; }
+    .nav-toggle{ display:inline-flex; }
+    .open-pill{ display:none; }
+  }
+
+  /* ============ hero split ============ */
+  .hero{
+    padding-top:clamp(1.2rem, 3vw, 2.4rem);
+  }
+  .hero-head{
+    max-width:56ch;
+    margin-bottom:1.6rem;
+  }
+  .hero-head h1{
+    font-size:clamp(2.3rem, 5.4vw, 4rem);
+    font-weight:500;
+    font-style:italic;
+  }
+  .hero-sub{ font-size:1.08rem; max-width:48ch; color:var(--muted); }
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:0.6rem 1.4rem; margin:1.1rem 0 1.6rem;
+    font-size:0.92rem;
+  }
+  .hero-meta .item{ display:flex; align-items:center; gap:0.5em; }
+  .hero-meta .stars{ color:var(--accent); font-weight:700; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:2rem; }
+
+  .split-door{
+    display:flex;
+    gap:0.6rem;
+    height:clamp(360px, 58vw, 560px);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .door-panel{
+    position:relative;
+    flex:1 1 50%;
+    min-width:0;
+    cursor:pointer;
+    border:none;
+    padding:0;
+    overflow:hidden;
+    transition:flex-basis .55s cubic-bezier(.19,1,.22,1);
+    color:#fff;
+    isolation:isolate;
+  }
+  @media (prefers-reduced-motion: reduce){ .door-panel{ transition:none; } }
+  .door-panel img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    z-index:-2;
+    transform:scale(1.03);
+  }
+  .door-panel::after{
+    content:'';
+    position:absolute; inset:0; z-index:-1;
+    background:linear-gradient(180deg, rgba(20,15,8,0.05) 0%, rgba(20,15,8,0.62) 100%);
+  }
+  .door-panel.is-active{ flex-basis:64%; }
+  .door-panel.is-idle{ flex-basis:36%; }
+  .door-inner{
+    position:relative; z-index:1;
+    height:100%; display:flex; flex-direction:column; justify-content:flex-end;
+    padding:clamp(1rem,2.4vw,1.9rem);
+    text-align:left;
+  }
+  .door-label{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:600;
+    font-size:clamp(1.4rem, 2.4vw, 2rem);
+    margin:0 0 0.3rem;
+    color:#fff;
+  }
+  .door-tag{
+    font-size:0.86rem;
+    color:rgba(255,255,255,0.88);
+    max-width:32ch;
+    display:none;
+  }
+  .door-panel.is-active .door-tag{ display:block; }
+  .door-cue{
+    font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:700;
+    color:rgba(255,255,255,0.75);
+  }
+  .door-panel.is-idle .door-inner{ writing-mode:vertical-rl; align-items:flex-end; padding-block:1.4rem; }
+  .door-panel.is-idle .door-label{ writing-mode:horizontal-tb; }
+
+  @media (max-width: 640px){
+    .split-door{ flex-direction:column; height:auto; }
+    .door-panel{ flex-basis:auto !important; height:180px; }
+    .door-panel.is-active{ height:340px; }
+    .door-panel.is-idle .door-inner{ writing-mode:horizontal-tb; padding-block:1rem; }
+  }
+
+  /* ============ section shell ============ */
+  section{ padding-block:clamp(3.2rem, 7vw, 6rem); }
+  .section-head{ max-width:60ch; margin-bottom:2.2rem; }
+  .section-head h2{ font-size:clamp(1.7rem, 3.2vw, 2.5rem); }
+
+  /* ============ about / usps ============ */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:clamp(1.6rem, 4vw, 4rem);
+    align-items:start;
+  }
+  .about-grid p{ font-size:1.05rem; color:var(--fg); }
+  .usp-list{ list-style:none; margin:0; padding:0; display:grid; gap:0.75rem; }
+  .usp-list li{
+    display:flex; gap:0.7em; align-items:flex-start;
+    background:var(--surface); border:1px solid var(--line);
+    padding:0.85em 1em; border-radius:12px; font-weight:600; font-size:0.95rem;
+  }
+  .usp-list li::before{ content:'✦'; color:var(--accent); flex:none; }
+  @media (max-width: 780px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* ============ toggle module ============ */
+  .duality{
+    background:var(--brand);
+    color:var(--bg);
+    border-radius:var(--radius);
+    padding:clamp(1.6rem, 4vw, 3rem);
+  }
+  .duality .section-head h2{ color:var(--bg); }
+  .duality .section-head p{ color:rgba(250,245,234,0.72); }
+  .switcher{
+    display:inline-flex;
+    background:rgba(250,245,234,0.1);
+    border:1px solid rgba(250,245,234,0.25);
+    border-radius:999px;
+    padding:0.3rem;
+    margin-bottom:2rem;
+    gap:0.3rem;
+  }
+  .switcher button{
+    border:none; background:transparent; color:rgba(250,245,234,0.75);
+    font-family:'Karla', sans-serif; font-weight:700; font-size:0.92rem;
+    padding:0.6em 1.4em; border-radius:999px; cursor:pointer;
+    transition:background .25s ease, color .25s ease;
+  }
+  @media (prefers-reduced-motion: reduce){ .switcher button{ transition:none; } }
+  .switcher button[aria-pressed="true"]{ background:var(--accent-soft); color:#2a1a0e; }
+
+  .duality-body{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:clamp(1.5rem, 3vw, 3rem);
+    align-items:center;
+  }
+  .duality-figure{
+    aspect-ratio: 4/3;
+    border-radius:14px;
+    overflow:hidden;
+    position:relative;
+    background:#111;
+  }
+  .duality-figure img{
+    width:100%; height:100%; object-fit:cover;
+    opacity:0;
+    position:absolute; inset:0;
+    transition:opacity .5s ease;
+  }
+  .duality-figure img.is-shown{ opacity:1; position:relative; }
+  @media (prefers-reduced-motion: reduce){ .duality-figure img{ transition:none; } }
+  .duality-copy h3{ color:var(--bg); font-size:clamp(1.4rem,2.4vw,1.9rem); }
+  .duality-copy p{ color:rgba(250,245,234,0.85); }
+  .duality-tags{ display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.2rem; }
+  .duality-tags span{
+    font-size:0.78rem; font-weight:700; padding:0.4em 0.9em; border-radius:999px;
+    background:rgba(250,245,234,0.1); border:1px solid rgba(250,245,234,0.3);
+  }
+  @media (max-width: 700px){ .duality-body{ grid-template-columns:1fr; } }
+
+  /* ============ pinboard gallery ============ */
+  .pinboard{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1.4rem 1.1rem;
+  }
+  .pin{
+    background:var(--surface);
+    padding:0.6rem 0.6rem 1rem;
+    border-radius:4px;
+    box-shadow:0 14px 26px -16px rgba(44,32,18,0.4);
+    position:relative;
+  }
+  .pin::before{
+    content:'';
+    position:absolute; top:-9px; left:50%; transform:translateX(-50%) rotate(var(--pinrot,0deg));
+    width:16px; height:16px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #e7c8a8, var(--accent) 70%);
+    box-shadow:0 3px 4px rgba(0,0,0,0.3);
+  }
+  .pin img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:2px; }
+  .pin:nth-child(2n){ transform:rotate(-1.4deg); }
+  .pin:nth-child(3n){ transform:rotate(1.6deg); }
+  .pin:nth-child(5n){ transform:rotate(-0.6deg); }
+  .pin figcaption{ font-size:0.72rem; color:var(--muted); text-align:center; margin-top:0.5rem; font-weight:600; }
+
+  @media (max-width: 980px){ .pinboard{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width: 640px){ .pinboard{ grid-template-columns:repeat(2,1fr); gap:1.2rem 0.8rem; } .pin{ transform:none !important; } }
+
+  /* ============ hours + rating ============ */
+  .hours-wrap{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:clamp(1.6rem,4vw,3rem);
+  }
+  table.hours{ width:100%; border-collapse:collapse; font-size:1rem; }
+  table.hours caption{ text-align:left; font-weight:700; margin-bottom:0.8rem; color:var(--muted); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; }
+  table.hours th{ text-align:left; font-weight:600; color:var(--muted); }
+  table.hours td, table.hours th{ padding:0.75rem 0.5rem; border-bottom:1px solid var(--line); }
+  table.hours tr.is-today td, table.hours tr.is-today th{ color:var(--brand); font-weight:700; }
+  table.hours tr.is-today{ background:rgba(196,165,116,0.14); }
+
+  .rating-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:clamp(1.4rem,3vw,2.2rem); display:flex; flex-direction:column; gap:1rem; justify-content:center;
+  }
+  .rating-big{ display:flex; align-items:baseline; gap:0.6rem; }
+  .rating-big .num{ font-family:'Fraunces', serif; font-size:clamp(2.6rem,5vw,3.6rem); font-weight:600; }
+  .rating-big .stars{ color:var(--accent); font-size:1.3rem; letter-spacing:0.05em; }
+  .status-line{ display:flex; align-items:center; gap:0.6rem; font-weight:700; }
+
+  @media (max-width: 780px){ .hours-wrap{ grid-template-columns:1fr; } }
+
+  /* ============ location ============ */
+  .location-wrap{
+    display:grid; grid-template-columns: 0.9fr 1.1fr; gap:clamp(1.5rem,3vw,2.5rem); align-items:stretch;
+  }
+  .location-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:clamp(1.4rem,3vw,2.2rem); display:flex; flex-direction:column; justify-content:space-between; gap:1.4rem;
+  }
+  .addr-block address{ font-style:normal; font-size:1.15rem; line-height:1.5; }
+  .map-frame{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); min-height:320px; }
+  .map-frame iframe{ width:100%; height:100%; min-height:320px; border:0; display:block; }
+  @media (max-width: 780px){ .location-wrap{ grid-template-columns:1fr; } }
+
+  /* ============ contact ============ */
+  .contact{
+    background:var(--fg);
+    color:var(--bg);
+    border-radius:var(--radius);
+    padding:clamp(2rem,5vw,3.5rem);
+    text-align:center;
+  }
+  .contact h2{ color:var(--bg); font-size:clamp(1.9rem,4vw,2.8rem); }
+  .contact p{ color:rgba(250,245,234,0.75); max-width:50ch; margin-inline:auto; }
+  .contact-actions{ display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-top:1.6rem; }
+  .contact .btn-line{ border-color:rgba(250,245,234,0.6); color:var(--bg); }
+  .contact .btn-line:hover{ background:var(--bg); color:var(--fg); }
+  .contact .btn-accent{ color:#2a1a0e; }
+  .contact-note{ margin-top:1.4rem; font-size:0.82rem; color:rgba(250,245,234,0.55); }
+
+  /* ============ footer ============ */
+  footer.site{ padding-block:2.6rem 6.5rem; border-top:1px solid var(--line); }
+  .footer-grid{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.6rem; align-items:flex-start;
+  }
+  .footer-grid .brandmark{ margin-bottom:0.6rem; }
+  .footer-links{ display:flex; gap:1.4rem; flex-wrap:wrap; font-size:0.9rem; }
+  .footer-links a{ text-decoration:none; font-weight:600; }
+  .footer-links a:hover{ color:var(--accent); }
+  .footer-fine{ margin-top:2.2rem; font-size:0.78rem; color:var(--muted); }
+
+  /* ============ sticky mobile bar ============ */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    display:none;
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    padding:0.6rem clamp(0.8rem,4vw,1.5rem);
+    box-shadow:0 -10px 24px -14px rgba(44,32,18,0.35);
+  }
+  .mobile-bar .row{ display:flex; gap:0.7rem; }
+  .mobile-bar .btn{ flex:1; justify-content:center; padding:0.8em 0.6em; font-size:0.88rem; }
+  @media (max-width: 720px){
+    .mobile-bar{ display:block; }
+    footer.site{ padding-bottom:2.6rem; }
+    section{ scroll-margin-top:70px; }
+  }
+  @media (min-width: 721px){
+    section{ scroll-margin-top:80px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="brandmark" href="#top">Lina's <small>Bar Winterthur</small></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">
+      <span></span>
+    </button>
+    <nav class="primary" id="primaryNav">
+      <a href="#wohnzimmer">Drinnen &amp; Draussen</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#zeiten">Öffnungszeiten</a>
+      <a href="#lage">Lage</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <span class="open-pill" id="headerPill"><span class="dot"></span><span id="headerPillText">Status wird geladen …</span></span>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO: split door -->
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-head reveal">
+      <p class="eyebrow">Wartstrasse 38 · Winterthur</p>
+      <h1 id="hero-title">Deine Lieblingskneipe wie im eigenen Wohnzimmer</h1>
+      <p class="hero-sub">Cocktails, Bier, Wein und kleine Snacks — in einem Lokal, das sich anfühlt, als würdest du bei Freunden vorbeischauen. Drinnen unter Lampenlicht oder draussen im ruhigen Hintergarten: du entscheidest an der Tür.</p>
+      <div class="hero-meta">
+        <span class="item"><span class="stars">★ 4.7</span> <span class="muted">· 265 Google-Bewertungen</span></span>
+        <span class="item muted">Wartstrasse 38, 8400 Winterthur</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="mailto:info@linas-bar.ch">Tisch anfragen per E-Mail</a>
+        <a class="btn btn-line" href="#zeiten">Öffnungszeiten ansehen</a>
+      </div>
+    </div>
+
+    <div class="split-door reveal" role="group" aria-label="Wähle drinnen oder draussen">
+      <button type="button" class="door-panel is-active" id="heroDoorIn" aria-pressed="true">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-t/1d/c4/96/37/gastraum.jpg" alt="" onerror="this.parentElement.style.background='linear-gradient(160deg,#3a3128,#2c2c2c)'; this.remove();">
+        <span class="door-inner">
+          <span class="door-cue">Türe eins</span>
+          <span class="door-label">Drinnen</span>
+          <span class="door-tag">Stilvolles, authentisches Dekor, warmes Licht und Sofas zum Versinken.</span>
+        </span>
+      </button>
+      <button type="button" class="door-panel is-idle" id="heroDoorOut" aria-pressed="false">
+        <img src="https://foto1.sluurpy.com/locali/ch/7026308/60923951.thumb.jpg" alt="" onerror="this.parentElement.style.background='linear-gradient(160deg,#4a5240,#2c2c2c)'; this.remove();">
+        <span class="door-inner">
+          <span class="door-cue">Türe zwei</span>
+          <span class="door-label">Draussen</span>
+          <span class="door-tag">Der ruhige Hintergarten für laue Abende nach der Arbeit.</span>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="wrap" id="ueber" aria-labelledby="about-title">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="eyebrow">Über Lina's Bar</p>
+        <h2 id="about-title">Benannt nach der Grossmutter des Inhabers</h2>
+        <p>Lina's Bar bietet Gästen das Gefühl, in ihrem eigenen Wohnzimmer zu sein. Benannt nach der Grossmutter des Inhabers, besticht das Lokal durch stilvolles, authentisches Dekor, einen ruhigen Hintergarten und serviert Cocktails, Bier, Wein und kleine Snacks.</p>
+        <p>Die Einrichtung verbindet warme, vertraute Atmosphäre mit gehobener Qualität — ideal zur Entspannung nach der Arbeit oder zum Gesellschaften.</p>
+      </div>
+      <ul class="usp-list reveal" aria-label="Was Lina's Bar ausmacht">
+        <li>Cosy Wohnzimmer-Atmosphäre</li>
+        <li>Ruhiger Hintergarten</li>
+        <li>Hochwertige Cocktails</li>
+        <li>Authentische, stilvolle Einrichtung</li>
+        <li>Perfekt für After-Work-Relaxation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: drinnen / draussen -->
+  <section class="wrap" id="wohnzimmer" aria-labelledby="duality-title">
+    <div class="duality reveal">
+      <div class="section-head">
+        <p class="eyebrow">Das Prinzip von Lina's</p>
+        <h2 id="duality-title">Drinnen oder draussen — du entscheidest</h2>
+        <p>Zwei Stimmungen, ein Lokal. Schalte um und sieh, was dich erwartet.</p>
+      </div>
+
+      <div class="switcher" role="tablist" aria-label="Drinnen oder draussen wählen">
+        <button type="button" role="tab" id="tabIn" aria-pressed="true" aria-selected="true" aria-controls="panelDuality" data-mode="in">Drinnen</button>
+        <button type="button" role="tab" id="tabOut" aria-pressed="false" aria-selected="false" aria-controls="panelDuality" data-mode="out">Draussen</button>
+      </div>
+
+      <div class="duality-body" id="panelDuality">
+        <div class="duality-figure">
+          <img id="figIn" class="is-shown" src="https://foto1.sluurpy.com/locali/ch/7026308/60924004.thumb.jpg" alt="" onerror="this.remove();">
+          <img id="figOut" src="https://foto1.sluurpy.com/locali/ch/7026308/60923992.thumb.jpg" alt="" onerror="this.remove();">
+        </div>
+        <div class="duality-copy">
+          <div id="copyIn">
+            <h3>Wohnzimmer-Gefühl, gehobene Qualität</h3>
+            <p>Stilvolles, authentisches Dekor und eine warme, vertraute Atmosphäre — als würdest du auf dem eigenen Sofa sitzen, nur mit besseren Cocktails. Der ideale Ort, um nach der Arbeit runterzukommen oder mit Freunden zu sitzen.</p>
+            <div class="duality-tags">
+              <span>Cosy Wohnzimmer-Atmosphäre</span>
+              <span>Authentische, stilvolle Einrichtung</span>
+              <span>Hochwertige Cocktails</span>
+            </div>
+          </div>
+          <div id="copyOut" hidden>
+            <h3>Der ruhige Hintergarten</h3>
+            <p>Wer es lieber unter freiem Himmel mag, findet im Hintergarten von Lina's Bar seinen ruhigen Rückzugsort — perfekt für laue Abende, Gespräche unter freiem Himmel und die gleiche Cocktail-, Bier- und Weinauswahl wie drinnen.</p>
+            <div class="duality-tags">
+              <span>Ruhiger Hintergarten</span>
+              <span>Perfekt für After-Work-Relaxation</span>
+              <span>Hochwertige Cocktails</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO PINBOARD -->
+  <section class="wrap" id="fotos" aria-labelledby="fotos-title">
+    <div class="section-head reveal">
+      <p class="eyebrow">Impressionen</p>
+      <h2 id="fotos-title">Ein paar Blicke ins Lokal</h2>
+    </div>
+    <div class="pinboard reveal" id="pinboard">
+      <!-- pins injected/kept static below -->
+      <figure class="pin"><img src="https://media-cdn.tripadvisor.com/media/photo-t/1d/c4/96/37/gastraum.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Gastraum</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60924004.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60924016.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60923977.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60923992.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60923951.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60923958.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+      <figure class="pin"><img src="https://foto1.sluurpy.com/locali/ch/7026308/60923967.thumb.jpg" alt="Lina's Bar Winterthur" onerror="this.closest('.pin').style.display='none';"><figcaption>Lina's Bar</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- HOURS + RATING -->
+  <section class="wrap" id="zeiten" aria-labelledby="zeiten-title">
+    <div class="section-head reveal">
+      <p class="eyebrow">Wann du vorbeikommen kannst</p>
+      <h2 id="zeiten-title">Öffnungszeiten &amp; Bewertungen</h2>
+    </div>
+    <div class="hours-wrap reveal">
+      <table class="hours" id="hoursTable">
+        <caption>Öffnungszeiten</caption>
+        <tbody>
+          <tr data-days="Mo-Mi"><th>Mo – Mi</th><td>16:00–24:00</td></tr>
+          <tr data-days="Do-Fr"><th>Do – Fr</th><td>16:00–02:00</td></tr>
+          <tr data-days="Sa"><th>Sa</th><td>16:00–24:00</td></tr>
+          <tr data-days="So"><th>So</th><td>Geschlossen</td></tr>
+        </tbody>
+      </table>
+
+      <div class="rating-card">
+        <div>
+          <p class="eyebrow">Google-Bewertungen</p>
+          <div class="rating-big"><span class="num">4.7</span><span class="stars">★★★★★</span></div>
+          <p class="muted" style="margin-top:0.3rem;">265 Bewertungen auf Google</p>
+        </div>
+        <div class="status-line" id="bodyStatusLine">
+          <span class="open-pill" id="bodyPill"><span class="dot"></span><span id="bodyPillText">Status wird geladen …</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="wrap" id="lage" aria-labelledby="lage-title">
+    <div class="section-head reveal">
+      <p class="eyebrow">Finde uns</p>
+      <h2 id="lage-title">Mitten in Winterthur</h2>
+    </div>
+    <div class="location-wrap reveal">
+      <div class="location-card">
+        <div class="addr-block">
+          <p class="eyebrow">Adresse</p>
+          <address>Wartstrasse 38<br>8400 Winterthur</address>
+        </div>
+        <div>
+          <a class="btn btn-solid" href="https://maps.google.com/maps?q=Lina%27s+Bar+Winterthur+Wartstrasse+38&amp;z=16" target="_blank" rel="noopener">Route planen</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Lina%27s+Bar+Winterthur+Wartstrasse+38&amp;z=16&amp;output=embed"
+          title="Lina's Bar auf der Karte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="wrap" id="kontakt" aria-labelledby="kontakt-title">
+    <div class="contact reveal">
+      <p class="eyebrow" style="color:var(--accent-soft);">Kontakt</p>
+      <h2 id="kontakt-title">Reserviere per E-Mail</h2>
+      <p>Lina's Bar nimmt Anfragen und Reservierungswünsche direkt per E-Mail entgegen — wir melden uns gerne zurück.</p>
+      <div class="contact-actions">
+        <a class="btn btn-accent" href="mailto:info@linas-bar.ch">info@linas-bar.ch</a>
+        <a class="btn btn-line" href="https://www.instagram.com/linas-bar/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="contact-note">Wartstrasse 38, 8400 Winterthur</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brandmark" href="#top">Lina's <small>Bar Winterthur</small></a>
+        <p class="muted" style="max-width:34ch; font-size:0.9rem;">Wartstrasse 38, 8400 Winterthur</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer-Navigation">
+        <a href="#wohnzimmer">Drinnen &amp; Draussen</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#zeiten">Öffnungszeiten</a>
+        <a href="#lage">Lage</a>
+        <a href="mailto:info@linas-bar.ch">E-Mail</a>
+        <a href="https://www.instagram.com/linas-bar/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <p class="footer-fine">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<!-- sticky mobile bar (no phone on file — email + route instead) -->
+<div class="mobile-bar" role="region" aria-label="Schnellkontakt">
+  <div class="row">
+    <a class="btn btn-solid" href="mailto:info@linas-bar.ch">E-Mail schreiben</a>
+    <a class="btn btn-line" href="https://maps.google.com/maps?q=Lina%27s+Bar+Winterthur+Wartstrasse+38&amp;z=16" target="_blank" rel="noopener">Route</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- mobile nav ---------- */
+  var navToggle = document.getElementById('navToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  if(navToggle){
+    navToggle.addEventListener('click', function(){
+      var open = primaryNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    primaryNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        primaryNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- hero split-door interaction ---------- */
+  var doorIn = document.getElementById('heroDoorIn');
+  var doorOut = document.getElementById('heroDoorOut');
+  function setDoor(which){
+    var inActive = which === 'in';
+    doorIn.classList.toggle('is-active', inActive);
+    doorIn.classList.toggle('is-idle', !inActive);
+    doorOut.classList.toggle('is-active', !inActive);
+    doorOut.classList.toggle('is-idle', inActive);
+    doorIn.setAttribute('aria-pressed', inActive ? 'true' : 'false');
+    doorOut.setAttribute('aria-pressed', inActive ? 'false' : 'true');
+    setDuality(which);
+  }
+  doorIn.addEventListener('click', function(){ setDoor('in'); });
+  doorOut.addEventListener('click', function(){ setDoor('out'); });
+
+  /* ---------- drinnen / draussen module ---------- */
+  var tabIn = document.getElementById('tabIn');
+  var tabOut = document.getElementById('tabOut');
+  var copyIn = document.getElementById('copyIn');
+  var copyOut = document.getElementById('copyOut');
+  var figIn = document.getElementById('figIn');
+  var figOut = document.getElementById('figOut');
+
+  function setDuality(mode){
+    var isIn = mode === 'in';
+    tabIn.setAttribute('aria-pressed', isIn ? 'true' : 'false');
+    tabIn.setAttribute('aria-selected', isIn ? 'true' : 'false');
+    tabOut.setAttribute('aria-pressed', isIn ? 'false' : 'true');
+    tabOut.setAttribute('aria-selected', isIn ? 'false' : 'true');
+    copyIn.hidden = !isIn;
+    copyOut.hidden = isIn;
+    if(figIn) figIn.classList.toggle('is-shown', isIn);
+    if(figOut) figOut.classList.toggle('is-shown', !isIn);
+  }
+  tabIn.addEventListener('click', function(){ setDuality('in'); setDoor('in'); });
+  tabOut.addEventListener('click', function(){ setDuality('out'); setDoor('out'); });
+
+  /* ---------- "jetzt offen" from real hours data ---------- */
+  // verbatim from JSON: hours[]
+  var hoursData = [
+    { days: "Mo-Mi", time: "16:00-24:00" },
+    { days: "Do-Fr", time: "16:00-02:00" },
+    { days: "Sa", time: "16:00-24:00" },
+    { days: "So", time: "Geschlossen" }
+  ];
+
+  // weekday index: 0 = Sunday ... 6 = Saturday
+  var dayGroups = {
+    "Mo-Mi": [1,2,3],
+    "Do-Fr": [4,5],
+    "Sa": [6],
+    "So": [0]
+  };
+
+  function parseTimeToDecimal(t){
+    var parts = t.split(':');
+    var h = parseInt(parts[0], 10);
+    var m = parseInt(parts[1], 10);
+    return h + (m/60);
+  }
+
+  // build a schedule[0..6] = { open, close } or null when closed
+  var schedule = [null,null,null,null,null,null,null];
+  hoursData.forEach(function(row){
+    var idxs = dayGroups[row.days] || [];
+    if(row.time === 'Geschlossen'){
+      idxs.forEach(function(i){ schedule[i] = null; });
+      return;
+    }
+    var range = row.time.split('-');
+    var open = parseTimeToDecimal(range[0]);
+    var close = parseTimeToDecimal(range[1]);
+    if(close <= open){ close += 24; } // crosses midnight, e.g. 02:00
+    idxs.forEach(function(i){ schedule[i] = { open: open, close: close }; });
+  });
+
+  function zurichNow(){
+    try{
+      var fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Europe/Zurich',
+        weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false
+      });
+      var parts = fmt.formatToParts(new Date());
+      var map = {};
+      parts.forEach(function(p){ map[p.type] = p.value; });
+      var weekdayMap = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 };
+      var wd = weekdayMap[map.weekday];
+      var hh = parseInt(map.hour, 10);
+      if(hh === 24) hh = 0;
+      var mm = parseInt(map.minute, 10);
+      return { weekday: wd, decimal: hh + (mm/60) };
+    }catch(e){
+      var d = new Date();
+      return { weekday: d.getDay(), decimal: d.getHours() + (d.getMinutes()/60) };
+    }
+  }
+
+  function isOpenNow(){
+    var now = zurichNow();
+    var today = schedule[now.weekday];
+    var yesterday = schedule[(now.weekday + 6) % 7];
+    var openViaToday = today && now.decimal >= today.open && now.decimal < Math.min(today.close, 24);
+    var openViaYesterday = yesterday && yesterday.close > 24 && now.decimal < (yesterday.close - 24);
+    return !!(openViaToday || openViaYesterday);
+  }
+
+  function updateOpenBadges(){
+    var open = isOpenNow();
+    [
+      { pill: document.getElementById('headerPill'), text: document.getElementById('headerPillText') },
+      { pill: document.getElementById('bodyPill'), text: document.getElementById('bodyPillText') }
+    ].forEach(function(ref){
+      if(!ref.pill) return;
+      ref.pill.classList.toggle('is-open', open);
+      ref.pill.classList.toggle('is-closed', !open);
+      ref.text.textContent = open ? 'Jetzt geöffnet' : 'Jetzt geschlossen';
+    });
+  }
+
+  function highlightToday(){
+    var now = zurichNow();
+    var abbrevByWeekday = ["So","Mo-Mi","Mo-Mi","Mo-Mi","Do-Fr","Do-Fr","Sa"];
+    var todayGroup = abbrevByWeekday[now.weekday];
+    document.querySelectorAll('#hoursTable tr[data-days]').forEach(function(tr){
+      tr.classList.toggle('is-today', tr.getAttribute('data-days') === todayGroup);
+    });
+  }
+
+  updateOpenBadges();
+  highlightToday();
+  setInterval(updateOpenBadges, 60000);
+
+})();
+</script>
+
+</body>
+</html>

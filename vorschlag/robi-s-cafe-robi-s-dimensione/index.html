@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robi's Café – Robi's Dimensione · Winterthur</title>
+<meta name="description" content="Robi's Dimensione, Neustadtgasse 25, 8400 Winterthur: bangladeshi Fusionsküche, Live-Musik, Jass-Turniere und ein gemütlicher Garten. 4.9 von 5 Sternen bei 121 Google-Bewertungen. Tel. +41 52 212 40 14.">
+<meta property="og:title" content="Robi's Café – Robi's Dimensione, Winterthur">
+<meta property="og:description" content="Go for the real thing – bangladeshi Food Fusion, Konzerte, Jass-Turniere und ein gemütliches Gartensetting an der Neustadtgasse 25.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.dimensione.robis.ch/">
+<meta property="og:image" content="https://www.dimensione.robis.ch/images/Web.About-fallback@lazy/img-20260502-wa0006.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Robi's Café – Robi's Dimensione",
+  "url": "https://www.dimensione.robis.ch/",
+  "image": "https://www.dimensione.robis.ch/assets/frontend/img/logo.png",
+  "telephone": "+41 52 212 40 14",
+  "email": "dimensione@robis.ch",
+  "servesCuisine": ["Bangladeshi","Fusion","Café"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Neustadtgasse 25",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "121"
+  },
+  "sameAs": [
+    "https://instagram.com/robis_dimensione"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#fbf0e2;
+    --surface:#fffaf1;
+    --fg:#3a1509;
+    --muted:#5c3a26;
+    --brand:#c23b1f;
+    --accent:#e2a423;
+    --garden:#4c7a4f;
+    --line: rgba(58,21,9,0.14);
+    --maxw:1180px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Mulish', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.75vw + 12.8px, 17px);
+    line-height:1.66;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Yeseva One', ui-serif, Georgia, serif; font-weight:400; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  ::selection{ background:var(--accent); color:#3a1509; }
+  section[id]{ scroll-margin-top:5.6rem; }
+  .eyebrow{ font-weight:800; text-transform:uppercase; letter-spacing:0.14em; font-size:0.7rem; color:var(--brand); }
+  .skip-link{ position:absolute; left:0.6rem; top:-3rem; z-index:100; background:var(--fg); color:var(--bg); padding:0.6rem 1rem; font-weight:700; text-decoration:none; transition:top .2s ease; }
+  .skip-link:focus{ top:0.6rem; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(251,240,226,0.94); backdrop-filter:blur(6px); padding:0.8rem 0; border-bottom:1px solid var(--line); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  .logo img{ height:2.1rem; width:auto; }
+  .logo-fallback{ font-family:'Yeseva One',serif; font-size:1.15rem; }
+  nav.pill-nav{ display:flex; gap:0.15rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:700; font-size:0.78rem; padding:0.5rem 0.8rem; border-radius:999px; }
+  nav.pill-nav a:hover{ background:rgba(194,59,31,0.1); }
+  .navtoggle{ display:none; background:var(--brand); color:#fff; border:none; border-radius:999px; padding:0.5rem 1rem; font-weight:700; cursor:pointer; }
+
+  /* HERO — two-name device */
+  .hero{ position:relative; padding:clamp(2.6rem,8vw,5rem) 0 clamp(2rem,5vw,3rem); overflow:hidden; border-radius:0 0 40px 40px; }
+  .hero-bg{ position:absolute; inset:0; z-index:0; }
+  .hero-bg img{ width:100%; height:100%; object-fit:cover; }
+  .hero-bg::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(58,21,9,0.72), rgba(58,21,9,0.85)); }
+  .hero-inner{ position:relative; z-index:1; color:#fff9f0; }
+  .names{ display:flex; flex-direction:column; gap:0.1rem; }
+  .names .old{ font-family:'Yeseva One',serif; font-size:clamp(1.3rem,3.4vw,2rem); text-decoration:line-through; text-decoration-color:var(--accent); opacity:0.65; }
+  .names .arrow{ font-size:1.2rem; color:var(--accent); font-weight:800; margin:0.2rem 0; }
+  .hero h1{ font-size:clamp(2.4rem,6.4vw,4rem); line-height:1.05; }
+  .hero .sub{ font-size:clamp(1rem,1.6vw,1.2rem); font-weight:600; max-width:52ch; margin-top:1.2rem; opacity:0.94; }
+  .cta-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.6rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:800; text-decoration:none; padding:0.85rem 1.5rem; border-radius:999px; border:2px solid transparent; }
+  .btn.solid{ background:var(--brand); color:#fff; border-color:var(--brand); }
+  .btn.ghost{ background:transparent; color:#fff9f0; border-color:rgba(255,249,240,0.6); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.4rem; background:rgba(255,249,240,0.14); border:1px solid rgba(255,249,240,0.35); border-radius:999px; padding:0.5rem 1.05rem; font-weight:800; font-size:0.85rem; margin-top:1.4rem; }
+  .rating-chip b{ font-family:'Yeseva One',serif; font-size:1.15rem; color:var(--accent); }
+  .fact-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem; margin-top:clamp(1.6rem,4vw,2.4rem); }
+  .fact-card{ background:rgba(255,249,240,0.1); border:1px solid rgba(255,249,240,0.28); border-radius:16px; padding:1rem 1.1rem; }
+  .fact-card .k{ display:block; font-size:0.66rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; color:var(--accent); margin-bottom:0.3rem; }
+  .fact-card .v{ font-weight:800; font-size:0.92rem; }
+
+  section{ padding:clamp(2.2rem,5vw,3.8rem) 0; }
+  .section-head{ margin-bottom:clamp(1.4rem,3vw,2.1rem); max-width:64ch; }
+  .section-head h2{ font-size:clamp(1.6rem,3.4vw,2.5rem); }
+  .section-head p{ color:var(--muted); font-weight:600; margin-top:0.55rem; }
+
+  /* ---------- Two-names narrative ---------- */
+  .story-grid{ display:grid; grid-template-columns:0.85fr 1fr; gap:clamp(1.6rem,4vw,3rem); align-items:center; }
+  .story-photo{ margin:0; border-radius:26px; overflow:hidden; border:1px solid var(--line); }
+  .story-photo img{ width:100%; height:clamp(240px,32vw,380px); object-fit:cover; }
+  .story-grid p{ max-width:56ch; font-weight:600; }
+  .timeline{ list-style:none; margin:1.2rem 0 0; padding:0; display:grid; gap:0.9rem; }
+  .timeline li{ position:relative; padding-left:1.5rem; font-weight:700; }
+  .timeline li::before{ content:""; position:absolute; left:0; top:0.35rem; width:0.7rem; height:0.7rem; border-radius:50%; background:var(--brand); }
+  .timeline li span{ display:block; font-weight:500; color:var(--muted); font-size:0.9rem; margin-top:0.15rem; }
+
+  /* ---------- SIGNATURE MODULE: live Wochenspecial ribbon ---------- */
+  .special-ribbon{ background:var(--fg); color:#fff9f0; border-radius:28px; padding:clamp(1.6rem,4vw,2.6rem); display:flex; gap:1.4rem; align-items:center; flex-wrap:wrap; }
+  .special-ribbon .dot{ width:1rem; height:1rem; border-radius:50%; background:var(--accent); flex:none; }
+  .special-ribbon.inactive .dot{ background:var(--muted); }
+  .special-ribbon .txt h3{ font-size:clamp(1.2rem,2.6vw,1.6rem); color:var(--accent); }
+  .special-ribbon.inactive .txt h3{ color:#fff9f0; }
+  .special-ribbon .txt p{ margin:0.5rem 0 0; font-weight:600; max-width:58ch; }
+  .special-price{ margin-left:auto; font-family:'Yeseva One',serif; font-size:clamp(1.3rem,3vw,1.8rem); color:var(--accent); }
+
+  /* ---------- Menu (spice cards) ---------- */
+  .menu-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.1rem; }
+  .menu-card{ border-radius:24px; padding:clamp(1.4rem,3vw,1.8rem); position:relative; overflow:hidden; }
+  .menu-card.chili{ background:linear-gradient(155deg,#c23b1f,#8f2a15); color:#fff9f0; }
+  .menu-card.curry{ background:linear-gradient(155deg,#e2a423,#b57a12); color:#3a1509; }
+  .menu-card.sweet{ background:linear-gradient(155deg,#f2cfa8,#e6a875); color:#3a1509; }
+  .menu-card .sect{ font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:800; opacity:0.85; }
+  .menu-card h3{ font-size:clamp(1.2rem,2.6vw,1.5rem); margin-top:0.5rem; }
+  .menu-card .desc{ margin-top:0.7rem; font-weight:600; font-size:0.92rem; opacity:0.92; max-width:32ch; }
+  .menu-card .price{ margin-top:1.1rem; font-family:'Yeseva One',serif; font-size:1.15rem; }
+  .veg-note{ display:inline-flex; align-items:center; gap:0.4rem; margin-top:1rem; font-size:0.78rem; font-weight:800; background:rgba(255,255,255,0.22); padding:0.3rem 0.7rem; border-radius:999px; }
+  .veg-note img{ height:0.95rem; width:auto; }
+
+  /* ---------- USP band ---------- */
+  .usp-band{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1rem; }
+  .usp-tile{ background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:1.4rem; }
+  .usp-tile .ico{ font-size:1.5rem; }
+  .usp-tile h3{ font-size:1.05rem; margin-top:0.6rem; font-family:'Mulish',sans-serif; font-weight:800; }
+  .usp-tile p{ margin:0.4rem 0 0; font-size:0.86rem; color:var(--muted); font-weight:600; }
+
+  /* ---------- Gallery ---------- */
+  .photo-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:0.9rem; }
+  .photo-grid figure{ margin:0; border-radius:20px; overflow:hidden; border:1px solid var(--line); }
+  .photo-grid img{ width:100%; height:230px; object-fit:cover; display:block; transition:transform .35s ease; }
+  .photo-grid figure:hover img{ transform:scale(1.05); }
+  @media (prefers-reduced-motion: reduce){ .photo-grid figure:hover img{ transform:none; } }
+
+  /* ---------- Reviews ---------- */
+  .review-strip{ display:flex; align-items:center; gap:clamp(1.2rem,3vw,2rem); background:var(--brand); color:#fff9f0; border-radius:28px; padding:clamp(1.6rem,4vw,2.6rem); flex-wrap:wrap; }
+  .review-strip .stars{ font-size:clamp(2rem,4.6vw,2.8rem); font-family:'Yeseva One',serif; color:var(--accent); }
+  .review-strip p{ margin:0; font-weight:700; max-width:42ch; }
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{ display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .contact-card{ background:var(--surface); border-radius:24px; padding:clamp(1.4rem,3vw,2rem); border:1px solid var(--line); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .contact-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .contact-card .row span.k{ font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; color:var(--brand); }
+  .contact-card a{ text-decoration:none; font-weight:800; }
+  .contact-card a:hover{ color:var(--brand); }
+  .honest-note{ font-size:0.86rem; font-weight:600; color:var(--muted); background:var(--bg); border:1px dashed var(--line); border-radius:14px; padding:0.7rem 0.9rem; }
+  .mapwrap{ border-radius:24px; overflow:hidden; border:1px solid var(--line); }
+  .mapwrap iframe{ width:100%; height:100%; min-height:280px; border:0; display:block; }
+  .social-row{ display:flex; gap:0.6rem; flex-wrap:wrap; }
+  .social-row a{ display:inline-flex; align-items:center; gap:0.4rem; text-decoration:none; font-weight:800; background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:0.5rem 1rem; font-size:0.85rem; }
+  .social-row a:hover{ background:var(--brand); color:#fff; }
+
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:#fff9f0; }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:700; font-size:0.88rem; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.8; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--accent); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.85rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:800; font-family:'Yeseva One',serif; font-size:1rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.2rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:860px){
+    .story-grid{ grid-template-columns:1fr; }
+    .story-grid .story-photo{ order:-1; }
+    .contact-wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width:640px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.8rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+    .special-price{ margin-left:0; }
+  }
+  @media (max-width:560px){ .fact-strip{ grid-template-columns:1fr; } }
+  @media (max-width:400px){ .hero h1{ font-size:2rem; } }
+  @media (max-width:360px){
+    .navrow{ gap:0.5rem; }
+    .rating-chip{ font-size:0.78rem; padding:0.4rem 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top">
+      <img src="https://www.dimensione.robis.ch/assets/frontend/img/logo.png" alt="Robi's Dimensione Logo" height="34"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span class="logo-fallback" style="display:none;">Robi's Dimensione</span>
+    </a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#geschichte">Geschichte</a>
+      <a href="#spezial">Wochenspecial</a>
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#garten">Garten &amp; Musik</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO — two names, one address -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="https://www.dimensione.robis.ch/images/Web.Header-fallback@lazy/bangladeshi_cuisine_bg.png" alt=""
+        onerror="this.closest('.hero-bg').style.display='none'; this.closest('.hero').style.background='var(--fg)';">
+    </div>
+    <div class="wrap hero-inner">
+      <div class="names reveal">
+        <span class="old">Robi's Café</span>
+        <span class="arrow">↓ jetzt an der Neustadtgasse 25</span>
+      </div>
+      <h1 class="reveal">Robi's Dimensione</h1>
+      <p class="sub reveal">Go for the real thing – bangladeshi Food Fusion. Konzerte, Jass-Turniere,
+      hausinterne Events und Catering, serviert in einem gemütlichen Gartensetting.</p>
+      <div class="cta-row reveal">
+        <a class="btn solid" href="tel:+41522124014">Anrufen</a>
+        <a class="btn ghost" href="#spezial">Wochenspecial ↓</a>
+      </div>
+      <div class="rating-chip reveal"><b>4.9</b>&nbsp;/ 5 · 121 Google-Bewertungen</div>
+      <div class="fact-strip reveal">
+        <div class="fact-card"><span class="k">Adresse</span><span class="v">Neustadtgasse 25, Winterthur</span></div>
+        <div class="fact-card"><span class="k">Telefon</span><span class="v">+41 52 212 40 14</span></div>
+        <div class="fact-card"><span class="k">Küche</span><span class="v">Bangladeshi, Fusion, Café</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO-NAMES NARRATIVE -->
+  <section id="geschichte">
+    <div class="wrap story-grid">
+      <figure class="story-photo reveal">
+        <img src="https://www.dimensione.robis.ch/images/Web.About-fallback@lazy/img-20260502-wa0006.jpg" alt="Bei Robi's Dimensione" loading="lazy"
+          onerror="this.closest('figure').style.display='none'">
+      </figure>
+      <div>
+        <p class="eyebrow reveal">Zwei Namen, ein Zuhause</p>
+        <h2 class="reveal" style="margin-top:0.4rem;">Von Robi's Café zu Robi's Dimensione</h2>
+        <p class="reveal" style="margin-top:1rem;">Robi's Café ist umgezogen: Am 10. Januar 2026
+        eröffnete an der Neustadtgasse 25 die neue Adresse — Robi's Dimensione. Der frühere Standort
+        beherbergt während des Umbaus vorübergehend das Bistro «El Volcancito».</p>
+        <ul class="timeline reveal">
+          <li>Umzug an die Neustadtgasse 25<span>Neue Adresse, gleiche bangladeshi Fusionsküche</span></li>
+          <li>Eröffnung Robi's Dimensione — 10. Januar 2026<span>Neuer Name für den neuen Ort</span></li>
+          <li>Monatliche Brunch-Events mit Musik<span>Regelmässige Konzerte, Reservation für Events empfohlen</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: live Wochenspecial status -->
+  <section id="spezial">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Läuft das Wochenspecial gerade?</h2>
+        <p>Das Special ist auf Mo–Fr, 03.–07.08 datiert — dieses Band prüft live, ob heute
+        innerhalb dieses Fensters liegt, direkt aus der echten Karte berechnet.</p>
+      </div>
+      <div class="special-ribbon reveal" id="special-ribbon" role="status" aria-live="polite">
+        <span class="dot"></span>
+        <div class="txt">
+          <h3 id="special-title">Status wird berechnet …</h3>
+          <p id="special-text">Gemüse Curry Malabar, Gemüseeintopf, gemischte Dal mit Basmatireis,
+          Hibiskus-Minz Eistee (3dl).</p>
+        </div>
+        <span class="special-price">CHF 23.00 / Pers.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="speisekarte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Von der Karte</h2>
+        <p>Drei Positionen, echt aus der Speisekarte — mit Gewürzfarben statt Fotos codiert.</p>
+      </div>
+      <div class="menu-grid reveal">
+        <div class="menu-card chili">
+          <span class="sect">Klassische Speisen</span>
+          <h3>Momos</h3>
+          <p class="desc">Rind- oder Gemüsefüllung</p>
+          <p class="price">CHF 3.90 pro Stück</p>
+          <span class="veg-note"><img src="https://www.dimensione.robis.ch/assets/frontend/img/vegan_stoerer.svg" alt="" onerror="this.style.display='none'">Gemüse-Option verfügbar</span>
+        </div>
+        <div class="menu-card curry">
+          <span class="sect">Spezial</span>
+          <h3>Wochenspecial</h3>
+          <p class="desc">Gemüse Curry Malabar, Gemüseeintopf, gemischte Dal mit Basmatireis,
+          Hibiskus-Minz Eistee (3dl)</p>
+          <p class="price">CHF 23.00 pro Person</p>
+        </div>
+        <div class="menu-card sweet">
+          <span class="sect">Süsses</span>
+          <h3>Süße Waffeln</h3>
+          <p class="desc">Individuelle Kreationen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USPs: Garten & Musik -->
+  <section id="garten">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Konzerte, Jass und ein Garten</h2>
+        <p>Restaurant spezialisiert auf bangladeshi Fusionsküche mit Konzerten, Jass-Turnieren,
+        hausinternen Events und Catering-Services mit gemütlichem Gartensetting.</p>
+      </div>
+      <div class="usp-band reveal">
+        <div class="usp-tile"><span class="ico">🎵</span><h3>Live-Musik &amp; Konzerte</h3><p>Regelmässige Konzerte im Haus</p></div>
+        <div class="usp-tile"><span class="ico">🃏</span><h3>Jass-Turniere</h3><p>Gesellige Turnierabende</p></div>
+        <div class="usp-tile"><span class="ico">🌿</span><h3>Gartensetting</h3><p>Gemütlicher Sitzplatz im Garten</p></div>
+        <div class="usp-tile"><span class="ico">🍽️</span><h3>Catering</h3><p>Catering-Services verfügbar</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Impressionen</h2>
+      </div>
+      <div class="photo-grid reveal">
+        <figure>
+          <img src="https://www.dimensione.robis.ch/images/Web.TextImage-fallback@lazy/tomaten-tofusalat_im_wek-glas.jpg" alt="Tomaten-Tofusalat im Wek-Glas bei Robi's Dimensione" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://www.dimensione.robis.ch/images/Web.TextImage-fallback@lazy/brunch_mit_musik_mueesli_und_waffeln.jpg" alt="Brunch mit Musik, Müesli und Waffeln" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://www.dimensione.robis.ch/images/Web.About-fallback@lazy/img-20260502-wa0006.jpg" alt="Impression aus Robi's Dimensione" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="bewertung">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <p class="stars">4.9 ★</p>
+        <p>121 Google-Bewertungen — ohne Auswahl, ohne Kürzung, direkt von Google übernommen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Kontakt &amp; Lage</h2>
+        <p>Neustadtgasse 25, Winterthur. Für Events wird eine Reservation empfohlen.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card reveal">
+          <div class="row">
+            <span class="k">Adresse</span>
+            <span>Neustadtgasse 25, 8400 Winterthur</span>
+          </div>
+          <div class="row">
+            <span class="k">Telefon</span>
+            <a href="tel:+41522124014">+41 52 212 40 14</a>
+          </div>
+          <div class="row">
+            <span class="k">E-Mail</span>
+            <a href="mailto:dimensione@robis.ch">dimensione@robis.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Web</span>
+            <a href="https://www.dimensione.robis.ch/" target="_blank" rel="noopener">dimensione.robis.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Social</span>
+            <div class="social-row">
+              <a href="https://instagram.com/robis_dimensione" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+          <p class="honest-note">Öffnungszeiten sind auf der Website nicht hinterlegt — am besten
+          kurz anrufen.</p>
+          <div class="cta-row" style="margin-top:0.2rem;">
+            <a class="btn solid" style="padding:0.6rem 1.1rem; font-size:0.85rem; background:var(--brand); color:#fff; border-color:var(--brand);"
+               href="https://maps.google.com/maps?daddr=Robi%27s%20Dimensione%20Neustadtgasse%2025%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte Robi's Dimensione" loading="lazy"
+            src="https://maps.google.com/maps?q=Robi%27s%20Dimensione%20Neustadtgasse%2025%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>Robi's Dimensione<br>Neustadtgasse 25, 8400 Winterthur</div>
+      <div><a href="tel:+41522124014">+41 52 212 40 14</a><br><a href="https://www.dimensione.robis.ch/" target="_blank" rel="noopener">dimensione.robis.ch</a></div>
+      <div>Öffnungszeiten nicht hinterlegt<br>Events auf Reservation</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+41522124014" aria-label="Robi's Dimensione anrufen">📞 Anrufen · +41 52 212 40 14</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* SIGNATURE MODULE: hours are not published for this venue, so instead of a
+     fabricated "jetzt offen" badge we build an honest live module from real
+     menu text — the Wochenspecial is dated "Mo–Fr 03.–07.08" in the JSON.
+     We compare only month/day (no year assumption) so the check stays true
+     to the source string in any year it recurs. */
+  function render(){
+    var now = new Date();
+    var month = now.getMonth(); // 0-indexed, August = 7
+    var date = now.getDate();
+    var day = now.getDay(); // 0 Sun .. 6 Sat
+    var ribbon = document.getElementById('special-ribbon');
+    var title = document.getElementById('special-title');
+
+    var inWindow = (month === 7 && date >= 3 && date <= 7 && day >= 1 && day <= 5);
+    var beforeWindow = (month < 7) || (month === 7 && date < 3);
+
+    if (inWindow) {
+      ribbon.classList.remove('inactive');
+      title.textContent = 'Jetzt gerade: das Wochenspecial läuft';
+    } else if (beforeWindow) {
+      ribbon.classList.add('inactive');
+      title.textContent = 'Startet am 3. August — das Wochenspecial';
+    } else {
+      ribbon.classList.add('inactive');
+      title.textContent = 'Vorbei für diese Runde — 3.–7. August war das Fenster';
+    }
+  }
+  render();
+  window.setInterval(render, 60000);
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Töss – Winterthur · Telefon 052 202 53 21</title>
+<meta name="description" content="Hotel Töss in Winterthur. Telefon 052 202 53 21. Die eigene Website liefert derzeit keinen Inhalt – diese Seite zeigt nur, was öffentlich bestätigt ist.">
+<meta property="og:title" content="Hotel Töss, Winterthur">
+<meta property="og:description" content="Hotel in Winterthur. Telefon 052 202 53 21. Nur bestätigte Angaben, keine Annahmen.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Töss",
+  "telephone": "+41 52 202 53 21",
+  "address": { "@type": "PostalAddress", "addressLocality": "Winterthur", "addressCountry": "CH" },
+  "url": "https://www.hotel-toess.ch/",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.2", "reviewCount": "216" }
+}
+</script>
+<style>
+  :root{
+    --bg:#f3f7f5;
+    --surface:#ffffff;
+    --fg:#0f2a24;
+    --muted:#38564d;
+    --brand:#1f6f66;
+    --accent:#8a5a26;
+    --line:#c6dcd5;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Sora',system-ui,sans-serif;
+    font-size:clamp(15px,0.9vw + 12px,17px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    line-height:1.05;
+    margin:0;
+    color:var(--fg);
+  }
+  h1{font-size:clamp(2.5rem,6.5vw + 1rem,5.2rem);font-weight:500;}
+  h2{font-size:clamp(1.6rem,2.8vw + 1rem,2.4rem);font-style:italic;}
+  h3{font-size:clamp(1.1rem,1.3vw + 1rem,1.35rem);}
+  p{margin:0 0 1em;color:var(--muted);}
+  a{color:inherit;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--fg);color:#fff;padding:0.75em 1.2em;z-index:200;}
+  .skip-link:focus{left:1rem;top:1rem;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(1.2rem,4vw,3rem);}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(243,247,245,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding-block:0.9rem;}
+  .brandmark{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.05rem,1.4vw + 0.7rem,1.3rem);}
+  .nav-call{
+    background:var(--brand);color:#fff;
+    padding:0.55em 1.1em;
+    border-radius:999px;
+    font-size:0.85rem;
+    font-weight:600;
+    text-decoration:none;
+  }
+  .nav-call:hover{background:var(--fg);}
+  .nav-links{
+    display:flex;gap:clamp(1rem,2vw,1.6rem);align-items:center;
+    list-style:none;margin:0;padding:0;font-size:0.9rem;
+  }
+  .nav-links a{text-decoration:none;font-weight:600;}
+  .nav-links a:hover{color:var(--accent);}
+  @media (max-width:700px){
+    .nav-links{display:none;}
+  }
+
+  /* ===== the river spine ===== */
+  .river-wrap{position:relative;}
+  .river-svg{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    z-index:0;
+    pointer-events:none;
+  }
+  .river-svg path{
+    fill:none;
+    stroke:var(--brand);
+    stroke-width:0.6;
+    opacity:0.35;
+    stroke-dasharray:6 5;
+    animation:flow 26s linear infinite;
+  }
+  @keyframes flow{ to{ stroke-dashoffset:-440; } }
+  @media (prefers-reduced-motion:reduce){ .river-svg path{animation:none;} }
+
+  main{position:relative;z-index:1;}
+  section{padding-block:clamp(3rem,8vw,6rem);position:relative;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.is-visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1!important;transform:none!important;transition:none!important;} }
+
+  /* mooring: each section hangs a marker off the river line running through the page */
+  .mooring{
+    width:13px;height:13px;border-radius:50%;
+    background:var(--brand);
+    margin:0 auto 1.3rem;
+    position:relative;
+  }
+  .mooring::after{
+    content:"";
+    position:absolute;left:50%;bottom:100%;
+    width:1px;height:22px;
+    background:var(--brand);opacity:0.4;
+    transform:translateX(-50%);
+  }
+  .mooring.left{margin-left:calc(50% - 90px);}
+  .mooring.right{margin-left:calc(50% + 90px - 13px);}
+  @media (max-width:600px){ .mooring.left,.mooring.right{margin-inline:auto;} }
+
+  /* hero */
+  .hero-inner{padding-top:clamp(2rem,5vw,3rem);text-align:center;}
+  .hero-inner .eyebrow{
+    display:block;font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:1rem;
+  }
+  .hero-inner .facts{
+    display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;
+    font-size:0.95rem;color:var(--muted);
+  }
+  .hero-inner .facts strong{color:var(--fg);font-weight:600;}
+
+  /* fakten row */
+  .fakten-row{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;}
+  .fakten-row .item{
+    background:var(--surface);border:1px solid var(--line);border-radius:4px;
+    padding:1.1em 1.4em;min-width:9em;text-align:center;
+  }
+  .fakten-row .item .k{display:block;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4em;}
+  .fakten-row .item .v{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;}
+  .rating-note{text-align:center;margin-top:1.4rem;font-size:0.85rem;color:var(--muted);}
+
+  /* signature module: stepping stones */
+  .stones{display:flex;flex-direction:column;gap:0.9rem;max-width:34em;margin-inline:auto;}
+  .stone{
+    display:flex;align-items:flex-start;gap:1rem;
+    background:var(--surface);border:1px solid var(--line);border-radius:999px 4px 4px 999px;
+    padding:0.3rem;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    font-family:inherit;
+    color:inherit;
+  }
+  .stone .num{
+    flex:0 0 auto;
+    width:2.4em;height:2.4em;border-radius:50%;
+    background:var(--brand);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-weight:600;
+  }
+  .stone .content{padding:0.5em 1em 0.5em 0;}
+  .stone .label{font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  .stone .fact{
+    max-height:0;overflow:hidden;
+    transition:max-height .4s ease;
+    font-family:'Fraunces',serif;font-size:1.1rem;color:var(--fg);
+  }
+  .stone[aria-expanded="true"] .fact{max-height:6em;margin-top:0.3em;}
+  .stone-dark{opacity:0.7;}
+  .stone-dark .num{background:transparent;border:1.5px dashed var(--muted);color:var(--muted);}
+
+  /* honest gap: dry riverbed stones */
+  .bed-intro{max-width:36em;margin-inline:auto;text-align:center;}
+  .bed-grid{
+    display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem;
+  }
+  .pebble{
+    border:1.5px dashed var(--muted);
+    border-radius:50% 50% 50% 4px;
+    padding:1.1em 1.5em;
+    font-size:0.9rem;
+    color:var(--muted);
+    background:transparent;
+  }
+
+  .map-frame{
+    border:1px solid var(--line);border-radius:4px;overflow:hidden;
+    aspect-ratio:16/9;max-width:44em;margin-inline:auto;
+  }
+  .map-frame iframe{width:100%;height:100%;border:0;display:block;}
+
+  footer{background:var(--fg);color:#eef4f1;padding-block:3rem;position:relative;z-index:1;}
+  footer a{color:inherit;text-decoration:underline;}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-end;}
+  .foot-note{font-size:0.8rem;opacity:0.6;margin-top:2rem;}
+
+  .call-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:100;display:none;
+    background:var(--brand);
+  }
+  .call-bar a{
+    display:flex;align-items:center;justify-content:center;gap:0.6em;
+    padding:1em;color:#fff;font-weight:600;font-size:0.95rem;text-decoration:none;
+  }
+  @media (max-width:700px){
+    .call-bar{display:block;}
+    body{padding-bottom:3.6rem;}
+    .bank.right,.bank.left{margin-inline:auto;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.stone .fact{max-height:none!important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="wrap nav-row">
+    <div class="brandmark">Hotel Töss</div>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-links">
+        <li><a href="#fakten">Fakten</a></li>
+        <li><a href="#wissen">Wissen</a></li>
+        <li><a href="#lage">Lage</a></li>
+      </ul>
+    </nav>
+    <a class="nav-call" href="tel:+41522025321">052 202 53 21</a>
+  </div>
+</header>
+
+<div class="river-wrap">
+  <svg class="river-svg" viewBox="0 0 100 2000" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M50,0 C50.0,37.5 50.0,37.5 72.0,75.0 C50.0,112.5 50.0,112.5 50.0,150.0 C50.0,187.5 50.0,187.5 28.0,225.0 C50.0,262.5 50.0,262.5 50.0,300.0 C50.0,337.5 50.0,337.5 72.0,375.0 C50.0,412.5 50.0,412.5 50.0,450.0 C50.0,487.5 50.0,487.5 28.0,525.0 C50.0,562.5 50.0,562.5 50.0,600.0 C50.0,637.5 50.0,637.5 72.0,675.0 C50.0,712.5 50.0,712.5 50.0,750.0 C50.0,787.5 50.0,787.5 28.0,825.0 C50.0,862.5 50.0,862.5 50.0,900.0 C50.0,937.5 50.0,937.5 72.0,975.0 C50.0,1012.5 50.0,1012.5 50.0,1050.0 C50.0,1087.5 50.0,1087.5 28.0,1125.0 C50.0,1162.5 50.0,1162.5 50.0,1200.0 C50.0,1237.5 50.0,1237.5 72.0,1275.0 C50.0,1312.5 50.0,1312.5 50.0,1350.0 C50.0,1387.5 50.0,1387.5 28.0,1425.0 C50.0,1462.5 50.0,1462.5 50.0,1500.0 C50.0,1537.5 50.0,1537.5 72.0,1575.0 C50.0,1612.5 50.0,1612.5 50.0,1650.0 C50.0,1687.5 50.0,1687.5 28.0,1725.0 C50.0,1762.5 50.0,1762.5 50.0,1800.0 C50.0,1837.5 50.0,1837.5 72.0,1875.0 C50.0,1912.5 50.0,1912.5 50.0,1950.0" />
+  </svg>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Hotel · Winterthur</span>
+      <h1>Hotel Töss</h1>
+      <div class="facts">
+        <span>Ort: <strong>Winterthur</strong></span>
+        <span>Telefon: <strong>052 202 53 21</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="fakten">
+    <div class="wrap">
+      <div class="mooring left" aria-hidden="true"></div>
+      <h2 style="text-align:center;">Was am Ufer liegt</h2>
+      <div class="fakten-row" style="margin-top:2rem;">
+        <div class="item"><span class="k">Name</span><span class="v">Hotel Töss</span></div>
+        <div class="item"><span class="k">Kategorie</span><span class="v">Hotel</span></div>
+        <div class="item"><span class="k">Ort</span><span class="v">Winterthur</span></div>
+        <div class="item"><span class="k">Telefon</span><span class="v">052 202 53 21</span></div>
+      </div>
+      <p class="rating-note">Google-Bewertung: 3.2 aus 216 Rezensionen.</p>
+    </div>
+  </section>
+
+  <section class="reveal" id="wissen">
+    <div class="wrap">
+      <div class="mooring right" aria-hidden="true"></div>
+      <h2 style="text-align:center;">Was wir sicher wissen</h2>
+      <p class="bed-intro" style="margin-top:0.8rem;">Die eigene Website des Hotels liefert derzeit keinen Inhalt, die Zimmerseite eine Fehlermeldung. Statt Lücken zu füllen, legen wir offen, was tatsächlich bestätigt ist – Stein für Stein. Zum Aufdecken antippen.</p>
+      <div class="stones" style="margin-top:2.4rem;">
+        <button class="stone" type="button" data-fact aria-expanded="false">
+          <span class="num">1</span>
+          <span class="content"><span class="label">Name</span><span class="fact">Hotel Töss</span></span>
+        </button>
+        <button class="stone" type="button" data-fact aria-expanded="false">
+          <span class="num">2</span>
+          <span class="content"><span class="label">Ort</span><span class="fact">Winterthur</span></span>
+        </button>
+        <button class="stone" type="button" data-fact aria-expanded="false">
+          <span class="num">3</span>
+          <span class="content"><span class="label">Telefon</span><span class="fact">052 202 53 21</span></span>
+        </button>
+        <button class="stone" type="button" data-fact aria-expanded="false">
+          <span class="num">4</span>
+          <span class="content"><span class="label">Google-Bewertung</span><span class="fact">3.2 · 216 Rezensionen</span></span>
+        </button>
+        <div class="stone stone-dark" aria-hidden="false">
+          <span class="num">?</span>
+          <span class="content"><span class="label">Alles Weitere</span><span class="fact" style="max-height:none;margin-top:0.3em;">Nicht öffentlich verzeichnet – am besten direkt erfragen.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="wrap">
+      <div class="mooring left" aria-hidden="true"></div>
+      <h2 style="text-align:center;">Trockenliegende Felder</h2>
+      <p class="bed-intro" style="margin-top:0.8rem;">Diese Angaben führen wir bewusst nicht auf – sie sind schlicht nicht publiziert. Kein Ausfüllen mit Vermutungen.</p>
+      <div class="bed-grid">
+        <span class="pebble">Zimmer – nicht publiziert</span>
+        <span class="pebble">Preise – nicht publiziert</span>
+        <span class="pebble">Adresse – nicht publiziert</span>
+        <span class="pebble">Öffnungszeiten – nicht publiziert</span>
+        <span class="pebble">Fotos – nicht publiziert</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="lage">
+    <div class="wrap">
+      <div class="mooring right" aria-hidden="true"></div>
+      <h2 style="text-align:center;">Lage</h2>
+      <p class="bed-intro" style="margin-top:0.8rem;">Eine Adresse ist nicht öffentlich verzeichnet. So findet man Hotel Töss trotzdem:</p>
+      <div class="map-frame" style="margin-top:1.8rem;">
+        <iframe title="Karte: Hotel Töss, Winterthur" loading="lazy" src="https://maps.google.com/maps?q=Hotel%20T%C3%B6ss%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brandmark">Hotel Töss</div>
+        <p style="opacity:0.8;margin-top:0.6rem;">Winterthur · <a href="tel:+41522025321">052 202 53 21</a></p>
+      </div>
+      <div><p style="opacity:0.8;">Bewertung: 3.2 aus 216 Google-Rezensionen.</p></div>
+    </div>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="call-bar">
+  <a href="tel:+41522025321">Anrufen · 052 202 53 21</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var stones = document.querySelectorAll('.stone[data-fact]');
+  stones.forEach(function(stone){
+    stone.addEventListener('click', function(){
+      var open = stone.getAttribute('aria-expanded') === 'true';
+      stone.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Küng Kaffee · Rösterei Winterthur seit 1920 · 4. Generation</title>
+<meta name="description" content="Küng Kaffee in Winterthur: familiengeführte Rösterei seit 1920, heute in vierter Generation. Täglich von Hand geröstet – Bohnen, Kapseln, Maschinen und Fachberatung an der St. Gallerstrasse 129.">
+<meta property="og:title" content="Küng Kaffee · Rösterei Winterthur seit 1920">
+<meta property="og:description" content="Familiengeführte Kaffeerösterei in vierter Generation. Täglich handwerklich geröstet, 50m vom Bahnhof Winterthur Grüze.">
+<meta property="og:type" content="business.business">
+<meta property="og:image" content="https://kuengkaffee.ch/wp-content/uploads/2025/07/Kaffeebohnen-original.jpeg">
+<meta property="og:url" content="https://kuengkaffee.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Küng Kaffee",
+  "alternateName": "Küng & Co AG",
+  "image": "https://kuengkaffee.ch/wp-content/uploads/2023/05/Logo-Kueng-Kaffee-E-Mail.jpeg",
+  "url": "https://kuengkaffee.ch/",
+  "telephone": "+41 52 233 12 68",
+  "email": "info@kuengkaffee.ch",
+  "priceRange": "CHF 24–CHF 4990",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "St. Gallerstrasse 129",
+    "postalCode": "8404",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "11:45" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "11:45" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "64"
+  },
+  "sameAs": [
+    "https://www.instagram.com/kuengkaffee/",
+    "https://www.facebook.com/kuengkaffee/"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#faf4ec;
+    --surface:#ffffff;
+    --fg:#241511;
+    --muted:#4c3c36;
+    --brand:#dc1e45;
+    --accent:#a9762f;
+    --brand-ink:#7d0f27;
+    --rule: rgba(36,21,17,0.12);
+    --shadow: 0 18px 40px -20px rgba(36,21,17,0.35);
+    --maxw: 1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:clamp(15px, 0.95vw + 0.65rem, 17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    font-weight:650;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(1.1rem, 4vw, 2.5rem);}
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--brand);
+  }
+  .muted{color:var(--muted);}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.85rem 1.5rem;
+    border-radius:2px;
+    font-weight:600;
+    font-size:0.95rem;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  @media (prefers-reduced-motion: reduce){ .btn{transition:none;} }
+  .btn-primary{background:var(--brand);color:#fff;}
+  .btn-primary:hover{background:var(--brand-ink);}
+  .btn-outline{border-color:var(--fg);color:var(--fg);background:transparent;}
+  .btn-outline:hover{background:var(--fg);color:var(--bg);}
+  .btn:active{transform:translateY(1px);}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  /* ===== Header ===== */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    background:rgba(250,244,236,0.94);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-block:0.75rem;
+  }
+  .brandmark{display:flex;align-items:center;gap:0.65rem;text-decoration:none;color:var(--fg);}
+  .brandmark img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1.5px solid var(--rule);}
+  .brandmark .btxt{display:flex;flex-direction:column;line-height:1.1;}
+  .brandmark .btxt strong{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:650;}
+  .brandmark .btxt span{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);}
+  nav.links{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;}
+  nav.links a{text-decoration:none;font-size:0.92rem;font-weight:500;color:var(--fg);border-bottom:2px solid transparent;padding-bottom:2px;}
+  nav.links a:hover{border-color:var(--brand);}
+  .nav-actions{display:flex;align-items:center;gap:0.9rem;}
+  .nav-tel{display:none;font-weight:600;text-decoration:none;font-size:0.9rem;}
+  .nav-burger{display:none;background:none;border:1.5px solid var(--fg);border-radius:2px;padding:0.4rem 0.55rem;cursor:pointer;}
+  .nav-burger span{display:block;width:20px;height:2px;background:var(--fg);margin:4px 0;}
+  @media (max-width: 860px){
+    nav.links{position:fixed;inset:64px 0 auto 0;background:var(--surface);flex-direction:column;gap:0;padding:0.5rem 0;border-bottom:1px solid var(--rule);transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease;}
+    nav.links.open{opacity:1;pointer-events:auto;transform:translateY(0);}
+    nav.links a{padding:0.9rem 1.5rem;border-bottom:1px solid var(--rule);width:100%;}
+    .nav-burger{display:block;}
+  }
+  @media (min-width: 640px){ .nav-tel{display:inline-flex;} }
+
+  /* ===== Hero ===== */
+  .hero{position:relative;overflow:hidden;padding-block:clamp(2.5rem, 6vw, 5rem) clamp(3rem, 7vw, 6rem);}
+  .hero .ghost-year{
+    position:absolute; right:clamp(-2rem,-2vw,2rem); top:-2.2rem;
+    font-family:'Fraunces',serif; font-weight:650;
+    font-size:clamp(7rem, 22vw, 15rem);
+    color:rgba(220,30,69,0.07);
+    line-height:1; pointer-events:none; user-select:none; z-index:0;
+  }
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  @media (max-width: 900px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero h1{font-size:clamp(2.4rem, 5.2vw, 4.1rem);}
+  .hero h1 em{font-style:italic;color:var(--brand);}
+  .hero .lede{margin-top:1.1rem;font-size:clamp(1.02rem,1.1vw,1.2rem);color:var(--muted);max-width:44ch;}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:0.9rem;margin-top:1.8rem;}
+  .hero-stats{display:flex;gap:1.8rem;margin-top:2.4rem;flex-wrap:wrap;}
+  .hero-stats .stat b{display:block;font-family:'Fraunces',serif;font-size:clamp(1.6rem,2.4vw,2.1rem);font-weight:650;}
+  .hero-stats .stat span{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+  .hero-photo{position:relative;}
+  .hero-photo .frame{
+    border-radius:6px 40px 6px 6px;overflow:hidden;box-shadow:var(--shadow);
+    aspect-ratio:4/5;border:1px solid var(--rule);
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
+  .rating-badge{
+    position:absolute;left:-1.1rem;bottom:-1.2rem;background:var(--surface);
+    border:1px solid var(--rule);border-radius:6px;padding:0.9rem 1.15rem;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:0.7rem;max-width:230px;
+  }
+  .rating-badge .stars{color:var(--accent);font-size:1rem;letter-spacing:1px;}
+  .rating-badge b{font-family:'Fraunces',serif;font-size:1.3rem;}
+  .rating-badge small{display:block;color:var(--muted);font-size:0.74rem;}
+  @media (max-width:520px){ .rating-badge{left:0.4rem;bottom:-1.4rem;padding:0.7rem 0.9rem;} }
+
+  /* ===== reveal ===== */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+
+  section{padding-block:clamp(3rem, 7vw, 6rem);}
+  .section-head{max-width:60ch;margin-bottom:clamp(2rem,4vw,3rem);}
+  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:0.5rem;}
+  .section-head p{margin-top:0.9rem;color:var(--muted);font-size:1.02rem;}
+
+  /* ===== Spine / timeline ===== */
+  .spine-section{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .spine{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(1.2rem,3vw,3rem);}
+  .spine-rail{position:relative;width:2px;background:var(--rule);margin-left:0.6rem;}
+  .spine-rail .fill{position:absolute;top:0;left:-1px;width:4px;background:var(--brand);height:0%;transition:height 0.25s ease;}
+  @media (prefers-reduced-motion: reduce){ .spine-rail .fill{transition:none;} }
+  .spine-items{display:flex;flex-direction:column;gap:clamp(2.4rem,6vw,4.5rem);}
+  .spine-item{position:relative;padding-left:clamp(1.6rem,3vw,2.6rem);}
+  .spine-item::before{
+    content:"";position:absolute;left:calc(-1 * clamp(1.2rem,3vw,3rem) - 0.6rem - 5px);
+    top:0.35rem;width:14px;height:14px;border-radius:50%;background:var(--bg);
+    border:3px solid var(--rule);transition:border-color 0.25s ease, background 0.25s ease;
+  }
+  .spine-item.is-active::before{border-color:var(--brand);background:var(--brand);}
+  .spine-item .year{font-family:'Fraunces',serif;font-weight:650;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--muted);transition:color 0.25s ease;}
+  .spine-item.is-active .year{color:var(--brand);}
+  .spine-item h3{font-size:clamp(1.15rem,1.8vw,1.4rem);margin-top:0.35rem;}
+  .spine-item p{margin-top:0.5rem;color:var(--muted);max-width:52ch;}
+  .spine-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.7rem;}
+  .spine-tags span{font-size:0.72rem;border:1px solid var(--rule);border-radius:100px;padding:0.25rem 0.65rem;color:var(--muted);}
+
+  /* ===== About ===== */
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(2rem,5vw,4rem);align-items:start;}
+  @media (max-width:880px){ .about-grid{grid-template-columns:1fr;} }
+  .about-copy p{color:var(--muted);margin-top:1rem;font-size:1.03rem;max-width:56ch;}
+  .usp-list{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;gap:0.85rem;}
+  .usp-list li{display:flex;gap:0.7rem;align-items:flex-start;font-size:0.96rem;}
+  .usp-list li::before{content:"—";color:var(--brand);font-weight:700;flex:none;}
+  .about-photo{border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:var(--shadow);}
+  .about-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+  .about-photo figcaption{background:var(--fg);color:var(--bg);font-size:0.78rem;padding:0.65rem 0.9rem;}
+
+  /* ===== Explorer ===== */
+  .explorer{background:var(--fg);color:var(--bg);}
+  .explorer .section-head h2{color:var(--bg);}
+  .explorer .section-head p{color:rgba(250,244,236,0.72);}
+  .explorer .eyebrow{color:#ff9daf;}
+  .tabbar{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.8rem;}
+  .tabbar button{
+    background:transparent;border:1.5px solid rgba(250,244,236,0.35);color:var(--bg);
+    padding:0.55rem 1.1rem;border-radius:100px;font-size:0.86rem;font-weight:600;cursor:pointer;
+    font-family:'Inter',sans-serif;
+  }
+  .tabbar button.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .roast-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(260px,1fr));gap:1rem;}
+  .roast-card{
+    background:rgba(250,244,236,0.05);border:1px solid rgba(250,244,236,0.18);border-radius:6px;
+    padding:1.1rem 1.2rem;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;color:var(--bg);
+    transition:background 0.2s ease, border-color 0.2s ease;
+  }
+  .roast-card:hover{border-color:var(--brand);}
+  .roast-card[aria-expanded="true"]{background:rgba(220,30,69,0.14);border-color:var(--brand);}
+  .roast-card .rc-top{display:flex;justify-content:space-between;gap:0.8rem;align-items:baseline;}
+  .roast-card .rc-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;}
+  .roast-card .rc-price{color:#ffb3c0;font-weight:700;font-size:0.86rem;white-space:nowrap;}
+  .roast-card .rc-cat{display:block;margin-top:0.3rem;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(250,244,236,0.55);}
+  .roast-card .rc-desc{max-height:0;overflow:hidden;transition:max-height 0.25s ease, margin-top 0.25s ease;font-size:0.9rem;color:rgba(250,244,236,0.85);}
+  .roast-card[aria-expanded="true"] .rc-desc{max-height:6rem;margin-top:0.6rem;}
+  @media (prefers-reduced-motion: reduce){ .roast-card .rc-desc{transition:none;} }
+  .explorer-note{margin-top:1.6rem;font-size:0.85rem;color:rgba(250,244,236,0.6);}
+
+  /* ===== Gallery ===== */
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(6, 1fr);grid-auto-rows:120px;gap:0.7rem;
+  }
+  .gallery-grid figure{margin:0;position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--rule);background:var(--surface);}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;}
+  .gallery-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:0.5rem 0.7rem;
+    background:linear-gradient(0deg, rgba(36,21,17,0.85), transparent);
+    color:#fff;font-size:0.72rem;letter-spacing:0.02em;
+  }
+  .g1{grid-column:span 3;grid-row:span 3;}
+  .g2{grid-column:span 3;grid-row:span 2;}
+  .g3{grid-column:span 2;grid-row:span 2;}
+  .g4{grid-column:span 2;grid-row:span 2;}
+  .g5{grid-column:span 2;grid-row:span 2;}
+  .g6{grid-column:span 3;grid-row:span 2;}
+  .g7{grid-column:span 3;grid-row:span 2;}
+  .g8{grid-column:span 6;grid-row:span 2;}
+  @media (max-width:760px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;}
+    .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8{grid-column:span 1;grid-row:span 2;}
+  }
+
+  /* ===== Trust ===== */
+  .trust-section{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .trust-grid{display:grid;grid-template-columns:0.7fr 1.3fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  @media (max-width:820px){ .trust-grid{grid-template-columns:1fr;} }
+  .trust-score{text-align:left;}
+  .trust-score .big{font-family:'Fraunces',serif;font-weight:650;font-size:clamp(3.4rem,7vw,5rem);line-height:1;}
+  .trust-score .stars{color:var(--accent);font-size:1.3rem;letter-spacing:2px;margin-top:0.4rem;display:block;}
+  .trust-score p{margin-top:0.6rem;color:var(--muted);}
+  .usp-chip-row{display:flex;flex-wrap:wrap;gap:0.6rem;}
+  .usp-chip{border:1px solid var(--rule);border-radius:6px;padding:0.9rem 1.1rem;font-size:0.9rem;background:var(--bg);}
+
+  /* ===== Location ===== */
+  .loc-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(1.6rem,4vw,3rem);}
+  @media (max-width:900px){ .loc-grid{grid-template-columns:1fr;} }
+  .loc-card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:clamp(1.4rem,3vw,2.1rem);box-shadow:var(--shadow);}
+  .status-badge{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;font-weight:600;padding:0.4rem 0.8rem;border-radius:100px;margin-bottom:1.2rem;}
+  .status-badge.open{background:rgba(63,140,90,0.12);color:#2c6b45;}
+  .status-badge.closed{background:rgba(220,30,69,0.1);color:var(--brand-ink);}
+  .status-badge .dot{width:8px;height:8px;border-radius:50%;background:currentColor;}
+  .hours-table{width:100%;border-collapse:collapse;margin-top:0.4rem;}
+  .hours-table td{padding:0.55rem 0;border-bottom:1px solid var(--rule);font-size:0.95rem;}
+  .hours-table td:last-child{text-align:right;color:var(--muted);}
+  .loc-meta{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:0.7rem;font-size:0.93rem;}
+  .loc-meta li{display:flex;gap:0.6rem;}
+  .loc-meta b{flex:none;color:var(--brand);}
+  .map-frame{border-radius:6px;overflow:hidden;border:1px solid var(--rule);box-shadow:var(--shadow);min-height:320px;}
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0;display:block;}
+
+  /* ===== Contact / footer ===== */
+  .contact-section{background:var(--fg);color:var(--bg);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);}
+  @media (max-width:760px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-section a.big-link{
+    display:block;font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2rem);
+    text-decoration:none;color:var(--bg);border-bottom:1px solid rgba(250,244,236,0.25);padding-block:0.9rem;
+  }
+  .contact-section a.big-link:hover{color:#ffb3c0;}
+  .social-row{display:flex;gap:0.9rem;margin-top:1.4rem;}
+  .social-row a{
+    border:1px solid rgba(250,244,236,0.3);border-radius:100px;padding:0.5rem 1.1rem;
+    font-size:0.85rem;text-decoration:none;color:var(--bg);
+  }
+  .social-row a:hover{border-color:var(--brand);color:#ffb3c0;}
+
+  footer.site{background:#1a0f0c;color:rgba(250,244,236,0.65);padding-block:1.6rem;font-size:0.82rem;}
+  footer.site .wrap{display:flex;flex-wrap:wrap;gap:0.6rem 1.4rem;justify-content:space-between;align-items:center;}
+
+  .mobile-bar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;
+    background:var(--fg);border-top:1px solid rgba(250,244,236,0.15);
+    padding:0.65rem clamp(1rem,4vw,1.5rem);
+  }
+  .mobile-bar a{
+    display:flex;align-items:center;justify-content:center;gap:0.5rem;
+    background:var(--brand);color:#fff;padding:0.85rem;border-radius:4px;
+    font-weight:700;text-decoration:none;font-size:0.95rem;
+  }
+  @media (max-width:640px){ .mobile-bar{display:block;} body{padding-bottom:4.4rem;} }
+
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#hero" class="brandmark">
+      <img src="https://kuengkaffee.ch/wp-content/uploads/2023/05/Logo-Kueng-Kaffee-E-Mail.jpeg" alt="Küng Kaffee Logo" onerror="this.parentElement.querySelector('.btxt') && this.remove()">
+      <span class="btxt"><strong>Küng Kaffee</strong><span>Rösterei · Winterthur</span></span>
+    </a>
+    <nav class="links" id="navLinks" aria-label="Hauptnavigation">
+      <a href="#geschichte">Geschichte</a>
+      <a href="#sortiment">Sortiment</a>
+      <a href="#einblicke">Einblicke</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#standort">Standort</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-tel" href="tel:+41522331268">052 233 12 68</a>
+      <button class="nav-burger" id="burgerBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="hero">
+
+<section class="hero">
+  <span class="ghost-year" aria-hidden="true">1920</span>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Familiengeführte Rösterei · Winterthur</p>
+      <h1>Seit 1920 wird bei Küng <em>täglich</em> von Hand geröstet.</h1>
+      <p class="lede">Vier Generationen einer Winterthurer Familie, ein Handwerk: die Zunftrennerei. Wir bewahren die Tradition – und rösten für den Kaffeegeschmack von heute.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+41522331268">Rösterei anrufen</a>
+        <a class="btn btn-outline" href="#sortiment">Sortiment entdecken</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>1920</b><span>Gründungsjahr</span></div>
+        <div class="stat"><b>4.</b><span>Generation</span></div>
+        <div class="stat"><b>4.9★</b><span>64 Google-Bewertungen</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame">
+        <img src="https://kuengkaffee.ch/wp-content/uploads/2023/05/Kueng-Kaffee-Roesterei12709-scaled-square.jpg" alt="Röstwerkstatt bei Küng Kaffee in Winterthur" onerror="this.closest('.hero-photo').style.display='none'">
+      </div>
+      <div class="rating-badge">
+        <span class="stars">★★★★★</span>
+        <div><b>4.9</b><small>64 Bewertungen (Google)</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spine-section" id="geschichte">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Die Generationen-Spur</p>
+      <h2>Ein Familienbetrieb, kein Museum.</h2>
+      <p>Familiengeführte Kaffeerösterei seit 1920, jetzt in vierter Generation. Täglich wird Kaffee handwerklich geröstet – die Tradition der Zunftrennerei bleibt, moderne Brauverfahren kommen dazu.</p>
+    </div>
+    <div class="spine">
+      <div class="spine-rail"><div class="fill" id="spineFill"></div></div>
+      <div class="spine-items" id="spineItems">
+        <div class="spine-item" data-spine>
+          <div class="year">1920</div>
+          <h3>Gründung der Rösterei</h3>
+          <p>Küng &amp; Co beginnt in Winterthur mit dem Rösten von Kaffee – der Ursprung der heutigen Familienrösterei an der St. Gallerstrasse.</p>
+          <div class="spine-tags"><span>Historische Rösterei</span></div>
+        </div>
+        <div class="spine-item" data-spine>
+          <div class="year">Generation um Generation</div>
+          <h3>Das Handwerk wird weitergegeben</h3>
+          <p>Die Rösterei bleibt in Familienhand. Über die Jahrzehnte wird das Wissen um Röstung und Zunftrennerei innerhalb der Familie Küng weitergereicht.</p>
+          <div class="spine-tags"><span>Familienunternehmen</span></div>
+        </div>
+        <div class="spine-item" data-spine>
+          <div class="year">Heute</div>
+          <h3>Vierte Generation, täglich frisch</h3>
+          <p>Küng Kaffee bewahrt die Tradition der Zunftrennerei – und passt sich zugleich modernen Brauverfahren und wandelnden Konsumentenpräferenzen an. Geröstet wird nach wie vor täglich, mit Fachberatung direkt vor Ort.</p>
+          <div class="spine-tags"><span>Täglich geröstet</span><span>Fachberatung vor Ort</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ueber-uns">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <p class="eyebrow">Über den Betrieb</p>
+      <h2>Wir lieben guten Kaffee.</h2>
+      <p>Familiengeführte Kaffeerösterei seit 1920, jetzt in vierter Generation. Täglich wird Kaffee handwerklich geröstet. Das Unternehmen bewahrt die Tradition der Zunftrennerei, passt sich aber modernen Brauverfahren und sich wandelnden Konsumentenpräferenzen an.</p>
+      <ul class="usp-list">
+        <li>Historische Rösterei seit 1920</li>
+        <li>Handwerklich tägliche Röstung</li>
+        <li>Vierte Generation Familienunternehmen</li>
+        <li>Umfassendes Sortiment: Bohnen, Kapseln, Pads, Maschinen, Zubehör</li>
+        <li>Fachberatung vor Ort</li>
+        <li>Nähe zum Bahnhof Winterthur Grüze (50m)</li>
+      </ul>
+    </div>
+    <figure class="about-photo">
+      <img src="https://kuengkaffee.ch/wp-content/uploads/2025/07/Kaffeebohnen-original.jpeg" alt="Frisch geröstete Kaffeebohnen von Küng Kaffee" onerror="this.closest('.about-photo').style.display='none'">
+      <figcaption>Handwerklich geröstet, verschiedene Sorten.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="explorer" id="sortiment">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Sortiment-Explorer</p>
+      <h2>16 Positionen aus der Rösterei und dem Fabrikladen.</h2>
+      <p>Bohnen, Kapseln und Pads aus eigener Röstung, dazu Maschinen und Zubehör für zuhause. Tippen Sie eine Position an für Beschreibung und Preis.</p>
+    </div>
+    <div class="tabbar" id="tabbar" role="tablist" aria-label="Sortiment filtern">
+      <button class="active" data-filter="alle" role="tab" aria-selected="true">Alles (16)</button>
+      <button data-filter="Kaffee" role="tab" aria-selected="false">Kaffee (5)</button>
+      <button data-filter="Maschinen" role="tab" aria-selected="false">Maschinen (7)</button>
+      <button data-filter="Tee & Sonstiges" role="tab" aria-selected="false">Tee &amp; Sonstiges (4)</button>
+    </div>
+    <div class="roast-grid" id="roastGrid"></div>
+    <p class="explorer-note">Preise gemäss aktueller Auszeichnung im Fabrikladen, Änderungen vorbehalten. Positionen ohne Preisangabe bitte vor Ort erfragen.</p>
+  </div>
+</section>
+
+<section id="einblicke">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Einblicke</p>
+      <h2>Aus Rösterei und Fabrikladen.</h2>
+      <p>Ein Blick auf das, was bei Küng täglich geröstet, gemahlen und verkauft wird.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="g1"><img src="https://kuengkaffee.ch/wp-content/uploads/2023/03/cropped-Logo_rot.jpg" alt="Küng Kaffee Markenzeichen in Rot" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Marke seit 1920</figcaption></figure>
+      <figure class="g2"><img src="https://kuengkaffee.ch/wp-content/uploads/2025/07/Maschine-original.jpeg" alt="Espressomaschine im Sortiment von Küng Kaffee" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Maschinen</figcaption></figure>
+      <figure class="g3"><img src="https://kuengkaffee.ch/wp-content/uploads/2025/07/Tee-original.jpg" alt="Teeauswahl bei Küng Kaffee" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Tee</figcaption></figure>
+      <figure class="g4"><img src="https://kuengkaffee.ch/wp-content/uploads/2025/07/Zubehoer-original.jpeg" alt="Barista-Zubehör im Fabrikladen" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Barista-Zubehör</figcaption></figure>
+      <figure class="g5"><img src="https://kuengkaffee.ch/wp-content/uploads/2026/07/box3.webp" alt="Verpackung einer Küng Kaffee Sorte" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Küng Kapseln</figcaption></figure>
+      <figure class="g6"><img src="https://kuengkaffee.ch/wp-content/uploads/2026/07/eureka-mignon-stark-w-schwarz-chrom.png" alt="Kaffeemühle im Sortiment" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Mühlen &amp; Maschinen</figcaption></figure>
+      <figure class="g7"><img src="https://kuengkaffee.ch/wp-content/uploads/2026/07/Profitec-Go-2.0.jpg" alt="Espressomaschine Profitec Go 2.0" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Espressomaschinen</figcaption></figure>
+      <figure class="g8"><img src="https://kuengkaffee.ch/wp-content/uploads/2023/05/Front_ShopButton_red.png" alt="Küng Kaffee Fabrikladen" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Fabrikladen St. Gallerstrasse 129, Winterthur</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="trust-section" id="bewertungen">
+  <div class="wrap trust-grid">
+    <div class="trust-score">
+      <span class="big">4.9</span>
+      <span class="stars">★★★★★</span>
+      <p>64 Bewertungen auf Google</p>
+    </div>
+    <div class="usp-chip-row">
+      <div class="usp-chip">Historische Rösterei seit 1920</div>
+      <div class="usp-chip">Handwerklich tägliche Röstung</div>
+      <div class="usp-chip">Vierte Generation Familienunternehmen</div>
+      <div class="usp-chip">Fachberatung vor Ort</div>
+      <div class="usp-chip">Umfassendes Sortiment: Bohnen, Kapseln, Pads, Maschinen, Zubehör</div>
+      <div class="usp-chip">50m vom Bahnhof Winterthur Grüze</div>
+    </div>
+  </div>
+</section>
+
+<section id="standort">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Standort &amp; Öffnungszeiten</p>
+      <h2>Fabrikladen an der St. Gallerstrasse, Winterthur.</h2>
+      <p>Direkt beim Bahnhof Winterthur Grüze – 50 Meter Fussweg, Parkplätze vorhanden. Mittagspause von 11:45 bis 13:30 Uhr.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <span class="status-badge" id="statusBadge"><span class="dot"></span><span id="statusText">Öffnungszeiten werden geprüft …</span></span>
+        <table class="hours-table">
+          <tr><td>Montag–Freitag</td><td>08:00–11:45, 13:30–17:00</td></tr>
+          <tr><td>Samstag</td><td>09:00–11:45</td></tr>
+        </table>
+        <ul class="loc-meta">
+          <li><b>Adresse</b><span>Küng &amp; Co AG, St. Gallerstrasse 129, 8404 Winterthur</span></li>
+          <li><b>Telefon</b><span><a href="tel:+41522331268">+41 52 233 12 68</a></span></li>
+          <li><b>E-Mail</b><span><a href="mailto:info@kuengkaffee.ch">info@kuengkaffee.ch</a></span></li>
+          <li><b>ÖV</b><span>50m vom Bahnhof Winterthur Grüze</span></li>
+        </ul>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=K%C3%BCng+Coffee+Roastery+St.+Gallerstrasse+129+Winterthur&amp;z=16&amp;output=embed" title="Karte: Küng Kaffee, St. Gallerstrasse 129, Winterthur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Kontakt</p>
+      <h2 style="color:var(--bg);font-size:clamp(1.9rem,3.4vw,2.6rem);margin-top:0.5rem;">Vorbeikommen, anrufen oder schreiben.</h2>
+      <p style="color:rgba(250,244,236,0.72);margin-top:1rem;max-width:44ch;">Küng &amp; Co AG · St. Gallerstrasse 129 · 8404 Winterthur</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/kuengkaffee/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/kuengkaffee/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://kuengkaffee.ch/" target="_blank" rel="noopener">kuengkaffee.ch</a>
+      </div>
+    </div>
+    <div>
+      <a class="big-link" href="tel:+41522331268">+41 52 233 12 68</a>
+      <a class="big-link" href="mailto:info@kuengkaffee.ch">info@kuengkaffee.ch</a>
+      <a class="big-link" href="https://maps.google.com/maps?q=K%C3%BCng+Coffee+Roastery+St.+Gallerstrasse+129+Winterthur&amp;z=16" target="_blank" rel="noopener">St. Gallerstrasse 129, 8404 Winterthur</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© <span id="year"></span> Küng &amp; Co AG · St. Gallerstrasse 129, 8404 Winterthur</span>
+    <span>Design-Vorschlag · unverbindliches Muster</span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522331268">📞 052 233 12 68 anrufen</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // Mobile nav toggle
+  var burger = document.getElementById('burgerBtn');
+  var links = document.getElementById('navLinks');
+  if (burger && links) {
+    burger.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  // Set footer year
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealTargets = document.querySelectorAll('.section-head, .spine-item, .about-photo, .roast-grid, .gallery-grid figure, .trust-grid, .loc-card, .map-frame');
+  revealTargets.forEach(function(el){ el.classList.add('reveal'); });
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealTargets.forEach(function(el){ io.observe(el); });
+  } else {
+    revealTargets.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---- Generational spine: scroll-linked active marker + fill rail ----
+  var spineItems = Array.prototype.slice.call(document.querySelectorAll('[data-spine]'));
+  var spineFill = document.getElementById('spineFill');
+  function updateSpine(){
+    var vh = window.innerHeight;
+    var activeIndex = -1;
+    var lastPastTop = null;
+    spineItems.forEach(function(item, i){
+      var r = item.getBoundingClientRect();
+      if (r.top < vh * 0.6) {
+        activeIndex = i;
+        lastPastTop = r;
+      }
+      item.classList.toggle('is-active', false);
+    });
+    if (activeIndex >= 0) {
+      spineItems[activeIndex].classList.add('is-active');
+    }
+    if (spineFill && spineItems.length) {
+      var railParent = spineFill.parentElement;
+      var railRect = railParent.getBoundingClientRect();
+      var lastItem = spineItems[spineItems.length - 1];
+      var firstItem = spineItems[0];
+      var firstRect = firstItem.getBoundingClientRect();
+      var lastRect = lastItem.getBoundingClientRect();
+      var totalSpan = (lastRect.top - firstRect.top) || 1;
+      var progressed = activeIndex >= 0 ? (spineItems[activeIndex].getBoundingClientRect().top - firstRect.top) : 0;
+      var pct = Math.max(0, Math.min(1, progressed / totalSpan));
+      if (activeIndex === spineItems.length - 1) pct = 1;
+      if (activeIndex === -1) pct = 0;
+      spineFill.style.height = (pct * 100) + '%';
+    }
+  }
+  updateSpine();
+  window.addEventListener('scroll', updateSpine, { passive: true });
+  window.addEventListener('resize', updateSpine);
+
+  // ---- Sortiment-Explorer: real menu data from JSON ----
+  var menu = [
+    { section: "Kaffee", name: "Kaffeebohnen", desc: "verschiedene Sorten, handwerklich geröstet", price: null },
+    { section: "Kaffee", name: "Küng Kapseln", desc: "Nespresso-kompatibel", price: null },
+    { section: "Kaffee", name: "Küng Pads", desc: null, price: null },
+    { section: "Kaffee", name: "Lupinenkaffee", desc: null, price: null },
+    { section: "Kaffee", name: "Türkischer Kaffee", desc: null, price: null },
+    { section: "Maschinen", name: "969.coffee ELBA Espressomaschine Mini Black", desc: null, price: "CHF 1350.00" },
+    { section: "Maschinen", name: "969.coffee ELBA Espressomaschine Mini Chrom", desc: null, price: "CHF 1250.00" },
+    { section: "Maschinen", name: "Aroma Plus Evolution Swiss Edition", desc: "schwarz/weiss", price: "CHF 269.00" },
+    { section: "Maschinen", name: "COMANDANTE Handmühle C40 MK4 Nitro Blade", desc: null, price: "CHF 248.00–278.00" },
+    { section: "Maschinen", name: "ELBA IV V3 Espressomaschine", desc: "mit PID", price: "CHF 1670.00–1760.00" },
+    { section: "Maschinen", name: "La Marzocco Linea MINI Schwarz", desc: null, price: "CHF 4990.00" },
+    { section: "Maschinen", name: "JURA C8 piano black", desc: null, price: "CHF 880.00" },
+    { section: "Tee & Sonstiges", name: "Tee", desc: null, price: null },
+    { section: "Tee & Sonstiges", name: "Barista-Zubehör", desc: null, price: null },
+    { section: "Tee & Sonstiges", name: "Geschenke", desc: null, price: null },
+    { section: "Tee & Sonstiges", name: "Tennissocken Bio", desc: "Natural vibes", price: "CHF 24.00" }
+  ];
+
+  var roastGrid = document.getElementById('roastGrid');
+  var tabbar = document.getElementById('tabbar');
+  var currentFilter = 'alle';
+
+  function renderCard(item, index){
+    var card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'roast-card';
+    card.setAttribute('data-cat', item.section);
+
+    var descId = 'rc-desc-' + index;
+    var priceHtml = item.price ? '<span class="rc-price">' + item.price + '</span>' : '';
+    var descHtml = '';
+
+    card.innerHTML =
+      '<div class="rc-top"><span class="rc-name">' + item.name + '</span>' + priceHtml + '</div>' +
+      '<span class="rc-cat">' + item.section + '</span>';
+
+    if (item.desc) {
+      // only items with a real description in the data can expand
+      card.setAttribute('aria-expanded', 'false');
+      card.setAttribute('aria-controls', descId);
+      var descEl = document.createElement('div');
+      descEl.className = 'rc-desc';
+      descEl.id = descId;
+      descEl.textContent = item.desc;
+      card.appendChild(descEl);
+
+      card.addEventListener('click', function(){
+        var isOpen = card.getAttribute('aria-expanded') === 'true';
+        roastGrid.querySelectorAll('.roast-card[aria-expanded="true"]').forEach(function(c){
+          if (c !== card) c.setAttribute('aria-expanded', 'false');
+        });
+        card.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      });
+    } else {
+      card.style.cursor = 'default';
+    }
+
+    return card;
+  }
+
+  function renderGrid(){
+    roastGrid.innerHTML = '';
+    menu.forEach(function(item, i){
+      if (currentFilter === 'alle' || item.section === currentFilter) {
+        roastGrid.appendChild(renderCard(item, i));
+      }
+    });
+  }
+
+  if (tabbar) {
+    tabbar.addEventListener('click', function(e){
+      var btn = e.target.closest('button[data-filter]');
+      if (!btn) return;
+      tabbar.querySelectorAll('button').forEach(function(b){
+        b.classList.remove('active');
+        b.setAttribute('aria-selected','false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      currentFilter = btn.getAttribute('data-filter');
+      renderGrid();
+    });
+  }
+  renderGrid();
+
+  // ---- Open / closed badge from real opening hours ----
+  var hoursData = [
+    { days: [1,2,3,4,5], ranges: [[8*60, 11*60+45], [13*60+30, 17*60]] },
+    { days: [6], ranges: [[9*60, 11*60+45]] }
+  ];
+  function computeStatus(){
+    var now = new Date();
+    var day = now.getDay(); // 0 Sun .. 6 Sat
+    var mins = now.getHours()*60 + now.getMinutes();
+    for (var i=0;i<hoursData.length;i++){
+      var block = hoursData[i];
+      if (block.days.indexOf(day) === -1) continue;
+      for (var j=0;j<block.ranges.length;j++){
+        var r = block.ranges[j];
+        if (mins >= r[0] && mins < r[1]) return { open:true };
+      }
+    }
+    return { open:false };
+  }
+  var badge = document.getElementById('statusBadge');
+  var statusText = document.getElementById('statusText');
+  if (badge && statusText) {
+    var s = computeStatus();
+    if (s.open) {
+      badge.classList.add('open');
+      statusText.textContent = 'Jetzt geöffnet';
+    } else {
+      badge.classList.add('closed');
+      statusText.textContent = 'Aktuell geschlossen';
+    }
+  }
+
+})();
+</script>
+</body>
+</html>

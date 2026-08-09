@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zwiback, Dübendorf – Hotel &amp; Bistro in Zwicky Süd</title>
+<meta name="description" content="Zwiback, Am Wasser 3, Zwicky Süd, Dübendorf: Hotel und Bistro mit Doppelzimmer und Familiensuite, hochschnellem WLAN und flexiblen Parkplatzoptionen.">
+<meta property="og:title" content="Zwiback, Dübendorf">
+<meta property="og:description" content="Charmantes Hotel und Bistro mit modernem Komfort in Dübendorf-Zwicky Süd.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.zwiback.ch/media/pages/home/40aae236e3-1747667429/05_living-room-and-bedroom-602.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400;1,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Zwiback",
+  "description": "Charmantes Hotel und Bistro mit modernem Komfort in Dübendorf-Zwicky Süd.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Am Wasser 3 (Zwicky Süd)",
+    "postalCode": "8600",
+    "addressLocality": "Dübendorf",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41443254466",
+  "email": "info@zwiback.ch",
+  "url": "https://www.zwiback.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "341"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#fbf3e7;
+  --surface:#fffaf2;
+  --fg:#2b1c12;
+  --muted:#6b5142;
+  --brand:#a8462a;
+  --accent:#c98a1c;
+  --line:#e8d5bd;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'Figtree',system-ui,sans-serif;
+  font-size:clamp(15px,0.3vw + 14px,17px);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em;
+  line-height:1.05;margin:0;color:var(--fg);
+}
+h1{font-size:clamp(2.3rem,5.2vw + 1rem,4.4rem);}
+h2{font-size:clamp(1.7rem,2.8vw + 1rem,2.5rem);}
+h3{font-size:clamp(1.1rem,1vw + 0.9rem,1.3rem);}
+p{margin:0 0 1em;}
+a{color:var(--brand);}
+img{max-width:100%;display:block;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+.skip-link:focus{left:1rem;top:1rem;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.9rem clamp(1.2rem,4vw,3rem);
+  background:rgba(251,243,231,0.95);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.brand-mark{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;}
+.brand-mark em{color:var(--brand);font-style:italic;}
+.brand-mark b{color:var(--accent);font-style:normal;}
+nav ul{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0;}
+nav a{color:var(--fg);text-decoration:none;font-size:0.85rem;font-weight:600;}
+nav a:hover{color:var(--brand);}
+.call-pill{background:var(--brand);color:#fff;padding:0.55rem 1.1rem;border-radius:6px;text-decoration:none;font-size:0.82rem;font-weight:700;}
+@media (max-width:860px){ nav{display:none;} }
+
+main{padding-top:60px;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+[data-reveal].is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+/* HERO — split diptych */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:min(86vh,680px);position:relative;}
+.hero-half{position:relative;display:flex;align-items:flex-end;overflow:hidden;color:#fff;}
+.hero-half img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+.hero-half::after{content:"";position:absolute;inset:0;z-index:1;}
+.hero-half.zimmer::after{background:linear-gradient(0deg,rgba(60,20,10,0.82) 0%,rgba(60,20,10,0.25) 60%,rgba(60,20,10,0.1) 100%);}
+.hero-half.bistro::after{background:linear-gradient(0deg,rgba(66,44,5,0.82) 0%,rgba(66,44,5,0.25) 60%,rgba(66,44,5,0.1) 100%);}
+.hero-half .content{position:relative;z-index:2;padding:2.2rem;}
+.hero-half .kicker{text-transform:uppercase;letter-spacing:0.12em;font-size:0.78rem;font-weight:700;}
+.hero-half h2{color:#fff;font-size:clamp(2rem,4vw + 1rem,3.2rem);}
+.hero-seam{
+  position:absolute;left:50%;top:0;bottom:0;width:2px;background:#fff;z-index:3;transform:translateX(-1px);opacity:0.6;
+}
+.hero-seam-label{
+  position:absolute;left:50%;top:1.4rem;transform:translateX(-50%);z-index:4;
+  background:var(--bg);color:var(--fg);font-family:'Fraunces',serif;font-weight:600;
+  padding:0.4rem 0.9rem;border-radius:999px;font-size:0.92rem;letter-spacing:0.03em;
+  box-shadow:0 2px 10px rgba(0,0,0,0.15);
+}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-seam{display:none;}
+  .hero-seam-label{position:static;transform:none;margin:0.8rem auto;display:table;}
+}
+.hero-rating{position:absolute;bottom:0.9rem;right:1.2rem;z-index:5;color:#fff;font-size:0.8rem;background:rgba(0,0,0,0.35);padding:0.3rem 0.7rem;border-radius:999px;}
+
+/* SECTION COMMON */
+section.block{padding:clamp(2.8rem,6vw,4.6rem) 0;border-bottom:1px solid var(--line);}
+.block-head{max-width:60ch;margin-bottom:2rem;}
+.block-head .eyebrow{color:var(--brand);font-weight:700;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;}
+.block-head p{color:var(--muted);}
+
+/* TWIN GRID — general paired layout */
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.twin > div{padding:1.8rem 1.7rem;}
+.twin > div:first-child{background:var(--surface);border-right:1px solid var(--line);}
+.twin > div:last-child{background:#fbead2;}
+.twin h3{margin-bottom:0.5rem;}
+.twin .meta{color:var(--brand);font-weight:700;font-size:0.85rem;margin-bottom:0.6rem;}
+.twin > div:last-child .meta{color:var(--accent);}
+.twin p{color:var(--muted);font-size:0.92rem;}
+@media (max-width:720px){
+  .twin{grid-template-columns:1fr;}
+  .twin > div:first-child{border-right:none;border-bottom:1px solid var(--line);}
+}
+
+/* BADGE */
+.status-badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 0.9rem;border-radius:999px;font-size:0.85rem;font-weight:700;}
+.status-badge.open{background:#e4f0d8;color:#375a1f;}
+.status-badge.closed{background:#f3ded9;color:#7a2e1a;}
+.status-dot{width:0.55rem;height:0.55rem;border-radius:50%;background:currentColor;}
+
+/* COMPARATOR MODULE */
+.comparator{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(1.4rem,3vw,2.2rem);}
+.comp-picker{display:flex;flex-wrap:wrap;gap:0.7rem;margin-bottom:1.4rem;}
+.comp-picker button{
+  font-family:'Fraunces',serif;font-size:1rem;padding:0.55rem 1.2rem;border:2px solid var(--brand);
+  background:var(--bg);color:var(--brand);cursor:pointer;border-radius:999px;
+}
+.comp-picker button[aria-pressed="true"]{background:var(--brand);color:#fff;}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.92rem;margin-bottom:1.6rem;}
+.comp-table th,.comp-table td{text-align:left;padding:0.75rem 0.7rem;border-bottom:1px solid var(--line);vertical-align:top;}
+.comp-table th{font-family:'Fraunces',serif;font-size:0.95rem;color:var(--brand);}
+.comp-empty{color:var(--muted);font-style:italic;}
+.composer{border-top:2px dashed var(--line);padding-top:1.6rem;display:grid;gap:1rem;grid-template-columns:1fr 1fr;}
+.composer label{display:block;font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem;font-weight:600;}
+.composer select{width:100%;padding:0.6rem;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff;}
+.composer-out{grid-column:1 / -1;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1rem;font-size:0.88rem;white-space:pre-wrap;}
+.composer-actions{grid-column:1 / -1;display:flex;gap:0.8rem;flex-wrap:wrap;}
+.btn{display:inline-block;text-align:center;padding:0.8rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.92rem;border:2px solid transparent;}
+.btn-brand{background:var(--brand);color:#fff;}
+.btn-accent{background:var(--accent);color:#2b1c12;}
+.btn-outline{border-color:var(--brand);color:var(--brand);}
+@media (max-width:600px){ .composer{grid-template-columns:1fr;} }
+
+/* MIRRORED GALLERY */
+.mirror-gallery{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;}
+.mirror-col{display:grid;gap:0.7rem;}
+.mirror-col h3{text-align:center;margin-bottom:0.4rem;}
+.mirror-col figure{margin:0;border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:var(--line);}
+.mirror-col img{width:100%;height:100%;object-fit:cover;}
+@media (max-width:760px){ .mirror-gallery{grid-template-columns:1fr;} }
+
+/* LOCATION */
+.loc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.loc-facts{border:1px solid var(--line);border-radius:14px;padding:1.4rem;background:var(--surface);}
+.loc-facts dt{font-weight:700;color:var(--brand);margin-top:1rem;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em;}
+.loc-facts dt:first-child{margin-top:0;}
+.loc-facts dd{margin:0.2rem 0 0;}
+.map-box{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.map-box iframe{width:100%;height:320px;border:0;display:block;}
+@media (max-width:800px){ .loc-wrap{grid-template-columns:1fr;} }
+
+footer{padding:2.4rem clamp(1.2rem,4vw,3rem) 6rem;background:var(--brand);color:#fbead2;}
+footer a{color:#fff;}
+.foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1180px;margin:0 auto 1.4rem;font-size:0.88rem;}
+footer p.legal{max-width:1180px;margin:0 auto;font-size:0.78rem;color:#e7c9a6;}
+@media (max-width:700px){ .foot-grid{grid-template-columns:1fr;} }
+
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;display:flex;}
+.mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.9rem;}
+.mobile-bar a:first-child{background:var(--brand);}
+.mobile-bar a:last-child{background:var(--accent);}
+@media (min-width:761px){ .mobile-bar{display:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <div class="brand-mark"><em>Zwi</em><b>back</b></div>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#zimmer">Zimmer</a></li>
+      <li><a href="#modul">Anfrage</a></li>
+      <li><a href="#zeiten">Zeiten</a></li>
+      <li><a href="#bilder">Bilder</a></li>
+      <li><a href="#lage">Lage</a></li>
+    </ul>
+  </nav>
+  <a class="call-pill" href="tel:+41443254466">Anrufen</a>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <h1 class="visually-hidden">Zwiback</h1>
+    <div class="hero-half zimmer">
+      <img src="https://www.zwiback.ch/media/pages/home/40aae236e3-1747667429/05_living-room-and-bedroom-602.jpg" alt="Zimmer im Zwiback, Dübendorf" onerror="this.style.display='none'">
+      <div class="content">
+        <span class="kicker">Hälfte eins</span>
+        <h2>Zimmer</h2>
+      </div>
+    </div>
+    <div class="hero-half bistro">
+      <img src="https://www.zwiback.ch/media/pages/home/b5ca7eae27-1742371502/zb_bistro_05-u8727-fr-2.jpg" alt="Bistro im Zwiback, Dübendorf" onerror="this.style.display='none'">
+      <div class="content">
+        <span class="kicker">Hälfte zwei</span>
+        <h2>Bistro</h2>
+      </div>
+    </div>
+    <div class="hero-seam" aria-hidden="true"></div>
+    <div class="hero-seam-label">Zwiback · Dübendorf</div>
+    <div class="hero-rating">4.4 · 341 Bewertungen</div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Über uns</span>
+        <h2>Zweimal gebacken, einmal gedacht</h2>
+        <p>Charmantes Hotel und Bistro mit modernem Komfort in Dübendorf-Zwicky Süd. Zwei Zimmertypen, zwei Öffnungszeiten-Blöcke, zwei Parkplatzmodelle — der Name ist Programm: Zwiback ist überall doppelt gedacht.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="zimmer" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Zwei Zimmertypen</span>
+        <h2>Doppelzimmer &amp; Familiensuite</h2>
+        <p>Preise richten sich nach Nachfrage und Verfügbarkeit und sind nicht auf der Website angegeben — daher hier bewusst ausgelassen.</p>
+      </div>
+      <div class="twin">
+        <div>
+          <span class="meta">Zimmer 1 · 2 Personen</span>
+          <h3>Doppelzimmer</h3>
+          <p>22 m², Parkettboden, Doppelbett 2×90×200 cm, 32" Flachbildschirm, WLAN, Minibar, Wasserkocher, Safe, Leseplatz, privates Badezimmer mit begehbarer Dusche.</p>
+        </div>
+        <div>
+          <span class="meta">Zimmer 2 · 4 Personen</span>
+          <h3>Familiensuite</h3>
+          <p>45 m², separater Schlafbereich mit Doppelbett, Wohnbereich mit zwei Einzelbetten (umwandelbar in Sofas), Babybett auf Anfrage verfügbar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="modul" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Modul</span>
+        <h2>Zimmer vergleichen, Rezeption prüfen</h2>
+        <p>Zimmer wählen und Anfrage zusammenstellen. Der Status zeigt live, ob die Rezeption laut Öffnungszeiten gerade besetzt ist.</p>
+      </div>
+      <p><span class="status-badge" id="status-badge"><span class="status-dot" aria-hidden="true"></span><span id="status-text">Status wird geprüft…</span></span></p>
+      <div class="comparator" style="margin-top:1.4rem;">
+        <div class="comp-picker" id="comp-picker" role="group" aria-label="Zimmer für Vergleich wählen">
+          <button type="button" data-room="0" aria-pressed="true">Doppelzimmer</button>
+          <button type="button" data-room="1" aria-pressed="true">Familiensuite</button>
+        </div>
+        <table class="comp-table" id="comp-table">
+          <thead><tr><th>Zimmer</th><th>Kapazität</th><th>Beschreibung</th></tr></thead>
+          <tbody id="comp-body"></tbody>
+        </table>
+        <p class="comp-empty" id="comp-empty" hidden>Bitte mindestens ein Zimmer auswählen.</p>
+        <div class="composer">
+          <div>
+            <label for="guest-count">Anzahl Personen</label>
+            <select id="guest-count">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div>
+            <label for="parking-pref">Parkplatz gewünscht?</label>
+            <select id="parking-pref">
+              <option>Nein</option>
+              <option>Ja, rund um die Uhr</option>
+              <option>Ja, 18:00–09:00 Uhr</option>
+            </select>
+          </div>
+          <div class="composer-out" id="composer-out"></div>
+          <div class="composer-actions">
+            <a class="btn btn-brand" id="mail-link" href="mailto:info@zwiback.ch">Per E-Mail anfragen</a>
+            <a class="btn btn-outline" href="tel:+41443254466">Per Telefon anfragen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="zeiten" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Zwei Öffnungszeiten-Blöcke</span>
+        <h2>Rezeptionszeiten</h2>
+        <p>Selbst-Check-in ausserhalb der Rezeptionszeiten möglich.</p>
+      </div>
+      <div class="twin">
+        <div>
+          <span class="meta">Block 1</span>
+          <h3>Montag–Freitag</h3>
+          <p>06:30–20:30 Uhr</p>
+        </div>
+        <div>
+          <span class="meta">Block 2</span>
+          <h3>Samstag, Sonntag &amp; Feiertage</h3>
+          <p>08:00–11:00 Uhr</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Zwei Parkplatzmodelle</span>
+        <h2>Parkplätze, CHF 10/Nacht</h2>
+      </div>
+      <div class="twin">
+        <div>
+          <span class="meta">Modell 1</span>
+          <h3>Rund um die Uhr</h3>
+          <p>4 Parkplätze, jederzeit verfügbar, CHF 10 pro Nacht.</p>
+        </div>
+        <div>
+          <span class="meta">Modell 2</span>
+          <h3>18:00–09:00 Uhr</h3>
+          <p>6 Parkplätze, nachts verfügbar, CHF 10 pro Nacht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Ausstattung</span>
+        <h2>In jedem Zimmer</h2>
+      </div>
+      <div class="twin">
+        <div>
+          <span class="meta">Zimmer</span>
+          <h3>Minibar, Safe, Flachbildschirm-TV</h3>
+          <p>Kostenlos: hochschnelles WLAN in allen Zimmern.</p>
+        </div>
+        <div>
+          <span class="meta">Haus</span>
+          <h3>Bistro vor Ort</h3>
+          <p>Flexible Parkplatzoptionen direkt am Haus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="bilder" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Zwei Seiten</span>
+        <h2>Zimmer-Seite &amp; Bistro-Seite</h2>
+        <p>Sechzehn Bilder, in zwei Spalten gespiegelt: links das Haus und die Zimmer, rechts das Bistro.</p>
+      </div>
+      <div class="mirror-gallery">
+        <div class="mirror-col">
+          <h3>Zimmer &amp; Haus</h3>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/40aae236e3-1747667429/05_living-room-and-bedroom-602.jpg" alt="Zimmer im Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/6e13e053f8-1747667432/dsc02683_k.jpg" alt="Impression aus dem Zwiback, Dübendorf" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/57d454d516-1748595993/587440c8-bc05-420c-b966-89644b4e126c.jpg" alt="Impression aus dem Zwiback, Dübendorf" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/a8cd6edf65-1748595924/foto-06.09.19-17-17-45.jpg" alt="Impression aus dem Zwiback, Dübendorf" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/b5e5d0333d-1748595925/foto-25.02.19-15-03-53.jpg" alt="Impression aus dem Zwiback, Dübendorf" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/1c6d14cb65-1748596152/602.jpg" alt="Zimmer im Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/ed80270e1d-1748596153/zwicky.jpg" alt="Zwicky Süd, Dübendorf" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/ff7b81c45a-1748596152/zwiback.jpg" alt="Zwiback, Dübendorf" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+        </div>
+        <div class="mirror-col">
+          <h3>Bistro</h3>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/b5ca7eae27-1742371502/zb_bistro_05-u8727-fr-2.jpg" alt="Bistro im Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/0b0a838b80-1748595267/zwiback-stammtisch.jpg" alt="Stammtisch im Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/0516153386-1748596368/img_2358.jpg" alt="Impression aus dem Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/0b8af9bdfd-1748596085/foto-17.09.20-18-11-47-1.jpg" alt="Impression aus dem Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/f77fee701c-1748595993/09797c33-73be-472e-a5bd-a647afaa1f6f.jpg" alt="Impression aus dem Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/674f2f6f7d-1748596085/foto-17.09.20-18-11-47.jpg" alt="Impression aus dem Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/a38c046701-1748596152/sandwich.jpg" alt="Sandwich aus dem Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+          <figure><img src="https://www.zwiback.ch/media/pages/home/75059797d0-1748596152/show.jpg" alt="Impression aus dem Bistro Zwiback" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Zwei Fragen</span>
+        <h2>Vor der Anfrage</h2>
+      </div>
+      <div class="twin">
+        <div>
+          <span class="meta">Frage 1</span>
+          <h3>Sind Preise online sichtbar?</h3>
+          <p>Nein. Sie richten sich nach Nachfrage und Verfügbarkeit und werden nicht auf der Website veröffentlicht.</p>
+        </div>
+        <div>
+          <span class="meta">Frage 2</span>
+          <h3>Was, wenn die Rezeption geschlossen ist?</h3>
+          <p>Ausserhalb der Rezeptionszeiten ist Selbst-Check-in möglich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="lage" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Lage</span>
+        <h2>Am Wasser 3, Zwicky Süd, Dübendorf</h2>
+      </div>
+      <div class="loc-wrap">
+        <dl class="loc-facts">
+          <dt>Adresse</dt>
+          <dd>Am Wasser 3 (Zwicky Süd), Dübendorf</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41443254466">+41 44 325 44 66</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@zwiback.ch">info@zwiback.ch</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.zwiback.ch/" target="_blank" rel="noopener">zwiback.ch</a></dd>
+          <dt>Google-Bewertung</dt>
+          <dd>4.4 von 5 · 341 Bewertungen</dd>
+        </dl>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Am%20Wasser%203%2C%20Zwicky%20S%C3%BCd%2C%208600%20D%C3%BCbendorf&amp;z=16&amp;output=embed" loading="lazy" title="Karte Zwiback, Dübendorf"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Zwiback</strong><br>
+      Am Wasser 3 (Zwicky Süd), Dübendorf<br>
+      <a href="tel:+41443254466">+41 44 325 44 66</a><br>
+      <a href="mailto:info@zwiback.ch">info@zwiback.ch</a>
+    </div>
+    <div>
+      <strong>Rezeptionszeiten</strong><br>
+      Mo–Fr 06:30–20:30 Uhr<br>
+      Sa, So &amp; Feiertage 08:00–11:00 Uhr
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.zwiback.ch/" target="_blank" rel="noopener">zwiback.ch</a>
+    </div>
+  </div>
+  <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41443254466">Anrufen</a>
+  <a href="mailto:info@zwiback.ch">E-Mail</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* live reception status from real hours */
+  var badge = document.getElementById('status-badge');
+  var statusText = document.getElementById('status-text');
+  function updateStatus(){
+    var now = new Date();
+    var day = now.getDay(); /* 0 = So, 6 = Sa */
+    var minutes = now.getHours() * 60 + now.getMinutes();
+    var isWeekend = (day === 0 || day === 6);
+    var open;
+    var rangeLabel;
+    if(isWeekend){
+      open = minutes >= (8*60) && minutes < (11*60);
+      rangeLabel = '08:00–11:00 Uhr (Sa/So)';
+    } else {
+      open = minutes >= (6*60+30) && minutes < (20*60+30);
+      rangeLabel = '06:30–20:30 Uhr (Mo–Fr)';
+    }
+    badge.classList.remove('open','closed');
+    badge.classList.add(open ? 'open' : 'closed');
+    statusText.textContent = (open ? 'Rezeption jetzt offen' : 'Rezeption aktuell geschlossen') + ' · ' + rangeLabel + ' · Selbst-Check-in möglich';
+  }
+  updateStatus();
+  setInterval(updateStatus, 60000);
+
+  /* room comparator + composer */
+  var rooms = [
+    {name:'Doppelzimmer', cap:'2 Personen', desc:'22 m², Doppelbett 2×90×200 cm, WLAN, Minibar, Safe, privates Badezimmer mit begehbarer Dusche'},
+    {name:'Familiensuite', cap:'4 Personen', desc:'45 m², separater Schlafbereich, Wohnbereich mit zwei Einzelbetten, Babybett auf Anfrage'}
+  ];
+
+  var picker = document.getElementById('comp-picker');
+  var buttons = Array.prototype.slice.call(picker.querySelectorAll('button'));
+  var body = document.getElementById('comp-body');
+  var empty = document.getElementById('comp-empty');
+  var table = document.getElementById('comp-table');
+
+  function selectedRooms(){
+    return buttons.filter(function(b){ return b.getAttribute('aria-pressed') === 'true'; })
+      .map(function(b){ return rooms[parseInt(b.getAttribute('data-room'),10)]; });
+  }
+
+  function renderTable(){
+    var sel = selectedRooms();
+    body.innerHTML = '';
+    if(sel.length === 0){
+      table.hidden = true; empty.hidden = false;
+      return;
+    }
+    table.hidden = false; empty.hidden = true;
+    sel.forEach(function(r){
+      var tr = document.createElement('tr');
+      var t1 = document.createElement('td'); t1.textContent = r.name;
+      var t2 = document.createElement('td'); t2.textContent = r.cap;
+      var t3 = document.createElement('td'); t3.textContent = r.desc;
+      tr.appendChild(t1); tr.appendChild(t2); tr.appendChild(t3);
+      body.appendChild(tr);
+    });
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+      renderTable();
+      renderComposer();
+    });
+  });
+
+  var guestSelect = document.getElementById('guest-count');
+  var parkingSelect = document.getElementById('parking-pref');
+  var out = document.getElementById('composer-out');
+  var mailLink = document.getElementById('mail-link');
+
+  function renderComposer(){
+    var sel = selectedRooms();
+    var names = sel.length ? sel.map(function(r){ return r.name; }).join(', ') : '(keine Auswahl)';
+    var text = 'Anfrage Zwiback, Dübendorf\n' +
+      'Zimmer: ' + names + '\n' +
+      'Personen: ' + guestSelect.value + '\n' +
+      'Parkplatz: ' + parkingSelect.value;
+    out.textContent = text;
+    var subject = encodeURIComponent('Zimmeranfrage Zwiback');
+    var mbody = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:info@zwiback.ch?subject=' + subject + '&body=' + mbody);
+  }
+
+  guestSelect.addEventListener('change', renderComposer);
+  parkingSelect.addEventListener('change', renderComposer);
+
+  renderTable();
+  renderComposer();
+})();
+</script>
+
+</body>
+</html>

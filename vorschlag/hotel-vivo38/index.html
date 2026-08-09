@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vivo35 AG – möblierte Monats-Wohnungen in Winterthur</title>
+<meta name="description" content="Vivo35 AG, St. Gallerstrasse 35: vollständig möblierte Serviced Apartments in drei Grössen, monatliche Mietpreise von CHF 1'390 bis CHF 1'840, mit Fitnesscenter-Zugang, nahe der Altstadt.">
+<meta property="og:title" content="Vivo35 AG">
+<meta property="og:description" content="Möblierte Serviced Apartments mit monatlicher Miete, Fitnesscenter-Zugang und zentraler Lage in Winterthur.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Vivo35 AG",
+  "description": "Moderne Serviced Apartments in zentraler Lage Winterthurs mit vollständig ausgestatteten Wohnungen. Ideal für längerfristige Aufenthalte mit flexiblen Mietkonditionen.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "St. Gallerstrasse 35",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41525213765",
+  "email": "info@vivo35.ch",
+  "url": "https://www.vivo35.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "12"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#faf7f2;
+    --surface:#ffffff;
+    --fg:#241f1a;
+    --muted:#665c50;
+    --brand:#5b3f82;
+    --accent:#d98f3d;
+    --line:#e7ddcf;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+    font-size:clamp(15px,0.35vw + 13.6px,17px);
+    line-height:1.68;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Newsreader',Georgia,serif;font-weight:500;letter-spacing:-0.01em;
+    line-height:1.1;margin:0;color:var(--fg);
+  }
+  h1{font-size:clamp(2.4rem,5.4vw + 1rem,4.4rem);font-style:italic;font-weight:500;}
+  h2{font-size:clamp(1.8rem,2.8vw + 1rem,2.6rem);}
+  h3{font-size:clamp(1.15rem,1.2vw + 1rem,1.4rem);}
+  p{margin:0 0 1em;}
+  a{color:var(--brand);}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;list-style:none;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem clamp(1.2rem,4vw,3rem);
+    background:rgba(250,247,242,0.94);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Newsreader',serif;font-style:italic;font-size:1.3rem;font-weight:600;}
+  nav{display:flex;align-items:center;gap:1.6rem;}
+  nav a{color:var(--fg);text-decoration:none;font-size:0.9rem;font-weight:500;}
+  nav a:hover{color:var(--brand);}
+  .nav-cta{background:var(--brand);color:#fff !important;padding:0.55em 1.15em;border-radius:999px;}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:0.4em 0.6em;font-size:1.1rem;}
+  @media (max-width:860px){
+    nav{position:fixed;top:64px;left:0;right:0;background:var(--surface);flex-direction:column;align-items:flex-start;
+      padding:1.2rem clamp(1.2rem,4vw,3rem);gap:1rem;border-bottom:1px solid var(--line);transform:translateY(-140%);
+      transition:transform 0.3s ease;}
+    nav.is-open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+  }
+
+  main{padding-top:64px;}
+  section{padding:clamp(3rem,6vw,6rem) 0;}
+  section.alt{background:var(--surface);}
+
+  [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+  /* hero */
+  .hero{padding-top:calc(64px + clamp(2.5rem,6vw,5rem));text-align:center;max-width:820px;margin:0 auto;}
+  .hero-tag{display:inline-block;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--brand);margin-bottom:1.2rem;}
+  .hero .lead{font-size:clamp(1.05rem,0.5vw + 1rem,1.25rem);color:var(--muted);max-width:52ch;margin:0 auto 1.6rem;}
+  .cta-row{display:flex;gap:0.9rem;flex-wrap:wrap;justify-content:center;margin-top:1.4rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.5em;padding:0.8em 1.5em;border-radius:999px;font-weight:600;
+    text-decoration:none;font-size:0.95rem;border:1px solid transparent;}
+  .btn-primary{background:var(--brand);color:#fff;}
+  .btn-primary:hover{background:#472f68;}
+  .btn-ghost{background:transparent;color:var(--fg);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--brand);}
+  .rate-line{display:flex;justify-content:center;gap:clamp(1.4rem,4vw,2.6rem);flex-wrap:wrap;margin-top:2.6rem;
+    padding-top:1.6rem;border-top:1px solid var(--line);}
+  .rate-line div b{display:block;font-family:'Newsreader',serif;font-size:1.6rem;color:var(--brand);}
+  .rate-line div span{font-size:0.8rem;color:var(--muted);}
+
+  /* about */
+  .about-wrap{max-width:70ch;margin:0 auto;text-align:center;}
+  .usp-tags{display:flex;flex-wrap:wrap;gap:0.7rem;justify-content:center;margin-top:1.6rem;}
+  .usp-tags span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:0.5em 1.1em;font-size:0.85rem;color:var(--muted);}
+
+  /* comparator */
+  .comp-head{max-width:64ch;margin:0 auto 2.2rem;text-align:center;}
+  .comparator{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(1.6rem,4vw,2.8rem);}
+  .comp-controls{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-bottom:2rem;}
+  @media (max-width:700px){ .comp-controls{grid-template-columns:1fr;} }
+  .comp-field label{display:block;font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;
+    color:var(--muted);margin-bottom:0.6rem;}
+  .apt-toggle{display:flex;gap:0.5rem;flex-wrap:wrap;}
+  .apt-toggle button{flex:1;min-width:90px;padding:0.7em 0.6em;border-radius:10px;border:1px solid var(--line);
+    background:var(--bg);font-weight:600;cursor:pointer;font-family:inherit;color:var(--fg);}
+  .apt-toggle button.is-active{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .dur-select{display:flex;align-items:center;gap:1rem;}
+  .dur-select input[type=range]{flex:1;accent-color:var(--brand);}
+  .dur-select output{font-family:'Newsreader',serif;font-weight:600;font-size:1.2rem;min-width:6ch;color:var(--brand);}
+  .comp-result{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem;text-align:center;padding-top:1.8rem;border-top:1px solid var(--line);}
+  @media (max-width:700px){ .comp-result{grid-template-columns:1fr;} }
+  .comp-result div span{display:block;font-size:0.8rem;color:var(--muted);margin-bottom:0.4rem;}
+  .comp-result div b{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--fg);}
+  .comp-result div.total b{color:var(--accent);}
+  .comp-note{text-align:center;font-size:0.82rem;color:var(--muted);margin-top:1.4rem;}
+
+  /* apartment cards */
+  .apt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+  @media (max-width:860px){ .apt-grid{grid-template-columns:1fr;} }
+  .apt-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.8rem;text-align:center;}
+  .apt-card h3{margin-bottom:0.3rem;}
+  .apt-card .size{color:var(--muted);font-size:0.9rem;margin-bottom:1rem;}
+  .apt-card .price{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--brand);}
+  .apt-card .price small{display:block;font-size:0.72rem;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:0.04em;text-transform:uppercase;}
+
+  .ref-table{width:100%;border-collapse:collapse;margin-top:2.4rem;}
+  .ref-table th,.ref-table td{text-align:left;padding:0.8em 0.7em;border-bottom:1px solid var(--line);font-size:0.9rem;}
+  .ref-table th{color:var(--muted);font-weight:600;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.05em;}
+  .ref-table td.num{font-family:'Newsreader',serif;color:var(--brand);}
+
+  /* amenities */
+  .amenity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0.9rem;}
+  .amenity-grid li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:0.9rem 1.1rem;font-size:0.92rem;
+    display:flex;gap:0.6rem;align-items:flex-start;}
+  .amenity-grid li::before{content:"◆";color:var(--accent);font-size:0.7em;margin-top:0.35em;}
+
+  /* distances */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;}
+  @media (max-width:860px){ .loc-grid{grid-template-columns:1fr;} }
+  .dist-list{display:flex;flex-direction:column;gap:0.7rem;}
+  .dist-row{display:flex;justify-content:space-between;gap:1rem;padding:0.8em 0;border-bottom:1px solid var(--line);font-size:0.94rem;}
+  .dist-row b{font-weight:600;}
+  .dist-row span{color:var(--muted);text-align:right;}
+  .map-frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .map-frame iframe{width:100%;height:340px;border:0;display:block;}
+
+  /* contact */
+  .contact-block{background:var(--brand);color:#f3ecfb;border-radius:20px;padding:clamp(2rem,5vw,3.2rem);text-align:center;}
+  .contact-block a{color:#fff;font-weight:600;}
+  .contact-block .rate-star{color:#e8d9f7;margin-top:1rem;font-size:0.9rem;}
+
+  /* audience */
+  .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+  @media (max-width:860px){ .audience-grid{grid-template-columns:1fr;} }
+  .audience-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem;text-align:center;}
+  .audience-card .icon{font-size:1.6rem;display:block;margin-bottom:0.6rem;}
+
+  /* faq */
+  .faq-list{max-width:66ch;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line);padding:1.1rem 0;}
+  .faq-item summary{cursor:pointer;font-family:'Newsreader',serif;font-weight:600;font-size:1.05rem;list-style:none;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";float:right;color:var(--accent);}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin-top:0.7rem;color:var(--muted);}
+
+  footer{padding:clamp(2.4rem,5vw,3.5rem) 0 6rem;}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1140px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+  @media (max-width:720px){ .foot-grid{grid-template-columns:1fr;} }
+  footer .foot-note{max-width:1140px;margin:2.2rem auto 0;padding:0 clamp(1.2rem,4vw,3rem);font-size:0.8rem;color:var(--muted);}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:none;}
+  .mobile-bar a{display:block;text-align:center;color:#fff;font-weight:700;padding:0.9rem;text-decoration:none;}
+  @media (max-width:720px){ .mobile-bar{display:block;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Vivo35</div>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menü</button>
+  <nav id="mainNav">
+    <a href="#rechner">Mietrechner</a>
+    <a href="#wohnungen">Wohnungen</a>
+    <a href="#ausstattung">Ausstattung</a>
+    <a href="#lage">Lage</a>
+    <a class="nav-cta" href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap">
+    <span class="hero-tag">Serviced Apartments · Winterthur</span>
+    <h1>Wohnen auf Zeit, monatlich gerechnet</h1>
+    <p class="lead">Moderne Serviced Apartments in zentraler Lage Winterthurs mit vollständig ausgestatteten Wohnungen. Ideal für längerfristige Aufenthalte mit flexiblen Mietkonditionen.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#rechner">Mietrechner öffnen</a>
+      <a class="btn btn-ghost" href="tel:+41525213765">+41 52 521 37 65</a>
+    </div>
+    <div class="rate-line">
+      <div><b>CHF 1&#39;390–1&#39;840</b><span>Miete pro Monat</span></div>
+      <div><b>3</b><span>Wohnungsgrössen</span></div>
+      <div><b>4.8</b><span>★ · 12 Bewertungen</span></div>
+    </div>
+  </section>
+
+  <section class="alt" data-reveal>
+    <div class="wrap about-wrap">
+      <h2>Vollmöbliert, mit Fitnesscenter, nahe der Altstadt</h2>
+      <p style="color:var(--muted);">Vollständig ausgestattete Wohnküchen, möblierte Wohnungen und Zugang zum Fitnesscenter – gedacht für alle, die länger als ein paar Nächte bleiben, aber keine eigene Einrichtung mitbringen wollen.</p>
+      <div class="usp-tags">
+        <span>Vollständig ausgestattete Wohnküchen</span>
+        <span>Möblierte Wohnungen</span>
+        <span>Nähe zur Altstadt</span>
+        <span>Fitnesscenter Zugang</span>
+        <span>Monatliche Mietpreise</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="rechner" data-reveal>
+    <div class="wrap">
+      <div class="comp-head">
+        <h2>Mietrechner: Wohnungstyp &amp; Dauer</h2>
+        <p style="color:var(--muted);">Wählen Sie eine Wohnungsgrösse und die geplante Anzahl Monate – die Gesamtmiete wird direkt aus dem realen Monatspreis berechnet.</p>
+      </div>
+      <div class="comparator">
+        <div class="comp-controls">
+          <div class="comp-field">
+            <label>Wohnungstyp</label>
+            <div class="apt-toggle" id="aptToggle" role="group" aria-label="Wohnungstyp wählen">
+              <button type="button" data-apt="Small" data-size="18-21 m²" data-price="1390" class="is-active">Small</button>
+              <button type="button" data-apt="Medium" data-size="22-25 m²" data-price="1490">Medium</button>
+              <button type="button" data-apt="Large" data-size="33-48 m²" data-price="1840">Large</button>
+            </div>
+          </div>
+          <div class="comp-field">
+            <label for="durRange">Mietdauer (Monate)</label>
+            <div class="dur-select">
+              <input type="range" id="durRange" min="1" max="12" value="1" step="1">
+              <output id="durOut">1 Monat</output>
+            </div>
+          </div>
+        </div>
+        <div class="comp-result">
+          <div><span>Wohnungstyp</span><b id="resApt">Small</b></div>
+          <div><span>Monatsmiete</span><b id="resMonthly">CHF 1&#39;390.–</b></div>
+          <div class="total"><span>Gesamtmiete</span><b id="resTotal">CHF 1&#39;390.–</b></div>
+        </div>
+        <p class="comp-note">Monatspreise gemäss Vivo35 AG. Nächtige oder wöchentliche Preise werden nicht angeboten – die Gesamtmiete ist die reale Monatsmiete mal Anzahl Monate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="wohnungen" class="alt" data-reveal>
+    <div class="wrap">
+      <h2 style="text-align:center;margin-bottom:1.8rem;">Die drei Wohnungsgrössen</h2>
+      <div class="apt-grid">
+        <div class="apt-card">
+          <h3>Small</h3>
+          <div class="size">18-21 m²</div>
+          <div class="price">CHF 1&#39;390<small>pro Monat</small></div>
+        </div>
+        <div class="apt-card">
+          <h3>Medium</h3>
+          <div class="size">22-25 m²</div>
+          <div class="price">CHF 1&#39;490<small>pro Monat</small></div>
+        </div>
+        <div class="apt-card">
+          <h3>Large</h3>
+          <div class="size">33-48 m²</div>
+          <div class="price">CHF 1&#39;840<small>pro Monat</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="text-align:center;margin-bottom:1.8rem;">Für wen sich Vivo35 eignet</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <span class="icon" aria-hidden="true">🧳</span>
+          <h3>Längerfristige Aufenthalte</h3>
+          <p style="color:var(--muted);">Flexible Mietkonditionen statt starrer Jahresverträge.</p>
+        </div>
+        <div class="audience-card">
+          <span class="icon" aria-hidden="true">🍳</span>
+          <h3>Selbstversorger</h3>
+          <p style="color:var(--muted);">Vollständig ausgestattete Wohnküche statt Halbpension.</p>
+        </div>
+        <div class="audience-card">
+          <span class="icon" aria-hidden="true">🏋️</span>
+          <h3>Aktive Gäste</h3>
+          <p style="color:var(--muted);">Fitnesscenter-Zugang direkt inklusive.</p>
+        </div>
+      </div>
+      <table class="ref-table">
+        <thead>
+          <tr><th>Wohnungstyp</th><th>Monatsmiete</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Small (18-21 m²)</td><td class="num">CHF 1&#39;390.–</td></tr>
+          <tr><td>Medium (22-25 m²)</td><td class="num">CHF 1&#39;490.–</td></tr>
+          <tr><td>Large (33-48 m²)</td><td class="num">CHF 1&#39;840.–</td></tr>
+        </tbody>
+      </table>
+      <p class="comp-note">Alle Werte sind die reale Monatsmiete je Wohnungstyp – für längerfristige Aufenthalte gelten flexible Mietkonditionen, Details dazu direkt bei Vivo35 erfragen.</p>
+    </div>
+  </section>
+
+  <section id="ausstattung" data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.6rem;">Ausstattung in jeder Wohnung</h2>
+      <ul class="amenity-grid">
+        <li>Vollständig ausgestattete Küche (Induktionsherd, Ofen, Mikrowelle, Kühlschrank)</li>
+        <li>Badezimmer mit Dusche und Toilette</li>
+        <li>42-Zoll TV mit LAN/WLAN Internet</li>
+        <li>Arbeitstisch mit Internetverbindung</li>
+        <li>Bett (100-160 cm je nach Wohnungstyp)</li>
+        <li>Fitnesscenter Zugang</li>
+        <li>Waschmaschine/Trockner im Keller</li>
+        <li>Bügeleisen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="lage" class="alt" data-reveal>
+    <div class="wrap loc-grid">
+      <div>
+        <h2>Lage</h2>
+        <p style="color:var(--muted);margin-bottom:1.4rem;">St. Gallerstrasse 35, 8400 Winterthur</p>
+        <div class="dist-list">
+          <div class="dist-row"><b>Bahnhof Winterthur</b><span>10 Gehminuten</span></div>
+          <div class="dist-row"><b>Bushaltestelle Pflanzschulstrasse</b><span>Wenige Schritte entfernt</span></div>
+          <div class="dist-row"><b>Altstadt</b><span>5 Gehminuten</span></div>
+          <div class="dist-row"><b>Einkaufen</b><span>5 Gehminuten</span></div>
+          <div class="dist-row"><b>Autobahn</b><span>5 Minuten</span></div>
+          <div class="dist-row"><b>Flughafen Zürich</b><span>25 Minuten</span></div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=St.%20Gallerstrasse%2035%2C%208400%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Vivo35 AG" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="text-align:center;margin-bottom:1.8rem;">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Sind die Wohnungen möbliert?</summary>
+          <p>Ja, alle Wohnungen sind vollständig möbliert.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es kürzere Mietdauern als einen Monat?</summary>
+          <p>Nein, Vivo35 AG bietet ausschliesslich monatliche Mietpreise an – keine nächtlichen oder wöchentlichen Tarife.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ist der Zugang zum Fitnesscenter inklusive?</summary>
+          <p>Ja, der Zugang zum Fitnesscenter gehört zur Ausstattung.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es zusätzliche Dienstleistungen?</summary>
+          <p>Zusätzliche Dienstleistungen wie Reinigung und Wäsche sind gegen Gebühr verfügbar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie weit ist es zur Altstadt?</summary>
+          <p>5 Gehminuten.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" data-reveal>
+    <div class="wrap">
+      <div class="contact-block">
+        <h2 style="color:#fff;">Wohnung anfragen</h2>
+        <p style="color:#e8d9f7;max-width:52ch;margin:0.8rem auto 1.6rem;">Für Verfügbarkeit und Mietbeginn direkt anrufen oder schreiben.</p>
+        <div class="cta-row">
+          <a class="btn" style="background:#fff;color:var(--brand);" href="tel:+41525213765">+41 52 521 37 65</a>
+          <a class="btn" style="background:transparent;border-color:#fff;color:#fff;" href="mailto:info@vivo35.ch">info@vivo35.ch</a>
+        </div>
+        <p class="rate-star">★ 4.8 · 12 Google-Bewertungen</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Vivo35 AG</strong><br>
+      St. Gallerstrasse 35, 8400 Winterthur<br>
+      <a href="tel:+41525213765">+41 52 521 37 65</a><br>
+      <a href="mailto:info@vivo35.ch">info@vivo35.ch</a>
+    </div>
+    <div>
+      <strong>Mietpreise</strong><br>
+      Small ab CHF 1&#39;390.–/Monat<br>
+      Large bis CHF 1&#39;840.–/Monat
+    </div>
+    <div>
+      <strong>Online</strong><br>
+      <a href="https://www.vivo35.ch/" target="_blank" rel="noopener">vivo35.ch</a>
+    </div>
+  </div>
+  <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525213765">Anrufen · +41 52 521 37 65</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mainNav.classList.remove('is-open'); navToggle.setAttribute('aria-expanded','false'); });
+  });
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* rate-and-duration comparator */
+  var aptButtons = Array.prototype.slice.call(document.querySelectorAll('#aptToggle button'));
+  var durRange = document.getElementById('durRange');
+  var durOut = document.getElementById('durOut');
+  var resApt = document.getElementById('resApt');
+  var resMonthly = document.getElementById('resMonthly');
+  var resTotal = document.getElementById('resTotal');
+
+  var currentPrice = 1390;
+  var currentName = 'Small';
+
+  function fmtCHF(n){
+    var s = String(n);
+    var out = '';
+    var count = 0;
+    for(var i = s.length - 1; i >= 0; i--){
+      out = s[i] + out;
+      count++;
+      if(count % 3 === 0 && i !== 0){ out = "'" + out; }
+    }
+    return "CHF " + out + ".–";
+  }
+
+  function render(){
+    var months = parseInt(durRange.value, 10);
+    durOut.textContent = months + (months === 1 ? ' Monat' : ' Monate');
+    resApt.textContent = currentName;
+    resMonthly.textContent = fmtCHF(currentPrice);
+    resTotal.textContent = fmtCHF(currentPrice * months);
+  }
+
+  aptButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      aptButtons.forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      currentPrice = parseInt(btn.getAttribute('data-price'), 10);
+      currentName = btn.getAttribute('data-apt');
+      render();
+    });
+  });
+  durRange.addEventListener('input', render);
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Eulachpark Halle 710 · Winterthur</title>
+<meta name="description" content="Restaurant Eulachpark Halle 710 in Winterthur: Schweizer Küche mit internationalem Flair in der historischen Kulturhalle 710 am Eulachpark. Auch für Veranstaltungen. Tel. +41 52 243 35 35.">
+<meta property="og:title" content="Restaurant Eulachpark Halle 710">
+<meta property="og:description" content="Restaurant in moderner Halle 710 am Eulachpark, Winterthur — Schweizer Küche mit internationalem Flair, Eventlocation mit grosser Kapazität.">
+<meta property="og:type" content="restaurant">
+<meta property="og:url" content="https://www.restaurant-eulachpark.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Eulachpark Halle 710",
+  "servesCuisine": "Schweizer Küche mit internationalem Flair",
+  "telephone": "+41 52 243 35 35",
+  "email": "info@restaurant-eulachpark.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Barbara-Reinhart-Strasse 25",
+    "postalCode": "8404",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "371"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "18:00" }
+  ],
+  "url": "https://www.restaurant-eulachpark.ch/"
+}
+</script>
+<style>
+  /*
+    Palette rationale: charcoal ground with a signal-orange brand and a
+    steel-blue accent — an industrial, technical-drawing feel for a
+    restaurant that lives inside an arena-style culture hall. This is
+    deliberately the only dark theme of the four proposals and the only
+    one pairing a geometric display face (Space Grotesk) with a monospace
+    (IBM Plex Mono) for schematic labels.
+  */
+  :root{
+    --bg:#14171a;
+    --surface:#1d2126;
+    --fg:#f1f3f4;
+    --muted:#a7afb6;
+    --brand:#ff6a3d;
+    --accent:#3ea8ff;
+    --line: rgba(255,255,255,.12);
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Inter', sans-serif;
+    font-size:clamp(15px, 0.9vw + 12px, 18px);
+    line-height:1.62;
+  }
+  h1,h2,h3,.display{font-family:'Space Grotesk', sans-serif; font-weight:600; line-height:1.06; margin:0;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(1.1rem,4vw,3rem);}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px;}
+  .skip-link{
+    position:absolute; left:-999px; top:auto; background:var(--accent); color:#0a0d10;
+    padding:.8rem 1.2rem; z-index:100; text-decoration:none; font-weight:700;
+  }
+  .skip-link:focus{left:1rem; top:1rem;}
+
+  /* sticky nav — same treatment as the rest of the page: dark ground, one accent per state */
+  header.site{
+    position:sticky; top:0; z-index:40; background:rgba(20,23,26,.9);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:1rem clamp(1.1rem,4vw,3rem); max-width:var(--maxw); margin:0 auto;}
+  .wordmark{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.15rem; text-decoration:none; letter-spacing:-.01em;}
+  .wordmark .tag{display:block; font-family:'IBM Plex Mono',monospace; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--brand); margin-top:.15rem;}
+  nav.links{display:flex; gap:1.5rem; align-items:center;}
+  nav.links a{text-decoration:none; font-size:.9rem; color:var(--muted); font-weight:500;}
+  nav.links a.callbtn{background:var(--brand); color:#141414; padding:.55rem 1.05rem; border-radius:3px; font-weight:700;}
+  .menu-toggle{display:none; background:none; color:var(--fg); border:1px solid var(--line); border-radius:3px; padding:.4rem .6rem;}
+  @media (max-width:800px){
+    nav.links{position:fixed; inset:60px 0 auto 0; background:var(--surface); flex-direction:column; align-items:flex-start;
+      padding:1.2rem 1.4rem; border-bottom:1px solid var(--line); transform:translateY(-120%); transition:transform .25s ease; gap:1rem;}
+    nav.links.open{transform:translateY(0);}
+    .menu-toggle{display:block;}
+  }
+
+  /* the faint vertical rules echo a technical drawing / floor-plan grid, tying the hero to the schematic device below */
+  .hero{
+    padding:clamp(3.4rem,10vw,7.5rem) 0 clamp(2.6rem,6vw,4rem);
+    border-bottom:1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(20,23,26,0) 60%, var(--bg) 100%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 88px);
+  }
+  .hero .kicker{font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; color:var(--accent); margin-bottom:1.2rem;}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.6rem); max-width:15ch;}
+  .hero p.lead{max-width:52ch; margin-top:1.4rem; color:var(--muted); font-size:clamp(1rem,1.5vw,1.15rem);}
+  .hero-stats{display:flex; flex-wrap:wrap; gap:2rem; margin-top:2.4rem;}
+  .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.7rem;}
+  .stat span{font-size:.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em;}
+  .hero-cta{display:flex; gap:.9rem; flex-wrap:wrap; margin-top:2.2rem;}
+  .btn{display:inline-block; background:var(--brand); color:#141414; text-decoration:none; padding:.85rem 1.5rem; border-radius:3px; font-weight:700; font-size:.94rem;}
+  .btn.ghost{background:transparent; color:var(--fg); border:1px solid var(--line);}
+
+  section{padding:clamp(3rem,7vw,5.5rem) 0; border-bottom:1px solid var(--line);}
+  .section-head{max-width:60ch; margin-bottom:clamp(2rem,5vw,3rem);}
+  .section-head .kicker{font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.16em; font-size:.7rem; color:var(--accent); display:block; margin-bottom:.7rem;}
+  .section-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);}
+  .section-head p{color:var(--muted); margin-top:.9rem;}
+
+  .chip-row{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.6rem;}
+  .chip{border:1px solid var(--line); border-radius:20px; padding:.5rem 1rem; font-size:.84rem; color:var(--muted);}
+  .about-text{max-width:70ch; color:var(--fg); font-size:1.02rem;}
+  .credit{margin-top:1.4rem; font-size:.86rem; color:var(--muted);}
+
+  .fact-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem;}
+  .fact-card{background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:1.4rem 1.3rem;}
+  .fact-card .idx{font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--accent); letter-spacing:.1em;}
+  .fact-card h3{font-size:1.05rem; margin-top:.6rem; font-family:'Inter',sans-serif; font-weight:600;}
+  .fact-card p{color:var(--muted); font-size:.86rem; margin-top:.5rem;}
+  @media (max-width:820px){ .fact-grid{grid-template-columns:1fr;} }
+
+  /* hall plan device — a schematic footprint of Halle 710 with two states.
+     The toggle below switches [data-mode] on .plan-schematic; only the two
+     zone rectangles change emphasis. No room sizes or numbers are drawn in —
+     the JSON does not record any, so none are shown.
+     Zones:
+       .zone-dining -> "Gastraum · Halle 710" (regular restaurant service)
+       .zone-hall   -> "Hallenfläche" (the event-capable area)
+       .zone-entry  -> "Eingang" (orientation only, not a measured room)
+  */
+  .plan-toggle{display:inline-flex; border:1px solid var(--line); border-radius:30px; padding:.3rem; gap:.2rem; margin-bottom:2rem;}
+  .plan-toggle button{
+    font-family:'IBM Plex Mono',monospace; background:none; border:none; color:var(--muted);
+    padding:.55rem 1.15rem; border-radius:24px; font-size:.82rem; cursor:pointer; letter-spacing:.02em;
+  }
+  .plan-toggle button.active{background:var(--brand); color:#141414; font-weight:700;}
+  .plan-wrap{display:grid; grid-template-columns:1.3fr .9fr; gap:clamp(1.6rem,4vw,3rem); align-items:start;}
+  .plan-schematic{
+    background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:clamp(1.2rem,3vw,2rem);
+    aspect-ratio:16/10; display:grid; gap:.5rem; position:relative; overflow:hidden;
+  }
+  .plan-schematic::before{
+    content:"HALLE 710"; position:absolute; top:.8rem; right:1rem; font-family:'IBM Plex Mono',monospace;
+    font-size:.65rem; letter-spacing:.16em; color:var(--muted); opacity:.7;
+  }
+  .zone{
+    border:1.5px dashed var(--line); border-radius:4px; display:flex; align-items:flex-end; padding:.8rem;
+    font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em;
+    transition:background .35s ease, border-color .35s ease, color .35s ease;
+  }
+  .plan-schematic[data-mode="restaurant"] .zone-dining{background:rgba(255,106,61,.14); border-color:var(--brand); color:#ffd7c4;}
+  .plan-schematic[data-mode="restaurant"] .zone-hall{opacity:.35;}
+  .plan-schematic[data-mode="event"] .zone-hall{background:rgba(62,168,255,.16); border-color:var(--accent); color:#c9e8ff;}
+  .plan-schematic[data-mode="event"] .zone-dining{opacity:.55;}
+  .plan-grid{
+    display:grid; grid-template-columns:1.4fr 1fr; grid-template-rows:1fr .6fr; gap:.6rem; height:100%;
+  }
+  .zone-dining{grid-column:1; grid-row:1 / span 2;}
+  .zone-hall{grid-column:2; grid-row:1;}
+  .zone-entry{grid-column:2; grid-row:2; align-items:center; justify-content:center;}
+  .plan-caption{margin-top:1rem; font-size:.86rem; color:var(--muted);}
+  .plan-side h3{font-size:1.3rem; margin-bottom:.8rem;}
+  .plan-side p{color:var(--muted); font-size:.92rem;}
+  .plan-side .quote{
+    margin-top:1.2rem; font-family:'Space Grotesk',sans-serif; font-size:1.05rem; color:var(--fg);
+    border-left:2px solid var(--brand); padding-left:1rem;
+  }
+  .plan-legend{display:flex; gap:1.4rem; flex-wrap:wrap; margin-top:1.4rem; font-size:.8rem; color:var(--muted);}
+  .plan-legend .sw{display:inline-flex; align-items:center; gap:.5rem;}
+  .plan-legend i{width:.8rem; height:.8rem; border-radius:2px; display:inline-block; border:1.5px dashed var(--line);}
+  .plan-legend i.on-dining{background:rgba(255,106,61,.3); border-color:var(--brand);}
+  .plan-legend i.on-hall{background:rgba(62,168,255,.3); border-color:var(--accent);}
+  @media (max-width:840px){ .plan-wrap{grid-template-columns:1fr;} }
+
+  /* hours */
+  .hours-table{width:100%; border-collapse:collapse; max-width:640px;}
+  .hours-table td{padding:.9rem .3rem; border-bottom:1px solid var(--line);}
+  .hours-table td:first-child{font-family:'IBM Plex Mono',monospace; font-weight:600; width:42%;}
+  .hours-table td:last-child{color:var(--muted);}
+  .status-line{display:flex; align-items:center; gap:.8rem; margin-top:1.6rem; padding:1rem 1.2rem; background:var(--surface); border:1px solid var(--line); border-radius:6px;}
+  .dot{width:.6rem; height:.6rem; border-radius:50%; background:var(--muted); flex-shrink:0;}
+  .dot.open{background:#59d17d;}
+  .dot.closed{background:var(--brand);}
+  .dot.unknown{background:var(--accent);}
+  .status-line span.detail{color:var(--muted); font-size:.86rem; display:block; margin-top:.15rem;}
+
+  /* menu */
+  .menu-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;}
+  .menu-card{background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:1.3rem 1.4rem;}
+  .menu-card h3{font-size:1.1rem; font-weight:500; font-family:'Inter',sans-serif;}
+  .menu-card .desc{font-size:.85rem; color:var(--muted); margin-top:.4rem;}
+  .menu-note{margin-top:1.6rem; font-size:.88rem; color:var(--muted); max-width:64ch;}
+  @media (max-width:640px){ .menu-grid{grid-template-columns:1fr;} }
+
+  /* location */
+  .loc-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.6rem,4vw,3rem); align-items:start;}
+  .loc-info dl{display:grid; grid-template-columns:auto 1fr; gap:.5rem 1rem; font-size:.98rem;}
+  .loc-info dt{color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:.78rem; text-transform:uppercase;}
+  .loc-info dd{margin:0;}
+  .map-frame{border:1px solid var(--line); border-radius:6px; overflow:hidden; aspect-ratio:4/3; background:var(--surface);}
+  .map-frame iframe{width:100%; height:100%; border:0; filter:grayscale(.2) contrast(1.05);}
+  @media (max-width:840px){ .loc-grid{grid-template-columns:1fr;} }
+
+  footer{padding:clamp(2.4rem,6vw,3.5rem) 0 1.6rem; border-bottom:none;}
+  footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.6rem;}
+  footer h3{font-size:1.05rem;}
+  footer a{text-decoration:none; color:var(--muted);}
+  footer .fine{width:100%; margin-top:2rem; padding-top:1.4rem; border-top:1px solid var(--line);
+    font-size:.78rem; color:#697178; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.6rem;}
+
+  .bottom-bar{
+    display:none; position:fixed; bottom:0; left:0; right:0; z-index:50; background:var(--brand); color:#141414;
+    padding:.8rem 1rem; align-items:center; justify-content:center; gap:.6rem; text-decoration:none; font-weight:700;
+    box-shadow:0 -4px 14px rgba(0,0,0,.3);
+  }
+  @media (max-width:760px){ .bottom-bar{display:flex;} body{padding-bottom:64px;} }
+
+  [data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  [data-reveal].in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    [data-reveal]{opacity:1 !important; transform:none !important; transition:none !important;}
+    html{scroll-behavior:auto;}
+    .zone{transition:none;}
+  }
+
+  /* events contact CTA — grounded in real phone / e-mail only */
+  .event-band{background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .event-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:clamp(1.6rem,4vw,3rem); align-items:center;}
+  .event-grid h2{font-size:clamp(1.8rem,3vw,2.4rem);}
+  .event-grid p{color:var(--muted); margin-top:.9rem; max-width:54ch;}
+  .event-contacts{display:grid; gap:.9rem;}
+  .event-contacts a{
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border:1px solid var(--line); border-radius:6px; padding:1rem 1.2rem; text-decoration:none;
+    font-family:'IBM Plex Mono',monospace; font-size:.86rem;
+  }
+  .event-contacts a span.lbl{color:var(--muted); text-transform:uppercase; letter-spacing:.06em; font-size:.7rem;}
+  .event-contacts a:hover{border-color:var(--accent);}
+  @media (max-width:840px){ .event-grid{grid-template-columns:1fr;} }
+
+  /* fine-tuned small-screen pass (360px) */
+  @media (max-width:400px){
+    .hero h1{font-size:2.05rem;}
+    .hero-stats{gap:1.2rem;}
+    .wordmark{font-size:1rem;}
+    .plan-toggle{width:100%;}
+    .plan-toggle button{flex:1; text-align:center;}
+    .menu-grid{gap:.8rem;}
+  }
+
+  @media print{
+    header.site, .bottom-bar, .plan-toggle, .event-band{display:none;}
+    body{background:#fff; color:#000;}
+    section{border-bottom-color:#ccc;}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="nav-row">
+    <a href="#top" class="wordmark">Halle 710<span class="tag">Restaurant Eulachpark</span></a>
+    <button class="menu-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menü</button>
+    <nav class="links" id="navLinks">
+      <a href="#halle">Die Halle</a>
+      <a href="#speisen">Speisen</a>
+      <a href="#zeiten">Öffnungszeiten</a>
+      <a href="#lage">Lage</a>
+      <a class="callbtn" href="tel:+41522433535">052 243 35 35</a>
+    </nav>
+  </div>
+</header>
+
+<!--
+  Section order for this proposal, deliberately different from the other three sites:
+  1 Hero (architectural framing, no photography available)
+  2 About + fact grid (Halle 710 story, credited to Familie Mette & Freddy Kaiser)
+  3 Hall-plan device — the required schematic, built only from real hours data
+  4 Hours (ties directly back to the two states shown in the plan device)
+  5 Example dishes (explicitly framed as a sample, not the full 32-dish PDF menu)
+  6 Event enquiry band (phone + e-mail only, no invented packages or capacities)
+  7 Location + map
+  8 Footer
+-->
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">Barbara-Reinhart-Strasse 25 · Eulachpark</span>
+      <h1>Restaurant in einer<br>Kulturhalle.</h1>
+      <p class="lead">Restaurant Eulachpark Halle 710 liegt in der historischen und kulturellen Halle 710 am Eulachpark. Schweizer Küche mit internationalem Flair — fokussiert auf frische, regionale und saisonale Produkte.</p>
+      <div class="hero-stats">
+        <div class="stat"><b>4.4</b><span>371 Google-Bewertungen</span></div>
+        <div class="stat"><b>Halle 710</b><span>Kultur &amp; Gastronomie</span></div>
+        <div class="stat"><b>32</b><span>Gerichte auf der PDF-Karte</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+41522433535">Anrufen · 052 243 35 35</a>
+        <a class="btn ghost" href="#halle">Halle als Grundriss ansehen</a>
+        <!-- primary action is a call, per brief: sticky bottom bar mirrors this on mobile -->
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Über den Ort</span>
+        <h2>Eine Halle mit zwei Leben.</h2>
+        <p class="about-text">Das Restaurant Eulachpark Halle 710 befindet sich in der historischen und kulturellen Halle 710 am Eulachpark. Es bietet Schweizer Küche mit internationalen Einflüssen, fokussiert auf frische, regionale und saisonale Produkte.</p>
+      </div>
+      <div class="chip-row">
+        <span class="chip">Einzigartiger Ort in moderner Kulturhalle</span>
+        <span class="chip">Frische regionale Zutaten</span>
+        <span class="chip">Saisonale Menüs und Spezialitäten</span>
+        <span class="chip">Eventlocation mit grosser Kapazität</span>
+      </div>
+      <p class="credit">Geführt von Familie Mette und Freddy Kaiser.</p>
+      <div class="fact-grid">
+        <div class="fact-card">
+          <div class="idx">01</div>
+          <h3>Kulturhalle</h3>
+          <p>Historische und kulturelle Halle 710 als Rahmen für das Restaurant.</p>
+        </div>
+        <div class="fact-card">
+          <div class="idx">02</div>
+          <h3>Am Eulachpark</h3>
+          <p>Lage direkt am Eulachpark, Barbara-Reinhart-Strasse 25.</p>
+        </div>
+        <div class="fact-card">
+          <div class="idx">03</div>
+          <h3>Küche &amp; Events</h3>
+          <p>Schweizer Küche mit internationalem Flair, plus Nutzung als Eventlocation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="halle" data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Die Halle als Grundriss</span>
+        <h2>Ein Raum, zwei Betriebsarten.</h2>
+        <p>Die Öffnungszeiten zeigen es direkt: An Mo–Di bleibt der reguläre Restaurantbetrieb zu — ausser die Halle wird für eine Veranstaltung genutzt. Das Schema unten stellt diese zwei Zustände dar, ganz ohne erfundene Massangaben.</p>
+      </div>
+      <div class="plan-toggle" role="tablist" aria-label="Betriebsart der Halle">
+        <button type="button" class="active" data-mode="restaurant" role="tab" aria-selected="true">Restaurantbetrieb</button>
+        <button type="button" data-mode="event" role="tab" aria-selected="false">Veranstaltung</button>
+      </div>
+      <div class="plan-wrap">
+        <div>
+          <div class="plan-schematic" data-mode="restaurant" id="planSchematic">
+            <div class="plan-grid">
+              <div class="zone zone-dining">Gastraum · Halle 710</div>
+              <div class="zone zone-hall">Hallenfläche</div>
+              <div class="zone zone-entry">Eingang</div>
+            </div>
+          </div>
+          <p class="plan-caption" id="planCaption">Mi–Sa und So: Restaurantbetrieb nach den regulären Öffnungszeiten.</p>
+          <div class="plan-legend">
+            <span class="sw"><i class="on-dining"></i>Gastraum aktiv</span>
+            <span class="sw"><i class="on-hall"></i>Hallenfläche aktiv</span>
+          </div>
+        </div>
+        <div class="plan-side">
+          <h3 id="planTitle">Restaurantbetrieb</h3>
+          <p id="planText">Reguläre Öffnungszeiten Mi–Sa und So. Mo und Di bleibt das Restaurant geschlossen — ausser es findet eine Veranstaltung statt.</p>
+          <p class="quote">„Eventlocation mit grosser Kapazität“ — Angabe aus dem Restaurant-Profil, ohne konkrete Personenzahl.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zeiten" data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Öffnungszeiten</span>
+        <h2>Wann die Halle offen ist.</h2>
+      </div>
+      <table class="hours-table">
+        <tr><td>Mo – Di</td><td>Geschlossen (ausser Veranstaltungen)</td></tr>
+        <tr><td>Mi – Sa</td><td>11:00–22:00 Uhr</td></tr>
+        <tr><td>So</td><td>11:00–18:00 Uhr</td></tr>
+      </table>
+      <div class="status-line" aria-live="polite">
+        <span class="dot" id="statusDot"></span>
+        <div>
+          <strong id="statusLabel">Status wird geladen …</strong>
+          <span class="detail" id="statusDetail"></span>
+        </div>
+      </div>
+      <noscript><p class="menu-note">Live-Status benötigt JavaScript — die Öffnungszeiten oben in der Tabelle gelten in jedem Fall.</p></noscript>
+    </div>
+  </section>
+
+  <section id="speisen" data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Beispiel-Gerichte</span>
+        <h2>Ein Ausschnitt der Karte.</h2>
+      </div>
+      <p style="color:var(--muted); max-width:60ch; margin-bottom:1.6rem;">Fünf Gerichte aus dem Beispiel-Angebot der Küche — als Einstieg in den Stil des Hauses, nicht als vollständige Karte.</p>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <h3>Rindfilet mit frischem Spargel</h3>
+        </div>
+        <div class="menu-card">
+          <h3>Gegrillte Bratwurst mit knusprigem Brötchen</h3>
+        </div>
+        <div class="menu-card">
+          <h3>Hausgemachter Burger mit Cocktailsauce und Pommes</h3>
+        </div>
+        <div class="menu-card">
+          <h3>Kalbsleber mit Rösti</h3>
+        </div>
+        <div class="menu-card">
+          <h3>Schokoküchlein mit flüssigem Kern</h3>
+          <div class="desc">Dessert</div>
+        </div>
+      </div>
+      <p class="menu-note">Die vollständige Speisekarte umfasst 32 Gerichte und liegt als PDF auf der Website vor; Preise sind dort nicht vollständig verfügbar. Vegetarische Optionen sind erhältlich.</p>
+    </div>
+  </section>
+
+  <div class="event-band">
+    <div class="wrap" style="padding:clamp(2.4rem,6vw,3.6rem) clamp(1.1rem,4vw,3rem);">
+      <div class="event-grid">
+        <div>
+          <span class="kicker">Veranstaltung anfragen</span>
+          <h2>Halle 710 für Ihren Anlass.</h2>
+          <p>Für Anfragen zur Nutzung der Halle als Eventlocation stehen Telefon und E-Mail zur Verfügung — konkrete Kapazitäten und Pakete werden individuell besprochen.</p>
+        </div>
+        <div class="event-contacts">
+          <a href="tel:+41522433535"><span class="lbl">Telefon</span>052 243 35 35</a>
+          <a href="mailto:info@restaurant-eulachpark.ch"><span class="lbl">E-Mail</span>info@restaurant-eulachpark.ch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="lage" style="border-bottom:none;" data-reveal>
+    <div class="wrap loc-grid">
+      <div class="loc-info">
+        <div class="section-head" style="margin-bottom:1.4rem;">
+          <span class="kicker">Lage &amp; Kontakt</span>
+          <h2>Am Eulachpark.</h2>
+        </div>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>Barbara-Reinhart-Strasse 25, 8404 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522433535">+41 52 243 35 35</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@restaurant-eulachpark.ch">info@restaurant-eulachpark.ch</a></dd>
+          <dt>Web</dt>
+          <dd><a href="https://www.restaurant-eulachpark.ch/" target="_blank" rel="noopener">restaurant-eulachpark.ch</a></dd>
+        </dl>
+      </div>
+      <div class="map-frame">
+        <iframe title="Karte Restaurant Eulachpark Halle 710" loading="lazy" src="https://maps.google.com/maps?q=Barbara-Reinhart-Strasse%2025%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Restaurant Eulachpark Halle 710</h3>
+      <p style="max-width:32ch;color:var(--muted);">Barbara-Reinhart-Strasse 25, 8404 Winterthur</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="tel:+41522433535">052 243 35 35</a></p>
+      <p><a href="mailto:info@restaurant-eulachpark.ch">info@restaurant-eulachpark.ch</a></p>
+    </div>
+    <div>
+      <h3>Bewertung</h3>
+      <p>4.4 · 371 Google-Bewertungen</p>
+    </div>
+    <div>
+      <h3>Seite</h3>
+      <p><a href="#halle">Die Halle</a></p>
+      <p><a href="#speisen">Speisen</a></p>
+      <p><a href="#zeiten">Öffnungszeiten</a></p>
+    </div>
+    <div class="fine">
+      <span>© Restaurant Eulachpark Halle 710</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </div>
+  </div>
+</footer>
+
+<a class="bottom-bar" href="tel:+41522433535">Jetzt anrufen · 052 243 35 35</a>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+  });
+
+  /* ---- hall plan toggle ---- */
+  var planButtons = document.querySelectorAll('.plan-toggle button');
+  var schematic = document.getElementById('planSchematic');
+  var caption = document.getElementById('planCaption');
+  var planTitle = document.getElementById('planTitle');
+  var planText = document.getElementById('planText');
+  var modes = {
+    restaurant: {
+      caption: 'Mi–Sa und So: Restaurantbetrieb nach den regulären Öffnungszeiten.',
+      title: 'Restaurantbetrieb',
+      text: 'Reguläre Öffnungszeiten Mi–Sa und So. Mo und Di bleibt das Restaurant geschlossen — ausser es findet eine Veranstaltung statt.'
+    },
+    event: {
+      caption: 'Mo–Di regulär geschlossen, aber für Veranstaltungen nutzbar.',
+      title: 'Veranstaltung',
+      text: 'An den sonst geschlossenen Tagen Mo und Di kann die Halle für Veranstaltungen genutzt werden — die Eventlocation wird im Profil als grosskapazitär beschrieben, ohne genaue Personenzahl.'
+    }
+  };
+  // Two states only: "restaurant" (default) and "event" — both derived from the
+  // real hours row "Mo–Di Geschlossen (ausser Veranstaltungen)".
+  planButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      planButtons.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      var mode = btn.getAttribute('data-mode');
+      schematic.setAttribute('data-mode', mode);
+      caption.textContent = modes[mode].caption;
+      planTitle.textContent = modes[mode].title;
+      planText.textContent = modes[mode].text;
+    });
+  });
+
+  /* ---- live status from real hours data ---- */
+  function computeStatus(date){
+    var day = date.getDay(); // 0 Sun .. 6 Sat
+    var hour = date.getHours() + date.getMinutes() / 60;
+    if (day === 1 || day === 2) {
+      return { state:'closed', label:'Heute geschlossen', detail:'Mo–Di geschlossen, ausser bei Veranstaltungen (bitte anrufen)' };
+    }
+    if (day >= 3 && day <= 6) {
+      var openNow = hour >= 11 && hour < 22;
+      return { state: openNow ? 'open' : 'closed', label: openNow ? 'Jetzt geöffnet' : 'Jetzt geschlossen', detail:'Mi–Sa 11:00–22:00 Uhr' };
+    }
+    var openNowSun = hour >= 11 && hour < 18;
+    return { state: openNowSun ? 'open' : 'closed', label: openNowSun ? 'Jetzt geöffnet' : 'Jetzt geschlossen', detail:'So 11:00–18:00 Uhr' };
+  }
+  var dot = document.getElementById('statusDot');
+  var lbl = document.getElementById('statusLabel');
+  var det = document.getElementById('statusDetail');
+  function renderStatus(){
+    var s = computeStatus(new Date());
+    dot.classList.remove('open','closed','unknown');
+    dot.classList.add(s.state);
+    lbl.textContent = s.label;
+    det.textContent = s.detail;
+  }
+  renderStatus();
+  // re-evaluate every minute so the badge flips live at the exact opening/closing minute
+  window.setInterval(renderStatus, 60000);
+
+  /* ---- scroll reveal ---- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    targets.forEach(function(t){ t.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function(t){ io.observe(t); });
+  }
+})();
+</script>
+</body>
+</html>

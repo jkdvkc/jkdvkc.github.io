@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wegmann's BnB – Andelfingen</title>
+<meta name="description" content="Wegmann's BnB. Nur als Eintrag auf bnb.ch auffindbar, dort in Andelfingen verortet. 4.6 Sterne aus 75 Bewertungen.">
+<meta property="og:title" content="Wegmann's BnB">
+<meta property="og:description" content="Ein B&amp;B, das online nur als Portal-Zeile existiert. 4.6 aus 75 Bewertungen.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700&family=Space+Mono:wght@400;700&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Wegmann's BnB",
+  "address": { "@type": "PostalAddress", "addressLocality": "Andelfingen", "addressCountry": "CH" },
+  "telephone": "+41523173792",
+  "url": "https://bnb.ch/wegmanns-bnb-1659/",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "75" }
+}
+</script>
+<style>
+  :root{
+    --bg:#f6efe4; --surface:#ffffff; --fg:#241a10; --muted:#5f4f3c;
+    --brand:#a8532f; --accent:#5b5a54; --line:#e2d5c1; --portal:#e7e7e2;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:'Karla',system-ui,sans-serif;
+    font-size:clamp(15px,0.35vw + 13.6px,17px);line-height:1.66;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Frank Ruhl Libre',serif;font-weight:600;letter-spacing:-0.005em;line-height:1.15;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2.2rem,4.8vw + 1rem,3.8rem);font-weight:700;}
+  h2{font-size:clamp(1.5rem,2.2vw + 1rem,2.2rem);}
+  h3{font-size:clamp(1.02rem,1vw + 1rem,1.2rem);}
+  p{margin:0 0 1em;}
+  a{color:var(--brand);}
+  ul{margin:0;padding:0;list-style:none;}
+  .mono{font-family:'Space Mono',monospace;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:3px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1.2rem,4vw,3rem);background:rgba(246,239,228,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .brand-mark{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.05rem;}
+  nav{display:flex;align-items:center;gap:1.4rem;}
+  nav a{color:var(--fg);text-decoration:none;font-size:0.9rem;font-weight:500;}
+  nav a:hover{color:var(--brand);}
+  .nav-cta{background:var(--brand);color:#fff !important;padding:0.5em 1.1em;border-radius:4px;}
+  @media (max-width:600px){ nav a:not(.nav-cta){display:none;} }
+
+  main{padding-top:62px;}
+  section{padding:clamp(2.6rem,5.5vw,5.5rem) 0;}
+  section.alt{background:var(--surface);}
+
+  [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+  .hero{padding-top:calc(62px + clamp(2.2rem,5vw,4rem));}
+  .hero-tag{display:inline-block;font-size:0.76rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--brand);margin-bottom:1rem;}
+  .hero .lead{font-size:clamp(1.02rem,0.5vw + 1rem,1.2rem);color:var(--muted);max-width:54ch;margin-top:1rem;}
+  .cta-row{display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.6rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.5em;padding:0.8em 1.4em;border-radius:5px;font-weight:600;
+    text-decoration:none;font-size:0.95rem;border:1px solid transparent;}
+  .btn-primary{background:var(--brand);color:#fff;}
+  .btn-primary:hover{background:#833e21;}
+  .rating-line{display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:var(--muted);margin-top:1.4rem;}
+
+  /* portal vs door device */
+  .contrast-head{max-width:64ch;margin-bottom:2rem;}
+  .contrast-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  @media (max-width:780px){ .contrast-grid{grid-template-columns:1fr;} }
+  .portal-side{background:var(--portal);padding:clamp(1.4rem,3vw,2.2rem);border-right:1px dashed #b8b8ae;}
+  @media (max-width:780px){ .portal-side{border-right:none;border-bottom:1px dashed #b8b8ae;} }
+  .door-side{background:var(--surface);padding:clamp(1.4rem,3vw,2.2rem);}
+  .side-label{font-family:'Space Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);
+    display:block;margin-bottom:1rem;}
+  .portal-row{font-family:'Space Mono',monospace;font-size:0.86rem;background:#fff;border:1px solid #cfcfc4;border-radius:4px;
+    padding:0.9rem 1rem;color:#3a3a34;}
+  .portal-row div{display:flex;justify-content:space-between;gap:1rem;padding:0.25rem 0;border-bottom:1px dotted #d8d8ce;}
+  .portal-row div:last-child{border-bottom:none;}
+  .portal-row span:first-child{color:#87877c;}
+  .portal-row .flag{color:var(--brand);font-weight:700;}
+  .door-illustration{width:90px;height:130px;margin:0 auto 1.2rem;position:relative;background:linear-gradient(180deg,#c98a5e,#a8532f);
+    border-radius:6px 6px 3px 3px;border:2px solid #7a3c1f;}
+  .door-illustration::after{content:"";position:absolute;right:12px;top:50%;width:9px;height:9px;border-radius:50%;background:#f6efe4;}
+  .door-side p{text-align:center;color:var(--muted);}
+  .door-side h3{text-align:center;}
+
+  .fact-list{display:grid;gap:0.8rem;margin-top:1.6rem;}
+  .fact-item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:0.9rem 1.1rem;font-size:0.92rem;
+    display:flex;justify-content:space-between;gap:1rem;}
+  .fact-item span:first-child{color:var(--muted);}
+  .fact-item span:last-child{font-weight:600;}
+
+  /* discrepancy flag */
+  .flag-box{margin-top:2rem;background:#fdf2e8;border:1px solid #ecd2ae;border-left:4px solid var(--brand);border-radius:6px;
+    padding:1.2rem 1.4rem;}
+  .flag-box b{font-family:'Frank Ruhl Libre',serif;display:block;margin-bottom:0.3rem;}
+
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,3rem);align-items:start;}
+  @media (max-width:840px){ .loc-grid{grid-template-columns:1fr;} }
+  .map-frame{border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .map-frame iframe{width:100%;height:300px;border:0;display:block;}
+
+  .unpublished{background:var(--fg);color:#f2e9db;border-radius:12px;padding:clamp(1.6rem,3.4vw,2.4rem);}
+  .unpublished h2{color:#fff;}
+  .unpublished-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0.9rem;margin-top:1.2rem;}
+  .unpublished-list li{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:6px;padding:0.9rem 1rem;font-size:0.9rem;}
+  .unpublished .call-out{margin-top:1.4rem;font-family:'Frank Ruhl Libre',serif;font-size:1.1rem;}
+  .unpublished .call-out a{color:#e8b98d;font-weight:700;}
+
+  footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(2.2rem,5vw,3.2rem) 0 6rem;}
+  .foot-wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+  footer a{color:var(--brand);}
+  .foot-note{margin-top:1.6rem;font-size:0.78rem;color:var(--muted);}
+
+  .faq-list{max-width:66ch;}
+  .faq-item{border-bottom:1px solid var(--line);padding:1.1rem 0;}
+  .faq-item summary{cursor:pointer;font-family:'Frank Ruhl Libre',serif;font-weight:600;font-size:1.04rem;list-style:none;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";float:right;font-size:1.2rem;color:var(--brand);}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin-top:0.7rem;color:var(--muted);}
+
+  .way-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
+  @media (max-width:640px){ .way-grid{grid-template-columns:1fr;} }
+  .way-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.5rem;}
+  .way-card .icon{font-family:'Frank Ruhl Libre',serif;font-size:1.4rem;color:var(--brand);display:block;margin-bottom:0.4rem;}
+  .way-card a{font-weight:600;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:none;}
+  .mobile-bar a{display:block;text-align:center;color:#fff;font-weight:700;padding:0.9rem;text-decoration:none;}
+  @media (max-width:720px){ .mobile-bar{display:block;} main{padding-bottom:0;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Wegmann's BnB</div>
+  <nav>
+    <a href="#vergleich">Portal &amp; Haus</a>
+    <a href="#lage">Lage</a>
+    <a class="nav-cta" href="tel:+41523173792">+41 52 317 37 92</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" data-reveal>
+    <span class="hero-tag">B&amp;B</span>
+    <h1>Wegmann's BnB</h1>
+    <p class="lead">Ein Bed &amp; Breakfast, das im Netz nur als einzelne Zeile in einer fremden Datenbank existiert — nicht als eigenes Haus mit eigener Adresse im Web.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+41523173792">Anrufen: +41 52 317 37 92</a>
+    </div>
+    <p class="rating-line">★ 4.6 · 75 Bewertungen</p>
+  </section>
+
+  <section id="vergleich" class="alt" data-reveal>
+    <div class="wrap">
+      <div class="contrast-head">
+        <h2>Der Portal-Eintrag und die eigene Tür</h2>
+        <p style="color:var(--muted);">Links: die Zeile, wie sie auf bnb.ch geführt wird. Rechts: das Haus, das dahintersteht — mit einer eigenen Adresse, die keine Datenbank braucht.</p>
+      </div>
+      <div class="contrast-grid">
+        <div class="portal-side">
+          <span class="side-label mono">bnb.ch — Datensatz</span>
+          <div class="portal-row">
+            <div><span>name</span><span>Wegmann's BnB</span></div>
+            <div><span>ort</span><span class="flag">Andelfingen</span></div>
+            <div><span>bewertung</span><span>4.6 / 75</span></div>
+            <div><span>quelle</span><span>bnb.ch/wegmanns-bnb-1659</span></div>
+          </div>
+        </div>
+        <div class="door-side">
+          <span class="side-label mono">Das Haus</span>
+          <div class="door-illustration" aria-hidden="true"></div>
+          <h3>Wegmann's BnB</h3>
+          <p>Ein eigenes Zuhause statt einer Datenbankzeile — telefonisch erreichbar, unabhängig vom Portal.</p>
+        </div>
+      </div>
+      <div class="flag-box">
+        <b>Ortsangabe geprüft, nicht deckungsgleich</b>
+        Das Portal bnb.ch verortet dieses BnB in <strong>Andelfingen</strong>. Interne Listen nennen dagegen Winterthur. Diese Seite zeigt beide Angaben offen, statt sich für eine zu entscheiden — die Adresse selbst ist nirgends öffentlich einsehbar.
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1rem;">Was wir sicher wissen</h2>
+      <div class="fact-list">
+        <div class="fact-item"><span>Name</span><span>Wegmann's BnB</span></div>
+        <div class="fact-item"><span>Kategorie</span><span>B&amp;B</span></div>
+        <div class="fact-item"><span>Telefon</span><span>+41 52 317 37 92</span></div>
+        <div class="fact-item"><span>Bewertung</span><span>4.6 · 75 Bewertungen</span></div>
+        <div class="fact-item"><span>Einziger Web-Fundort</span><span>bnb.ch</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" class="alt" data-reveal>
+    <div class="wrap loc-grid">
+      <div>
+        <h2>Lage</h2>
+        <p style="color:var(--muted);">Laut Portal-Eintrag in Andelfingen. Eine genaue Adresse ist öffentlich nicht bekannt.</p>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Wegmann%27s%20BnB%20Andelfingen&amp;z=16&amp;output=embed" title="Karte: Wegmann's BnB Andelfingen" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Kontaktwege</h2>
+      <div class="way-grid">
+        <div class="way-card">
+          <span class="icon" aria-hidden="true">☎</span>
+          <h3>Telefon</h3>
+          <p style="color:var(--muted);">Der direkte Weg, unabhängig vom Portal.</p>
+          <a href="tel:+41523173792">+41 52 317 37 92</a>
+        </div>
+        <div class="way-card">
+          <span class="icon" aria-hidden="true">⌂</span>
+          <h3>bnb.ch-Eintrag</h3>
+          <p style="color:var(--muted);">Der einzige bekannte Web-Fundort.</p>
+          <a href="https://bnb.ch/wegmanns-bnb-1659/" target="_blank" rel="noopener">bnb.ch/wegmanns-bnb-1659 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.2rem;">Häufig gefragt</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Liegt das BnB nun in Andelfingen oder Winterthur?</summary>
+          <p>Das Portal bnb.ch nennt Andelfingen, eine interne Liste Winterthur. Diese Seite entscheidet sich nicht für eine Version, sondern nennt beide.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es eine eigene Website?</summary>
+          <p>Nein. Der einzige gefundene Web-Auftritt ist der Eintrag auf bnb.ch.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie bucht man am zuverlässigsten?</summary>
+          <p>Telefonisch — dort lässt sich auch die genaue Lage direkt klären.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="unpublished">
+        <h2>Was hier nicht steht</h2>
+        <p style="color:#d9c7ac;max-width:60ch;">Keine eigene Website existiert — der einzige Fundort ist der Eintrag auf bnb.ch. Adresse, Zimmer, Preise und Ausstattung sind nirgends öffentlich beschrieben, und selbst der Ort ist zwischen Quellen uneinheitlich.</p>
+        <ul class="unpublished-list">
+          <li>Keine eigene Website</li>
+          <li>Ort uneinheitlich (Andelfingen / Winterthur)</li>
+          <li>Keine Adresse</li>
+          <li>Keine Zimmerliste</li>
+        </ul>
+        <p class="call-out">Klarheit gibt es nur am Telefon: <a href="tel:+41523173792">+41 52 317 37 92</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-wrap">
+    <strong>Wegmann's BnB</strong><br>
+    Andelfingen (laut Portal) · Winterthur (laut interner Liste)<br>
+    <a href="tel:+41523173792">+41 52 317 37 92</a><br>
+    <a href="https://bnb.ch/wegmanns-bnb-1659/" target="_blank" rel="noopener">bnb.ch/wegmanns-bnb-1659</a>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar"><a href="tel:+41523173792">Anrufen · +41 52 317 37 92</a></div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>

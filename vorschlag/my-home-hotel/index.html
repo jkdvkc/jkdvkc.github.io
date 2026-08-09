@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Home Hotel Winterthur – Ankommen, parkieren, ankommen</title>
+<meta name="description" content="My Home Hotel Winterthur, Zürcherstrasse 200: 49 moderne Zimmer, kostenlose Parkplätze, Seminarraum für Geschäftsfunktionen. Zentrale Lage.">
+<meta property="og:title" content="My Home Hotel Winterthur – 49 moderne Zimmer, gratis Parkplatz">
+<meta property="og:description" content="Modernes Hotel mit 49 Zimmern, kostenlosen Parkplätzen und Seminarraum. Zürcherstrasse 200, Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://static.wixstatic.com/media/6e31d3_d2e1d6f97346443eb93687f97ce23846~mv2.jpg/v1/fill/w_977,h_652,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6e31d3_d2e1d6f97346443eb93687f97ce23846~mv2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "My Home Hotel",
+  "description": "Das My Home Hotel ist ein modernes Hotel mit 49 zeitgenössischen Zimmern in Winterthur. Das Hotel bietet einen Seminarraum für Geschäftsfunktionen und kostenlose Parkplätze.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zürcherstrasse 200",
+    "postalCode": "8406",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41525431111",
+  "email": "office@myhomehotel.ch",
+  "url": "https://www.myhomehotel.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.8",
+    "reviewCount": "301"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Kostenlose Parkplätze", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Seminarraum", "value": true }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#eef2f2;
+    --surface:#ffffff;
+    --fg:#0f1c2b;
+    --muted:#54626e;
+    --brand:#1f3a5f;
+    --accent:#e07b34;
+    --line:rgba(15,28,43,0.13);
+    --navy-deep:#0d1826;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Rubik',system-ui,sans-serif;
+    font-size:clamp(15px,0.9vw + 12px,17px);
+    line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;line-height:1.05;margin:0;letter-spacing:-0.01em;}
+  h1{font-size:clamp(2.6rem,7vw + 1rem,5.6rem);}
+  h2{font-size:clamp(1.9rem,4vw + 1rem,3rem);}
+  h3{font-size:clamp(1.2rem,1.6vw + 1rem,1.5rem);}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .mono{font-family:'Space Grotesk',monospace;letter-spacing:0.02em;}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.85rem clamp(1rem,4vw,2.6rem);
+    background:rgba(255,255,255,0.9);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{display:flex;align-items:center;gap:0.55rem;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--brand);}
+  .brand-mark img{height:22px;width:22px;border-radius:4px;object-fit:cover;}
+  nav.primary{display:flex;gap:clamp(0.7rem,2vw,1.6rem);align-items:center;}
+  nav.primary a.nav-link{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;text-decoration:none;color:var(--muted);}
+  nav.primary a.nav-link:hover{color:var(--brand);}
+  .call-pill{background:var(--accent);color:#fff;padding:0.5em 1.1em;border-radius:100px;text-decoration:none;font-size:0.82rem;font-weight:600;white-space:nowrap;}
+  .mobile-menu{display:none;}
+  @media (max-width:820px){
+    nav.primary a.nav-link{display:none;}
+    .mobile-menu{display:block;position:relative;}
+    .mobile-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);color:var(--brand);padding:0.4em 0.7em;border-radius:6px;font-size:0.78rem;text-transform:uppercase;}
+    .mobile-menu summary::-webkit-details-marker{display:none;}
+    .mobile-menu-panel{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--line);padding:0.8rem;display:flex;flex-direction:column;gap:0.7rem;min-width:160px;z-index:10;border-radius:6px;box-shadow:0 8px 24px rgba(15,28,43,0.14);}
+    .mobile-menu-panel a{text-decoration:none;color:var(--fg);font-size:0.85rem;}
+  }
+
+  main{display:block;}
+  section{padding:clamp(4.2rem,9vw,6.5rem) clamp(1.2rem,5vw,4rem);}
+  .section-inner{max-width:1140px;margin:0 auto;}
+  .kicker{text-transform:uppercase;letter-spacing:0.16em;font-size:0.76rem;color:var(--accent);font-weight:700;margin-bottom:0.8em;display:block;font-family:'Space Grotesk',sans-serif;}
+
+  #hero{
+    min-height:96vh;display:flex;align-items:center;padding-top:6rem;position:relative;color:#fff;
+    background:linear-gradient(100deg,rgba(13,24,38,0.88),rgba(13,24,38,0.45) 60%),
+      url('https://static.wixstatic.com/media/6e31d3_d2e1d6f97346443eb93687f97ce23846~mv2.jpg/v1/fill/w_977,h_652,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6e31d3_d2e1d6f97346443eb93687f97ce23846~mv2.jpg');
+    background-size:cover;background-position:center;
+  }
+  .hero-grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:end;}
+  @media (max-width:720px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(5rem,16vw,10rem);line-height:0.8;color:var(--accent);}
+  .hero-num-label{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.14em;color:#cdd9e3;margin-top:0.6rem;}
+  .hero-copy p{max-width:34em;color:#dde6ee;font-size:clamp(1rem,1vw + 0.7rem,1.2rem);}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem;}
+  .btn{display:inline-block;padding:0.85em 1.6em;text-decoration:none;font-weight:600;font-size:0.95rem;border-radius:6px;border:1px solid transparent;}
+  .btn-brand{background:var(--accent);color:#fff;}
+  .btn-outline{border-color:rgba(255,255,255,0.4);color:#fff;}
+  .rating-chip{display:inline-flex;align-items:center;gap:0.5em;font-size:0.8rem;color:#c8d3dd;border:1px solid rgba(255,255,255,0.25);padding:0.35em 0.8em;border-radius:100px;margin-top:1.4rem;}
+  .rating-chip b{color:var(--accent);}
+
+  /* arrival sequence */
+  #anreise{background:var(--surface);}
+  .sequence{position:relative;margin-top:2.6rem;}
+  .seq-line{position:absolute;left:22px;top:12px;bottom:12px;width:2px;background:var(--line);}
+  @media (max-width:680px){ .seq-line{display:none;} }
+  .seq-steps{display:flex;flex-direction:column;gap:0;}
+  .seq-step{display:grid;grid-template-columns:46px 1fr;gap:1.2rem;padding:1.4rem 0;position:relative;}
+  .seq-num{width:46px;height:46px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;z-index:1;}
+  .seq-body summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+  .seq-body summary::-webkit-details-marker{display:none;}
+  .seq-body summary h3{margin:0;}
+  .seq-body summary::after{content:'Details ＋';font-size:0.78rem;color:var(--accent);flex:none;font-weight:600;white-space:nowrap;}
+  .seq-body[open] summary::after{content:'Details －';}
+  .seq-body .seq-tag{font-size:0.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;}
+  .seq-body .seq-detail{margin-top:0.8rem;color:var(--muted);max-width:38em;}
+
+  /* zimmer */
+  #zimmer{background:var(--bg);}
+  .zimmer-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(1.6rem,4vw,3rem);align-items:start;margin-top:2rem;}
+  @media (max-width:820px){ .zimmer-grid{grid-template-columns:1fr;} }
+  .zimmer-fact-list{list-style:none;margin:1.4rem 0 0;padding:0;display:flex;flex-direction:column;gap:0.9rem;}
+  .zimmer-fact-list li{display:flex;gap:0.8em;font-size:0.98rem;border-top:1px solid var(--line);padding-top:0.8em;}
+  .zimmer-fact-list li b{font-family:'Space Grotesk',sans-serif;color:var(--brand);flex:none;min-width:2.4em;}
+  .photo-cluster{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;}
+  .photo-cluster img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;}
+  .photo-cluster .wide{grid-column:1/-1;aspect-ratio:16/9;}
+
+  /* usps */
+  #gruende{background:var(--bg);}
+  .usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem;border-radius:10px;overflow:hidden;}
+  @media (max-width:900px){ .usp-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:420px){ .usp-grid{grid-template-columns:1fr;} }
+  .usp-grid div{background:var(--surface);padding:1.5rem 1.3rem;display:flex;flex-direction:column;gap:0.5rem;}
+  .usp-grid .usp-num{font-family:'Space Grotesk',sans-serif;color:var(--accent);font-size:1.05rem;font-weight:700;}
+  .usp-grid p{margin:0;font-size:0.95rem;}
+
+  /* ausstattung */
+  #ausstattung{background:var(--surface);}
+  .amenity-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem;}
+  @media (max-width:600px){ .amenity-cards{grid-template-columns:1fr;} }
+  .amenity-card{border:1px solid var(--line);border-radius:10px;padding:1.4rem;background:var(--bg);}
+  .amenity-card .a-icon{width:38px;height:38px;border-radius:8px;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk',sans-serif;margin-bottom:0.8rem;}
+  .amenity-card h3{font-size:1.05rem;}
+  .amenity-card p{margin:0.4rem 0 0;color:var(--muted);font-size:0.92rem;}
+  .rating-note{margin-top:1.6rem;font-size:0.86rem;color:var(--muted);border-left:2px solid var(--accent);padding-left:0.9rem;}
+
+  /* arrival progress: the sequence itself is the signature module */
+  .seq-progress{margin-top:1.6rem;height:6px;border-radius:99px;background:var(--line);overflow:hidden;}
+  .seq-progress-bar{height:100%;width:25%;background:var(--accent);border-radius:99px;transition:width 0.4s ease;}
+  .seq-progress-label{font-size:0.8rem;color:var(--muted);margin-top:0.5rem;}
+  .seq-finish{margin-top:1.6rem;border:1px solid var(--line);border-radius:10px;padding:1.2rem 1.4rem;background:var(--bg);
+    display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;}
+  .seq-finish p{margin:0;color:var(--muted);font-size:0.92rem;max-width:32em;}
+
+  /* lage */
+  #lage iframe{width:100%;height:340px;border:0;border-radius:10px;margin-top:1.8rem;}
+  .lage-meta{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:1.4rem;font-size:0.92rem;color:var(--muted);}
+  .lage-meta strong{color:var(--fg);display:block;}
+
+  /* faq */
+  #faq{background:var(--bg);}
+  .faq-list{margin-top:1.8rem;display:flex;flex-direction:column;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{cursor:pointer;padding:1.1em 0.2em;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';color:var(--accent);font-size:1.3rem;flex:none;}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin:0 0.2em 1.1em;color:var(--muted);max-width:40em;}
+
+  footer{padding:2.6rem clamp(1.2rem,5vw,4rem) 7rem;border-top:1px solid var(--line);font-size:0.82rem;color:var(--muted);}
+  footer .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;margin-bottom:1.4rem;}
+  footer strong{color:var(--fg);font-family:'Space Grotesk',sans-serif;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+  .mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.95rem;}
+  @media (min-width:761px){ .mobile-bar{display:none;} }
+  @media (max-width:760px){ footer{padding-bottom:5.5rem;} }
+
+  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">
+    <img src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e316f544f9094143b9eac01f1f19e697.png" alt="" onerror="this.style.display='none'">
+    My Home Hotel
+  </div>
+  <nav class="primary" aria-label="Hauptnavigation">
+    <a class="nav-link" href="#anreise">Anreise</a>
+    <a class="nav-link" href="#zimmer">Zimmer</a>
+    <a class="nav-link" href="#ausstattung">Ausstattung</a>
+    <a class="nav-link" href="#lage">Lage</a>
+    <details class="mobile-menu">
+      <summary>Menü</summary>
+      <div class="mobile-menu-panel">
+        <a href="#anreise">Anreise</a>
+        <a href="#zimmer">Zimmer</a>
+        <a href="#ausstattung">Ausstattung</a>
+        <a href="#lage">Lage</a>
+      </div>
+    </details>
+    <a class="call-pill" href="tel:+41525431111">Anrufen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section id="hero">
+    <div class="section-inner hero-grid">
+      <div>
+        <div class="hero-num">49</div>
+        <div class="hero-num-label">moderne Zimmer</div>
+      </div>
+      <div class="hero-copy">
+        <span class="kicker">Zürcherstrasse 200 · Winterthur</span>
+        <h1>Ankommen.<br>Parkieren.<br>Zuhause sein.</h1>
+        <p>My Home Hotel: ein modernes Hotel mit 49 zeitgenössischen Zimmern. Kostenlose Parkplätze direkt am Haus — der Name ist Programm.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brand" href="#anreise">Die Ankunft ansehen</a>
+          <a class="btn btn-outline" href="tel:+41525431111">+41 52 543 11 11</a>
+        </div>
+        <div class="rating-chip"><b>3.8</b> · 301 Google-Bewertungen</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="anreise" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Signatur-Modul</span>
+      <h2>Die Ankunft, Schritt für Schritt.</h2>
+      <p style="max-width:38em;color:var(--muted);margin-top:0.8rem;">Vier Stationen zwischen Vorfahrt und Zimmer — jede Station zum Aufklappen.</p>
+      <div class="sequence">
+        <div class="seq-line" aria-hidden="true"></div>
+        <div class="seq-steps">
+          <div class="seq-step">
+            <div class="seq-num mono">01</div>
+            <details class="seq-body" open>
+              <summary><h3>Das Auto</h3></summary>
+              <div class="seq-tag">Kostenlose Parkplätze</div>
+              <p class="seq-detail">Kein Parkhaus, keine Parkuhr, keine Parkplatzsuche in der Stadt — der Wagen bleibt kostenlos direkt beim Hotel.</p>
+            </details>
+          </div>
+          <div class="seq-step">
+            <div class="seq-num mono">02</div>
+            <details class="seq-body">
+              <summary><h3>Der Schlüssel</h3></summary>
+              <div class="seq-tag">Empfang</div>
+              <p class="seq-detail">Check-in an der Rezeption, Zürcherstrasse 200 — zentrale Lage in Winterthur.</p>
+            </details>
+          </div>
+          <div class="seq-step">
+            <div class="seq-num mono">03</div>
+            <details class="seq-body">
+              <summary><h3>Die Tür</h3></summary>
+              <div class="seq-tag">49 Zimmer im Haus</div>
+              <p class="seq-detail">Eines von 49 modernen Zimmern — kurzer Weg vom Parkplatz zum eigenen Stockwerk.</p>
+            </details>
+          </div>
+          <div class="seq-step">
+            <div class="seq-num mono">04</div>
+            <details class="seq-body">
+              <summary><h3>Das Zimmer</h3></summary>
+              <div class="seq-tag">Ankommen</div>
+              <p class="seq-detail">Zeitgenössisch eingerichtet — Gepäck abstellen, Tür zu, angekommen.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="seq-progress" role="progressbar" aria-label="Fortschritt der Ankunftssequenz" aria-valuemin="0" aria-valuemax="4" aria-valuenow="1">
+        <div class="seq-progress-bar" id="seqProgressBar"></div>
+      </div>
+      <p class="seq-progress-label" id="seqProgressLabel">Station 1 von 4 geöffnet.</p>
+      <div class="seq-finish">
+        <p>Alle vier Stationen angesehen? Der nächste Schritt läuft über das Telefon.</p>
+        <a class="btn btn-brand" href="tel:+41525431111">Jetzt anrufen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="zimmer" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Die Zimmer</span>
+      <h2>49 moderne Zimmer.</h2>
+      <div class="zimmer-grid">
+        <div>
+          <p style="color:var(--muted);max-width:34em;">Das My Home Hotel ist ein modernes Hotel mit 49 zeitgenössischen Zimmern in Winterthur.</p>
+          <ul class="zimmer-fact-list">
+            <li><b>49</b> moderne Zimmer insgesamt</li>
+            <li><b>Lage</b> Zürcherstrasse 200, Winterthur — zentral</li>
+            <li><b>Business</b> Seminarraum für Geschäftsfunktionen im Haus</li>
+          </ul>
+        </div>
+        <div class="photo-cluster">
+          <img class="wide" src="https://static.wixstatic.com/media/6e31d3_ac0197cd67a043908776dd610ed07f76~mv2.jpg/v1/fill/w_423,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6e31d3_ac0197cd67a043908776dd610ed07f76~mv2.jpg" alt="My Home Hotel Winterthur, Impression" loading="lazy" onerror="this.remove()">
+          <img src="https://static.wixstatic.com/media/6e31d3_6e837d06f9e94dc98f320936952902dc~mv2.jpg/v1/fill/w_314,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6e31d3_6e837d06f9e94dc98f320936952902dc~mv2.jpg" alt="My Home Hotel Winterthur, Impression" loading="lazy" onerror="this.remove()">
+          <img src="https://static.wixstatic.com/media/6e31d3_3fcb8a72aaea4a9b9669ec35cae3c28c~mv2.jpg/v1/fill/w_314,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6e31d3_3fcb8a72aaea4a9b9669ec35cae3c28c~mv2.jpg" alt="My Home Hotel Winterthur, Impression" loading="lazy" onerror="this.remove()">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gruende" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Kurz gesagt</span>
+      <h2 style="font-size:clamp(1.6rem,3vw + 1rem,2.3rem);">Vier Gründe, hier zu bleiben.</h2>
+      <div class="usp-grid">
+        <div><span class="usp-num">01</span><p>49 moderne Zimmer</p></div>
+        <div><span class="usp-num">02</span><p>Kostenlose Parkplätze</p></div>
+        <div><span class="usp-num">03</span><p>Seminarraum für Geschäftsfunktionen</p></div>
+        <div><span class="usp-num">04</span><p>Zentrale Lage in Winterthur</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ausstattung" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Ausstattung</span>
+      <h2>Was inklusive ist.</h2>
+      <div class="amenity-cards">
+        <div class="amenity-card">
+          <div class="a-icon">P</div>
+          <h3>Kostenlose Parkplätze</h3>
+          <p>Direkt am Haus — ohne Zusatzkosten.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="a-icon">S</div>
+          <h3>Seminarraum</h3>
+          <p>Für Geschäftsfunktionen im Haus verfügbar.</p>
+        </div>
+      </div>
+      <p class="rating-note">Google-Bewertung: 3.8 · 301 Bewertungen.</p>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Lage</span>
+      <h2>Zürcherstrasse 200, Winterthur.</h2>
+      <div class="lage-meta">
+        <span><strong>Adresse</strong>Zürcherstrasse 200, 8406 Winterthur</span>
+        <span><strong>Telefon</strong><a href="tel:+41525431111">+41 52 543 11 11</a></span>
+        <span><strong>E-Mail</strong><a href="mailto:office@myhomehotel.ch">office@myhomehotel.ch</a></span>
+        <span><strong>Bewertung</strong>3.8 · 301 Google-Bewertungen</span>
+      </div>
+      <iframe src="https://maps.google.com/maps?q=My%20Home%20Hotel%2C%20Z%C3%BCrcherstrasse%20200%2C%208406%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Karte My Home Hotel Winterthur"></iframe>
+    </div>
+  </section>
+
+  <section id="faq" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Gut zu wissen</span>
+      <h2 style="font-size:clamp(1.6rem,3vw + 1rem,2.3rem);">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Ist der Parkplatz wirklich kostenlos?</summary>
+          <p>Ja. Kostenlose Parkplätze sind Teil der Hotelausstattung.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es einen Raum für Meetings?</summary>
+          <p>Ja, einen Seminarraum für Geschäftsfunktionen im Haus.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie viele Zimmer hat das Hotel?</summary>
+          <p>49 moderne Zimmer insgesamt.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wo genau liegt das Hotel?</summary>
+          <p>Zürcherstrasse 200, 8406 Winterthur — zentrale Lage.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>My Home Hotel</strong><br>
+      Zürcherstrasse 200, 8406 Winterthur<br>
+      <a href="tel:+41525431111">+41 52 543 11 11</a>
+    </div>
+    <div>
+      <strong>E-Mail</strong><br>
+      <a href="mailto:office@myhomehotel.ch">office@myhomehotel.ch</a>
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.myhomehotel.ch/" target="_blank" rel="noopener">myhomehotel.ch</a>
+    </div>
+  </div>
+  <p>Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525431111">Jetzt anrufen · +41 52 543 11 11</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // arrival sequence: only one step open at a time, progress bar tracks furthest station reached
+  var seqBodies = document.querySelectorAll('.seq-body');
+  var seqProgressBar = document.getElementById('seqProgressBar');
+  var seqProgressLabel = document.getElementById('seqProgressLabel');
+  var seqTotal = seqBodies.length;
+  var seqFurthest = 1;
+
+  function updateSeqProgress(){
+    seqProgressBar.style.width = (seqFurthest / seqTotal * 100) + '%';
+    seqProgressLabel.textContent = 'Station ' + seqFurthest + ' von ' + seqTotal + ' geöffnet.';
+  }
+  updateSeqProgress();
+
+  seqBodies.forEach(function(d, idx){
+    d.addEventListener('toggle', function(){
+      if(d.open){
+        seqBodies.forEach(function(other){ if(other !== d) other.open = false; });
+        if(idx + 1 > seqFurthest){ seqFurthest = idx + 1; }
+        updateSeqProgress();
+      }
+    });
+  });
+
+  // scroll reveal
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>

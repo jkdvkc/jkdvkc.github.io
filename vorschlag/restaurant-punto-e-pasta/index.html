@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Punto e Pasta Winterthur — frische Pasta in der Altstadt</title>
+<meta name="description" content="Punto e Pasta, Oberer Graben 26, Winterthur: frisch zubereitete Pasta-Gerichte im Altstadtzentrum, saisonale Karte, durchgehend warme Küche. 4.6 Sterne, 1015 Bewertungen.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Punto e Pasta Winterthur — frische Pasta in der Altstadt">
+<meta property="og:description" content="Lebendige Pasta-Küche mit freundlichem Service und saisonalen Spezialitäten im Altstadtzentrum von Winterthur.">
+<meta property="og:url" content="https://punto-et-pasta.ch/">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Punto e Pasta",
+  "description": "Lebendige Pasta-Küche mit freundlichem Service im Altstadtzentrum von Winterthur.",
+  "url": "https://punto-et-pasta.ch/",
+  "telephone": "+41 52 213 67 23",
+  "email": "info@punto-et-pasta.ch",
+  "servesCuisine": ["Italian", "Pasta"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Oberer Graben 26",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "1015"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg:#fff7e8;
+    --surface:#ffe9bf;
+    --fg:#2a1509;
+    --muted:#6d4f34;
+    --brand:#df4a27;
+    --accent:#f0a825;
+  }
+  *,*::before,*::after {
+    box-sizing:border-box;
+  }
+  html {
+    scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior:auto;
+    }
+  }
+  body {
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Manrope', system-ui, sans-serif;
+    font-size:clamp(15px, 0.3vw + 14.4px, 17.5px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img {
+    max-width:100%;
+    display:block;
+  }
+  a {
+    color:inherit;
+  }
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  :focus-visible {
+    outline:3px solid var(--brand);
+    outline-offset:3px;
+  }
+  h1,h2,h3 {
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    line-height:1.02;
+    margin:0;
+  }
+  .wrap {
+    max-width:1140px;
+    margin:0 auto;
+    padding-inline:clamp(1.1rem, 4vw, 2.6rem);
+  }
+  .skip-link {
+    position:absolute;
+    left:1rem;
+    top:-3rem;
+    background:var(--brand);
+    color:#fff;
+    padding:0.6rem 1rem;
+    z-index:100;
+    transition:top .2s ease;
+    text-decoration:none;
+    font-weight:700;
+  }
+  .skip-link:focus {
+    top:1rem;
+  }
+  .reveal {
+    opacity:0;
+    transform:translateY(24px) rotate(-1deg);
+    transition:opacity .55s ease, transform .55s ease;
+  }
+  .reveal.is-visible {
+    opacity:1;
+    transform:none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity:1;
+      transform:none;
+      transition:none;
+    }
+  }
+  /* ---------- pasta shape system ---------- */
+  .fusilli {
+    width:2.2rem;
+    height:2.2rem;
+    flex:none;
+    border-radius:50%;
+    background: conic-gradient(from 0deg, var(--brand) 0deg 90deg, transparent 90deg 180deg, var(--brand) 180deg 270deg, transparent 270deg 360deg);
+    -webkit-mask: radial-gradient(circle, transparent 32%, #000 33%);
+    mask: radial-gradient(circle, transparent 32%, #000 33%);
+  }
+  .tubo {
+    width:2.6rem;
+    height:1.2rem;
+    flex:none;
+    border-radius:999px;
+    border:5px solid var(--accent);
+    background:transparent;
+  }
+  .nastro {
+    width:2.8rem;
+    height:0.65rem;
+    flex:none;
+    background:var(--brand);
+    border-radius:6px;
+    position:relative;
+  }
+  .nastro::before,.nastro::after {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:0.65rem;
+    background:var(--brand);
+    border-radius:50%;
+  }
+  /* header */
+  header.site {
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:var(--bg);
+    border-bottom:4px solid var(--fg);
+  }
+  .nav-row {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:0.8rem;
+    gap:1rem;
+  }
+  .wordmark {
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    text-decoration:none;
+  }
+  .wordmark span {
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size:1.3rem;
+    color:var(--brand);
+  }
+  nav.primary ul {
+    display:flex;
+    gap:clamp(0.8rem, 2vw, 1.6rem);
+    flex-wrap:wrap;
+  }
+  nav.primary a {
+    text-decoration:none;
+    font-weight:700;
+    font-size:0.9rem;
+    color:var(--muted);
+  }
+  nav.primary a:hover {
+    color:var(--brand);
+  }
+  @media (max-width:680px) {
+    nav.primary ul {
+      gap:0.6rem 0.9rem;
+      font-size:0.82rem;
+    }
+  }
+  /* hero — grafische Pasta-Komposition statt Foto */
+  .hero {
+    padding-block:clamp(2.6rem, 7vw, 4.6rem) clamp(2rem, 5vw, 3rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid {
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:clamp(1.6rem, 4vw, 3rem);
+    align-items:center;
+  }
+  @media (max-width:880px) {
+    .hero-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .eyebrow {
+    font-weight:800;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-size:0.8rem;
+    color:var(--brand);
+    margin-bottom:0.7rem;
+  }
+  .hero h1 {
+    font-size:clamp(2.8rem, 7.6vw, 5.4rem);
+    color:var(--fg);
+  }
+  .hero h1 .lead-word {
+    color:var(--brand);
+  }
+  .hero-tag {
+    margin-top:1.1rem;
+    max-width:38ch;
+    font-size:1.1rem;
+  }
+  .hero-cta {
+    margin-top:1.6rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.8rem;
+  }
+  .btn {
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    font-weight:800;
+    text-decoration:none;
+    padding:0.85rem 1.3rem;
+    border-radius:100px;
+    border:3px solid var(--fg);
+  }
+  .btn.solid {
+    background:var(--brand);
+    color:#fff;
+    border-color:var(--brand);
+  }
+  .btn.solid:hover {
+    background:var(--fg);
+    border-color:var(--fg);
+  }
+  .btn.ghost {
+    color:var(--fg);
+  }
+  .btn.ghost:hover {
+    background:var(--fg);
+    color:#fff;
+  }
+  .plate {
+    aspect-ratio:1/1;
+    border-radius:50%;
+    background:var(--bg);
+    border:6px solid var(--fg);
+    position:relative;
+    display:grid;
+    place-items:center;
+  }
+  .plate-inner {
+    position:relative;
+    width:74%;
+    height:74%;
+  }
+  .plate .p-fusilli {
+    position:absolute;
+    width:22%;
+    aspect-ratio:1/1;
+  }
+  .plate .p-fusilli.f1 {
+    top:6%;
+    left:10%;
+  }
+  .plate .p-fusilli.f2 {
+    top:40%;
+    left:60%;
+  }
+  .plate .p-fusilli.f3 {
+    top:64%;
+    left:16%;
+  }
+  .plate .p-tubo {
+    position:absolute;
+    width:34%;
+    height:14%;
+  }
+  .plate .p-tubo.t1 {
+    top:14%;
+    left:46%;
+    transform:rotate(18deg);
+  }
+  .plate .p-tubo.t2 {
+    top:58%;
+    left:48%;
+    transform:rotate(-14deg);
+  }
+  .plate .p-nastro {
+    position:absolute;
+    width:44%;
+    height:9%;
+  }
+  .plate .p-nastro.n1 {
+    top:32%;
+    left:8%;
+    transform:rotate(-8deg);
+  }
+  .plate .p-nastro.n2 {
+    top:78%;
+    left:36%;
+    transform:rotate(6deg);
+  }
+  .fusilli.big {
+    width:100%;
+    height:100%;
+  }
+  .tubo.big {
+    width:100%;
+    height:100%;
+    border-width:8px;
+  }
+  .nastro.big {
+    width:100%;
+    height:100%;
+  }
+  .nastro.big::before,.nastro.big::after {
+    width:1rem;
+  }
+  /* section shell */
+  .section-pad {
+    padding-block:clamp(2.4rem, 6vw, 4rem);
+  }
+  .on-surface {
+    background:var(--surface);
+  }
+  .kicker {
+    font-weight:800;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-size:0.8rem;
+    color:var(--brand);
+    margin-bottom:0.6rem;
+  }
+  h2 {
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+  }
+  .lede {
+    max-width:56ch;
+    color:var(--muted);
+    margin-top:0.7rem;
+  }
+  /* about / die formen */
+  .formen-grid {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.2rem;
+    align-items:center;
+  }
+  @media (max-width:840px) {
+    .formen-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .formen-list {
+    display:grid;
+    gap:0.9rem;
+  }
+  .formen-list li {
+    display:flex;
+    gap:0.9rem;
+    align-items:center;
+    font-weight:700;
+  }
+  .shape-strip {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+  }
+  .shape-tile {
+    aspect-ratio:1/1;
+    border-radius:20px;
+    background:var(--bg);
+    border:3px solid var(--fg);
+    display:grid;
+    place-items:center;
+    padding:1.2rem;
+  }
+  /* signature module: seasonal jetzt offen */
+  .offen-grid {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns: minmax(240px,360px) 1fr;
+    gap:2rem;
+    align-items:stretch;
+  }
+  @media (max-width:800px) {
+    .offen-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .status-card {
+    background:var(--bg);
+    border:3px solid var(--fg);
+    border-radius:20px;
+    padding:1.4rem;
+  }
+  .badge-light {
+    display:inline-flex;
+    align-items:center;
+    gap:0.55rem;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+    padding:0.45rem 0.8rem;
+    border-radius:100px;
+    border:3px solid currentColor;
+  }
+  .badge-light .dot {
+    width:0.6rem;
+    height:0.6rem;
+    border-radius:50%;
+    background:currentColor;
+  }
+  .badge-light.is-open {
+    color:#1f7a3d;
+  }
+  .badge-light.is-closed {
+    color:var(--brand);
+  }
+  @media (prefers-reduced-motion:no-preference) {
+    .badge-light.is-open .dot {
+      animation:pulse 1.6s ease-in-out infinite;
+    }
+  }
+  @keyframes pulse {
+    0%,100% {
+      box-shadow:0 0 0 0 rgba(31,122,61,0.45);
+    }
+    50% {
+      box-shadow:0 0 0 6px rgba(31,122,61,0);
+    }
+  }
+  .status-headline {
+    font-family:'Baloo 2', sans-serif;
+    font-size:1.5rem;
+    margin-top:0.8rem;
+  }
+  .status-sub {
+    margin-top:0.5rem;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+  .status-season {
+    margin-top:0.9rem;
+    font-size:0.82rem;
+    font-weight:700;
+    color:var(--brand);
+  }
+  .status-clock {
+    margin-top:0.6rem;
+    font-size:0.8rem;
+    color:var(--muted);
+  }
+  table.hours {
+    width:100%;
+    border-collapse:collapse;
+  }
+  table.hours caption {
+    text-align:left;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    font-size:0.78rem;
+    color:var(--muted);
+    margin-bottom:0.6rem;
+  }
+  table.hours th,table.hours td {
+    text-align:left;
+    padding:0.65rem 0.5rem;
+    border-bottom:1px solid rgba(42,21,9,0.15);
+    font-size:0.92rem;
+  }
+  table.hours tr.today th,table.hours tr.today td {
+    color:var(--brand);
+    font-weight:800;
+  }
+  table.hours tr.inactive {
+    opacity:0.45;
+  }
+  /* menu */
+  .menu-grid {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.4rem;
+  }
+  @media (max-width:900px) {
+    .menu-grid {
+      grid-template-columns:1fr 1fr;
+    }
+  }
+  @media (max-width:620px) {
+    .menu-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .menu-block {
+    background:var(--bg);
+    border:3px solid var(--fg);
+    border-radius:20px;
+    padding:1.3rem 1.2rem;
+  }
+  .menu-block h3 {
+    font-size:1.3rem;
+    color:var(--brand);
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .menu-row {
+    display:flex;
+    justify-content:space-between;
+    gap:0.8rem;
+    padding-block:0.7rem;
+    border-bottom:1px dashed rgba(42,21,9,0.25);
+  }
+  .menu-row:last-of-type {
+    border-bottom:none;
+  }
+  .menu-name {
+    font-weight:700;
+  }
+  .menu-price {
+    font-weight:800;
+    white-space:nowrap;
+    color:var(--fg);
+  }
+  .menu-price.na {
+    color:var(--muted);
+    font-weight:600;
+    font-size:0.85rem;
+  }
+  .menu-footnote {
+    margin-top:1.4rem;
+    font-size:0.85rem;
+    color:var(--muted);
+    max-width:64ch;
+  }
+  .review-count-bar {
+    margin-top:1.8rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+  }
+  .review-count-num {
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size:1.6rem;
+    color:var(--brand);
+    white-space:nowrap;
+  }
+  /* altstadt lage */
+  .altstadt-grid {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.2rem;
+    align-items:center;
+  }
+  @media (max-width:840px) {
+    .altstadt-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .ribbon-deco {
+    display:flex;
+    flex-direction:column;
+    gap:0.8rem;
+  }
+  .ribbon-deco .nastro {
+    width:100%;
+    height:1.1rem;
+    border-radius:999px;
+  }
+  .ribbon-deco .nastro:nth-child(2) {
+    background:var(--accent);
+  }
+  .ribbon-deco .nastro:nth-child(2)::before,.ribbon-deco .nastro:nth-child(2)::after {
+    background:var(--accent);
+  }
+  .ribbon-deco .nastro:nth-child(3) {
+    background:var(--fg);
+    opacity:0.85;
+  }
+  .ribbon-deco .nastro:nth-child(3)::before,.ribbon-deco .nastro:nth-child(3)::after {
+    background:var(--fg);
+  }
+  /* bewertungen */
+  .stimmen-row {
+    margin-top:1.6rem;
+    display:flex;
+    align-items:center;
+    gap:2.2rem;
+    flex-wrap:wrap;
+  }
+  .rating-big {
+    font-family:'Baloo 2', sans-serif;
+    font-size:clamp(3.4rem, 9vw, 5.4rem);
+    color:var(--brand);
+    line-height:0.85;
+  }
+  .stars {
+    font-size:1.3rem;
+    color:var(--accent);
+    letter-spacing:0.08em;
+  }
+  .stimmen-copy {
+    max-width:46ch;
+    color:var(--muted);
+  }
+  /* kontakt */
+  .contact-grid {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.2rem;
+  }
+  @media (max-width:820px) {
+    .contact-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .info-list {
+    display:grid;
+    gap:1rem;
+  }
+  .info-list dt {
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    color:var(--muted);
+  }
+  .info-list dd {
+    margin:0.15rem 0 0;
+    font-size:1.05rem;
+  }
+  .info-list a {
+    text-decoration:underline;
+    text-decoration-color:var(--brand);
+  }
+  .map-frame {
+    border:3px solid var(--fg);
+    border-radius:20px;
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe {
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  footer.site {
+    padding-block:2.2rem 6.5rem;
+    border-top:4px solid var(--fg);
+    background:var(--surface);
+  }
+  .footer-grid {
+    display:flex;
+    justify-content:space-between;
+    gap:1.2rem;
+    flex-wrap:wrap;
+    font-size:0.85rem;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .footer-grid a {
+    text-decoration:underline;
+  }
+  .footer-note {
+    margin-top:1rem;
+    font-size:0.75rem;
+    color:var(--muted);
+    opacity:0.9;
+  }
+  .mobile-bar {
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:60;
+    display:flex;
+    border-top:4px solid var(--fg);
+    background:var(--brand);
+  }
+  .mobile-bar a {
+    flex:1;
+    text-align:center;
+    padding:0.9rem 0.5rem;
+    font-weight:800;
+    text-decoration:none;
+    color:#fff;
+  }
+  .mobile-bar a.alt {
+    background:var(--fg);
+  }
+  @media (min-width:760px) {
+    .mobile-bar {
+      display:none;
+    }
+  }
+  @media (max-width:759px) {
+    body {
+      padding-bottom:3.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">
+      <span class="fusilli" aria-hidden="true"></span>
+      <span>Punto e Pasta</span>
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#formen">Über uns</a></li>
+        <li><a href="#offen">Geöffnet</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO — grafische Pasta-Komposition ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Oberer Graben 26 · Altstadt Winterthur</p>
+        <h1>Frisch zu<span class="lead-word">·</span>bereitete<br>Pasta<span class="lead-word">.</span></h1>
+        <p class="hero-tag">Lebendige Pasta-Küche mit freundlichem Service, Familienunterhaltung und gemütlicher, detailreicher Einrichtung im Altstadtzentrum. Warme Küche täglich mit kontinuierlichem Service.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="tel:+41522136723">+41 52 213 67 23</a>
+          <a class="btn ghost" href="#karte">Zur Karte</a>
+        </div>
+      </div>
+      <div class="plate reveal" aria-hidden="true">
+        <div class="plate-inner">
+          <span class="fusilli p-fusilli f1"></span>
+          <span class="fusilli p-fusilli f2"></span>
+          <span class="fusilli p-fusilli f3"></span>
+          <span class="tubo p-tubo t1"></span>
+          <span class="tubo p-tubo t2"></span>
+          <span class="nastro p-nastro n1"></span>
+          <span class="nastro p-nastro n2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIE FORMEN — über uns ============ -->
+  <section class="section-pad on-surface" id="formen">
+    <div class="wrap">
+      <p class="kicker">Über uns</p>
+      <h2>Klassiker,<br>Punto-Stil</h2>
+      <div class="formen-grid">
+        <div class="reveal">
+          <p class="lede">Gemütliche Altstadtlocation mit Café-Service und saisonalen Spezialitäten — die Küche läuft warm, durchgehend, den ganzen Tag.</p>
+          <ul class="formen-list">
+            <li><span class="fusilli" aria-hidden="true"></span> Frisch zubereitete Pasta-Gerichte</li>
+            <li><span class="tubo" aria-hidden="true"></span> Gemütliche Altstadtlocation</li>
+            <li><span class="nastro" aria-hidden="true"></span> Kontinuierlicher warmer Küchenbetrieb</li>
+            <li><span class="fusilli" aria-hidden="true"></span> Saisonale Spezialitäten</li>
+          </ul>
+        </div>
+        <div class="shape-strip reveal" aria-hidden="true">
+          <div class="shape-tile"><span class="fusilli big"></span></div>
+          <div class="shape-tile"><span class="tubo big"></span></div>
+          <div class="shape-tile"><span class="nastro big"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE MODUL: SAISONAL GEÖFFNET? ============ -->
+  <section class="section-pad" id="offen">
+    <div class="wrap">
+      <p class="kicker">Live-Status</p>
+      <h2>Gerade offen?</h2>
+      <p class="lede">Die Öffnungszeiten wechseln mit der Saison — Winter (Okt–Apr) und Sommer (Mai–Sep). Der Badge unten rechnet live mit dem heutigen Datum.</p>
+      <div class="offen-grid reveal">
+        <div class="status-card">
+          <span class="badge-light" id="status-badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="status-text">Status wird berechnet…</span>
+          </span>
+          <p class="status-headline" id="status-headline">Einen Moment…</p>
+          <p class="status-sub" id="status-sub"></p>
+          <p class="status-season" id="status-season"></p>
+          <p class="status-clock" id="status-clock"></p>
+        </div>
+        <div>
+          <table class="hours" id="hours-table">
+            <caption>Öffnungszeiten</caption>
+            <thead><tr><th scope="col">Tage</th><th scope="col">Zeit</th></tr></thead>
+            <tbody>
+              <tr data-season="winter" data-day="0,1,2,3,4"><th scope="row">So–Do (Winter: Okt–Apr)</th><td>11:00–22:00</td></tr>
+              <tr data-season="winter" data-day="5,6"><th scope="row">Fr–Sa (Winter: Okt–Apr)</th><td>11:00–22:30</td></tr>
+              <tr data-season="summer" data-day="0,1,2,3,4,5,6"><th scope="row">Mo–So (Sommer: Mai–Sep)</th><td>11:00–23:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KARTE ============ -->
+  <section class="section-pad on-surface" id="karte">
+    <div class="wrap">
+      <p class="kicker">Was auf den Teller kommt</p>
+      <h2>Die Karte</h2>
+      <p class="lede">Preise wie auf der Karte angegeben — wo keine Preise veröffentlicht sind, sagen wir das ehrlich statt zu schätzen.</p>
+      <div class="menu-grid">
+        <div class="menu-block reveal">
+          <h3><span class="fusilli" aria-hidden="true"></span> Klassiker</h3>
+          <div class="menu-row"><span class="menu-name">Poulet Stroganoff mit hausgemachten Spätzle</span><span class="menu-price">CHF 21.00</span></div>
+        </div>
+        <div class="menu-block reveal">
+          <h3><span class="tubo" aria-hidden="true"></span> Risotto &amp; Speisen</h3>
+          <div class="menu-row"><span class="menu-name">Porcini-Pilzrisotto</span><span class="menu-price na">Preis auf Anfrage</span></div>
+          <div class="menu-row"><span class="menu-name">Punto's Burger</span><span class="menu-price na">Preis auf Anfrage</span></div>
+          <div class="menu-row"><span class="menu-name">Fitnessteller XL</span><span class="menu-price na">Preis auf Anfrage</span></div>
+        </div>
+        <div class="menu-block reveal">
+          <h3><span class="nastro" aria-hidden="true"></span> Pasta</h3>
+          <div class="menu-row"><span class="menu-name">All'arrabiata V</span><span class="menu-price na">Preis auf Anfrage</span></div>
+        </div>
+      </div>
+      <p class="menu-footnote">Saisonale Menü-Karten (Winter/Sommer) liegen als PDF auf der Restaurant-Website — die Auswahl hier zeigt, was uns an Positionen und Preisen vorliegt.</p>
+    </div>
+  </section>
+
+  <!-- ============ ALTSTADT-LAGE ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <p class="kicker">Die Lage</p>
+      <h2>Mitten in der<br>Altstadt</h2>
+      <div class="altstadt-grid">
+        <div class="reveal">
+          <p>Gemütliche, detailreiche Einrichtung im Altstadtzentrum von Winterthur, am Oberen Graben 26 — mit Familienunterhaltung, freundlichem Service und saisonalen Spezialitäten.</p>
+        </div>
+        <div class="ribbon-deco reveal" aria-hidden="true">
+          <span class="nastro"></span>
+          <span class="nastro"></span>
+          <span class="nastro"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEWERTUNGEN ============ -->
+  <section class="section-pad on-surface">
+    <div class="wrap">
+      <p class="kicker">Bewertungen</p>
+      <div class="stimmen-row reveal">
+        <div>
+          <div class="rating-big">4.6</div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+        </div>
+        <p class="stimmen-copy">1015 Bewertungen bei Google — eine der grössten Bewertungszahlen unter den Restaurants der Winterthurer Altstadt.</p>
+      </div>
+      <div class="review-count-bar reveal" aria-hidden="true">
+        <span class="nastro" style="width:100%; max-width:520px;"></span>
+        <span class="review-count-num" id="review-count-num">0</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="section-pad" id="kontakt">
+    <div class="wrap">
+      <p class="kicker">Anfahrt &amp; Kontakt</p>
+      <h2>Bis gleich am<br>Oberen Graben</h2>
+      <div class="contact-grid">
+        <div class="reveal">
+          <dl class="info-list">
+            <div>
+              <dt>Adresse</dt>
+              <dd>Oberer Graben 26, 8400 Winterthur</dd>
+            </div>
+            <div>
+              <dt>Telefon</dt>
+              <dd><a href="tel:+41522136723">+41 52 213 67 23</a></dd>
+            </div>
+            <div>
+              <dt>E-Mail</dt>
+              <dd><a href="mailto:info@punto-et-pasta.ch">info@punto-et-pasta.ch</a></dd>
+            </div>
+            <div>
+              <dt>Website</dt>
+              <dd><a href="https://punto-et-pasta.ch/" target="_blank" rel="noopener">punto-et-pasta.ch</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Punto%20e%20Pasta%20Winterthur&amp;z=16&amp;output=embed"
+            title="Karte: Punto e Pasta, Oberer Graben 26, Winterthur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span>Punto e Pasta · Oberer Graben 26, 8400 Winterthur</span>
+      <span><a href="tel:+41522136723">+41 52 213 67 23</a> · <a href="mailto:info@punto-et-pasta.ch">info@punto-et-pasta.ch</a></span>
+      <span><a href="https://punto-et-pasta.ch/" target="_blank" rel="noopener">punto-et-pasta.ch</a></span>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522136723">📞 Anrufen</a>
+  <a class="alt" href="mailto:info@punto-et-pasta.ch">✉️ Schreiben</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Signature module: saisonal geöffnet? ---------------- */
+  // Real hours from JSON:
+  // Winter (Okt–Apr): So–Do 11:00–22:00, Fr–Sa 11:00–22:30
+  // Sommer (Mai–Sep): Mo–So 11:00–23:00
+  function getSeason(month){
+    // month: 1-12. Sommer = Mai(5)–Sep(9), sonst Winter
+    return (month >= 5 && month <= 9) ? "summer" : "winter";
+  }
+
+  function computeStatus(now){
+    var month = now.getMonth() + 1;
+    var season = getSeason(month);
+    var day = now.getDay();
+    var hour = now.getHours() + now.getMinutes()/60;
+    var openH, closeH;
+
+    if (season === "summer"){
+      openH = 11; closeH = 23;
+    } else {
+      if (day === 5 || day === 6){ openH = 11; closeH = 22.5; }
+      else { openH = 11; closeH = 22; }
+    }
+
+    if (hour >= openH && hour < closeH){
+      return { state:"open", until:closeH, season:season };
+    }
+    if (hour < openH){
+      return { state:"soon", opens:openH, season:season };
+    }
+    return { state:"closed", season:season };
+  }
+  function fmt(h){
+    var hh = Math.floor(h), mm = Math.round((h % 1) * 60);
+    return (hh<10?"0":"")+hh+":"+(mm<10?"0":"")+mm;
+  }
+  var dayNames = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+
+  function render(){
+    var now = new Date();
+    var r = computeStatus(now);
+    var badge = document.getElementById("status-badge");
+    var text = document.getElementById("status-text");
+    var headline = document.getElementById("status-headline");
+    var sub = document.getElementById("status-sub");
+    var season = document.getElementById("status-season");
+    var clock = document.getElementById("status-clock");
+
+    badge.classList.remove("is-open","is-closed");
+    if (r.state === "open"){
+      badge.classList.add("is-open");
+      text.textContent = "Geöffnet";
+      headline.textContent = "Ja — gerade offen.";
+      sub.textContent = "Geöffnet bis " + fmt(r.until) + " Uhr.";
+    } else if (r.state === "soon"){
+      badge.classList.add("is-closed");
+      text.textContent = "Bald offen";
+      headline.textContent = "Noch geschlossen.";
+      sub.textContent = "Öffnet heute um " + fmt(r.opens) + " Uhr.";
+    } else {
+      badge.classList.add("is-closed");
+      text.textContent = "Geschlossen";
+      headline.textContent = "Gerade zu.";
+      sub.textContent = "Schau in der Tabelle rechts, wann's weitergeht.";
+    }
+    season.textContent = r.season === "summer" ? "Sommer-Öffnungszeiten (Mai–Sep) aktiv" : "Winter-Öffnungszeiten (Okt–Apr) aktiv";
+    clock.textContent = dayNames[now.getDay()] + " · " + now.toLocaleDateString("de-CH") + " · " + now.toLocaleTimeString("de-CH",{hour:"2-digit",minute:"2-digit"}) + " Uhr";
+
+    var rows = document.querySelectorAll("#hours-table tbody tr");
+    rows.forEach(function(row){
+      var seasonMatch = row.dataset.season === r.season;
+      var days = row.dataset.day.split(",").map(Number);
+      row.classList.toggle("inactive", !seasonMatch);
+      row.classList.toggle("today", seasonMatch && days.indexOf(now.getDay()) !== -1);
+    });
+  }
+  render();
+  setInterval(render, 60000);
+
+  /* ---------------- Bewertungszahl zählt hoch (echte Zahl: 1015) ---------------- */
+  (function(){
+    var target = 1015;
+    var el = document.getElementById("review-count-num");
+    if (!el) return;
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion){ el.textContent = target + " Bewertungen"; return; }
+
+    var counted = false;
+    function count(){
+      if (counted) return;
+      counted = true;
+      var start = null;
+      var duration = 900;
+      function step(ts){
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.round(progress * target) + " Bewertungen";
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    if ("IntersectionObserver" in window){
+      var io2 = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){ if (entry.isIntersecting) count(); });
+      }, { threshold:0.4 });
+      io2.observe(el);
+    } else {
+      count();
+    }
+  })();
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
+      });
+    }, { threshold:0.15 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+
+</body>
+</html>

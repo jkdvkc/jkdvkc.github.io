@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roxy Vinyl Cafe — Vinyl-Lounge in Winterthur</title>
+<meta name="description" content="Kaffee, Cocktails und Vinyl Hi-Fi Musik in Winterthur. Ein Ort zum Hören, inspiriert von japanischen Jazz-Kissa-Lokalen — DJ-Sessions, Listening Parties und Zine Club.">
+<meta property="og:title" content="Roxy Vinyl Cafe — Winterthur">
+<meta property="og:description" content="Kaffee, Cocktails und Vinyl Hi-Fi Musik-Lounge. Inspiriert von japanischen Jazz-Kissa-Lokalen.">
+<meta property="og:image" content="https://static.wixstatic.com/media/5e13b4_79a33133299e42d497f01d7e95d1be5f~mv2.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_CH">
+<meta property="og:url" content="https://www.roxycafe.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Roxy Vinyl Cafe",
+  "url": "https://www.roxycafe.ch/",
+  "image": "https://static.wixstatic.com/media/5e13b4_79a33133299e42d497f01d7e95d1be5f~mv2.png",
+  "description": "Ein Ort für Kaffee, Getränke, Vinyl Hi-Fi Musik und Kunstliebhaber in Winterthur, inspiriert von japanischen Jazz-Kissa-Lokalen.",
+  "sameAs": ["https://www.facebook.com/roxyvinylcafe/"],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "222" }
+}
+</script>
+<style>
+  /* ---------------------------------------------------------
+     TOKENS — deliberately unlike the chocolatier site:
+     plum-black + hot pink + amber, mono/grotesk pairing.
+  --------------------------------------------------------- */
+  :root{
+    --bg:      #150a10;
+    --surface: #1f1017;
+    --fg:      #f5e9ee;
+    --muted:   #c7a8b4;
+    --brand:   #ff1493;
+    --accent:  #e8b04f;
+    --rule: rgba(255,20,147,.2);
+    --rule-amber: rgba(232,176,79,.28);
+    --maxw: 74rem;
+    --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Space Mono', monospace;
+    font-size:clamp(15px, .8vw + .55rem, 16.5px);
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  p{ margin:0 0 1em; color:var(--muted); max-width:36em; }
+
+  h1,h2,h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; margin:0 0 .5em; color:var(--fg);
+    letter-spacing:-.01em;
+  }
+
+  .container{ max-width:var(--maxw); margin:0 auto; padding:0 var(--gutter); }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+  .visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+  .js .reveal{ opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease; }
+  .js .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .js .reveal{ opacity:1; transform:none; transition:none; } }
+
+  /* ---------------------------------------------------------
+     HEADER
+  --------------------------------------------------------- */
+  header.site{
+    position:fixed; inset:0 0 auto 0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 1.2rem var(--gutter);
+    background:rgba(21,10,16,.7); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:.6rem; text-decoration:none;
+    font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.15rem;
+    letter-spacing:.02em; color:var(--fg);
+  }
+  .brandmark .dot{
+    width:1.4rem; height:1.4rem; border-radius:50%;
+    background: radial-gradient(circle at 50% 50%, var(--bg) 0 18%, var(--brand) 19% 100%);
+    border:1px solid var(--rule-amber);
+    flex:0 0 auto;
+  }
+  nav.primary{ display:flex; align-items:center; gap:clamp(.9rem,2vw,1.9rem); }
+  nav.primary a{
+    font-size:.75rem; letter-spacing:.08em; text-transform:uppercase;
+    text-decoration:none; color:var(--muted); border-bottom:1px solid transparent;
+    padding:.2em 0; transition:color .2s ease, border-color .2s ease;
+  }
+  nav.primary a:hover, nav.primary a:focus-visible{ color:var(--brand); border-color:var(--brand); }
+  .nav-toggle{ display:none; }
+  @media (max-width: 780px){
+    nav.primary{
+      position:fixed; inset:0 0 0 auto; width:min(78vw,19rem);
+      background:var(--surface); flex-direction:column; align-items:flex-start;
+      padding:6.5rem 2rem 2rem; gap:1.3rem;
+      transform:translateX(100%); transition:transform .35s ease;
+      border-left:1px solid var(--rule);
+    }
+    nav.primary.open{ transform:translateX(0); }
+    .nav-toggle{
+      display:inline-flex; flex-direction:column; gap:5px; justify-content:center;
+      width:2.3rem; height:2.3rem; background:none; border:1px solid var(--rule);
+      border-radius:50%; cursor:pointer; z-index:60;
+    }
+    .nav-toggle span{ width:1rem; height:1px; background:var(--fg); margin:0 auto; }
+  }
+
+  /* ---------------------------------------------------------
+     TONEARM — fixed scroll-progress indicator (circular device)
+  --------------------------------------------------------- */
+  .tonearm-fixed{
+    position:fixed; top:4.6rem; right:clamp(.8rem,3vw,2.2rem); z-index:45;
+    width:5.2rem; height:5.2rem; pointer-events:none;
+    display:none;
+  }
+  @media (min-width:560px){ .tonearm-fixed{ display:block; } }
+  .tonearm-fixed .pivot{
+    position:absolute; top:0; right:0; width:.6rem; height:.6rem; border-radius:50%;
+    background:var(--accent);
+  }
+  .tonearm-fixed .arm{
+    position:absolute; top:.25rem; right:.25rem; width:.12rem; height:3.6rem;
+    background:linear-gradient(var(--accent), transparent 88%);
+    transform-origin:top center;
+    transform:rotate(-18deg);
+    transition:transform .1s linear;
+  }
+  @media (prefers-reduced-motion: reduce){ .tonearm-fixed .arm{ transition:none; } }
+
+  /* ---------------------------------------------------------
+     HERO — concentric-circle record as the layout device
+  --------------------------------------------------------- */
+  .hero{
+    position:relative; min-height:100svh; display:flex; align-items:center;
+    overflow:hidden; padding-top:5rem;
+  }
+  .hero-wash{
+    position:absolute; inset:0; z-index:0;
+  }
+  .hero-wash img{
+    width:100%; height:100%; object-fit:cover; opacity:.16; filter:saturate(.7) brightness(.7);
+  }
+  .hero-wash::after{
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(21,10,16,.2), rgba(21,10,16,.96) 72%);
+  }
+  .hero-inner{
+    position:relative; z-index:1; width:100%;
+    display:grid; grid-template-columns: 1.1fr .9fr; align-items:center;
+    gap:clamp(2rem,5vw,4rem);
+    padding: 3rem var(--gutter) 4rem;
+  }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:.6em;
+    font-size:.72rem; letter-spacing:.24em; text-transform:uppercase; color:var(--brand);
+    margin-bottom:1.3rem;
+  }
+  .hero-eyebrow::before{ content:''; width:2rem; height:1px; background:var(--brand); }
+  .hero h1{
+    font-size:clamp(2.3rem, 3vw + 1.2rem, 4.4rem); line-height:1.03; margin-bottom:.5em;
+  }
+  .hero h1 span{ color:var(--brand); }
+  .hero-lede{ font-size:clamp(.95rem,.3vw+.85rem,1.08rem); max-width:30em; margin-bottom:2rem; }
+  .hero-cta{ display:flex; flex-wrap:wrap; gap:.9rem; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:.6em;
+    padding:.85em 1.5em; font-family:'Space Grotesk', sans-serif; font-weight:600;
+    font-size:.82rem; letter-spacing:.03em; text-decoration:none; cursor:pointer;
+    border-radius:999px; border:1px solid transparent;
+    transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn-solid{ background:var(--brand); color:var(--bg); }
+  .btn-solid:hover, .btn-solid:focus-visible{ background:#ff45ab; transform:translateY(-1px); }
+  .btn-line{ border-color:var(--rule-amber); color:var(--fg); }
+  .btn-line:hover, .btn-line:focus-visible{ border-color:var(--accent); color:var(--accent); }
+
+  /* the record */
+  .vinyl-wrap{ display:flex; align-items:center; justify-content:center; position:relative; }
+  .vinyl{
+    position:relative;
+    width:clamp(220px, 30vw, 400px); aspect-ratio:1/1; border-radius:50%;
+    background:
+      repeating-radial-gradient(circle at center,
+        #0c0509 0px, #0c0509 3px,
+        #1c0e15 3px, #1c0e15 6px);
+    box-shadow: 0 0 0 1px var(--rule-amber), 0 30px 60px -20px rgba(0,0,0,.7);
+    animation: spin 22s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){ .vinyl{ animation:none; } }
+  .vinyl::before{
+    content:''; position:absolute; inset:0; border-radius:50%;
+    background: radial-gradient(circle at 38% 32%, rgba(255,255,255,.06), transparent 45%);
+  }
+  .vinyl-label{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:38%; aspect-ratio:1/1; border-radius:50%;
+    background: var(--brand);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    box-shadow:0 0 0 1px var(--rule-amber);
+  }
+  .vinyl-label span{
+    font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:.85rem;
+    letter-spacing:.18em; color:var(--bg);
+  }
+  .vinyl-hole{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:6%; aspect-ratio:1/1; border-radius:50%; background:var(--bg);
+  }
+  .vinyl-tonearm{
+    position:absolute; top:-6%; right:-10%; width:46%; height:46%;
+    transform-origin: 88% 12%;
+    transform:rotate(-22deg);
+  }
+  .vinyl-tonearm .rod{
+    position:absolute; top:6%; right:8%; width:4%; height:82%;
+    background:linear-gradient(var(--accent), var(--rule-amber));
+    border-radius:2px;
+  }
+  .vinyl-tonearm .head{
+    position:absolute; bottom:0; right:2%; width:16%; aspect-ratio:1/1; border-radius:40%;
+    background:var(--accent);
+  }
+
+  @media (max-width: 860px){
+    .hero-inner{ grid-template-columns:1fr; text-align:left; }
+    .vinyl-wrap{ margin-top:1rem; }
+  }
+
+  /* ---------------------------------------------------------
+     SECTION SHELL
+  --------------------------------------------------------- */
+  .section{ padding: clamp(3.5rem,7vw,7rem) 0; border-top:1px solid var(--rule); }
+  .section-head{
+    display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end;
+    gap:1.4rem; margin-bottom:clamp(2rem,4vw,3.2rem);
+  }
+  .section-kicker{
+    font-size:.72rem; letter-spacing:.24em; text-transform:uppercase; color:var(--brand);
+    display:block; margin-bottom:.5em;
+  }
+  .section-head h2{ font-size:clamp(1.7rem,1.3vw+1.2rem,2.5rem); margin:0; }
+  .section-head p{ max-width:24rem; margin:0; }
+
+  /* ---------------------------------------------------------
+     CONCEPT
+  --------------------------------------------------------- */
+  .concept-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); }
+  .concept-quote{
+    font-family:'Space Grotesk', sans-serif; font-size:clamp(1.1rem,.7vw+1rem,1.5rem);
+    line-height:1.45; color:var(--fg); border-left:2px solid var(--brand); padding-left:1.2rem;
+  }
+  @media (max-width:760px){ .concept-grid{ grid-template-columns:1fr; } }
+
+  /* ---------------------------------------------------------
+     TRACKLIST (USPs as record tracks)
+  --------------------------------------------------------- */
+  .tracklist{ list-style:none; margin:0; padding:0; border-top:1px solid var(--rule); }
+  .tracklist li{
+    display:grid; grid-template-columns:3.4rem 1fr; gap:1rem; align-items:baseline;
+    padding:1.1rem 0; border-bottom:1px solid var(--rule);
+  }
+  .tracklist .track-id{
+    font-family:'Space Grotesk', sans-serif; color:var(--brand); font-weight:700; font-size:.95rem;
+  }
+  .tracklist .track-name{ color:var(--fg); font-size:.98rem; }
+
+  /* ---------------------------------------------------------
+     SEITE A / SEITE B — signature module
+  --------------------------------------------------------- */
+  .side-switch{
+    display:inline-flex; border:1px solid var(--rule-amber); border-radius:999px;
+    padding:.3rem; margin-bottom:2.2rem; gap:.3rem;
+  }
+  .side-btn{
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:.85rem;
+    background:none; border:none; color:var(--muted); padding:.6em 1.4em;
+    border-radius:999px; cursor:pointer; letter-spacing:.03em;
+    transition:background .2s ease, color .2s ease;
+  }
+  .side-btn[aria-pressed="true"]{ background:var(--brand); color:var(--bg); }
+
+  .sleeve{
+    display:grid; grid-template-columns: .8fr 1.2fr; gap:clamp(2rem,4vw,3.5rem);
+    align-items:start; background:var(--surface); border:1px solid var(--rule);
+    padding:clamp(1.6rem,3vw,3rem);
+  }
+  .sleeve-disc{
+    position:relative; width:100%; max-width:16rem; aspect-ratio:1/1; margin:0 auto;
+    border-radius:50%;
+    background: repeating-radial-gradient(circle at center, #0c0509 0px,#0c0509 3px,#1c0e15 3px,#1c0e15 6px);
+    box-shadow:0 0 0 1px var(--rule-amber);
+    transition: transform .6s ease;
+  }
+  .sleeve-disc.flip{ transform:rotate(180deg); }
+  @media (prefers-reduced-motion: reduce){ .sleeve-disc{ transition:none; } }
+  .sleeve-disc .center{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:34%; aspect-ratio:1/1; border-radius:50%; background:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .sleeve-disc .center span{ font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--bg); font-size:.85rem; }
+  .sleeve-disc .hole{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:6%; aspect-ratio:1/1; border-radius:50%; background:var(--surface);
+  }
+
+  .side-panel{ display:none; }
+  .side-panel.active{ display:block; }
+  .menu-section-title{
+    font-family:'Space Grotesk', sans-serif; font-size:.78rem; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--accent); margin-bottom:1rem;
+  }
+  .menu-list{ list-style:none; margin:0 0 1.6rem; padding:0; }
+  .menu-list li{
+    display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0;
+    border-top:1px solid var(--rule);
+  }
+  .menu-list li:last-child{ border-bottom:1px solid var(--rule); }
+  .menu-item-name{ color:var(--fg); font-family:'Space Grotesk', sans-serif; font-size:.98rem; }
+  .menu-item-desc{ color:var(--muted); font-size:.82rem; display:block; margin-top:.2rem; }
+
+  @media (max-width:760px){ .sleeve{ grid-template-columns:1fr; } }
+
+  /* ---------------------------------------------------------
+     PROGRAMM (sparse hours-like notes — not a full hours grid)
+  --------------------------------------------------------- */
+  .programm-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--rule); }
+  .programm-card{ background:var(--bg); padding:1.8rem; }
+  .programm-card .when{
+    font-family:'Space Grotesk', sans-serif; color:var(--brand); font-size:.8rem;
+    letter-spacing:.14em; text-transform:uppercase; margin-bottom:.6rem; display:block;
+  }
+  .programm-card p{ margin:0; color:var(--fg); font-size:.92rem; }
+  @media (max-width:640px){ .programm-grid{ grid-template-columns:1fr; } }
+
+  /* ---------------------------------------------------------
+     ATMOSPHÄRE — circular photo crops
+  --------------------------------------------------------- */
+  .atmos-ring-grid{
+    display:flex; flex-wrap:wrap; gap:clamp(1.5rem,3vw,2.5rem); justify-content:flex-start;
+  }
+  .atmos-item{ text-align:center; width:clamp(9rem,20vw,12rem); }
+  .atmos-figure{
+    width:100%; aspect-ratio:1/1; border-radius:50%; overflow:hidden;
+    border:1px solid var(--rule-amber); background:var(--surface);
+  }
+  .atmos-figure img{ width:100%; height:100%; object-fit:cover; filter:saturate(.85) brightness(.92); }
+  .atmos-item figcaption{ margin-top:.8rem; font-size:.78rem; color:var(--muted); }
+
+  /* ---------------------------------------------------------
+     REVIEWS — ring gauge (concentric circle)
+  --------------------------------------------------------- */
+  .rating-wrap{ display:flex; align-items:center; gap:clamp(1.6rem,4vw,3rem); flex-wrap:wrap; }
+  .rating-ring{
+    position:relative; width:9.5rem; height:9.5rem; border-radius:50%; flex:0 0 auto;
+    background: conic-gradient(var(--brand) 0% 96%, var(--rule) 96% 100%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .rating-ring::before{
+    content:''; position:absolute; inset:.7rem; border-radius:50%; background:var(--bg);
+  }
+  .rating-ring .num{
+    position:relative; font-family:'Space Grotesk', sans-serif; font-weight:700;
+    font-size:2.2rem; color:var(--fg);
+  }
+  .rating-copy{ max-width:26rem; }
+
+  /* ---------------------------------------------------------
+     STANDORT / CONTACT
+  --------------------------------------------------------- */
+  .standort-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(2rem,4vw,4rem); }
+  .contact-list{ list-style:none; margin:0; padding:0; }
+  .contact-list li{ padding:1rem 0; border-top:1px solid var(--rule); display:grid; grid-template-columns:6rem 1fr; gap:1rem; font-size:.92rem; }
+  .contact-list li:last-child{ border-bottom:1px solid var(--rule); }
+  .contact-list dt{ color:var(--muted); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; }
+  .contact-list a{ text-decoration:none; color:var(--fg); }
+  .contact-list a:hover, .contact-list a:focus-visible{ color:var(--brand); }
+  .map-frame{ border:1px solid var(--rule); overflow:hidden; aspect-ratio:4/3; }
+  .map-frame iframe{ width:100%; height:100%; border:0; filter:grayscale(.3) sepia(.15) hue-rotate(280deg) contrast(1.05) brightness(.9); }
+  @media (max-width:780px){ .standort-grid{ grid-template-columns:1fr; } }
+
+  /* ---------------------------------------------------------
+     FOOTER
+  --------------------------------------------------------- */
+  footer.site{ border-top:1px solid var(--rule); padding:clamp(2.5rem,5vw,4rem) 0 6.5rem; }
+  .footer-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.6rem; }
+  .footer-brand{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.2rem; }
+  .footer-meta{ font-size:.8rem; color:var(--muted); max-width:22rem; }
+  .footer-meta a{ color:var(--brand); text-decoration:none; }
+  .footer-note{ margin-top:2.2rem; padding-top:1.4rem; border-top:1px solid var(--rule); font-size:.72rem; color:var(--muted); }
+
+  /* ---------------------------------------------------------
+     STICKY MOBILE BAR — no phone in data, use route + facebook
+  --------------------------------------------------------- */
+  .mobile-bar{ display:none; }
+  @media (max-width:760px){
+    .mobile-bar{
+      display:flex; position:fixed; inset:auto 0 0 0; z-index:55;
+      background:rgba(21,10,16,.97); border-top:1px solid var(--rule);
+      padding:.7rem var(--gutter); gap:.8rem; backdrop-filter:blur(8px);
+    }
+    .mobile-bar a{
+      flex:1; text-align:center; padding:.8em; font-size:.78rem;
+      text-decoration:none; letter-spacing:.03em; text-transform:uppercase;
+      border:1px solid var(--rule-amber); color:var(--fg); border-radius:999px;
+      font-family:'Space Grotesk', sans-serif; font-weight:600;
+    }
+    .mobile-bar a.primary{ background:var(--brand); color:var(--bg); border-color:var(--brand); }
+    body{ padding-bottom:4.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tonearm-fixed" aria-hidden="true" id="tonearmFixed">
+  <div class="pivot"></div>
+  <div class="arm" id="tonearmArm"></div>
+</div>
+
+<header class="site" id="siteHeader">
+  <a class="brandmark" href="#hero"><span class="dot" aria-hidden="true"></span>Roxy Vinyl Cafe</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="primary" id="primaryNav" aria-label="Hauptnavigation">
+    <a href="#konzept">Konzept</a>
+    <a href="#seiten">Seite A/B</a>
+    <a href="#programm">Programm</a>
+    <a href="#atmosphaere">Atmosphäre</a>
+    <a href="#bewertungen">Bewertungen</a>
+    <a href="#standort">Standort</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO — the record as the opening device -->
+  <section class="hero" id="hero">
+    <div class="hero-wash" aria-hidden="true">
+      <img src="https://static.wixstatic.com/media/5e13b4_79a33133299e42d497f01d7e95d1be5f~mv2.png" alt="" onerror="this.parentElement.style.display='none'">
+    </div>
+    <div class="hero-inner">
+      <div>
+        <span class="hero-eyebrow">Winterthur · Vinyl Hi-Fi Lounge</span>
+        <h1>Hierhin kommt man,<br>um zu <span>hören.</span></h1>
+        <p class="hero-lede">Kaffee, Cocktails &amp; Vinyl-Musik Lounge. Inspiriert von japanischen Jazz-Kissa-Lokalen — ein dediziertes Musik-Hörerlebnis in entspannter Café-Lounge-Atmosphäre.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#seiten">Menü ansehen</a>
+          <a class="btn btn-line" href="https://www.facebook.com/roxyvinylcafe/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="vinyl-wrap">
+        <div class="vinyl" role="img" aria-label="Illustration einer rotierenden Vinyl-Schallplatte">
+          <div class="vinyl-tonearm" aria-hidden="true">
+            <div class="rod"></div>
+            <div class="head"></div>
+          </div>
+          <div class="vinyl-label"><span>ROXY</span></div>
+          <div class="vinyl-hole"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONZEPT -->
+  <section class="section" id="konzept">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Konzept</span>
+          <h2>Jazz-Kissa, Winterthurer Art.</h2>
+        </div>
+      </div>
+      <div class="concept-grid">
+        <p class="concept-quote">„Ein Ort für Kaffee, Getränke, Vinyl Hi-Fi Musik und Kunstliebhaber in Winterthur — inspiriert von japanischen Jazz-Kissa-Lokalen.“</p>
+        <div>
+          <p>Bietet eine dedizierte Musik-Hörerlebnis in entspannter Café-Lounge-Atmosphäre.</p>
+          <ul class="tracklist">
+            <li><span class="track-id">A1</span><span class="track-name">Vinyl Hi-Fi Musik-Fokus mit dediziertem Hörerlebnis</span></li>
+            <li><span class="track-id">A2</span><span class="track-name">Japanische Jazz-Kissa Inspiration</span></li>
+            <li><span class="track-id">B1</span><span class="track-name">Regelmässige DJ-Sessions und Listening Parties</span></li>
+            <li><span class="track-id">B2</span><span class="track-name">Monatliche Zine-Club-Treffen</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEITE A / SEITE B — signature module -->
+  <section class="section" id="seiten">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Menü</span>
+          <h2>Seite A / Seite B</h2>
+        </div>
+        <p>Wie eine Platte: eine Seite zum Trinken, eine Seite zum Erleben.</p>
+      </div>
+
+      <div class="side-switch" role="group" aria-label="Seite wählen">
+        <button class="side-btn" id="btnSideA" type="button" aria-pressed="true">Seite A · Getränke</button>
+        <button class="side-btn" id="btnSideB" type="button" aria-pressed="false">Seite B · Veranstaltungen</button>
+      </div>
+
+      <div class="sleeve">
+        <div class="sleeve-disc" id="sleeveDisc" aria-hidden="true">
+          <div class="center"><span id="sleeveSideLabel">A</span></div>
+          <div class="hole"></div>
+        </div>
+
+        <div>
+          <div class="side-panel active" id="panelA">
+            <span class="menu-section-title">Getränke</span>
+            <ul class="menu-list">
+              <li>
+                <div><span class="menu-item-name">Kaffee</span><span class="menu-item-desc">Spezialitäten</span></div>
+              </li>
+              <li>
+                <div><span class="menu-item-name">Cocktails</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="side-panel" id="panelB">
+            <span class="menu-section-title">Veranstaltungen</span>
+            <ul class="menu-list">
+              <li><div><span class="menu-item-name">DJ-Sessions</span></div></li>
+              <li><div><span class="menu-item-name">Listening Parties</span></div></li>
+              <li><div><span class="menu-item-name">Vinyl Nights</span></div></li>
+              <li><div><span class="menu-item-name">Monatlicher Zine Club</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMM -->
+  <section class="section" id="programm">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Gut zu wissen</span>
+          <h2>Programm-Hinweise</h2>
+        </div>
+      </div>
+      <div class="programm-grid">
+        <div class="programm-card">
+          <span class="when">Di</span>
+          <p>Regelmässiges Programm: Cocktails, Stricken, Woll-Austausch.</p>
+        </div>
+        <div class="programm-card">
+          <span class="when">Juli–September</span>
+          <p>Sommerpause für DJ-Veranstaltungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATMOSPHÄRE -->
+  <section class="section" id="atmosphaere">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Atmosphäre</span>
+          <h2>Im Raum</h2>
+        </div>
+      </div>
+      <div class="atmos-ring-grid">
+        <div class="atmos-item">
+          <div class="atmos-figure">
+            <img src="https://static.wixstatic.com/media/5e13b4_79a33133299e42d497f01d7e95d1be5f~mv2.png"
+                 alt="Innenraum der Roxy Vinyl Cafe Lounge in Winterthur" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
+          <figcaption>Die Lounge</figcaption>
+        </div>
+        <div class="atmos-item">
+          <div class="atmos-figure">
+            <img src="https://static.wixstatic.com/media/5e13b4_9856f8afe3704ba0a9b12ebb3931644f%7Emv2.png"
+                 alt="Vinyl-Hörerlebnis im Roxy Vinyl Cafe" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
+          <figcaption>Hi-Fi Hörerlebnis</figcaption>
+        </div>
+        <div class="atmos-item">
+          <div class="atmos-figure">
+            <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png"
+                 alt="Atmosphäre im Roxy Vinyl Cafe" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
+          <figcaption>Atmosphäre</figcaption>
+        </div>
+        <div class="atmos-item">
+          <div class="atmos-figure">
+            <img src="https://static.wixstatic.com/media/5e13b4_a79658a9df5349da91173648e4ece63d~mv2.jpeg"
+                 alt="Kaffee und Cocktails im Roxy Vinyl Cafe" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
+          <figcaption>Kaffee &amp; Cocktails</figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEWERTUNGEN — ring gauge -->
+  <section class="section" id="bewertungen">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Bewertungen</span>
+          <h2>Auf Google gehört</h2>
+        </div>
+      </div>
+      <div class="rating-wrap">
+        <div class="rating-ring" role="img" aria-label="Google-Bewertung 4.8 von 5">
+          <span class="num">4.8</span>
+        </div>
+        <div class="rating-copy">
+          <p>Bewertung von 4.8 auf Google, basierend auf 222 Rezensionen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDORT -->
+  <section class="section" id="standort">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Standort</span>
+          <h2>Winterthur</h2>
+        </div>
+      </div>
+      <div class="standort-grid">
+        <div>
+          <dl class="contact-list">
+            <li><dt>Facebook</dt><dd><a href="https://www.facebook.com/roxyvinylcafe/" target="_blank" rel="noopener">facebook.com/roxyvinylcafe</a></dd></li>
+            <li><dt>Web</dt><dd><a href="https://www.roxycafe.ch/" target="_blank" rel="noopener">roxycafe.ch</a></dd></li>
+          </dl>
+        </div>
+        <div class="map-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=Roxy%20Vinyl%20Cafe%20Winterthur&amp;z=16&amp;output=embed"
+            title="Standort Roxy Vinyl Cafe, Winterthur"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">Roxy Vinyl Cafe</div>
+      <p class="footer-meta"><a href="https://www.facebook.com/roxyvinylcafe/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.roxycafe.ch/" target="_blank" rel="noopener">roxycafe.ch</a></p>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="primary" href="https://maps.google.com/maps?q=Roxy%20Vinyl%20Cafe%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route</a>
+  <a href="https://www.facebook.com/roxyvinylcafe/" target="_blank" rel="noopener">Facebook</a>
+</div>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  /* Header background stays constant here, but keep hook for future use */
+  var header = document.getElementById('siteHeader');
+
+  /* Mobile nav */
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('primaryNav');
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* Tonearm scroll indicator — angle follows scroll progress */
+  var arm = document.getElementById('tonearmArm');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function updateTonearm(){
+    if(reduceMotion || !arm) return;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - doc.clientHeight;
+    var progress = max > 0 ? (window.scrollY / max) : 0;
+    var angle = -18 + progress * 40; /* sweeps from -18deg to +22deg */
+    arm.style.transform = 'rotate(' + angle.toFixed(2) + 'deg)';
+  }
+  document.addEventListener('scroll', updateTonearm, { passive:true });
+  updateTonearm();
+
+  /* Seite A / Seite B toggle */
+  var btnA = document.getElementById('btnSideA');
+  var btnB = document.getElementById('btnSideB');
+  var panelA = document.getElementById('panelA');
+  var panelB = document.getElementById('panelB');
+  var disc = document.getElementById('sleeveDisc');
+  var sideLabel = document.getElementById('sleeveSideLabel');
+
+  function showSide(side){
+    var isA = side === 'A';
+    btnA.setAttribute('aria-pressed', String(isA));
+    btnB.setAttribute('aria-pressed', String(!isA));
+    panelA.classList.toggle('active', isA);
+    panelB.classList.toggle('active', !isA);
+    sideLabel.textContent = side;
+    disc.classList.toggle('flip', !isA);
+  }
+  btnA.addEventListener('click', function(){ showSide('A'); });
+  btnB.addEventListener('click', function(){ showSide('B'); });
+
+  /* Scroll reveal */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:.14 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+</script>
+
+</body>
+</html>

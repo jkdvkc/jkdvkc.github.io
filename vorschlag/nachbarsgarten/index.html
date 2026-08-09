@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nachbarsgarten Winterthur — Mediterrane Küche im Garten</title>
+<meta name="description" content="Nachbarsgarten Winterthur: fein-freche mediterrane Küche in wohnzimmerähnlichem Restaurant mit grossem Garten. Personalisierte 3-5 Gänge Menüs, Di–Sa ab 17 Uhr.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nachbarsgarten Winterthur — Mediterrane Küche im Garten">
+<meta property="og:description" content="Gemütliches Restaurant mit kreativen Gerichten: fein-freche mediterrane Küche, 50 Plätze im Garten, personalisierte Menüs.">
+<meta property="og:url" content="https://nachbarsgarten.ch/">
+<meta property="og:image" content="https://nachbarsgarten.ch/wp-content/uploads/sites/27/yootheme/cache/24/PHOTO-2020-08-02-16-54-20_1-241199be.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&amp;family=Karla:wght@400;500;600;700&amp;family=Caveat:wght@500;600&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Nachbarsgarten",
+  "description": "Gemütliches Restaurant mit kreativen, mediterranen Gerichten und grossem Garten in Winterthur.",
+  "url": "https://nachbarsgarten.ch/",
+  "telephone": "+41 52 534 89 47",
+  "email": "info@nachbarsgarten.ch",
+  "servesCuisine": ["Mediterranean", "Asian"],
+  "image": "https://nachbarsgarten.ch/wp-content/uploads/sites/27/yootheme/cache/24/PHOTO-2020-08-02-16-54-20_1-241199be.jpg",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "371"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "17:00", "closes": "23:30" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg:#faf6ec;
+    --surface:#eee4cd;
+    --fg:#23301c;
+    --muted:#51603f;
+    --brand:#3f5e2e;
+    --accent:#c1602f;
+  }
+  *,*::before,*::after {
+    box-sizing:border-box;
+  }
+  html {
+    scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior:auto;
+    }
+  }
+  body {
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Karla', system-ui, sans-serif;
+    font-size:clamp(15px, 0.4vw + 14px, 17.5px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img {
+    max-width:100%;
+    display:block;
+  }
+  a {
+    color:inherit;
+  }
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  :focus-visible {
+    outline:3px solid var(--accent);
+    outline-offset:3px;
+  }
+  h1,h2,h3 {
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.02;
+    margin:0;
+  }
+  .hand {
+    font-family:'Caveat', cursive;
+  }
+  .wrap {
+    max-width:1120px;
+    margin:0 auto;
+    padding-inline:clamp(1.1rem, 4vw, 2.4rem);
+  }
+  .skip-link {
+    position:absolute;
+    left:1rem;
+    top:-3rem;
+    background:var(--accent);
+    color:#fff;
+    padding:0.6rem 1rem;
+    font-weight:600;
+    z-index:100;
+    transition:top .2s ease;
+  }
+  .skip-link:focus {
+    top:1rem;
+  }
+  .reveal {
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.is-visible {
+    opacity:1;
+    transform:none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity:1;
+      transform:none;
+      transition:none;
+    }
+  }
+  /* fence divider */
+  .fence {
+    height:22px;
+    overflow:hidden;
+    background:var(--bg);
+  }
+  .fence::before {
+    content:"";
+    display:block;
+    height:100%;
+    background-image: repeating-linear-gradient(90deg, var(--brand) 0 6px, transparent 6px 26px);
+    opacity:0.55;
+  }
+  .fence.on-surface {
+    background:var(--surface);
+  }
+  /* header */
+  header.site {
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:var(--bg);
+    border-bottom:2px solid var(--fg);
+  }
+  .nav-row {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:0.7rem;
+    gap:1rem;
+  }
+  .wordmark {
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    text-decoration:none;
+  }
+  .wordmark img {
+    height:2.1rem;
+    width:auto;
+  }
+  .wordmark span {
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.25rem;
+    color:var(--fg);
+  }
+  nav.primary ul {
+    display:flex;
+    gap:clamp(0.8rem, 2vw, 1.5rem);
+    flex-wrap:wrap;
+  }
+  nav.primary a {
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.92rem;
+    color:var(--muted);
+    border-bottom:2px solid transparent;
+    padding-bottom:2px;
+  }
+  nav.primary a:hover {
+    color:var(--brand);
+    border-color:var(--accent);
+  }
+  @media (max-width:680px) {
+    nav.primary ul {
+      gap:0.6rem 0.9rem;
+      font-size:0.85rem;
+    }
+  }
+  /* hero */
+  .hero {
+    position:relative;
+    padding-block:clamp(2.6rem, 7vw, 4.6rem) clamp(2rem, 5vw, 3rem);
+  }
+  .hero-grid {
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap:clamp(1.6rem, 4vw, 3rem);
+    align-items:center;
+  }
+  @media (max-width:860px) {
+    .hero-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .eyebrow {
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    color:var(--accent);
+    margin-bottom:0.7rem;
+  }
+  .hero h1 {
+    font-size:clamp(2.6rem, 6.6vw, 4.6rem);
+    color:var(--brand);
+  }
+  .hero h1 .hand {
+    display:block;
+    color:var(--accent);
+    font-size:0.55em;
+    font-weight:600;
+    margin-top:0.15em;
+  }
+  .hero-tag {
+    margin-top:1.1rem;
+    max-width:38ch;
+    font-size:1.08rem;
+    color:var(--fg);
+  }
+  .hero-usps {
+    margin-top:1.4rem;
+    display:flex;
+    flex-direction:column;
+    gap:0.55rem;
+  }
+  .hero-usps li {
+    display:flex;
+    gap:0.6rem;
+    align-items:baseline;
+    font-weight:600;
+  }
+  .hero-usps li::before {
+    content:"🌿";
+    font-size:0.85em;
+  }
+  .hero-cta {
+    margin-top:1.6rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.8rem;
+  }
+  .btn {
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    font-weight:700;
+    text-decoration:none;
+    padding:0.75rem 1.15rem;
+    border-radius:100px;
+    border:2px solid var(--brand);
+  }
+  .btn.solid {
+    background:var(--brand);
+    color:#fff;
+  }
+  .btn.solid:hover {
+    background:var(--fg);
+    border-color:var(--fg);
+  }
+  .btn.ghost {
+    color:var(--brand);
+  }
+  .btn.ghost:hover {
+    background:var(--brand);
+    color:#fff;
+  }
+  /* garden plan device */
+  .plan-frame {
+    background:var(--surface);
+    border:2px solid var(--fg);
+    border-radius:14px;
+    padding:1.3rem;
+    position:relative;
+  }
+  .plan-frame::before {
+    content:"Gartenplan";
+    position:absolute;
+    top:-0.75rem;
+    left:1.1rem;
+    background:var(--bg);
+    padding-inline:0.5rem;
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    color:var(--brand);
+  }
+  .plan-grid {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:0.6rem;
+    margin-top:0.6rem;
+  }
+  .plot {
+    aspect-ratio:1/1;
+    border-radius:10px;
+    background: repeating-linear-gradient(45deg, rgba(63,94,46,0.16) 0 4px, transparent 4px 12px), #e4d8b8;
+    border:1.5px solid rgba(35,48,28,0.25);
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:0.4rem;
+    position:relative;
+  }
+  .plot .seed {
+    width:0.5rem;
+    height:0.5rem;
+    border-radius:50%;
+    background:var(--brand);
+    position:absolute;
+  }
+  .plot .row {
+    position:absolute;
+    inset:12% 12% 30% 12%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+  }
+  .plot .row span {
+    width:0.42rem;
+    height:0.42rem;
+    border-radius:50% 50% 50% 0;
+    background:var(--brand);
+    transform:rotate(45deg);
+  }
+  .plot-label {
+    font-size:0.68rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--muted);
+    background:rgba(250,246,236,0.85);
+    padding:1px 5px;
+    border-radius:5px;
+  }
+  .plan-note {
+    margin-top:1rem;
+    font-size:0.88rem;
+    color:var(--muted);
+  }
+  /* section shell */
+  section {
+  }
+  .section-pad {
+    padding-block:clamp(2.4rem, 6vw, 4rem);
+  }
+  .on-surface {
+    background:var(--surface);
+  }
+  .kicker {
+    font-weight:700;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    color:var(--accent);
+    margin-bottom:0.5rem;
+  }
+  h2 {
+    font-size:clamp(2rem, 4.6vw, 3rem);
+    color:var(--brand);
+  }
+  .lede {
+    max-width:56ch;
+    color:var(--muted);
+    margin-top:0.7rem;
+  }
+  /* beds section — dominant structural device */
+  .beds {
+    margin-top:2.2rem;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.4rem;
+  }
+  @media (max-width:900px) {
+    .beds {
+      grid-template-columns:1fr;
+      max-width:520px;
+    }
+  }
+  .bed {
+    background:var(--bg);
+    border:2px solid var(--fg);
+    border-radius:16px;
+    padding:1.4rem 1.3rem 1.6rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .bed::before {
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:10px;
+    background-image: repeating-linear-gradient(90deg, var(--accent) 0 10px, transparent 10px 20px);
+    opacity:0.7;
+  }
+  .bed .bed-no {
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color:var(--accent);
+  }
+  .bed h3 {
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    color:var(--brand);
+    margin-top:0.3rem;
+  }
+  .bed p {
+    margin-top:0.6rem;
+    color:var(--fg);
+    font-size:0.98rem;
+  }
+  .sprout {
+    display:flex;
+    gap:0.3rem;
+    margin-top:1rem;
+  }
+  .sprout span {
+    width:0.55rem;
+    height:0.9rem;
+    border-radius:0 100% 0 100%;
+    background:var(--brand);
+    opacity:0.8;
+  }
+  .sprout span:nth-child(2) {
+    opacity:0.6;
+  }
+  .sprout span:nth-child(3) {
+    opacity:0.4;
+  }
+  /* photo section */
+  .garden-photo {
+    margin-top:2rem;
+    border:2px solid var(--fg);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:10px 10px 0 var(--surface);
+  }
+  .garden-photo img {
+    width:100%;
+    height:clamp(240px, 42vw, 460px);
+    object-fit:cover;
+  }
+  .garden-photo-cap {
+    margin-top:0.8rem;
+    font-size:0.88rem;
+    color:var(--muted);
+  }
+  /* jetzt offen signature module */
+  .status-wrap {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns: minmax(240px, 360px) 1fr;
+    gap:2rem;
+    align-items:stretch;
+  }
+  @media (max-width:800px) {
+    .status-wrap {
+      grid-template-columns:1fr;
+    }
+  }
+  .status-card {
+    background:var(--bg);
+    border:2px solid var(--fg);
+    border-radius:16px;
+    padding:1.4rem;
+  }
+  .badge-light {
+    display:inline-flex;
+    align-items:center;
+    gap:0.55rem;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:0.82rem;
+    letter-spacing:0.05em;
+    padding:0.45rem 0.8rem;
+    border-radius:100px;
+    border:2px solid currentColor;
+  }
+  .badge-light .dot {
+    width:0.6rem;
+    height:0.6rem;
+    border-radius:50%;
+    background:currentColor;
+  }
+  .badge-light.is-open {
+    color:#2f6d33;
+  }
+  .badge-light.is-closed {
+    color:var(--accent);
+  }
+  @media (prefers-reduced-motion:no-preference) {
+    .badge-light.is-open .dot {
+      animation:pulse 1.6s ease-in-out infinite;
+    }
+  }
+  @keyframes pulse {
+    0%,100% {
+      box-shadow:0 0 0 0 rgba(47,109,51,0.45);
+    }
+    50% {
+      box-shadow:0 0 0 6px rgba(47,109,51,0);
+    }
+  }
+  .status-headline {
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    margin-top:0.8rem;
+    color:var(--brand);
+  }
+  .status-sub {
+    margin-top:0.5rem;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+  .status-clock {
+    margin-top:0.9rem;
+    font-size:0.82rem;
+    color:var(--muted);
+  }
+  table.hours {
+    width:100%;
+    border-collapse:collapse;
+  }
+  table.hours caption {
+    text-align:left;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    font-size:0.78rem;
+    color:var(--muted);
+    margin-bottom:0.6rem;
+  }
+  table.hours th,table.hours td {
+    text-align:left;
+    padding:0.7rem 0.5rem;
+    border-bottom:1px solid rgba(35,48,28,0.18);
+  }
+  table.hours tr.today th,table.hours tr.today td {
+    color:var(--accent);
+    font-weight:700;
+  }
+  /* menu concept */
+  .menu-card {
+    margin-top:2rem;
+    background:var(--surface);
+    border:2px dashed var(--brand);
+    border-radius:16px;
+    padding:1.6rem;
+    max-width:64ch;
+  }
+  .menu-card h3 {
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    color:var(--brand);
+  }
+  .menu-card p {
+    margin-top:0.6rem;
+  }
+  .menu-card .price-note {
+    margin-top:1rem;
+    font-weight:700;
+    color:var(--accent);
+  }
+  /* stimmen */
+  .stimmen-row {
+    margin-top:1.6rem;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    flex-wrap:wrap;
+  }
+  .rating-big {
+    font-family:'Fraunces', serif;
+    font-size:clamp(3.2rem, 9vw, 5.2rem);
+    color:var(--accent);
+    line-height:0.85;
+  }
+  .stars {
+    font-size:1.3rem;
+    color:var(--accent);
+    letter-spacing:0.1em;
+  }
+  .stimmen-copy {
+    max-width:44ch;
+    color:var(--muted);
+  }
+  /* contact */
+  .contact-grid {
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+  }
+  @media (max-width:820px) {
+    .contact-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .info-list {
+    display:grid;
+    gap:1rem;
+  }
+  .info-list dt {
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    color:var(--muted);
+  }
+  .info-list dd {
+    margin:0.15rem 0 0;
+    font-size:1.05rem;
+  }
+  .info-list a {
+    text-decoration:underline;
+    text-decoration-color:var(--accent);
+  }
+  .note-honest {
+    margin-top:0.4rem;
+    font-size:0.85rem;
+    color:var(--muted);
+    font-style:italic;
+  }
+  .map-frame {
+    border:2px solid var(--fg);
+    border-radius:16px;
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe {
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  footer.site {
+    padding-block:2.2rem 6.5rem;
+    border-top:2px solid var(--fg);
+    background:var(--surface);
+  }
+  .footer-grid {
+    display:flex;
+    justify-content:space-between;
+    gap:1.2rem;
+    flex-wrap:wrap;
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  .footer-grid a {
+    text-decoration:underline;
+  }
+  .footer-note {
+    margin-top:1rem;
+    font-size:0.75rem;
+    color:var(--muted);
+    opacity:0.85;
+  }
+  .mobile-bar {
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:60;
+    display:flex;
+    border-top:2px solid var(--fg);
+    background:var(--brand);
+  }
+  .mobile-bar a {
+    flex:1;
+    text-align:center;
+    padding:0.9rem 0.5rem;
+    font-weight:700;
+    text-decoration:none;
+    color:#fff;
+  }
+  .mobile-bar a.alt {
+    background:var(--accent);
+  }
+  @media (min-width:760px) {
+    .mobile-bar {
+      display:none;
+    }
+  }
+  @media (max-width:759px) {
+    body {
+      padding-bottom:3.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">
+      <img src="https://nachbarsgarten.ch/wp-content/uploads/sites/27/2021/07/Nachbarsgarten_black.svg" alt="Nachbarsgarten Logo" onerror="this.style.display='none'">
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#plan">Der Garten</a></li>
+        <li><a href="#offen">Jetzt offen</a></li>
+        <li><a href="#menue">Menü</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Winterthur · Mediterrane Küche</p>
+        <h1>Nachbarsgarten<span class="hand">wie beim Nachbarn im Garten essen</span></h1>
+        <p class="hero-tag">Gemütliche, gesellige Atmosphäre in wohnzimmerähnlichem Innenraum mit bis zu 30 Plätzen innen und 50 im Garten. Fein-freche Küche mit Klassikern und neuen, kreativen Kreationen.</p>
+        <ul class="hero-usps">
+          <li>Kreative, mediterrane Küche</li>
+          <li>Grosser Garten mit 50 Plätzen</li>
+          <li>Personalisierte 3–5 Gänge Menüs</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn solid" href="tel:+41525348947">Tisch anrufen</a>
+          <a class="btn ghost" href="#plan">Den Garten entdecken</a>
+        </div>
+      </div>
+      <div class="plan-frame reveal">
+        <div class="plan-grid" aria-hidden="true">
+          <div class="plot"><span class="row"><span></span><span></span><span></span></span><span class="plot-label">Küche</span></div>
+          <div class="plot"><span class="row"><span></span><span></span></span><span class="plot-label">Garten</span></div>
+          <div class="plot"><span class="row"><span></span><span></span><span></span><span></span></span><span class="plot-label">Menü</span></div>
+          <div class="plot"><span class="row"><span></span><span></span></span><span class="plot-label">Küche</span></div>
+          <div class="plot"><span class="row"><span></span><span></span><span></span></span><span class="plot-label">Garten</span></div>
+          <div class="plot"><span class="row"><span></span></span><span class="plot-label">Menü</span></div>
+        </div>
+        <p class="plan-note">Ein informeller Plan unseres Gartens — drei Beete, drei Ideen: Küche, Garten, Menü.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <!-- ============ DER PLAN — drei Beete (Strukturdevice) ============ -->
+  <section class="section-pad" id="plan">
+    <div class="wrap">
+      <p class="kicker">Der Plan</p>
+      <h2>Drei Beete,<br>ein Garten</h2>
+      <p class="lede">So wächst bei uns, was auf den Tisch kommt — nicht botanisch gemeint, aber genauso durchdacht angelegt wie ein echtes Beet.</p>
+      <div class="beds">
+        <div class="bed reveal">
+          <span class="bed-no">Beet 01</span>
+          <h3>Die Küche</h3>
+          <p>Fein-freche Küche zwischen mediterran und asiatisch: Klassiker treffen auf neue, kreative Kreationen.</p>
+          <div class="sprout" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+        <div class="bed reveal">
+          <span class="bed-no">Beet 02</span>
+          <h3>Der Garten</h3>
+          <p>Wohnzimmerähnlicher Innenraum mit bis zu 30 Plätzen — draussen wachsen 50 weitere Plätze im grossen Garten.</p>
+          <div class="sprout" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+        <div class="bed reveal">
+          <span class="bed-no">Beet 03</span>
+          <h3>Das Menü</h3>
+          <p>Personalisierte 3–5 Gänge Menüs statt Karte von der Stange — für jeden Tisch neu zusammengestellt.</p>
+          <div class="sprout" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <!-- ============ BLICK IN DEN GARTEN — einziges Foto ============ -->
+  <section class="section-pad on-surface">
+    <div class="wrap">
+      <p class="kicker">Ein Blick hinein</p>
+      <h2>So sitzt man<br>bei uns</h2>
+      <div class="garden-photo reveal">
+        <img
+          src="https://nachbarsgarten.ch/wp-content/uploads/sites/27/yootheme/cache/24/PHOTO-2020-08-02-16-54-20_1-241199be.jpg"
+          alt="Innenraum des Nachbarsgarten mit gedeckten Tischen"
+          loading="lazy"
+          onerror="this.closest('.garden-photo').style.display='none'">
+      </div>
+      <p class="garden-photo-cap">Einziges verfügbares Bildmaterial der Website — bewusst zurückhaltend eingesetzt statt aufgeblasen zur Galerie.</p>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE MODUL: JETZT OFFEN? ============ -->
+  <section class="section-pad" id="offen">
+    <div class="wrap">
+      <p class="kicker">Live-Status</p>
+      <h2>Jetzt offen<br>im Garten?</h2>
+      <p class="lede">Der Badge unten rechnet live gegen die echten Öffnungszeiten — Di–Sa ab 17 Uhr, sonst geschlossen.</p>
+      <div class="status-wrap reveal">
+        <div class="status-card">
+          <span class="badge-light" id="status-badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="status-text">Status wird berechnet…</span>
+          </span>
+          <p class="status-headline" id="status-headline">Einen Moment…</p>
+          <p class="status-sub" id="status-sub"></p>
+          <p class="status-clock" id="status-clock"></p>
+        </div>
+        <div>
+          <table class="hours" id="hours-table">
+            <caption>Öffnungszeiten</caption>
+            <thead><tr><th scope="col">Tage</th><th scope="col">Zeit</th></tr></thead>
+            <tbody>
+              <tr data-day="2,3,4,5,6"><th scope="row">Di–Sa</th><td>17:00–23:30</td></tr>
+              <tr data-day="0,1"><th scope="row">So–Mo</th><td>Geschlossen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <!-- ============ MENÜ-KONZEPT ============ -->
+  <section class="section-pad on-surface" id="menue">
+    <div class="wrap">
+      <p class="kicker">Was auf den Tisch kommt</p>
+      <h2>Kein festes Menü —<br>ein Konzept</h2>
+      <p class="lede">Bei uns gibt es keine gedruckte Standardkarte. Stattdessen entsteht das Menü für jeden Tisch neu.</p>
+      <div class="menu-card reveal">
+        <span class="bed-no">Menükonzept</span>
+        <h3>Klassische 3–5 Gänge Menüs</h3>
+        <p>Timeless classics alongside new, creative creations — zeitlose Klassiker treffen auf neue, kreative Kreationen, persönlich für Ihren Tisch zusammengestellt.</p>
+        <p class="price-note">Preise auf Anfrage — je nach Gängen und Zusammenstellung.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STIMMEN ============ -->
+  <section class="section-pad" id="stimmen">
+    <div class="wrap">
+      <p class="kicker">Stimmen aus dem Garten</p>
+      <div class="stimmen-row reveal">
+        <div>
+          <div class="rating-big">4.8</div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+        </div>
+        <p class="stimmen-copy">371 Bewertungen bei Google — gesammelt von Gästen, die sich bei uns wie bei Nachbarn im Garten gefühlt haben.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="section-pad on-surface" id="kontakt">
+    <div class="wrap">
+      <p class="kicker">Anfahrt &amp; Kontakt</p>
+      <h2>Auf einen Teller<br>vorbeikommen</h2>
+      <div class="contact-grid">
+        <div class="reveal">
+          <dl class="info-list">
+            <div>
+              <dt>Telefon</dt>
+              <dd><a href="tel:+41525348947">+41 52 534 89 47</a></dd>
+            </div>
+            <div>
+              <dt>E-Mail</dt>
+              <dd><a href="mailto:info@nachbarsgarten.ch">info@nachbarsgarten.ch</a></dd>
+            </div>
+            <div>
+              <dt>Adresse</dt>
+              <dd>Winterthur</dd>
+              <p class="note-honest">Genaue Adresse ist auf der Restaurant-Website nicht angegeben.</p>
+            </div>
+            <div>
+              <dt>Website</dt>
+              <dd><a href="https://nachbarsgarten.ch/" target="_blank" rel="noopener">nachbarsgarten.ch</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Nachbarsgarten%20Winterthur&amp;z=16&amp;output=embed"
+            title="Karte: Nachbarsgarten, Winterthur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span>Nachbarsgarten · Winterthur</span>
+      <span><a href="tel:+41525348947">+41 52 534 89 47</a> · <a href="mailto:info@nachbarsgarten.ch">info@nachbarsgarten.ch</a></span>
+      <span><a href="https://nachbarsgarten.ch/" target="_blank" rel="noopener">nachbarsgarten.ch</a></span>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525348947">📞 Anrufen</a>
+  <a class="alt" href="mailto:info@nachbarsgarten.ch">✉️ Schreiben</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Signature module: jetzt offen im Garten? ---------------- */
+  // 0=So,1=Mo,2=Di,3=Mi,4=Do,5=Fr,6=Sa — real hours from JSON: Di–Sa 17:00–23:30, So–Mo geschlossen
+  var openDays = [2,3,4,5,6];
+  var OPEN_H = 17, CLOSE_H = 23.5;
+
+  function computeStatus(now){
+    var day = now.getDay();
+    var hour = now.getHours() + now.getMinutes()/60;
+    if (openDays.indexOf(day) !== -1 && hour >= OPEN_H && hour < CLOSE_H){
+      return { state:"open", until: CLOSE_H };
+    }
+    if (openDays.indexOf(day) !== -1 && hour < OPEN_H){
+      return { state:"soon", opens: OPEN_H };
+    }
+    return { state:"closed" };
+  }
+  function fmt(h){
+    var hh = Math.floor(h), mm = Math.round((h % 1) * 60);
+    return (hh<10?"0":"")+hh+":"+(mm<10?"0":"")+mm;
+  }
+  var dayNames = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+
+  function render(){
+    var now = new Date();
+    var r = computeStatus(now);
+    var badge = document.getElementById("status-badge");
+    var text = document.getElementById("status-text");
+    var headline = document.getElementById("status-headline");
+    var sub = document.getElementById("status-sub");
+    var clock = document.getElementById("status-clock");
+
+    badge.classList.remove("is-open","is-closed");
+    if (r.state === "open"){
+      badge.classList.add("is-open");
+      text.textContent = "Geöffnet";
+      headline.textContent = "Ja — der Garten ist offen.";
+      sub.textContent = "Geöffnet bis " + fmt(r.until) + " Uhr.";
+    } else if (r.state === "soon"){
+      badge.classList.add("is-closed");
+      text.textContent = "Bald offen";
+      headline.textContent = "Noch geschlossen.";
+      sub.textContent = "Öffnet heute um " + fmt(r.opens) + " Uhr.";
+    } else {
+      badge.classList.add("is-closed");
+      text.textContent = "Geschlossen";
+      headline.textContent = "Gerade zu.";
+      sub.textContent = "Geöffnet Di–Sa, 17:00–23:30 Uhr.";
+    }
+    clock.textContent = dayNames[now.getDay()] + " · " + now.toLocaleTimeString("de-CH",{hour:"2-digit",minute:"2-digit"}) + " Uhr";
+
+    var rows = document.querySelectorAll("#hours-table tbody tr");
+    rows.forEach(function(row){
+      var days = row.dataset.day.split(",").map(Number);
+      row.classList.toggle("today", days.indexOf(now.getDay()) !== -1);
+    });
+  }
+  render();
+  setInterval(render, 60000);
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
+      });
+    }, { threshold:0.15 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+
+</body>
+</html>

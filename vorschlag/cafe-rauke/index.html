@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rauke — barrierefreies, kinderfreundliches Café in Winterthur</title>
+<meta name="description" content="Rauke: gemütliches, farbenfrohes und barrierefreies Café in Winterthur mit ökologisch verträglichen Kaffee-Spezialitäten, hausgemachten Desserts und Kindergeburtstags-Paketen.">
+<meta property="og:title" content="Rauke — Café für alle, Winterthur">
+<meta property="og:description" content="Barrierefreies, kinderfreundliches und nachhaltiges Café an der Zeughausstrasse 52, Winterthur. Kindergeburtstags-Pakete, Minimal-Waste, hausgemachte Desserts.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rauke.ch/wp-content/uploads/2026/07/Rauk-it-3-768x543.png">
+<meta property="og:url" content="https://rauke.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Rauke",
+  "image": "https://rauke.ch/wp-content/uploads/2026/07/Rauk-it-3-768x543.png",
+  "url": "https://rauke.ch/",
+  "telephone": "+41774443731",
+  "email": "info@rauke.ch",
+  "servesCuisine": "Café, Catering",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zeughausstrasse 52",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "73"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"], "opens": "09:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "17:00" }
+  ],
+  "sameAs": ["https://www.facebook.com/rauke.winterthur/"]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;
+  --surface:#FFF9E8;
+  --fg:#2A2013;
+  --muted:#5C5346;
+  --brand:#8B7355;
+  --accent:#FFD700;
+  --brand-strong:#6E5A3A;
+  --brand-dark:#4A3B2A;
+  --good:#1F6B3A;
+  --display:'Baloo 2', sans-serif;
+  --body-font:'Atkinson Hyperlegible', sans-serif;
+  --edge: clamp(1.25rem, 4vw, 3.5rem);
+  --radius: 1.1rem;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+body{
+  margin:0;background:var(--bg);color:var(--fg);font-family:var(--body-font);
+  font-size:clamp(1.05rem, 1rem + 0.28vw, 1.2rem);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:var(--brand-strong);}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.15;margin:0 0 .5em;color:var(--fg);}
+p{margin:0 0 1em;}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--edge);padding-right:var(--edge);}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip-link{
+  position:absolute;left:1rem;top:-5rem;background:var(--fg);color:#fff;padding:1rem 1.4rem;
+  border-radius:.6rem;z-index:200;transition:top .2s ease;font-weight:700;font-size:1.05rem;
+}
+.skip-link:focus{top:1rem;}
+:focus-visible{outline:3px solid var(--brand-strong);outline-offset:3px;border-radius:4px;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:var(--brand-strong);
+  background:var(--surface);border-radius:2rem;padding:.4rem 1rem;
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none;
+  border-radius:2.5rem;padding:1rem 1.7rem;min-height:56px;border:2px solid transparent;cursor:pointer;
+}
+.btn-primary{background:var(--brand-strong);color:#fff;}
+.btn-primary:hover{background:var(--brand-dark);}
+.btn-outline{background:#fff;color:var(--brand-strong);border-color:var(--brand-strong);}
+.btn-outline:hover{background:var(--surface);}
+.btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed;pointer-events:none;}
+.reveal{opacity:1;}
+.reveal.js-animate{opacity:0;transform:translateY(16px);transition:opacity .5s ease, transform .5s ease;}
+.reveal.js-animate.is-visible{opacity:1;transform:none;}
+
+/* ---------- header ---------- */
+header.site{position:sticky;top:0;z-index:100;background:#fff;border-bottom:3px solid var(--surface);}
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem var(--edge);flex-wrap:wrap;}
+.brand-lockup{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
+.brand-lockup img{height:42px;width:auto;}
+.brand-lockup span{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--fg);}
+.nav-links{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-weight:700;font-size:.95rem;flex-wrap:wrap;}
+.nav-links a{text-decoration:none;padding:.4rem .2rem;border-bottom:3px solid transparent;}
+.nav-links a:hover{border-color:var(--accent);}
+@media (max-width:760px){ .nav-links{display:none;} }
+
+/* ---------- hero ---------- */
+.hero{background:var(--surface);padding:clamp(2.5rem,6vw,5rem) 0;}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+.hero h1{font-size:clamp(2.4rem,4vw + 1rem,4rem);max-width:14ch;}
+.hero .lede{font-size:clamp(1.1rem,1.6vw,1.35rem);max-width:44ch;color:var(--fg);}
+.badge-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0 1.8rem;}
+.badge{
+  display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:2px solid var(--brand);
+  border-radius:2rem;padding:.5rem 1rem;font-weight:700;font-size:.92rem;color:var(--brand-dark);
+}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;}
+.hero-media{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid rgba(42,32,19,.1);}
+.hero-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.status-chip{
+  display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem;padding:.5rem 1rem;
+  border-radius:2rem;background:#fff;border:2px solid var(--muted);color:var(--muted);margin-top:1rem;
+}
+.status-chip.is-open{border-color:var(--good);color:var(--good);}
+.status-chip::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:currentColor;}
+@media (max-width:860px){ .hero-inner{grid-template-columns:1fr;} .hero-media{order:-1;} }
+
+/* ---------- section scaffolding ---------- */
+section{padding:clamp(3rem,7vw,5.5rem) 0;}
+.section-head{max-width:52ch;margin-bottom:2.4rem;}
+.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);}
+.section-head p{color:var(--muted);font-size:1.05rem;}
+
+/* ---------- capability cards ---------- */
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.cap-card{background:var(--surface);border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:.8rem;}
+.cap-card .icon{font-size:2.2rem;line-height:1;}
+.cap-card h3{font-size:1.25rem;margin:0;}
+.cap-card p{margin:0;color:var(--fg);font-size:1rem;}
+.cap-card img{border-radius:.7rem;margin-top:.4rem;aspect-ratio:16/9;object-fit:cover;width:100%;}
+@media (max-width:900px){ .cap-grid{grid-template-columns:1fr;} }
+
+/* ---------- quote strip ---------- */
+.quote-strip{padding:2.2rem 0;background:var(--fg);}
+.quote-strip-inner{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;color:#fff;}
+.quote-stars{color:var(--accent);font-size:1.6rem;letter-spacing:.06em;}
+.quote-strip-inner p{margin:0;font-size:1.05rem;color:rgba(255,255,255,.9);max-width:56ch;}
+
+/* ---------- planner ---------- */
+.planner{background:var(--fg);color:#fff;}
+.planner .section-head p{color:rgba(255,255,255,.75);}
+.planner .eyebrow{background:rgba(255,255,255,.1);color:var(--accent);}
+.planner-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;}
+fieldset{border:0;margin:0;padding:0;}
+legend{font-family:var(--display);font-weight:700;font-size:1.2rem;margin-bottom:1rem;padding:0;}
+.check-row{
+  display:flex;align-items:flex-start;gap:1rem;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.18);
+  border-radius:var(--radius);padding:1.1rem 1.2rem;margin-bottom:.9rem;cursor:pointer;min-height:56px;
+}
+.check-row:hover{border-color:var(--accent);}
+.check-row input{width:1.5rem;height:1.5rem;flex:0 0 auto;margin-top:.15rem;accent-color:var(--accent);}
+.check-row .ct{font-weight:700;display:block;}
+.check-row .cd{font-size:.92rem;color:rgba(255,255,255,.72);margin-top:.2rem;}
+.pkg-picker{margin:1rem 0 0 0;padding-left:0;list-style:none;display:none;}
+.pkg-picker.is-open{display:block;}
+.pkg-row{
+  display:flex;align-items:flex-start;gap:.9rem;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.18);
+  border-radius:.8rem;padding:.9rem 1rem;margin-bottom:.7rem;cursor:pointer;
+}
+.pkg-row input{width:1.3rem;height:1.3rem;margin-top:.2rem;accent-color:var(--accent);}
+.pkg-row b{display:block;}
+.pkg-row .price{color:var(--accent);font-weight:700;}
+.pkg-row .desc{font-size:.88rem;color:rgba(255,255,255,.7);}
+.result-panel{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:1.6rem;min-height:280px;}
+.result-panel h3{font-size:1.1rem;color:var(--accent);margin-bottom:.9rem;}
+.result-card{border-bottom:1px solid rgba(255,255,255,.15);padding:.9rem 0;}
+.result-card:last-child{border-bottom:0;}
+.result-card h4{margin:0 0 .35rem;font-size:1.05rem;}
+.result-card ul{margin:0;padding-left:1.2rem;}
+.result-card li{margin-bottom:.3rem;font-size:.95rem;color:rgba(255,255,255,.85);}
+.result-empty{color:rgba(255,255,255,.65);font-style:italic;}
+.planner-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.4rem;}
+@media (max-width:860px){ .planner-grid{grid-template-columns:1fr;} }
+
+/* ---------- birthday table ---------- */
+.pkg-table{width:100%;border-collapse:collapse;margin-top:1rem;}
+.pkg-table caption{text-align:left;font-weight:700;margin-bottom:.8rem;font-size:1.05rem;}
+.pkg-table th,.pkg-table td{text-align:left;padding:1rem .8rem;border-bottom:2px solid var(--surface);font-size:1rem;}
+.pkg-table th{font-family:var(--display);background:var(--surface);}
+.pkg-table td.price{font-weight:700;color:var(--brand-dark);white-space:nowrap;}
+.table-scroll{overflow-x:auto;}
+@media (max-width:600px){ .pkg-table th,.pkg-table td{padding:.75rem .5rem;font-size:.92rem;} }
+
+/* ---------- speisen ---------- */
+.dish-list{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem;}
+.dish-list li{display:flex;gap:1.2rem;align-items:flex-start;background:var(--surface);border-radius:var(--radius);padding:1.4rem 1.6rem;}
+.dish-list .icon{font-size:1.8rem;}
+.dish-list h3{font-size:1.15rem;margin:0 0 .3rem;}
+.dish-list p{margin:0;color:var(--muted);}
+
+/* ---------- nachhaltigkeit ---------- */
+.sustain{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+.sustain img{border-radius:var(--radius);}
+.sustain ul{margin:1rem 0 0;padding-left:1.3rem;}
+.sustain li{margin-bottom:.5rem;}
+@media (max-width:860px){ .sustain{grid-template-columns:1fr;} }
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--surface);}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.gallery-grid figure{margin:0;border-radius:var(--radius);overflow:hidden;background:#fff;}
+.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.gallery-grid figcaption{padding:.7rem .9rem;font-weight:700;font-size:.92rem;}
+@media (max-width:760px){ .gallery-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:480px){ .gallery-grid{grid-template-columns:1fr;} }
+
+/* ---------- besuch ---------- */
+.besuch-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);}
+.hours-table{width:100%;border-collapse:collapse;margin-bottom:1.6rem;}
+.hours-table td{padding:.7rem 0;border-bottom:1px solid var(--surface);font-size:1.05rem;}
+.hours-table td:first-child{font-weight:700;width:9rem;}
+.contact-block a{font-weight:700;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;}
+.contact-line{display:flex;gap:.8rem;align-items:flex-start;margin-bottom:1rem;font-size:1.05rem;}
+.note-box{background:var(--surface);border-radius:var(--radius);padding:1.1rem 1.3rem;margin-top:1rem;font-size:.95rem;}
+.map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(42,32,19,.12);}
+.map-frame iframe{width:100%;height:100%;min-height:360px;border:0;display:block;}
+@media (max-width:860px){ .besuch-grid{grid-template-columns:1fr;} }
+
+/* ---------- a11y note ---------- */
+.a11y-note{display:flex;gap:1.2rem;align-items:flex-start;background:#fff;border-radius:var(--radius);padding:1.6rem;}
+.a11y-note .icon{font-size:2rem;}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--brand-dark);color:#fff;padding:3rem 0 6.5rem;}
+footer.site a{color:var(--accent);text-decoration:none;font-weight:700;}
+footer.site a:hover{text-decoration:underline;}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem;align-items:flex-start;}
+.footer-top img{height:46px;width:auto;}
+.footer-rating{font-family:var(--display);font-weight:700;font-size:1.1rem;}
+footer .legal{width:100%;border-top:1px solid rgba(255,255,255,.18);margin-top:1.8rem;padding-top:1.2rem;font-size:.85rem;color:rgba(255,255,255,.7);}
+
+/* ---------- sticky call bar ---------- */
+.call-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:150;display:flex;
+  background:var(--brand-strong);color:#fff;padding:1rem var(--edge);min-height:64px;
+  align-items:center;justify-content:center;gap:.7rem;font-weight:700;font-size:1.05rem;text-decoration:none;
+  box-shadow:0 -4px 16px rgba(0,0,0,.2);font-family:var(--display);
+}
+@media (min-width:761px){ .call-bar{display:none;} }
+@media (max-width:760px){ body{padding-bottom:4.2rem;} }
+
+@media (max-width:400px){
+  :root{ --edge: 1rem; }
+  .hero h1{font-size:clamp(2rem,10vw,2.6rem);}
+  .badge{font-size:.85rem;padding:.4rem .8rem;}
+  .check-row{padding:.9rem;}
+  .hours-table td:first-child{width:7rem;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Direkt zum Inhalt springen</a>
+<noscript><style>.js-animate{opacity:1 !important;transform:none !important;}</style></noscript>
+
+<header class="site">
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a class="brand-lockup" href="#top">
+      <img src="https://rauke.ch/wp-content/uploads/2022/03/logo_rauke_schlamm.png" alt="Rauke Logo" onerror="this.style.display='none'">
+      <span>Rauke</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#planer">Planer</a></li>
+      <li><a href="#geburtstag">Geburtstag</a></li>
+      <li><a href="#bilder">Bilder</a></li>
+      <li><a href="#besuch">Besuch</a></li>
+    </ul>
+    <a class="btn btn-primary" href="tel:+41774443731">☎ 077 444 37 31</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Café für alle · Winterthur</span>
+      <h1>Ein Café, das an alle gedacht hat.</h1>
+      <p class="lede">Gemütlich, farbenfroh und barrierefrei. Mit ökologisch verträglichen Kaffee-Spezialitäten, hausgemachten Desserts — und einem Konzept, das Kinder, Rollstuhlfahrer:innen und alle dazwischen mitdenkt.</p>
+      <div class="badge-row">
+        <span class="badge">♿ Barrierefrei</span>
+        <span class="badge">🧒 Kinderfreundlich</span>
+        <span class="badge">🌱 Minimal-Waste</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#planer">Was passt für uns? →</a>
+        <a class="btn btn-outline" href="tel:+41774443731">Anrufen</a>
+      </div>
+      <p class="status-chip" id="status-chip" role="status" aria-live="polite">Öffnungszeiten siehe unten</p>
+    </div>
+    <figure class="hero-media">
+      <img src="https://rauke.ch/wp-content/uploads/2026/07/Rauk-it-3-768x543.png" alt="Café Rauke in Winterthur" loading="lazy" onerror="this.closest('figure').style.display='none'">
+    </figure>
+  </div>
+</section>
+
+<section id="fuer-alle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Unser Ansatz</span>
+      <h2>Für alle gemacht — nicht als Ausnahme, als Konzept.</h2>
+      <p>Gemütliches, farbenfrohes, barrierefreies Café mit Fokus auf ökologisch verträgliche Kaffee-Spezialitäten, Snacks und hausgemachte Desserts.</p>
+    </div>
+    <div class="cap-grid reveal">
+      <div class="cap-card">
+        <span class="icon" aria-hidden="true">♿</span>
+        <h3>Barrierefrei</h3>
+        <p>Barrierefreies und inklusives Konzept — gastfreundlich für alle Altersgruppen gedacht.</p>
+        <img src="https://rauke.ch/wp-content/uploads/2022/05/web_kafi.4.inklusiv-1024x576.png" alt="Inklusives Café-Konzept bei Rauke" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="cap-card">
+        <span class="icon" aria-hidden="true">🧒</span>
+        <h3>Kinderfreundlich</h3>
+        <p>Kindergeburtstag-Pakete und ein Alltag, der auf Kinder eingerichtet ist.</p>
+        <img src="https://rauke.ch/wp-content/uploads/2022/05/web_kafi.1.kinderfreundlich-1024x576.png" alt="Kinderfreundlicher Bereich bei Rauke" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="cap-card">
+        <span class="icon" aria-hidden="true">🌱</span>
+        <h3>Nachhaltig</h3>
+        <p>Minimal-Waste-Prinzipien mit nachhaltiger Beschaffung, ökologisch nachhaltig gedacht.</p>
+        <img src="https://rauke.ch/wp-content/uploads/2022/05/web_kafi.2.oekologisch-1024x576.png" alt="Ökologisches Konzept bei Rauke" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-strip">
+  <div class="wrap quote-strip-inner reveal">
+    <div class="quote-stars" aria-hidden="true">★★★★☆</div>
+    <p>4.5 von 5 — 73 Google-Bewertungen für ein Café, das barrierefrei, kinderfreundlich und nachhaltig zugleich sein will.</p>
+  </div>
+</section>
+
+<section class="planner" id="planer">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Signature-Tool</span>
+      <h2>Was passt für uns?</h2>
+      <p>Wählen Sie aus, was auf Ihren Besuch zutrifft — wir zeigen die passenden Fakten und bereiten eine Anfrage vor.</p>
+    </div>
+    <div class="planner-grid reveal">
+      <div>
+        <fieldset>
+          <legend>Das trifft auf uns zu:</legend>
+          <label class="check-row">
+            <input type="checkbox" id="opt-barrierefrei" data-key="barrierefrei">
+            <span>
+              <span class="ct">Barrierefreier Zugang gewünscht</span>
+              <span class="cd">Wir möchten wissen, wie das barrierefreie Konzept aussieht.</span>
+            </span>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" id="opt-kinder" data-key="kinder">
+            <span>
+              <span class="ct">Wir kommen mit Kind(ern)</span>
+              <span class="cd">Kinderfreundlichkeit, Kindermenü und Alltag im Café.</span>
+            </span>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" id="opt-geburtstag" data-key="geburtstag">
+            <span>
+              <span class="ct">Wir planen einen Kindergeburtstag</span>
+              <span class="cd">Zeigt die vier Geburtstags-Pakete zur Auswahl.</span>
+            </span>
+          </label>
+          <ul class="pkg-picker" id="pkg-picker">
+            <li class="pkg-row"><label style="display:flex;gap:.9rem;width:100%;cursor:pointer;">
+              <input type="radio" name="pkg" value="RAU" data-desc="10 Personen" data-price="CHF 50.–">
+              <span><b>Paket RAU</b><span class="desc">10 Personen</span></span>
+              <span class="price" style="margin-left:auto;">CHF 50.–</span>
+            </label></li>
+            <li class="pkg-row"><label style="display:flex;gap:.9rem;width:100%;cursor:pointer;">
+              <input type="radio" name="pkg" value="RAUK" data-desc="6 Kinder + 2 Erwachsene" data-price="CHF 80.–">
+              <span><b>Paket RAUK</b><span class="desc">6 Kinder + 2 Erwachsene</span></span>
+              <span class="price" style="margin-left:auto;">CHF 80.–</span>
+            </label></li>
+            <li class="pkg-row"><label style="display:flex;gap:.9rem;width:100%;cursor:pointer;">
+              <input type="radio" name="pkg" value="RAUKE" data-desc="6 Kinder + 2 Erwachsene" data-price="CHF 110.–">
+              <span><b>Paket RAUKE</b><span class="desc">6 Kinder + 2 Erwachsene</span></span>
+              <span class="price" style="margin-left:auto;">CHF 110.–</span>
+            </label></li>
+            <li class="pkg-row"><label style="display:flex;gap:.9rem;width:100%;cursor:pointer;">
+              <input type="radio" name="pkg" value="RAUKISSIMO" data-desc="6 Kinder mit Animation" data-price="CHF 300.–">
+              <span><b>Paket RAUKISSIMO</b><span class="desc">6 Kinder mit Animation</span></span>
+              <span class="price" style="margin-left:auto;">CHF 300.–</span>
+            </label></li>
+          </ul>
+        </fieldset>
+      </div>
+      <div>
+        <div class="result-panel" id="result-panel" aria-live="polite">
+          <h3>Für Sie zusammengestellt</h3>
+          <p class="result-empty" id="result-empty">Wählen Sie oben aus, was zutrifft — die passenden Fakten erscheinen hier.</p>
+        </div>
+        <div class="planner-actions">
+          <a class="btn btn-primary" id="mail-btn" href="mailto:info@rauke.ch" aria-disabled="true">✉ Anfrage per E-Mail</a>
+          <a class="btn btn-outline" href="tel:+41774443731">☎ Direkt anrufen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="geburtstag">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Kindergeburtstag</span>
+      <h2>Vier Pakete zur Wahl</h2>
+      <p>Alle Preise und Angaben unverändert aus dem aktuellen Angebot.</p>
+    </div>
+    <div class="table-scroll reveal">
+      <table class="pkg-table">
+        <caption class="visually-hidden">Kindergeburtstags-Pakete bei Rauke</caption>
+        <thead>
+          <tr><th scope="col">Paket</th><th scope="col">Für wen</th><th scope="col">Preis</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Paket RAU</th><td>10 Personen</td><td class="price">CHF 50.–</td></tr>
+          <tr><th scope="row">Paket RAUK</th><td>6 Kinder + 2 Erwachsene</td><td class="price">CHF 80.–</td></tr>
+          <tr><th scope="row">Paket RAUKE</th><td>6 Kinder + 2 Erwachsene</td><td class="price">CHF 110.–</td></tr>
+          <tr><th scope="row">Paket RAUKISSIMO</th><td>6 Kinder mit Animation</td><td class="price">CHF 300.–</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="speisen" style="background:var(--surface);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="background:#fff;">Speisen</span>
+      <h2>Was es zu essen gibt</h2>
+    </div>
+    <ul class="dish-list reveal">
+      <li>
+        <span class="icon" aria-hidden="true">🥗</span>
+        <div>
+          <h3>Vegetarische/vegane Quiches &amp; Flammkuchen</h3>
+          <p>Mit Salat, mittags Montag–Samstag.</p>
+        </div>
+      </li>
+      <li>
+        <span class="icon" aria-hidden="true">🍝</span>
+        <div>
+          <h3>Pasta mit Bio-Tomaten-Sauce</h3>
+          <p>Kinder-Tagesangebot.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="nachhaltigkeit">
+  <div class="wrap sustain reveal">
+    <img src="https://rauke.ch/wp-content/uploads/2023/08/HipstamaticPhoto-712967960.861315-1024x1024.jpeg" alt="Nachhaltigkeit bei Rauke" loading="lazy" onerror="this.style.display='none'">
+    <div>
+      <span class="eyebrow">Nachhaltigkeit</span>
+      <h2>Minimal-Waste ist kein Slogan, sondern die Arbeitsweise.</h2>
+      <p>Rauke arbeitet nach Minimal-Waste-Prinzipien mit nachhaltiger Beschaffung — ökologisch verträgliche Kaffee-Spezialitäten inklusive.</p>
+      <ul>
+        <li>Minimal-Waste und ökologisch nachhaltig</li>
+        <li>Ökologisch verträgliche Kaffee-Spezialitäten</li>
+        <li>Nachhaltige Beschaffung</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="bilder">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="background:#fff;">Bilder</span>
+      <h2>Ein Café zum Anfassen</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <figure><img src="https://rauke.ch/wp-content/uploads/2023/08/DSC_4820-1024x1024.jpeg" alt="Impression aus dem Café Rauke" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>Im Café</figcaption></figure>
+      <figure><img src="https://rauke.ch/wp-content/uploads/2023/04/IMG_6775-1024x1024.jpeg" alt="Impression aus dem Café Rauke" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>Alltag bei Rauke</figcaption></figure>
+      <figure><img src="https://rauke.ch/wp-content/uploads/2023/04/IMG_7401-768x1024.jpeg" alt="Impression aus dem Café Rauke" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>Details</figcaption></figure>
+      <figure><img src="https://rauke.ch/wp-content/uploads/2023/04/IMG_7398-768x1024.jpeg" alt="Impression aus dem Café Rauke" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>Gastraum</figcaption></figure>
+      <figure><img src="https://rauke.ch/wp-content/uploads/2022/05/web_kafi.3.kindergeburtstag-1024x576.png" alt="Kindergeburtstag bei Rauke" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>Kindergeburtstag</figcaption></figure>
+      <figure><img src="https://rauke.ch/wp-content/uploads/2025/12/2C970792-BB02-482C-A53E-0265EB65A6BD_1_105_c.jpeg" alt="Impression aus dem Café Rauke" loading="lazy" onerror="this.parentElement.style.display='none'"><figcaption>Zu Besuch</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="besuch">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Besuch</span>
+      <h2>Adresse &amp; Öffnungszeiten</h2>
+    </div>
+    <div class="besuch-grid reveal">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Mo, Di, Do, Fr</td><td>09:00–23:00</td></tr>
+            <tr><td>Mittwoch</td><td>Geschlossen</td></tr>
+            <tr><td>Samstag</td><td>10:00–23:00</td></tr>
+            <tr><td>Sonntag</td><td>10:00–17:00</td></tr>
+          </tbody>
+        </table>
+        <div class="contact-block">
+          <div class="contact-line">📍 <span>Zeughausstrasse 52, 8400 Winterthur</span></div>
+          <div class="contact-line">☎ <a href="tel:+41774443731">+41 77 444 37 31</a></div>
+          <div class="contact-line">✉ <a href="mailto:info@rauke.ch">info@rauke.ch</a></div>
+          <div class="contact-line">📘 <a href="https://www.facebook.com/rauke.winterthur/" target="_blank" rel="noopener">facebook.com/rauke.winterthur</a></div>
+          <div class="contact-line">🌐 <a href="https://rauke.ch/" target="_blank" rel="noopener">rauke.ch</a></div>
+        </div>
+        <p class="note-box">Sommerferien: 12. Juli – 16. August 2026 bleibt Rauke geschlossen.</p>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Rauke%20Zeughausstrasse%2052%20Winterthur&amp;z=16&amp;output=embed" title="Standort Rauke auf Google Maps" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section id="diese-seite" style="background:var(--surface);">
+  <div class="wrap">
+    <div class="a11y-note reveal">
+      <span class="icon" aria-hidden="true">🔎</span>
+      <div>
+        <h2 style="font-size:1.4rem;">Auch diese Seite ist barrierefrei gedacht</h2>
+        <p style="color:var(--muted);margin:0;">Grosse Schrift, starker Kontrast, ein echter Sprunglink, deutlich sichtbare Fokus-Rahmen beim Tabben, grosse Tippflächen — und nichts, das man nur per Animation verstehen kann.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <img src="https://rauke.ch/wp-content/uploads/2022/03/logo_rauke_weiss.png" alt="Rauke Logo" onerror="this.style.display='none'">
+        <p style="margin-top:.9rem;">Zeughausstrasse 52, 8400 Winterthur</p>
+        <p><a href="tel:+41774443731">+41 77 444 37 31</a> · <a href="mailto:info@rauke.ch">info@rauke.ch</a></p>
+      </div>
+      <div>
+        <p class="footer-rating">★ 4.5 · 73 Google-Bewertungen</p>
+        <p>Genossenschaft Rauke — inklusiver und ökologischer Ansatz.</p>
+        <p><a href="https://www.facebook.com/rauke.winterthur/" target="_blank" rel="noopener">Facebook</a> · <a href="https://rauke.ch/" target="_blank" rel="noopener">Website</a></p>
+      </div>
+    </div>
+    <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="call-bar" href="tel:+41774443731">☎ Rauke anrufen — 077 444 37 31</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- real facts, verbatim from rauke.json ---- */
+  var FACTS = {
+    barrierefrei: {
+      title: "Barrierefreier Zugang",
+      points: [
+        "Barrierefreies und inklusives Konzept",
+        "Gemütliches, barrierefreies Café mit Fokus auf ökologisch verträgliche Kaffee-Spezialitäten"
+      ]
+    },
+    kinder: {
+      title: "Mit Kindern",
+      points: [
+        "Kindergeburtstag-Pakete und Kinderfreundlichkeit",
+        "Pasta mit Bio-Tomaten-Sauce — Kinder-Tagesangebot",
+        "Vegetarische/vegane Quiches & Flammkuchen mit Salat, mittags Mo–Sa"
+      ]
+    }
+  };
+
+  var checks = {
+    barrierefrei: document.getElementById("opt-barrierefrei"),
+    kinder: document.getElementById("opt-kinder"),
+    geburtstag: document.getElementById("opt-geburtstag")
+  };
+  var pkgPicker = document.getElementById("pkg-picker");
+  var pkgRadios = document.querySelectorAll('input[name="pkg"]');
+  var resultPanel = document.getElementById("result-panel");
+  var resultEmpty = document.getElementById("result-empty");
+  var mailBtn = document.getElementById("mail-btn");
+
+  function selectedPackage(){
+    var r = document.querySelector('input[name="pkg"]:checked');
+    if(!r) return null;
+    return { name: "Paket " + r.value, desc: r.getAttribute("data-desc"), price: r.getAttribute("data-price") };
+  }
+
+  function render(){
+    var html = "<h3>Für Sie zusammengestellt</h3>";
+    var any = false;
+
+    if(checks.barrierefrei.checked){
+      any = true;
+      html += '<div class="result-card"><h4>' + FACTS.barrierefrei.title + '</h4><ul>' +
+        FACTS.barrierefrei.points.map(function(p){ return "<li>" + p + "</li>"; }).join("") + "</ul></div>";
+    }
+    if(checks.kinder.checked){
+      any = true;
+      html += '<div class="result-card"><h4>' + FACTS.kinder.title + '</h4><ul>' +
+        FACTS.kinder.points.map(function(p){ return "<li>" + p + "</li>"; }).join("") + "</ul></div>";
+    }
+    if(checks.geburtstag.checked){
+      any = true;
+      var pkg = selectedPackage();
+      html += '<div class="result-card"><h4>Kindergeburtstag</h4>';
+      if(pkg){
+        html += "<ul><li>" + pkg.name + " — " + pkg.desc + ", " + pkg.price + "</li></ul>";
+      } else {
+        html += '<p style="font-size:.92rem;color:rgba(255,255,255,.7);">Bitte links ein Paket auswählen.</p>';
+      }
+      html += "</div>";
+    }
+
+    if(!any){
+      resultPanel.innerHTML = html + '<p class="result-empty" id="result-empty">Wählen Sie oben aus, was zutrifft — die passenden Fakten erscheinen hier.</p>';
+    } else {
+      resultPanel.innerHTML = html;
+    }
+
+    pkgPicker.classList.toggle("is-open", checks.geburtstag.checked);
+    updateMailto(any);
+  }
+
+  function updateMailto(any){
+    if(!any){
+      mailBtn.setAttribute("aria-disabled","true");
+      mailBtn.href = "mailto:info@rauke.ch";
+      return;
+    }
+    mailBtn.removeAttribute("aria-disabled");
+    var lines = ["Guten Tag Rauke-Team,", "", "wir interessieren uns für einen Besuch. Uns ist wichtig:"];
+    if(checks.barrierefrei.checked) lines.push("- Barrierefreier Zugang");
+    if(checks.kinder.checked) lines.push("- Wir kommen mit Kind(ern)");
+    if(checks.geburtstag.checked){
+      var pkg = selectedPackage();
+      lines.push(pkg ? "- Kindergeburtstag: " + pkg.name + " (" + pkg.desc + ", " + pkg.price + ")" : "- Kindergeburtstag (Paket noch offen)");
+    }
+    lines.push("", "Freundliche Grüsse");
+    var body = lines.join("\n");
+    var subject = "Anfrage über die Rauke-Website";
+    mailBtn.href = "mailto:info@rauke.ch?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+
+  Object.keys(checks).forEach(function(k){ checks[k].addEventListener("change", render); });
+  pkgRadios.forEach(function(r){ r.addEventListener("change", render); });
+  render();
+
+  /* ---- "jetzt geöffnet?" computed live from the real opening hours ---- */
+  var OPENING_HOURS = [
+    { days:[1,2,4,5], open:"09:00", close:"23:00" }, /* Mo,Di,Do,Fr */
+    { days:[3], open:null, close:null },               /* Mi geschlossen */
+    { days:[6], open:"10:00", close:"23:00" },          /* Sa */
+    { days:[0], open:"10:00", close:"17:00" }           /* So */
+  ];
+  function toMinutes(hhmm){ var p = hhmm.split(":"); return parseInt(p[0],10)*60 + parseInt(p[1],10); }
+  function computeStatus(){
+    var now = new Date();
+    var rule = OPENING_HOURS.filter(function(r){ return r.days.indexOf(now.getDay()) !== -1; })[0];
+    var nowMin = now.getHours()*60 + now.getMinutes();
+    if(!rule || !rule.open) return { open:false, label:"Heute geschlossen" };
+    var o = toMinutes(rule.open), c = toMinutes(rule.close);
+    if(nowMin >= o && nowMin < c) return { open:true, label:"Jetzt geöffnet · bis " + rule.close };
+    if(nowMin < o) return { open:false, label:"Heute ab " + rule.open + " geöffnet" };
+    return { open:false, label:"Heute geschlossen" };
+  }
+  var chip = document.getElementById("status-chip");
+  if(chip){
+    var s = computeStatus();
+    chip.textContent = s.label;
+    chip.classList.toggle("is-open", s.open);
+  }
+
+  /* ---- scroll reveal (progressive enhancement only, never required) ---- */
+  if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("js-animate"); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, {threshold:.1});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Fredi — Casinotheater Winterthur</title>
+<meta name="description" content="Restaurant Fredi im Casinotheater Winterthur: Küche und Terrasse vor oder nach der Vorstellung. Stadthausstrasse 119. 4.5 Sterne bei 580 Bewertungen.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Restaurant Fredi — Casinotheater Winterthur">
+<meta property="og:description" content="Eigene Küche und Terrasse im Casinotheater Winterthur. Saisonale Karte, grosse Getränkeauswahl, warme Küche bis 21:30 Uhr.">
+<meta property="og:url" content="https://www.casinotheater.ch/restaurant-fredi-winterthur/">
+<meta property="og:image" content="https://www.casinotheater.ch/wp-content/uploads/2026/06/unbenannt-5_sq_min.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Fredi",
+  "description": "Restaurant Fredi ist Teil des Casinotheater Winterthur mit eigener Küche und Terrasse.",
+  "url": "https://www.casinotheater.ch/restaurant-fredi-winterthur/",
+  "telephone": "+41 52 260 58 88",
+  "email": "willkommen@restaurant-fredi.ch",
+  "servesCuisine": "Contemporary, International",
+  "image": [
+    "https://www.casinotheater.ch/wp-content/uploads/2026/06/unbenannt-5_sq_min.jpg",
+    "https://www.casinotheater.ch/wp-content/uploads/2024/07/rsf_casinotheater_fredi_01_compr-Kopie.webp",
+    "https://www.casinotheater.ch/wp-content/uploads/2025/08/rsf_casinotheater_fredi_05_2.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stadthausstrasse 119",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "580"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --bg:#1c0f10;
+    --surface:#2a1416;
+    --fg:#f5e9dc;
+    --muted:#cbb7a8;
+    --brand:#8a1f2b;
+    --accent:#caa049;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(15px,0.9vw + 0.65rem,17.5px);
+    line-height:1.62;font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Playfair Display',serif;font-weight:600;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(1.1rem,4vw,3rem);}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  /* ---------- curtain motif ---------- */
+  .curtain-edge{
+    position:absolute;top:0;bottom:0;width:6%;min-width:1.2rem;
+    background:repeating-linear-gradient(90deg,rgba(0,0,0,0.25) 0 6px,rgba(202,160,73,0.08) 6px 12px);
+    pointer-events:none;
+  }
+  .curtain-edge.left{left:0;}
+  .curtain-edge.right{right:0;transform:scaleX(-1);}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(28,15,16,0.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(202,160,73,0.25);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:0.85rem;}
+  .brandmark{
+    display:flex;align-items:center;gap:0.6rem;text-decoration:none;
+    font-family:'Playfair Display',serif;font-size:1.35rem;letter-spacing:0.01em;
+  }
+  .brandmark .curtainmark{
+    display:inline-block;width:1.5rem;height:1.9rem;border-radius:2px 2px 0 0;
+    background:linear-gradient(180deg,var(--brand),#5c1219);
+    box-shadow:inset 3px 0 0 rgba(202,160,73,0.5);
+  }
+  nav ul{list-style:none;display:none;gap:1.7rem;margin:0;padding:0;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.07em;font-size:0.9rem;}
+  @media(min-width:840px){nav ul{display:flex;}}
+  nav ul a{text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;}
+  nav ul a:hover,nav ul a:focus-visible{border-color:var(--accent);}
+  .navtel{
+    border:1px solid var(--accent);color:var(--accent);padding:0.5rem 1rem;
+    text-decoration:none;font-size:0.88rem;white-space:nowrap;letter-spacing:0.03em;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;padding-block:clamp(4rem,11vw,8rem) clamp(3.5rem,9vw,6rem);}
+  .hero-inner{position:relative;z-index:1;max-width:44rem;}
+  .eyebrow{
+    font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.22em;
+    font-size:0.82rem;color:var(--accent);margin:0 0 1.1rem;font-weight:600;
+  }
+  h1.title{font-size:clamp(2.6rem,6.4vw,4.8rem);line-height:1.03;margin:0 0 1.1rem;}
+  h1.title em{font-style:italic;color:var(--accent);}
+  .tagline{font-size:clamp(1.05rem,1.4vw,1.3rem);color:var(--muted);max-width:32rem;margin:0 0 2rem;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:0.9rem;margin-bottom:2rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.6rem;
+    text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;
+    letter-spacing:0.03em;text-transform:uppercase;font-size:0.92rem;border-radius:2px;
+    border:1px solid var(--accent);
+  }
+  .btn-solid{background:var(--accent);color:#1c0f10;}
+  .btn-solid:hover{background:#e0b45a;}
+  .btn-line{color:var(--accent);}
+  .rating-pill{display:inline-flex;align-items:baseline;gap:0.5rem;font-family:'Playfair Display',serif;}
+  .rating-pill .num{font-size:1.7rem;color:var(--accent);}
+  .rating-pill .stars{color:var(--accent);}
+  .rating-pill .count{font-size:0.85rem;color:var(--muted);font-family:'Barlow Condensed',sans-serif;}
+
+  /* ---------- section shell ---------- */
+  section{padding-block:clamp(3.2rem,7vw,5.5rem);position:relative;}
+  .section-head{margin-bottom:clamp(2rem,5vw,3rem);}
+  .act-label{
+    font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.24em;
+    font-size:0.85rem;color:var(--accent);margin:0 0 0.6rem;font-weight:600;
+  }
+  h2.section-title{font-size:clamp(1.9rem,3.7vw,2.9rem);margin:0;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  section.tinted{background:var(--surface);}
+
+  /* ---------- prologue / timing calculator ---------- */
+  .prolog-box{
+    background:var(--surface);border:1px solid rgba(202,160,73,0.3);border-radius:4px;
+    padding:clamp(1.8rem,4vw,3rem);display:grid;gap:clamp(1.8rem,4vw,3rem);
+    grid-template-columns:1fr;
+  }
+  @media(min-width:880px){.prolog-box{grid-template-columns:1fr 1.15fr;}}
+  .prolog-form label{
+    display:block;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;
+    color:var(--muted);margin-bottom:0.4rem;margin-top:1.1rem;
+  }
+  .prolog-form label:first-child{margin-top:0;}
+  .prolog-form select,.prolog-form input[type=time]{
+    width:100%;padding:0.7rem 0.8rem;background:var(--bg);color:var(--fg);
+    border:1px solid rgba(202,160,73,0.35);border-radius:2px;font-family:'Barlow Condensed',sans-serif;
+    font-size:1.05rem;
+  }
+  .prolog-result{
+    border-top:1px solid rgba(202,160,73,0.25);padding-top:1.4rem;margin-top:1.6rem;
+  }
+  @media(min-width:880px){.prolog-result{border-top:0;padding-top:0;margin-top:0;border-left:1px solid rgba(202,160,73,0.25);padding-left:clamp(1.8rem,4vw,3rem);}}
+  .prolog-result .arrival{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4.5vw,3rem);color:var(--accent);margin:0.4rem 0;}
+  .prolog-note{font-size:0.9rem;color:var(--muted);line-height:1.6;}
+  .prolog-warn{
+    margin-top:1rem;padding:0.8rem 1rem;border-left:3px solid var(--accent);
+    background:rgba(202,160,73,0.08);font-size:0.88rem;
+  }
+
+  /* ---------- usps ---------- */
+  .usp-grid{display:grid;gap:1.2rem;grid-template-columns:1fr;}
+  @media(min-width:700px){.usp-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1050px){.usp-grid{grid-template-columns:repeat(3,1fr);}}
+  .usp-card{border-top:2px solid var(--accent);padding-top:0.9rem;}
+  .usp-card h3{font-size:1.1rem;margin:0;}
+
+  /* ---------- menu / acts ---------- */
+  .interval{
+    display:flex;align-items:center;gap:1.2rem;margin-block:clamp(2.5rem,6vw,4rem);
+  }
+  .interval::before,.interval::after{content:"";flex:1;height:1px;background:rgba(202,160,73,0.35);}
+  .interval span{
+    font-family:'Playfair Display',serif;font-style:italic;color:var(--accent);
+    font-size:1.15rem;white-space:nowrap;
+  }
+  .menu-act h3.act-title{font-size:clamp(1.5rem,2.6vw,1.9rem);margin:0 0 0.15rem;}
+  .act-source{
+    font-size:0.78rem;color:var(--muted);text-transform:none;letter-spacing:0.02em;
+    margin:0 0 1.4rem;font-style:italic;
+  }
+  .seat-rows{list-style:none;margin:0;padding:0;}
+  .seat-rows li{
+    display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;
+    border-top:1px solid rgba(202,160,73,0.18);padding:0.95rem 0;align-items:baseline;
+  }
+  .seat-rows .rn{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;color:var(--accent);
+    font-size:0.95rem;letter-spacing:0.03em;
+  }
+  .seat-rows h4{font-family:'Playfair Display',serif;font-weight:600;font-size:1.15rem;margin:0 0 0.3rem;}
+  .seat-rows p{margin:0;color:var(--muted);font-size:0.94rem;}
+
+  /* ---------- gallery ---------- */
+  .gallery{display:grid;gap:0.7rem;grid-template-columns:repeat(6,1fr);}
+  .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:2px;}
+  .gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .5s ease;}
+  .gallery figure:hover img{transform:scale(1.04);}
+  .p1{grid-column:span 6;}
+  .p2{grid-column:span 3;}
+  .p3{grid-column:span 3;}
+  .p4{grid-column:span 3;}
+  .p5{grid-column:span 3;}
+  @media(min-width:760px){
+    .p1{grid-column:span 2;}
+    .p2{grid-column:span 2;}
+    .p3{grid-column:span 2;}
+    .p4{grid-column:span 3;}
+    .p5{grid-column:span 3;}
+  }
+
+  /* ---------- hours / status ---------- */
+  .status-row{
+    display:flex;align-items:center;gap:0.7rem;margin-bottom:1.6rem;flex-wrap:wrap;
+  }
+  .dot{width:0.65rem;height:0.65rem;border-radius:50%;background:#8a8378;flex:none;}
+  .dot.open{background:#9ecb7f;box-shadow:0 0 0 3px rgba(158,203,127,0.22);}
+  .dot.closed{background:#d18a7a;}
+  .dot.unknown{background:#a3907f;}
+  .status-text{font-family:'Playfair Display',serif;font-size:1.2rem;}
+  .hours-table{width:100%;border-collapse:collapse;}
+  .hours-table th,.hours-table td{
+    text-align:left;padding:0.75rem 0.5rem;border-top:1px solid rgba(202,160,73,0.2);font-size:0.96rem;
+  }
+  .hours-table th{color:var(--muted);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.05em;font-weight:600;}
+
+  /* ---------- kontakt ---------- */
+  .kontakt-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:1fr;}
+  @media(min-width:900px){.kontakt-grid{grid-template-columns:1fr 1.15fr;}}
+  .kontakt-list{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:1rem;}
+  .kontakt-list dt{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+  .kontakt-list dd{margin:0.15rem 0 0;font-size:1.1rem;}
+  .kontakt-list a{text-decoration:none;border-bottom:1px solid rgba(202,160,73,0.4);}
+  .map-box{border:1px solid rgba(202,160,73,0.3);border-radius:2px;overflow:hidden;min-height:320px;}
+  .map-frame{border:0;width:100%;height:100%;min-height:320px;}
+
+  footer{border-top:1px solid rgba(202,160,73,0.25);padding-block:2.4rem 6rem;}
+  .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:0.88rem;color:var(--muted);}
+  .foot-legal{font-size:0.78rem;color:var(--muted);margin-top:1rem;}
+
+  .mobilebar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;
+    background:var(--brand);color:var(--fg);box-shadow:0 -4px 14px rgba(0,0,0,0.3);
+  }
+  .mobilebar a{flex:1;text-align:center;padding:0.95rem 0.5rem;text-decoration:none;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;font-size:0.92rem;}
+  .mobilebar a:first-child{border-right:1px solid rgba(245,233,220,0.25);}
+  @media(min-width:840px){.mobilebar{display:none;}}
+  @media(max-width:839px){body{padding-bottom:3.6rem;}}
+
+  @media(max-width:360px){
+    .prolog-box{padding:1.3rem;}
+    .btn{padding:0.75rem 1.2rem;font-size:0.86rem;}
+    .rating-pill .num{font-size:1.4rem;}
+    .seat-rows li{grid-template-columns:2.6rem 1fr;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .gallery figure:hover img{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Hauptnavigation">
+    <a class="brandmark" href="#top"><span class="curtainmark" aria-hidden="true"></span> Restaurant Fredi</a>
+    <ul>
+      <li><a href="#vorstellung">Vor der Vorstellung</a></li>
+      <li><a href="#karte">Karte</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#kasse">Öffnungszeiten</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a class="navtel" href="tel:+41522605888">052 260 58 88</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="curtain-edge left" aria-hidden="true"></div>
+    <div class="curtain-edge right" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Casinotheater Winterthur</p>
+      <h1 class="title">Der Tisch <em>vor dem Vorhang.</em></h1>
+      <p class="tagline">Restaurant Fredi ist Teil des Casinotheater Winterthur mit eigener Küche und Terrasse — für den Teller vor oder nach der Vorstellung.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="tel:+41522605888">Tisch reservieren</a>
+        <a class="btn btn-line" href="#vorstellung">Vor der Vorstellung planen</a>
+      </div>
+      <div class="rating-pill">
+        <span class="num">4.5</span>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="count">580 Google-Bewertungen</span>
+      </div>
+      <p style="margin-top:1.6rem;font-size:0.88rem;color:var(--muted);max-width:30rem;">Stadthausstrasse 119 — mitten im Casinotheater Winterthur, mit eigener Terrasse für die Zeit vor dem dritten Klingelzeichen.</p>
+    </div>
+  </section>
+
+  <section id="vorstellung" class="tinted">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="act-label">Prolog</p>
+        <h2 class="section-title">Vor der Vorstellung</h2>
+      </div>
+      <div class="prolog-box reveal">
+        <div class="prolog-form">
+          <p style="margin:0 0 0.4rem;color:var(--muted);font-size:0.95rem;">Planen Sie Ihr Essen rund um Ihre Vorstellung im Casinotheater.</p>
+          <label for="showDay">Tag der Vorstellung</label>
+          <select id="showDay">
+            <option value="1">Montag</option>
+            <option value="2">Dienstag</option>
+            <option value="3">Mittwoch</option>
+            <option value="4">Donnerstag</option>
+            <option value="5">Freitag</option>
+            <option value="6">Samstag</option>
+            <option value="0">Sonntag</option>
+          </select>
+          <label for="showTime">Beginn der Vorstellung</label>
+          <input type="time" id="showTime" value="19:30">
+          <label for="diningLen">Zeit für Ihr Essen</label>
+          <select id="diningLen">
+            <option value="60">rund 60 Minuten</option>
+            <option value="90" selected>rund 90 Minuten</option>
+            <option value="120">rund 120 Minuten</option>
+          </select>
+        </div>
+        <div class="prolog-result" id="prologResult" aria-live="polite">
+          <p class="prolog-note">Empfohlene Ankunft im Restaurant</p>
+          <p class="arrival" id="arrivalTime">—</p>
+          <p class="prolog-note" id="prologDetail"></p>
+          <div id="prologWarn"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="act-label">Akt 0</p>
+        <h2 class="section-title">Zwischen den Vorhängen</h2>
+      </div>
+      <p class="reveal" style="max-width:38rem;font-size:1.08rem;color:var(--muted);margin-bottom:2.2rem;">Restaurant Fredi ist Teil des Casinotheater Winterthur mit eigener Küche und Terrasse.</p>
+      <div class="usp-grid reveal">
+        <div class="usp-card">
+          <h3>Teil des Casinotheater Winterthur</h3>
+          <p style="margin:0.5rem 0 0;color:var(--muted);font-size:0.94rem;">Küche und Terrasse direkt im Haus.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Warme Küche bis 21:30 Uhr</h3>
+          <p style="margin:0.5rem 0 0;color:var(--muted);font-size:0.94rem;">Wichtig für die Planung vor einer Vorstellung.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Saisonale Karte</h3>
+          <p style="margin:0.5rem 0 0;color:var(--muted);font-size:0.94rem;">Wochenlunch und Event-Menüs wechseln.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Grosse Wein- und Getränkeauswahl</h3>
+          <p style="margin:0.5rem 0 0;color:var(--muted);font-size:0.94rem;">Für Gruppen auch als Getränkepaket.</p>
+        </div>
+        <div class="usp-card">
+          <h3>Vegane, glutenfreie, laktosefreie Optionen</h3>
+          <p style="margin:0.5rem 0 0;color:var(--muted);font-size:0.94rem;">Auf Anfrage im Voraus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="karte" class="tinted">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="act-label">Die Karte</p>
+        <h2 class="section-title">Zwei Akte</h2>
+      </div>
+
+      <div class="menu-act reveal">
+        <h3 class="act-title">Akt I — Wochenlunch</h3>
+        <p class="act-source">Quelle: Weekly Lunch Menu (from 10.08.2026)</p>
+        <ul class="seat-rows">
+          <li><span class="rn">R1</span><div><h4>Spicy Peanut Noodles</h4></div></li>
+          <li><span class="rn">R2</span><div><h4>Vietnamese Spring Rolls (vegan)</h4></div></li>
+          <li><span class="rn">R3</span><div><h4>Pan-fried Pike-Perch</h4></div></li>
+          <li><span class="rn">R4</span><div><h4>Crispy Chicken Burger</h4></div></li>
+          <li>
+            <span class="rn">R5</span>
+            <div>
+              <h4>Caramel Gelato</h4>
+              <p>Dessert</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="interval reveal"><span>Pause</span></div>
+
+      <div class="menu-act reveal">
+        <h3 class="act-title">Akt II — Stille Kracht</h3>
+        <p class="act-source">Quelle: Stille Kracht Entertainment Event Menu</p>
+        <ul class="seat-rows">
+          <li>
+            <span class="rn">R1</span>
+            <div>
+              <h4>Rote-Beete-Malfattis</h4>
+              <p>sautéed in brown butter with herb foam, parmesan, pear, and warm cabbage salad</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">R2</span>
+            <div>
+              <h4>Parsnip-Potato Soup</h4>
+              <p>with wild mushroom tartare and pretzel croutons</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">R3</span>
+            <div>
+              <h4>Chicken Breast (Classic)</h4>
+              <p>with smoked poultry praline, balsamic-port wine sauce, potato purée, roasted carrots, broccoli, squash</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">R4</span>
+            <div>
+              <h4>Red Cabbage Roulade (Vegetarian)</h4>
+              <p>with tree nut sauce, red cabbage, roasted squash, smoked crispy tofu</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">R5</span>
+            <div>
+              <h4>Baked Apple Mousse</h4>
+              <p>with lemon, caramel-miso ganache, cinnamon-sour cream foam, brownie</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">R6</span>
+            <div>
+              <h4>Cheese Selection</h4>
+              <p>with fruit bread and chutney</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <p class="reveal" style="font-size:0.88rem;color:var(--muted);margin-top:1.8rem;">Vollständige Karten als PDF/Issuu über die Casinotheater-Website. Ernährungsanpassungen (vegan, glutenfrei, laktosefrei) auf Anfrage. Für Gruppen sind Getränkepakete erhältlich.</p>
+    </div>
+  </section>
+
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="act-label">Bühnenbild</p>
+        <h2 class="section-title">Aus dem Restaurant Fredi</h2>
+      </div>
+      <div class="gallery reveal">
+        <figure class="p1"><img src="https://www.casinotheater.ch/wp-content/uploads/2026/06/unbenannt-5_sq_min.jpg" alt="Restaurant Fredi im Casinotheater Winterthur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure class="p2"><img src="https://www.casinotheater.ch/wp-content/uploads/2024/07/rsf_casinotheater_fredi_01_compr-Kopie.webp" alt="Innenraum Restaurant Fredi" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure class="p3"><img src="https://www.casinotheater.ch/wp-content/uploads/2025/08/rsf_casinotheater_fredi_05_2.jpg" alt="Restaurant Fredi, Ansicht" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure class="p4"><img src="https://www.casinotheater.ch/wp-content/uploads/2025/08/CTW-Fruehlingskarte-2025-5578-2.jpg" alt="Gericht aus der saisonalen Karte" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure class="p5"><img src="https://www.casinotheater.ch/wp-content/uploads/2025/08/20250620_casinotheaterwinterthur_restaurant_fredi_terrasse_DSC0716_2.jpg" alt="Terrasse des Restaurant Fredi" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="kasse" class="tinted">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="act-label">Kasse</p>
+        <h2 class="section-title">Öffnungszeiten</h2>
+      </div>
+      <div class="reveal">
+        <div class="status-row">
+          <span class="dot" id="statusDot"></span>
+          <span class="status-text" id="statusText">—</span>
+        </div>
+        <table class="hours-table">
+          <thead><tr><th>Tage</th><th>Zeit</th></tr></thead>
+          <tbody>
+            <tr><td>Mo–Mi</td><td>11:00–22:00</td></tr>
+            <tr><td>Do–Sa</td><td>11:00–24:00</td></tr>
+            <tr><td>So (16.08.26)</td><td>Geschlossen</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:1rem;">Warme Küche bis 21:30 Uhr. Für andere Sonntage liegen uns keine Öffnungszeiten vor — bitte telefonisch nachfragen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap kontakt-grid">
+      <div class="reveal">
+        <p class="act-label">Vorhang zu</p>
+        <h2 class="section-title" style="margin-bottom:1.4rem;">Reservieren Sie Ihren Tisch</h2>
+        <dl class="kontakt-list">
+          <div><dt>Adresse</dt><dd>Stadthausstrasse 119, CH-8400 Winterthur</dd></div>
+          <div><dt>Telefon</dt><dd><a href="tel:+41522605888">+41 52 260 58 88</a></dd></div>
+          <div><dt>E-Mail</dt><dd><a href="mailto:willkommen@restaurant-fredi.ch">willkommen@restaurant-fredi.ch</a></dd></div>
+          <div><dt>Website</dt><dd><a href="https://www.casinotheater.ch/restaurant-fredi-winterthur/" rel="noopener">casinotheater.ch/restaurant-fredi</a></dd></div>
+        </dl>
+      </div>
+      <div class="reveal map-box">
+        <iframe class="map-frame" src="https://maps.google.com/maps?q=Restaurant%20Fredi%20Casinotheater%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Standort Restaurant Fredi auf Google Maps"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <span>Restaurant Fredi · Stadthausstrasse 119 · CH-8400 Winterthur</span>
+      <span>052 260 58 88 · willkommen@restaurant-fredi.ch</span>
+    </div>
+    <p class="foot-legal">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a href="tel:+41522605888">Anrufen</a>
+  <a href="#kontakt">Adresse</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- real hours data, verbatim from source JSON ----
+  var hours = [
+    { days:[1,2,3], label:"Mo–Mi", start:11*60, end:22*60 },
+    { days:[4,5,6], label:"Do–Sa", start:11*60, end:24*60 }
+  ];
+  var SUNDAY_CLOSED_DATE = { y:2026, m:8, d:16 }; // "So (16.08.26)" laut JSON
+  var WARM_KITCHEN_END = 21*60 + 30; // 21:30, laut USP-Angabe
+
+  function isSpecificSunday(date){
+    return date.getFullYear() === SUNDAY_CLOSED_DATE.y &&
+           (date.getMonth()+1) === SUNDAY_CLOSED_DATE.m &&
+           date.getDate() === SUNDAY_CLOSED_DATE.d;
+  }
+
+  function statusForDate(date){
+    var day = date.getDay();
+    var min = date.getHours()*60 + date.getMinutes();
+    if(day === 0){
+      if(isSpecificSunday(date)) return { state:"closed", text:"Heute geschlossen (So, 16.08.2026)" };
+      return { state:"unknown", text:"Für Sonntag liegen uns keine Öffnungszeiten vor" };
+    }
+    var rule = hours.filter(function(h){ return h.days.indexOf(day) > -1; })[0];
+    if(!rule) return { state:"unknown", text:"Keine Angabe" };
+    if(min >= rule.start && min < rule.end){
+      return { state:"open", text:"Jetzt geöffnet · bis " + fmt(rule.end) + " Uhr" };
+    }
+    return { state:"closed", text:"Aktuell geschlossen · " + rule.label + " " + fmt(rule.start) + "–" + fmt(rule.end) + " Uhr" };
+  }
+
+  function fmt(mins){
+    var h = Math.floor(mins/60) % 24, m = mins % 60;
+    return (h<10?"0":"")+h+":"+(m<10?"0":"")+m;
+  }
+
+  function renderStatus(){
+    var s = statusForDate(new Date());
+    var dot = document.getElementById("statusDot");
+    var text = document.getElementById("statusText");
+    dot.className = "dot " + s.state;
+    text.textContent = s.text;
+  }
+  renderStatus();
+  setInterval(renderStatus, 30000);
+
+  // ---- prologue: "Vor der Vorstellung" arrival calculator ----
+  var dayEl = document.getElementById("showDay");
+  var timeEl = document.getElementById("showTime");
+  var lenEl = document.getElementById("diningLen");
+  var arrivalEl = document.getElementById("arrivalTime");
+  var detailEl = document.getElementById("prologDetail");
+  var warnEl = document.getElementById("prologWarn");
+
+  function calcProlog(){
+    var day = parseInt(dayEl.value, 10);
+    var timeVal = timeEl.value;
+    if(!timeVal){ arrivalEl.textContent = "—"; detailEl.textContent = "Bitte Vorstellungsbeginn wählen."; warnEl.innerHTML=""; return; }
+    var parts = timeVal.split(":");
+    var showMin = (+parts[0])*60 + (+parts[1]);
+    var dining = parseInt(lenEl.value, 10);
+    var buffer = 15; // Minuten Puffer für den Weg in den Saal
+    var arrivalMin = showMin - dining - buffer;
+    if(arrivalMin < 0) arrivalMin += 24*60;
+    arrivalEl.textContent = fmt(arrivalMin) + " Uhr";
+
+    var rule = hours.filter(function(h){ return h.days.indexOf(day) > -1; })[0];
+    var msgs = [];
+    var warnHtml = "";
+
+    if(day === 0){
+      if(isSpecificSunday(new Date(SUNDAY_CLOSED_DATE.y, SUNDAY_CLOSED_DATE.m-1, SUNDAY_CLOSED_DATE.d))){
+        warnHtml = '<div class="prolog-warn">Am So, 16.08.2026 bleibt das Restaurant Fredi geschlossen.</div>';
+      } else {
+        warnHtml = '<div class="prolog-warn">Für Sonntage ausserhalb des 16.08.2026 liegen uns keine Öffnungszeiten vor. Bitte kurz anrufen: 052 260 58 88.</div>';
+      }
+    } else if(rule){
+      if(arrivalMin < rule.start || arrivalMin >= rule.end){
+        warnHtml = '<div class="prolog-warn">Ausserhalb der Öffnungszeiten (' + rule.label + ' ' + fmt(rule.start) + '–' + fmt(rule.end) + ' Uhr). Bitte Zeiten anpassen oder anrufen.</div>';
+      }
+      if(arrivalMin + dining > WARM_KITCHEN_END){
+        warnHtml += '<div class="prolog-warn">Die warme Küche schliesst um 21:30 Uhr — bei dieser Ankunftszeit reicht es unter Umständen nur noch für die kalte Karte.</div>';
+      }
+      msgs.push(rule.label + ", " + fmt(rule.start) + "–" + fmt(rule.end) + " Uhr geöffnet");
+    }
+
+    detailEl.textContent = msgs.join(" · ");
+    warnEl.innerHTML = warnHtml;
+  }
+
+  [dayEl,timeEl,lenEl].forEach(function(el){ el.addEventListener("input", calcProlog); el.addEventListener("change", calcProlog); });
+  calcProlog();
+
+  // ---- scroll reveals ----
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+
+</body>
+</html>

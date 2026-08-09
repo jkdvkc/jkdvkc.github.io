@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arch Bar Winterthur — Ungewöhnliche Drinks unter dem Bahnhofsbogen</title>
+<meta name="description" content="Arch Bar Winterthur: Bar, Lounge und Event-Venue auf drei Ebenen direkt am Hauptbahnhof. Ungewöhnliche Drink-Kreationen, Hall, Bar und Bunker-Bereich. Archstrasse 2, 8400 Winterthur.">
+<meta property="og:title" content="Arch Bar Winterthur — Ungewöhnliche Drinks unter dem Bahnhofsbogen">
+<meta property="og:description" content="Drei Ebenen, ein historisches Gebäude am Hauptbahnhof Winterthur: Hall, Bar und Bunker-Bereich mit ungewöhnlichen Drink-Kreationen.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s470cd966906c0176/image/i5d4829966840f5ce/version/1736781237/image.jpg">
+<meta property="og:url" content="https://www.archbar.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Arch Bar",
+  "image": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s470cd966906c0176/image/i5d4829966840f5ce/version/1736781237/image.jpg",
+  "url": "https://www.archbar.ch/",
+  "telephone": "+41 52 203 12 88",
+  "email": "info@archbar.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Archstrasse 2",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.9",
+    "reviewCount": "449"
+  },
+  "sameAs": [
+    "https://www.instagram.com/archbarofficial/",
+    "https://www.facebook.com/archbarofficial/"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#15171a;
+    --surface:#23262b;
+    --fg:#f5f1ec;
+    --muted:#a8a29c;
+    --brand:#2d3436;
+    --accent:#ff7675;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Work Sans', sans-serif;
+    font-size:clamp(15px, 0.95vw + 0.6rem, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Big Shoulders Display', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:0.94;
+    margin:0;
+    font-weight:800;
+  }
+  p{ margin:0 0 1em; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+  :focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(1.2rem, 4vw, 3rem); }
+
+  /* ---------- arch primitives ---------- */
+  .arch-top{ border-radius:999px 999px 0 0; }
+  .arch-shape{
+    border-radius:999px 999px 0 0;
+    overflow:hidden;
+    background:var(--surface);
+    position:relative;
+  }
+  .arch-frame{
+    border:1px solid rgba(245,241,236,0.18);
+    border-bottom:none;
+  }
+
+  /* repeating viaduct-arch divider, drawn once via SVG pattern */
+  .viaduct{ display:block; width:100%; height:clamp(28px,5vw,52px); }
+  .viaduct path{ fill:none; }
+
+  /* ---------- header / nav ---------- */
+  header{
+    position:sticky; top:0; z-index:40;
+    background:rgba(21,23,26,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(245,241,236,0.12);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0.85rem clamp(1.2rem, 4vw, 3rem);
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:0.6rem;
+    text-decoration:none; color:var(--fg);
+  }
+  .brandmark .mark{
+    width:30px; height:22px;
+    background:var(--accent);
+    border-radius:999px 999px 0 0;
+    flex:none;
+  }
+  .brandmark .word{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800; font-size:1.35rem; letter-spacing:0.04em;
+  }
+  nav.primary-nav{ display:flex; gap:0.35rem; }
+  nav.primary-nav a{
+    text-decoration:none; color:var(--muted);
+    font-size:0.92rem; font-weight:600; letter-spacing:0.02em;
+    padding:0.5rem 0.9rem 0.4rem;
+    border-radius:999px 999px 0 0;
+    position:relative;
+    transition:color 0.2s ease, background 0.2s ease;
+  }
+  nav.primary-nav a:hover, nav.primary-nav a:focus-visible{
+    color:var(--fg);
+    background:var(--surface);
+  }
+  .nav-call{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    text-decoration:none;
+    background:var(--accent); color:#15171a;
+    font-weight:700; font-size:0.88rem;
+    padding:0.55rem 1.1rem 0.5rem;
+    border-radius:999px 999px 4px 4px;
+    white-space:nowrap;
+  }
+  .menu-toggle{
+    display:none; background:none; border:1px solid rgba(245,241,236,0.35);
+    color:var(--fg); width:42px; height:38px; border-radius:999px 999px 4px 4px;
+    font-size:1.1rem; cursor:pointer;
+  }
+
+  @media (max-width:860px){
+    nav.primary-nav{
+      position:fixed; inset:60px 0 auto 0; flex-direction:column;
+      background:var(--bg); padding:1rem clamp(1.2rem,4vw,3rem) 1.5rem;
+      border-bottom:1px solid rgba(245,241,236,0.12);
+      transform:translateY(-130%); opacity:0;
+      transition:transform 0.3s ease, opacity 0.3s ease;
+      gap:0.2rem;
+    }
+    nav.primary-nav.open{ transform:translateY(0); opacity:1; }
+    nav.primary-nav a{ padding:0.85rem 1rem; border-radius:10px; }
+    .menu-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+    .nav-call{ display:none; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:clamp(2.5rem,7vw,5rem) 0 0;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:clamp(1.5rem,4vw,3rem);
+    align-items:center;
+  }
+  .hero-copy .eyebrow{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    color:var(--accent); font-weight:700; font-size:0.82rem;
+    letter-spacing:0.14em; text-transform:uppercase;
+    margin-bottom:1rem;
+  }
+  .hero-copy .eyebrow::before{
+    content:""; width:22px; height:14px;
+    background:var(--accent); border-radius:999px 999px 0 0;
+    flex:none;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6.4vw, 5.4rem);
+    color:var(--fg);
+  }
+  .hero h1 em{
+    font-style:normal; color:var(--accent);
+  }
+  .hero-sub{
+    color:var(--muted); font-size:clamp(1rem,1.4vw,1.2rem);
+    max-width:38ch; margin:1.2rem 0 1.8rem;
+  }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:0.9rem; align-items:center; }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.55rem;
+    text-decoration:none; font-weight:700; font-size:0.95rem;
+    padding:0.85rem 1.5rem 0.75rem;
+    border-radius:999px 999px 6px 6px;
+    border:1px solid transparent;
+  }
+  .btn-solid{ background:var(--accent); color:#15171a; }
+  .btn-solid:hover{ background:#ffdad9; }
+  .btn-ghost{ border-color:rgba(245,241,236,0.4); color:var(--fg); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+
+  .status-pill{
+    display:inline-flex; align-items:center; gap:0.55rem;
+    background:var(--surface); border:1px solid rgba(245,241,236,0.14);
+    padding:0.55rem 1rem 0.5rem 0.7rem;
+    border-radius:999px;
+    font-size:0.86rem; font-weight:600; color:var(--fg);
+    margin-top:1.6rem;
+  }
+  .status-dot{ width:10px; height:10px; border-radius:50%; background:var(--muted); flex:none; }
+  .status-dot.is-open{ background:#57c785; box-shadow:0 0 0 4px rgba(87,199,133,0.18); }
+  .status-dot.is-closed{ background:#e7a25a; box-shadow:0 0 0 4px rgba(231,162,90,0.16); }
+
+  .hero-visual{
+    aspect-ratio:4 / 5;
+    background:var(--surface);
+  }
+  .hero-visual img{ width:100%; height:100%; object-fit:cover; }
+  .hero-rating{
+    margin-top:1rem; font-size:0.82rem; color:var(--muted);
+  }
+  .hero-rating strong{ color:var(--fg); }
+
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; aspect-ratio:16/10; }
+  }
+
+  /* ---------- section shell ---------- */
+  section{ padding:clamp(3rem,7vw,6rem) 0; }
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:2rem; margin-bottom:clamp(1.8rem,4vw,3rem);
+    flex-wrap:wrap;
+  }
+  .kicker{
+    color:var(--accent); font-weight:700; font-size:0.8rem;
+    letter-spacing:0.16em; text-transform:uppercase; margin-bottom:0.6rem;
+    display:block;
+  }
+  .section-head h2{ font-size:clamp(2rem,4.4vw,3.4rem); max-width:16ch; }
+  .section-lede{ color:var(--muted); max-width:42ch; font-size:1rem; }
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+
+  /* ---------- venue / three levels ---------- */
+  .levels{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,3vw,1.8rem);
+    margin-top:2.2rem;
+  }
+  .level{
+    text-align:center;
+    padding:2.6rem 1.2rem 1.6rem;
+    background:linear-gradient(180deg, var(--surface), rgba(35,38,43,0.4));
+    border:1px solid rgba(245,241,236,0.1);
+    border-radius:999px 999px 10px 10px;
+  }
+  .level .glyph{
+    width:56px; height:44px; margin:0 auto 1.1rem;
+    border:2px solid var(--accent);
+    border-bottom:none;
+    border-radius:999px 999px 0 0;
+  }
+  .level h3{ font-size:1.5rem; color:var(--fg); margin-bottom:0.4rem; }
+  .level p{ color:var(--muted); font-size:0.92rem; margin:0; }
+  .usp-strip{
+    margin-top:2.4rem; display:flex; flex-wrap:wrap; gap:0.6rem 1.4rem;
+    color:var(--muted); font-size:0.92rem;
+  }
+  .usp-strip span{ display:inline-flex; align-items:center; gap:0.5rem; }
+  .usp-strip span::before{
+    content:""; width:7px; height:7px; border-radius:50%;
+    background:var(--accent); flex:none;
+  }
+  .award-note{
+    margin-top:1.6rem; font-size:0.82rem; color:var(--muted);
+    border-top:1px solid rgba(245,241,236,0.12); padding-top:1rem;
+    max-width:52ch;
+  }
+
+  @media (max-width:760px){
+    .levels{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- drinks (dominant) ---------- */
+  .drinks{
+    background:var(--brand);
+    position:relative;
+  }
+  .drinks-inner{
+    display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,4vw,3.5rem);
+    align-items:center;
+  }
+  .drinks-figure{
+    aspect-ratio:3/4;
+    background:var(--surface);
+    position:relative;
+  }
+  .drinks-figure img{ width:100%; height:100%; object-fit:cover; }
+  .drinks-figure::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(200deg, rgba(255,118,117,0.28), transparent 55%);
+    pointer-events:none;
+  }
+  .drinks-copy .kicker{ color:var(--accent); }
+  .drinks-copy h2{
+    font-size:clamp(2.4rem,6vw,4.6rem);
+    color:var(--fg);
+    margin-bottom:1.2rem;
+  }
+  .drinks-desc{
+    font-size:clamp(1.05rem,1.6vw,1.3rem);
+    color:var(--fg);
+    max-width:32ch;
+    margin-bottom:1.4rem;
+  }
+  .drinks-copy .fine{
+    color:var(--muted); font-size:0.92rem; max-width:40ch;
+  }
+  .drinks-copy .menu-line{
+    display:flex; justify-content:space-between; gap:1rem;
+    border-top:1px solid rgba(245,241,236,0.16);
+    padding:1.1rem 0; margin-top:1.6rem;
+  }
+  .drinks-copy .menu-line .name{ font-weight:700; }
+  .drinks-copy .menu-line .price{ color:var(--muted); font-size:0.9rem; }
+
+  @media (max-width:860px){
+    .drinks-inner{ grid-template-columns:1fr; }
+    .drinks-figure{ order:-1; aspect-ratio:16/9; }
+  }
+
+  /* ---------- gallery (signature module 1) ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+    gap:clamp(0.7rem,2vw,1.1rem);
+    margin-top:2rem;
+  }
+  .gallery-item{
+    aspect-ratio:3/4;
+    background:var(--surface);
+    border:none; padding:0; cursor:zoom-in;
+    position:relative; overflow:hidden;
+  }
+  .gallery-item img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.5s ease;
+  }
+  .gallery-item:hover img, .gallery-item:focus-visible img{ transform:scale(1.08); }
+  .gallery-item .plus{
+    position:absolute; right:0.6rem; bottom:0.6rem;
+    width:30px; height:24px;
+    background:rgba(21,23,26,0.72);
+    border-radius:999px 999px 3px 3px;
+    color:var(--fg); font-size:1rem; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .gallery-note{ margin-top:1.4rem; color:var(--muted); font-size:0.86rem; }
+
+  .lightbox{
+    position:fixed; inset:0; z-index:80;
+    background:rgba(10,11,13,0.92);
+    display:none; align-items:center; justify-content:center;
+    padding:clamp(1rem,5vw,3rem);
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox-figure{
+    max-width:min(90vw, 640px); max-height:82vh;
+    aspect-ratio:3/4;
+    background:var(--surface);
+    position:relative;
+  }
+  .lightbox-figure img{ width:100%; height:100%; object-fit:cover; }
+  .lightbox-close{
+    position:absolute; top:-3rem; right:0;
+    background:var(--surface); color:var(--fg);
+    border:1px solid rgba(245,241,236,0.3);
+    width:42px; height:38px; border-radius:999px 999px 4px 4px;
+    font-size:1.1rem; cursor:pointer;
+  }
+  @media (max-width:600px){
+    .lightbox-close{ top:-2.6rem; right:0; }
+  }
+
+  /* ---------- opening hours module (signature module 2) ---------- */
+  .hours-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,4vw,3rem);
+    align-items:start;
+  }
+  table.hours-table{
+    width:100%; border-collapse:collapse; font-size:0.96rem;
+  }
+  table.hours-table th{
+    text-align:left; color:var(--muted); font-weight:600;
+    font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em;
+    padding-bottom:0.6rem; border-bottom:1px solid rgba(245,241,236,0.18);
+  }
+  table.hours-table td{
+    padding:0.85rem 0.6rem 0.85rem 0;
+    border-bottom:1px solid rgba(245,241,236,0.1);
+  }
+  table.hours-table td:first-child{ color:var(--fg); font-weight:600; }
+  table.hours-table td:last-child{ color:var(--muted); text-align:right; }
+
+  .status-card{
+    background:var(--surface);
+    border:1px solid rgba(245,241,236,0.14);
+    border-radius:999px 999px 12px 12px;
+    padding:2.6rem 1.6rem 1.8rem;
+    text-align:center;
+  }
+  .status-card .status-dot{ width:14px; height:14px; margin:0 auto 0.8rem; }
+  .status-card .status-headline{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-size:1.7rem; text-transform:uppercase; margin-bottom:0.5rem;
+  }
+  .status-card .status-detail{ color:var(--muted); font-size:0.92rem; max-width:32ch; margin:0 auto; }
+  .status-card .status-note{
+    margin-top:1.4rem; padding-top:1.2rem;
+    border-top:1px solid rgba(245,241,236,0.12);
+    color:var(--muted); font-size:0.82rem;
+  }
+
+  @media (max-width:820px){
+    .hours-wrap{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- location ---------- */
+  .location-wrap{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(1.5rem,4vw,3rem);
+    align-items:stretch;
+  }
+  .location-copy dl{ margin:1.6rem 0 0; }
+  .location-copy dt{
+    color:var(--muted); font-size:0.78rem; text-transform:uppercase;
+    letter-spacing:0.1em; margin-top:1.2rem;
+  }
+  .location-copy dd{ margin:0.3rem 0 0; font-size:1.05rem; }
+  .location-copy dd a{ text-decoration:none; }
+  .location-copy dd a:hover{ color:var(--accent); }
+  .map-frame{
+    aspect-ratio:4/5;
+    overflow:hidden;
+    border:1px solid rgba(245,241,236,0.16);
+    border-radius:999px 999px 10px 10px;
+  }
+  .map-frame iframe{ width:100%; height:100%; border:0; filter:grayscale(0.3) contrast(1.05); }
+
+  @media (max-width:860px){
+    .location-wrap{ grid-template-columns:1fr; }
+    .map-frame{ order:-1; aspect-ratio:16/10; }
+  }
+
+  /* ---------- contact / cta ---------- */
+  .contact{ background:var(--surface); }
+  .contact-grid{
+    display:grid; grid-template-columns:1.2fr 0.8fr; gap:clamp(1.5rem,4vw,3rem);
+    align-items:center;
+  }
+  .contact h2{ font-size:clamp(2.2rem,5vw,3.8rem); margin-bottom:1rem; }
+  .contact-lede{ color:var(--muted); max-width:38ch; margin-bottom:1.8rem; }
+  .contact-actions{ display:flex; flex-wrap:wrap; gap:0.9rem; }
+  .contact-facts{
+    border-left:2px solid var(--accent);
+    padding-left:1.4rem;
+  }
+  .contact-facts .row{ margin-bottom:1.1rem; }
+  .contact-facts .label{
+    display:block; color:var(--muted); font-size:0.76rem;
+    text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.25rem;
+  }
+  .contact-facts .value{ font-size:1.05rem; font-weight:600; }
+  .contact-facts .value a{ text-decoration:none; }
+  .contact-facts .value a:hover{ color:var(--accent); }
+  .social-row{ display:flex; gap:0.7rem; margin-top:1.6rem; }
+  .social-row a{
+    width:42px; height:38px;
+    border:1px solid rgba(245,241,236,0.3);
+    border-radius:999px 999px 6px 6px;
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none; font-size:0.78rem; font-weight:700;
+    color:var(--fg);
+  }
+  .social-row a:hover{ border-color:var(--accent); color:var(--accent); }
+
+  @media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- footer ---------- */
+  footer{ padding:3rem 0 6.5rem; border-top:1px solid rgba(245,241,236,0.12); }
+  .footer-grid{
+    display:flex; flex-wrap:wrap; justify-content:space-between;
+    gap:2rem; margin-bottom:2rem;
+  }
+  .footer-brand .word{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:800;
+    font-size:1.4rem; text-transform:uppercase;
+  }
+  .footer-brand p{ color:var(--muted); font-size:0.88rem; max-width:32ch; margin-top:0.6rem; }
+  .footer-cols{ display:flex; gap:3rem; flex-wrap:wrap; }
+  .footer-cols h4{
+    font-size:0.76rem; text-transform:uppercase; letter-spacing:0.1em;
+    color:var(--muted); margin-bottom:0.8rem; font-weight:600;
+  }
+  .footer-cols li{ list-style:none; margin-bottom:0.5rem; }
+  .footer-cols ul{ margin:0; padding:0; font-size:0.92rem; }
+  .footer-cols a{ text-decoration:none; }
+  .footer-cols a:hover{ color:var(--accent); }
+  .footer-bottom{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:0.8rem;
+    color:var(--muted); font-size:0.8rem;
+    padding-top:1.6rem; border-top:1px solid rgba(245,241,236,0.1);
+  }
+
+  /* ---------- sticky mobile call bar ---------- */
+  .mobile-bar{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:50;
+    background:var(--surface); border-top:1px solid rgba(245,241,236,0.16);
+    padding:0.65rem clamp(1rem,4vw,1.6rem);
+    gap:0.7rem;
+  }
+  .mobile-bar a{
+    flex:1; text-align:center; text-decoration:none;
+    padding:0.75rem 0.5rem; font-weight:700; font-size:0.9rem;
+    border-radius:999px 999px 6px 6px;
+  }
+  .mobile-bar .call{ background:var(--accent); color:#15171a; }
+  .mobile-bar .route{ border:1px solid rgba(245,241,236,0.3); color:var(--fg); }
+  @media (max-width:640px){
+    .mobile-bar{ display:flex; }
+    footer{ padding-bottom:6.5rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition-duration:0.001ms !important; animation-duration:0.001ms !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="#top" class="brandmark">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="word">Arch Bar</span>
+    </a>
+    <nav class="primary-nav" id="primaryNav" aria-label="Hauptnavigation">
+      <a href="#venue">Venue</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#stunden">Öffnungszeiten</a>
+      <a href="#lage">Lage</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="tel:+41522031288" class="nav-call">Tisch anfragen</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">
+      <span aria-hidden="true">☰</span>
+      <span class="visually-hidden">Menü öffnen</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Bar · Lounge · Event-Venue am Hauptbahnhof</span>
+        <h1>Drei Ebenen.<br>Ein Bogen.<br><em>Ungewöhnliche&nbsp;Drinks.</em></h1>
+        <p class="hero-sub">Award-winning Location – ungewöhnliche Drink-Kreationen in komfortabler Atmosphäre, im historischen Gebäude direkt am Hauptbahnhof Winterthur.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="tel:+41522031288">Jetzt anrufen</a>
+          <a class="btn btn-ghost" href="#lage">Route planen</a>
+        </div>
+        <div class="status-pill" id="statusPill" role="status">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusPillText">Öffnungszeiten werden geprüft …</span>
+        </div>
+        <p class="hero-rating">Google-Bewertung: <strong>3.9</strong> · 449 Bewertungen</p>
+      </div>
+      <figure class="hero-visual arch-shape arch-frame">
+        <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s470cd966906c0176/image/i5d4829966840f5ce/version/1736781237/image.jpg"
+             alt="Innenansicht der Arch Bar Winterthur mit gewölbtem Bogen"
+             loading="eager"
+             onerror="this.closest('figure').style.display='none'">
+      </figure>
+    </div>
+    <svg class="viaduct" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <pattern id="archrow1" width="80" height="40" patternUnits="userSpaceOnUse">
+          <path d="M0,40 a40,40 0 0 1 80,0" stroke="rgba(245,241,236,0.16)" stroke-width="2"></path>
+        </pattern>
+      </defs>
+      <rect width="800" height="40" fill="url(#archrow1)"></rect>
+    </svg>
+  </section>
+
+  <!-- ================= VENUE / DREI EBENEN ================= -->
+  <section id="venue">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Das Haus</span>
+          <h2>Drei Ebenen unter einem Dach.</h2>
+        </div>
+        <p class="section-lede">Arch Bar ist ein Drei-Ebenen-Venue im historischen Gebäude direkt am Hauptbahnhof Winterthur — Hall, Bar und Bunker-Bereich als separate Locations unter einer Adresse.</p>
+      </div>
+      <div class="levels">
+        <div class="level">
+          <span class="glyph" aria-hidden="true"></span>
+          <h3>Hall</h3>
+          <p>Eine der drei Ebenen der Arch Bar.</p>
+        </div>
+        <div class="level">
+          <span class="glyph" aria-hidden="true"></span>
+          <h3>Bar</h3>
+          <p>Eine der drei Ebenen der Arch Bar.</p>
+        </div>
+        <div class="level">
+          <span class="glyph" aria-hidden="true"></span>
+          <h3>Bunker-Bereich</h3>
+          <p>Eine der drei Ebenen der Arch Bar.</p>
+        </div>
+      </div>
+      <div class="usp-strip">
+        <span>Event-Space für Privatveranstaltungen</span>
+        <span>Direkt am Hauptbahnhof, Parkplätze in der Nähe</span>
+        <span>Nur Kartenzahlung (cashless)</span>
+      </div>
+      <p class="award-note">Auszeichnung 2023 · in den USPs der Arch Bar als „Award-winning Location“ geführt. Details zur Auszeichnung selbst nennt die Quelle nicht.</p>
+    </div>
+  </section>
+
+  <!-- ================= DRINKS (dominant) ================= -->
+  <section id="drinks" class="drinks">
+    <div class="wrap drinks-inner">
+      <figure class="drinks-figure arch-shape reveal">
+        <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i3972001cece03c72/version/1781245152/image.jpg"
+             alt="Drink-Zubereitung in der Arch Bar"
+             loading="lazy"
+             onerror="this.closest('figure').style.display='none'">
+      </figure>
+      <div class="drinks-copy reveal">
+        <span class="kicker">Was hier gemixt wird</span>
+        <h2>Ungewöhnliche<br>Drink-Kreationen</h2>
+        <p class="drinks-desc">Hausgemachte und kreative Cocktails und Longdrinks.</p>
+        <p class="fine">Detaillierte Getränkepreise werden auf der offiziellen Website nicht geführt — die aktuelle Kreation gibt es an der Bar zu erfragen.</p>
+        <div class="menu-line">
+          <span class="name">Drinks &amp; Co.</span>
+          <span class="price">Preis auf Anfrage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY (signature module 1) ================= -->
+  <section id="galerie">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Einblicke</span>
+          <h2>Bogen für Bogen.</h2>
+        </div>
+        <p class="section-lede">Ein Ausschnitt aus der Arch Bar — antippen oder anklicken für die grosse Ansicht.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i45d72534fe9398e4/version/1781245152/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i45d72534fe9398e4/version/1781245152/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/ic8251c701dcdd678/version/1781245152/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/ic8251c701dcdd678/version/1781245152/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i4d2f66b0/version/1781245152/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i4d2f66b0/version/1781245152/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i98280487024ebbe9/version/1781245152/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i98280487024ebbe9/version/1781245152/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i66a88c20e0010f9f/version/1781245152/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/i66a88c20e0010f9f/version/1781245152/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/ia719a9eaff1181d1/version/1781245152/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s470cd966906c0176/image/ia719a9eaff1181d1/version/1781245152/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="gallery-item" data-full="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s470cd966906c0176/image/i889fed5ca828a932/version/1736781237/image.jpg">
+          <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s470cd966906c0176/image/i889fed5ca828a932/version/1736781237/image.jpg" alt="Ansicht der Arch Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'">
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+      </div>
+      <p class="gallery-note">Alle Bilder: Arch Bar Winterthur.</p>
+    </div>
+  </section>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht">
+    <figure class="lightbox-figure">
+      <button type="button" class="lightbox-close" id="lightboxClose">
+        <span aria-hidden="true">✕</span>
+        <span class="visually-hidden">Schliessen</span>
+      </button>
+      <img id="lightboxImg" src="" alt="Grosse Ansicht: Arch Bar Winterthur" onerror="this.closest('.lightbox').classList.remove('open')">
+    </figure>
+  </div>
+
+  <!-- ================= HOURS (signature module 2) ================= -->
+  <section id="stunden">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Wann geht's los</span>
+          <h2>Öffnungszeiten, saisonal.</h2>
+        </div>
+        <p class="section-lede">Die Arch Bar öffnet je nach Saison zu unterschiedlichen Zeiten — mit offenem Ende. Der Status unten wird live aus diesen Zeiten berechnet.</p>
+      </div>
+      <div class="hours-wrap">
+        <table class="hours-table">
+          <thead>
+            <tr><th>Zeitraum</th><th>Beginn</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Okt–Mär: Di–Fr</td><td>18:00 (ab) – offen</td></tr>
+            <tr><td>Okt–Mär: Sa</td><td>19:00 (ab) – offen</td></tr>
+            <tr><td>Apr–Sep: Do–Fr</td><td>18:00 (ab) – offen</td></tr>
+            <tr><td>Apr–Sep: Sa</td><td>19:00 (ab) – offen</td></tr>
+          </tbody>
+        </table>
+        <div class="status-card" id="statusCard">
+          <span class="status-dot" id="statusCardDot"></span>
+          <div class="status-headline" id="statusHeadline">Einen Moment …</div>
+          <p class="status-detail" id="statusDetail">Wir prüfen die aktuelle Uhrzeit gegen die Öffnungszeiten.</p>
+          <p class="status-note">Kein fixes Schlussende dokumentiert — „offen“ laut Arch Bar. Nur Kartenzahlung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOCATION ================= -->
+  <section id="lage">
+    <div class="wrap location-wrap reveal">
+      <div class="location-copy">
+        <span class="kicker">Anfahrt</span>
+        <h2>Direkt am Hauptbahnhof.</h2>
+        <p class="section-lede">Im historischen Gebäude an der Archstrasse, ein paar Schritte vom Hauptbahnhof Winterthur entfernt.</p>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>Archstrasse 2, 8400 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522031288">+41 52 203 12 88</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@archbar.ch">info@archbar.ch</a></dd>
+        </dl>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Arch%20Bar%20Winterthur&amp;z=16&amp;output=embed"
+          title="Karte: Arch Bar Winterthur"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / CTA ================= -->
+  <section id="kontakt" class="contact">
+    <div class="wrap contact-grid reveal">
+      <div>
+        <span class="kicker">Reservieren &amp; Anfragen</span>
+        <h2>Auf einen Drink unter dem Bogen.</h2>
+        <p class="contact-lede">Für Tischanfragen, Events in Hall, Bar oder Bunker-Bereich, oder einfach eine Frage vorab — am schnellsten per Anruf oder E-Mail.</p>
+        <div class="contact-actions">
+          <a class="btn btn-solid" href="tel:+41522031288">+41 52 203 12 88</a>
+          <a class="btn btn-ghost" href="mailto:info@archbar.ch">info@archbar.ch</a>
+        </div>
+        <div class="social-row">
+          <a href="https://www.instagram.com/archbarofficial/" target="_blank" rel="noopener">IG</a>
+          <a href="https://www.facebook.com/archbarofficial/" target="_blank" rel="noopener">FB</a>
+        </div>
+      </div>
+      <div class="contact-facts">
+        <div class="row">
+          <span class="label">Adresse</span>
+          <span class="value">Archstrasse 2, 8400 Winterthur</span>
+        </div>
+        <div class="row">
+          <span class="label">Google-Bewertung</span>
+          <span class="value">3.9 · 449 Bewertungen</span>
+        </div>
+        <div class="row">
+          <span class="label">Zahlung</span>
+          <span class="value">Nur Kartenzahlung (cashless)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="word">Arch Bar</span>
+        <p>Bar, Lounge und Event-Venue auf drei Ebenen, direkt am Hauptbahnhof Winterthur.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Seite</h4>
+          <ul>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#stunden">Öffnungszeiten</a></li>
+            <li><a href="#lage">Lage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:+41522031288">+41 52 203 12 88</a></li>
+            <li><a href="mailto:info@archbar.ch">info@archbar.ch</a></li>
+            <li><a href="https://www.archbar.ch/" target="_blank" rel="noopener">archbar.ch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/archbarofficial/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/archbarofficial/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Arch Bar, Archstrasse 2, 8400 Winterthur</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+41522031288">Anrufen</a>
+  <a class="route" href="https://maps.google.com/maps?q=Arch+Bar+Winterthur" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- mobile nav toggle ---------- */
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('primaryNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- signature module: live open/closed status ---------- */
+  /* Source data verbatim from arch-bar.json "hours":
+     Okt–Mär: Di–Fr  18:00 (ab) – offen
+     Okt–Mär: Sa     19:00 (ab) – offen
+     Apr–Sep: Do–Fr  18:00 (ab) – offen
+     Apr–Sep: Sa     19:00 (ab) – offen
+     No closing time is ever given ("offen" = open end) — the module therefore
+     never claims a closing time, only a start time and "offenes Ende". */
+
+  var DAY_NAMES = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+
+  function season(month){ // month: 1-12
+    return (month >= 4 && month <= 9) ? 'summer' : 'winter';
+  }
+
+  // returns {open:boolean, startHour} for a given JS Date's weekday+month, or null if closed that day
+  function openInfoFor(date){
+    var day = date.getDay(); // 0 Sun .. 6 Sat
+    var s = season(date.getMonth() + 1);
+    if (s === 'winter') {
+      if (day >= 2 && day <= 5) return { startHour: 18, startMin: 0 }; // Di-Fr
+      if (day === 6) return { startHour: 19, startMin: 0 }; // Sa
+      return null;
+    } else {
+      if (day === 4 || day === 5) return { startHour: 18, startMin: 0 }; // Do-Fr
+      if (day === 6) return { startHour: 19, startMin: 0 }; // Sa
+      return null;
+    }
+  }
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
+  function computeStatus(now){
+    now = now || new Date();
+
+    // Late-night rollover: before 06:00 we may still be inside last night's
+    // open-ended service, so check "yesterday" first.
+    if (now.getHours() < 6) {
+      var yesterday = new Date(now);
+      yesterday.setDate(now.getDate() - 1);
+      var yInfo = openInfoFor(yesterday);
+      if (yInfo) {
+        return {
+          open: true,
+          headline: 'Geöffnet',
+          detail: 'Seit gestern ' + pad(yInfo.startHour) + ':' + pad(yInfo.startMin) + ' Uhr geöffnet, offenes Ende.',
+          pill: 'Vermutlich geöffnet · offenes Ende'
+        };
+      }
+      // yesterday wasn't an opening day: fall through to normal same-day check
+    }
+
+    var today = openInfoFor(now);
+    if (today) {
+      var startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), today.startHour, today.startMin, 0);
+      if (now >= startDate) {
+        return {
+          open: true,
+          headline: 'Geöffnet',
+          detail: 'Heute seit ' + pad(today.startHour) + ':' + pad(today.startMin) + ' Uhr geöffnet, offenes Ende.',
+          pill: 'Jetzt geöffnet · offenes Ende'
+        };
+      } else {
+        return {
+          open: false,
+          headline: 'Bald geöffnet',
+          detail: 'Öffnet heute um ' + pad(today.startHour) + ':' + pad(today.startMin) + ' Uhr.',
+          pill: 'Öffnet heute um ' + pad(today.startHour) + ':' + pad(today.startMin) + ' Uhr'
+        };
+      }
+    }
+
+    // find next opening day, up to 8 days out
+    for (var i = 1; i <= 8; i++) {
+      var candidate = new Date(now);
+      candidate.setDate(now.getDate() + i);
+      var info = openInfoFor(candidate);
+      if (info) {
+        var label = (i === 1 ? 'Morgen' : DAY_NAMES[candidate.getDay()]) + ' ab ' + pad(info.startHour) + ':' + pad(info.startMin) + ' Uhr';
+        return {
+          open: false,
+          headline: 'Geschlossen',
+          detail: 'Nächste Öffnung: ' + label + '.',
+          pill: 'Geschlossen · nächste Öffnung ' + label
+        };
+      }
+    }
+    return {
+      open: false,
+      headline: 'Geschlossen',
+      detail: 'Aktuell keine Öffnungszeiten hinterlegt.',
+      pill: 'Geschlossen'
+    };
+  }
+
+  function renderStatus(){
+    var status = computeStatus(new Date());
+
+    var pillDot = document.getElementById('statusDot');
+    var pillText = document.getElementById('statusPillText');
+    var cardDot = document.getElementById('statusCardDot');
+    var headline = document.getElementById('statusHeadline');
+    var detail = document.getElementById('statusDetail');
+
+    [pillDot, cardDot].forEach(function(dot){
+      if (!dot) return;
+      dot.classList.remove('is-open', 'is-closed');
+      dot.classList.add(status.open ? 'is-open' : 'is-closed');
+    });
+    if (pillText) pillText.textContent = status.pill;
+    if (headline) headline.textContent = status.headline;
+    if (detail) detail.textContent = status.detail;
+  }
+
+  renderStatus();
+  setInterval(renderStatus, 60000);
+
+  /* ---------- gallery lightbox ---------- */
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var lastTrigger = null;
+
+  function openLightbox(src, trigger){
+    if (!src) return;
+    lightboxImg.src = src;
+    lightbox.classList.add('open');
+    lastTrigger = trigger;
+    lightboxClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openLightbox(btn.getAttribute('data-full'), btn);
+    });
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e){
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+
+})();
+</script>
+</body>
+</html>

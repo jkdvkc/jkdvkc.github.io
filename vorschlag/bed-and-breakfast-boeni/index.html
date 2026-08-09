@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bed and Breakfast Böni – Winterthur</title>
+<meta name="description" content="Bed and Breakfast Böni in Winterthur: ein kleines Haus ohne Website und ohne Online-Bewertung. Telefon +41 52 213 04 17.">
+<meta property="og:title" content="Bed and Breakfast Böni">
+<meta property="og:description" content="Ein kleines B&B in Winterthur, bisher ganz ohne Online-Präsenz. Telefon +41 52 213 04 17.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Bed and Breakfast Böni",
+  "address": { "@type": "PostalAddress", "addressLocality": "Winterthur", "addressCountry": "CH" },
+  "telephone": "+41522130417"
+}
+</script>
+<style>
+:root{
+  --bg:#f6ece1;
+  --surface:#fffaf3;
+  --fg:#3a2a1e;
+  --muted:#7a6552;
+  --brand:#a9503c;
+  --accent:#b08d4f;
+  --line:#e2cfb8;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{ margin:0; background:var(--bg); color:var(--fg); font-family:'Nunito',system-ui,sans-serif; font-size:clamp(15px,0.3vw + 14px,17px); line-height:1.7; }
+h1,h2,.hand{ font-family:'Caveat',cursive; font-weight:700; margin:0; line-height:1; }
+a{ color:inherit; }
+.skip-link{ position:absolute; left:-999px; top:0; background:var(--brand); color:#fff; padding:.6em 1em; z-index:100; }
+.skip-link:focus{ left:1rem; top:1rem; }
+:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+
+header{ position:sticky; top:0; z-index:20; background:rgba(246,236,225,.94); border-bottom:1px solid var(--line); padding:.9rem 1.25rem; display:flex; justify-content:space-between; align-items:center; }
+header .word{ font-family:'Caveat',cursive; font-size:clamp(1.3rem,3vw,1.7rem); font-weight:700; }
+header nav{ display:none; gap:1.1rem; font-size:.85rem; }
+header nav a{ text-decoration:none; color:var(--muted); }
+header nav a:hover, header nav a:focus-visible{ color:var(--brand); }
+@media (min-width:680px){ header nav{ display:flex; } }
+header .callbtn{ border:1px solid var(--brand); padding:.5em 1em; text-decoration:none; font-size:.85rem; border-radius:3px; }
+header .callbtn:hover{ background:var(--brand); color:#fff; }
+
+main{ max-width:760px; margin:0 auto; padding:0 1.25rem; }
+section{ padding:clamp(2.4rem,6vw,4.5rem) 0; border-bottom:1px dashed var(--line); }
+section:last-of-type{ border-bottom:none; }
+.reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+/* THE NAMEPLATE — hand-lettered domestic feel */
+.nameplate-wrap{ display:flex; justify-content:center; padding-top:1rem; }
+.nameplate{
+  background:#3a2a1e; color:#f6ece1; padding:1.6rem 2.4rem; border-radius:6px;
+  box-shadow:0 3px 0 rgba(0,0,0,.15), inset 0 0 0 2px #5b4433;
+  position:relative; text-align:center;
+}
+.nameplate .fam{ font-family:'Caveat',cursive; font-size:clamp(1.8rem,5vw,2.6rem); font-weight:700; line-height:1.7; }
+.nameplate .sub{ font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:#d8c3ab; margin-top:.3rem; }
+.screw{ position:absolute; width:6px; height:6px; border-radius:50%; background:#8a7256; }
+.screw.tl{ top:8px; left:8px; } .screw.tr{ top:8px; right:8px; }
+.screw.bl{ bottom:8px; left:8px; } .screw.br{ bottom:8px; right:8px; }
+
+/* a small woven mat below the door, built from flat stripes only */
+.mat-wrap{ display:flex; justify-content:center; margin-top:1.4rem; }
+.mat{
+  width:min(220px,60vw); height:28px; border-radius:3px;
+  background:repeating-linear-gradient(90deg, var(--brand) 0 10px, var(--accent) 10px 20px);
+  opacity:.55;
+}
+
+.hint-text{ text-align:center; font-size:.78rem; color:var(--muted); margin-top:.5rem; letter-spacing:.05em; }
+
+.doorbell:focus-visible .button-ring{ outline:3px solid var(--accent); outline-offset:3px; }
+.fact-toggle summary:focus-visible{ outline:3px solid var(--accent); outline-offset:3px; }
+.gap-block a:focus-visible{ outline:3px solid var(--fg); outline-offset:2px; }
+
+@media (max-width:400px){
+  .nameplate{ padding:1.3rem 1.6rem; }
+  header nav{ display:none !important; }
+}
+
+.mobile-bar a:focus-visible{ outline:3px solid #fff; outline-offset:-4px; }
+.mapwrap iframe:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+
+/* THE DOORBELL — signature module */
+.doorbell-wrap{ display:flex; justify-content:center; margin-top:2.2rem; }
+.doorbell{
+  display:flex; flex-direction:column; align-items:center; gap:.6rem; background:none; border:0; cursor:pointer;
+  font-family:'Nunito',sans-serif; color:var(--fg);
+}
+.button-ring{
+  width:64px; height:64px; border-radius:50%; background:var(--brand); border:4px solid #fff;
+  box-shadow:0 3px 8px rgba(58,42,30,.35);
+  display:flex; align-items:center; justify-content:center; transition:transform .15s ease;
+}
+.button-ring .dot{ width:14px; height:14px; border-radius:50%; background:#f6ece1; }
+.doorbell:active .button-ring{ transform:scale(.92); }
+.doorbell .caption{ font-size:.85rem; color:var(--muted); }
+@media (prefers-reduced-motion:reduce){ .button-ring{ transition:none; } }
+.bell-response{
+  max-width:44ch; margin:1.4rem auto 0; text-align:center; background:var(--surface); border:1px solid var(--line);
+  padding:1rem 1.3rem; border-radius:6px; font-size:.95rem; display:none;
+}
+.bell-response.show{ display:block; }
+.bell-response strong{ color:var(--brand); }
+
+.kicker{ font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); text-align:center; }
+.lead{ max-width:46ch; margin:1rem auto 0; color:var(--muted); font-size:clamp(1rem,1.4vw,1.1rem); text-align:center; }
+
+.fact-toggle{ border:1px solid var(--brand); background:var(--surface); border-radius:6px; }
+.fact-toggle summary{ cursor:pointer; list-style:none; padding:1rem 1.2rem; display:flex; justify-content:space-between; font-family:'Caveat',cursive; font-size:1.3rem; }
+.fact-toggle summary::-webkit-details-marker{ display:none; }
+.fact-toggle .content{ padding:0 1.2rem 1.2rem; }
+.factline{ display:flex; gap:.7rem; padding:.55rem 0; border-top:1px solid var(--line); font-size:.92rem; }
+.factline .k{ color:var(--muted); width:8.5rem; flex-shrink:0; }
+
+.mapwrap{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.mapwrap iframe{ width:100%; height:290px; border:0; display:block; }
+
+.gap-block{ background:var(--brand); color:#fbeee2; padding:clamp(1.6rem,4vw,2.3rem); border-radius:6px; }
+.gap-block h2{ color:#fbeee2; font-size:clamp(1.6rem,3.5vw,2.1rem); margin-bottom:.6rem; font-family:'Caveat',cursive; }
+.gap-block p{ max-width:52ch; color:#f0d9c8; }
+.gap-block ul{ list-style:none; margin:1.1rem 0 0; padding:0; display:grid; gap:.5rem; }
+.gap-block li{ font-size:.9rem; padding-left:1.3em; position:relative; }
+.gap-block li::before{ content:"—"; position:absolute; left:0; color:var(--accent); }
+.gap-block .callout a{ display:inline-block; margin-top:1.3rem; background:#fbeee2; color:var(--brand); padding:.75em 1.4em; text-decoration:none; font-weight:700; border-radius:4px; }
+
+footer{ padding:2.4rem 1.25rem 6.5rem; text-align:center; color:var(--muted); font-size:.85rem; }
+footer p{ margin:.3rem 0; }
+footer a{ color:var(--brand); }
+.muster{ margin-top:.8rem; font-size:.78rem; }
+.muster::before{ content:"— "; }
+
+.mobile-bar{ position:fixed; bottom:0; left:0; right:0; z-index:30; background:var(--brand); display:flex; }
+.mobile-bar a{ flex:1; text-align:center; padding:1rem; color:#fff; text-decoration:none; font-size:.95rem; }
+@media (min-width:760px){ .mobile-bar{ display:none; } }
+
+noscript div{ display:block; background:var(--surface); border:1px solid var(--line); padding:1rem 1.25rem; margin:1.5rem 0; font-size:.9rem; color:var(--muted); border-radius:6px; }
+@media print{ header, .mobile-bar{ display:none; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <span class="word">Böni</span>
+  <nav aria-label="Sprungmarken">
+    <a href="#klingel">Klingeln</a>
+    <a href="#fakten">Fakten</a>
+    <a href="#ort">Ort</a>
+  </nav>
+  <a class="callbtn" href="tel:+41522130417">+41 52 213 04 17</a>
+</header>
+
+<main id="main">
+  <noscript><div>Diese Seite bleibt auch ohne JavaScript lesbar – nur die Klingel-Animation entfällt, die Telefonnummer bleibt verlinkt.</div></noscript>
+
+  <section class="reveal">
+    <p class="kicker">Winterthur · Bed &amp; Breakfast</p>
+    <div class="nameplate-wrap">
+      <div class="nameplate">
+        <span class="screw tl"></span><span class="screw tr"></span><span class="screw bl"></span><span class="screw br"></span>
+        <h1 class="fam">Familie Böni</h1>
+        <div class="sub">Bed &amp; Breakfast</div>
+      </div>
+    </div>
+    <div class="mat-wrap" aria-hidden="true"><div class="mat"></div></div>
+    <p class="hint-text">Winterthur</p>
+    <p class="lead">Kein Empfang, keine Lobby – nur ein Name an der Tür und eine Klingel. So klein und so persönlich ist dieses Haus online bisher geblieben: gar nicht sichtbar.</p>
+  </section>
+
+  <section class="reveal">
+    <h2 style="text-align:center;font-size:clamp(1.4rem,3.5vw,1.9rem);margin-bottom:.8rem;">Ohne Bewertung, mit Absicht gezeigt</h2>
+    <p class="lead" style="margin-top:0;">Andere Häuser in dieser Reihe zeigen einen Bewertungsschnitt, und sei er noch so klein. Beim Böni gibt es keinen einzigen – kein Sternchen bei Google, kein Eintrag. Deshalb fehlt dieser Abschnitt hier ganz, statt eine Zahl zu erfinden.</p>
+    <p class="lead">Das ist kein Makel, den man verstecken müsste – es ist der Ausgangspunkt für diesen Vorschlag: ein Haus, das online bei null anfängt.</p>
+  </section>
+
+  <section class="reveal" id="klingel">
+    <h2 style="text-align:center;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:.4rem;">Anklopfen</h2>
+    <p class="lead" style="margin-top:0;">Die einzige Anfrage, die hier funktioniert, ist die direkte: anrufen.</p>
+    <div class="doorbell-wrap">
+      <button class="doorbell" id="bellBtn" type="button" aria-describedby="bellResponse">
+        <span class="button-ring" aria-hidden="true"><span class="dot"></span></span>
+        <span class="caption">Klingeln (Telefonnummer einblenden)</span>
+      </button>
+    </div>
+    <div class="bell-response" id="bellResponse" role="status">
+      Niemand öffnet online – aber jemand nimmt ab: <strong><a href="tel:+41522130417">+41 52 213 04 17</a></strong>
+    </div>
+    <p class="lead" style="font-size:.88rem;margin-top:1.6rem;">Kein Buchungsbutton, kein Kalender – die Klingel führt zu genau einer Handlung: dem Anruf. Für ein Haus dieser Grösse ist das kein Rückschritt, sondern die richtige Grösse.</p>
+  </section>
+
+  <section class="reveal" id="fakten">
+    <h2 style="text-align:center;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem;">Was wir sicher wissen</h2>
+    <details class="fact-toggle">
+      <summary>Bestätigte Angaben <span>+</span></summary>
+      <div class="content">
+        <div class="factline"><span class="k">Name</span><span>Bed and Breakfast Böni</span></div>
+        <div class="factline"><span class="k">Ort</span><span>Winterthur</span></div>
+        <div class="factline"><span class="k">Kategorie</span><span>Bed &amp; Breakfast</span></div>
+        <div class="factline"><span class="k">Telefon</span><span>+41 52 213 04 17</span></div>
+        <div class="factline"><span class="k">Bewertung</span><span>keine hinterlegt</span></div>
+        <div class="factline"><span class="k">Eigene Website</span><span>keine gefunden</span></div>
+        <div class="factline"><span class="k">Quelle</span><span>Verzeichniseintrag</span></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="reveal" id="ort">
+    <h2 style="text-align:center;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem;">Ort (ungefähr)</h2>
+    <div class="mapwrap">
+      <iframe src="https://maps.google.com/maps?q=Bed%20and%20Breakfast%20B%C3%B6ni%20Winterthur&amp;z=16&amp;output=embed" title="Standort Bed and Breakfast Böni auf Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 style="text-align:center;font-size:clamp(1.4rem,3.5vw,1.9rem);margin-bottom:.8rem;">Ein Name an der Tür, sonst nichts</h2>
+    <p class="lead" style="margin-top:0;">Diese Seite verzichtet bewusst auf grosse Gesten. Ein Messingschild, eine Klingel, eine Telefonnummer – mehr braucht ein Gästezimmer bei einer Familie nicht, und mehr steht über das Böni auch nicht online.</p>
+  </section>
+
+  <section class="reveal">
+    <div class="gap-block">
+      <h2>Was hier fehlt</h2>
+      <p>Es gibt online schlicht nichts, woran sich ein Gast orientieren könnte: keine Bewertung, keine Adresse, kein Zimmertyp, kein Preis, keine Fotos, keine Öffnungszeiten. Auch ohne Bewertungszahl bleibt diese Seite bewusst ehrlich – wir zeigen keine erfunden hohe Zahl, sondern gar keine.</p>
+      <ul>
+        <li>Bewertung: nicht vorhanden</li>
+        <li>Adresse: nicht publiziert</li>
+        <li>Zimmer &amp; Preise: nicht publiziert</li>
+        <li>Fotos: keine vorhanden</li>
+      </ul>
+      <p class="callout"><a href="tel:+41522130417">Für alles Übrige: +41 52 213 04 17</a></p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 style="text-align:center;font-size:clamp(1.4rem,3.5vw,1.9rem);margin-bottom:.8rem;">Kurz gesagt</h2>
+    <p class="lead" style="margin-top:0;">Familie Böni, Bed &amp; Breakfast, Winterthur, eine Telefonnummer. Vier Angaben – mehr braucht diese Seite nicht, um ehrlich zu sein.</p>
+    <div class="doorbell-wrap" style="margin-top:1.6rem;">
+      <a class="doorbell" href="tel:+41522130417" style="text-decoration:none;">
+        <span class="button-ring" aria-hidden="true"><span class="dot"></span></span>
+        <span class="caption">+41 52 213 04 17</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Bed and Breakfast Böni</p>
+  <p>Winterthur · <a href="tel:+41522130417">+41 52 213 04 17</a></p>
+  <p class="muster">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522130417">Anrufen: +41 52 213 04 17</a>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('bellBtn');
+  var resp = document.getElementById('bellResponse');
+  if(!btn || !resp) return;
+  var rang = false;
+  btn.addEventListener('click', function(){
+    resp.classList.add('show');
+    if(!rang){
+      btn.querySelector('.caption').textContent = 'Nochmal klingeln';
+      rang = true;
+    }
+    resp.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'nearest' });
+  });
+})();
+
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold:.15 });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>

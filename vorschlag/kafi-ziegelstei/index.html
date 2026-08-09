@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kafi Ziegelstei Winterthur · Klein, süss, Dättnau</title>
+<meta name="description" content="Kafi Ziegelstei, Dättnauerstrasse 9, 8406 Winterthur: kleines, gemütliches Café mit 4.8 von 5 Sternen bei 89 Google-Bewertungen. Mo–Sa 09:00–17:00.">
+<meta property="og:title" content="Kafi Ziegelstei, Winterthur">
+<meta property="og:description" content="Kleines und charmantes Café im Dättnau-Quartier — 4.8 ★ bei 89 Google-Bewertungen.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Kafi Ziegelstei",
+  "telephone": "+41 52 544 73 29",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dättnauerstrasse 9",
+    "postalCode": "8406",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "89"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#f4ece2;
+    --surface:#fffaf3;
+    --fg:#2c1e17;
+    --muted:#6b4f3f;
+    --brand:#a8482f;
+    --accent:#7c8a5a;
+    --mortar:#d9c9b4;
+    --maxw:1080px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Mulish', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.8vw + 12.6px, 17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Zilla Slab', ui-serif, Georgia, serif; font-weight:700; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1rem,4vw,2.4rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  .skip-link{
+    position:absolute; left:0.6rem; top:-3rem; z-index:100;
+    background:var(--fg); color:#fff; padding:0.6rem 1rem; border-radius:6px;
+    font-weight:800; text-decoration:none; transition:top .2s ease;
+  }
+  .skip-link:focus{ top:0.6rem; }
+  ::selection{ background:var(--brand); color:#fff; }
+  .eyebrow{ font-weight:800; text-transform:uppercase; letter-spacing:0.14em; font-size:0.7rem; color:var(--accent); }
+  section[id]{ scroll-margin-top:4.2rem; }
+
+  /* brick course — every block sits in a running-bond course */
+  .course{ display:grid; gap:6px; }
+  .course.offset{ padding-left:clamp(1.2rem,6vw,4rem); }
+  .brick{
+    background:var(--surface); border:2px solid var(--fg);
+    border-radius:6px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .brick:hover{ transform:translateY(-2px); box-shadow:0 6px 0 rgba(44,30,23,0.08); }
+  @media (prefers-reduced-motion: reduce){ .brick:hover{ transform:none; box-shadow:none; } }
+
+  /* quote brick */
+  .quote-brick{ padding:1.3rem 1.6rem; position:relative; overflow:hidden; }
+  .quote-brick p{ margin:0; font-family:'Zilla Slab',serif; font-weight:600; font-size:clamp(1.05rem,2vw,1.3rem); }
+  .quote-brick cite{ display:block; margin-top:0.5rem; font-family:'Mulish',sans-serif; font-style:normal; font-weight:700; font-size:0.78rem; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; padding:0.7rem 0; transition:box-shadow .25s ease; }
+  header.site.scrolled{ box-shadow:0 4px 0 rgba(44,30,23,0.12); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ font-family:'Zilla Slab', serif; font-weight:700; font-size:1.25rem; display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:#fff; }
+  .logo .brickicon{ width:1.1rem; height:0.75rem; background:var(--mortar); border-radius:2px; display:inline-block; }
+  nav.pill-nav{ display:flex; gap:0.2rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:700; font-size:0.8rem; padding:0.45rem 0.8rem; border-radius:6px; color:#fff; }
+  nav.pill-nav a:hover{ background:rgba(255,255,255,0.16); }
+  .navtoggle{ display:none; background:#fff; color:var(--brand); border:none; border-radius:6px; padding:0.45rem 0.9rem; font-weight:800; cursor:pointer; }
+
+  /* HERO — masonry wall */
+  .hero{ padding:0; }
+  .wall{ display:flex; flex-direction:column; gap:6px; padding:6px 0; background:var(--mortar); }
+  .wall .course{ display:flex; gap:6px; padding-inline:6px; }
+  .wall .brick{ flex:1 1 auto; height:clamp(38px,6vw,58px); border:none; background:var(--brand); opacity:0.9; }
+  .wall .course:nth-child(even){ padding-left:calc(6px + clamp(19px,3vw,29px)); }
+  .wall .course:nth-child(even) .brick:last-child{ flex:0 0 clamp(19px,3vw,29px); }
+  .wall .brick:nth-child(3n+1){ background:#8a3620; }
+  .wall .brick:nth-child(3n+2){ background:#b25336; }
+
+  .hero-content{ padding:clamp(2rem,6vw,3.4rem) 0; }
+  .hero-content h1{ font-size:clamp(2.1rem,5vw,3.4rem); line-height:1.05; }
+  .hero-content .sub{ font-size:clamp(0.98rem,1.4vw,1.12rem); color:var(--muted); font-weight:700; max-width:42ch; margin-top:0.9rem; }
+  .cta-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.4rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:800; text-decoration:none; padding:0.75rem 1.3rem; border-radius:6px; border:2px solid var(--fg); }
+  .btn.solid{ background:var(--fg); color:var(--bg); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.4rem; background:var(--surface); border:2px solid var(--fg); border-radius:6px; padding:0.4rem 0.9rem; font-weight:800; font-size:0.82rem; margin-top:1.2rem; }
+  .rating-chip b{ font-family:'Zilla Slab',serif; font-size:1.05rem; color:var(--brand); }
+
+  section{ padding:clamp(1.6rem,4vw,2.6rem) 0; }
+  .section-head{ margin-bottom:1.2rem; max-width:60ch; }
+  .section-head h2{ font-size:clamp(1.4rem,2.8vw,1.9rem); }
+  .section-head p{ color:var(--muted); font-weight:700; margin-top:0.4rem; font-size:0.92rem; }
+
+  /* about as one long brick */
+  .about-brick{ padding:1.4rem 1.6rem; }
+  .about-brick p{ margin:0; font-weight:600; max-width:64ch; }
+
+  /* usp course — interlocking two-thirds / one-third bricks */
+  .usp-course{ display:grid; grid-template-columns:2fr 1fr; gap:6px; }
+  .usp-course.rev{ grid-template-columns:1fr 2fr; }
+  .usp-course .brick{ padding:1rem 1.2rem; display:flex; align-items:center; }
+  .usp-course .brick p{ margin:0; font-weight:700; font-size:0.92rem; }
+
+  /* SIGNATURE MODULE — brick week + jetzt offen */
+  .week-wall{ display:flex; flex-direction:column; gap:6px; }
+  .week-wall .course{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
+  .day-brick{ padding:0.7rem 0.3rem; text-align:center; }
+  .day-brick .d{ font-family:'Zilla Slab',serif; font-weight:700; font-size:0.82rem; display:block; }
+  .day-brick .t{ font-size:0.68rem; color:var(--muted); font-weight:700; display:block; margin-top:0.2rem; }
+  .day-brick.today{ background:var(--brand); color:#fff; border-color:var(--brand); }
+  .day-brick.today .t{ color:#f3e2d9; }
+  .day-brick.closed{ opacity:0.55; }
+  .now-status{ display:flex; align-items:center; gap:0.7rem; margin:1.2rem 0; font-weight:800; font-size:1rem; }
+  .now-status .dot{ width:0.8rem; height:0.8rem; border-radius:50%; background:var(--accent); flex:none; }
+  .now-status.closed .dot{ background:var(--brand); }
+  .week-legend{ list-style:none; margin:0.9rem 0 0; padding:0; display:flex; gap:1.1rem; font-size:0.78rem; font-weight:700; color:var(--muted); }
+  .week-legend li{ display:flex; align-items:center; gap:0.4rem; }
+  .week-legend .swatch{ width:0.9rem; height:0.9rem; border-radius:4px; display:inline-block; border:2px solid var(--fg); }
+  .week-legend .today-swatch{ background:var(--brand); border-color:var(--brand); }
+  .week-legend .closed-swatch{ background:var(--surface); opacity:0.55; }
+
+  /* mortar divider — a thin interlocking course between sections */
+  .mortar-divider{ display:flex; gap:4px; padding:0 0; background:var(--mortar); }
+  .mortar-divider .mb{ flex:1 1 auto; height:14px; }
+  .mortar-divider .mb:nth-child(4n+1){ background:#8a3620; }
+  .mortar-divider .mb:nth-child(4n+2){ background:#a8482f; }
+  .mortar-divider .mb:nth-child(4n+3){ background:#b25336; }
+  .mortar-divider .mb:nth-child(4n+4){ background:#c46b45; }
+
+  /* larger quote mark, CSS-drawn */
+  .quote-brick::before{
+    content:"“"; position:absolute; top:-0.6rem; right:0.8rem;
+    font-family:'Zilla Slab',serif; font-size:5rem; font-weight:700;
+    color:var(--fg); opacity:0.06; line-height:1; pointer-events:none;
+  }
+
+  /* nav + day-brick focus polish */
+  nav.pill-nav a:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+  .day-brick:focus-within{ outline:2px solid var(--brand); outline-offset:2px; }
+
+  @media (min-width:901px){
+    .usp-course.triple{ grid-template-columns:repeat(3,1fr); }
+  }
+  @media (min-width:1200px){
+    .wall .course{ padding-inline:10px; }
+    .about-brick p{ font-size:1.02rem; }
+  }
+  @media (max-width:360px){
+    .navrow{ gap:0.6rem; }
+    .logo{ font-size:1.1rem; }
+    .day-brick .d{ font-size:0.76rem; }
+    .day-brick .t{ font-size:0.62rem; }
+  }
+
+  /* print: keep it plain, no brand background bleeding across pages */
+  @media print{
+    .callbar, .navtoggle, header.site{ display:none; }
+    body{ background:#fff; color:#000; }
+  }
+
+  /* contact — two bricks side by side */
+  .contact-course{ display:grid; grid-template-columns:1fr 1.15fr; gap:6px; align-items:stretch; }
+  .contact-brick{ padding:1.3rem 1.5rem; display:flex; flex-direction:column; gap:0.8rem; justify-content:center; }
+  .contact-brick .row{ display:flex; flex-direction:column; gap:0.1rem; }
+  .contact-brick .row span.k{ font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; color:var(--accent); }
+  .contact-brick a{ text-decoration:none; font-weight:800; }
+  .contact-brick a:hover{ color:var(--brand); }
+  .map-brick{ overflow:hidden; }
+  .map-brick iframe{ width:100%; height:100%; min-height:230px; border:0; display:block; }
+
+  footer.site{ padding:1.6rem 0 5.6rem; background:var(--fg); color:var(--bg); }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font-weight:700; font-size:0.85rem; }
+  footer.site .disclaimer{ margin-top:1.1rem; font-size:0.72rem; opacity:0.75; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--mortar); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.8rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:800; font-family:'Zilla Slab',serif; font-size:0.98rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4rem; } }
+
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:760px){
+    .usp-course, .usp-course.rev{ grid-template-columns:1fr; }
+    .contact-course{ grid-template-columns:1fr; }
+    .week-wall .course{ grid-template-columns:repeat(4,1fr); }
+    .wall .course:nth-child(even){ padding-left:6px; }
+  }
+  @media (max-width:600px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.6rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+    .week-wall .course{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:400px){ .hero-content h1{ font-size:1.8rem; } }
+  @media (max-width:340px){
+    .rating-chip{ font-size:0.75rem; padding:0.35rem 0.7rem; }
+    .contact-brick{ padding:1rem 1.1rem; }
+    .quote-brick p{ font-size:1.02rem; }
+  }
+
+  /* fine print under the hero, explaining the pattern in words for anyone who can't see it */
+  .pattern-note{ font-size:0.78rem; color:var(--muted); font-weight:700; margin-top:1rem; max-width:44ch; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top"><span class="brickicon"></span>Kafi Ziegelstei</a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#offen">Jetzt offen?</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wall" aria-hidden="true">
+      <div class="course"><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div></div>
+      <div class="course"><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div></div>
+      <div class="course"><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div></div>
+      <div class="course"><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div></div>
+    </div>
+    <div class="wrap hero-content">
+      <p class="eyebrow reveal">Café · Dättnau · Winterthur</p>
+      <h1 class="reveal">Klein, süss, Stein auf Stein gemütlich.</h1>
+      <p class="sub reveal">Kafi Ziegelstei ist ein kleines und charmantes Café in Winterthur, das
+      sich auf Kaffee und leichte Gerichte spezialisiert hat. Bekannt für seine gemütliche
+      Atmosphäre.</p>
+      <div class="cta-row reveal">
+        <a class="btn solid" href="tel:+41525447329">Anrufen</a>
+        <a class="btn ghost" href="#offen">Jetzt offen? ↓</a>
+      </div>
+      <div class="rating-chip reveal"><b>4.8</b>&nbsp;/ 5 · 89 Google-Bewertungen</div>
+      <p class="pattern-note reveal">Diese Seite ist im Läuferverband aufgebaut — jeder Abschnitt
+      ein Ziegel, jede Reihe versetzt zur nächsten, so wie eine echte Mauer.</p>
+    </div>
+  </section>
+
+  <div class="mortar-divider" aria-hidden="true">
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+  </div>
+
+  <div class="mortar-divider" aria-hidden="true">
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="ueber-uns">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>Ein Stein im Quartier</h2></div>
+      <div class="brick about-brick reveal">
+        <p>Kleines und charmantes Café in Winterthur, spezialisiert auf Kaffee und leichte
+        Gerichte, bekannt für seine gemütliche Atmosphäre und zentrale Lage im Dättnau-Quartier.</p>
+      </div>
+      <div class="usp-course reveal" style="margin-top:6px;">
+        <div class="brick"><p>Klein und gemütlich</p></div>
+        <div class="brick"><p>4.8 ★ Bewertung</p></div>
+      </div>
+      <div class="usp-course rev reveal" style="margin-top:6px;">
+        <div class="brick"><p>Zentral im Dättnau</p></div>
+        <div class="brick"><p>Verlässliche Öffnungszeiten und Qualität</p></div>
+      </div>
+      <div class="brick quote-brick reveal" style="margin-top:6px;">
+        <p>„Klein und süss.“</p>
+        <cite>So wird das Kafi Ziegelstei in Bewertungen beschrieben</cite>
+      </div>
+    </div>
+  </section>
+
+  <div class="mortar-divider" aria-hidden="true">
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+  </div>
+
+  <!-- SIGNATURE MODULE: Jetzt offen? brick week -->
+  <section id="offen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Jetzt offen?</h2>
+        <p>Live berechnet aus den echten Öffnungszeiten.</p>
+      </div>
+      <div class="now-status reveal" id="now-status" role="status" aria-live="polite"><span class="dot"></span><span id="now-status-text">Status wird berechnet …</span></div>
+      <div class="week-wall reveal" id="week-wall">
+        <div class="course">
+          <div class="brick day-brick" data-day="1"><span class="d">Mo</span><span class="t">09–17</span></div>
+          <div class="brick day-brick" data-day="2"><span class="d">Di</span><span class="t">09–17</span></div>
+          <div class="brick day-brick" data-day="3"><span class="d">Mi</span><span class="t">09–17</span></div>
+          <div class="brick day-brick" data-day="4"><span class="d">Do</span><span class="t">09–17</span></div>
+          <div class="brick day-brick" data-day="5"><span class="d">Fr</span><span class="t">09–17</span></div>
+          <div class="brick day-brick" data-day="6"><span class="d">Sa</span><span class="t">09–17</span></div>
+          <div class="brick day-brick closed" data-day="0"><span class="d">So</span><span class="t">zu</span></div>
+        </div>
+      </div>
+      <p class="section-head" style="margin-top:1rem; margin-bottom:0;">Öffnungszeiten: Mo–Sa 09:00–17:00. Sonntag Ruhetag.</p>
+      <ul class="week-legend reveal" aria-hidden="true">
+        <li><span class="swatch today-swatch"></span>Heute</li>
+        <li><span class="swatch closed-swatch"></span>Geschlossen</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="mortar-divider" aria-hidden="true">
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+  </div>
+
+  <!-- BEWERTUNGEN -->
+  <section id="bewertungen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Was Gäste sagen</h2>
+        <p>Bewertung direkt von Google — ohne Auswahl, ohne Kürzung.</p>
+      </div>
+      <div class="usp-course triple reveal">
+        <div class="brick" style="padding:1.2rem 1.3rem;">
+          <p style="font-family:'Zilla Slab',serif; font-size:2rem; color:var(--brand);">4.8</p>
+        </div>
+        <div class="brick" style="padding:1.2rem 1.3rem; display:flex; align-items:center;">
+          <p>von 5 Sternen auf Google</p>
+        </div>
+      </div>
+      <div class="usp-course rev reveal" style="margin-top:6px;">
+        <div class="brick" style="padding:1.2rem 1.3rem; display:flex; align-items:center;">
+          <p>Google-Bewertungen insgesamt</p>
+        </div>
+        <div class="brick" style="padding:1.2rem 1.3rem;">
+          <p style="font-family:'Zilla Slab',serif; font-size:2rem; color:var(--accent);">89</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mortar-divider" aria-hidden="true">
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+    <div class="mb"></div><div class="mb"></div><div class="mb"></div><div class="mb"></div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>Kontakt &amp; Lage</h2></div>
+      <div class="contact-course reveal">
+        <div class="brick contact-brick">
+          <div class="row"><span class="k">Adresse</span><span>Dättnauerstrasse 9, 8406 Winterthur</span></div>
+          <div class="row"><span class="k">Telefon</span><a href="tel:+41525447329">+41 52 544 73 29</a></div>
+          <div class="row"><span class="k">Öffnungszeiten</span><span>Mo–Sa 09:00–17:00</span></div>
+          <div class="cta-row" style="margin-top:0.4rem;">
+            <a class="btn ghost" style="padding:0.6rem 1.1rem; font-size:0.85rem;"
+               href="https://maps.google.com/maps?daddr=D%C3%A4ttnauerstrasse%209%2C%208406%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="brick map-brick">
+          <iframe title="Karte Kafi Ziegelstei" loading="lazy"
+            src="https://maps.google.com/maps?q=D%C3%A4ttnauerstrasse%209%2C%208406%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>Kafi Ziegelstei<br>Dättnauerstrasse 9, 8406 Winterthur</div>
+      <div><a href="tel:+41525447329">+41 52 544 73 29</a></div>
+      <div>Mo–Sa 09:00–17:00</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+41525447329" aria-label="Kafi Ziegelstei anrufen">📞 Anrufen · +41 52 544 73 29</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* Header gains a mortar-line shadow once the page scrolls, echoing the brick courses below it */
+  function onScroll(){
+    if (window.scrollY > 12) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Jetzt offen? — computed live from real hours: Mo-Sa 09:00-17:00 */
+  function computeStatus(){
+    var now = new Date();
+    var day = now.getDay();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var openDays = [1,2,3,4,5,6];
+    var isOpenDay = openDays.indexOf(day) !== -1;
+    var isOpen = isOpenDay && mins >= 9*60 && mins < 17*60;
+    var statusEl = document.getElementById('now-status');
+    var textEl = document.getElementById('now-status-text');
+    if (isOpen) {
+      statusEl.classList.remove('closed');
+      textEl.textContent = 'Jetzt geöffnet — bis 17:00 Uhr.';
+    } else {
+      statusEl.classList.add('closed');
+      textEl.textContent = isOpenDay ? 'Gerade geschlossen — heute noch 09:00–17:00.' : 'Heute geschlossen — Sonntag ist Ruhetag.';
+    }
+    document.querySelectorAll('.day-brick').forEach(function(b){
+      b.classList.toggle('today', Number(b.getAttribute('data-day')) === day);
+    });
+  }
+  computeStatus();
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

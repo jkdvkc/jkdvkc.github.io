@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lux Bar Winterthur – Cocktailbar im Licht, Untere Vogelsangstrasse 10</title>
+<meta name="description" content="Lux Bar Winterthur: exklusive und raffinierte Cocktailbar mit modernem Design, über 50 000 LED-Lichtern und Onyx-Marmor. Di–Fr 16:30–24:00, Sa 18:30–24:00.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lux Bar">
+<meta property="og:title" content="Lux Bar Winterthur – Cocktailbar im Licht">
+<meta property="og:description" content="Exklusive und raffinierte Cocktailbar mit modernem Design. Über 50 000 LED-Lichter, Onyx-Marmor und edle Materialien.">
+<meta property="og:url" content="https://lux.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Lux Bar",
+  "description": "Exklusive und raffinierte Cocktailbar mit modernem Design.",
+  "telephone": "+41 52 212 88 88",
+  "email": "info@lux.ch",
+  "url": "https://lux.ch/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Untere Vogelsangstrasse 10",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "reviewCount": "334"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "16:30", "closes": "24:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "18:30", "closes": "24:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/luxbarwinterthur/"]
+}
+</script>
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --bg:#0a0906;
+    --surface:#15130e;
+    --fg:#f4efe4;
+    --muted:#b7ac97;
+    --brand:#e7b463;
+    --accent:#6fd3ec;
+    --temp:0.18;
+    --mx:60%;
+    --my:28%;
+    --glow-color:color-mix(in srgb, var(--brand), var(--accent) calc(var(--temp) * 100%));
+    --glow-color-soft:color-mix(in srgb, var(--glow-color) 35%, transparent);
+    --line:color-mix(in srgb, var(--glow-color) 30%, transparent);
+    --radius:18px;
+    --ff-display:"Bodoni Moda", "Times New Roman", serif;
+    --ff-body:"Manrope", system-ui, sans-serif;
+    --ff-mono:"Space Mono", ui-monospace, monospace;
+  }
+  @property --temp{ syntax:'<number>'; inherits:true; initial-value:0.18; }
+  @property --mx{ syntax:'<percentage>'; inherits:true; initial-value:60%; }
+  @property --my{ syntax:'<percentage>'; inherits:true; initial-value:28%; }
+
+  /* ============ RESET ============ */
+  *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:var(--ff-body);
+    font-size:clamp(15px, 0.6vw + 14px, 17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    position:relative;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  ul{ list-style:none; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  h1,h2,h3{ font-family:var(--ff-display); font-weight:600; line-height:1.05; letter-spacing:-0.01em; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:4px; }
+  ::selection{ background:var(--glow-color); color:#100c06; }
+
+  /* ============ AMBIENT LIGHT LAYER ============ */
+  .glow-layer{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(680px circle at var(--mx) var(--my), color-mix(in srgb, var(--glow-color) 55%, transparent) 0%, transparent 62%),
+      radial-gradient(1200px circle at 12% 100%, color-mix(in srgb, var(--glow-color) 14%, transparent) 0%, transparent 70%);
+    mix-blend-mode:screen;
+    opacity:.85;
+  }
+  @media (hover:none){
+    .glow-layer{ animation:drift 22s ease-in-out infinite; }
+  }
+  @keyframes drift{
+    0%,100%{ --mx:30%; --my:18%; }
+    50%{ --mx:75%; --my:55%; }
+  }
+  .grain-free-vignette{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:radial-gradient(120% 100% at 50% 0%, transparent 40%, rgba(0,0,0,.55) 100%);
+  }
+
+  main, header, footer{ position:relative; z-index:1; }
+
+  /* ============ LAYOUT HELPERS ============ */
+  .wrap{ max-width:1180px; margin-inline:auto; padding-inline:clamp(1.25rem, 5vw, 3rem); }
+  section{ padding-block:clamp(4rem, 9vw, 7.5rem); border-top:1px solid color-mix(in srgb, var(--fg) 8%, transparent); }
+  .eyebrow{
+    font-family:var(--ff-mono); text-transform:uppercase; letter-spacing:.22em;
+    font-size:.72rem; color:var(--glow-color); display:flex; align-items:center; gap:.6em;
+  }
+  .eyebrow::before{ content:""; width:1.6em; height:1px; background:var(--glow-color); display:inline-block; }
+  h2{ font-size:clamp(2rem, 3.4vw + 1rem, 3.4rem); margin-top:.5rem; max-width:16ch; }
+  .lede{ color:var(--muted); font-size:clamp(1rem, .3vw + .95rem, 1.15rem); max-width:56ch; margin-top:1.1rem; }
+
+  [data-reveal]{ opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease; }
+  [data-reveal].is-visible{ opacity:1; transform:none; }
+
+  /* ============ HEADER ============ */
+  header{
+    position:sticky; top:0; z-index:30;
+    backdrop-filter:blur(14px);
+    background:color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom:1px solid color-mix(in srgb, var(--fg) 8%, transparent);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding-block:1rem; gap:1rem; }
+  .brand{ display:flex; align-items:baseline; gap:.55rem; font-family:var(--ff-display); }
+  .brand strong{ font-size:1.5rem; letter-spacing:.06em; }
+  .brand span{ font-family:var(--ff-mono); font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+  nav#site-nav{ display:flex; align-items:center; gap:clamp(1rem,2vw,2rem); }
+  nav#site-nav a{
+    font-size:.86rem; text-decoration:none; color:var(--muted); position:relative; padding-block:.2rem;
+  }
+  nav#site-nav a:hover{ color:var(--fg); }
+  nav#site-nav a::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-2px; height:1px; background:var(--glow-color);
+    transition:right .25s ease;
+  }
+  nav#site-nav a:hover::after{ right:0; }
+  .nav-actions{ display:flex; align-items:center; gap:1rem; }
+  .badge{
+    display:inline-flex; align-items:center; gap:.5em; font-family:var(--ff-mono); font-size:.72rem;
+    letter-spacing:.05em; padding:.4rem .75rem; border-radius:999px; border:1px solid var(--line);
+  }
+  .badge .dot{ width:.5em; height:.5em; border-radius:50%; background:var(--muted); }
+  .badge.is-open .dot{ background:#8ce39b; box-shadow:0 0 8px #8ce39b; }
+  .badge.is-closed .dot{ background:#e78e6c; }
+  .call-btn{
+    font-family:var(--ff-mono); font-size:.78rem; letter-spacing:.05em; text-decoration:none;
+    padding:.55rem 1rem; border-radius:999px; background:var(--glow-color); color:#100c06; font-weight:700;
+    box-shadow:0 0 24px var(--glow-color-soft);
+    transition:transform .2s ease;
+  }
+  .call-btn:hover{ transform:translateY(-1px); }
+  #nav-toggle{ display:none; width:38px; height:38px; border:1px solid var(--line); border-radius:8px; position:relative; }
+  #nav-toggle span, #nav-toggle span::before, #nav-toggle span::after{
+    content:""; position:absolute; left:9px; right:9px; height:1px; background:var(--fg);
+  }
+  #nav-toggle span{ top:18px; }
+  #nav-toggle span::before{ top:-6px; }
+  #nav-toggle span::after{ top:6px; }
+
+  /* ============ HERO ============ */
+  .hero{ padding-top:clamp(4rem, 10vw, 8rem); padding-bottom:clamp(4rem, 8vw, 6rem); border-top:none; }
+  .hero-grid{ display:grid; gap:clamp(2rem,4vw,3rem); }
+  .hero h1{
+    font-size:clamp(4rem, 13vw, 10.5rem); text-transform:uppercase; letter-spacing:.01em;
+    text-shadow:0 0 60px var(--glow-color-soft), 0 0 12px color-mix(in srgb, var(--glow-color) 40%, transparent);
+  }
+  .hero .tagline{
+    font-family:var(--ff-display); font-style:italic; font-weight:400;
+    font-size:clamp(1.2rem, 1.4vw + 1rem, 1.9rem); color:var(--fg); margin-top:.6rem; max-width:26ch;
+  }
+  .hero p.about{ color:var(--muted); max-width:58ch; margin-top:1.5rem; font-size:clamp(1rem,.3vw+.95rem,1.1rem); }
+  .hero-cta{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:2.2rem; align-items:center; }
+  .btn-primary{
+    text-decoration:none; font-weight:700; padding:.9rem 1.6rem; border-radius:999px;
+    background:var(--glow-color); color:#100c06; box-shadow:0 0 30px var(--glow-color-soft);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 0 44px var(--glow-color-soft); }
+  .btn-ghost{
+    text-decoration:none; font-weight:600; padding:.9rem 1.6rem; border-radius:999px;
+    border:1px solid var(--line); color:var(--fg); transition:border-color .2s ease, background .2s ease;
+  }
+  .btn-ghost:hover{ border-color:var(--glow-color); background:color-mix(in srgb, var(--glow-color) 8%, transparent); }
+  .hero-meta{ display:flex; flex-wrap:wrap; gap:.75rem 1.5rem; margin-top:2.6rem; }
+  .hero-meta .badge{ font-size:.76rem; }
+
+  /* ============ ABOUT / LICHTKONZEPT ============ */
+  .about-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(2rem,5vw,4rem); align-items:start; }
+  .lux-fact{
+    border:1px solid var(--line); border-radius:var(--radius); padding:1.75rem;
+    background:linear-gradient(160deg, color-mix(in srgb, var(--surface) 92%, var(--glow-color) 8%), var(--surface));
+    box-shadow:inset 0 1px 0 color-mix(in srgb, var(--fg) 8%, transparent);
+  }
+  .lux-fact .num{ font-family:var(--ff-display); font-size:clamp(2.4rem,4vw,3.4rem); color:var(--glow-color); }
+  .lux-fact p{ color:var(--muted); margin-top:.6rem; font-size:.92rem; }
+
+  /* ============ SIGNATURE MODULE: LICHTREGLER ============ */
+  .mood{
+    border:1px solid var(--line); border-radius:24px; padding:clamp(1.75rem,4vw,3rem);
+    background:linear-gradient(160deg, color-mix(in srgb, var(--glow-color) 10%, var(--surface)), var(--surface) 70%);
+    position:relative; overflow:hidden;
+  }
+  .mood::before{
+    content:""; position:absolute; inset:-40%; z-index:-1;
+    background:radial-gradient(circle at 30% 20%, var(--glow-color-soft), transparent 60%);
+    opacity:.9;
+  }
+  .mood-readout{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:1rem; }
+  .mood-readout .time{ font-family:var(--ff-mono); font-size:clamp(2.4rem,5vw,3.6rem); color:var(--fg); }
+  .mood-readout .word{ font-family:var(--ff-display); font-style:italic; font-size:1.4rem; color:var(--glow-color); }
+  .mood-readout .kelvin{ font-family:var(--ff-mono); font-size:.85rem; color:var(--muted); }
+  .mood-slider{ margin-top:2rem; }
+  input[type="range"]{
+    -webkit-appearance:none; appearance:none; width:100%; height:3px; border-radius:999px;
+    background:linear-gradient(90deg, #e7b463, #6fd3ec); outline:none; cursor:pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:22px; height:22px; border-radius:50%;
+    background:var(--fg); border:3px solid var(--glow-color); box-shadow:0 0 18px var(--glow-color-soft);
+  }
+  input[type="range"]::-moz-range-thumb{
+    width:22px; height:22px; border-radius:50%; background:var(--fg); border:3px solid var(--glow-color);
+    box-shadow:0 0 18px var(--glow-color-soft);
+  }
+  .mood-ticks{ display:flex; justify-content:space-between; margin-top:.6rem; font-family:var(--ff-mono); font-size:.7rem; color:var(--muted); }
+  .mood-caption{ margin-top:1.6rem; color:var(--muted); font-size:.85rem; max-width:52ch; }
+
+  /* ============ USP GRID ============ */
+  .usp-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:1.25rem; margin-top:3rem; }
+  .usp-card{
+    border:1px solid var(--line); border-radius:var(--radius); padding:1.75rem;
+    background:color-mix(in srgb, var(--surface) 88%, var(--glow-color) 4%);
+    position:relative; overflow:hidden; transition:transform .3s ease, border-color .3s ease;
+  }
+  .usp-card:hover{ transform:translateY(-4px); border-color:var(--glow-color); }
+  .usp-card::after{
+    content:""; position:absolute; inset:0; border-radius:inherit; padding:1px;
+    background:linear-gradient(140deg, var(--glow-color-soft), transparent 50%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;
+  }
+  .usp-card .ico{ width:34px; height:34px; margin-bottom:1.1rem; position:relative; }
+  .usp-card .ico::before, .usp-card .ico::after{
+    content:""; position:absolute; border-radius:50%; border:1.5px solid var(--glow-color);
+  }
+  .usp-card .ico::before{ inset:0; }
+  .usp-card .ico::after{ inset:9px; background:var(--glow-color); box-shadow:0 0 12px var(--glow-color); }
+  .usp-card p{ font-size:.98rem; }
+
+  /* ============ MATERIAL SWATCHES ============ */
+  .material-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:1.1rem; margin-top:3rem; }
+  .swatch{
+    border-radius:16px; height:200px; position:relative; overflow:hidden; border:1px solid var(--line);
+    display:flex; align-items:flex-end; padding:1.1rem;
+  }
+  .swatch::before{ content:""; position:absolute; inset:0; }
+  .swatch::after{
+    content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at var(--mx) var(--my), rgba(255,255,255,.28), transparent 55%);
+    mix-blend-mode:overlay;
+  }
+  .swatch.onyx::before{ background:linear-gradient(155deg,#1c1a24,#302a3a 40%,#100e14 100%); }
+  .swatch.pandomo::before{ background:linear-gradient(155deg,#2b2721,#4a4438 45%,#1a1712 100%); }
+  .swatch.oak::before{ background:linear-gradient(155deg,#3c2a17,#6b4a25 45%,#241a0f 100%); }
+  .swatch.steel::before{ background:linear-gradient(155deg,#2b3034,#565f66 45%,#171a1c 100%); }
+  .swatch.leather::before{ background:linear-gradient(155deg,#2c1a12,#5a331d 45%,#1a0f0a 100%); }
+  .swatch strong{ position:relative; z-index:1; font-family:var(--ff-display); font-size:1.05rem; }
+  .swatch small{ position:relative; z-index:1; display:block; color:var(--muted); font-family:var(--ff-mono); font-size:.68rem; margin-top:.2rem; text-transform:uppercase; letter-spacing:.08em; }
+
+  /* ============ RATING ============ */
+  .rating-block{ display:flex; flex-wrap:wrap; gap:clamp(2rem,5vw,5rem); align-items:center; margin-top:2.5rem; }
+  .rating-score{ font-family:var(--ff-display); font-size:clamp(4rem,9vw,6.5rem); line-height:1; text-shadow:0 0 40px var(--glow-color-soft); }
+  .stars{ position:relative; display:inline-block; font-size:1.6rem; letter-spacing:.18em; margin-top:.6rem; }
+  .stars .track{ color:color-mix(in srgb, var(--fg) 16%, transparent); }
+  .stars .fill{ position:absolute; inset:0; width:84%; overflow:hidden; white-space:nowrap; color:var(--glow-color); }
+  .rating-copy p{ color:var(--muted); }
+  .rating-copy strong{ color:var(--fg); }
+
+  /* ============ HOURS + MAP ============ */
+  .lage-grid{ display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(2rem,4vw,3rem); margin-top:3rem; }
+  table.hours{ width:100%; border-collapse:collapse; }
+  table.hours th{ text-align:left; font-family:var(--ff-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding-bottom:.75rem; border-bottom:1px solid var(--line); }
+  table.hours td{ padding-block:1rem; border-bottom:1px solid color-mix(in srgb, var(--fg) 8%, transparent); font-size:1.05rem; }
+  table.hours td.time{ font-family:var(--ff-mono); text-align:right; }
+  .status-line{ margin-top:1.5rem; }
+  .map-frame{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; filter:grayscale(.35) contrast(1.05) brightness(.85); }
+  .map-frame iframe{ width:100%; height:100%; border:0; filter:invert(0); }
+  .addr-block{ margin-top:1.5rem; color:var(--muted); }
+  .addr-block a{ color:var(--fg); text-decoration:underline; text-decoration-color:var(--glow-color); text-underline-offset:4px; }
+
+  /* ============ FOOTER ============ */
+  footer{ padding-block:clamp(3rem,6vw,5rem) 7rem; border-top:1px solid var(--line); }
+  .footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:2.5rem; }
+  footer h3{ font-family:var(--ff-mono); text-transform:uppercase; letter-spacing:.14em; font-size:.75rem; color:var(--muted); margin-bottom:1rem; font-weight:600; }
+  footer a{ text-decoration:none; }
+  footer .foot-links li{ margin-bottom:.6rem; }
+  footer .foot-links a{ color:var(--fg); }
+  footer .foot-links a:hover{ color:var(--glow-color); }
+  .foot-brand strong{ font-family:var(--ff-display); font-size:1.6rem; }
+  .foot-note{ margin-top:1rem; color:var(--muted); font-size:.85rem; max-width:44ch; }
+  .foot-bottom{
+    margin-top:3rem; padding-top:1.5rem; border-top:1px solid color-mix(in srgb, var(--fg) 8%, transparent);
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font-size:.78rem; color:var(--muted);
+  }
+
+  /* ============ MOBILE STICKY BAR ============ */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:40; display:none;
+    background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:blur(10px);
+    border-top:1px solid var(--line); padding:.7rem 1rem; padding-bottom:max(.7rem, env(safe-area-inset-bottom));
+  }
+  .mobile-bar a{
+    display:flex; align-items:center; justify-content:center; gap:.5rem; text-decoration:none;
+    background:var(--glow-color); color:#100c06; font-weight:700; padding:.85rem; border-radius:999px;
+    box-shadow:0 0 26px var(--glow-color-soft);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .about-grid, .lage-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:720px){
+    nav#site-nav{
+      position:fixed; inset:64px 0 auto 0; flex-direction:column; align-items:flex-start; gap:0;
+      background:var(--bg); border-bottom:1px solid var(--line); padding:1rem clamp(1.25rem,5vw,3rem) 1.5rem;
+      transform:translateY(-120%); opacity:0; transition:transform .3s ease, opacity .3s ease; pointer-events:none;
+    }
+    nav#site-nav.is-open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+    nav#site-nav a{ padding-block:.7rem; width:100%; border-bottom:1px solid color-mix(in srgb, var(--fg) 6%, transparent); }
+    #nav-toggle{ display:block; }
+    .nav-actions .call-btn{ display:none; }
+    .mobile-bar{ display:block; }
+    footer{ padding-bottom:6.5rem; }
+    .footer-grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width:400px){
+    .hero h1{ font-size:clamp(3.4rem, 17vw, 6rem); }
+  }
+
+  /* ============ REDUCED MOTION ============ */
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.01ms !important; animation-iteration-count:1 !important;
+      transition-duration:.01ms !important; scroll-behavior:auto !important;
+    }
+    html{ scroll-behavior:auto; }
+    [data-reveal]{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+<div class="glow-layer" aria-hidden="true"></div>
+<div class="grain-free-vignette" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="Lux Bar, zum Seitenanfang">
+      <strong>LUX</strong><span>Bar&nbsp;·&nbsp;Winterthur</span>
+    </a>
+    <nav id="site-nav" aria-label="Hauptnavigation">
+      <a href="#licht">Licht</a>
+      <a href="#abend">Der Abend</a>
+      <a href="#merkmale">Merkmale</a>
+      <a href="#material">Material</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#lage">Lage</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="badge" data-open-badge><span class="dot" aria-hidden="true"></span><span class="label">Status wird geladen …</span></span>
+      <a class="call-btn" href="tel:+41522128888">Anrufen</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <p class="eyebrow">Cocktailbar · Untere Vogelsangstrasse 10, Winterthur</p>
+      <h1 id="hero-h">LUX</h1>
+      <p class="tagline">Exklusive und raffinierte Cocktailbar mit modernem Design.</p>
+      <p class="about">Upscale Bar und Nachtclub mit über 50 000 modernen LED-Lichtern, Onyx-Marmor und edlen Materialien. Kuratierte Cocktailkultur in einer refined, stilvollen Umgebung für anspruchsvolle Gäste.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="tel:+41522128888">+41 52 212 88 88</a>
+        <a class="btn-ghost" href="https://maps.google.com/maps?q=Lux%20Bar%20Winterthur%20Untere%20Vogelsangstrasse&amp;z=16" target="_blank" rel="noopener">Route</a>
+      </div>
+      <div class="hero-meta">
+        <span class="badge"><span class="dot" aria-hidden="true" style="background:var(--glow-color)"></span><span class="label">Minimum 21 Jahre</span></span>
+        <span class="badge"><span class="dot" aria-hidden="true" style="background:var(--glow-color)"></span><span class="label">DJ-Events &amp; Musik</span></span>
+        <span class="badge"><span class="dot" aria-hidden="true" style="background:var(--glow-color)"></span><span class="label">4.2 ★ · 334 Bewertungen</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LICHTKONZEPT / ABOUT -->
+  <section id="licht" aria-labelledby="licht-h">
+    <div class="wrap about-grid">
+      <div data-reveal>
+        <p class="eyebrow">Das Konzept</p>
+        <h2 id="licht-h">Wo Licht zur Sprache wird</h2>
+        <p class="lede">Upscale Bar und Nachtclub mit über 50 000 modernen LED-Lichtern, Onyx-Marmor und edlen Materialien. Kuratierte Cocktailkultur in einer refined, stilvollen Umgebung für anspruchsvolle Gäste.</p>
+        <p class="lede" style="margin-top:1rem;">Lux ist die Masseinheit für Beleuchtungsstärke — wie viel Licht auf einer Fläche ankommt. Der Name ist Programm: Jede Fläche im Raum, von Onyx-Marmor bis Büffelleder, ist so gesetzt, dass sie das Licht auf eine bestimmte Art zurückwirft.</p>
+      </div>
+      <div class="lux-fact" data-reveal>
+        <span class="num">50 000+</span>
+        <p>LED-Lichter mit modernem Design prägen den Raum — kuratiert bis ins Detail, wie das gesamte Ambiente der Bar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: LICHTREGLER -->
+  <section id="abend" aria-labelledby="abend-h">
+    <div class="wrap">
+      <p class="eyebrow">Signature</p>
+      <h2 id="abend-h">Der Abend in Licht</h2>
+      <p class="lede">Von der Öffnung bis Mitternacht verändert sich die Stimmung im Raum. Regeln Sie den Regler und erleben Sie, wie sich die ganze Seite von warmem Kerzenlicht zu kühlem Blau verschiebt.</p>
+
+      <div class="mood" data-reveal>
+        <div class="mood-readout">
+          <span class="time" id="mood-time" aria-live="polite">—</span>
+          <span class="word" id="mood-label">—</span>
+          <span class="kelvin" id="mood-kelvin">—</span>
+        </div>
+        <div class="mood-slider">
+          <label for="mood-slider" class="eyebrow" style="margin-bottom:.6rem;">Uhrzeit im Verlauf des Abends</label>
+          <input type="range" id="mood-slider" aria-describedby="mood-caption">
+          <div class="mood-ticks">
+            <span>16:30 · Di–Fr Öffnung</span>
+            <span>18:30 · Sa Öffnung</span>
+            <span>24:00 · Bar-Schluss</span>
+          </div>
+        </div>
+        <p class="mood-caption" id="mood-caption">Eine gestalterische Illustration des Lichtkonzepts entlang der echten Öffnungszeiten — kein gemessener Wert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP GRID -->
+  <section id="merkmale" aria-labelledby="merkmale-h">
+    <div class="wrap">
+      <p class="eyebrow">Merkmale</p>
+      <h2 id="merkmale-h">Was den Raum trägt</h2>
+      <div class="usp-grid">
+        <article class="usp-card" data-reveal><span class="ico" aria-hidden="true"></span><p>Über 50 000 LED-Lichter mit modernem Design</p></article>
+        <article class="usp-card" data-reveal><span class="ico" aria-hidden="true"></span><p>Onyx-Marmor und Premium-Materialien</p></article>
+        <article class="usp-card" data-reveal><span class="ico" aria-hidden="true"></span><p>Kuratierte Cocktails</p></article>
+        <article class="usp-card" data-reveal><span class="ico" aria-hidden="true"></span><p>Exklusives, stilvolles Ambiente</p></article>
+        <article class="usp-card" data-reveal><span class="ico" aria-hidden="true"></span><p>DJ-Events und Musik</p></article>
+        <article class="usp-card" data-reveal><span class="ico" aria-hidden="true"></span><p>Minimum 21 Jahre</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIAL -->
+  <section id="material" aria-labelledby="material-h">
+    <div class="wrap">
+      <p class="eyebrow">Materialien</p>
+      <h2 id="material-h">Fünf Oberflächen, ein Lichtspiel</h2>
+      <p class="lede">Arura Vermelho, Pandomo, Eichenholz, Edelstahl und Büffelleder — jede Oberfläche reflektiert das LED-Licht anders.</p>
+      <div class="material-grid">
+        <div class="swatch onyx" data-reveal><div><strong>Arura Vermelho</strong><small>Onyx-Marmor</small></div></div>
+        <div class="swatch pandomo" data-reveal><div><strong>Pandomo</strong><small>Fliessboden</small></div></div>
+        <div class="swatch oak" data-reveal><div><strong>Eichenholz</strong><small>Aged Oak</small></div></div>
+        <div class="swatch steel" data-reveal><div><strong>Edelstahl</strong><small>Stainless Steel</small></div></div>
+        <div class="swatch leather" data-reveal><div><strong>Büffelleder</strong><small>Buffalo Leather</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATING -->
+  <section id="bewertungen" aria-labelledby="bewertungen-h">
+    <div class="wrap">
+      <p class="eyebrow">Google-Bewertungen</p>
+      <h2 id="bewertungen-h">334 Stimmen aus Winterthur</h2>
+      <div class="rating-block">
+        <div data-reveal>
+          <div class="rating-score">4.2</div>
+          <div class="stars" role="img" aria-label="4.2 von 5 Sternen">
+            <span class="track" aria-hidden="true">★★★★★</span>
+            <span class="fill" aria-hidden="true">★★★★★</span>
+          </div>
+        </div>
+        <div class="rating-copy" data-reveal>
+          <p><strong>334 Bewertungen</strong> auf Google — gesammelt von Gästen, die den Raum bei Nacht erlebt haben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAGE / HOURS / MAP -->
+  <section id="lage" aria-labelledby="lage-h">
+    <div class="wrap">
+      <p class="eyebrow">Öffnungszeiten &amp; Lage</p>
+      <h2 id="lage-h">Wann das Licht angeht</h2>
+      <div class="lage-grid">
+        <div data-reveal>
+          <table class="hours">
+            <thead><tr><th>Tage</th><th>Zeit</th></tr></thead>
+            <tbody>
+              <tr><td>Di–Fr</td><td class="time">16:30–24:00</td></tr>
+              <tr><td>Sa</td><td class="time">18:30–24:00</td></tr>
+              <tr><td>So–Mo</td><td class="time">geschlossen</td></tr>
+            </tbody>
+          </table>
+          <p class="status-line badge" data-open-badge><span class="dot" aria-hidden="true"></span><span class="label">Status wird geladen …</span></p>
+          <div class="addr-block">
+            <p>Untere Vogelsangstrasse 10<br>8400 Winterthur</p>
+            <p style="margin-top:.6rem;"><a href="tel:+41522128888">+41 52 212 88 88</a></p>
+            <p><a href="mailto:info@lux.ch">info@lux.ch</a></p>
+          </div>
+        </div>
+        <div class="map-frame" data-reveal>
+          <iframe
+            src="https://maps.google.com/maps?q=Lux%20Bar%20Winterthur%20Untere%20Vogelsangstrasse&amp;z=16&amp;output=embed"
+            title="Lux Bar auf der Karte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <strong>LUX</strong>
+        <p class="foot-note">Exklusive und raffinierte Cocktailbar mit modernem Design. Untere Vogelsangstrasse 10, 8400 Winterthur.</p>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <ul class="foot-links">
+          <li><a href="tel:+41522128888">+41 52 212 88 88</a></li>
+          <li><a href="mailto:info@lux.ch">info@lux.ch</a></li>
+          <li><a href="https://www.instagram.com/luxbarwinterthur/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Öffnungszeiten</h3>
+        <ul class="foot-links">
+          <li>Di–Fr 16:30–24:00</li>
+          <li>Sa 18:30–24:00</li>
+          <li>So–Mo geschlossen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+      <span>Lux Bar · Winterthur</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522128888">Jetzt anrufen — +41 52 212 88 88</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var root = document.documentElement;
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hasHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  /* ---------- Pointer-driven ambient glow ---------- */
+  if (hasHover && !prefersReduced) {
+    window.addEventListener("pointermove", function (e) {
+      var x = (e.clientX / window.innerWidth * 100).toFixed(2);
+      var y = (e.clientY / window.innerHeight * 100).toFixed(2);
+      root.style.setProperty("--mx", x + "%");
+      root.style.setProperty("--my", y + "%");
+    }, { passive: true });
+  }
+
+  /* ---------- Öffnungszeiten aus den echten Daten ---------- */
+  var HOURS = [
+    { days: "Di–Fr", time: "16:30–24:00" },
+    { days: "Sa", time: "18:30–24:00" },
+    { days: "So–Mo", time: "closed" }
+  ];
+  var DAY_INDEX = { So: 0, Mo: 1, Di: 2, Mi: 3, Do: 4, Fr: 5, Sa: 6 };
+  var DAY_NAMES = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
+  function expandDays(str) {
+    if (str.indexOf("–") > -1) {
+      var parts = str.split("–");
+      var start = DAY_INDEX[parts[0]];
+      var end = DAY_INDEX[parts[1]];
+      var out = [];
+      var i = start;
+      while (true) {
+        out.push(i);
+        if (i === end) break;
+        i = (i + 1) % 7;
+      }
+      return out;
+    }
+    return [DAY_INDEX[str]];
+  }
+
+  function toMinutes(hhmm) {
+    var pair = hhmm.split(":").map(Number);
+    return pair[0] * 60 + pair[1];
+  }
+
+  var schedule = HOURS.map(function (row) {
+    var closed = row.time === "closed";
+    return {
+      days: expandDays(row.days),
+      closed: closed,
+      start: closed ? null : toMinutes(row.time.split("–")[0]),
+      end: closed ? null : toMinutes(row.time.split("–")[1])
+    };
+  });
+
+  function findEntry(day) {
+    for (var i = 0; i < schedule.length; i++) {
+      if (schedule[i].days.indexOf(day) > -1) return schedule[i];
+    }
+    return null;
+  }
+
+  function statusNow(date) {
+    var day = date.getDay();
+    var minutes = date.getHours() * 60 + date.getMinutes();
+    var today = findEntry(day);
+    if (today && !today.closed && minutes >= today.start && minutes < today.end) {
+      return { open: true, closesAt: today.end };
+    }
+    for (var offset = 0; offset <= 7; offset++) {
+      var d = (day + offset) % 7;
+      var entry = findEntry(d);
+      if (!entry || entry.closed) continue;
+      if (offset === 0 && minutes >= entry.end) continue;
+      return { open: false, nextDay: d, nextStart: entry.start, sameDay: offset === 0 };
+    }
+    return { open: false };
+  }
+
+  function fmtTime(mins) {
+    var h = String(Math.floor(mins / 60)).padStart(2, "0");
+    var m = String(mins % 60).padStart(2, "0");
+    return h + ":" + m;
+  }
+
+  function paintBadges() {
+    var s = statusNow(new Date());
+    var badges = document.querySelectorAll("[data-open-badge]");
+    badges.forEach(function (b) {
+      var label = b.querySelector(".label");
+      if (s.open) {
+        b.classList.add("is-open");
+        b.classList.remove("is-closed");
+        label.textContent = "Jetzt geöffnet · bis " + fmtTime(s.closesAt) + " Uhr";
+      } else {
+        b.classList.add("is-closed");
+        b.classList.remove("is-open");
+        if (s.nextDay !== undefined) {
+          var dayLabel = s.sameDay ? "heute" : DAY_NAMES[s.nextDay];
+          label.textContent = "Geschlossen · öffnet " + dayLabel + " " + fmtTime(s.nextStart) + " Uhr";
+        } else {
+          label.textContent = "Geschlossen";
+        }
+      }
+    });
+  }
+  paintBadges();
+  window.setInterval(paintBadges, 60000);
+
+  /* ---------- Signature module: Lichttemperatur-Regler ---------- */
+  var slider = document.getElementById("mood-slider");
+  var kelvinOut = document.getElementById("mood-kelvin");
+  var timeOut = document.getElementById("mood-time");
+  var moodOut = document.getElementById("mood-label");
+  var MIN = toMinutes("16:30");
+  var MAX = toMinutes("24:00");
+
+  function moodWord(t) {
+    if (t < 0.25) return "Aperitif";
+    if (t < 0.5) return "Blaue Stunde";
+    if (t < 0.75) return "Nacht";
+    return "Mitternacht";
+  }
+
+  function applyTemp(minutesValue) {
+    var t = Math.min(1, Math.max(0, (minutesValue - MIN) / (MAX - MIN)));
+    root.style.setProperty("--temp", t.toFixed(3));
+    var kelvin = Math.round(2700 + t * (6500 - 2700));
+    if (kelvinOut) kelvinOut.textContent = "≈ " + kelvin.toLocaleString("de-CH") + " K";
+    if (timeOut) timeOut.textContent = fmtTime(minutesValue);
+    if (moodOut) moodOut.textContent = moodWord(t);
+  }
+
+  if (slider) {
+    slider.min = MIN;
+    slider.max = MAX;
+    slider.step = 5;
+    var now = new Date();
+    var nowMinutes = now.getHours() * 60 + now.getMinutes();
+    var initial = (nowMinutes >= MIN && nowMinutes <= MAX) ? nowMinutes : Math.round(MIN + (MAX - MIN) * 0.35);
+    slider.value = String(initial);
+    applyTemp(initial);
+    slider.addEventListener("input", function () { applyTemp(Number(slider.value)); });
+  }
+
+  /* ---------- Scroll reveals ---------- */
+  if (!prefersReduced && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll("[data-reveal]").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* ---------- Mobile nav toggle ---------- */
+  var navToggle = document.getElementById("nav-toggle");
+  var nav = document.getElementById("site-nav");
+  if (navToggle && nav) {
+    navToggle.addEventListener("click", function () {
+      var expanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("is-open");
+    });
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        navToggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("is-open");
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

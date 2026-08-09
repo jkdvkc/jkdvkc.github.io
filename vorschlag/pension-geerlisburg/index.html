@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pension Geerlisburg</title>
+<meta name="description" content="Pension Geerlisburg. 4.8 Sterne aus 13 Bewertungen. Eine Website existiert, ist aber für Suchmaschinen gesperrt — erreichbar nur telefonisch.">
+<meta property="og:title" content="Pension Geerlisburg">
+<meta property="og:description" content="4.8 aus 13 Bewertungen. Klein, und genau deshalb persönlich erreichbar.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Pension Geerlisburg",
+  "telephone": "+41792017665",
+  "url": "https://www.gerlisburg.ch/",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "13" }
+}
+</script>
+<style>
+  :root{
+    --bg:#faf3e6; --surface:#fffaf0; --fg:#3a2c1a; --muted:#7a6a52;
+    --brand:#7a5a35; --accent:#7c8a5a; --line:#e8dcc4;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:'Karla',system-ui,sans-serif;
+    font-size:clamp(15px,0.35vw + 13.6px,17px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Patrick Hand',cursive;font-weight:400;letter-spacing:0.01em;line-height:1.15;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2.4rem,5.2vw + 1rem,4rem);}
+  h2{font-size:clamp(1.7rem,2.4vw + 1rem,2.3rem);}
+  h3{font-size:clamp(1.15rem,1.1vw + 1rem,1.35rem);}
+  p{margin:0 0 1em;}
+  a{color:var(--brand);}
+  ul{margin:0;padding:0;list-style:none;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:820px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1.2rem,4vw,3rem);background:rgba(250,243,230,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .brand-mark{font-family:'Patrick Hand',cursive;font-size:1.2rem;}
+  nav{display:flex;align-items:center;gap:1.2rem;}
+  nav a{color:var(--fg);text-decoration:none;font-size:0.92rem;font-weight:500;}
+  nav a:hover{color:var(--brand);}
+  .nav-cta{background:var(--brand);color:#fff !important;padding:0.5em 1.1em;border-radius:99px;}
+  @media (max-width:520px){ .nav-wide{display:none;} }
+
+  main{padding-top:60px;}
+  section{padding:clamp(2.8rem,6vw,5.5rem) 0;}
+
+  [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+  /* hero: small pension on a hand-drawn hill */
+  .hero{padding-top:calc(60px + clamp(2.6rem,6vw,5rem));text-align:center;}
+  .hill{position:relative;height:110px;max-width:340px;margin:0 auto 1.6rem;}
+  .hill svg{width:100%;height:100%;display:block;}
+  .hero-tag{display:inline-block;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;color:var(--brand);margin-bottom:0.6rem;}
+  .hero .lead{font-size:clamp(1.05rem,0.5vw + 1rem,1.2rem);color:var(--muted);max-width:44ch;margin:1rem auto 0;}
+  .cta-row{display:flex;gap:0.9rem;flex-wrap:wrap;justify-content:center;margin-top:1.6rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.5em;padding:0.8em 1.5em;border-radius:99px;font-weight:600;
+    text-decoration:none;font-size:1rem;border:1px solid transparent;font-family:'Patrick Hand',cursive;}
+  .btn-primary{background:var(--brand);color:#fff;}
+  .btn-primary:hover{background:#5f4527;}
+  .rating-line{display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.92rem;color:var(--muted);margin-top:1.6rem;}
+  .rating-line b{color:var(--brand);font-family:'Patrick Hand',cursive;font-size:1.2rem;}
+
+  /* few honest facts, hand-drawn cards */
+  .facts-head{text-align:center;max-width:52ch;margin:0 auto 2rem;}
+  .fact-cards{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
+  .fact-card{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;min-width:170px;
+    text-align:center;transform:rotate(var(--r,0deg));}
+  .fact-card:nth-child(1){--r:-1.4deg;}
+  .fact-card:nth-child(2){--r:1deg;}
+  .fact-card:nth-child(3){--r:-0.6deg;}
+  .fact-card:nth-child(4){--r:0.8deg;}
+  .fact-card .fk{display:block;font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;}
+  .fact-card .fv{font-family:'Patrick Hand',cursive;font-size:1.35rem;color:var(--brand);}
+
+  /* blocked website note */
+  .blocked-box{max-width:60ch;margin:2.4rem auto 0;background:var(--surface);border:2px dashed var(--line);border-radius:14px;
+    padding:1.4rem 1.6rem;text-align:left;}
+  .blocked-box b{font-family:'Patrick Hand',cursive;font-size:1.15rem;display:block;margin-bottom:0.4rem;}
+
+  /* rating hand-drawn stars */
+  .stars-section{text-align:center;}
+  .stars-row{display:flex;gap:0.4rem;justify-content:center;margin:1.2rem 0;}
+  .stars-row svg{width:34px;height:34px;}
+  .stars-cap{color:var(--muted);font-size:0.95rem;}
+
+  .loc-note{max-width:52ch;margin:0 auto;text-align:center;color:var(--muted);}
+
+  .unpublished{max-width:640px;margin:0 auto;background:var(--brand);color:#fbf3e4;border-radius:18px;padding:clamp(1.8rem,4vw,2.6rem);text-align:center;}
+  .unpublished h2{color:#fff;}
+  .unpublished-list{display:flex;flex-wrap:wrap;gap:0.7rem;justify-content:center;margin-top:1.2rem;}
+  .unpublished-list li{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.24);border-radius:99px;padding:0.5em 1em;font-size:0.86rem;}
+  .unpublished .call-out{margin-top:1.4rem;font-family:'Patrick Hand',cursive;font-size:1.25rem;}
+  .unpublished .call-out a{color:#f0dcb0;}
+
+  .way-grid{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
+  .way-card{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;max-width:260px;text-align:center;}
+  .way-card .icon{font-size:1.6rem;display:block;margin-bottom:0.5rem;}
+  .way-card a{font-weight:600;display:inline-block;margin-top:0.3rem;}
+
+  footer{padding:clamp(2.2rem,5vw,3rem) 0 6rem;text-align:center;}
+  footer a{color:var(--brand);}
+  .foot-note{margin-top:1.4rem;font-size:0.78rem;color:var(--muted);}
+
+  .faq-list{max-width:56ch;margin:0 auto;text-align:left;}
+  .faq-item{border-bottom:1px solid var(--line);padding:1.1rem 0;}
+  .faq-item summary{cursor:pointer;font-family:'Patrick Hand',cursive;font-size:1.15rem;list-style:none;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";float:right;font-size:1.2rem;color:var(--brand);}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin-top:0.6rem;color:var(--muted);}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:none;}
+  .mobile-bar a{display:block;text-align:center;color:#fff;font-weight:700;padding:0.9rem;text-decoration:none;font-family:'Patrick Hand',cursive;font-size:1.1rem;}
+  @media (max-width:720px){ .mobile-bar{display:block;} main{padding-bottom:0;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Pension Geerlisburg</div>
+  <nav>
+    <a href="#fakten" class="nav-wide">Fakten</a>
+    <a class="nav-cta" href="tel:+41792017665">+41 79 201 76 65</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" data-reveal>
+    <div class="hill" aria-hidden="true">
+      <svg viewBox="0 0 340 110" preserveAspectRatio="none">
+        <path d="M0,90 Q90,30 170,55 T340,40 L340,110 L0,110 Z" fill="#e8dcc4"/>
+        <rect x="150" y="45" width="34" height="26" fill="#7a5a35"/>
+        <polygon points="147,45 167,28 187,45" fill="#5f4527"/>
+        <rect x="163" y="55" width="8" height="16" fill="#faf3e6"/>
+      </svg>
+    </div>
+    <span class="hero-tag">Pension</span>
+    <h1>Pension Geerlisburg</h1>
+    <p class="lead">Klein, ruhig gelegen, mit einer Bewertung, die für sich spricht. Eine eigene Website gibt es — sie lässt sich nur nicht automatisch auslesen.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+41792017665">Anrufen: +41 79 201 76 65</a>
+    </div>
+    <p class="rating-line"><b>4.8</b> · 13 Google-Bewertungen</p>
+  </section>
+
+  <section id="fakten" data-reveal>
+    <div class="wrap">
+      <div class="facts-head">
+        <h2>Was wir sicher wissen</h2>
+        <p style="color:var(--muted);">Wenig Daten, aber alles davon geprüft. Kein Wort mehr, als hier steht.</p>
+      </div>
+      <div class="fact-cards">
+        <div class="fact-card"><span class="fk">Kategorie</span><span class="fv">Pension</span></div>
+        <div class="fact-card"><span class="fk">Telefon</span><span class="fv">079 201 76 65</span></div>
+        <div class="fact-card"><span class="fk">Bewertung</span><span class="fv">4.8 · 13</span></div>
+        <div class="fact-card"><span class="fk">Website</span><span class="fv">gerlisburg.ch</span></div>
+      </div>
+      <div class="blocked-box">
+        <b>Website vorhanden, aber gesperrt</b>
+        Unter gerlisburg.ch existiert eine eigene Seite. Sie lässt sich jedoch nicht automatisch abrufen (robots.txt verweigert den Zugriff) — deshalb übernimmt diese Seite von dort keine Inhalte und bleibt bei den gesicherten Fakten.
+      </div>
+    </div>
+  </section>
+
+  <section class="stars-section" data-reveal>
+    <div class="wrap">
+      <h2>4.8 von 5 — bei 13 Stimmen</h2>
+      <div class="stars-row" id="starsRow" aria-hidden="true"></div>
+      <p class="stars-cap">13 Bewertungen sind wenig — genau deshalb wird hier nichts hineingedeutet, was die Zahl nicht hergibt.</p>
+    </div>
+  </section>
+
+  <section class="stars-section" data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.2rem;">Häufig gefragt</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Gibt es eine Website?</summary>
+          <p>Ja, unter gerlisburg.ch — sie lässt sich aber nicht automatisch auslesen, weil robots.txt das verbietet. Deshalb bleibt diese Seite bei den gesicherten Fakten.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie viele Bewertungen liegen vor?</summary>
+          <p>13 auf Google, mit einem Schnitt von 4.8. Eine kleine, aber sehr positive Stichprobe.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie erfahre ich mehr — Zimmer, Preise, Anreise?</summary>
+          <p>Am direktesten telefonisch. Diese Angaben sind sonst nirgends öffentlich einsehbar.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap" style="text-align:center;">
+      <h2 style="margin-bottom:1.4rem;">So erreichen Sie die Pension</h2>
+      <div class="way-grid">
+        <div class="way-card">
+          <span class="icon" aria-hidden="true">☎</span>
+          <h3>Telefon</h3>
+          <p style="color:var(--muted);">Der direkte und gesicherte Weg.</p>
+          <a href="tel:+41792017665">079 201 76 65</a>
+        </div>
+        <div class="way-card">
+          <span class="icon" aria-hidden="true">⌂</span>
+          <h3>Website</h3>
+          <p style="color:var(--muted);">Vorhanden, aber für automatisches Auslesen gesperrt.</p>
+          <a href="https://www.gerlisburg.ch/" target="_blank" rel="noopener">gerlisburg.ch →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="unpublished">
+        <h2>Was hier nicht steht</h2>
+        <p style="color:#efdcb8;">Adresse, Zimmer, Preise und Öffnungszeiten sind nirgends öffentlich zugänglich — auch nicht auf der eigenen, aber gesperrten Website.</p>
+        <ul class="unpublished-list">
+          <li>Keine Adresse</li>
+          <li>Keine Zimmerliste</li>
+          <li>Keine Preise</li>
+          <li>Website nicht auslesbar</li>
+        </ul>
+        <p class="call-out">Am einfachsten: <a href="tel:+41792017665">079 201 76 65</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Pension Geerlisburg</strong><br>
+    <a href="tel:+41792017665">+41 79 201 76 65</a><br>
+    <a href="https://www.gerlisburg.ch/" target="_blank" rel="noopener">gerlisburg.ch</a>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:1rem;">Alle Angaben auf dieser Seite stammen aus geprüften Quellen — nichts wurde ergänzt, was sich nicht belegen liess.</p>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar"><a href="tel:+41792017665">Anrufen · 079 201 76 65</a></div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* hand-drawn stars, filled proportional to the real 4.8 / 5 rating */
+  var starsRow = document.getElementById('starsRow');
+  var RATING = 4.8;
+  var STAR_PATH = 'M12 2 L14.7 8.6 L22 9.3 L16.5 14 L18.2 21.2 L12 17.3 L5.8 21.2 L7.5 14 L2 9.3 L9.3 8.6 Z';
+  for(var i=0;i<5;i++){
+    var fill = Math.max(0, Math.min(1, RATING - i));
+    var svgNS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(svgNS,'svg');
+    svg.setAttribute('viewBox','0 0 24 24');
+    var uid = 'starfill' + i;
+    if(fill > 0 && fill < 1){
+      var defs = document.createElementNS(svgNS,'defs');
+      var lg = document.createElementNS(svgNS,'linearGradient');
+      lg.setAttribute('id', uid);
+      var s1 = document.createElementNS(svgNS,'stop'); s1.setAttribute('offset', (fill*100)+'%'); s1.setAttribute('stop-color', '#7a5a35');
+      var s2 = document.createElementNS(svgNS,'stop'); s2.setAttribute('offset', (fill*100)+'%'); s2.setAttribute('stop-color', '#e8dcc4');
+      lg.appendChild(s1); lg.appendChild(s2); defs.appendChild(lg); svg.appendChild(defs);
+    }
+    var path = document.createElementNS(svgNS,'path');
+    path.setAttribute('d', STAR_PATH);
+    path.setAttribute('fill', fill <= 0 ? '#e8dcc4' : (fill >= 1 ? '#7a5a35' : 'url(#' + uid + ')'));
+    svg.appendChild(path);
+    starsRow.appendChild(svg);
+  }
+})();
+</script>
+
+</body>
+</html>

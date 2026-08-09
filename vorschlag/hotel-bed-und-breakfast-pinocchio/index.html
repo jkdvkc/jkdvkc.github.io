@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bed &amp; Breakfast Pinocchio – Oberohringen</title>
+<meta name="description" content="Bed & Breakfast Pinocchio in Oberohringen: 3.7 von 27 Bewertungen. Kein eigener Webauftritt. Telefon +41 52 335 57 19.">
+<meta property="og:title" content="Bed & Breakfast Pinocchio – Oberohringen">
+<meta property="og:description" content="3.7 von 27 Bewertungen, Oberohringen. Telefon +41 52 335 57 19.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Bed & Breakfast Pinocchio",
+  "address": { "@type": "PostalAddress", "addressLocality": "Oberohringen", "addressCountry": "CH" },
+  "telephone": "+41523355719",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.7", "reviewCount": "27" }
+}
+</script>
+<style>
+:root{
+  --bg:#1c1410;
+  --surface:#241a14;
+  --fg:#f1e6d0;
+  --muted:#b3a58c;
+  --brand:#7a2530;
+  --accent:#b98a4e;
+  --line:rgba(241,230,208,.16);
+  --string:rgba(241,230,208,.5);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{ margin:0; background:var(--bg); color:var(--fg); font-family:'Vollkorn',serif; font-size:clamp(15px,0.3vw + 14px,17px); line-height:1.7; position:relative; }
+h1,h2,.title-font{ font-family:'Rye',serif; font-weight:400; margin:0; line-height:1.08; }
+a{ color:var(--accent); }
+.skip-link{ position:absolute; left:-999px; top:0; background:var(--brand); color:#fff; padding:.6em 1em; z-index:100; }
+.skip-link:focus{ left:1rem; top:1rem; }
+:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+
+/* THE STRINGS — vertical lines from top the content hangs from */
+.strings{ position:absolute; inset:0 0 auto 0; height:100%; pointer-events:none; z-index:0; }
+.strings svg{ width:100%; height:100%; display:block; }
+.strings line{ stroke:var(--string); stroke-width:1; }
+
+header{ position:sticky; top:0; z-index:20; background:rgba(28,20,16,.92); backdrop-filter:blur(3px); border-bottom:1px solid var(--line); padding:.9rem 1.25rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+header .word{ font-family:'Rye',serif; font-size:clamp(1rem,2.4vw,1.3rem); color:var(--accent); }
+header nav{ display:none; gap:1.1rem; font-size:.85rem; }
+header nav a{ text-decoration:none; color:var(--muted); }
+header nav a:hover, header nav a:focus-visible{ color:var(--accent); }
+@media (min-width:700px){ header nav{ display:flex; } }
+header .callbtn{ border:1px solid var(--accent); padding:.5em 1em; text-decoration:none; font-size:.85rem; color:var(--fg); }
+header .callbtn:hover{ background:var(--accent); color:#1c1410; }
+
+main{ position:relative; z-index:1; max-width:800px; margin:0 auto; padding:0 1.25rem; }
+
+/* A STAGE that hangs — each block dangles from the strings above it */
+.hang{ padding-top:clamp(2.5rem,6vw,4rem); }
+.marionette{
+  position:relative; padding:clamp(1.8rem,4vw,2.6rem); background:var(--surface);
+  border:1px solid var(--line); margin-bottom:clamp(3rem,6vw,4.5rem);
+}
+.marionette::before{
+  content:""; position:absolute; left:1.6rem; top:-2.6rem; width:1px; height:2.6rem; background:var(--string);
+}
+.marionette::after{
+  content:""; position:absolute; right:1.6rem; top:-2.6rem; width:1px; height:2.6rem; background:var(--string);
+}
+.marionette .peg{
+  position:absolute; top:-.35rem; width:9px; height:9px; border-radius:50%; background:var(--accent);
+}
+.marionette .peg.l{ left:calc(1.6rem - 4px); }
+.marionette .peg.r{ right:calc(1.6rem - 4px); }
+.marionette{ animation:sway 6s ease-in-out infinite; transform-origin:top center; }
+.marionette:nth-child(even){ animation-delay:-3s; }
+.marionette:nth-child(3n){ animation-duration:7.5s; }
+@keyframes sway{ 0%,100%{ transform:rotate(-.15deg);} 50%{ transform:rotate(.15deg);} }
+@media (prefers-reduced-motion:reduce){ .marionette{ animation:none; } }
+
+.marionette h2 + .lead{ margin-top:.4rem; }
+.rating-line + .rating-note{ margin-top:.7rem; }
+
+.reveal{ opacity:0; transform:translateY(-10px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+.kicker{ font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+h1{ font-size:clamp(2.2rem,7vw,4rem); color:var(--fg); }
+.lead{ max-width:46ch; color:var(--muted); font-size:clamp(1rem,1.4vw,1.1rem); margin-top:1rem; }
+
+.rating-line{ display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; }
+.rating-line .score{ font-family:'Rye',serif; font-size:2.3rem; color:var(--accent); }
+.rating-line .count{ font-size:.88rem; color:var(--muted); }
+.rating-note{ margin-top:.9rem; max-width:48ch; color:var(--muted); font-size:.93rem; }
+
+.fact-toggle summary{ cursor:pointer; list-style:none; padding:0 0 1rem; display:flex; justify-content:space-between; font-family:'Rye',serif; font-size:1.05rem; color:var(--accent); }
+.fact-toggle summary::-webkit-details-marker{ display:none; }
+.factline{ display:flex; gap:.7rem; padding:.55rem 0; border-top:1px solid var(--line); font-size:.92rem; }
+.factline .k{ color:var(--muted); width:9rem; flex-shrink:0; }
+
+.mapwrap{ border:1px solid var(--line); }
+.mapwrap iframe{ width:100%; height:300px; border:0; display:block; filter:grayscale(20%) sepia(15%); }
+
+.gap-block h2{ color:var(--fg); font-size:clamp(1.5rem,3.5vw,2rem); margin-bottom:.6rem; }
+.gap-block p{ max-width:52ch; color:var(--muted); }
+.gap-block ul{ list-style:none; margin:1.1rem 0 0; padding:0; display:grid; gap:.5rem; }
+.gap-block li{ font-size:.9rem; padding-left:1.3em; position:relative; color:var(--fg); }
+.gap-block li::before{ content:"—"; position:absolute; left:0; color:var(--accent); }
+.gap-block .callout a{ display:inline-block; margin-top:1.4rem; background:var(--brand); color:#fff; padding:.75em 1.4em; text-decoration:none; font-weight:600; }
+
+footer{ padding:2.5rem 1.25rem 6.5rem; text-align:center; color:var(--muted); font-size:.85rem; position:relative; z-index:1; }
+footer p{ margin:.3rem 0; }
+.muster{ margin-top:.8rem; font-size:.78rem; }
+
+.mobile-bar{ position:fixed; bottom:0; left:0; right:0; z-index:30; background:var(--brand); display:flex; }
+.mobile-bar a{ flex:1; text-align:center; padding:1rem; color:#fff; text-decoration:none; font-size:.95rem; }
+@media (min-width:760px){ .mobile-bar{ display:none; } }
+
+noscript div{ display:block; background:var(--surface); border:1px solid var(--line); padding:1rem 1.25rem; margin:1.5rem 0; font-size:.9rem; color:var(--muted); }
+@media print{ header, .mobile-bar, .strings{ display:none; } .marionette{ animation:none; break-inside:avoid; } }
+@media (max-width:400px){ .strings{ opacity:.5; } .marionette{ padding:1.4rem; } }
+
+.fact-toggle summary:focus-visible{ outline:3px solid var(--accent); outline-offset:3px; }
+.gap-block a:focus-visible{ outline:3px solid var(--fg); outline-offset:2px; }
+.mapwrap iframe:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+.mobile-bar a:focus-visible{ outline:3px solid #fff; outline-offset:-4px; }
+header .callbtn:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<div class="strings" aria-hidden="true"><svg id="stringsSvg" preserveAspectRatio="none"></svg></div>
+
+<header>
+  <span class="word">Pinocchio</span>
+  <nav aria-label="Sprungmarken">
+    <a href="#bewertung">Bewertung</a>
+    <a href="#fakten">Fakten</a>
+    <a href="#ort">Ort</a>
+  </nav>
+  <a class="callbtn" href="tel:+41523355719">+41 52 335 57 19</a>
+</header>
+
+<main id="main">
+  <noscript><div>Diese Seite bleibt auch ohne JavaScript lesbar – nur die gezeichneten Fäden im Hintergrund und die Animationen entfallen.</div></noscript>
+
+  <section class="hang">
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <p class="kicker">Oberohringen · Bed &amp; Breakfast</p>
+      <h1>Bed &amp; Breakfast<br>Pinocchio</h1>
+      <p class="lead">Ein Name aus Holz und Fäden – und ein Haus, das bisher an keiner eigenen Website hängt. Diese Seite lässt jeden Abschnitt sichtbar an zwei Fäden hängen: nichts steht hier von selbst, alles ist an eine Quelle gebunden.</p>
+      <p class="lead" style="font-size:.9rem;opacity:.85;">Oberohringen · Bed &amp; Breakfast · +41 52 335 57 19</p>
+    </div>
+
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:.6rem;">Fäden statt freiem Fall</h2>
+      <p class="lead" style="margin-top:0;">Jeder Block auf dieser Seite hängt sichtbar an zwei dünnen Linien. Das ist keine Spielerei: Es zeigt, dass jede Aussage hier an einer echten Quelle hängt – dem Google-Eintrag, sonst nichts.</p>
+    </div>
+
+    <div class="marionette reveal" id="bewertung">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:1rem;">Bewertung</h2>
+      <div class="rating-line">
+        <span class="score">3.7</span>
+        <span class="count">aus 27 Google-Bewertungen</span>
+      </div>
+      <p class="rating-note">27 Bewertungen sind eine solide Zahl – der Schnitt ist durchwachsen, nicht makellos. Wir zeigen ihn klein und sachlich, ohne ihn zu beschönigen.</p>
+      <p class="rating-note">Eine grössere Stichprobe als bei den meisten Häusern in dieser Reihe, aber kein Grund für Superlative – 3.7 bleibt 3.7.</p>
+      <p class="rating-note">Zum Vergleich: andere Häuser dieser Reihe zeigen sehr hohe Werte aus sehr wenigen Stimmen. Hier ist es umgekehrt – mehr Stimmen, durchschnittlicherer Wert.</p>
+    </div>
+
+    <div class="marionette reveal" id="fakten">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <details class="fact-toggle" open>
+        <summary>Was wir sicher wissen <span>+</span></summary>
+        <div class="factline"><span class="k">Name</span><span>Bed &amp; Breakfast Pinocchio</span></div>
+        <div class="factline"><span class="k">Ort</span><span>Oberohringen</span></div>
+        <div class="factline"><span class="k">Kategorie</span><span>Bed &amp; Breakfast</span></div>
+        <div class="factline"><span class="k">Telefon</span><span>+41 52 335 57 19</span></div>
+        <div class="factline"><span class="k">Bewertung</span><span>3.7 · 27 Google-Bewertungen</span></div>
+        <div class="factline"><span class="k">Eigene Website</span><span>keine gefunden</span></div>
+        <div class="factline"><span class="k">Quelle</span><span>Verzeichniseintrag (allbiz), Google</span></div>
+      </details>
+    </div>
+
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:.6rem;">Woher die Fakten kommen</h2>
+      <p class="lead" style="margin-top:0;">Name, Ort, Telefonnummer und Bewertung stammen aus einem einzigen Verzeichniseintrag und dem Google-Unternehmensprofil. Zwei Quellen, ein Faden – mehr ist es bisher nicht.</p>
+    </div>
+
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:.6rem;">Nicht Winterthur</h2>
+      <p class="lead" style="margin-top:0;">Dieses Haus liegt in Oberohringen, nicht in Winterthur. Ein Detail, das online leicht untergeht – hier steht es bewusst an erster Stelle.</p>
+    </div>
+
+    <div class="marionette reveal" id="ort">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:1rem;">Ort (ungefähr)</h2>
+      <div class="mapwrap">
+        <iframe src="https://maps.google.com/maps?q=Bed%20%26%20Breakfast%20Pinocchio%20%E2%80%93%20Oberohringen%20Oberohringen&amp;z=15&amp;output=embed" title="Standort Bed &amp; Breakfast Pinocchio auf Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="rating-note" style="margin-top:.9rem;">Keine Adresse hinterlegt – die Karte zeigt die Google-Suche nach Name und Ort, nicht eine geprüfte Hausnummer.</p>
+    </div>
+
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:.6rem;">Am Faden bleiben</h2>
+      <p class="lead" style="margin-top:0;">Keine Online-Buchung, kein Formular – der Faden endet bei einem Telefonanruf.</p>
+      <p style="margin-top:1.1rem;">
+        <a href="tel:+41523355719" style="display:inline-block;border:1px solid var(--accent);padding:.75em 1.4em;text-decoration:none;font-weight:600;color:var(--fg);">Anrufen: +41 52 335 57 19</a>
+      </p>
+    </div>
+
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <div class="gap-block">
+        <h2>Was hier fehlt</h2>
+        <p>Keine Adresse, kein Zimmertyp, kein Preis, keine Ausstattung, keine Fotos, keine Öffnungszeiten – nur ein Verzeichniseintrag und eine Telefonnummer halten dieses Haus derzeit online zusammen.</p>
+        <ul>
+          <li>Adresse: nicht publiziert</li>
+          <li>Zimmer &amp; Preise: nicht publiziert</li>
+          <li>Fotos: keine vorhanden</li>
+          <li>Öffnungszeiten: nicht publiziert</li>
+          <li>Distanzangaben: nicht publiziert</li>
+        </ul>
+        <p class="callout"><a href="tel:+41523355719">Für alles Übrige: +41 52 335 57 19</a></p>
+      </div>
+    </div>
+
+    <div class="marionette reveal">
+      <span class="peg l" aria-hidden="true"></span><span class="peg r" aria-hidden="true"></span>
+      <h2 style="font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:.6rem;">Kurz gesagt</h2>
+      <p class="lead" style="margin-top:0;">Pinocchio, Oberohringen, Bed &amp; Breakfast, 3.7 aus 27 Bewertungen, eine Telefonnummer. Fünf Fäden, mehr nicht.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Bed &amp; Breakfast Pinocchio</p>
+  <p>Oberohringen, nicht Winterthur</p>
+  <p>Bed &amp; Breakfast · <a href="tel:+41523355719">+41 52 335 57 19</a></p>
+  <p class="muster">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41523355719">Anrufen: +41 52 335 57 19</a>
+</div>
+
+<script>
+/* draws the background strings once; purely decorative, marked aria-hidden in markup */
+(function(){
+  var svg = document.getElementById('stringsSvg');
+  if(!svg) return;
+  var W = 100, H = 100;
+  svg.setAttribute('viewBox','0 0 ' + W + ' ' + H);
+  var xs = [8,17,26,38,50,62,74,83,92];
+  xs.forEach(function(x, i){
+    var line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x); line.setAttribute('y1', 0);
+    line.setAttribute('x2', x + (i % 2 === 0 ? -1.5 : 1.5)); line.setAttribute('y2', H);
+    svg.appendChild(line);
+  });
+})();
+
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold:.15 });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>

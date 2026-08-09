@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Wartmann Winterthur – Zimmer beim Bahnhof, gratis E-Bikes</title>
+<meta name="description" content="Hotel Wartmann in Winterthur: Zimmer direkt beim Bahnhof, Frühstücksbuffet inklusive und 4 kostenlose E-Bikes für Gäste. Rudolfstrasse 15, CH-8400 Winterthur.">
+<meta property="og:title" content="Hotel Wartmann Winterthur – Ankommen, aufsteigen, losfahren">
+<meta property="og:description" content="Mittelklasse-Hotel beim Bahnhof Winterthur mit Frühstücksbuffet und 4 gratis E-Bikes für Gäste.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.wartmann.ch/wp-content/uploads/2024/01/Hotel_Wartmann_Logo_neg-.1-350x100.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Wartmann",
+  "description": "Modernes Hotel mit 68 Zimmern verschiedener Kategorien, kostenloses Frühstücksbuffet, 4 kostenlose E-Bikes für Gäste, 24-Stunden-Lobby mit Kaffee/Tee, klimatisierte und schallisolierte Zimmer.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rudolfstrasse 15",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41 52 260 07 07",
+  "email": "wartmann@wartmann.ch",
+  "url": "https://www.wartmann.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "585"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Frühstücksbuffet inklusive", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "4 kostenlose E-Bikes für Gäste", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "WLAN gratis", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kostenlose Kaffee und Tee in der Lobby (24 Stunden)", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Fahrradlagerung", "value": true }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#f4f1e9;
+    --surface:#ffffff;
+    --fg:#182420;
+    --muted:#4c5852;
+    --brand:#1f6f5c;
+    --accent:#d9691f;
+    --asphalt:#161f1c;
+    --line:rgba(24,36,32,0.14);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:clamp(15px,0.3vw + 14.4px,17px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    font-weight:700;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  h1{font-size:clamp(2.6rem,6vw + 1rem,5.6rem);}
+  h2{font-size:clamp(1.9rem,3.4vw + 1rem,3rem);}
+  h3{font-size:clamp(1.15rem,1.2vw + 1rem,1.5rem);}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .skip-link{
+    position:absolute; left:-999px; top:0; background:var(--brand); color:#fff;
+    padding:0.7em 1.2em; z-index:200; border-radius:0 0 6px 0;
+  }
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px;}
+
+  /* --- route / dashed line motif --- */
+  .route-line{
+    height:4px;
+    background-image:repeating-linear-gradient(90deg, var(--accent) 0 26px, transparent 26px 44px);
+    background-size:70px 4px;
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .route-line.moving{ animation:roll 2.4s linear infinite; }
+  }
+  @keyframes roll{ to{ background-position:-70px 0; } }
+
+  .wheel{
+    width:64px;height:64px;border-radius:50%;
+    border:5px solid currentColor;
+    position:relative;flex:none;
+  }
+  .wheel::before,.wheel::after{
+    content:"";position:absolute;background:currentColor;
+  }
+  .wheel::before{ top:6px; bottom:6px; left:calc(50% - 1px); width:2px; }
+  .wheel::after{ left:6px; right:6px; top:calc(50% - 1px); height:2px; }
+  .wheel-spin{ animation:spin 6s linear infinite; }
+  @media (prefers-reduced-motion:reduce){ .wheel-spin{ animation:none; } }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  header.site{
+    position:sticky; top:0; z-index:100;
+    background:rgba(244,241,233,0.94); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-wrap{
+    max-width:1180px; margin:0 auto; padding:0.9em 1.4em;
+    display:flex; align-items:center; justify-content:space-between; gap:1em;
+    position:relative;
+  }
+  .brand-mark{ display:flex; align-items:center; gap:0.6em; font-family:'Space Grotesk'; font-weight:700; font-size:1.1rem; text-decoration:none; }
+  .brand-mark img{ height:26px; width:auto; }
+  nav.links{ display:flex; gap:1.6em; list-style:none; margin:0; padding:0; }
+  nav.links a{ text-decoration:none; font-weight:500; font-size:0.95rem; color:var(--fg); }
+  nav.links a:hover{ color:var(--brand); }
+  .nav-cta{
+    background:var(--brand); color:#fff; padding:0.55em 1.1em; border-radius:999px;
+    font-weight:600; font-size:0.9rem; text-decoration:none; white-space:nowrap;
+  }
+  .menu-toggle{
+    display:none; background:transparent; border:1px solid var(--line); border-radius:8px;
+    width:42px; height:38px; align-items:center; justify-content:center; cursor:pointer;
+    flex-direction:column; gap:4px;
+  }
+  .menu-toggle span{ display:block; width:20px; height:2px; background:var(--fg); }
+
+  main{ display:block; }
+  section{ padding:clamp(3rem,6vw,5.5rem) 1.4em; }
+  .wrap{ max-width:1180px; margin:0 auto; }
+
+  /* Hero */
+  .hero{
+    background:var(--asphalt); color:#f4f1e9; position:relative; overflow:hidden;
+    padding-top:clamp(3.5rem,8vw,6rem); padding-bottom:clamp(3.5rem,8vw,6rem);
+  }
+  .hero .wrap{ position:relative; z-index:2; }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:0.5em;
+    color:var(--accent); font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+    font-size:0.8rem; margin-bottom:1.2em;
+  }
+  .hero h1{ max-width:14ch; color:#f4f1e9; }
+  .hero .lead{ max-width:44ch; color:#d7d2c3; font-size:clamp(1.05rem,1vw + 0.9rem,1.3rem); margin-top:1.1em; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:0.9em; margin-top:2em; }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5em; padding:0.85em 1.5em;
+    border-radius:999px; font-weight:600; text-decoration:none; font-size:0.98rem;
+    border:2px solid transparent; cursor:pointer;
+  }
+  .btn-primary{ background:var(--accent); color:#1a1108; }
+  .btn-ghost{ border-color:rgba(244,241,233,0.5); color:#f4f1e9; background:transparent; }
+  .btn-primary:hover{ filter:brightness(1.08); }
+  .btn-ghost:hover{ border-color:#f4f1e9; }
+  .hero-wheels{ position:absolute; right:-40px; bottom:-60px; display:flex; gap:1.4rem; opacity:0.18; z-index:1; }
+  .hero-wheels .wheel{ width:180px; height:180px; border-width:14px; color:#f4f1e9; }
+  .hero-icon-badge{
+    position:absolute; top:1.8rem; right:1.8rem; z-index:2; width:56px; height:56px;
+    border-radius:14px; background:rgba(244,241,233,0.9); padding:8px; box-shadow:0 6px 18px rgba(0,0,0,0.3);
+  }
+  @media (max-width:640px){ .hero-icon-badge{ display:none; } }
+
+  /* USP route strip */
+  .route-strip{ background:var(--surface); }
+  .route-strip h2{ margin-bottom:0.3em; }
+  .route-strip .kicker{ color:var(--brand); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; font-size:0.8rem; }
+  .stops{
+    margin-top:2.6em; position:relative; display:grid; grid-template-columns:repeat(5,1fr); gap:1.6em;
+  }
+  .stops::before{
+    content:""; position:absolute; top:11px; left:0; right:0; height:0;
+    border-top:3px dashed var(--line); z-index:0;
+  }
+  .stop{ position:relative; z-index:1; display:flex; flex-direction:column; gap:0.8em; }
+  .stop-dot{
+    width:24px; height:24px; border-radius:50%; background:var(--brand);
+    border:4px solid var(--surface); box-shadow:0 0 0 2px var(--brand);
+  }
+  .stop p{ margin:0; font-size:0.95rem; color:var(--muted); font-weight:500; }
+  @media (max-width:880px){
+    .stops{ grid-template-columns:1fr; gap:1.3em; }
+    .stops::before{ top:0; bottom:0; left:11px; right:auto; width:0; border-top:0; border-left:3px dashed var(--line); }
+    .stop{ flex-direction:row; align-items:flex-start; padding-left:0.2em; }
+  }
+
+  /* About + rating */
+  .about-grid{ display:grid; grid-template-columns:1.4fr 1fr; gap:3rem; align-items:start; }
+  .rating-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1.6em;
+  }
+  .rating-num{ font-family:'Space Grotesk'; font-size:2.6rem; font-weight:700; color:var(--brand); }
+  .stars{ color:var(--accent); letter-spacing:0.1em; font-size:1.1rem; }
+  .rating-card p{ color:var(--muted); font-size:0.92rem; margin-top:0.6em; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* E-bike panel */
+  .ebike{ background:var(--brand); color:#f4f1e9; position:relative; overflow:hidden; }
+  .ebike .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:2.6rem; align-items:center; position:relative; z-index:1; }
+  .ebike h2{ color:#fff; }
+  .ebike-badge{
+    display:inline-flex; align-items:center; gap:0.7em; background:rgba(255,255,255,0.14);
+    padding:0.5em 1em; border-radius:999px; font-weight:600; font-size:0.85rem; margin-bottom:1em;
+  }
+  .ebike-list{ list-style:none; margin:1.4em 0 0; padding:0; display:grid; gap:0.9em; }
+  .ebike-list li{ display:flex; gap:0.7em; align-items:flex-start; }
+  .ebike-list li::before{ content:"—"; color:var(--accent); font-weight:700; }
+  .ebike-visual{ display:flex; justify-content:center; }
+  .ebike-visual .wheel{ width:150px; height:150px; border-width:12px; color:rgba(244,241,233,0.5); }
+  @media (max-width:820px){ .ebike .wrap{ grid-template-columns:1fr; } .ebike-visual{ order:-1; } }
+
+  /* Rooms */
+  .rooms-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.6rem; margin-top:2.4em; }
+  .room-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1.7em;
+    display:flex; flex-direction:column; gap:0.9em;
+  }
+  .room-card .cap{
+    align-self:flex-start; background:var(--bg); border:1px solid var(--line); color:var(--muted);
+    font-size:0.8rem; font-weight:600; padding:0.3em 0.8em; border-radius:999px;
+  }
+  .room-card p{ color:var(--muted); font-size:0.93rem; margin:0; }
+  .room-card .price-note{ margin-top:auto; font-size:0.85rem; color:var(--fg); font-weight:600; padding-top:0.6em; border-top:1px dashed var(--line); }
+
+  /* Enquiry composer */
+  .composer-section{ background:var(--asphalt); color:#f4f1e9; }
+  .composer-section h2{ color:#fff; }
+  .composer-section > .wrap > p.lead{ color:#d7d2c3; max-width:56ch; }
+  .composer{
+    margin-top:2.2em; background:rgba(244,241,233,0.06); border:1px solid rgba(244,241,233,0.2);
+    border-radius:18px; padding:clamp(1.4em,3vw,2.4em); display:grid; gap:1.4em;
+  }
+  .composer-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.2em; }
+  .field{ display:flex; flex-direction:column; gap:0.5em; }
+  .field label{ font-size:0.85rem; font-weight:600; color:#d7d2c3; }
+  .field select, .field input{
+    background:#f4f1e9; color:#182420; border:1px solid transparent; border-radius:10px;
+    padding:0.75em 0.9em; font-size:0.98rem; font-family:inherit;
+  }
+  .field select:focus-visible, .field input:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+  .composer-output{
+    background:rgba(244,241,233,0.08); border-radius:12px; padding:1.2em 1.4em;
+    font-size:0.93rem; color:#d7d2c3; white-space:pre-line; min-height:3.4em;
+  }
+  .composer-actions{ display:flex; flex-wrap:wrap; gap:0.9em; }
+  .composer-actions .btn[aria-disabled="true"]{ opacity:0.45; pointer-events:none; }
+
+  /* Amenities */
+  .amenities-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1em 1.6em; margin-top:2.2em;
+  }
+  .amenity{ display:flex; gap:0.8em; align-items:flex-start; padding:0.9em 0; border-bottom:1px solid var(--line); }
+  .amenity-icon{
+    flex:none; width:30px; height:30px; border-radius:50%; background:var(--brand); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:0.9rem; font-weight:700;
+  }
+
+  /* Location */
+  .location .wrap{ display:grid; grid-template-columns:1fr 1.3fr; gap:2.4rem; align-items:start; }
+  .contact-block{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1.8em; }
+  .contact-block dt{ font-size:0.78rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); margin-top:1.1em; }
+  .contact-block dt:first-child{ margin-top:0; }
+  .contact-block dd{ margin:0.2em 0 0; font-weight:600; }
+  .contact-block a{ text-decoration:none; color:var(--brand); }
+  .map-frame{ border-radius:16px; overflow:hidden; border:1px solid var(--line); }
+  .map-frame iframe{ width:100%; height:340px; border:0; display:block; }
+  @media (max-width:820px){ .location .wrap{ grid-template-columns:1fr; } }
+
+  footer{ background:var(--asphalt); color:#d7d2c3; padding:3rem 1.4em 6.5rem; }
+  footer .wrap{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:2.4rem; }
+  footer h3{ color:#fff; font-size:1.1rem; }
+  footer a{ color:#d7d2c3; text-decoration:none; }
+  footer a:hover{ color:var(--accent); }
+  .footer-legal{ margin-top:2.4rem; padding-top:1.6rem; border-top:1px solid rgba(244,241,233,0.14); font-size:0.82rem; color:#9aa39d; }
+  @media (max-width:760px){ footer .wrap{ grid-template-columns:1fr; } }
+
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:150; display:none;
+    background:var(--asphalt); border-top:1px solid rgba(244,241,233,0.18);
+    padding:0.7em 1em; align-items:center; justify-content:center;
+  }
+  .mobile-bar a{
+    display:flex; align-items:center; justify-content:center; gap:0.5em; width:100%;
+    background:var(--accent); color:#1a1108; padding:0.85em; border-radius:999px;
+    font-weight:700; text-decoration:none;
+  }
+  @media (max-width:640px){
+    .mobile-bar{ display:flex; }
+    body{ padding-bottom:4.6rem; }
+    nav.links{
+      display:none; position:absolute; left:0; right:0; top:100%;
+      background:var(--surface); border-bottom:1px solid var(--line);
+      flex-direction:column; gap:0; padding:0.5em 1.4em 1em;
+    }
+    nav.links.open{ display:flex; }
+    nav.links a{ padding:0.8em 0; border-bottom:1px solid var(--line); }
+    .nav-cta{ display:none; }
+    .menu-toggle{ display:flex; }
+  }
+  @media (max-width:400px){
+    .hero-actions .btn{ width:100%; justify-content:center; }
+    .composer-actions .btn{ width:100%; justify-content:center; }
+  }
+
+  [data-reveal]{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:no-preference){
+    [data-reveal]{ opacity:0; transform:translateY(18px); transition:opacity 0.7s ease, transform 0.7s ease; }
+    [data-reveal].is-visible{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="nav-wrap">
+    <a class="brand-mark" href="#main">
+      <img src="https://www.wartmann.ch/wp-content/uploads/2024/01/Hotel_Wartmann_Logo_neg-.1-350x100.png" alt="Hotel Wartmann Logo" style="filter:invert(1) brightness(0.2);" onerror="this.style.display='none';">
+      <span>Hotel Wartmann</span>
+    </a>
+    <nav class="links" id="nav-links" aria-label="Hauptnavigation">
+      <a href="#zimmer">Zimmer</a>
+      <a href="#ebikes">E-Bikes</a>
+      <a href="#anfrage">Anfrage</a>
+      <a href="#lage">Lage</a>
+    </nav>
+    <a class="nav-cta" href="tel:+41522600707">Anrufen</a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="route-line moving" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero-eyebrow">Rudolfstrasse 15 · beim Bahnhof Winterthur</span>
+      <h1>Ankommen am Bahnhof.<br>Losfahren mit dem E-Bike.</h1>
+      <p class="lead">Das Hotel Wartmann ist ein Mittelklasse-Hotel gleich beim Bahnhof – mit Frühstücksbuffet inklusive und 4 kostenlosen E-Bikes, die für Gäste bereitstehen. Weniger Blick auf die Stadt, mehr Weg hinein.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#anfrage">Zimmer anfragen</a>
+        <a class="btn btn-ghost" href="tel:+41522600707">+41 52 260 07 07</a>
+      </div>
+    </div>
+    <div class="hero-wheels" aria-hidden="true">
+      <div class="wheel wheel-spin"></div>
+      <div class="wheel wheel-spin" style="animation-duration:8s;"></div>
+    </div>
+    <div class="hero-icon-badge" id="hero-icon-badge">
+      <img src="https://www.wartmann.ch/wp-content/uploads/2022/08/cropped-wartmannicon-270x270.png" alt="" onerror="document.getElementById('hero-icon-badge').style.display='none';">
+    </div>
+  </section>
+
+  <section class="route-strip" data-reveal>
+    <div class="wrap">
+      <span class="kicker">Was dieses Haus mitgibt</span>
+      <h2>Fünf Stationen auf dem Weg zum Zimmer</h2>
+      <div class="stops">
+        <div class="stop"><span class="stop-dot" aria-hidden="true"></span><p>Kostenlose E-Bikes</p></div>
+        <div class="stop"><span class="stop-dot" aria-hidden="true"></span><p>Frühstücksbuffet inklusive</p></div>
+        <div class="stop"><span class="stop-dot" aria-hidden="true"></span><p>24-Stunden Lobby-Getränke</p></div>
+        <div class="stop"><span class="stop-dot" aria-hidden="true"></span><p>Raucher- &amp; Nichtraucherlounge</p></div>
+        <div class="stop"><span class="stop-dot" aria-hidden="true"></span><p>Fahrradlagerung</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber" data-reveal>
+    <div class="wrap about-grid">
+      <div>
+        <span class="kicker" style="color:var(--brand);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;">Über das Haus</span>
+        <h2 style="margin-top:0.4em;">Modern, schallisoliert, gut angebunden</h2>
+        <p style="margin-top:1.1em;max-width:60ch;">Modernes Hotel mit 68 Zimmern verschiedener Kategorien, kostenloses Frühstücksbuffet, 4 kostenlose E-Bikes für Gäste, 24-Stunden-Lobby mit Kaffee/Tee, klimatisierte und schallisolierte Zimmer mit modernen Annehmlichkeiten.</p>
+      </div>
+      <div class="rating-card">
+        <div class="rating-num">4.3<span style="font-size:1.1rem;color:var(--muted);font-weight:500;"> / 5</span></div>
+        <div class="stars" aria-hidden="true">★★★★☆</div>
+        <p>585 Google-Bewertungen</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ebikes" class="ebike" data-reveal>
+    <div class="wrap">
+      <div>
+        <span class="ebike-badge">🚲 Gratis für Gäste</span>
+        <h2>4 E-Bikes stehen bereit</h2>
+        <p style="margin-top:1em;max-width:46ch;">Statt eines Taxis: das Rad. Winterthur lässt sich damit anders erschliessen als zu Fuss – und die Fahrradlagerung ist gleich mit dabei.</p>
+        <ul class="ebike-list">
+          <li>4 kostenlose E-Bikes für Gäste</li>
+          <li>Fahrradlagerung im Haus</li>
+          <li>5% Rabatt im Argentina Steakhouse</li>
+          <li>Parkplätze im Bahnhofparking zum reduzierten Tarif</li>
+        </ul>
+      </div>
+      <div class="ebike-visual" aria-hidden="true">
+        <div class="wheel wheel-spin" style="animation-duration:10s;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zimmer" data-reveal>
+    <div class="wrap">
+      <span class="kicker" style="color:var(--brand);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;">Zimmer</span>
+      <h2 style="margin-top:0.4em;">Drei Kategorien, ein Standard</h2>
+      <div class="rooms-grid" id="room-cards"></div>
+    </div>
+  </section>
+
+  <section id="anfrage" class="composer-section" data-reveal>
+    <div class="wrap">
+      <span class="kicker" style="color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;">Zimmeranfrage</span>
+      <h2 style="margin-top:0.4em;">Anfrage zusammenstellen</h2>
+      <p class="lead" style="margin-top:0.8em;">Zimmerpreise sind nicht online hinterlegt – wählen Sie Kategorie, Daten und Gästezahl, wir bereiten eine E-Mail damit vor.</p>
+      <div class="composer">
+        <div class="composer-row">
+          <div class="field">
+            <label for="room-select">Zimmerkategorie</label>
+            <select id="room-select"></select>
+          </div>
+          <div class="field">
+            <label for="checkin">Anreise</label>
+            <input type="date" id="checkin">
+          </div>
+          <div class="field">
+            <label for="checkout">Abreise</label>
+            <input type="date" id="checkout">
+          </div>
+          <div class="field">
+            <label for="guests">Anzahl Gäste</label>
+            <input type="number" id="guests" min="1" max="4" value="2">
+          </div>
+        </div>
+        <div class="composer-output" id="composer-output" aria-live="polite"></div>
+        <div class="composer-actions">
+          <a class="btn btn-primary" id="mail-btn" href="#">Als E-Mail senden</a>
+          <a class="btn btn-ghost" href="tel:+41522600707">Lieber anrufen: +41 52 260 07 07</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="amenities" data-reveal>
+    <div class="wrap">
+      <span class="kicker" style="color:var(--brand);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;">Ausstattung</span>
+      <h2 style="margin-top:0.4em;">Was im Preis inbegriffen ist</h2>
+      <div class="amenities-grid" id="amenities-grid"></div>
+    </div>
+  </section>
+
+  <section id="lage" class="location" data-reveal>
+    <div class="wrap">
+      <div class="contact-block">
+        <h2 style="font-size:clamp(1.5rem,2vw+1rem,2rem);">Kontakt &amp; Lage</h2>
+        <dl style="margin:1.2em 0 0;">
+          <dt>Adresse</dt>
+          <dd>Rudolfstrasse 15, CH-8400 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522600707">+41 52 260 07 07</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:wartmann@wartmann.ch">wartmann@wartmann.ch</a></dd>
+        </dl>
+      </div>
+      <div class="map-frame">
+        <iframe title="Karte Hotel Wartmann Winterthur" loading="lazy" src="https://maps.google.com/maps?q=Hotel%20Wartmann%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Hotel Wartmann</h3>
+      <p style="margin-top:0.8em;color:#9aa39d;font-size:0.92rem;max-width:38ch;">Rudolfstrasse 15, CH-8400 Winterthur — beim Bahnhof, mit gratis E-Bikes für Gäste.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p style="margin-top:0.8em;"><a href="tel:+41522600707">+41 52 260 07 07</a></p>
+      <p><a href="mailto:wartmann@wartmann.ch">wartmann@wartmann.ch</a></p>
+      <p><a href="https://www.wartmann.ch/" target="_blank" rel="noopener">wartmann.ch</a></p>
+    </div>
+    <div>
+      <h3>Direkt</h3>
+      <p style="margin-top:0.8em;"><a href="#zimmer">Zimmer ansehen</a></p>
+      <p><a href="#anfrage">Anfrage stellen</a></p>
+      <p><a href="#lage">Anfahrt</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    Design-Vorschlag · unverbindliches Muster
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522600707">📞 +41 52 260 07 07 anrufen</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var rooms = [
+    { name:"Einzelzimmer", desc:"14–32 m², Klimaanlage, Heizung, schallisolierte Fenster, Boxspring-Betten, Arbeitsbereiche, kostenloses WLAN, Kabel-TV mit Radio, Safe, Wasserkocher mit Kaffee/Tee.", capacity:1 },
+    { name:"Doppelzimmer", desc:"20–32 m², King-Size oder Twin-Betten, Strassen- oder Hofblick, Klimaanlage, schallisolierte Fenster, kostenloses WLAN, Safe, Wasserkocher mit Kaffee/Tee.", capacity:2 },
+    { name:"Familienzimmer", desc:"32 m², 3–4 Betten, Strassenblick, Klimaanlage, schallisolierte Fenster, kostenloses WLAN, Safe, Wasserkocher mit Kaffee/Tee.", capacity:4 }
+  ];
+
+  var amenities = [
+    "Frühstücksbuffet inklusive",
+    "WLAN gratis (28 Zimmer mit zusätzlicher LAN-Verbindung)",
+    "Kostenlose Kaffee und Tee in der Lobby (24 Stunden)",
+    "4 kostenlose E-Bikes für Gäste",
+    "Raucherlounge und Nichtraucherlounge",
+    "Fahrradlagerung",
+    "Parkplätze im Bahnhofparking (reduzierter Tarif)",
+    "5% Rabatt im Argentina Steakhouse"
+  ];
+
+  function cap(n){
+    return n + (n === 1 ? " Person" : " Personen");
+  }
+
+  // Render room cards
+  var roomGrid = document.getElementById("room-cards");
+  rooms.forEach(function(r){
+    var card = document.createElement("article");
+    card.className = "room-card";
+    card.innerHTML =
+      '<span class="cap">' + cap(r.capacity) + '</span>' +
+      '<h3>' + r.name + '</h3>' +
+      '<p>' + r.desc + '</p>' +
+      '<div class="price-note">Preis auf Anfrage</div>';
+    roomGrid.appendChild(card);
+  });
+
+  // Render amenities
+  var amenGrid = document.getElementById("amenities-grid");
+  amenities.forEach(function(a){
+    var row = document.createElement("div");
+    row.className = "amenity";
+    row.innerHTML = '<span class="amenity-icon" aria-hidden="true">✓</span><span>' + a + '</span>';
+    amenGrid.appendChild(row);
+  });
+
+  // Populate composer room select
+  var select = document.getElementById("room-select");
+  rooms.forEach(function(r){
+    var opt = document.createElement("option");
+    opt.value = r.name;
+    opt.textContent = r.name + " (bis " + cap(r.capacity) + ")";
+    select.appendChild(opt);
+  });
+
+  var checkin = document.getElementById("checkin");
+  var checkout = document.getElementById("checkout");
+  var guests = document.getElementById("guests");
+  var output = document.getElementById("composer-output");
+  var mailBtn = document.getElementById("mail-btn");
+
+  function fmtDate(v){
+    if(!v) return null;
+    var d = new Date(v + "T00:00:00");
+    if(isNaN(d)) return null;
+    return d.toLocaleDateString("de-CH", { day:"2-digit", month:"2-digit", year:"numeric" });
+  }
+
+  function update(){
+    var room = select.value;
+    var ci = fmtDate(checkin.value);
+    var co = fmtDate(checkout.value);
+    var g = guests.value || "2";
+
+    var lines = ["Zimmerkategorie: " + room, "Anzahl Gäste: " + g];
+    if(ci) lines.push("Anreise: " + ci);
+    if(co) lines.push("Abreise: " + co);
+    output.textContent = lines.join("\n");
+
+    var subject = "Zimmeranfrage – " + room;
+    var bodyLines = [
+      "Guten Tag",
+      "",
+      "Ich interessiere mich für folgendes Zimmer im Hotel Wartmann:",
+      "Kategorie: " + room,
+      "Gäste: " + g
+    ];
+    if(ci) bodyLines.push("Anreise: " + ci);
+    if(co) bodyLines.push("Abreise: " + co);
+    bodyLines.push("", "Freundliche Grüsse");
+
+    var mailto = "mailto:wartmann@wartmann.ch?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+    mailBtn.setAttribute("href", mailto);
+  }
+
+  [select, checkin, checkout, guests].forEach(function(el){
+    el.addEventListener("change", update);
+    el.addEventListener("input", update);
+  });
+  update();
+
+  // Mobile nav toggle
+  var menuToggle = document.getElementById("menu-toggle");
+  var navLinks = document.getElementById("nav-links");
+  menuToggle.addEventListener("click", function(){
+    var isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+  navLinks.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Scroll reveal
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.15 });
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+</body>
+</html>

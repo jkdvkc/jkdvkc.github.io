@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahrenheit Winterthur — Bar in der Altstadt, offen bis spät</title>
+<meta name="description" content="Fahrenheit an der Steinberggasse 65 in Winterthur: gemütliche Gastro-Bar in der Altstadt, geöffnet von früh bis spät — samstags schon ab 9 Uhr, an vier Abenden bis 1 Uhr morgens.">
+<meta property="og:title" content="Fahrenheit Winterthur — offen bis spät in der Altstadt">
+<meta property="og:description" content="Gemütlicher Rückzugsort an der Steinberggasse 65. Frühstück, Lunch, Dinner und Bar — lange Öffnungszeiten, freundlicher Service.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.fahrenheit.bar/">
+<meta property="og:image" content="https://www.fahrenheit.bar/wp-content/uploads/2022/01/F_favicon_V02_MH4-300x300.png">
+<link rel="icon" href="https://www.fahrenheit.bar/wp-content/uploads/2022/01/F_favicon_V02_MH4-300x300.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600;9..144,700;9..144,900&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Fahrenheit",
+  "image": "https://www.fahrenheit.bar/wp-content/uploads/2022/01/F_favicon_V02_MH4-300x300.png",
+  "url": "https://www.fahrenheit.bar/",
+  "telephone": "+41 52 202 20 00",
+  "email": "hallo@fahrenheit.bar",
+  "servesCuisine": ["Bar", "Bistro", "Café"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Steinberggasse 65",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "302"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "14:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday"], "opens": "14:00", "closes": "00:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "14:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "22:00" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/fahrenheit.bar/",
+    "https://www.facebook.com/fahrenheit.bar/"
+  ]
+}
+</script>
+<style>
+  /* ============================= TOKENS ============================= */
+  :root{
+    --bg:#170d0c;
+    --surface:#241512;
+    --fg:#f7ede6;
+    --muted:#c7ab9c;
+    --brand:#c41e3a;
+    --accent:#ffffff;
+
+    /* temperature-gradient stops — early evening (dusk) through to closing (ember) */
+    --dusk:#ffb15c;
+    --ember:#c41e3a;
+    --midnight:#2a0d12;
+
+    --serif:'Fraunces', Georgia, serif;
+    --mono:'Space Mono', ui-monospace, monospace;
+    --sans:'Inter', system-ui, sans-serif;
+
+    --line: rgba(247,237,230,0.14);
+    --radius: 18px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:var(--sans);
+    font-size:clamp(15px, 0.95vw + 12px, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:var(--serif); font-weight:600; margin:0 0 .4em; letter-spacing:-0.01em;}
+
+  .wrap{ max-width:1180px; margin:0 auto; padding-inline: clamp(20px, 5vw, 64px);}
+
+  /* degree-mark motif: recurring ruler of ticks used as dividers */
+  .degree-rule{
+    display:flex; align-items:center; gap:6px; color:var(--muted);
+    font-family:var(--mono); font-size:.8rem; letter-spacing:.08em; margin: 0 0 22px;
+  }
+  .degree-rule::before, .degree-rule::after{
+    content:""; flex:1; height:1px;
+    background: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 14px);
+  }
+
+  .eyebrow{
+    font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+    font-size:.72rem; color:var(--dusk); margin:0 0 .9em; display:flex; align-items:center; gap:.5em;
+  }
+  .eyebrow::before{content:"°"; font-size:1.1em;}
+
+  :focus-visible{ outline: 2px solid var(--dusk); outline-offset: 3px; border-radius: 4px; }
+
+  /* ============================= HEADER ============================= */
+  header{
+    position:sticky; top:0; z-index:50;
+    background: rgba(23,13,12,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block: 14px;
+  }
+  .brand-mark{ display:flex; align-items:center; gap:.65em; text-decoration:none;}
+  .brand-mark img{ width:34px; height:34px; border-radius:50%; border:1px solid var(--line);}
+  .brand-mark .word{ font-family:var(--serif); font-weight:700; font-size:1.25rem; letter-spacing:-0.01em;}
+  .brand-mark .word sup{ font-family:var(--mono); font-size:.5em; color:var(--dusk); font-weight:400;}
+
+  nav ul{ list-style:none; display:flex; gap: clamp(14px,2vw,28px); margin:0; padding:0; }
+  nav a{ text-decoration:none; font-size:.88rem; color:var(--muted); transition:color .2s;}
+  nav a:hover{ color:var(--fg);}
+  .nav-links{ display:flex; align-items:center; gap: clamp(14px,2vw,28px);}
+  .call-pill{
+    font-family:var(--mono); font-size:.78rem; text-decoration:none;
+    color:var(--bg); background:var(--accent); padding:.55em 1em; border-radius:999px;
+    white-space:nowrap;
+  }
+  .menu-toggle{ display:none; background:none; border:1px solid var(--line); color:var(--fg); width:42px; height:42px; border-radius:10px; font-size:1.1rem;}
+
+  @media (max-width: 780px){
+    .nav-links ul{ display:none; }
+    .menu-toggle{ display:block; }
+    .call-pill{ padding:.5em .85em; font-size:.72rem;}
+  }
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative; overflow:hidden;
+    padding-block: clamp(64px, 10vw, 120px) clamp(48px, 8vw, 90px);
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(255,177,92,0.16), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 0%, rgba(196,30,58,0.22), transparent 55%),
+      var(--bg);
+  }
+  .hero .ticks{
+    position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image: repeating-linear-gradient(180deg, var(--line) 0 1px, transparent 1px 64px);
+    mask-image: linear-gradient(180deg, black, transparent 85%);
+  }
+  .hero-grid{
+    position:relative; display:grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px,5vw,60px);
+    align-items:end;
+  }
+  .hero h1{
+    font-size: clamp(2.6rem, 6.2vw, 5.4rem);
+    line-height: 0.98;
+    margin-bottom:.3em;
+  }
+  .hero h1 em{ font-style:normal; color:transparent; -webkit-background-clip:text; background-clip:text;
+    background-image: linear-gradient(100deg, var(--dusk), var(--brand) 60%);
+  }
+  .hero .tagline{ font-size: clamp(1rem, 1.4vw, 1.2rem); color:var(--muted); max-width:34ch; }
+  .hero .rating{
+    margin-top:1.6em; display:flex; align-items:center; gap:.7em; font-family:var(--mono); font-size:.85rem; color:var(--muted);
+  }
+  .hero .rating strong{ color:var(--fg); font-size:1.05rem;}
+  .stars{ color:var(--dusk); letter-spacing:2px;}
+
+  .hero-status{
+    background: linear-gradient(160deg, rgba(255,177,92,0.1), rgba(36,21,18,0.9));
+    border:1px solid var(--line); border-radius:var(--radius);
+    padding: clamp(20px,2.6vw,28px);
+    backdrop-filter: blur(4px);
+  }
+  .hero-status .clock{
+    font-family:var(--mono); font-size:clamp(2.1rem,4vw,2.7rem); font-weight:700; letter-spacing:.02em;
+  }
+  .hero-status .status-line{ display:flex; align-items:center; gap:.6em; margin:.5em 0 .9em; font-size:.95rem;}
+  .dot{ width:10px; height:10px; border-radius:50%; background:#5bd66a; box-shadow:0 0 0 4px rgba(91,214,106,.18); flex-shrink:0;}
+  .dot.closed{ background:#8b98a8; box-shadow:0 0 0 4px rgba(139,152,168,.18);}
+  .hero-status .sub{ color:var(--muted); font-size:.85rem; line-height:1.5;}
+  .hero-status a.btn{
+    margin-top:1.2em; display:inline-flex; align-items:center; gap:.5em;
+    background:var(--brand); color:var(--accent); text-decoration:none;
+    padding:.8em 1.3em; border-radius:999px; font-size:.88rem; font-weight:600;
+  }
+
+  /* ============================= REVEAL ============================= */
+  .reveal{ opacity:0; transform:translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none;} }
+
+  section{ padding-block: clamp(56px, 8vw, 100px); }
+  .section-head{ max-width:56ch; margin-bottom: clamp(28px,4vw,48px);}
+  .section-head h2{ font-size:clamp(1.9rem, 3.4vw, 2.7rem); }
+  .section-head p{ color:var(--muted); font-size:1rem; }
+
+  /* ============================= SIGNATURE: THERMOMETER ============================= */
+  .thermo-section{ background:var(--surface); border-block:1px solid var(--line); }
+  .thermo-layout{ display:grid; grid-template-columns: 220px 1fr; gap: clamp(28px,5vw,64px); align-items:center;}
+  @media (max-width: 820px){ .thermo-layout{ grid-template-columns:1fr; } }
+
+  .thermo{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .thermo-tube{
+    position:relative; width:34px; height:280px; border-radius:20px;
+    background: repeating-linear-gradient(180deg, rgba(247,237,230,0.06) 0 1px, transparent 1px 20px), rgba(255,255,255,0.03);
+    border:1px solid var(--line); overflow:hidden;
+  }
+  .thermo-fill{
+    position:absolute; left:0; right:0; bottom:0; height:35%;
+    background: linear-gradient(180deg, var(--dusk), var(--ember) 65%, var(--midnight));
+    transition: height 1s ease;
+  }
+  .thermo-bulb{
+    width:58px; height:58px; border-radius:50%; margin-top:-6px;
+    background: radial-gradient(circle at 32% 30%, var(--dusk), var(--ember) 60%, var(--midnight));
+    border:1px solid var(--line);
+  }
+  .thermo-caption{ font-family:var(--mono); font-size:.72rem; color:var(--muted); text-align:center; letter-spacing:.06em;}
+
+  .thermo-readout .big{
+    font-family:var(--mono); font-weight:700; line-height:1;
+    font-size:clamp(2.4rem, 5vw, 4rem);
+  }
+  .thermo-readout .big .unit{ font-size:.4em; color:var(--dusk); vertical-align:top;}
+  .thermo-readout .label{ font-size:1.05rem; color:var(--fg); margin:.4em 0 .2em; }
+  .thermo-readout .meta{ font-family:var(--mono); color:var(--muted); font-size:.85rem; }
+  .today-bar{
+    margin-top:1.6em; height:10px; border-radius:999px; background:rgba(255,255,255,0.06);
+    position:relative; overflow:hidden; border:1px solid var(--line);
+  }
+  .today-bar .fill{ height:100%; background:linear-gradient(90deg, var(--dusk), var(--brand)); width:0%; transition:width 1s ease;}
+  .today-bar .marks{ position:absolute; inset:0; display:flex; justify-content:space-between; padding-inline:2px;}
+  .today-bar .marks span{ width:1px; background:rgba(0,0,0,.25);}
+  .today-labels{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:.7rem; color:var(--muted); margin-top:.5em;}
+
+  /* ============================= NIGHT TIMELINE (opening hours centrepiece) ============================= */
+  .timeline-section .section-head{ max-width:64ch; }
+  .axis{
+    display:grid; grid-template-columns: 92px 1fr; gap:0 12px; font-family:var(--mono); font-size:.68rem; color:var(--muted);
+    margin-bottom:6px;
+  }
+  .axis .spacer{}
+  .axis .ticks-row{ position:relative; height:20px; }
+  .axis .ticks-row span{ position:absolute; top:0; transform:translateX(-50%); }
+
+  .day-row{
+    display:grid; grid-template-columns: 92px 1fr; gap:0 12px; align-items:center;
+    padding-block:9px; border-top:1px solid var(--line);
+  }
+  .day-row:last-child{ border-bottom:1px solid var(--line); }
+  .day-row .day-label{ font-family:var(--mono); font-size:.82rem; color:var(--muted); }
+  .day-row.is-today .day-label{ color:var(--fg); font-weight:700; }
+  .day-track{ position:relative; height:26px; background:rgba(255,255,255,0.03); border-radius:8px; }
+  .day-bar{
+    position:absolute; top:2px; bottom:2px; border-radius:6px;
+    background: linear-gradient(90deg, var(--dusk), var(--brand));
+    display:flex; align-items:center; padding-inline:10px;
+    font-family:var(--mono); font-size:.68rem; color:var(--bg); font-weight:700; white-space:nowrap; overflow:hidden;
+  }
+  .day-row.is-today .day-bar{ box-shadow: 0 0 0 2px var(--accent); }
+  .now-dot{
+    position:absolute; top:-6px; width:12px; height:12px; border-radius:50%; background:var(--accent);
+    box-shadow:0 0 0 4px rgba(255,255,255,0.18); transform:translateX(-50%);
+  }
+  @media (max-width: 620px){
+    .axis, .day-row{ grid-template-columns: 60px 1fr; }
+    .axis .spacer, .day-row .day-label{ font-size:.66rem;}
+  }
+
+  /* ============================= ABOUT / USPS ============================= */
+  .about-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,5vw,72px); align-items:start;}
+  @media (max-width: 820px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid .lede{ font-size:clamp(1.05rem,1.6vw,1.25rem); }
+  .usp-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0;}
+  .usp-list li{
+    display:grid; grid-template-columns: 48px 1fr; gap:16px; padding-block:16px; border-top:1px solid var(--line);
+  }
+  .usp-list li:last-child{ border-bottom:1px solid var(--line); }
+  .usp-list .num{ font-family:var(--mono); color:var(--dusk); font-size:.95rem; }
+  .usp-list p{ margin:0; color:var(--fg); }
+
+  /* ============================= MENU (day-parts) ============================= */
+  .menu-section{ background:var(--surface); border-block:1px solid var(--line); }
+  .menu-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap: clamp(18px,3vw,26px); }
+  @media (max-width: 900px){ .menu-grid{ grid-template-columns:1fr; } }
+  .menu-card{
+    background: var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+    padding: clamp(22px,3vw,30px); display:flex; flex-direction:column; gap:.8em; min-height:220px;
+  }
+  .menu-card .icon{ width:40px; height:40px; border-radius:10px; object-fit:contain; background:rgba(255,255,255,0.04); padding:6px;}
+  .menu-card h3{ font-size:1.2rem; margin:0;}
+  .menu-card .name{ font-weight:600; }
+  .menu-card .desc{ color:var(--muted); font-size:.92rem; line-height:1.55; }
+  .menu-note{ margin-top: clamp(24px,3vw,32px); font-size:.88rem; color:var(--muted); }
+  .menu-note a{ color:var(--dusk); text-decoration:underline; text-underline-offset:3px; }
+
+  /* ============================= LOCATION / CONTACT ============================= */
+  .contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: clamp(24px,4vw,56px); align-items:start;}
+  @media (max-width: 900px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-card{ display:flex; flex-direction:column; gap:1.2em; }
+  .fact-row{ display:flex; gap:14px; align-items:flex-start; }
+  .fact-row .icon-badge{
+    width:38px; height:38px; border-radius:50%; background:rgba(196,30,58,0.16);
+    color:var(--dusk); display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:.85rem; flex-shrink:0; border:1px solid var(--line);
+  }
+  .fact-row a{ text-decoration:none; }
+  .fact-row a:hover{ text-decoration:underline; }
+  .fact-row .k{ font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:.15em;}
+  .fact-row .v{ font-size:1.02rem; }
+  .socials{ display:flex; gap:12px; margin-top:.4em; }
+  .socials a{
+    border:1px solid var(--line); border-radius:999px; padding:.5em 1.1em; text-decoration:none; font-size:.85rem; color:var(--fg);
+  }
+  .socials a:hover{ border-color:var(--dusk); color:var(--dusk); }
+  .map-frame{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3.4; }
+  .map-frame iframe{ width:100%; height:100%; border:0; filter:grayscale(0.25) contrast(1.05); }
+
+  /* ============================= FOOTER ============================= */
+  footer{ background:var(--midnight); border-top:1px solid var(--line); padding-block: 48px 110px; }
+  .footer-grid{ display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap: clamp(24px,4vw,48px); }
+  @media (max-width: 780px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width: 520px){ .footer-grid{ grid-template-columns:1fr; } }
+  footer h4{ font-family:var(--mono); text-transform:uppercase; letter-spacing:.1em; font-size:.72rem; color:var(--muted); margin:0 0 1em;}
+  .foot-hours{ list-style:none; margin:0; padding:0; font-family:var(--mono); font-size:.82rem; display:flex; flex-direction:column; gap:.4em; }
+  .foot-hours li{ display:flex; justify-content:space-between; gap:1em; color:var(--fg); }
+  .foot-hours li span:first-child{ color:var(--muted); }
+  .foot-legal{ margin-top:40px; padding-top:20px; border-top:1px solid var(--line); font-size:.78rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:.5em 1.2em; justify-content:space-between; }
+
+  /* ============================= STICKY MOBILE CALL BAR ============================= */
+  .mobile-bar{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background: rgba(23,13,12,0.94); backdrop-filter: blur(10px);
+    border-top:1px solid var(--line); padding: 12px clamp(16px,4vw,24px);
+    align-items:center; justify-content:space-between; gap:12px;
+  }
+  .mobile-bar .status-mini{ font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  .mobile-bar .status-mini strong{ color:var(--fg); }
+  .mobile-bar a.call{
+    background:var(--brand); color:var(--accent); text-decoration:none; font-weight:700;
+    padding:.75em 1.3em; border-radius:999px; font-size:.85rem; white-space:nowrap;
+  }
+  @media (max-width: 780px){
+    .mobile-bar{ display:flex; }
+    body{ padding-bottom:74px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <a class="brand-mark" href="#top">
+      <img src="https://www.fahrenheit.bar/wp-content/uploads/2022/01/F_favicon_V02_MH4-300x300.png" alt="" onerror="this.parentElement.removeChild(this)">
+      <span class="word">Fahrenheit<sup>°</sup></span>
+    </a>
+    <div class="nav-links">
+      <nav aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#jetzt">Jetzt offen</a></li>
+          <li><a href="#nacht">Öffnungszeiten</a></li>
+          <li><a href="#karte">Karte</a></li>
+          <li><a href="#haus">Über uns</a></li>
+          <li><a href="#lage">Lage</a></li>
+        </ul>
+      </nav>
+      <a class="call-pill" href="tel:+41522022000">052 202 20 00</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">☰</button>
+  </div>
+  <nav id="mobileNav" aria-label="Mobile Navigation" style="display:none; border-top:1px solid var(--line);">
+    <ul class="wrap" style="list-style:none; padding-block:14px; display:flex; flex-direction:column; gap:14px;">
+      <li><a href="#jetzt">Jetzt offen</a></li>
+      <li><a href="#nacht">Öffnungszeiten</a></li>
+      <li><a href="#karte">Karte</a></li>
+      <li><a href="#haus">Über uns</a></li>
+      <li><a href="#lage">Lage</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero">
+    <div class="ticks" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Steinberggasse 65 · Altstadt Winterthur</p>
+        <h1>Wenn andere<br><em>schliessen</em>,<br>heizen wir ein.</h1>
+        <p class="tagline">Fahrenheit ist ein gastronomisches Etablissement im Herzen von Winterthurs Altstadt — freundlicher Service, gemütliche Atmosphäre, geöffnet von früh bis spät.</p>
+        <div class="rating">
+          <span class="stars" aria-hidden="true">★★★★☆</span>
+          <span><strong>4.4</strong> / 5 auf Google</span>
+          <span>· 302 Bewertungen</span>
+        </div>
+      </div>
+      <div class="hero-status reveal" id="heroStatus">
+        <div class="clock" id="heroClock" aria-hidden="true">--:--</div>
+        <div class="status-line">
+          <span class="dot" id="heroDot"></span>
+          <span id="heroStatusText">Status wird geladen …</span>
+        </div>
+        <p class="sub" id="heroSub">Öffnungszeiten werden berechnet.</p>
+        <a class="btn" href="tel:+41522022000">Jetzt anrufen &nbsp;→</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SIGNATURE MODULE ============================= -->
+  <section class="thermo-section" id="jetzt">
+    <div class="wrap">
+      <p class="eyebrow">Signature</p>
+      <div class="section-head">
+        <h2>Wie lange noch?</h2>
+        <p>Ein Thermometer statt einer Uhr an der Wand: Es füllt sich, solange wir offen sind, und zeigt in Echtzeit, wie viel vom heutigen Abend noch bleibt — berechnet aus unseren echten Öffnungszeiten, inklusive der Nächte, die erst nach Mitternacht enden.</p>
+      </div>
+      <div class="thermo-layout">
+        <div class="thermo" aria-hidden="true">
+          <div class="thermo-tube">
+            <div class="thermo-fill" id="thermoFill"></div>
+          </div>
+          <div class="thermo-bulb"></div>
+          <p class="thermo-caption">Wärmegrad<br>des Abends</p>
+        </div>
+        <div class="thermo-readout">
+          <div class="big" id="bigReadout">–<span class="unit">Std</span></div>
+          <p class="label" id="readoutLabel">Status wird berechnet …</p>
+          <p class="meta" id="readoutMeta">—</p>
+          <div class="today-bar" aria-hidden="true">
+            <div class="fill" id="todayFill"></div>
+          </div>
+          <div class="today-labels">
+            <span id="todayOpenLabel">–</span>
+            <span id="todayCloseLabel">–</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= NIGHT TIMELINE / HOURS CENTRE ============================= -->
+  <section class="timeline-section" id="nacht">
+    <div class="wrap">
+      <p class="eyebrow">Der Wochenplan</p>
+      <div class="section-head">
+        <h2>Die Nacht im Überblick</h2>
+        <p>Jeder Balken ist ein Tag, jede Gradmarke eine Stunde. Vier Abende in der Woche laufen bis 1 Uhr weiter — samstags sind wir sogar schon ab 9 Uhr für euch da.</p>
+      </div>
+
+      <div class="axis" aria-hidden="true">
+        <span class="spacer"></span>
+        <div class="ticks-row" id="axisTicks"></div>
+      </div>
+
+      <div id="dayRows"></div>
+    </div>
+  </section>
+
+  <!-- ============================= ABOUT / USPS ============================= -->
+  <section id="haus">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">Über das Fahrenheit</p>
+        <h2>Das Altstadt-Wohnzimmer</h2>
+        <p class="lede">Fahrenheit ist ein gastronomisches Etablissement im Herzen von Winterthurs Altstadt. Das Lokal bietet freundlichen Service, eine gemütliche Atmosphäre und öffnet von früh bis spät mit Frühstück, Mittagessen und Abendessen.</p>
+      </div>
+      <ul class="usp-list">
+        <li><span class="num">01°</span><p>Gastronomische Bar im Altstadt-Herzen</p></li>
+        <li><span class="num">02°</span><p>Freundlicher Service und gemütliche Atmosphäre</p></li>
+        <li><span class="num">03°</span><p>Umfassendes Angebot: Frühstück, Lunch, Dinner</p></li>
+        <li><span class="num">04°</span><p>Lange Öffnungszeiten, besonders samstags ab 9 Uhr</p></li>
+        <li><span class="num">05°</span><p>Reservierungen Mo–Do für bis zu 6 Personen möglich</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= MENU / DAY PARTS ============================= -->
+  <section class="menu-section" id="karte">
+    <div class="wrap">
+      <p class="eyebrow">Von früh bis spät</p>
+      <div class="section-head">
+        <h2>Die Karte, nach Tageszeit</h2>
+        <p>Drei Abschnitte, ein Tag: vom Frühstück am Wochenende über wechselnde Mittags- und Abendgerichte bis zur Getränkekarte am Abend.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <img class="icon" src="https://www.fahrenheit.bar/wp-content/uploads/2022/01/illu_oeffnungszeiten-1-150x150.png" alt="" onerror="this.remove()">
+          <h3>Frühstück &amp; Brunch</h3>
+          <p class="name">Samstags ab 9 Uhr, Sonntags ab 12 Uhr</p>
+          <p class="desc">Detaillierte Menüpunkte im PDF-Menü.</p>
+        </article>
+        <article class="menu-card">
+          <img class="icon" src="https://www.fahrenheit.bar/wp-content/uploads/2022/08/illu_karte-150x150.png" alt="" onerror="this.remove()">
+          <h3>Mittags- &amp; Abendessen</h3>
+          <p class="name">Wechselnde Angebote</p>
+          <p class="desc">Gastronomisches Angebot, Details im Menü erhältlich.</p>
+        </article>
+        <article class="menu-card">
+          <img class="icon" src="https://www.fahrenheit.bar/wp-content/uploads/2022/01/illu_standort-150x150.png" alt="" onerror="this.remove()">
+          <h3>Getränke</h3>
+          <p class="name">Cocktails, Weine, Biere</p>
+          <p class="desc">Umfassende Getränkekarte.</p>
+        </article>
+      </div>
+      <p class="menu-note">Vollständige Karte als PDF: <a href="https://www.fahrenheit.bar/" target="_blank" rel="noopener">fahrenheit.bar</a>. Reservierungen Montag bis Donnerstag für bis zu 6 Personen — telefonisch unter <a href="tel:+41522022000" style="color:var(--dusk); text-decoration:underline;">052 202 20 00</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============================= LOCATION / CONTACT ============================= -->
+  <section id="lage">
+    <div class="wrap contact-grid">
+      <div class="contact-card">
+        <p class="eyebrow">Lage &amp; Kontakt</p>
+        <h2>Mitten in der Altstadt</h2>
+
+        <div class="fact-row">
+          <span class="icon-badge" aria-hidden="true">◎</span>
+          <div>
+            <p class="k">Adresse</p>
+            <p class="v"><a href="https://maps.google.com/maps?q=Fahrenheit%20Winterthur&amp;z=16" target="_blank" rel="noopener">Steinberggasse 65, 8400 Winterthur</a></p>
+          </div>
+        </div>
+        <div class="fact-row">
+          <span class="icon-badge" aria-hidden="true">☏</span>
+          <div>
+            <p class="k">Telefon</p>
+            <p class="v"><a href="tel:+41522022000">+41 52 202 20 00</a></p>
+          </div>
+        </div>
+        <div class="fact-row">
+          <span class="icon-badge" aria-hidden="true">✉</span>
+          <div>
+            <p class="k">E-Mail</p>
+            <p class="v"><a href="mailto:hallo@fahrenheit.bar">hallo@fahrenheit.bar</a></p>
+          </div>
+        </div>
+        <div class="fact-row">
+          <span class="icon-badge" aria-hidden="true">★</span>
+          <div>
+            <p class="k">Bewertung</p>
+            <p class="v">4.4 / 5 · 302 Google-Bewertungen</p>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/fahrenheit.bar/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/fahrenheit.bar/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+
+      <div class="map-frame reveal">
+        <iframe title="Karte: Fahrenheit Winterthur" src="https://maps.google.com/maps?q=Fahrenheit%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Fahrenheit</h4>
+      <p style="color:var(--muted); font-size:.92rem; max-width:32ch;">Steinberggasse 65<br>8400 Winterthur</p>
+      <div class="socials" style="margin-top:1em;">
+        <a href="https://www.instagram.com/fahrenheit.bar/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/fahrenheit.bar/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div>
+      <h4>Öffnungszeiten</h4>
+      <ul class="foot-hours">
+        <li><span>Mo</span><span>14:00–22:00</span></li>
+        <li><span>Di–Mi</span><span>14:00–00:00</span></li>
+        <li><span>Do</span><span>14:00–01:00</span></li>
+        <li><span>Fr</span><span>14:00–01:00</span></li>
+        <li><span>Sa</span><span>09:00–01:00</span></li>
+        <li><span>So</span><span>12:00–22:00</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p style="font-size:.92rem;"><a href="tel:+41522022000">+41 52 202 20 00</a></p>
+      <p style="font-size:.92rem;"><a href="mailto:hallo@fahrenheit.bar">hallo@fahrenheit.bar</a></p>
+      <p style="font-size:.92rem;"><a href="https://www.fahrenheit.bar/" target="_blank" rel="noopener">fahrenheit.bar</a></p>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span id="year"></span> Fahrenheit, Winterthur</span>
+    <span>Design-Vorschlag · unverbindliches Muster</span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <span class="status-mini" id="mobileStatus">Status wird geladen …</span>
+  <a class="call" href="tel:+41522022000">Anrufen</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- data: verbatim from fahrenheit.json ---------- */
+  // index = JS Date.getDay() → 0 Sun … 6 Sat
+  // close > 24 means "closes after midnight the following calendar day"
+  var SCHEDULE = [
+    { day:"So", full:"Sonntag",    open:12, close:22, text:"12:00–22:00" }, // 0
+    { day:"Mo", full:"Montag",     open:14, close:22, text:"14:00–22:00" }, // 1
+    { day:"Di", full:"Dienstag",   open:14, close:24, text:"14:00–00:00" }, // 2
+    { day:"Mi", full:"Mittwoch",   open:14, close:24, text:"14:00–00:00" }, // 3
+    { day:"Do", full:"Donnerstag", open:14, close:25, text:"14:00–01:00" }, // 4
+    { day:"Fr", full:"Freitag",    open:14, close:25, text:"14:00–01:00" }, // 5
+    { day:"Sa", full:"Samstag",    open:9,  close:25, text:"09:00–01:00" }  // 6
+  ];
+
+  function pad(n){ return String(n).padStart(2,"0"); }
+
+  function hoursToClock(h){
+    var mTotal = Math.round((((h % 24) + 24) % 24) * 60);
+    var hh = Math.floor(mTotal/60), mm = mTotal % 60;
+    return pad(hh) + ":" + pad(mm);
+  }
+
+  function fmtDuration(hoursFloat){
+    var totalMin = Math.max(0, Math.round(hoursFloat * 60));
+    var h = Math.floor(totalMin/60), m = totalMin % 60;
+    if(h <= 0) return m + " Min";
+    return h + " Std " + (m>0? m + " Min" : "");
+  }
+
+  /* Determine live status: open now / closes at X / opens next at X */
+  function computeStatus(now){
+    var day = now.getDay();
+    var nowH = now.getHours() + now.getMinutes()/60 + now.getSeconds()/3600;
+    var today = SCHEDULE[day];
+    var yesterday = SCHEDULE[(day + 6) % 7];
+
+    // 1) still inside yesterday's overnight session (e.g. 00:30 on a day that follows a "closes 01:00" night)
+    if(yesterday.close > 24){
+      var wrapClose = yesterday.close - 24;
+      if(nowH < wrapClose){
+        return {
+          open:true,
+          schedule: yesterday,
+          openedAt: yesterday.open - 24, // negative = started "yesterday" on our nowH timeline
+          closesAt: wrapClose,
+          nowH: nowH
+        };
+      }
+    }
+
+    // 2) inside today's own session
+    if(nowH >= today.open && nowH < today.close){
+      return { open:true, schedule: today, openedAt: today.open, closesAt: today.close, nowH: nowH };
+    }
+
+    // 3) closed — find the next opening
+    if(nowH < today.open){
+      return { open:false, next: today, opensAt: today.open, nowH: nowH, waitH: today.open - nowH };
+    }
+    var tomorrow = SCHEDULE[(day + 1) % 7];
+    return { open:false, next: tomorrow, opensAt: tomorrow.open + 24, nowH: nowH, waitH: (tomorrow.open + 24) - nowH };
+  }
+
+  function render(){
+    var now = new Date();
+    var st = computeStatus(now);
+    var clockStr = pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
+
+    var heroClock = document.getElementById("heroClock");
+    if(heroClock) heroClock.textContent = clockStr;
+
+    var dot = document.getElementById("heroDot");
+    var statusText = document.getElementById("heroStatusText");
+    var sub = document.getElementById("heroSub");
+    var mobile = document.getElementById("mobileStatus");
+    var bigReadout = document.getElementById("bigReadout");
+    var readoutLabel = document.getElementById("readoutLabel");
+    var readoutMeta = document.getElementById("readoutMeta");
+    var thermoFill = document.getElementById("thermoFill");
+    var todayFill = document.getElementById("todayFill");
+    var openLbl = document.getElementById("todayOpenLabel");
+    var closeLbl = document.getElementById("todayCloseLabel");
+
+    if(st.open){
+      var remaining = st.closesAt - st.nowH;
+      var span = st.closesAt - st.openedAt;
+      var progress = span > 0 ? Math.min(1, Math.max(0, (st.nowH - st.openedAt) / span)) : 0;
+      var closeClockStr = hoursToClock(st.closesAt);
+
+      if(dot) dot.classList.remove("closed");
+      if(statusText) statusText.textContent = "Jetzt geöffnet";
+      if(sub) sub.textContent = "Noch " + fmtDuration(remaining) + " offen — heute bis " + closeClockStr + " Uhr.";
+      if(mobile) mobile.innerHTML = "<strong>Offen</strong> · noch " + fmtDuration(remaining);
+
+      if(bigReadout) bigReadout.innerHTML = fmtDuration(remaining).replace(/ (Std|Min)/g,'<span class="unit"> $1</span>');
+      if(readoutLabel) readoutLabel.textContent = "bis wir heute schliessen — um " + closeClockStr + " Uhr";
+      if(readoutMeta) readoutMeta.textContent = st.schedule.day + " · " + st.schedule.text + " geöffnet";
+      if(thermoFill) thermoFill.style.height = (12 + progress*88) + "%";
+      if(todayFill) todayFill.style.width = (progress*100) + "%";
+      if(openLbl) openLbl.textContent = hoursToClock(st.openedAt) + " geöffnet";
+      if(closeLbl) closeLbl.textContent = closeClockStr + " zu";
+    } else {
+      var opensClockStr = hoursToClock(st.opensAt);
+      if(dot) dot.classList.add("closed");
+      if(statusText) statusText.textContent = "Gerade geschlossen";
+      if(sub) sub.textContent = "Wir öffnen wieder in " + fmtDuration(st.waitH) + " — " + st.next.day + " um " + opensClockStr + " Uhr.";
+      if(mobile) mobile.innerHTML = "<strong>Geschlossen</strong> · öffnet " + st.next.day + " " + opensClockStr;
+
+      if(bigReadout) bigReadout.innerHTML = fmtDuration(st.waitH).replace(/ (Std|Min)/g,'<span class="unit"> $1</span>');
+      if(readoutLabel) readoutLabel.textContent = "bis wir wieder öffnen — " + st.next.full + ", " + opensClockStr + " Uhr";
+      if(readoutMeta) readoutMeta.textContent = st.next.day + " · " + st.next.text + " geöffnet";
+      if(thermoFill) thermoFill.style.height = "6%";
+      if(todayFill) todayFill.style.width = "0%";
+      if(openLbl) openLbl.textContent = st.next.day + " " + hoursToClock(st.next.open);
+      if(closeLbl) closeLbl.textContent = hoursToClock(st.next.close);
+    }
+  }
+
+  render();
+  setInterval(render, 1000);
+
+  /* ---------- night timeline (week overview) ---------- */
+  var AXIS_MIN = 9, AXIS_MAX = 25.5; // 09:00 → 01:30, shared scale for every day
+  var WEEK_ROWS = [
+    SCHEDULE[1], SCHEDULE[2], SCHEDULE[3], SCHEDULE[4], SCHEDULE[5], SCHEDULE[6], SCHEDULE[0]
+  ]; // Mo … So order for display
+
+  function buildTicks(){
+    var el = document.getElementById("axisTicks");
+    if(!el) return;
+    var hrs = [9,12,15,18,21,24,25];
+    hrs.forEach(function(h){
+      var pct = (h - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100;
+      var span = document.createElement("span");
+      span.style.left = pct + "%";
+      span.textContent = pad(Math.floor(h % 24)) + "°";
+      el.appendChild(span);
+    });
+  }
+
+  function buildRows(){
+    var host = document.getElementById("dayRows");
+    if(!host) return;
+    var todayIdx = new Date().getDay();
+
+    // merge consecutive identical schedules (Di–Mi) for display, but keep JSON wording verbatim
+    var displayRows = [
+      { label:"Mo", full:"Montag", sched: SCHEDULE[1] },
+      { label:"Di–Mi", full:"Dienstag – Mittwoch", sched: SCHEDULE[2] },
+      { label:"Do", full:"Donnerstag", sched: SCHEDULE[4] },
+      { label:"Fr", full:"Freitag", sched: SCHEDULE[5] },
+      { label:"Sa", full:"Samstag", sched: SCHEDULE[6] },
+      { label:"So", full:"Sonntag", sched: SCHEDULE[0] }
+    ];
+    var todayLabelMap = {0:"So",1:"Mo",2:"Di–Mi",3:"Di–Mi",4:"Do",5:"Fr",6:"Sa"};
+    var todayLabel = todayLabelMap[todayIdx];
+
+    displayRows.forEach(function(row){
+      var s = row.sched;
+      var left = (s.open - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100;
+      var width = (s.close - s.open) / (AXIS_MAX - AXIS_MIN) * 100;
+      var isToday = row.label === todayLabel;
+
+      var rowEl = document.createElement("div");
+      rowEl.className = "day-row" + (isToday ? " is-today" : "");
+
+      var labelEl = document.createElement("div");
+      labelEl.className = "day-label";
+      labelEl.textContent = row.label;
+
+      var track = document.createElement("div");
+      track.className = "day-track";
+
+      var bar = document.createElement("div");
+      bar.className = "day-bar";
+      bar.style.left = left + "%";
+      bar.style.width = width + "%";
+      bar.textContent = s.text;
+      track.appendChild(bar);
+
+      if(isToday){
+        var now = new Date();
+        var nowH = now.getHours() + now.getMinutes()/60;
+        var nowPos = nowH;
+        // if we're in the small hours after midnight, place on the 24–25.5 tail of this row
+        if(nowH < AXIS_MIN) nowPos = nowH + 24;
+        if(nowPos >= AXIS_MIN && nowPos <= AXIS_MAX){
+          var dotPct = (nowPos - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100;
+          var dotEl = document.createElement("div");
+          dotEl.className = "now-dot";
+          dotEl.style.left = dotPct + "%";
+          dotEl.title = "Jetzt";
+          track.appendChild(dotEl);
+        }
+      }
+
+      rowEl.appendChild(labelEl);
+      rowEl.appendChild(track);
+      host.appendChild(rowEl);
+    });
+  }
+
+  buildTicks();
+  buildRows();
+
+  /* ---------- mobile nav toggle ---------- */
+  var toggle = document.getElementById("menuToggle");
+  var mobileNav = document.getElementById("mobileNav");
+  if(toggle && mobileNav){
+    toggle.addEventListener("click", function(){
+      var isOpen = mobileNav.style.display === "block";
+      mobileNav.style.display = isOpen ? "none" : "block";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      toggle.textContent = isOpen ? "☰" : "✕";
+    });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealEls = document.querySelectorAll(".reveal");
+  if(reduceMotion || !("IntersectionObserver" in window)){
+    revealEls.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- footer year ---------- */
+  var yearEl = document.getElementById("year");
+  if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+})();
+</script>
+
+</body>
+</html>

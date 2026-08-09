@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Modo Mio — Pinseria Winterthur</title>
+<meta name="description" content="A Modo Mio, General-Guisan-Strasse 1, 8400 Winterthur: handwerklich gefertigte Pinse, Mitnahme, Lieferung und Vor-Ort-Essen. 4.8 von 5 Sternen bei 149 Google-Bewertungen. Tel. +41 52 202 02 00.">
+<meta property="og:title" content="A Modo Mio, Winterthur">
+<meta property="og:description" content="Die beste italienische Pinseria — handwerklich gefertigte Pinse, auf Ihre Art: vor Ort, zum Mitnehmen oder geliefert.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amodomio.ch/">
+<meta property="og:image" content="https://amodomio.ch/wp-content/uploads/2022/01/logo-a-modo-mio.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "A Modo Mio",
+  "url": "https://amodomio.ch/",
+  "image": "https://amodomio.ch/wp-content/uploads/2022/01/logo-a-modo-mio.png",
+  "telephone": "+41 52 202 02 00",
+  "email": "infowinterthur@amodomio.ch",
+  "servesCuisine": ["Italian","Pinseria"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "General-Guisan-Strasse 1",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "149"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#f7f5f0;
+    --surface:#ffffff;
+    --fg:#201f1c;
+    --muted:#57544c;
+    --brand:#e8001a;
+    --accent:#2f6f4f;
+    --line: rgba(32,31,28,0.13);
+    --maxw:1160px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Manrope', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.75vw + 12.8px, 17px);
+    line-height:1.66;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Bodoni Moda', ui-serif, Georgia, serif; font-weight:700; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); position:relative; z-index:1; }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  ::selection{ background:var(--brand); color:#fff; }
+  section[id]{ scroll-margin-top:5.6rem; }
+  .eyebrow{ font-weight:800; text-transform:uppercase; letter-spacing:0.15em; font-size:0.7rem; color:var(--brand); }
+  .skip-link{ position:absolute; left:0.6rem; top:-3rem; z-index:100; background:var(--fg); color:#fff; padding:0.6rem 1rem; font-weight:700; text-decoration:none; transition:top .2s ease; }
+  .skip-link:focus{ top:0.6rem; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(247,245,240,0.94); backdrop-filter:blur(6px); padding:0.85rem 0; border-bottom:2px solid var(--brand); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  .logo img{ height:2.1rem; width:auto; }
+  .logo-fallback{ font-family:'Bodoni Moda',serif; font-weight:800; font-size:1.2rem; }
+  nav.pill-nav{ display:flex; gap:0.15rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:700; font-size:0.78rem; padding:0.5rem 0.8rem; border-radius:2px; }
+  nav.pill-nav a:hover{ color:var(--brand); }
+  .navtoggle{ display:none; background:var(--fg); color:#fff; border:none; padding:0.5rem 1rem; font-weight:700; cursor:pointer; }
+
+  /* HERO — type-led, tilted headline treatment */
+  .hero{ padding:clamp(3rem,8vw,5.4rem) 0 clamp(2.4rem,6vw,3.6rem); position:relative; overflow:hidden; }
+  .hero .stamp{ position:absolute; top:1.5rem; right:clamp(0.5rem,4vw,2rem); width:clamp(64px,9vw,110px); opacity:0.9; transform:rotate(8deg); }
+  .hero h1{ font-size:clamp(2.6rem,7.4vw,5rem); line-height:0.98; max-width:14ch; }
+  .hero h1 .tilt{ display:inline-block; transform:rotate(-3deg); color:var(--brand); }
+  .hero .sub{ font-size:clamp(1.02rem,1.7vw,1.25rem); color:var(--muted); font-weight:600; max-width:52ch; margin-top:1.3rem; }
+  .cta-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.7rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:800; text-decoration:none; padding:0.85rem 1.5rem; border:2px solid var(--fg); }
+  .btn.solid{ background:var(--fg); color:#fff; }
+  .btn.brand{ background:var(--brand); color:#fff; border-color:var(--brand); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.4rem; background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:0.5rem 1.05rem; font-weight:800; font-size:0.85rem; margin-top:1.5rem; }
+  .rating-chip b{ font-family:'Bodoni Moda',serif; font-size:1.15rem; color:var(--brand); }
+  .fact-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem; margin-top:clamp(1.6rem,4vw,2.4rem); max-width:640px; }
+  .fact-card{ background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--brand); padding:1rem 1.1rem; }
+  .fact-card .k{ display:block; font-size:0.66rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; color:var(--accent); margin-bottom:0.3rem; }
+  .fact-card .v{ font-weight:800; font-size:0.9rem; }
+
+  /* ---------- STEPPED / TILTED SECTION RHYTHM ---------- */
+  .step-section{ position:relative; padding:clamp(3.2rem,8vw,5.5rem) 0; }
+  .step-section .step-bg{ position:absolute; inset:0; z-index:0; }
+  .step-section.tilt-a .step-bg{ clip-path:polygon(0 4.5%, 100% 0%, 100% 95.5%, 0 100%); }
+  .step-section.tilt-b .step-bg{ clip-path:polygon(0 0%, 100% 4.5%, 100% 100%, 0 95.5%); }
+  .step-section.cream .step-bg{ background:var(--surface); }
+  .step-section.ink .step-bg{ background:var(--fg); }
+  .step-section.ink{ color:#f7f5f0; }
+  .step-section.ink .muted-on-ink{ color:#c9c6bd; }
+  .step-section.ink h2{ color:#fff; }
+  .section-head{ margin-bottom:clamp(1.6rem,3.5vw,2.3rem); max-width:64ch; }
+  .section-head h2{ font-size:clamp(1.7rem,3.6vw,2.6rem); }
+  .section-head p{ color:var(--muted); font-weight:600; margin-top:0.6rem; }
+  .step-section.ink .section-head p{ color:#c9c6bd; }
+
+  .craft-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(1.8rem,4vw,3.2rem); align-items:center; }
+  .craft-grid p{ max-width:56ch; font-weight:600; }
+  .usp-list{ list-style:none; margin:1.2rem 0 0; padding:0; display:grid; gap:0.7rem; }
+  .usp-list li{ display:flex; gap:0.6rem; align-items:baseline; font-weight:700; }
+  .usp-list li::before{ content:"—"; color:var(--brand); flex:none; }
+  .paddle{ width:100%; max-width:280px; height:200px; margin:0 auto; position:relative; }
+  .paddle .handle{ position:absolute; left:50%; bottom:0; width:16px; height:120px; background:var(--brand); transform:translateX(-50%); border-radius:8px; }
+  .paddle .head{ position:absolute; left:50%; top:0; width:220px; height:130px; background:var(--surface); border:3px solid var(--fg); border-radius:50%/60% 60% 40% 40%; transform:translateX(-50%) rotate(-4deg); box-shadow:0 14px 24px -16px rgba(0,0,0,0.4); }
+
+  /* ---------- SIGNATURE MODULE: "Auf Ihre Art" configurator ---------- */
+  .config{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:clamp(1.6rem,4vw,3rem); align-items:start; }
+  .config-tabs{ display:flex; flex-direction:column; gap:0.7rem; }
+  .config-tab{ text-align:left; background:rgba(255,255,255,0.06); border:2px solid rgba(255,255,255,0.2); color:inherit; padding:1rem 1.2rem; font-weight:800; font-size:1rem; cursor:pointer; font-family:'Manrope',sans-serif; transition:transform .2s ease, border-color .2s ease; }
+  .config-tab .deg{ display:block; font-size:0.72rem; font-weight:700; opacity:0.65; margin-top:0.2rem; text-transform:uppercase; letter-spacing:0.06em; }
+  .config-tab:hover{ border-color:var(--brand); }
+  .config-tab.active{ background:var(--brand); border-color:var(--brand); transform:translateX(6px); }
+  @media (prefers-reduced-motion: reduce){ .config-tab.active{ transform:none; } }
+  .config-panel{ background:rgba(255,255,255,0.06); border:2px solid rgba(255,255,255,0.2); padding:clamp(1.6rem,3.5vw,2.2rem); min-height:200px; display:flex; flex-direction:column; justify-content:center; gap:0.9rem; }
+  .config-panel h3{ font-size:clamp(1.3rem,2.8vw,1.7rem); color:#fff; }
+  .config-panel p{ margin:0; font-weight:600; max-width:44ch; color:#e7e5df; }
+  .paddle-mini{ width:70px; height:50px; position:relative; transition:transform .4s ease; margin-bottom:0.4rem; }
+  @media (prefers-reduced-motion: reduce){ .paddle-mini{ transition:none; } }
+  .paddle-mini .h{ position:absolute; inset:0; border:3px solid var(--brand); border-radius:50%/60% 60% 40% 40%; }
+
+  .usp-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1.1rem; }
+  .usp-card{ background:var(--surface); border:1px solid var(--line); padding:1.5rem; transition:transform .25s ease; }
+  .usp-card:nth-child(2){ transform:translateY(1rem); }
+  .usp-card:nth-child(3){ transform:translateY(2rem); }
+  .usp-card:nth-child(4){ transform:translateY(3rem); }
+  @media (prefers-reduced-motion: reduce){ .usp-card{ transform:none !important; } }
+  @media (max-width:760px){ .usp-card{ transform:none !important; } }
+  .usp-card .num{ font-family:'Bodoni Moda',serif; font-size:1.6rem; color:var(--brand); }
+  .usp-card h3{ font-size:1.05rem; margin-top:0.5rem; font-family:'Manrope',sans-serif; font-weight:800; }
+  .usp-card p{ margin:0.5rem 0 0; font-size:0.88rem; color:var(--muted); font-weight:600; }
+
+  .standorte-row{ display:flex; gap:1rem; flex-wrap:wrap; }
+  .standort-chip{ background:var(--surface); border:1px solid var(--line); padding:0.6rem 1.1rem; font-weight:800; font-size:0.88rem; }
+  .standort-chip.active{ border-color:var(--brand); color:var(--brand); }
+
+  /* ---------- Reviews ---------- */
+  .review-strip{ display:flex; align-items:center; gap:clamp(1.2rem,3vw,2rem); background:var(--fg); color:#fff; padding:clamp(1.6rem,4vw,2.6rem); flex-wrap:wrap; }
+  .review-strip .stars{ font-size:clamp(2rem,4.6vw,2.8rem); font-family:'Bodoni Moda',serif; color:var(--brand); }
+  .review-strip p{ margin:0; font-weight:700; max-width:42ch; }
+
+  /* ---------- Contact ---------- */
+  section.plain{ padding:clamp(2.4rem,5vw,3.8rem) 0; }
+  .contact-wrap{ display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .contact-card{ background:var(--surface); border:1px solid var(--line); padding:clamp(1.4rem,3vw,2rem); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .contact-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .contact-card .row span.k{ font-size:0.66rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; color:var(--accent); }
+  .contact-card a{ text-decoration:none; font-weight:800; }
+  .contact-card a:hover{ color:var(--brand); }
+  .honest-note{ font-size:0.85rem; font-weight:600; color:var(--muted); background:var(--bg); border:1px dashed var(--line); padding:0.7rem 0.9rem; }
+  .mapwrap{ border:1px solid var(--line); overflow:hidden; }
+  .mapwrap iframe{ width:100%; height:100%; min-height:280px; border:0; display:block; }
+
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:#f7f5f0; }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:700; font-size:0.88rem; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.75; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--brand); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.85rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:800; font-family:'Bodoni Moda',serif; font-size:1rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.2rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:860px){
+    .craft-grid{ grid-template-columns:1fr; }
+    .craft-grid .paddle{ order:-1; }
+    .config{ grid-template-columns:1fr; }
+    .contact-wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width:640px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.8rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+  }
+  @media (max-width:560px){ .fact-strip{ grid-template-columns:1fr; } }
+  @media (max-width:400px){ .hero h1{ font-size:2.2rem; } }
+  @media (max-width:360px){
+    .navrow{ gap:0.5rem; }
+    .rating-chip{ font-size:0.78rem; padding:0.4rem 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top">
+      <img src="https://amodomio.ch/wp-content/uploads/2022/01/logo-a-modo-mio.png" alt="A Modo Mio Logo" height="34"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span class="logo-fallback" style="display:none;">A Modo Mio</span>
+    </a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#pinsa">Die Pinsa</a>
+      <a href="#auf-ihre-art">Auf Ihre Art</a>
+      <a href="#warum">Warum wir</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO — type-led, no photo grid -->
+  <section class="hero">
+    <img class="stamp" src="https://amodomio.ch/wp-content/uploads/2022/03/cropped-icon-270x270.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+    <div class="wrap">
+      <p class="eyebrow reveal">Pinseria · Winterthur</p>
+      <h1 class="reveal">A Modo <span class="tilt">Mio</span></h1>
+      <p class="sub reveal">Die beste italienische Pinseria. Handwerklich gefertigte Pinse mit
+      Sorgfalt und Geschick — verfügbar für Mitnahme, Lieferung und Vor-Ort-Essen.</p>
+      <div class="cta-row reveal">
+        <a class="btn brand" href="tel:+41522020200">Anrufen</a>
+        <a class="btn ghost" href="#auf-ihre-art">Auf Ihre Art bestellen ↓</a>
+      </div>
+      <div class="rating-chip reveal"><b>4.8</b>&nbsp;/ 5 · 149 Google-Bewertungen</div>
+      <div class="fact-strip reveal">
+        <div class="fact-card"><span class="k">Adresse</span><span class="v">General-Guisan-Strasse 1</span></div>
+        <div class="fact-card"><span class="k">Telefon</span><span class="v">+41 52 202 02 00</span></div>
+        <div class="fact-card"><span class="k">Küche</span><span class="v">Italian, Pinseria</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 1: Die Pinsa -->
+  <section class="step-section cream tilt-a" id="pinsa">
+    <div class="step-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="craft-grid">
+        <div>
+          <p class="eyebrow reveal">Handwerk</p>
+          <h2 class="reveal" style="margin-top:0.5rem;">Handwerklich gefertigte Pinse</h2>
+          <p class="reveal" style="margin-top:1rem;">A Modo Mio ist die beste italienische
+          Pinseria — essen Sie direkt bei sich zu Hause. Jede Pinsa wird mit Sorgfalt und
+          Geschick handwerklich gefertigt.</p>
+          <ul class="usp-list reveal">
+            <li>Handgefertigte Pinse (längliche Pizza-Spezialität)</li>
+            <li>Schneller Lieferservice</li>
+            <li>Mitnahme und Vor-Ort-Essen möglich</li>
+            <li>Italienische Authentizität</li>
+          </ul>
+        </div>
+        <div class="paddle reveal" aria-hidden="true">
+          <div class="handle"></div>
+          <div class="head"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2 SIGNATURE MODULE: Auf Ihre Art -->
+  <section class="step-section ink tilt-b" id="auf-ihre-art">
+    <div class="step-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Auf Ihre Art</h2>
+        <p class="muted-on-ink">A Modo Mio heisst „auf meine Art" — wählen Sie, wie Sie Ihre Pinsa
+        geniessen möchten. Alle drei Wege sind bei uns verfügbar.</p>
+      </div>
+      <div class="config reveal">
+        <div class="config-tabs" role="tablist" aria-label="Bestellart wählen">
+          <button class="config-tab active" data-mode="vor-ort" role="tab" aria-selected="true">Vor-Ort-Essen<span class="deg">Im Lokal geniessen</span></button>
+          <button class="config-tab" data-mode="mitnahme" role="tab" aria-selected="false">Mitnahme<span class="deg">Selbst abholen</span></button>
+          <button class="config-tab" data-mode="lieferung" role="tab" aria-selected="false">Lieferung<span class="deg">Direkt nach Hause</span></button>
+        </div>
+        <div class="config-panel" id="config-panel" role="tabpanel">
+          <div class="paddle-mini" id="paddle-mini" aria-hidden="true"><div class="h"></div></div>
+          <h3 id="config-title">Vor-Ort-Essen</h3>
+          <p id="config-text">Setzen Sie sich hin und geniessen Sie Ihre handwerklich gefertigte
+          Pinsa direkt vor Ort — frisch aus der Küche.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3: Warum wir -->
+  <section class="step-section cream tilt-a" id="warum">
+    <div class="step-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Warum A Modo Mio</h2>
+      </div>
+      <div class="usp-cards reveal">
+        <div class="usp-card"><span class="num">01</span><h3>Handwerklich gefertigt</h3><p>Mit Sorgfalt und Geschick zubereitete Pinse</p></div>
+        <div class="usp-card"><span class="num">02</span><h3>Schnelle Lieferung</h3><p>Essen Sie direkt bei sich zu Hause</p></div>
+        <div class="usp-card"><span class="num">03</span><h3>Mitnahme &amp; Vor Ort</h3><p>Flexibel, wie es Ihnen passt</p></div>
+        <div class="usp-card"><span class="num">04</span><h3>Italienische Authentizität</h3><p>Die beste italienische Pinseria</p></div>
+      </div>
+      <p class="reveal" style="margin-top:2rem; max-width:56ch; font-weight:600; color:var(--muted);">
+      A Modo Mio ist auch in Sirnach und Embrach vertreten — diese Seite gilt für den Standort
+      Winterthur, General-Guisan-Strasse 1.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="plain" id="bewertung">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <p class="stars">4.8 ★</p>
+        <p>149 Google-Bewertungen — ohne Auswahl, ohne Kürzung, direkt von Google übernommen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="plain" id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Kontakt &amp; Lage</h2>
+        <p>General-Guisan-Strasse 1, Winterthur.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card reveal">
+          <div class="row">
+            <span class="k">Adresse</span>
+            <span>General-Guisan-Strasse 1, 8400 Winterthur</span>
+          </div>
+          <div class="row">
+            <span class="k">Telefon</span>
+            <a href="tel:+41522020200">+41 52 202 02 00</a>
+          </div>
+          <div class="row">
+            <span class="k">E-Mail</span>
+            <a href="mailto:infowinterthur@amodomio.ch">infowinterthur@amodomio.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Web</span>
+            <a href="https://amodomio.ch/" target="_blank" rel="noopener">amodomio.ch</a>
+          </div>
+          <p class="honest-note">Öffnungszeiten und eine feste Speisekarte sind auf der Website
+          nicht hinterlegt — am besten kurz anrufen.</p>
+          <div class="cta-row" style="margin-top:0.2rem;">
+            <a class="btn ghost" style="padding:0.6rem 1.1rem; font-size:0.85rem;"
+               href="https://maps.google.com/maps?daddr=A%20Modo%20Mio%20General-Guisan-Strasse%201%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte A Modo Mio" loading="lazy"
+            src="https://maps.google.com/maps?q=A%20Modo%20Mio%20General-Guisan-Strasse%201%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>A Modo Mio<br>General-Guisan-Strasse 1, 8400 Winterthur</div>
+      <div><a href="tel:+41522020200">+41 52 202 02 00</a><br><a href="https://amodomio.ch/" target="_blank" rel="noopener">amodomio.ch</a></div>
+      <div>Öffnungszeiten nicht hinterlegt</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+41522020200" aria-label="A Modo Mio anrufen">📞 Anrufen · +41 52 202 02 00</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* SIGNATURE MODULE: "Auf Ihre Art" — no hours or menu exist for this
+     business, so the honest module is built from the real about-text: the
+     three service ways literally named there (Mitnahme, Lieferung,
+     Vor-Ort-Essen). No time, price or dish is invented. */
+  var modes = {
+    'vor-ort': {
+      title: 'Vor-Ort-Essen',
+      text: 'Setzen Sie sich hin und geniessen Sie Ihre handwerklich gefertigte Pinsa direkt vor Ort — frisch aus der Küche.',
+      angle: '0deg'
+    },
+    'mitnahme': {
+      title: 'Mitnahme',
+      text: 'Bestellen Sie vor und holen Sie Ihre Pinsa selbst ab — handwerklich gefertigt, zum Mitnehmen verpackt.',
+      angle: '25deg'
+    },
+    'lieferung': {
+      title: 'Lieferung',
+      text: 'Essen Sie direkt bei sich zu Hause: A Modo Mio liefert Ihre Pinsa mit schnellem Lieferservice.',
+      angle: '-25deg'
+    }
+  };
+
+  var tabs = document.querySelectorAll('.config-tab');
+  var title = document.getElementById('config-title');
+  var text = document.getElementById('config-text');
+  var paddleMini = document.getElementById('paddle-mini');
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      var m = modes[tab.getAttribute('data-mode')];
+      title.textContent = m.title;
+      text.textContent = m.text;
+      paddleMini.style.transform = 'rotate(' + m.angle + ')';
+    });
+  });
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

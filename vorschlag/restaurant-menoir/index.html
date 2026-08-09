@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1b0e14">
+<title>Menoir — Französisches Gourmet-Restaurant, Oberwinterthur</title>
+<meta name="description" content="Menoir, Römerstrasse 159, Oberwinterthur: französisches Gourmet-Restaurant, geführt von Markus Burkhard und Flavia Hiestand. Kuratiertes 3-Gänge-Menü, Mi–Sa ab 18:00 Uhr.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Menoir — Französische Spitzengastronomie in Winterthur">
+<meta property="og:description" content="Ein kuratiertes Menü, eine ruhige Terrasse im historischen Zentrum, ein Tisch für alle wichtigen Gänge. Römerstrasse 159, 8404 Winterthur.">
+<meta property="og:url" content="https://www.menoir.ch/">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/67c86a5e225ac428eb283789/5770dc78-a285-4423-9e40-cd149fa8360f/Logo_Menoir_Elfenbein_fin.png">
+<link rel="canonical" href="https://www.menoir.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Menoir",
+  "url": "https://www.menoir.ch/",
+  "image": "https://images.squarespace-cdn.com/content/v1/67c86a5e225ac428eb283789/5770dc78-a285-4423-9e40-cd149fa8360f/Logo_Menoir_Elfenbein_fin.png",
+  "telephone": "+41 52 525 34 04",
+  "email": "info@menoir.ch",
+  "servesCuisine": "Französische Küche",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Römerstrasse 159",
+    "postalCode": "8404",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "46"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "18:00", "closes": "23:00"}
+  ],
+  "priceRange": "CHF 95",
+  "paymentAccepted": "Bargeld, Debit, Kreditkarte, NFC",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Menü",
+    "hasMenuSection": {
+      "@type": "MenuSection",
+      "name": "Menü",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Weiße Spargel in Pilzbrühe", "description": "Vorspeise"},
+        {"@type": "MenuItem", "name": "Hechtknödel mit Brunnenkresse in Krebsbisque", "description": "Zwischengang"},
+        {"@type": "MenuItem", "name": "Gebratenes Lamm mit Topinambur", "description": "Hauptgang"},
+        {"@type": "MenuItem", "name": "Käseauswahl", "description": "Zusatzgang"},
+        {"@type": "MenuItem", "name": "Dessert", "description": "Zusatzgang"},
+        {"@type": "MenuItem", "name": "3-Gänge Menü", "offers": {"@type": "Offer", "price": "95", "priceCurrency": "CHF"}}
+      ]
+    }
+  }
+}
+</script>
+<style>
+  /* Six-token colour system: an aubergine-ink base (--bg/--surface), the
+     JSON's own ivory brand tone repurposed as body text (--fg), a bordeaux
+     for the one CTA colour (--brand), and a single antique-gold hairline
+     accent used only for numerals and dividers, never for large fills. */
+  :root{
+    --bg:#1b0e14;
+    --surface:#241019;
+    --fg:#f4ecdf;
+    --muted:#c9b6ac;
+    --brand:#7c2036;
+    --accent:#caa869;
+    --line: rgba(244,236,223,.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-size:clamp(15px, .5vw + .95rem, 19px);
+    line-height:1.7; font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:400; line-height:1.05; margin:0;
+  }
+  em{font-style:italic; color:var(--accent);}
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:4px;}
+  /* headings receive programmatic focus() when keyboard travel lands on a
+     new screen; suppress the plain :focus ring there since :focus-visible
+     already covers genuine keyboard interaction on links and buttons */
+  h1:focus, h2:focus{outline:none;}
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);
+    white-space:nowrap; border:0; padding:0; margin:-1px;
+  }
+  .skip-link{
+    position:absolute; left:-999px; top:0; background:var(--brand); color:#fff;
+    padding:.8em 1.4em; z-index:200; font-family:'Inter',sans-serif; font-size:.9rem;
+  }
+  .skip-link:focus{left:12px; top:12px;}
+
+  .label{
+    font-family:'Inter', sans-serif; font-weight:500; text-transform:uppercase;
+    letter-spacing:.22em; font-size:.68rem; color:var(--accent);
+  }
+  .measure{max-width:640px; margin-inline:auto;}
+  .center{text-align:center;}
+
+  /* Quiet ornament used to separate an idea from its supporting line without
+     adding any chrome — a single hairline with a rotated square at its centre.
+     Used sparingly: cover, credentials, hours, contact. */
+  .divider{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    margin:1.6em auto; width:min(220px, 60%);
+  }
+  .divider::before, .divider::after{content:""; flex:1; height:1px; background:var(--line);}
+  .divider .diamond{width:6px; height:6px; background:var(--accent); transform:rotate(45deg); flex:none;}
+
+  /* MINIMAL CHROME: corner monogram, no full nav */
+  .corner-mark{
+    position:fixed; top:clamp(16px,3vw,28px); left:clamp(16px,3vw,28px); z-index:80;
+    font-family:'Cormorant Garamond', serif; font-size:1.4rem; letter-spacing:.06em; color:var(--muted);
+    text-decoration:none; mix-blend-mode:difference;
+  }
+  .corner-call{
+    position:fixed; top:clamp(16px,3vw,28px); right:clamp(16px,3vw,28px); z-index:80;
+    font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none; border-bottom:1px solid transparent;
+  }
+  .corner-call:hover{color:var(--accent); border-color:var(--accent);}
+  @media (max-width:560px){ .corner-mark, .corner-call{ font-size:.85rem; } .corner-call{letter-spacing:.08em;} }
+
+  /* progress rail — thin, only numerals, appears from screen 2 onward */
+  .rail{
+    position:fixed; right:clamp(10px,2.4vw,26px); top:50%; transform:translateY(-50%);
+    z-index:75; display:flex; flex-direction:column; gap:14px; align-items:center;
+    /* visibility (not just opacity) keeps hidden rail links out of the tab
+       order on the cover screen — an opacity-only hide would leave an
+       invisible-but-focusable trap for keyboard users */
+    opacity:0; visibility:hidden; transition:opacity .4s ease, visibility 0s linear .4s;
+  }
+  .rail.visible{opacity:1; visibility:visible; transition-delay:0s;}
+  .rail a{
+    font-family:'Inter',sans-serif; font-size:.66rem; letter-spacing:.05em; color:var(--muted);
+    text-decoration:none; opacity:.45; transition:opacity .3s ease, color .3s ease;
+  }
+  .rail a.active, .rail a:focus-visible{opacity:1; color:var(--accent);}
+  @media (max-width:900px){ .rail{right:10px; gap:12px;} }
+  @media (max-width:760px){ .rail{display:none;} }
+  @media (prefers-reduced-motion: reduce){ .rail{transition:none;} }
+
+  main{display:block;}
+  section{
+    min-height:100svh; display:flex; align-items:center; justify-content:center;
+    padding:clamp(80px,12vw,150px) clamp(22px,6vw,64px);
+    position:relative;
+  }
+  section.tone-b{background:var(--surface);}
+  .inner{width:100%;}
+
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* SCREEN 1 — COVER */
+  .cover{background:radial-gradient(120% 90% at 50% 8%, #2a1420 0%, var(--bg) 62%);}
+  .cover .inner{text-align:center;}
+  .cover img.logo{width:clamp(64px,9vw,110px); margin:0 auto 2.2em; opacity:.92; filter:grayscale(.1);}
+  .cover h1{
+    font-size:clamp(3.4rem, 11vw, 8.4rem); letter-spacing:.03em; font-weight:400;
+  }
+  .cover .tag{margin-top:1.2em; color:var(--muted); font-size:clamp(1rem,1.4vw,1.3rem); font-style:italic;}
+  .cover .place{margin-top:2.4em;}
+  .scroll-cue{
+    position:absolute; bottom:clamp(20px,4vw,42px); left:50%; transform:translateX(-50%);
+    font-family:'Inter',sans-serif; font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .scroll-cue .stroke{
+    width:1px; height:34px; background:linear-gradient(var(--accent), transparent);
+    animation:cue-breathe 2.6s ease-in-out infinite;
+  }
+  @keyframes cue-breathe{
+    0%, 100%{opacity:.35; transform:scaleY(.8); transform-origin:top;}
+    50%{opacity:1; transform:scaleY(1); transform-origin:top;}
+  }
+  @media (prefers-reduced-motion: reduce){ .scroll-cue .stroke{animation:none; opacity:.7;} }
+
+  /* SCREEN 2 — LEITUNG */
+  .lede{font-size:clamp(1.35rem,2.2vw,1.9rem); line-height:1.55; font-weight:400;}
+  .lede strong{font-weight:500; color:var(--fg); font-style:italic;}
+  .names{margin-top:1.6em; font-family:'Inter',sans-serif; letter-spacing:.05em; font-size:.85rem; color:var(--muted); text-transform:uppercase;}
+
+  /* SCREEN 4 — ZITAT: a single oversized line of type standing in for a
+     photograph. With only three real images available, this is where the
+     "restraint is a virtue" instruction leans hardest on typography alone. */
+  .quote{margin:0; text-align:center; max-width:20ch; margin-inline:auto;}
+  .quote p{
+    font-size:clamp(2.1rem,6vw,4.4rem); font-weight:400; line-height:1.15; font-style:normal;
+  }
+  .quote em{font-style:italic; color:var(--accent);}
+
+  /* MENU — signature module */
+  .menu-intro{text-align:center; margin-bottom:clamp(40px,7vw,72px);}
+  .menu-intro h2{font-size:clamp(2.2rem,5vw,3.6rem);}
+  .course-progress{
+    font-family:'Inter',sans-serif; font-size:.7rem; letter-spacing:.15em; color:var(--muted);
+    margin-top:1em; text-transform:uppercase;
+  }
+  /* thin vertical line tracking how far the reader has moved through the
+     course-by-course reveal — the only "progress bar" on the page, and it
+     only exists where the signature module lives */
+  .course-rail{
+    position:absolute; left:clamp(10px,3vw,26px); top:0; bottom:0; width:1px;
+    background:var(--line); display:none;
+  }
+  .course-rail .fill{
+    position:absolute; top:0; left:0; width:100%; height:0%;
+    background:var(--accent); transition:height .2s linear;
+  }
+  @media (min-width:900px){ .course-rail{display:block;} }
+  @media (prefers-reduced-motion: reduce){ .course-rail .fill{transition:none;} }
+  .course{
+    min-height:70vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding-block:clamp(30px,6vw,60px);
+    border-top:1px solid var(--line);
+    opacity:.32; transform:translateY(18px) scale(.98);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .course:first-of-type{border-top:none;}
+  .course.in-view{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){ .course{opacity:1; transform:none; transition:none;} }
+  .course .numeral{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--accent); margin-bottom:.8em;}
+  .course .course-label{font-family:'Inter',sans-serif; font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:.9em;}
+  .course h3{font-size:clamp(1.9rem,4.4vw,3.1rem); font-weight:400; max-width:16ch;}
+  .course .desc{margin-top:.8em; color:var(--muted); font-style:italic; font-size:clamp(1rem,1.3vw,1.2rem); max-width:42ch;}
+  .course .cprice{margin-top:1.1em; font-family:'Inter',sans-serif; letter-spacing:.08em; font-size:.85rem; color:var(--accent);}
+
+  /* TERRASSE / STAMMTISCH */
+  .atmos{
+    background:
+      linear-gradient(180deg, rgba(27,14,20,.94), rgba(27,14,20,.97)),
+      url('https://images.squarespace-cdn.com/content/v1/67c86a5e225ac428eb283789/a2e28286-60eb-44dd-ac2e-5e657788a00b/Pattern_Web_Elfenbein.png');
+    background-size:340px; background-repeat:repeat; background-blend-mode:soft-light;
+  }
+  .atmos .inner{max-width:660px; margin-inline:auto; text-align:center;}
+  .atmos h2{font-size:clamp(2.1rem,4.6vw,3.3rem); margin-bottom:.6em;}
+  .atmos p{font-size:clamp(1.05rem,1.4vw,1.25rem); color:var(--fg);}
+  .atmos .footnote{margin-top:1.6em; color:var(--muted); font-style:italic; font-size:.98rem;}
+
+  /* CREDENTIALS */
+  .credentials .inner{max-width:760px; margin-inline:auto; text-align:center;}
+  .cred-row{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:clamp(28px,5vw,56px);
+    margin-top:clamp(36px,6vw,64px);
+  }
+  .cred{border-top:1px solid var(--line); padding-top:1.4em; transition:border-color .3s ease;}
+  .cred:hover{border-color:var(--accent);}
+  .cred .num{font-size:clamp(2.6rem,5.6vw,4rem); font-weight:400; line-height:1;}
+  .cred .num.num-small{font-size:clamp(1.4rem,3vw,2rem); line-height:1.2;}
+  .cred .cap{margin-top:.5em; font-family:'Inter',sans-serif; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);}
+  .guide-note{margin-top:clamp(30px,5vw,52px); font-style:italic; color:var(--muted); font-size:1.02rem;}
+
+  /* HOURS */
+  .hours-wrap{max-width:560px; margin-inline:auto; text-align:center;}
+  .hours-wrap h2{font-size:clamp(2.1rem,4.6vw,3.3rem); margin-bottom:.9em;}
+  .hrow{
+    display:flex; justify-content:space-between; padding:16px 0; border-top:1px solid var(--line);
+    font-size:clamp(1.05rem,1.4vw,1.3rem);
+  }
+  .hrow:last-of-type{border-bottom:1px solid var(--line);}
+  .hrow .d{color:var(--fg);}
+  .hrow .t{color:var(--accent); font-style:italic;}
+  .hrow .t.closed{color:var(--muted); font-style:normal;}
+  .closures{margin-top:2em; font-family:'Inter',sans-serif; font-size:.78rem; letter-spacing:.04em; color:var(--muted); line-height:2;}
+
+  /* CONTACT */
+  .contact .inner{max-width:620px; margin-inline:auto; text-align:center;}
+  .contact h2{font-size:clamp(2.1rem,4.6vw,3.3rem); margin-bottom:.5em;}
+  .contact .addr{font-size:clamp(1.1rem,1.6vw,1.4rem); font-style:italic; margin-bottom:1.6em;}
+  .contact-links{display:flex; flex-direction:column; gap:.6em; align-items:center; margin-bottom:2.2em;}
+  .contact-links a{
+    font-family:'Inter',sans-serif; letter-spacing:.06em; font-size:.95rem; text-decoration:none;
+    color:var(--fg); border-bottom:1px solid var(--line); padding-bottom:.15em;
+  }
+  .contact-links a:hover{color:var(--accent); border-color:var(--accent);}
+  .payment{font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; margin-bottom:2em;}
+  .map-frame{border:1px solid var(--line); overflow:hidden; aspect-ratio:16/9; max-width:560px; margin:0 auto;}
+  .map-frame iframe{width:100%; height:100%; border:0; filter:grayscale(.35) sepia(.14) contrast(1.02);}
+  .route-link{
+    font-family:'Inter',sans-serif; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:.2em;
+  }
+  .route-link:hover{color:var(--accent); border-color:var(--accent);}
+
+  footer.site{
+    background:var(--surface); border-top:1px solid var(--line); padding-block:36px;
+    text-align:center; font-family:'Inter',sans-serif; color:var(--muted); font-size:.76rem; letter-spacing:.04em;
+  }
+  footer.site .fmark{
+    display:block; font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--fg); font-size:1.2rem; margin-bottom:.6em;
+  }
+  footer.site .legal{margin-top:.6em; display:block;}
+
+  .mobile-bar{
+    display:none; position:sticky; bottom:0; z-index:90; background:var(--brand); border-top:1px solid rgba(0,0,0,.25);
+  }
+  .mobile-bar a{
+    display:block; text-align:center; padding:15px 0; color:#f8efe4; text-decoration:none;
+    font-family:'Inter',sans-serif; font-weight:500; text-transform:uppercase; letter-spacing:.1em; font-size:.82rem;
+  }
+  @media (max-width:640px){ .mobile-bar{display:block;} }
+
+  /* ===== TABLET: tighten the vertical rhythm slightly so screens don't
+     force excessive scrolling on shorter laptop and tablet viewports ===== */
+  @media (max-width:1100px){
+    section{padding-block:clamp(64px,10vw,120px);}
+    .course{min-height:60vh;}
+  }
+
+  @media (max-width:900px){
+    .cred-row{grid-template-columns:repeat(2,1fr); row-gap:34px;}
+    .quote p{max-width:none;}
+  }
+
+  @media (max-width:700px){
+    .lede{font-size:clamp(1.2rem,3vw,1.6rem);}
+    .course h3{font-size:clamp(1.6rem,6vw,2.4rem);}
+    .hrow{font-size:1rem; padding:13px 0;}
+    .atmos{background-size:220px;}
+  }
+
+  /* ===== 360PX FLOOR — nav, hours table and the signature module all
+     re-checked at this width per the brief's hard minimum ===== */
+  @media (max-width:400px){
+    section{padding-inline:18px;}
+    .cover h1{font-size:clamp(2.6rem,15vw,3.6rem);}
+    .cred-row{grid-template-columns:1fr 1fr; gap:24px;}
+    .contact-links a{font-size:.88rem;}
+    .course .numeral{font-size:1rem;}
+    .course h3{font-size:clamp(1.4rem,8vw,2rem);}
+    .course .desc{font-size:.92rem;}
+    .hrow{flex-direction:column; align-items:flex-start; gap:.3em;}
+    .hrow .t{align-self:flex-end;}
+    .payment{font-size:.66rem; letter-spacing:.05em;}
+    .corner-mark, .corner-call{top:12px;}
+  }
+
+  @media print{
+    .corner-mark, .corner-call, .rail, .mobile-bar{display:none !important;}
+    section{min-height:0;}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- Deliberately minimal header: no bar, no background, just two quiet
+     marks pinned to the corners — the wordmark doubles as "back to top",
+     the phone number is always one tap away. This is the entire nav
+     chrome the brief allows for a "quiet luxury" single page. -->
+<header class="site-header">
+  <a class="corner-mark" href="#top" aria-label="Menoir — nach oben">M.</a>
+  <a class="corner-call" href="tel:+41525253404">052 525 34 04</a>
+</header>
+
+<nav class="rail" id="rail" aria-label="Seitenverlauf">
+  <a href="#haus" data-i="0">I</a>
+  <a href="#kueche" data-i="1">II</a>
+  <a href="#zitat" data-i="2">III</a>
+  <a href="#menu" data-i="3">IV</a>
+  <a href="#terrasse" data-i="4">V</a>
+  <a href="#stammtisch" data-i="5">VI</a>
+  <a href="#bewertungen" data-i="6">VII</a>
+  <a href="#zeiten" data-i="7">VIII</a>
+  <a href="#kontakt" data-i="8">IX</a>
+</nav>
+
+<main id="main">
+
+  <!-- SCREEN 1 — COVER -->
+  <section class="cover" id="top">
+    <div class="inner">
+      <img class="logo" src="https://images.squarespace-cdn.com/content/v1/67c86a5e225ac428eb283789/5770dc78-a285-4423-9e40-cd149fa8360f/Logo_Menoir_Elfenbein_fin.png" alt="Menoir Logo" loading="eager" onerror="this.style.display='none'">
+      <h1>Menoir</h1>
+      <p class="tag">Französisches Gourmet-Restaurant in Oberwinterthur</p>
+      <div class="divider" aria-hidden="true"><span class="diamond"></span></div>
+      <p class="place label">Römerstrasse 159 · Winterthur</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scrollen</span><span class="stroke"></span></div>
+  </section>
+
+  <!-- SCREEN 2 — LEITUNG -->
+  <section id="haus">
+    <div class="inner measure reveal">
+      <p class="label center" style="margin-bottom:1.4em;">Das Haus</p>
+      <p class="lede center">Menoir ist ein feines <strong>französisches Gourmet-Restaurant</strong> in Oberwinterthur mit gehobener Küche.</p>
+      <p class="names center">Geführt von Markus Burkhard &amp; Flavia Hiestand</p>
+    </div>
+  </section>
+
+  <!-- SCREEN 3 — KÜCHE & KELLER -->
+  <section id="kueche" class="tone-b">
+    <div class="inner measure reveal">
+      <p class="label center" style="margin-bottom:1.4em;">Küche &amp; Keller</p>
+      <p class="lede center">Eine <strong>kuratierte Auswahl</strong> mit Vorspeisen, Zwischengängen und Hauptgängen — getragen von Top-Qualitäts-Produkten und exzeptionellen Saucen.</p>
+      <p class="names center">Begleitet von charaktervollen Schweizer und europäischen Weinen</p>
+    </div>
+  </section>
+
+  <!-- SCREEN 4 — ZITAT (pure typography, no photo needed) -->
+  <section id="zitat">
+    <div class="inner reveal">
+      <blockquote class="quote">
+        <p>Französische Spitzengastronomie<br>im <em>Michelin-Stil.</em></p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- MENU — signature module: course by course as you scroll -->
+  <section id="menu" class="tone-b">
+    <div class="course-rail" aria-hidden="true"><span class="fill" id="courseFill"></span></div>
+    <div class="inner">
+      <div class="menu-intro reveal">
+        <p class="label">Das Menü</p>
+        <h2>Ein Gang.<br>Ein Moment.</h2>
+        <p class="course-progress" id="courseProgress" aria-live="polite">Gang I / V</p>
+      </div>
+      <div id="courseTrack">
+        <!-- courses injected by JS from real menu data -->
+      </div>
+      <noscript>
+        <ol class="measure" style="font-size:1.1rem; line-height:2; list-style:none; padding:0;">
+          <li>I — Vorspeise: Weiße Spargel in Pilzbrühe</li>
+          <li>II — Zwischengang: Hechtknödel mit Brunnenkresse in Krebsbisque</li>
+          <li>III — Hauptgang: Gebratenes Lamm mit Topinambur</li>
+          <li>IV — Zusatzgang: Käseauswahl</li>
+          <li>V — Zusatzgang: Dessert</li>
+          <li>3-Gänge Menü · CHF 95</li>
+        </ol>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- TERRASSE -->
+  <section id="terrasse" class="atmos">
+    <div class="inner reveal">
+      <p class="label center">Draussen</p>
+      <h2 class="center">Eine gemütliche Terrasse<br>im historischen Zentrum.</h2>
+    </div>
+  </section>
+
+  <!-- STAMMTISCH -->
+  <section id="stammtisch" class="tone-b">
+    <div class="inner measure reveal">
+      <p class="label center" style="margin-bottom:1.4em;">Stammtisch</p>
+      <p class="lede center">Am Stammtisch ist eine kleine <strong>À-la-carte-Auswahl</strong> möglich — abseits des kuratierten Menüs, für alle, die spontan vorbeikommen.</p>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="bewertungen">
+    <div class="inner credentials reveal">
+      <p class="label center">Bewertungen</p>
+      <h2 class="center">Was bleibt,<br>wird weitergesagt.</h2>
+      <div class="divider" aria-hidden="true"><span class="diamond"></span></div>
+      <div class="cred-row">
+        <div class="cred">
+          <div class="num">4.8</div>
+          <div class="cap">Google · 46 Rezensionen</div>
+        </div>
+        <div class="cred">
+          <div class="num">90</div>
+          <div class="cap">Punkte · Falstaff</div>
+        </div>
+        <div class="cred">
+          <div class="num num-small">Guide<br>Michelin</div>
+          <div class="cap">Verzeichnet</div>
+        </div>
+      </div>
+      <p class="guide-note center">Menoir ist im Guide Michelin sowie bei Falstaff verzeichnet — französische Spitzengastronomie im Michelin-Stil, mitten in Winterthur.</p>
+    </div>
+  </section>
+
+  <!-- HOURS -->
+  <section id="zeiten" class="tone-b">
+    <div class="inner hours-wrap reveal">
+      <p class="label">Öffnungszeiten</p>
+      <h2>Wann geöffnet ist.</h2>
+      <div class="divider" aria-hidden="true"><span class="diamond"></span></div>
+      <div class="hrow"><span class="d">Mittwoch – Samstag</span><span class="t">18:00–23:00</span></div>
+      <div class="hrow"><span class="d">Sonntag – Dienstag</span><span class="t closed">Geschlossen</span></div>
+      <p class="closures">
+        Winterpause: 24.12.2025 – 7.1.2026<br>
+        Sommerpause: 12.7.2026 – 12.8.2026
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="inner contact reveal">
+      <p class="label">Reservieren</p>
+      <h2>Römerstrasse 159</h2>
+      <div class="divider" aria-hidden="true"><span class="diamond"></span></div>
+      <p class="addr">8404 Winterthur</p>
+      <div class="contact-links">
+        <a href="tel:+41525253404">+41 52 525 34 04</a>
+        <a href="mailto:info@menoir.ch">info@menoir.ch</a>
+      </div>
+      <p class="payment">Bargeld · Debit · Kreditkarte · NFC</p>
+      <div class="map-frame">
+        <iframe title="Menoir auf der Karte" loading="lazy"
+          src="https://maps.google.com/maps?q=R%C3%B6merstrasse%20159%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+      <p style="margin-top:1.2em;">
+        <a href="https://maps.google.com/maps?q=R%C3%B6merstrasse%20159%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener" class="route-link">Route planen</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <span class="fmark">Menoir</span>
+  <span>Römerstrasse 159, 8404 Winterthur · info@menoir.ch</span>
+  <span class="legal">Design-Vorschlag · unverbindliches Muster</span>
+  <p style="margin-top:1.4em;"><a href="#top" class="route-link">Nach oben</a></p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525253404">Anrufen — 052 525 34 04</a>
+</div>
+
+<script>
+/*
+ * Menoir — single-page script, three small independent modules:
+ *   1. the course-by-course menu builder (the signature module)
+ *   2. generic scroll-reveal + the quiet side rail that tracks position
+ *   3. keyboard travel between full-height screens
+ * No dependencies, no build step — this is the whole client-side layer.
+ */
+(function(){
+  "use strict";
+
+  /* ---------- real menu data, verbatim from JSON ---------- */
+  var courses = [
+    { roman:"I", label:"Vorspeise", name:"Weiße Spargel in Pilzbrühe", desc:null, price:null },
+    { roman:"II", label:"Zwischengang", name:"Hechtknödel mit Brunnenkresse in Krebsbisque", desc:null, price:null },
+    { roman:"III", label:"Hauptgang", name:"Gebratenes Lamm mit Topinambur", desc:null, price:null },
+    { roman:"IV", label:"Zusatzgang", name:"Käseauswahl", desc:null, price:null },
+    { roman:"V", label:"Zusatzgang", name:"Dessert", desc:null, price:null }
+  ];
+  var menuPrice = "CHF 95"; /* 3-Gänge Menü — the only priced line item in the JSON's menu array */
+
+  var track = document.getElementById("courseTrack");
+  var progress = document.getElementById("courseProgress");
+  var courseEls = [];
+
+  courses.forEach(function(c, i){
+    var el = document.createElement("div");
+    el.className = "course";
+    el.dataset.index = i;
+
+    var num = document.createElement("p");
+    num.className = "numeral";
+    num.textContent = c.roman;
+    el.appendChild(num);
+
+    var lab = document.createElement("p");
+    lab.className = "course-label";
+    lab.textContent = c.label;
+    el.appendChild(lab);
+
+    var h3 = document.createElement("h3");
+    h3.textContent = c.name;
+    el.appendChild(h3);
+
+    if(c.desc){
+      var d = document.createElement("p");
+      d.className = "desc";
+      d.textContent = c.desc;
+      el.appendChild(d);
+    }
+
+    if(i === courses.length - 1){
+      var p = document.createElement("p");
+      p.className = "cprice";
+      p.textContent = "3-Gänge Menü · " + menuPrice;
+      el.appendChild(p);
+    }
+
+    track.appendChild(el);
+    courseEls.push(el);
+  });
+
+  function reduceMotion(){
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  /* the reveal/course animations key off this once at load; prefers-reduced-motion
+     rarely changes mid-session, so no matchMedia change-listener is needed here */
+
+  /* course-by-course reveal + progress counter */
+  if(reduceMotion() || !("IntersectionObserver" in window)){
+    courseEls.forEach(function(el){ el.classList.add("in-view"); });
+  } else {
+    var courseIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in-view");
+          var idx = parseInt(entry.target.dataset.index, 10);
+          progress.textContent = "Gang " + courses[idx].roman + " / " + courses.length;
+        }
+      });
+    }, { threshold: 0.5 });
+    courseEls.forEach(function(el){ courseIO.observe(el); });
+  }
+
+  /* ---------- vertical progress fill for the menu section ----------
+     rAF-throttled so the fill never fights the browser's own scroll
+     compositing — a single measurement per animation frame, not per event. */
+  var menuSection = document.getElementById("menu");
+  var courseFill = document.getElementById("courseFill");
+  var fillTicking = false;
+
+  function measureCourseFill(){
+    if(!menuSection || !courseFill) return;
+    var rect = menuSection.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var total = rect.height - vh;
+    var scrolled = -rect.top;
+    var ratio = total > 0 ? Math.min(1, Math.max(0, scrolled / total)) : 0;
+    courseFill.style.height = (ratio * 100) + "%";
+    fillTicking = false;
+  }
+  function requestCourseFill(){
+    if(!fillTicking){
+      fillTicking = true;
+      window.requestAnimationFrame(measureCourseFill);
+    }
+  }
+  window.addEventListener("scroll", requestCourseFill, { passive:true });
+  window.addEventListener("resize", requestCourseFill);
+  measureCourseFill();
+
+  /* ---------- generic scroll reveals for statement screens ---------- */
+  var reveals = document.querySelectorAll(".reveal");
+  if(reduceMotion() || !("IntersectionObserver" in window)){
+    reveals.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add("in"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.18, rootMargin: "0px 0px -60px 0px" });
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- side rail active-state, tracks which full screen is centred ---------- */
+  var railLinks = document.querySelectorAll("#rail a");
+  var railTargets = ["haus","kueche","zitat","menu","terrasse","stammtisch","bewertungen","zeiten","kontakt"]
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
+
+  if("IntersectionObserver" in window && railLinks.length){
+    var railIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var idx = railTargets.indexOf(entry.target);
+          railLinks.forEach(function(a){ a.classList.remove("active"); });
+          if(railLinks[idx]) railLinks[idx].classList.add("active");
+        }
+      });
+    }, { threshold: 0.5 });
+    railTargets.forEach(function(el){ railIO.observe(el); });
+  }
+
+  /* the rail stays hidden on the cover screen — it only earns its place once
+     the reader has committed to scrolling, keeping screen one free of chrome */
+  var railEl = document.getElementById("rail");
+  var coverEl = document.getElementById("top");
+  if("IntersectionObserver" in window && railEl && coverEl){
+    var coverIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        railEl.classList.toggle("visible", !entry.isIntersecting);
+      });
+    }, { threshold: 0.6 });
+    coverIO.observe(coverEl);
+  } else if(railEl){
+    railEl.classList.add("visible");
+  }
+
+  /* ---------- keyboard travel between full-height screens ----------
+     Each screen is one idea; ArrowDown/PageDown/ArrowUp/PageUp move a
+     whole screen at a time, the same way a slide deck would, but without
+     hijacking normal in-page text selection or form focus. */
+  var allScreens = Array.prototype.slice.call(document.querySelectorAll("main > section"));
+
+  function currentScreenIndex(){
+    var mid = window.innerHeight / 2;
+    var best = 0, bestDist = Infinity;
+    allScreens.forEach(function(sec, i){
+      var r = sec.getBoundingClientRect();
+      var dist = Math.abs(r.top + r.height / 2 - mid);
+      if(dist < bestDist){ bestDist = dist; best = i; }
+    });
+    return best;
+  }
+
+  function goToScreen(index){
+    if(index < 0 || index >= allScreens.length) return;
+    var target = allScreens[index];
+    target.scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block:"start" });
+    /* move focus to the screen's own heading so screen-reader and keyboard
+       users land on the new idea rather than an arbitrary scroll position */
+    var heading = target.querySelector("h1, h2");
+    if(heading){
+      if(!heading.hasAttribute("tabindex")) heading.setAttribute("tabindex","-1");
+      window.setTimeout(function(){ heading.focus({ preventScroll:true }); }, reduceMotion() ? 0 : 420);
+    }
+  }
+
+  document.addEventListener("keydown", function(e){
+    var tag = (document.activeElement && document.activeElement.tagName) || "";
+    if(tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
+    if(e.key === "ArrowDown" || e.key === "PageDown"){
+      e.preventDefault();
+      goToScreen(currentScreenIndex() + 1);
+    } else if(e.key === "ArrowUp" || e.key === "PageUp"){
+      e.preventDefault();
+      goToScreen(currentScreenIndex() - 1);
+    }
+  });
+})();
+</script>
+</body>
+</html>

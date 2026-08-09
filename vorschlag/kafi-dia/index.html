@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kafi Dia — Das offene Wohnzimmer in der Lokstadt, Winterthur</title>
+<meta name="description" content="Kafi Dia in der Winterthurer Lokstadt: Gemeinschaftscafé mit hausgemachtem Sauerteigbrot, Spezialist-Barista-Kaffee und kulturellen Veranstaltungen. Emil-Krebs-Gasse 10, 8400 Winterthur.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Kafi Dia — Das offene Wohnzimmer in der Lokstadt">
+<meta property="og:description" content="Gemeinschaftscafé mit hausgemachtem Sauerteigbrot, Spezialist-Barista-Kaffee und Kultur. Emil-Krebs-Gasse 10, 8400 Winterthur.">
+<meta property="og:image" content="https://static.wixstatic.com/media/20fc01_e660233647224a56975263858100c22b~mv2.png">
+<meta property="og:url" content="https://www.kafidia.wtf/home">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Kafi Dia",
+  "image": "https://static.wixstatic.com/media/20fc01_e660233647224a56975263858100c22b~mv2.png",
+  "url": "https://www.kafidia.wtf/home",
+  "telephone": "+41 79 388 28 58",
+  "email": "hola@kafidia.wtf",
+  "servesCuisine": "Café, Specialty Coffee",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Emil-Krebs-Gasse 10",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "14"
+  },
+  "sameAs": ["https://www.instagram.com/kafidia__/"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday"], "opens": "07:00", "closes": "19:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday"], "opens": "07:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "16:00"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#FAF4E9;
+    --surface:#F1E4CE;
+    --fg:#2C1B10;
+    --muted:#6B5842;
+    --brand:#A5461F;
+    --accent:#556229;
+    --line: rgba(44,27,16,.14);
+    --radius: 22px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Karla', system-ui, sans-serif;
+    font-size:clamp(16px, 1.4vw + .6rem, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    line-height:1.04;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 clamp(20px, 5vw, 64px);
+  }
+  :focus-visible{
+    outline:3px solid var(--brand);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ===== header ===== */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,244,233,.92);
+    backdrop-filter:saturate(140%) blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:14px;
+  }
+  .wordmark{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(1.15rem, 1rem + 1vw, 1.5rem);
+    text-decoration:none;
+    color:var(--fg);
+  }
+  .wordmark span{color:var(--brand);}
+  nav.primary ul{
+    list-style:none; display:flex; gap:clamp(14px,2vw,28px);
+    margin:0; padding:0;
+  }
+  nav.primary a{
+    text-decoration:none;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--fg);
+    padding:.3em 0;
+    border-bottom:2px solid transparent;
+  }
+  nav.primary a:hover{border-color:var(--brand);}
+  .nav-call{
+    display:inline-flex; align-items:center; gap:.5em;
+    background:var(--brand); color:var(--bg);
+    padding:.55em 1.1em; border-radius:999px;
+    text-decoration:none; font-weight:700; font-size:.9rem;
+    white-space:nowrap;
+  }
+  @media (max-width:780px){
+    nav.primary{display:none;}
+  }
+
+  /* ===== hero ===== */
+  .hero{
+    padding-block: clamp(48px, 8vw, 96px) clamp(56px, 9vw, 110px);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.4fr .9fr;
+    gap: clamp(24px, 5vw, 60px);
+    align-items:end;
+  }
+  .hero-eyebrow{
+    font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    font-size:.8rem; color:var(--brand); margin-bottom:1.1em;
+    display:flex; align-items:center; gap:.6em;
+  }
+  .hero-eyebrow::before{
+    content:""; width:26px; height:2px; background:var(--brand); display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 4vw + 1.4rem, 5.1rem);
+    max-width:14ch;
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--brand);
+  }
+  .hero-lead{
+    margin-top:1.3em;
+    font-size:clamp(1.05rem, .3vw + 1rem, 1.25rem);
+    color:var(--muted);
+    max-width:46ch;
+  }
+  .hero-tag{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:clamp(1.05rem, .8vw + .9rem, 1.35rem);
+    border-left:3px solid var(--accent);
+    padding-left:1em;
+    margin-top:1.6em;
+    color:var(--fg);
+    max-width:34ch;
+  }
+  .hero-cta{
+    display:flex; gap:.8em; flex-wrap:wrap; margin-top:2em;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:.5em;
+    padding:.85em 1.5em; border-radius:999px;
+    text-decoration:none; font-weight:700; font-size:.95rem;
+    border:2px solid var(--fg);
+  }
+  .btn.primary{background:var(--fg); color:var(--bg);}
+  .btn.ghost{background:transparent; color:var(--fg);}
+  .btn.primary:hover{background:var(--brand); border-color:var(--brand);}
+  .btn.ghost:hover{border-color:var(--brand); color:var(--brand);}
+
+  .hero-figure{
+    aspect-ratio:3/4;
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--surface);
+    box-shadow:0 26px 50px -22px rgba(44,27,16,.35);
+    transform:rotate(1.4deg);
+    border:8px solid var(--bg);
+    outline:1px solid var(--line);
+  }
+  .hero-figure img{width:100%; height:100%; object-fit:cover;}
+
+  /* ===== section shell ===== */
+  section{padding-block:clamp(50px, 7vw, 96px);}
+  .section-head{
+    display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
+    gap:1em; margin-bottom:clamp(28px,4vw,48px);
+  }
+  .kicker{
+    font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    font-size:.78rem; color:var(--brand);
+  }
+  .section-head h2{font-size:clamp(1.9rem, 1.6vw + 1.3rem, 2.8rem);}
+  .reveal{
+    opacity:0; transform:translateY(18px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  /* ===== open badge module ===== */
+  .status-band{
+    background:var(--fg); color:var(--bg);
+    border-radius:var(--radius);
+    padding:clamp(28px,4vw,44px);
+    display:grid; grid-template-columns: auto 1fr auto;
+    gap:clamp(20px,4vw,40px);
+    align-items:center;
+  }
+  .status-dot-wrap{
+    display:flex; align-items:center; gap:.9em;
+  }
+  .status-dot{
+    width:16px; height:16px; border-radius:50%;
+    background:#8fae5c;
+    box-shadow:0 0 0 6px rgba(143,174,92,.25);
+    flex:none;
+  }
+  .status-dot.closed{
+    background:#c9714f;
+    box-shadow:0 0 0 6px rgba(201,113,79,.25);
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .status-dot.live{animation:pulse 2.4s ease-in-out infinite;}
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 0 0 6px rgba(143,174,92,.25);}
+    50%{box-shadow:0 0 0 12px rgba(143,174,92,.05);}
+  }
+  .status-text .status-title{
+    font-family:'Fraunces', serif; font-size:clamp(1.5rem,1vw+1.2rem,2.1rem);
+    margin-bottom:.15em;
+  }
+  .status-text .status-sub{color:#e6dcc8; font-size:.98rem;}
+  .status-hours{
+    display:grid; gap:.4em; font-size:.92rem; min-width:210px;
+    border-left:1px solid rgba(250,244,233,.25);
+    padding-left:clamp(16px,3vw,32px);
+  }
+  .status-hours .row{display:flex; justify-content:space-between; gap:1.5em; color:#e6dcc8;}
+  .status-hours .row strong{color:var(--bg); font-weight:600;}
+  .status-hours .row.today strong,
+  .status-hours .row.today span{color:#e7c37a;}
+  @media (max-width:700px){
+    .status-band{grid-template-columns:1fr;}
+    .status-hours{border-left:none; padding-left:0; border-top:1px solid rgba(250,244,233,.25); padding-top:16px;}
+  }
+
+  /* ===== people ===== */
+  .people{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,36px);
+  }
+  .people-intro{
+    max-width:62ch; color:var(--muted); font-size:1.05rem; margin-bottom:clamp(28px,4vw,44px);
+  }
+  .person{
+    border-top:2px solid var(--fg); padding-top:1.1em;
+  }
+  .person .num{
+    font-family:'Fraunces', serif; font-style:italic; color:var(--brand);
+    font-size:1rem; display:block; margin-bottom:.6em;
+  }
+  .person h3{font-size:1.35rem; margin-bottom:.2em;}
+  .person .role{
+    font-weight:700; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); display:block; margin-bottom:.7em;
+  }
+  .person p{color:var(--muted); font-size:.98rem;}
+  @media (max-width:780px){
+    .people{grid-template-columns:1fr; gap:28px;}
+  }
+
+  /* ===== usp list ===== */
+  .usp-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  .usp-list li{
+    display:grid; grid-template-columns: 4.5rem 1fr;
+    gap:clamp(14px,3vw,32px);
+    align-items:baseline;
+    padding:clamp(18px,2.6vw,28px) 0;
+    border-bottom:1px solid var(--line);
+  }
+  .usp-list .idx{
+    font-family:'Fraunces', serif; font-style:italic;
+    font-size:clamp(1.6rem,1.2vw+1.2rem,2.2rem); color:var(--brand);
+  }
+  .usp-list .txt{font-size:clamp(1.05rem,.5vw+1rem,1.35rem); font-weight:600;}
+
+  /* ===== menu ===== */
+  .menu-grid{
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:clamp(30px,5vw,64px);
+  }
+  .menu-section h3{
+    font-size:1.4rem; margin-bottom:.9em;
+    display:flex; align-items:center; gap:.6em;
+  }
+  .menu-section h3::after{
+    content:""; flex:1; height:1px; background:var(--line);
+  }
+  .menu-item{
+    padding-block:.85em;
+    border-bottom:1px dashed var(--line);
+  }
+  .menu-item .name{font-weight:700; font-size:1.05rem;}
+  .menu-item .desc{color:var(--muted); font-size:.92rem; margin-top:.2em;}
+  @media (max-width:700px){
+    .menu-grid{grid-template-columns:1fr; gap:36px;}
+  }
+
+  /* ===== banner ===== */
+  .banner{
+    position:relative;
+    border-radius:var(--radius);
+    overflow:hidden;
+    min-height:340px;
+    display:flex; align-items:flex-end;
+    background:var(--surface);
+  }
+  .banner img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    filter:saturate(.92);
+  }
+  .banner .scrim{
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(44,27,16,.78) 0%, rgba(44,27,16,.05) 55%);
+  }
+  .banner .cap{
+    position:relative; color:var(--bg); padding:clamp(24px,4vw,44px);
+    font-family:'Fraunces', serif; font-style:italic;
+    font-size:clamp(1.2rem,1vw+1rem,1.7rem);
+    max-width:46ch;
+  }
+
+  /* ===== reviews ===== */
+  .rating-block{
+    display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,64px); align-items:center;
+  }
+  .rating-num{
+    font-family:'Fraunces', serif; font-size:clamp(3.4rem,5vw+1rem,6rem);
+    line-height:1; color:var(--brand);
+  }
+  .rating-meta{max-width:44ch;}
+  .stars{letter-spacing:.15em; font-size:1.3rem; color:var(--brand); margin-bottom:.3em;}
+  .rating-meta p{color:var(--muted);}
+
+  /* ===== contact ===== */
+  .contact-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,64px);
+    align-items:start;
+  }
+  .info-list{list-style:none; margin:0 0 2em; padding:0;}
+  .info-list li{
+    padding-block:.9em; border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:7rem 1fr; gap:1em;
+  }
+  .info-list .label{
+    font-weight:700; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+  }
+  .info-list a{text-decoration:none; font-weight:600;}
+  .info-list a:hover{color:var(--brand);}
+  .map-frame{
+    border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe{width:100%; height:100%; border:0;}
+  @media (max-width:780px){
+    .contact-grid{grid-template-columns:1fr;}
+  }
+
+  /* ===== footer ===== */
+  footer.site{
+    background:var(--fg); color:var(--bg);
+    padding-block:clamp(40px,6vw,64px) clamp(90px, 8vw, 64px);
+  }
+  footer.site .wrap{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:2em;
+  }
+  footer.site .fmark{font-family:'Fraunces', serif; font-size:1.5rem;}
+  footer.site .fsocial a{color:var(--bg); text-decoration:none; font-weight:600;}
+  footer.site .fsocial a:hover{color:#e7c37a;}
+  footer.site .legal{
+    width:100%; margin-top:2em; padding-top:1.4em; border-top:1px solid rgba(250,244,233,.18);
+    font-size:.85rem; color:#c9bda3; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8em;
+  }
+
+  /* ===== mobile bottom bar ===== */
+  .mobile-bar{
+    display:none;
+  }
+  @media (max-width:780px){
+    .mobile-bar{
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60;
+      background:var(--fg); padding:.8em 1em; padding-bottom:max(.8em, env(safe-area-inset-bottom));
+      gap:.7em; box-shadow:0 -8px 24px rgba(0,0,0,.18);
+    }
+    .mobile-bar a{
+      flex:1; text-align:center; padding:.85em; border-radius:999px;
+      text-decoration:none; font-weight:700; font-size:.95rem;
+    }
+    .mobile-bar .call{background:var(--brand); color:var(--bg);}
+    .mobile-bar .route{background:transparent; color:var(--bg); border:2px solid rgba(250,244,233,.4);}
+    body{padding-bottom:78px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">Kafi <span>Dia</span></a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#offen">Jetzt offen</a></li>
+        <li><a href="#menschen">Menschen</a></li>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-call" href="tel:+41793882858">Anrufen</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hero-eyebrow">Lokstadt · Winterthur</p>
+        <h1>Das offene <em>Wohnzimmer</em> für Sauerteig, Kaffee &amp; Gespräch.</h1>
+        <p class="hero-lead">Kafi Dia ist ein Gemeinschaftsraum in Winterthurs Lokstadt-Quartier — gegründet von Jonas, Rahel und Steffi. Ein Ort für Dialog, Kultur und frisches Brot.</p>
+        <p class="hero-tag">«Biz mehr als ein Kafi.»</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="tel:+41793882858">079 388 28 58 anrufen</a>
+          <a class="btn ghost" href="#menu">Zum Menü</a>
+        </div>
+      </div>
+      <figure class="hero-figure img-wrap">
+        <img src="https://static.wixstatic.com/media/20fc01_e660233647224a56975263858100c22b~mv2.png"
+             alt="Innenraum des Kafi Dia in der Lokstadt Winterthur"
+             onerror="this.closest('.img-wrap').style.display='none'">
+      </figure>
+    </div>
+  </section>
+
+  <!-- LIVE OPEN BADGE -->
+  <section id="offen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Öffnungszeiten live</p>
+          <h2>Ist grad offen?</h2>
+        </div>
+      </div>
+      <div class="status-band reveal" id="statusBand">
+        <div class="status-dot-wrap">
+          <span class="status-dot" id="statusDot" aria-hidden="true"></span>
+        </div>
+        <div class="status-text">
+          <p class="status-title" id="statusTitle">Wird geladen …</p>
+          <p class="status-sub" id="statusSub">Basierend auf den hinterlegten Öffnungszeiten.</p>
+        </div>
+        <div class="status-hours" id="statusHours" aria-label="Öffnungszeiten der Woche"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="menschen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Wer dahintersteht</p>
+          <h2>Die Drei vom Kafi Dia</h2>
+        </div>
+      </div>
+      <p class="people-intro reveal">Kafi Dia versteht sich als offenes Wohnzimmer, das Orte für Dialog und Kultur schafft — getragen von drei Menschen mit drei Aufgaben.</p>
+      <div class="people">
+        <article class="person reveal">
+          <span class="num">01</span>
+          <h3>Rahel</h3>
+          <span class="role">Sauerteig &amp; Gebäck</span>
+          <p>Spezialisiert auf Sauerteigbackwaren — das hausgemachte Sauerteigbrot und die Kuchen stammen aus ihrer Küche.</p>
+        </article>
+        <article class="person reveal">
+          <span class="num">02</span>
+          <h3>Jonas</h3>
+          <span class="role">Kultur &amp; Programm</span>
+          <p>Kuratiert kulturelle Veranstaltungen und das Programm — er macht aus dem Café einen Kulturraum.</p>
+        </article>
+        <article class="person reveal">
+          <span class="num">03</span>
+          <h3>Steffi</h3>
+          <span class="role">Gastfreundschaft &amp; Getränke</span>
+          <p>Verwaltet Gastfreundschaft und Getränkeempfehlungen — vom Spezialisten-Barista-Kaffee bis zur Beratung am Tisch.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- USPs -->
+  <section id="usp">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Warum Kafi Dia</p>
+          <h2>Vier Dinge, die uns wichtig sind</h2>
+        </div>
+      </div>
+      <ul class="usp-list reveal">
+        <li><span class="idx">01</span><span class="txt">Gemeinschafts- und Kulturraum</span></li>
+        <li><span class="idx">02</span><span class="txt">Hausgemachtes Sauerteigbrot und Gebäck</span></li>
+        <li><span class="idx">03</span><span class="txt">Spezialist Barista-Kaffee</span></li>
+        <li><span class="idx">04</span><span class="txt">Kulturelle Veranstaltungen und Dialog</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Was es gibt</p>
+          <h2>Kaffee, Brot &amp; einfache Speisen</h2>
+        </div>
+      </div>
+      <div class="menu-grid reveal">
+        <div class="menu-section">
+          <h3>Kaffee</h3>
+          <div class="menu-item">
+            <div class="name">Spezialist Barista-Kaffee</div>
+            <div class="desc">Sorgfältig ausgewählte Bohnen</div>
+          </div>
+        </div>
+        <div class="menu-section">
+          <h3>Speisen &amp; Backwaren</h3>
+          <div class="menu-item">
+            <div class="name">Sauerteigbrot</div>
+            <div class="desc">Hausgemacht von Rahel</div>
+          </div>
+          <div class="menu-item">
+            <div class="name">Kuchen</div>
+            <div class="desc">Hausgemacht</div>
+          </div>
+          <div class="menu-item">
+            <div class="name">Einfache Speisen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER IMAGE -->
+  <section>
+    <div class="wrap">
+      <figure class="banner reveal img-wrap">
+        <img src="https://static.wixstatic.com/media/20fc01_8d71969130d84c36bd1a5866a15ced9a%7Emv2.png"
+             alt="Kafi Dia — Café und Gemeinschaftsraum in der Lokstadt"
+             onerror="this.closest('.img-wrap').style.display='none'">
+        <div class="scrim" aria-hidden="true"></div>
+        <figcaption class="cap">Offenes Wohnzimmer, gebackenes Brot, offene Tür.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="bewertungen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Auf Google</p>
+          <h2>Was Gäste sagen</h2>
+        </div>
+      </div>
+      <div class="rating-block reveal">
+        <div class="rating-num">4.9</div>
+        <div class="rating-meta">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p>Bewertung von <strong>4.9 / 5</strong> aus <strong>14 Google-Rezensionen</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Vorbeikommen</p>
+          <h2>Emil-Krebs-Gasse 10</h2>
+        </div>
+      </div>
+      <div class="contact-grid reveal">
+        <div>
+          <ul class="info-list">
+            <li><span class="label">Adresse</span><span>Emil-Krebs-Gasse 10, 8400 Winterthur</span></li>
+            <li><span class="label">Telefon</span><a href="tel:+41793882858">+41 79 388 28 58</a></li>
+            <li><span class="label">E-Mail</span><a href="mailto:hola@kafidia.wtf">hola@kafidia.wtf</a></li>
+            <li><span class="label">Instagram</span><a href="https://www.instagram.com/kafidia__/" target="_blank" rel="noopener">@kafidia__</a></li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn primary" href="tel:+41793882858">Jetzt anrufen</a>
+            <a class="btn ghost" href="https://maps.google.com/maps?q=Kafi%20Dia%2C%20Emil-Krebs-Gasse%2010%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe title="Kafi Dia auf der Karte" loading="lazy"
+            src="https://maps.google.com/maps?q=Kafi%20Dia%2C%20Emil-Krebs-Gasse%2010%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="fmark">Kafi Dia</span>
+    <span class="fsocial"><a href="https://www.instagram.com/kafidia__/" target="_blank" rel="noopener">Instagram</a></span>
+    <span class="legal">
+      <span>© 2026 Kafi Dia, Emil-Krebs-Gasse 10, 8400 Winterthur</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+41793882858">Anrufen</a>
+  <a class="route" href="https://maps.google.com/maps?q=Kafi%20Dia%2C%20Emil-Krebs-Gasse%2010%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- live "jetzt offen" badge, computed from real hours data ---- */
+  var hours = [
+    { days: "Mo",    label: "Montag",     time: "Geschlossen" },
+    { days: "Di–Mi", label: "Di – Mi",    time: "07:00–19:00" },
+    { days: "Do–Fr", label: "Do – Fr",    time: "07:00–23:00" },
+    { days: "Sa",    label: "Samstag",    time: "08:00–23:00" },
+    { days: "So",    label: "Sonntag",    time: "08:00–16:00" }
+  ];
+  /* JS weekday (0=So..6=Sa) -> index into hours[] */
+  var dayMap = [4, 0, 1, 1, 2, 2, 3];
+
+  function parseRange(t){
+    if(t.indexOf("Geschlossen") !== -1) return null;
+    var parts = t.split("–");
+    if(parts.length !== 2) return null;
+    return { open: parts[0].trim(), close: parts[1].trim() };
+  }
+  function toMinutes(hhmm){
+    var bits = hhmm.split(":");
+    return parseInt(bits[0],10) * 60 + parseInt(bits[1],10);
+  }
+  function pad(n){ return (n < 10 ? "0" : "") + n; }
+
+  function renderStatus(){
+    var now = new Date();
+    var idx = dayMap[now.getDay()];
+    var entry = hours[idx];
+    var range = parseRange(entry.time);
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+
+    var dot = document.getElementById("statusDot");
+    var title = document.getElementById("statusTitle");
+    var sub = document.getElementById("statusSub");
+
+    var isOpen = false;
+    if(range){
+      var openMin = toMinutes(range.open);
+      var closeMin = toMinutes(range.close);
+      isOpen = nowMin >= openMin && nowMin < closeMin;
+    }
+
+    if(isOpen){
+      dot.classList.add("live");
+      dot.classList.remove("closed");
+      title.textContent = "Jetzt offen — bis " + range.close + " Uhr";
+      sub.textContent = "Heute (" + entry.days + "): " + entry.time + " Uhr.";
+    } else {
+      dot.classList.remove("live");
+      dot.classList.add("closed");
+      title.textContent = "Gerade geschlossen";
+      if(range){
+        sub.textContent = "Heute (" + entry.days + ") öffnet Kafi Dia " + range.open + " Uhr, schliesst " + range.close + " Uhr.";
+      } else {
+        sub.textContent = "Am Montag bleibt das Kafi Dia geschlossen.";
+      }
+    }
+
+    var list = document.getElementById("statusHours");
+    list.innerHTML = "";
+    hours.forEach(function(h){
+      var row = document.createElement("div");
+      row.className = "row" + (h === entry ? " today" : "");
+      var d = document.createElement("span");
+      d.textContent = h.days;
+      var s = document.createElement("strong");
+      s.textContent = h.time;
+      row.appendChild(d);
+      row.appendChild(s);
+      list.appendChild(row);
+    });
+  }
+  renderStatus();
+  setInterval(renderStatus, 60000);
+
+  /* ---- scroll reveals ---- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealEls = document.querySelectorAll(".reveal");
+  if(reduce || !("IntersectionObserver" in window)){
+    revealEls.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

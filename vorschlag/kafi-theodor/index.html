@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kafi Theodor Winterthur · Oase in Neuhegi</title>
+<meta name="description" content="Kafi Theodor, Barbara-Reinhart-Strasse 18, 8404 Winterthur: Oase und Treffpunkt in Neuhegi mit frischem Gebäck und Mittagsmenü. 4.7 von 5 Sternen bei 109 Google-Bewertungen. Mo–Fr 09:00–17:00, So 09:30–14:00.">
+<meta property="og:title" content="Kafi Theodor, Winterthur">
+<meta property="og:description" content="Oase und Treffpunkt in Neuhegi — Raum für Begegnung und Gemeinschaft, mit frischem Gebäck und Mittagsmenü.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kafitheodor.ch/">
+<meta property="og:image" content="https://www.kafitheodor.ch/img/kafitheodor4.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Kafi Theodor",
+  "url": "https://www.kafitheodor.ch/",
+  "image": "https://www.kafitheodor.ch/img/Logo_Kafi_Theodor_web.svg",
+  "telephone": "+41 52 245 13 17",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Barbara-Reinhart-Strasse 18",
+    "postalCode": "8404",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "09:30", "closes": "14:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "109"
+  },
+  "sameAs": [
+    "https://www.facebook.com/kafitheodor/"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#f4f7ef;
+    --surface:#ffffff;
+    --fg:#22301f;
+    --muted:#556352;
+    --brand:#5f7a4c;
+    --accent:#d59a56;
+    --morning:#f4e8c8;
+    --midday:#dfe8d2;
+    --afternoon:#ecdccb;
+    --maxw:1140px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Work Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.8vw + 12.6px, 17.5px);
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Lora', ui-serif, Georgia, serif; font-weight:600; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  ::selection{ background:var(--brand); color:#fff; }
+  section[id]{ scroll-margin-top:5.4rem; }
+  .eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:0.13em; font-size:0.72rem; color:var(--brand); }
+  .skip-link{ position:absolute; left:0.6rem; top:-3rem; z-index:100; background:var(--fg); color:#fff; padding:0.6rem 1rem; font-weight:700; text-decoration:none; transition:top .2s ease; }
+  .skip-link:focus{ top:0.6rem; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:var(--bg); padding:0.85rem 0; border-bottom:1px solid rgba(34,48,31,0.1); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  .logo img{ height:1.9rem; width:auto; }
+  .logo-fallback{ font-family:'Lora',serif; font-weight:700; font-size:1.3rem; color:var(--fg); }
+  .badge-mini{ display:none; align-items:center; gap:0.4rem; font-size:0.76rem; font-weight:700; background:var(--surface); border:1px solid rgba(34,48,31,0.15); border-radius:999px; padding:0.3rem 0.7rem; }
+  .badge-mini .dot{ width:0.55rem; height:0.55rem; border-radius:50%; background:var(--brand); }
+  .badge-mini.closed .dot{ background:var(--accent); }
+  nav.pill-nav{ display:flex; gap:0.3rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:600; font-size:0.82rem; padding:0.5rem 0.9rem; border-radius:999px; }
+  nav.pill-nav a:hover{ background:rgba(95,122,76,0.12); }
+  .navtoggle{ display:none; background:var(--fg); color:var(--bg); border:none; border-radius:999px; padding:0.5rem 1rem; font-weight:700; cursor:pointer; }
+
+  /* HERO */
+  .hero{ padding:clamp(2rem,6vw,3.6rem) 0 clamp(1.6rem,4vw,2.6rem); }
+  .hero h1{ font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.08; max-width:18ch; }
+  .hero .sub{ font-size:clamp(1rem,1.5vw,1.18rem); color:var(--muted); font-weight:500; max-width:52ch; margin-top:1rem; }
+  .cta-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.5rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:700; text-decoration:none; padding:0.8rem 1.4rem; border-radius:999px; border:2px solid var(--fg); }
+  .btn.solid{ background:var(--fg); color:var(--bg); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.4rem; background:var(--surface); border:1px solid rgba(34,48,31,0.15); border-radius:999px; padding:0.5rem 1.05rem; font-weight:700; font-size:0.85rem; margin-top:1.3rem; }
+  .rating-chip b{ font-family:'Lora',serif; font-size:1.1rem; color:var(--brand); }
+
+  .fact-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem; margin-top:clamp(1.6rem,4vw,2.4rem); }
+  .fact-card{ background:var(--surface); border:1px solid rgba(34,48,31,0.1); border-radius:18px; padding:1rem 1.1rem; }
+  .fact-card .k{ display:block; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--brand); margin-bottom:0.3rem; }
+  .fact-card .v{ font-weight:700; font-size:0.95rem; }
+
+  section{ padding:clamp(2rem,5vw,3.6rem) 0; }
+  .section-head{ margin-bottom:clamp(1.4rem,3vw,2.1rem); max-width:60ch; }
+  .section-head h2{ font-size:clamp(1.6rem,3vw,2.3rem); }
+  .section-head p{ color:var(--muted); font-weight:500; margin-top:0.55rem; }
+
+  /* ---------- SIGNATURE MODULE: three-beat daily rhythm ---------- */
+  .rhythm-status{ display:flex; align-items:center; gap:0.7rem; font-weight:700; font-size:1rem; margin-bottom:1.6rem; }
+  .rhythm-status .dot{ width:0.85rem; height:0.85rem; border-radius:50%; background:var(--brand); flex:none; }
+  .rhythm-status.closed .dot{ background:var(--accent); }
+  .beats{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+  .beat{
+    border-radius:22px; padding:clamp(1.3rem,3vw,1.8rem); border:2px solid transparent;
+    transition:border-color .3s ease, transform .3s ease;
+  }
+  .beat.morning{ background:var(--morning); }
+  .beat.midday{ background:var(--midday); }
+  .beat.afternoon{ background:var(--afternoon); }
+  .beat.now{ border-color:var(--fg); transform:translateY(-6px); }
+  @media (prefers-reduced-motion: reduce){ .beat.now{ transform:none; } }
+  .beat .time{ font-family:'Lora',serif; font-weight:600; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); }
+  .beat h3{ font-size:clamp(1.15rem,2.4vw,1.5rem); margin-top:0.3rem; }
+  .beat ul{ list-style:none; margin:0.8rem 0 0; padding:0; display:grid; gap:0.4rem; }
+  .beat li{ font-weight:600; font-size:0.92rem; }
+  .beat .now-pill{ display:none; margin-top:0.9rem; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; background:var(--fg); color:#fff; padding:0.3rem 0.7rem; border-radius:999px; }
+  .beat.now .now-pill{ display:inline-block; }
+
+  /* ---------- About / oasis ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(1.6rem,4vw,3rem); align-items:center; }
+  .about-grid p{ max-width:56ch; font-weight:500; }
+  .usp-list{ list-style:none; margin:1.2rem 0 0; padding:0; display:grid; gap:0.7rem; }
+  .usp-list li{ display:flex; gap:0.6rem; align-items:baseline; font-weight:600; }
+  .usp-list li::before{ content:"—"; color:var(--brand); flex:none; }
+  figure.about-photo{ margin:0; border-radius:24px; overflow:hidden; border:1px solid rgba(34,48,31,0.1); }
+  figure.about-photo img{ width:100%; height:clamp(220px,28vw,340px); object-fit:cover; }
+
+  /* ---------- Gallery ---------- */
+  .photo-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:0.9rem; }
+  .photo-grid figure{ margin:0; border-radius:20px; overflow:hidden; border:1px solid rgba(34,48,31,0.1); }
+  .photo-grid img{ width:100%; height:190px; object-fit:cover; display:block; transition:transform .35s ease; }
+  .photo-grid figure:hover img{ transform:scale(1.05); }
+  @media (prefers-reduced-motion: reduce){ .photo-grid figure:hover img{ transform:none; } }
+
+  /* ---------- Reviews ---------- */
+  .review-strip{ display:flex; align-items:center; gap:clamp(1.2rem,3vw,2rem); background:var(--brand); color:#fff; border-radius:28px; padding:clamp(1.6rem,4vw,2.6rem); flex-wrap:wrap; }
+  .review-strip .stars{ font-size:clamp(2rem,4.6vw,2.8rem); font-family:'Lora',serif; font-weight:700; }
+  .review-strip p{ margin:0; font-weight:600; max-width:42ch; }
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{ display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .contact-card{ background:var(--surface); border-radius:24px; padding:clamp(1.4rem,3vw,2rem); border:1px solid rgba(34,48,31,0.12); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .contact-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .contact-card .row span.k{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--brand); }
+  .contact-card a{ text-decoration:none; font-weight:700; }
+  .contact-card a:hover{ color:var(--brand); }
+  .mapwrap{ border-radius:24px; overflow:hidden; border:1px solid rgba(34,48,31,0.12); }
+  .mapwrap iframe{ width:100%; height:100%; min-height:280px; border:0; display:block; }
+  .social-row{ display:flex; gap:0.6rem; flex-wrap:wrap; }
+  .social-row a{ display:inline-flex; align-items:center; gap:0.4rem; text-decoration:none; font-weight:700; background:var(--bg); border:1px solid rgba(34,48,31,0.15); border-radius:999px; padding:0.5rem 1rem; font-size:0.85rem; }
+  .social-row a:hover{ background:var(--brand); color:#fff; }
+
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:var(--bg); }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:600; font-size:0.88rem; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.75; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--accent); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.85rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:700; font-family:'Lora',serif; font-size:1rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.2rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (min-width:640px){ .badge-mini{ display:inline-flex; } }
+  @media (max-width:860px){
+    .about-grid{ grid-template-columns:1fr; }
+    .about-grid .about-photo{ order:-1; }
+    .contact-wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width:700px){
+    .beats{ grid-template-columns:1fr; }
+    .beat.now{ transform:none; }
+  }
+  @media (max-width:640px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.8rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+  }
+  @media (max-width:400px){ .hero h1{ font-size:1.9rem; } }
+  @media (max-width:560px){
+    .fact-strip{ grid-template-columns:1fr; }
+  }
+  @media (max-width:360px){
+    .navrow{ gap:0.5rem; }
+    .rating-chip{ font-size:0.78rem; padding:0.4rem 0.8rem; }
+  }
+
+  @media print{
+    .callbar, .navtoggle, .badge-mini{ display:none; }
+    body{ background:#fff; color:#000; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top">
+      <img src="https://www.kafitheodor.ch/img/Logo_Kafi_Theodor_web.svg" alt="Kafi Theodor Logo" height="30"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span class="logo-fallback" style="display:none;">Kafi Theodor</span>
+    </a>
+    <span class="badge-mini" id="badge-mini" role="status" aria-live="polite"><span class="dot"></span><span id="badge-mini-text">…</span></span>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#rhythmus">Der Tag</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow reveal">Café · Neuhegi · Winterthur</p>
+      <h1 class="reveal">Eine Oase und ein Treffpunkt in Neuhegi.</h1>
+      <p class="sub reveal">Das Café bietet Raum für Begegnung und Gemeinschaft. Im Herzen von
+      Neuhegi gelegen, ist es ein erfrischendes, komfortables Ziel, das zum Verweilen und
+      Geniessen einlädt.</p>
+      <div class="cta-row reveal">
+        <a class="btn solid" href="tel:+41522451317">Anrufen</a>
+        <a class="btn ghost" href="#rhythmus">Der Tag im Kafi Theodor ↓</a>
+      </div>
+      <div class="rating-chip reveal"><b>4.7</b>&nbsp;/ 5 · 109 Google-Bewertungen</div>
+      <div class="fact-strip reveal">
+        <div class="fact-card"><span class="k">Adresse</span><span class="v">Barbara-Reinhart-Strasse 18</span></div>
+        <div class="fact-card"><span class="k">Telefon</span><span class="v">+41 52 245 13 17</span></div>
+        <div class="fact-card"><span class="k">Öffnungszeiten</span><span class="v">Mo–Fr 09–17 · So 09:30–14</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: three-beat daily rhythm + live status -->
+  <section id="rhythmus">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Der Tag im Kafi Theodor</h2>
+        <p>Morgens, mittags, nachmittags — drei Takte, alle aus der echten Karte. Der aktuelle
+        Takt wird live hervorgehoben.</p>
+      </div>
+      <div class="rhythm-status reveal" id="rhythm-status" role="status" aria-live="polite">
+        <span class="dot"></span><span id="rhythm-status-text">Status wird berechnet …</span>
+      </div>
+      <div class="beats reveal" id="beats">
+        <div class="beat morning" data-beat="morning">
+          <span class="time">Morgens</span>
+          <h3>Gebäck &amp; Espresso</h3>
+          <ul>
+            <li>Espresso — von der Espresso-Maschine</li>
+            <li>Gebäck</li>
+            <li>Frühstück</li>
+          </ul>
+          <span class="now-pill">Jetzt</span>
+        </div>
+        <div class="beat midday" data-beat="midday">
+          <span class="time">Mittags</span>
+          <h3>Mittagsmenü &amp; Flammkuchen</h3>
+          <ul>
+            <li>Mittagsmenü — Self-serve Buffet und Kücheneservice</li>
+            <li>Flammkuchen</li>
+          </ul>
+          <span class="now-pill">Jetzt</span>
+        </div>
+        <div class="beat afternoon" data-beat="afternoon">
+          <span class="time">Nachmittags</span>
+          <h3>Kuchen &amp; Kaffee</h3>
+          <ul>
+            <li>Kuchen</li>
+            <li>Espresso</li>
+          </ul>
+          <span class="now-pill">Jetzt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / OASIS -->
+  <section id="ueber-uns">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow reveal">Über das Kafi Theodor</p>
+        <h2 class="reveal" style="margin-top:0.4rem;">Raum für Begegnung und Gemeinschaft</h2>
+        <p class="reveal" style="margin-top:1rem;">Das Café bietet Raum für Begegnung und
+        Gemeinschaft. Im Herzen von Neuhegi gelegen, ist es ein erfrischendes, komfortables Ziel,
+        das zum Verweilen und Geniessen einlädt.</p>
+        <ul class="usp-list reveal">
+          <li>Oase im Quartier Neuhegi</li>
+          <li>Komfortabler Treffpunkt</li>
+          <li>Frisches Gebäck und Kuchen</li>
+          <li>Mittagsmenü mit Self-serve Buffet und Kücheneservice</li>
+        </ul>
+      </div>
+      <figure class="about-photo reveal">
+        <img src="https://www.kafitheodor.ch/img/kafitheodor4.jpg" alt="Kafi Theodor in Winterthur-Neuhegi" loading="lazy"
+          onerror="this.closest('figure').style.display='none'">
+      </figure>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Impressionen</h2>
+      </div>
+      <div class="photo-grid reveal">
+        <figure>
+          <img src="https://www.kafitheodor.ch/img/IMG_4826.jpg" alt="Impression aus dem Kafi Theodor" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://www.kafitheodor.ch/img/kafitheodor3.jpg" alt="Impression aus dem Kafi Theodor" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://images.squarespace-cdn.com/content/v1/57e2d1f329687fe6465b588c/1481825391410-O8HPS0QEDEIAJ4BC3V1E/ke17ZwdGBToddI8pDm48kGPVK--wGoWXJsqwlxbZlQN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5enfxu_O4VeONvneR-F6W8oeFhFqSrYyNrfPB9Y70_gvQ/DSC_1963.jpg?format=2500w"
+            alt="Impression aus dem Kafi Theodor" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="bewertung">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <p class="stars">4.7 ★</p>
+        <p>109 Google-Bewertungen — ohne Auswahl, ohne Kürzung, direkt von Google übernommen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Kontakt &amp; Lage</h2>
+        <p>Barbara-Reinhart-Strasse 18, Winterthur-Neuhegi.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card reveal">
+          <div class="row">
+            <span class="k">Adresse</span>
+            <span>Barbara-Reinhart-Strasse 18, 8404 Winterthur</span>
+          </div>
+          <div class="row">
+            <span class="k">Telefon</span>
+            <a href="tel:+41522451317">+41 52 245 13 17</a>
+          </div>
+          <div class="row">
+            <span class="k">Web</span>
+            <a href="https://www.kafitheodor.ch/" target="_blank" rel="noopener">kafitheodor.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Öffnungszeiten</span>
+            <span>Mo–Fr 09:00–17:00 · So 09:30–14:00</span>
+          </div>
+          <div class="row">
+            <span class="k">Social</span>
+            <div class="social-row">
+              <a href="https://www.facebook.com/kafitheodor/" target="_blank" rel="noopener">Facebook</a>
+            </div>
+          </div>
+          <div class="cta-row" style="margin-top:0.2rem;">
+            <a class="btn ghost" style="padding:0.6rem 1.1rem; font-size:0.85rem;"
+               href="https://maps.google.com/maps?daddr=Barbara-Reinhart-Strasse%2018%2C%208404%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte Kafi Theodor" loading="lazy"
+            src="https://maps.google.com/maps?q=Kafi%20Theodor%20Barbara-Reinhart-Strasse%2018%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>Kafi Theodor<br>Barbara-Reinhart-Strasse 18, 8404 Winterthur</div>
+      <div><a href="tel:+41522451317">+41 52 245 13 17</a><br><a href="https://www.kafitheodor.ch/" target="_blank" rel="noopener">kafitheodor.ch</a></div>
+      <div>Mo–Fr 09:00–17:00<br>So 09:30–14:00</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+41522451317" aria-label="Kafi Theodor anrufen">📞 Anrufen · +41 52 245 13 17</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* SIGNATURE MODULE: three-beat daily rhythm + "jetzt offen" —
+     both computed live from the real hours (Mo-Fr 09:00-17:00, So 09:30-14:00).
+     The beat boundaries (morning/midday/afternoon) are an editorial grouping of the
+     real menu items, not a claimed opening-hours fact. */
+  var openBlocks = {
+    1: { open: 9*60,  close: 17*60 },
+    2: { open: 9*60,  close: 17*60 },
+    3: { open: 9*60,  close: 17*60 },
+    4: { open: 9*60,  close: 17*60 },
+    5: { open: 9*60,  close: 17*60 },
+    0: { open: 9*60+30, close: 14*60 }
+  };
+
+  function pad(n){ return n < 10 ? '0'+n : String(n); }
+  function fmt(mins){ return pad(Math.floor(mins/60)) + ':' + pad(mins%60); }
+
+  function computeOpenStatus(){
+    var now = new Date();
+    var day = now.getDay();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var block = openBlocks[day];
+    var isOpen = !!block && mins >= block.open && mins < block.close;
+    return { isOpen: isOpen, block: block, mins: mins, day: day };
+  }
+
+  function computeBeat(mins){
+    /* Morgens bis 11:00, mittags 11:00-14:00, nachmittags ab 14:00 — an editorial
+       split of the real menu across the opening window, not a stated fact. */
+    if (mins < 11*60) return 'morning';
+    if (mins < 14*60) return 'midday';
+    return 'afternoon';
+  }
+
+  function render(){
+    var status = computeOpenStatus();
+    var rhythmStatus = document.getElementById('rhythm-status');
+    var rhythmText = document.getElementById('rhythm-status-text');
+    var badge = document.getElementById('badge-mini');
+    var badgeText = document.getElementById('badge-mini-text');
+
+    if (status.isOpen) {
+      rhythmStatus.classList.remove('closed');
+      badge.classList.remove('closed');
+      var closeLabel = fmt(status.block.close);
+      rhythmText.textContent = 'Jetzt geöffnet — heute bis ' + closeLabel + ' Uhr.';
+      badgeText.textContent = 'Jetzt offen';
+    } else {
+      rhythmStatus.classList.add('closed');
+      badge.classList.add('closed');
+      rhythmText.textContent = status.block
+        ? 'Gerade geschlossen — heute ab ' + fmt(status.block.open) + ' Uhr geöffnet.'
+        : 'Heute geschlossen.';
+      badgeText.textContent = 'Geschlossen';
+    }
+
+    var beat = status.isOpen ? computeBeat(status.mins) : null;
+    document.querySelectorAll('.beat').forEach(function(el){
+      el.classList.toggle('now', beat !== null && el.getAttribute('data-beat') === beat);
+    });
+  }
+  render();
+  window.setInterval(render, 60000);
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

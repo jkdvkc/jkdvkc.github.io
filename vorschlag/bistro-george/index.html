@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bistro George — Momos im Fotomuseum Winterthur</title>
+<meta name="description" content="Bistro George: das Bistro der Fotostiftung Schweiz und des Fotomuseums Winterthur. Authentische Tibetan Momos nach Familienrezept und täglich wechselnde Menüs. Grüzenstrasse 45, Winterthur.">
+<meta property="og:title" content="Bistro George — Momos im Fotomuseum Winterthur">
+<meta property="og:description" content="Authentische Tibetan Momos nach traditionellem Familienrezept, täglich wechselnde Menüs aus tibetischer, indischer und thailändischer Küche. Das Bistro der Fotostiftung Schweiz und des Fotomuseums Winterthur.">
+<meta property="og:image" content="https://fotostiftung.ch/wp-content/uploads/2023/06/amos_fotomuseum_winterthur_copyright_schweiztourismus_webresoltution_12.jpg">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="de_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Bistro George",
+  "servesCuisine": ["Tibetan", "Indian", "Thai"],
+  "telephone": "+41 52 238 10 90",
+  "email": "info@momokitchen.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Grüzenstrasse 45",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "url": "https://bistro-george.ch/",
+  "image": "https://fotostiftung.ch/wp-content/uploads/2023/06/amos_fotomuseum_winterthur_copyright_schweiztourismus_webresoltution_12.jpg",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday","Friday"], "opens": "11:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "11:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "11:00", "closes": "18:00"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.8",
+    "reviewCount": "56"
+  },
+  "sameAs": ["https://www.facebook.com/georgemuseumsbistro/"]
+}
+</script>
+<style>
+  :root{
+    --bg:#faf2e6;
+    --surface:#f2e3cd;
+    --fg:#2a2013;
+    --muted:#5f5140;
+    --brand:#c1852b;
+    --accent:#3d6b63;
+    --line: rgba(42,32,19,0.14);
+    --maxw: 1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.disp{font-family:'Space Grotesk', system-ui, sans-serif; font-weight:600; letter-spacing:-0.01em; margin:0 0 .4em;}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.25rem, 4vw, 3rem);}
+  section{padding-block:clamp(3rem, 7vw, 6rem);}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+  .label{font-family:'Space Grotesk',sans-serif; font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);}
+
+  /* header */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(250,242,230,0.88);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{display:flex; align-items:center; justify-content:space-between; padding-block:.85rem;}
+  .brandmark{text-decoration:none; display:flex; flex-direction:column; line-height:1.05;}
+  .brandmark .name{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(1.1rem,1.7vw,1.35rem);}
+  .brandmark .tag{font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent);}
+  nav.primary{display:flex; gap:clamp(.9rem,2vw,1.8rem); font-family:'Space Grotesk',sans-serif; font-size:.85rem;}
+  nav.primary a{text-decoration:none; color:var(--muted); border-bottom:1px solid transparent; padding-bottom:2px;}
+  nav.primary a:hover{color:var(--fg); border-color:var(--brand);}
+  .navcall{display:none;}
+  @media (min-width:720px){
+    .navcall{display:inline-flex; align-items:center; gap:.4rem; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:.82rem; text-decoration:none; color:#fff8ee; background:var(--accent); padding:.55rem 1rem; border-radius:999px;}
+  }
+  .menu-toggle{display:none;}
+  @media (max-width:719px){
+    nav.primary{position:fixed; inset:54px 0 auto 0; background:var(--surface); flex-direction:column; padding:1rem clamp(1.25rem,4vw,3rem) 1.4rem; border-bottom:1px solid var(--line); transform:translateY(-8px); opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease;}
+    nav.primary.open{opacity:1; pointer-events:auto; transform:translateY(0);}
+    nav.primary a{padding:.55rem 0; border-bottom:1px solid var(--line);}
+    .menu-toggle{display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; background:none; border:1px solid var(--line); border-radius:4px; color:var(--fg); font-size:1rem;}
+  }
+
+  /* hero — asymmetric overlap */
+  .hero{position:relative; padding-block: clamp(2.5rem,6vw,4rem) clamp(3rem,8vw,5.5rem);}
+  .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:clamp(1.5rem,4vw,3rem); align-items:start;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+  h1.hero-h{font-size:clamp(2.4rem,6vw,4.4rem); line-height:1.02; margin-bottom:.6rem;}
+  .hero-tagline{font-family:'Space Grotesk',sans-serif; font-size:clamp(1rem,1.6vw,1.2rem); color:var(--accent); margin-bottom:1.1rem;}
+  .hero-copy{max-width:52ch; font-size:clamp(1rem,1.3vw,1.12rem); color:var(--fg);}
+  .hero-cta{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.6rem;}
+  .btn{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:.88rem; text-decoration:none; padding:.8rem 1.3rem; border-radius:999px; display:inline-flex; align-items:center; gap:.5rem;}
+  .btn.primary{background:var(--brand); color:#2a2013;}
+  .btn.ghost{border:1px solid var(--fg); color:var(--fg);}
+  .btn.primary:hover{background:#a86e1e;}
+  .btn.ghost:hover{background:var(--fg); color:var(--bg);}
+
+  .hero-photo{position:relative; margin-top:clamp(1rem,3vw,0);}
+  .hero-photo figure{margin:0; border:1px solid var(--line); border-radius:6px; overflow:hidden; transform:rotate(1.1deg); background:var(--surface); box-shadow:0 18px 34px -18px rgba(42,32,19,0.35);}
+  .hero-photo img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; display:block;}
+  .hero-photo figcaption{font-family:'Space Grotesk',sans-serif; font-size:.68rem; letter-spacing:.03em; color:var(--muted); padding:.6rem .8rem; background:var(--surface); border-top:1px solid var(--line);}
+  .hero-photo.hide{display:none;}
+
+  .rating-chip{
+    display:inline-flex; align-items:center; gap:.5rem; margin-top:1.4rem;
+    font-family:'Space Grotesk',sans-serif; font-size:.78rem; color:var(--muted);
+    border:1px solid var(--line); padding:.5rem .9rem; border-radius:999px;
+  }
+  .rating-chip strong{color:var(--fg);}
+
+  /* section head pattern (differs from site 1: label left, no numbering ladder) */
+  .sec-head{margin-bottom:clamp(1.6rem,4vw,2.6rem);}
+  h2.sec-title{font-size:clamp(1.8rem,3.6vw,2.6rem); max-width:20ch;}
+
+  /* momo explainer — accordion "museum labels" */
+  .labels{display:grid; gap:1rem;}
+  .plaque{
+    border:1px solid var(--line); border-radius:8px; background:var(--surface); overflow:hidden;
+  }
+  .plaque button.plaque-head{
+    width:100%; text-align:left; background:none; border:0; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding:1.1rem 1.3rem; font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:600; color:var(--fg);
+  }
+  .plaque button.plaque-head .acc{font-family:'Space Grotesk',sans-serif; font-size:.7rem; letter-spacing:.1em; color:var(--accent); text-transform:uppercase; display:block; font-weight:500; margin-bottom:.2rem;}
+  .plaque-icon{flex:none; width:22px; height:22px; border:1px solid var(--accent); border-radius:50%; position:relative;}
+  .plaque-icon::before,.plaque-icon::after{content:""; position:absolute; background:var(--accent); left:50%; top:50%; transform:translate(-50%,-50%);}
+  .plaque-icon::before{width:10px; height:1.5px;}
+  .plaque-icon::after{width:1.5px; height:10px; transition:transform .2s ease;}
+  .plaque[data-open="true"] .plaque-icon::after{transform:translate(-50%,-50%) scaleY(0);}
+  .plaque-body{
+    max-height:0; overflow:hidden; transition:max-height .28s ease;
+  }
+  .plaque[data-open="true"] .plaque-body{max-height:200px;}
+  .plaque-body-inner{padding:0 1.3rem 1.2rem; color:var(--muted); font-size:1rem; max-width:60ch;}
+  @media (prefers-reduced-motion:reduce){ .plaque-body{transition:none;} .plaque-icon::after{transition:none;} }
+
+  /* Tagesgericht panel — signature module 2 */
+  .today-panel{
+    border:1px solid var(--line); border-radius:10px; background:var(--fg); color:var(--bg);
+    padding:clamp(1.6rem,4vw,2.6rem); display:grid; grid-template-columns: auto 1fr; gap:clamp(1.4rem,4vw,2.4rem); align-items:center;
+  }
+  @media (max-width:640px){ .today-panel{grid-template-columns:1fr;} }
+  .today-day{
+    font-family:'Space Grotesk',sans-serif; font-size:clamp(2.4rem,7vw,3.6rem); font-weight:700; line-height:1;
+    color:var(--brand);
+  }
+  .today-day .yr{display:block; font-size:.85rem; font-weight:500; color:#cfc0a5; letter-spacing:.06em; margin-top:.3rem; text-transform:uppercase; font-family:'Space Grotesk',sans-serif;}
+  .today-info .service{font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:600; margin-bottom:.4rem;}
+  .today-info .window{color:#d8cbb3; font-size:.95rem;}
+  .today-info .hint{margin-top:.7rem; font-size:.85rem; color:#b9ab8f; font-family:'Space Grotesk',sans-serif;}
+
+  /* about / museum */
+  .about-grid{display:grid; grid-template-columns: 1fr 1fr; gap:clamp(2rem,4vw,3.5rem); align-items:start;}
+  @media (max-width:820px){ .about-grid{grid-template-columns:1fr;} }
+  .usp-list{list-style:none; margin:0; padding:0; font-family:'Space Grotesk',sans-serif; font-size:.95rem;}
+  .usp-list li{padding:.7rem 0; border-top:1px solid var(--line); color:var(--muted);}
+  .usp-list li:first-child{border-top:none;}
+  .usp-list li strong{color:var(--fg); font-weight:600;}
+
+  /* visit / hours+map */
+  .visit-grid{display:grid; grid-template-columns: 1fr 1.2fr; gap:clamp(2rem,4vw,3.5rem);}
+  @media (max-width:860px){ .visit-grid{grid-template-columns:1fr;} }
+  .hourlist{list-style:none; margin:0 0 1.4rem; padding:0; font-family:'Space Grotesk',sans-serif; font-size:.92rem;}
+  .hourlist li{display:flex; justify-content:space-between; gap:1rem; padding:.65rem 0; border-top:1px solid var(--line);}
+  .hourlist li:first-child{border-top:none;}
+  .hourlist li span:first-child{color:var(--fg); font-weight:600;}
+  .hourlist li span:last-child{color:var(--muted); text-align:right;}
+  .hourlist li.today{background:var(--surface); margin-inline:-.6rem; padding-inline:.6rem; border-radius:6px;}
+  .summer-note{font-size:.85rem; color:var(--muted); font-family:'Space Grotesk',sans-serif; border-top:1px dashed var(--line); padding-top:.8rem; margin-top:.4rem;}
+  .contact-lines{font-family:'Space Grotesk',sans-serif; font-size:.95rem; color:var(--muted); margin-top:1rem;}
+  .contact-lines a{color:var(--fg); text-decoration:none; border-bottom:1px solid var(--line);}
+  .contact-lines a:hover{border-color:#8a5c16; color:#8a5c16;}
+  .mapbox{border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; background:var(--surface);}
+  .mapbox iframe{width:100%; height:100%; border:0;}
+
+  /* footer */
+  footer{border-top:1px solid var(--line); padding-block:2.2rem clamp(5rem,10vw,2.6rem);}
+  .foot-grid{display:flex; flex-wrap:wrap; gap:1.4rem; justify-content:space-between; align-items:flex-end;}
+  .foot-note{font-family:'Space Grotesk',sans-serif; font-size:.75rem; color:var(--muted);}
+  .foot-brand{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.1rem;}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* sticky mobile bar */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:50; display:none;
+    background:var(--fg); padding:.7rem clamp(1rem,4vw,2rem); align-items:center; justify-content:center;
+  }
+  @media (max-width:719px){ .mobile-bar{display:flex;} body{padding-bottom:64px;} }
+  .mobile-bar a{
+    width:100%; text-align:center; background:var(--brand); color:#2a2013; text-decoration:none;
+    padding:.85rem; border-radius:999px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.88rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brandmark" href="#top">
+      <span class="name">Bistro George</span>
+      <span class="tag">Fotomuseum Winterthur</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">☰</button>
+    <nav class="primary" id="primaryNav">
+      <a href="#momos">Momos</a>
+      <a href="#heute">Heute</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#besuch">Besuch</a>
+    </nav>
+    <a class="navcall" href="tel:+41522381090">052 238 10 90</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Momokitchen · Museumsbistro</p>
+        <h1 class="hero-h">Momos, mitten<br>im Museum.</h1>
+        <p class="hero-tagline">Das Bistro der Fotostiftung Schweiz und des Fotomuseums Winterthur.</p>
+        <p class="hero-copy">Kulinarischer Ort mit saisonaler, regionaler und nachhaltiger Küche: authentische Momos nach traditionellem Familienrezept und täglich wechselnde Menüs aus tibetischer, indischer und thailändischer Küche — in moderner, heller Atmosphäre.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="tel:+41522381090">Tisch anfragen</a>
+          <a class="btn ghost" href="#besuch">Adresse &amp; Zeiten</a>
+        </div>
+        <div class="rating-chip"><strong>3.8</strong> · 56 Google-Bewertungen</div>
+      </div>
+      <div class="hero-photo" id="heroPhoto">
+        <figure>
+          <img src="https://fotostiftung.ch/wp-content/uploads/2023/06/amos_fotomuseum_winterthur_copyright_schweiztourismus_webresoltution_12.jpg"
+               alt="Fotomuseum Winterthur an der Grüzenstrasse, Sitz von Bistro George"
+               loading="lazy"
+               onerror="this.closest('.hero-photo').classList.add('hide')">
+          <figcaption>Fotomuseum Winterthur — hier, an der Grüzenstrasse 45, liegt Bistro George. Bild: Schweiz Tourismus</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="momos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Was auf den Tisch kommt</p>
+        <h2 class="sec-title">Zwei feste Grössen auf der Karte</h2>
+      </div>
+      <div class="labels reveal">
+        <div class="plaque" data-open="true">
+          <button class="plaque-head" aria-expanded="true">
+            <span><span class="acc">Spezialität</span>Momos</span>
+            <span class="plaque-icon" aria-hidden="true"></span>
+          </button>
+          <div class="plaque-body">
+            <div class="plaque-body-inner">Tibetische Teigtaschen nach traditionellem Familienrezept — authentisch, wie sie im Bistro seit jeher zubereitet werden.</div>
+          </div>
+        </div>
+        <div class="plaque" data-open="false">
+          <button class="plaque-head" aria-expanded="false">
+            <span><span class="acc">Täglich neu</span>Tägliche Menüs</span>
+            <span class="plaque-icon" aria-hidden="true"></span>
+          </button>
+          <div class="plaque-body">
+            <div class="plaque-body-inner">Wechselnde Gerichte aus tibetischer, indischer und thailändischer Küche — jeden Tag anders, saisonal, regional und nachhaltig gekocht.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="heute">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Signature</p>
+        <h2 class="sec-title">Was heute im Bistro läuft</h2>
+      </div>
+      <div class="today-panel reveal" aria-live="polite">
+        <div class="today-day"><span id="todayLabel">—</span><span class="yr" id="todayFull"></span></div>
+        <div class="today-info">
+          <div class="service" id="todayService">Öffnungszeiten werden geladen …</div>
+          <div class="window" id="todayWindow"></div>
+          <div class="hint" id="todayHint"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Über Bistro George</p>
+        <h2 class="sec-title">Ein Bistro, das zum Museum gehört — und darüber hinausgeht</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div>
+          <p>Bistro George liegt im Fotomuseum Winterthur und gehört zur Fotostiftung Schweiz — konzipiert als kulinarischer Ort mit saisonaler, regionaler und nachhaltiger Küche, in modernem, hellem Design von Hannes Wettstein.</p>
+          <p>Man muss keine Ausstellung besuchen, um hier zu essen: Bistro George ist nicht nur für Museumsbesucher da.</p>
+        </div>
+        <ul class="usp-list">
+          <li><strong>Authentische Tibetan Momos</strong> nach Familienrezept</li>
+          <li><strong>Täglich wechselnde Menüs</strong></li>
+          <li><strong>Bio-Produkte</strong> und regionale Zutaten</li>
+          <li><strong>Museum-Bistro</strong> mit besonderem Ambiente</li>
+          <li><strong>Modernes Design</strong> von Hannes Wettstein</li>
+          <li><strong>Nicht nur für Museumsbesucher</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="besuch">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Besuch</p>
+        <h2 class="sec-title">Öffnungszeiten &amp; Lage</h2>
+      </div>
+      <div class="visit-grid reveal">
+        <div>
+          <ul class="hourlist" id="hourlist">
+            <li data-days="Di,Do,Fr"><span>Di–Fr</span><span>11:00–17:00, Mittagsmenü 11:30–13:30</span></li>
+            <li data-days="Mi"><span>Mi</span><span>11:00–20:00, Buffet ab 18:00</span></li>
+            <li data-days="Sa,So"><span>Sa–So</span><span>11:00–18:00</span></li>
+            <li data-days="Mo"><span>Mo</span><span>geschlossen</span></li>
+          </ul>
+          <p class="summer-note">Sommerschliessung: 13.–27. Juli 2026</p>
+          <div class="contact-lines">
+            <p>Grüzenstrasse 45, 8400 Winterthur</p>
+            <p><a href="tel:+41522381090">052 238 10 90</a></p>
+            <p><a href="mailto:info@momokitchen.ch">info@momokitchen.ch</a></p>
+            <p><a href="https://www.facebook.com/georgemuseumsbistro/" target="_blank" rel="noopener">Facebook</a></p>
+          </div>
+        </div>
+        <div class="mapbox">
+          <iframe src="https://maps.google.com/maps?q=Bistro%20George%20Winterthur%20Fotostiftung%20Gr%C3%BCzenstrasse&amp;z=16&amp;output=embed" title="Karte: Bistro George, Grüzenstrasse 45, Winterthur" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Bistro George</div>
+      <p class="foot-note">Grüzenstrasse 45, 8400 Winterthur · 052 238 10 90 · info@momokitchen.ch</p>
+    </div>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522381090">Anrufen — 052 238 10 90</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // mobile nav toggle
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('primaryNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  // reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.14});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // momo-label accordion
+  document.querySelectorAll('.plaque-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var plaque = btn.closest('.plaque');
+      var isOpen = plaque.getAttribute('data-open') === 'true';
+      plaque.setAttribute('data-open', isOpen ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+
+  // --- Signature module: "Was heute im Bistro läuft" — Tagesgericht panel from real hours data ---
+  var DAYNAMES_DE = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+  var DAYNAMES_FULL = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+
+  // rules verbatim from JSON hours (specific day "Mi" overrides the "Di–Fr" group)
+  function ruleForDow(dow){
+    if(dow === 1){ return {closed:true}; }
+    if(dow === 3){ return {open:[11*60,20*60], service:'Buffet ab 18:00 Uhr', label:'11:00–20:00 Uhr, Buffet ab 18:00'}; }
+    if(dow === 2 || dow === 4 || dow === 5){ return {open:[11*60,17*60], service:'Mittagsmenü 11:30–13:30 Uhr', label:'11:00–17:00 Uhr, Mittagsmenü 11:30–13:30'}; }
+    if(dow === 0 || dow === 6){ return {open:[11*60,18*60], service:null, label:'11:00–18:00 Uhr'}; }
+    return {closed:true};
+  }
+  function fmt(mins){
+    var h = Math.floor(mins/60), m = mins%60;
+    return (h<10?'0':'')+h + ':' + (m<10?'0':'')+m;
+  }
+
+  function updateTodayPanel(){
+    var labelEl = document.getElementById('todayLabel');
+    var fullEl = document.getElementById('todayFull');
+    var serviceEl = document.getElementById('todayService');
+    var windowEl = document.getElementById('todayWindow');
+    var hintEl = document.getElementById('todayHint');
+    if(!labelEl) return;
+
+    var now = new Date();
+    var zurich;
+    try{ zurich = new Date(now.toLocaleString('en-US', {timeZone:'Europe/Zurich'})); }
+    catch(e){ zurich = now; }
+    var dow = zurich.getDay();
+    var mins = zurich.getHours()*60 + zurich.getMinutes();
+
+    labelEl.textContent = DAYNAMES_DE[dow];
+    fullEl.textContent = DAYNAMES_FULL[dow];
+
+    var rule = ruleForDow(dow);
+
+    if(rule.closed){
+      serviceEl.textContent = 'Heute geschlossen';
+      windowEl.textContent = 'Montag ist Ruhetag.';
+      hintEl.textContent = 'Nächste Öffnung: Dienstag, 11:00 Uhr';
+      return;
+    }
+
+    windowEl.textContent = rule.label;
+
+    var isOpenNow = mins >= rule.open[0] && mins < rule.open[1];
+
+    if(!isOpenNow){
+      if(mins < rule.open[0]){
+        serviceEl.textContent = 'Heute noch geschlossen';
+        hintEl.textContent = 'Öffnet um ' + fmt(rule.open[0]) + ' Uhr';
+      } else {
+        serviceEl.textContent = 'Heute bereits geschlossen';
+        hintEl.textContent = 'Bis morgen';
+      }
+      return;
+    }
+
+    // open now — decide which service is running
+    if(dow === 3 && mins >= 18*60){
+      serviceEl.textContent = 'Buffet läuft gerade';
+      hintEl.textContent = 'Geöffnet bis ' + fmt(rule.open[1]) + ' Uhr';
+    } else if((dow === 2 || dow === 4 || dow === 5) && mins >= 11*60+30 && mins < 13*60+30){
+      serviceEl.textContent = 'Mittagsmenü läuft gerade';
+      hintEl.textContent = 'Bis 13:30 Uhr, danach geöffnet bis ' + fmt(rule.open[1]) + ' Uhr';
+    } else {
+      serviceEl.textContent = 'Jetzt geöffnet';
+      hintEl.textContent = 'Bis ' + fmt(rule.open[1]) + ' Uhr';
+    }
+  }
+
+  updateTodayPanel();
+  setInterval(updateTodayPanel, 60000);
+
+  // highlight today's row in the hours list
+  (function highlightHourlist(){
+    var now = new Date();
+    var zurich;
+    try{ zurich = new Date(now.toLocaleString('en-US', {timeZone:'Europe/Zurich'})); }
+    catch(e){ zurich = now; }
+    var dow = zurich.getDay();
+    var map = {0:'So',1:'Mo',2:'Di',3:'Mi',4:'Do',5:'Fr',6:'Sa'};
+    var todayCode = map[dow];
+    document.querySelectorAll('#hourlist li').forEach(function(li){
+      var days = (li.getAttribute('data-days') || '').split(',');
+      if(days.indexOf(todayCode) !== -1){ li.classList.add('today'); }
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>

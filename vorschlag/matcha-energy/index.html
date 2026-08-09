@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>matcha energy Winterthur — Japanischer Zeremonientee</title>
+<meta name="description" content="matcha energy Winterthur: frisch zubereitete japanische Matcha-Getränke aus hochwertigem Zeremonientee, alle drei Monate frisch importiert. 5.0 Sterne, 162 Bewertungen.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="matcha energy Winterthur — Sanfte Energie mit japanischem Zeremonientee">
+<meta property="og:description" content="Frisch zubereitete Matcha-Getränke aus hochwertigem japanischem Zeremonientee. Naturbelassen, ohne Konservierungsstoffe.">
+<meta property="og:url" content="https://matchaenergy.ch/">
+<meta property="og:image" content="https://matchaenergy.ch/matcha-trailer.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "matcha energy",
+  "description": "Spezialisiert auf frisch zubereitete japanische Matcha-Getränke aus hochwertigem Zeremonientee.",
+  "url": "https://matchaenergy.ch/",
+  "email": "hello@matchaenergy.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rudolfstrasse",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "162"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg:#f7f5ee;
+    --surface:#ecefe1;
+    --fg:#1e2818;
+    --muted:#57634c;
+    --brand:#4c6b34;
+    --accent:#c7a565;
+  }
+  *,*::before,*::after {
+    box-sizing:border-box;
+  }
+  html {
+    scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior:auto;
+    }
+  }
+  body {
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+    font-weight:400;
+    font-size:clamp(15px, 0.3vw + 14.4px, 17.5px);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img {
+    max-width:100%;
+    display:block;
+  }
+  a {
+    color:inherit;
+  }
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  :focus-visible {
+    outline:3px solid var(--accent);
+    outline-offset:4px;
+  }
+  h1,h2,h3 {
+    font-family:'Shippori Mincho', serif;
+    font-weight:600;
+    line-height:1.2;
+    margin:0;
+  }
+  .jp {
+    font-family:'Shippori Mincho', serif;
+    color:var(--brand);
+  }
+  .wrap {
+    max-width:1180px;
+    margin:0 auto;
+    padding-inline:clamp(1.2rem, 5vw, 3.4rem);
+  }
+  .skip-link {
+    position:absolute;
+    left:1rem;
+    top:-3rem;
+    background:var(--brand);
+    color:#fff;
+    padding:0.6rem 1rem;
+    z-index:100;
+    transition:top .2s ease;
+    text-decoration:none;
+  }
+  .skip-link:focus {
+    top:1rem;
+  }
+  .reveal {
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.is-visible {
+    opacity:1;
+    transform:none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity:1;
+      transform:none;
+      transition:none;
+    }
+  }
+  /* the bowl (chawan) motif — recurring circular device */
+  .bowl {
+    border-radius:50%;
+    background: radial-gradient(circle at 34% 30%, #d9dfc4, var(--brand) 70%);
+    box-shadow: inset -10px -14px 0 rgba(30,40,24,0.15);
+  }
+  /* header — off-centre, minimal */
+  header.site {
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(247,245,238,0.9);
+    backdrop-filter:saturate(140%) blur(6px);
+    border-bottom:1px solid rgba(30,40,24,0.12);
+  }
+  .nav-row {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:1rem;
+    gap:1rem;
+  }
+  .wordmark {
+    display:flex;
+    align-items:baseline;
+    gap:0.5rem;
+    text-decoration:none;
+  }
+  .wordmark .en {
+    font-family:'Shippori Mincho', serif;
+    font-size:1.15rem;
+    letter-spacing:0.02em;
+    color:var(--fg);
+  }
+  .wordmark .jp-mark {
+    font-size:0.85rem;
+    color:var(--brand);
+  }
+  nav.primary ul {
+    display:flex;
+    gap:clamp(1rem, 2.4vw, 2rem);
+    flex-wrap:wrap;
+  }
+  nav.primary a {
+    text-decoration:none;
+    font-size:0.86rem;
+    color:var(--muted);
+    letter-spacing:0.02em;
+  }
+  nav.primary a:hover {
+    color:var(--brand);
+  }
+  @media (max-width:700px) {
+    nav.primary ul {
+      gap:0.7rem 1rem;
+      font-size:0.8rem;
+    }
+  }
+  /* hero — asymmetric, ma-aware, deliberate empty space */
+  .hero {
+    position:relative;
+    padding-block:clamp(3.4rem, 11vw, 7.5rem) clamp(3rem, 8vw, 5rem);
+    overflow:hidden;
+  }
+  .hero-grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    position:relative;
+    min-height:clamp(360px, 62vw, 560px);
+  }
+  .hero-bowl {
+    position:absolute;
+    right:clamp(-2rem,2vw,2rem);
+    top:clamp(0px, 4vw, 2rem);
+    width:clamp(220px, 30vw, 400px);
+    aspect-ratio:1/1;
+    opacity:0.9;
+  }
+  .hero-copy {
+    position:relative;
+    max-width:26ch;
+    padding-top:clamp(1rem, 4vw, 2.4rem);
+  }
+  .eyebrow {
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brand);
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .eyebrow .jp-mark {
+    font-family:'Shippori Mincho', serif;
+    font-size:1rem;
+    letter-spacing:0;
+    text-transform:none;
+  }
+  .hero h1 {
+    font-size:clamp(2.6rem, 7.4vw, 5.2rem);
+    color:var(--fg);
+  }
+  .hero h1 .accent-word {
+    color:var(--brand);
+  }
+  .hero-tag {
+    margin-top:1.4rem;
+    max-width:36ch;
+    font-size:1.08rem;
+    color:var(--muted);
+  }
+  .hero-rating {
+    margin-top:2rem;
+    display:inline-flex;
+    align-items:center;
+    gap:0.7rem;
+  }
+  .hero-rating .num {
+    font-family:'Shippori Mincho', serif;
+    font-size:1.6rem;
+    color:var(--brand);
+  }
+  .hero-rating .stars {
+    color:var(--accent);
+    letter-spacing:0.1em;
+  }
+  .hero-rating small {
+    color:var(--muted);
+    font-size:0.85rem;
+  }
+  .hero-cta {
+    margin-top:2rem;
+  }
+  .btn {
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    font-weight:600;
+    text-decoration:none;
+    padding:0.85rem 1.4rem;
+    border-radius:100px;
+    border:1.5px solid var(--brand);
+    color:var(--brand);
+  }
+  .btn.solid {
+    background:var(--brand);
+    color:#fff;
+  }
+  .btn.solid:hover {
+    background:var(--fg);
+    border-color:var(--fg);
+  }
+  .btn.ghost:hover {
+    background:var(--brand);
+    color:#fff;
+  }
+  /* der weg des tees — process device using real about_de facts */
+  .weg {
+    padding-block:clamp(3rem, 8vw, 5rem);
+  }
+  .weg-head {
+    max-width:52ch;
+  }
+  .kicker {
+    font-size:0.78rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--brand);
+    margin-bottom:0.7rem;
+  }
+  h2 {
+    font-size:clamp(2rem, 5vw, 3.2rem);
+  }
+  .lede {
+    max-width:56ch;
+    color:var(--muted);
+    margin-top:0.9rem;
+  }
+  .weg-steps {
+    margin-top:clamp(2.4rem, 6vw, 4rem);
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:clamp(1.6rem, 4vw, 3rem);
+  }
+  @media (max-width:900px) {
+    .weg-steps {
+      grid-template-columns:1fr;
+      max-width:460px;
+    }
+  }
+  .step {
+    position:relative;
+    padding-top:2.4rem;
+  }
+  .step::before {
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:1.6rem;
+    height:1.6rem;
+    border-radius:50%;
+    border:1.5px solid var(--brand);
+  }
+  .step:nth-child(2) {
+    margin-top:2.2rem;
+  }
+  .step:nth-child(3) {
+    margin-top:0.4rem;
+  }
+  @media (max-width:900px) {
+    .step:nth-child(2), .step:nth-child(3) {
+      margin-top:0;
+    }
+  }
+  .step .step-no {
+    font-family:'Shippori Mincho', serif;
+    color:var(--brand);
+    font-size:0.95rem;
+  }
+  .step h3 {
+    font-size:1.3rem;
+    margin-top:0.4rem;
+  }
+  .step p {
+    margin-top:0.6rem;
+    color:var(--muted);
+    font-size:0.98rem;
+  }
+  /* whisk divider */
+  .whisk-divider {
+    display:flex;
+    justify-content:center;
+    padding-block:1.2rem;
+  }
+  .whisk {
+    display:flex;
+    gap:3px;
+    height:2.2rem;
+    align-items:flex-end;
+  }
+  .whisk span {
+    width:2px;
+    background:var(--accent);
+    opacity:0.7;
+  }
+  .whisk span:nth-child(odd) {
+    height:80%;
+  }
+  .whisk span:nth-child(even) {
+    height:100%;
+  }
+  /* warum — asymmetrische USP-Liste */
+  .warum {
+    padding-block:clamp(2rem, 5vw, 3rem);
+  }
+  .warum-grid {
+    display:grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap:clamp(1.6rem, 4vw, 3rem);
+    align-items:start;
+  }
+  @media (max-width:820px) {
+    .warum-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .warum-list {
+    display:grid;
+    gap:1.1rem;
+  }
+  .warum-list li {
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    font-size:1.05rem;
+    padding-block:0.6rem;
+    border-bottom:1px solid rgba(30,40,24,0.1);
+  }
+  .warum-list .mini-bowl {
+    width:1.5rem;
+    height:1.5rem;
+    flex:none;
+  }
+  /* signature module: bowl chosen — menu explorer */
+  .schale {
+    padding-block:clamp(3rem, 8vw, 5rem);
+    background:var(--surface);
+  }
+  .schale-layout {
+    display:grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap:clamp(2rem, 5vw, 4rem);
+    margin-top:clamp(2rem, 5vw, 3.4rem);
+    align-items:start;
+  }
+  @media (max-width:860px) {
+    .schale-layout {
+      grid-template-columns:1fr;
+    }
+  }
+  .cat-list {
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    position:sticky;
+    top:5.4rem;
+  }
+  .cat-btn {
+    all:unset;
+    cursor:pointer;
+    padding:0.75rem 1rem;
+    border-radius:12px;
+    font-size:0.98rem;
+    color:var(--muted);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .cat-btn .count {
+    font-size:0.78rem;
+    color:var(--muted);
+    opacity:0.7;
+  }
+  .cat-btn:hover {
+    background:rgba(76,107,52,0.08);
+    color:var(--fg);
+  }
+  .cat-btn.is-active {
+    background:var(--bg);
+    color:var(--brand);
+    font-weight:700;
+    box-shadow:0 1px 0 rgba(30,40,24,0.06);
+  }
+  .cat-btn.is-active .count {
+    color:var(--brand);
+  }
+  .item-panel {
+    min-height:200px;
+  }
+  .item-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    gap:1.1rem;
+  }
+  .item-card {
+    background:var(--bg);
+    border-radius:16px;
+    padding:1.1rem 1.2rem;
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
+  }
+  .item-card .mini-bowl {
+    width:2.4rem;
+    height:2.4rem;
+    flex:none;
+  }
+  .item-card .name {
+    font-weight:600;
+  }
+  .item-card .price {
+    margin-top:0.15rem;
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  .schale-note {
+    margin-top:1.6rem;
+    font-size:0.88rem;
+    color:var(--muted);
+  }
+  /* gallery — asymmetric mosaic */
+  .galerie {
+    padding-block:clamp(3rem, 8vw, 5rem);
+  }
+  .mosaic {
+    margin-top:clamp(2rem, 5vw, 3.4rem);
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:9vw;
+    gap:0.7rem;
+  }
+  @media (max-width:700px) {
+    .mosaic {
+      grid-template-columns:repeat(3,1fr);
+      grid-auto-rows:22vw;
+    }
+  }
+  .mosaic figure {
+    margin:0;
+    overflow:hidden;
+    border-radius:14px;
+    background:var(--surface);
+    position:relative;
+  }
+  .mosaic img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .mosaic figure:nth-child(6n+1) {
+    grid-column:span 2;
+    grid-row:span 2;
+  }
+  .mosaic figure:nth-child(6n+4) {
+    grid-row:span 2;
+  }
+  @media (max-width:700px) {
+    .mosaic figure:nth-child(6n+1) {
+      grid-column:span 2;
+      grid-row:span 1;
+    }
+    .mosaic figure:nth-child(6n+4) {
+      grid-row:span 1;
+    }
+  }
+  .galerie-note {
+    margin-top:1.4rem;
+    font-size:0.85rem;
+    color:var(--muted);
+    max-width:60ch;
+  }
+  /* bewertungen */
+  .bewertungen {
+    padding-block:clamp(3rem, 8vw, 5rem);
+    background:var(--surface);
+  }
+  .bew-row {
+    display:grid;
+    grid-template-columns: auto 1fr;
+    gap:clamp(1.6rem, 5vw, 3.4rem);
+    align-items:center;
+    margin-top:2rem;
+  }
+  @media (max-width:640px) {
+    .bew-row {
+      grid-template-columns:1fr;
+    }
+  }
+  .bew-bowl {
+    width:clamp(140px, 20vw, 220px);
+    aspect-ratio:1/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .bew-bowl .num {
+    font-family:'Shippori Mincho', serif;
+    font-size:clamp(2.6rem, 7vw, 4rem);
+    color:#fff;
+  }
+  .bew-copy p {
+    max-width:52ch;
+    color:var(--muted);
+  }
+  .bew-usp {
+    margin-top:1rem;
+    font-weight:600;
+    color:var(--brand);
+  }
+  /* lage */
+  .lage {
+    padding-block:clamp(3rem, 8vw, 5rem);
+  }
+  .lage-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(2rem, 5vw, 3rem);
+    margin-top:2rem;
+  }
+  @media (max-width:820px) {
+    .lage-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .info-list {
+    display:grid;
+    gap:1.1rem;
+  }
+  .info-list dt {
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--muted);
+  }
+  .info-list dd {
+    margin:0.2rem 0 0;
+    font-size:1.05rem;
+  }
+  .info-list a {
+    text-decoration:underline;
+    text-decoration-color:var(--accent);
+  }
+  .note-honest {
+    margin-top:0.3rem;
+    font-size:0.85rem;
+    color:var(--muted);
+    font-style:italic;
+  }
+  .map-frame {
+    border-radius:16px;
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe {
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  footer.site {
+    padding-block:2.4rem 6.5rem;
+    border-top:1px solid rgba(30,40,24,0.12);
+  }
+  .footer-grid {
+    display:flex;
+    justify-content:space-between;
+    gap:1.2rem;
+    flex-wrap:wrap;
+    font-size:0.82rem;
+    color:var(--muted);
+  }
+  .footer-grid a {
+    text-decoration:underline;
+  }
+  .footer-note {
+    margin-top:1rem;
+    font-size:0.72rem;
+    color:var(--muted);
+    opacity:0.85;
+  }
+  .mobile-bar {
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:60;
+    display:flex;
+    border-top:1px solid rgba(30,40,24,0.15);
+    background:var(--brand);
+  }
+  .mobile-bar a {
+    flex:1;
+    text-align:center;
+    padding:0.9rem 0.5rem;
+    font-weight:700;
+    text-decoration:none;
+    color:#fff;
+  }
+  @media (min-width:760px) {
+    .mobile-bar {
+      display:none;
+    }
+  }
+  @media (max-width:759px) {
+    body {
+      padding-bottom:3.4rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">
+      <span class="en">matcha energy</span>
+      <span class="jp-mark" aria-hidden="true">抹茶</span>
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#weg">Der Tee</a></li>
+        <li><a href="#schale">Karte</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#lage">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO — asymmetrisch, viel Leerraum, eine Schale ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="bowl hero-bowl reveal" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="jp-mark" aria-hidden="true">静</span> Winterthur · Matcha-Bar</p>
+        <h1>Sanfte<br>Energie<span class="accent-word">.</span></h1>
+        <p class="hero-tag">Spezialisiert auf frisch zubereitete japanische Matcha-Getränke aus hochwertigem Zeremonientee — naturbelassen, ohne Konservierungsstoffe oder künstliche Farbstoffe.</p>
+        <div class="hero-rating">
+          <span class="num">5.0</span>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <small>162 Google-Bewertungen</small>
+        </div>
+        <div class="hero-cta">
+          <a class="btn solid" href="#schale">Zur Karte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DER WEG DES TEES — Prozess aus echten Fakten ============ -->
+  <section class="weg" id="weg">
+    <div class="wrap">
+      <div class="weg-head reveal">
+        <p class="kicker">Der Tee</p>
+        <h2>Vom Feld<br>in die Schale</h2>
+        <p class="lede">Kein Marketing-Versprechen, sondern was tatsächlich in der Zubereitung steckt.</p>
+      </div>
+      <div class="weg-steps">
+        <div class="step reveal">
+          <span class="step-no">01 <span class="jp-mark" aria-hidden="true">産</span></span>
+          <h3>Japanischer Zeremonientee</h3>
+          <p>Hochwertiger Zeremonientee aus Japan — alle drei Monate frisch importiert.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-no">02 <span class="jp-mark" aria-hidden="true">冷</span></span>
+          <h3>Kühl gelagert</h3>
+          <p>Zwischen den Importen wird der Tee kühl gelagert, um Farbe und Aroma zu erhalten.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-no">03 <span class="jp-mark" aria-hidden="true">簡</span></span>
+          <h3>Naturbelassen zubereitet</h3>
+          <p>Frisch zubereitet, mit naturbelassenen Zutaten — ohne Konservierungsstoffe oder künstliche Farbstoffe.</p>
+        </div>
+      </div>
+      <div class="whisk-divider" aria-hidden="true">
+        <div class="whisk">
+          <span style="height:60%"></span><span style="height:90%"></span><span style="height:70%"></span>
+          <span style="height:100%"></span><span style="height:65%"></span><span style="height:85%"></span>
+          <span style="height:75%"></span><span style="height:95%"></span><span style="height:60%"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WARUM MATCHA ENERGY — USPs, asymmetrisch ============ -->
+  <section class="warum">
+    <div class="wrap warum-grid">
+      <div class="warum-head reveal">
+        <p class="kicker">Warum</p>
+        <h2>Vier Gründe,<br>vorbeizukommen</h2>
+      </div>
+      <ul class="warum-list reveal">
+        <li>
+          <span class="bowl mini-bowl" aria-hidden="true"></span>
+          <span>Japanischer Zeremonientee — frische Importe alle drei Monate</span>
+        </li>
+        <li>
+          <span class="bowl mini-bowl" aria-hidden="true"></span>
+          <span>Keine Konservierungsstoffe oder künstliche Farbstoffe</span>
+        </li>
+        <li>
+          <span class="bowl mini-bowl" aria-hidden="true"></span>
+          <span>Frisch zubereitet, für jede Bestellung neu</span>
+        </li>
+        <li>
+          <span class="bowl mini-bowl" aria-hidden="true"></span>
+          <span>Über 150 fünf-Sterne Google-Bewertungen</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE MODUL: WÄHLE DEINE SCHALE — Menü-Explorer ============ -->
+  <section class="schale" id="schale">
+    <div class="wrap">
+      <p class="kicker">Die Karte</p>
+      <h2>Wähle deine<br>Schale</h2>
+      <p class="lede">Alle elf Positionen, so wie sie auf der Speisekarte der matcha energy stehen — nach Kategorie sortiert. Preise sind auf der Website nicht veröffentlicht, darum zeigen wir hier ehrlich nur die Namen.</p>
+      <div class="schale-layout">
+        <nav class="cat-list" id="cat-list" aria-label="Menükategorien">
+          <button class="cat-btn is-active" type="button" data-cat="0">Espresso &amp; Hojicha <span class="count">3</span></button>
+          <button class="cat-btn" type="button" data-cat="1">Matcha Getränke <span class="count">2</span></button>
+          <button class="cat-btn" type="button" data-cat="2">Matcha Früchte <span class="count">4</span></button>
+          <button class="cat-btn" type="button" data-cat="3">Snacks <span class="count">2</span></button>
+        </nav>
+        <div class="item-panel reveal" id="item-panel" aria-live="polite">
+          <!-- filled by JS from real menu data -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIE — asymmetrisches Mosaik ============ -->
+  <section class="galerie" id="galerie">
+    <div class="wrap">
+      <p class="kicker">Aus der Bar</p>
+      <h2>Was in der Schale landet</h2>
+      <div class="mosaic reveal" id="mosaic">
+        <!-- filled by JS from real image URLs -->
+      </div>
+      <p class="galerie-note">Bildmaterial von matchaenergy.ch — Produktfotos der eigenen Getränke und Zutaten.</p>
+    </div>
+  </section>
+
+  <!-- ============ BEWERTUNGEN ============ -->
+  <section class="bewertungen">
+    <div class="wrap">
+      <p class="kicker">Was Gäste sagen</p>
+      <h2>Fünf von fünf</h2>
+      <div class="bew-row reveal">
+        <div class="bowl bew-bowl" aria-hidden="true"><span class="num">5.0</span></div>
+        <div class="bew-copy">
+          <p>162 Google-Bewertungen, im Schnitt die volle Punktzahl — für eine Bar, die auf ein einziges Getränk in vielen Varianten setzt, keine Selbstverständlichkeit.</p>
+          <p class="bew-usp">Über 150 fünf-Sterne Google-Bewertungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LAGE / KONTAKT ============ -->
+  <section class="lage" id="lage">
+    <div class="wrap">
+      <p class="kicker">Finden</p>
+      <h2>An der<br>Rudolfstrasse</h2>
+      <div class="lage-grid">
+        <div class="reveal">
+          <dl class="info-list">
+            <div>
+              <dt>Adresse</dt>
+              <dd>Rudolfstrasse, 8400 Winterthur</dd>
+            </div>
+            <div>
+              <dt>E-Mail</dt>
+              <dd><a href="mailto:hello@matchaenergy.ch">hello@matchaenergy.ch</a></dd>
+            </div>
+            <div>
+              <dt>Öffnungszeiten</dt>
+              <dd>—</dd>
+              <p class="note-honest">Aktuell nicht auf der Website veröffentlicht.</p>
+            </div>
+            <div>
+              <dt>Instagram</dt>
+              <dd>Aktiv, saisonal mit Updates</dd>
+            </div>
+            <div>
+              <dt>Website</dt>
+              <dd><a href="https://matchaenergy.ch/" target="_blank" rel="noopener">matchaenergy.ch</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=matcha%20energy%20Winterthur&amp;z=16&amp;output=embed"
+            title="Karte: matcha energy, Rudolfstrasse, Winterthur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span>matcha energy · Rudolfstrasse, 8400 Winterthur</span>
+      <span><a href="mailto:hello@matchaenergy.ch">hello@matchaenergy.ch</a></span>
+      <span><a href="https://matchaenergy.ch/" target="_blank" rel="noopener">matchaenergy.ch</a></span>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="mailto:hello@matchaenergy.ch">✉️ Schreiben</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Real menu data from JSON ---------------- */
+  var categories = [
+    { name:"Espresso & Hojicha", items:["Espresso","Americano","Hojicha Latte"] },
+    { name:"Matcha Getränke", items:["Matcha Latte Hot","Matcha Latte Cold"] },
+    { name:"Matcha Früchte", items:["Matcha Erdbeeren","Matcha Mango","Matcha Ube","Matcha Cloud"] },
+    { name:"Snacks", items:["Matcha Schokolade","Matcha Cookies"] }
+  ];
+
+  var panel = document.getElementById("item-panel");
+  var buttons = document.querySelectorAll(".cat-btn");
+
+  function renderCat(idx){
+    var cat = categories[idx];
+    var grid = document.createElement("div");
+    grid.className = "item-grid";
+    cat.items.forEach(function(name){
+      var card = document.createElement("div");
+      card.className = "item-card";
+      var mini = document.createElement("span");
+      mini.className = "bowl mini-bowl";
+      mini.setAttribute("aria-hidden", "true");
+      var text = document.createElement("div");
+      var nm = document.createElement("div");
+      nm.className = "name";
+      nm.textContent = name;
+      var pr = document.createElement("div");
+      pr.className = "price";
+      pr.textContent = "Preis auf Anfrage";
+      text.appendChild(nm);
+      text.appendChild(pr);
+      card.appendChild(mini);
+      card.appendChild(text);
+      grid.appendChild(card);
+    });
+    panel.innerHTML = "";
+    panel.appendChild(grid);
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      buttons.forEach(function(b){ b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+      renderCat(Number(btn.dataset.cat));
+    });
+  });
+  renderCat(0);
+
+  /* ---------------- Gallery — real image URLs only ---------------- */
+  var images = [
+    { src:"https://matchaenergy.ch/lattehot.png", alt:"Matcha Latte Hot bei matcha energy" },
+    { src:"https://matchaenergy.ch/lattec.png", alt:"Matcha Latte Cold bei matcha energy" },
+    { src:"https://matchaenergy.ch/strawberry.png", alt:"Matcha Erdbeeren bei matcha energy" },
+    { src:"https://matchaenergy.ch/mango.png", alt:"Matcha Mango bei matcha energy" },
+    { src:"https://matchaenergy.ch/ube.png", alt:"Matcha Ube bei matcha energy" },
+    { src:"https://matchaenergy.ch/cocnut.png", alt:"Matcha Cloud bei matcha energy" },
+    { src:"https://matchaenergy.ch/espresso.png", alt:"Espresso bei matcha energy" },
+    { src:"https://matchaenergy.ch/hojicha.png", alt:"Hojicha Latte bei matcha energy" },
+    { src:"https://matchaenergy.ch/americano.png", alt:"Americano bei matcha energy" },
+    { src:"https://matchaenergy.ch/choglate.png", alt:"Matcha Schokolade bei matcha energy" },
+    { src:"https://matchaenergy.ch/cookies-2.png", alt:"Matcha Cookies bei matcha energy" },
+    { src:"https://matchaenergy.ch/brightcolor.png", alt:"Frische Matcha-Farbe bei matcha energy" }
+  ];
+  var mosaic = document.getElementById("mosaic");
+  images.forEach(function(im){
+    var fig = document.createElement("figure");
+    var img = document.createElement("img");
+    img.src = im.src;
+    img.alt = im.alt;
+    img.loading = "lazy";
+    img.onerror = function(){ fig.style.display = "none"; };
+    fig.appendChild(img);
+    mosaic.appendChild(fig);
+  });
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
+      });
+    }, { threshold:0.12 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+
+</body>
+</html>

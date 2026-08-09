@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reda Franca-Emilia Restaurant Hirschen – Winterthur</title>
+<meta name="description" content="Reda Franca-Emilia Restaurant Hirschen, Winterthur: Restaurant mit Zimmern, 4.9 ★ aus 128 Google-Bewertungen. Kein eigener Webauftritt — Telefon +41 52 526 06 29.">
+<meta property="og:title" content="Reda Franca-Emilia Restaurant Hirschen">
+<meta property="og:description" content="Restaurant mit Zimmern in Winterthur, 4.9 ★ aus 128 Bewertungen. Bislang ohne eigene Website.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Caveat:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Reda Franca-Emilia Restaurant Hirschen",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41525260629",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "128"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#6d1626;
+    --surface:#f7f0e2;
+    --fg:#f7f0e2;
+    --muted:#e2c3b8;
+    --brand:#f7f0e2;
+    --accent:#d8a13c;
+    --line:rgba(247,240,226,0.22);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'EB Garamond',Georgia,serif;
+    font-size:clamp(15px,0.3vw + 14px,18px);
+    line-height:1.7;-webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:38px 38px;
+  }
+  h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-height:1.05;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2.6rem,6vw + 1rem,4.8rem);font-style:italic;}
+  h2{font-size:clamp(1.6rem,2.6vw + 1rem,2.3rem);}
+  .hand{font-family:'Caveat',cursive;}
+  p{margin:0 0 1em;}
+  a{color:var(--accent);}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;list-style:none;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--accent);color:#3a0e15;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.4rem);}
+  .eyebrow{font-family:'Caveat',cursive;font-size:1.3rem;color:var(--accent);}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1.2rem,4vw,2.4rem);
+    background:rgba(109,22,38,0.88);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.05rem;}
+  header a.call{background:var(--accent);color:#3a0e15;text-decoration:none;font-weight:700;
+    padding:0.55em 1.1em;border-radius:3px;font-size:0.86rem;font-family:'EB Garamond',serif;}
+  header a.call:hover{background:#c68f30;}
+
+  main{padding-top:58px;}
+  section{padding:clamp(2.6rem,7vw,5rem) 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+
+  [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+  /* hero */
+  .hero{padding-top:calc(58px + clamp(2.2rem,6vw,4rem));text-align:center;}
+  .hero .lead{max-width:44ch;margin:1.2rem auto 0;color:var(--muted);font-size:clamp(1rem,0.4vw + 1rem,1.15rem);}
+  .rating-badge{display:inline-flex;align-items:baseline;gap:0.5rem;margin-top:1.8rem;border:1px solid var(--line);
+    border-radius:999px;padding:0.6rem 1.3rem;}
+  .rating-badge b{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--accent);}
+  .rating-badge span{font-size:0.85rem;color:var(--muted);}
+  .cta-row{display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center;margin-top:1.8rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.5em;padding:0.85em 1.6em;border-radius:3px;font-weight:600;
+    text-decoration:none;font-size:0.95rem;border:1px solid var(--line);font-family:'EB Garamond',serif;}
+  .btn-primary{background:var(--accent);color:#3a0e15;border-color:var(--accent);}
+  .btn-primary:hover{background:#c68f30;}
+  .btn-ghost{background:transparent;color:var(--fg);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* the gap: pitch */
+  .pitch{text-align:center;}
+  .pitch blockquote{margin:0;font-family:'Caveat',cursive;font-size:clamp(1.5rem,3vw + 1rem,2.1rem);color:var(--fg);
+    line-height:1.4;max-width:34ch;margin:0 auto;}
+  .pitch blockquote::before,.pitch blockquote::after{color:var(--accent);}
+  .pitch blockquote::before{content:"“";}
+  .pitch blockquote::after{content:"”";}
+  .pitch .sig{margin-top:1.2rem;color:var(--muted);font-size:0.9rem;}
+
+  /* the notecard: honest module */
+  .card{background:var(--surface);color:#3a0e15;border-radius:3px;padding:clamp(1.8rem,5vw,2.8rem);
+    box-shadow:0 18px 40px rgba(0,0,0,0.28);transform:rotate(-0.6deg);position:relative;}
+  .card::before{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%) rotate(3deg);
+    width:56px;height:20px;background:rgba(216,161,60,0.55);border:1px solid rgba(216,161,60,0.8);}
+  .card h3{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;margin-bottom:1rem;color:#6d1626;}
+  .card ul li{padding:0.5em 0;border-bottom:1px dashed rgba(58,14,21,0.25);font-size:0.95rem;}
+  .card ul li b{color:#6d1626;}
+  .card .flip-btn{margin-top:1.2rem;background:none;border:1px solid rgba(58,14,21,0.35);color:#3a0e15;
+    font-family:'EB Garamond',serif;font-size:0.85rem;padding:0.5em 1em;border-radius:3px;cursor:pointer;}
+  .card .flip-btn:hover{border-color:#6d1626;}
+  .card .flip-btn:focus-visible{outline-offset:2px;}
+  .card::after{
+    content:"";position:absolute;bottom:-8px;right:18px;width:34px;height:34px;border-radius:50%;
+    background:var(--accent);opacity:0.85;box-shadow:0 4px 8px rgba(0,0,0,0.25);
+  }
+  .rating-badge{transition:border-color 0.2s ease;}
+  .rating-badge:hover{border-color:var(--accent);}
+  .phone-big{transition:color 0.2s ease;}
+  .card-back{display:none;}
+  .card-back.is-shown{display:block;}
+  .card-front.is-hidden{display:none;}
+
+  .facts-list li{display:flex;justify-content:space-between;gap:1rem;}
+  .facts-list li span:last-child{color:var(--muted);}
+  .unknown-list li{color:rgba(58,14,21,0.55);}
+  .unknown-list li::before{content:"— ";}
+
+  .contact-block{text-align:center;}
+  .phone-big{display:inline-block;margin-top:0.6rem;font-family:'Playfair Display',serif;font-weight:700;
+    font-size:clamp(1.7rem,4vw,2.4rem);color:var(--accent);text-decoration:none;}
+  .phone-big:hover{color:#c68f30;}
+  .contact-block p{color:var(--muted);max-width:46ch;margin:0.8rem auto 0;}
+
+  .faq{max-width:56ch;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line);padding:1.1rem 0;}
+  .faq-item .q{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;margin-bottom:0.5rem;}
+  .faq-item .a{color:var(--muted);margin:0;font-size:0.95rem;}
+
+  .map-frame{border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:2rem;filter:sepia(0.15);}
+  .map-frame iframe{width:100%;height:280px;border:0;display:block;}
+
+  footer{padding:clamp(2rem,5vw,3rem) 0 6rem;border-top:1px solid var(--line);text-align:center;}
+  footer a{color:var(--accent);}
+  .foot-note{margin-top:1rem;font-size:0.8rem;color:var(--muted);}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--accent);display:none;}
+  .mobile-bar a{display:block;text-align:center;color:#3a0e15;font-weight:700;padding:0.9rem;text-decoration:none;font-family:'EB Garamond',serif;}
+  @media (max-width:720px){ .mobile-bar{display:block;} main{padding-bottom:1rem;} }
+
+  @media (max-width:360px){
+    .wrap{padding:0 1rem;}
+    header{padding:0.75rem 1rem;}
+    .cta-row{flex-direction:column;align-items:stretch;}
+    .cta-row .btn{text-align:center;justify-content:center;}
+  }
+
+  @media print{
+    header,.mobile-bar,.map-frame{display:none;}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Reda Franca-Emilia</div>
+  <nav aria-label="Hauptnavigation">
+    <a class="call" href="tel:+41525260629">052 526 06 29</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap">
+    <span class="eyebrow">Restaurant mit Zimmern · Winterthur</span>
+    <h1>Reda Franca-Emilia<br>Restaurant Hirschen</h1>
+    <p class="lead">Emilia-Romagna-Küche im Hirschen. Geführt, gekocht, bewertet — nur noch nicht online erzählt.</p>
+    <div class="rating-badge">
+      <b>4.9</b>
+      <span>★ aus 128 Google-Bewertungen</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+41525260629">Anrufen: 052 526 06 29</a>
+      <a class="btn btn-ghost" href="#karte">Lage in Winterthur</a>
+    </div>
+  </section>
+
+  <section class="pitch" data-reveal>
+    <div class="wrap">
+      <blockquote>128 Menschen haben ihre Meinung hinterlassen. Keiner davon auf der eigenen Website — es gibt noch keine.</blockquote>
+      <p class="sig">Das ist die ganze Lücke, und sie ist ungewöhnlich gross für eine Bewertung dieser Höhe.</p>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <span class="eyebrow">Zur Einordnung</span>
+      <h2 style="margin-top:0.4rem;margin-bottom:1rem;">Restaurant mit Zimmern</h2>
+      <p style="max-width:56ch;">So ist das Haus kategorisiert: ein Restaurant, das zugleich Zimmer führt — der Hirschen als Ort zum Essen und zum Bleiben. Emilia-Romagna-Küche ist die Ausrichtung; Region bekannt für frische Pasta, lange Familienrezepte und deftige, unkomplizierte Gerichte. Welche Gerichte konkret auf der Karte stehen, welche Zimmer es gibt und was sie kosten, ist öffentlich nirgends dokumentiert — darum steht es auch hier nicht.</p>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="card">
+        <div class="card-front">
+          <h3>Auf der Karte notiert</h3>
+          <ul class="facts-list">
+            <li><span><b>Name</b></span><span>Reda Franca-Emilia Restaurant Hirschen</span></li>
+            <li><span><b>Kategorie</b></span><span>Restaurant mit Zimmern</span></li>
+            <li><span><b>Küche</b></span><span>Emilia-Romagna</span></li>
+            <li><span><b>Ort</b></span><span>Winterthur</span></li>
+            <li><span><b>Telefon</b></span><span>052 526 06 29</span></li>
+            <li><span><b>Bewertung</b></span><span>4.9 ★ (128)</span></li>
+          </ul>
+          <button type="button" class="flip-btn" id="flipBtn">Rückseite: was (noch) fehlt</button>
+        </div>
+        <div class="card-back" id="cardBack">
+          <h3>Was auf dieser Seite bewusst fehlt</h3>
+          <ul class="unknown-list">
+            <li>Strassenadresse — nicht veröffentlicht</li>
+            <li>Öffnungszeiten — nicht veröffentlicht</li>
+            <li>Speisekarte und Preise — nicht veröffentlicht</li>
+            <li>Zimmerzahl und -preise — nicht veröffentlicht</li>
+            <li>Eigene Website — existiert derzeit nicht</li>
+          </ul>
+          <button type="button" class="flip-btn" id="flipBackBtn">Zurück zur Vorderseite</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap faq">
+      <span class="eyebrow">Bevor Sie anrufen</span>
+      <h2 style="margin-top:0.4rem;margin-bottom:1.4rem;">Zwei ehrliche Antworten</h2>
+      <div class="faq-item">
+        <p class="q">Kann man online reservieren?</p>
+        <p class="a">Nicht, dass eine Buchungsseite hinterlegt wäre. Der Anruf ist derzeit der einzige bekannte Weg zu einem Tisch.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">Gibt es wirklich Zimmer zum Übernachten?</p>
+        <p class="a">Die Kategorie lautet „Restaurant mit Zimmern“ — das steht so erfasst. Zimmerzahl, Ausstattung und Preise sind aber nirgends veröffentlicht, darum fehlen sie hier bewusst.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-block" data-reveal>
+    <div class="wrap">
+      <span class="eyebrow">Reservieren</span>
+      <h2 style="margin-top:0.4rem;">Der Tisch ist ein Anruf entfernt</h2>
+      <a class="phone-big" href="tel:+41525260629">052 526 06 29</a>
+      <p>Adresse, Öffnungszeiten und Speisekarte sind derzeit nur telefonisch zu erfahren — es gibt keine offizielle Website, die sie führt.</p>
+    </div>
+  </section>
+
+  <section id="karte" data-reveal>
+    <div class="wrap">
+      <span class="eyebrow">Lage</span>
+      <h2 style="margin-top:0.4rem;margin-bottom:0.6rem;">Winterthur</h2>
+      <p style="color:var(--muted);">Ohne eigene Adresse zeigt die Karte den Ort anhand von Name und Stadt.</p>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Reda%20Franca-Emilia%20Restaurant%20Hirschen%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Reda Franca-Emilia Restaurant Hirschen, Winterthur" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Reda Franca-Emilia Restaurant Hirschen</strong><br>
+    Winterthur · <a href="tel:+41525260629">052 526 06 29</a>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525260629">Anrufen · 052 526 06 29</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* honest card flip: real text only, no data fetched */
+  var front = document.querySelector('.card-front');
+  var back = document.getElementById('cardBack');
+  var flipBtn = document.getElementById('flipBtn');
+  var flipBackBtn = document.getElementById('flipBackBtn');
+  flipBtn.addEventListener('click', function(){
+    front.classList.add('is-hidden');
+    back.classList.add('is-shown');
+  });
+  flipBackBtn.addEventListener('click', function(){
+    front.classList.remove('is-hidden');
+    back.classList.remove('is-shown');
+  });
+})();
+</script>
+
+</body>
+</html>

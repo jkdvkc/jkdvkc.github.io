@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nelson Pub Winterthur — Hauseigene Biere, Live-Sport &amp; Pub-Kultur</title>
+<meta name="description" content="Nelson Pub an der Technikumstrasse 73 in Winterthur: hauseigene Fassbiere, internationale Pub-Kultur, Live-Events und Sportübertragungen. Google-Bewertung 4.4 von 271.">
+<meta property="og:title" content="Nelson Pub Winterthur">
+<meta property="og:description" content="Englisches Pub mit hauseigenen Bieren, Cocktails, Live-Events und Sportübertragungen in der Technikumstrasse 73, Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nelsonpub-winterthur.ch/">
+<meta property="og:image" content="https://framerusercontent.com/images/nzZw8SvpsPaiLY3nDHEM09scVpQ.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&amp;family=Caveat:wght@500;700&amp;family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Nelson Pub",
+  "image": "https://framerusercontent.com/images/nzZw8SvpsPaiLY3nDHEM09scVpQ.png",
+  "url": "https://www.nelsonpub-winterthur.ch/",
+  "telephone": "+41522128483",
+  "email": "info@nelsonpub-winterthur.ch",
+  "servesCuisine": "Pub, Bar, International",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Technikumstrasse 73",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "16:00",
+      "closes": "00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday","Saturday"],
+      "opens": "16:00",
+      "closes": "03:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "271"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#1a130b;
+    --surface:#241a10;
+    --fg:#f5ead2;
+    --muted:#cbb28d;
+    --brand:#1e3a8a;
+    --accent:#fbbf24;
+    --line: rgba(245,234,210,0.14);
+    --radius: 6px;
+    --shadow: 0 18px 40px rgba(0,0,0,0.45);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+  }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 620px at 12% -10%, rgba(30,58,138,0.28), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(251,191,36,0.10), transparent 55%),
+      linear-gradient(180deg,#1c150c 0%, #170f08 40%, #130d06 100%);
+    color:var(--fg);
+    font-family:'Mulish', system-ui, sans-serif;
+    font-size:clamp(15px, 0.95vw + 12px, 17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%; display:block;}
+
+  h1,h2,h3,.display{
+    font-family:'Bevan', serif;
+    font-weight:400;
+    letter-spacing:0.01em;
+    line-height:1.08;
+    margin:0;
+  }
+
+  .chalk{ font-family:'Caveat', cursive; }
+
+  a{ color:inherit; }
+
+  :focus-visible{
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-inline: clamp(1.1rem, 4vw, 2.5rem);
+  }
+
+  .eyebrow{
+    font-family:'Mulish',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.22em;
+    font-size:0.72rem;
+    font-weight:800;
+    color:var(--accent);
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background: rgba(19,13,6,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:0.8rem;
+    gap:1rem;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:0.6rem;
+    font-family:'Bevan', serif;
+    font-size:clamp(1.1rem, 2vw, 1.5rem);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .brandmark .keg{
+    width:2.1rem; height:2.1rem; border-radius:50%;
+    background: radial-gradient(circle at 32% 30%, #fde68a, var(--accent) 55%, #b8790b 100%);
+    display:grid; place-items:center;
+    color:#1a130b; font-family:'Bevan',serif; font-size:1rem;
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.35);
+    flex-shrink:0;
+  }
+  nav.primary{
+    display:flex; gap:clamp(0.8rem,2vw,1.6rem);
+    font-weight:700; font-size:0.92rem;
+    list-style:none; margin:0; padding:0;
+  }
+  nav.primary a{ text-decoration:none; color:var(--muted); }
+  nav.primary a:hover{ color:var(--accent); }
+  .nav-call{
+    display:none;
+  }
+  @media (min-width: 780px){
+    .nav-call{
+      display:inline-flex; align-items:center; gap:0.5rem;
+      background:var(--accent); color:#241804;
+      font-weight:800; text-decoration:none;
+      padding:0.55rem 1rem; border-radius:999px;
+      font-size:0.85rem;
+      box-shadow: var(--shadow);
+    }
+  }
+  .burger{
+    display:inline-flex; background:none; border:1px solid var(--line);
+    color:var(--fg); border-radius:4px; padding:0.45rem 0.6rem; font-size:1rem;
+  }
+  @media (min-width:780px){ .burger{ display:none; } }
+  #mobileNav{
+    display:none; flex-direction:column; gap:0.9rem;
+    padding:1rem 0 1.3rem;
+    border-top:1px solid var(--line);
+  }
+  #mobileNav.open{ display:flex; }
+  #mobileNav a{ text-decoration:none; color:var(--fg); font-weight:700; }
+  @media (min-width:780px){
+    nav.primary{ display:flex; }
+    .burger, #mobileNav{ display:none !important; }
+  }
+  @media (max-width:779px){
+    nav.primary{ display:none; }
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 7vw, 4.5rem);
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: repeating-linear-gradient(90deg, rgba(245,234,210,0.035) 0 2px, transparent 2px 84px);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;
+    display:grid;
+    gap:clamp(2rem,5vw,3rem);
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items:center;
+  }
+  @media (max-width: 880px){
+    .hero-grid{ grid-template-columns:1fr; }
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6.4vw, 4.6rem);
+    color:var(--fg);
+  }
+  .hero h1 span{ color:var(--accent); display:block; }
+  .hero .tagline{
+    margin-top:1rem;
+    font-size:clamp(1.05rem, 1.6vw, 1.3rem);
+    color:var(--muted);
+    max-width: 46ch;
+  }
+  .hero-actions{
+    margin-top:2rem;
+    display:flex; flex-wrap:wrap; gap:0.9rem;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.9rem 1.4rem; border-radius:4px;
+    font-weight:800; text-decoration:none; font-size:0.95rem;
+    border:2px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{ background:var(--accent); color:#241804; box-shadow:var(--shadow); }
+  .btn-ghost{ border-color: var(--line); color:var(--fg); background:transparent; }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+
+  .status-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.4rem 1.5rem;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .status-card::before{
+    content:"";
+    position:absolute; left:0; top:1.2rem; bottom:1.2rem; width:5px;
+    background:var(--accent); border-radius:0 3px 3px 0;
+  }
+  .status-top{ display:flex; align-items:center; gap:0.7rem; }
+  .status-dot{
+    width:0.75rem; height:0.75rem; border-radius:50%;
+    background: #6b7280;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.05);
+  }
+  .status-dot.open{ background:#34d399; box-shadow:0 0 0 4px rgba(52,211,153,0.18); }
+  .status-dot.closed{ background:#f87171; box-shadow:0 0 0 4px rgba(248,113,113,0.18); }
+  .status-label{ font-weight:800; letter-spacing:0.02em; }
+  .status-detail{ margin-top:0.4rem; color:var(--muted); font-size:0.92rem; }
+  .rating-row{
+    margin-top:1.1rem; padding-top:1.1rem; border-top:1px dashed var(--line);
+    display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap;
+  }
+  .rating-num{ font-family:'Bevan',serif; font-size:1.7rem; color:var(--accent); }
+  .stars{ letter-spacing:0.08em; color:var(--accent); }
+  .rating-sub{ color:var(--muted); font-size:0.85rem; }
+
+  /* ===== Section shell ===== */
+  section{ padding-block: clamp(3rem,7vw,5.5rem); }
+  .section-head{ max-width:62ch; margin-bottom:clamp(1.8rem,4vw,2.8rem); }
+  .section-head h2{ font-size:clamp(2rem, 4vw, 2.9rem); margin-top:0.4rem; }
+  .section-head p{ color:var(--muted); margin-top:0.8rem; font-size:1.02rem; }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ===== About / USP ===== */
+  .about{ background:var(--surface); border-block:1px solid var(--line); }
+  .about-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:clamp(2rem,5vw,4rem);
+    align-items:start;
+  }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+  .about p.lead{ font-size:1.08rem; }
+  .usp-board{
+    list-style:none; margin:0; padding:0;
+    display:grid; gap:0.9rem;
+  }
+  .usp-board li{
+    display:flex; gap:0.8rem; align-items:flex-start;
+    padding:0.85rem 1rem;
+    background:rgba(255,255,255,0.02);
+    border:1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius:3px;
+  }
+  .usp-board .mark{ font-family:'Bevan',serif; color:var(--accent); font-size:1.1rem; line-height:1; }
+
+  /* ===== BEER DECK — centerpiece ===== */
+  .beer-section{ position:relative; }
+  .beer-section .wrap > .section-head{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; }
+  .deck-hint{
+    font-size:0.85rem; color:var(--muted); display:flex; align-items:center; gap:0.5rem;
+  }
+  .deck-hint kbd{
+    background:var(--surface); border:1px solid var(--line); border-radius:3px;
+    padding:0.1rem 0.4rem; font-family:inherit; font-size:0.8rem;
+  }
+
+  .deck-group{ margin-top:2.2rem; }
+  .deck-group h3{
+    font-size:1.1rem; color:var(--accent); text-transform:uppercase; letter-spacing:0.14em;
+    margin-bottom:0.9rem; font-family:'Mulish',sans-serif; font-weight:800;
+  }
+
+  .deck-outer{ position:relative; }
+  .deck-fade{
+    position:absolute; top:0; bottom:0; width:3.2rem; pointer-events:none; z-index:2;
+  }
+  .deck-fade.left{ left:0; background:linear-gradient(90deg, var(--bg), transparent); }
+  .deck-fade.right{ right:0; background:linear-gradient(270deg, var(--bg), transparent); }
+
+  .deck{
+    display:flex; gap:1.1rem;
+    overflow-x:auto;
+    scroll-snap-type:x proximity;
+    padding-block:0.4rem 1rem;
+    padding-inline:0.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+  }
+  .deck::-webkit-scrollbar{ height:8px; }
+  .deck::-webkit-scrollbar-thumb{ background:var(--accent); border-radius:6px; }
+  .deck::-webkit-scrollbar-track{ background:rgba(255,255,255,0.04); border-radius:6px; }
+
+  .beer-card{
+    flex: 0 0 auto;
+    width: min(78vw, 250px);
+    height: 320px;
+    scroll-snap-align:start;
+    perspective: 1200px;
+    cursor:pointer;
+  }
+  .beer-card-inner{
+    position:relative; width:100%; height:100%;
+    transform-style:preserve-3d;
+    transition: transform 0.55s cubic-bezier(.2,.7,.3,1.1);
+  }
+  .beer-card.flipped .beer-card-inner{ transform: rotateY(180deg); }
+  @media (prefers-reduced-motion:reduce){
+    .beer-card-inner{ transition:none; }
+  }
+  .beer-face{
+    position:absolute; inset:0;
+    backface-visibility:hidden;
+    border-radius:10px;
+    border:1px solid var(--line);
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:1.3rem;
+    box-shadow: var(--shadow);
+  }
+  .beer-face.front{
+    background:
+      radial-gradient(140px 140px at 80% 10%, rgba(251,191,36,0.20), transparent 60%),
+      linear-gradient(160deg, #2c1f11, #1a130b 75%);
+  }
+  .beer-face.front .glass{
+    position:absolute; top:1.2rem; left:1.2rem; right:1.2rem; height:120px;
+    border-radius:6px;
+    background: linear-gradient(180deg, rgba(251,191,36,0.35), rgba(251,191,36,0.06));
+    border:1px solid rgba(251,191,36,0.35);
+  }
+  .beer-face.front .kind{
+    font-size:0.72rem; text-transform:uppercase; letter-spacing:0.16em;
+    color:var(--accent); font-weight:800; margin-bottom:0.4rem;
+  }
+  .beer-face.front .name{
+    font-family:'Caveat', cursive; font-size:2rem; font-weight:700;
+    color:var(--fg); line-height:1.05;
+  }
+  .beer-face.front .flip-cta{
+    margin-top:0.7rem; font-size:0.78rem; color:var(--muted);
+  }
+  .beer-face.back{
+    transform: rotateY(180deg);
+    background: linear-gradient(160deg, var(--brand), #0f1f4d 80%);
+    justify-content:center;
+    text-align:center;
+    gap:0.6rem;
+  }
+  .beer-face.back .name{
+    font-family:'Bevan',serif; font-size:1.35rem; color:#fff; margin-bottom:0.3rem;
+  }
+  .beer-face.back .desc{ color:#e6ebff; font-size:0.92rem; }
+  .beer-face.back .price{
+    margin-top:0.8rem; font-family:'Bevan',serif; font-size:1.5rem; color:var(--accent);
+  }
+
+  .deck-controls{
+    display:flex; gap:0.6rem; margin-top:1rem;
+  }
+  .deck-btn{
+    width:2.4rem; height:2.4rem; border-radius:50%;
+    border:1px solid var(--line); background:var(--surface); color:var(--fg);
+    font-size:1.1rem; cursor:pointer;
+    display:grid; place-items:center;
+  }
+  .deck-btn:hover{ border-color:var(--accent); color:var(--accent); }
+
+  /* ===== Menu board ===== */
+  .menu-section{ background:var(--surface); border-block:1px solid var(--line); }
+  .menu-grid{
+    display:grid; grid-template-columns: repeat(2, 1fr); gap:clamp(1.4rem,3vw,2.2rem);
+  }
+  @media (max-width:700px){ .menu-grid{ grid-template-columns:1fr; } }
+  .menu-block{
+    border:1px solid var(--line); border-radius:6px; padding:1.4rem 1.5rem;
+    background:rgba(0,0,0,0.15);
+  }
+  .menu-block h3{
+    font-size:1.15rem; color:var(--accent);
+    padding-bottom:0.6rem; margin-bottom:0.9rem;
+    border-bottom:1px dashed var(--line);
+  }
+  .menu-item{
+    display:flex; justify-content:space-between; gap:1rem;
+    padding-block:0.55rem;
+    border-bottom:1px dotted rgba(245,234,210,0.09);
+  }
+  .menu-item:last-child{ border-bottom:none; }
+  .menu-item .mi-name{ font-weight:700; }
+  .menu-item .mi-price{ white-space:nowrap; color:var(--accent); font-weight:800; font-family:'Bevan',serif; font-size:0.95rem; }
+
+  /* ===== Gallery ===== */
+  .gallery-strip{
+    display:flex; gap:1.1rem; overflow-x:auto; padding-block:0.5rem 1rem; scroll-snap-type:x proximity;
+  }
+  .mat{
+    flex:0 0 auto; width:min(70vw,230px); height:230px; border-radius:50%;
+    overflow:hidden; border:6px solid var(--surface); outline:2px solid var(--line);
+    scroll-snap-align:start; box-shadow:var(--shadow);
+    background:var(--surface);
+  }
+  .mat img{ width:100%; height:100%; object-fit:cover; }
+
+  /* ===== Hours & map ===== */
+  .visit{
+    display:grid; grid-template-columns: 0.9fr 1.1fr; gap:clamp(2rem,5vw,3.5rem); align-items:start;
+  }
+  @media (max-width:880px){ .visit{ grid-template-columns:1fr; } }
+  .hours-table{ width:100%; border-collapse:collapse; margin-top:1.2rem; }
+  .hours-table td{ padding:0.7rem 0.4rem; border-bottom:1px solid var(--line); }
+  .hours-table td:first-child{ font-weight:800; color:var(--fg); }
+  .hours-table td:last-child{ text-align:right; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .contact-list{ list-style:none; margin:1.4rem 0 0; padding:0; display:grid; gap:0.7rem; }
+  .contact-list a{ text-decoration:none; }
+  .contact-list a:hover{ color:var(--accent); }
+  .map-frame{
+    border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--shadow);
+    aspect-ratio: 4/3;
+  }
+  .map-frame iframe{ width:100%; height:100%; border:0; }
+
+  /* ===== Footer ===== */
+  footer{
+    background:#0f0a05; border-top:1px solid var(--line);
+    padding-block:2.6rem 6rem;
+  }
+  .foot-grid{
+    display:grid; grid-template-columns: 1.3fr 1fr 1fr; gap:2rem;
+  }
+  @media (max-width:700px){ .foot-grid{ grid-template-columns:1fr; } }
+  footer h4{ font-family:'Bevan',serif; font-size:1rem; color:var(--accent); margin-bottom:0.8rem; }
+  footer ul{ list-style:none; margin:0; padding:0; display:grid; gap:0.55rem; color:var(--muted); font-size:0.92rem; }
+  footer a{ text-decoration:none; color:var(--muted); }
+  footer a:hover{ color:var(--accent); }
+  .foot-bottom{
+    margin-top:2.4rem; padding-top:1.4rem; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.6rem;
+    font-size:0.8rem; color:var(--muted);
+  }
+  .socials{ display:flex; gap:0.8rem; }
+  .socials a{
+    border:1px solid var(--line); border-radius:50%; width:2.3rem; height:2.3rem;
+    display:grid; place-items:center; font-size:0.95rem;
+  }
+  .socials a:hover{ border-color:var(--accent); color:var(--accent); }
+
+  /* ===== Sticky mobile call bar ===== */
+  .mobile-call{
+    display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background:var(--accent); color:#241804;
+    align-items:center; justify-content:center; gap:0.6rem;
+    padding:0.9rem; font-weight:800; text-decoration:none;
+    box-shadow: 0 -8px 20px rgba(0,0,0,0.35);
+  }
+  @media (min-width:780px){ .mobile-call{ display:none; } }
+  body{ padding-bottom: 4.2rem; }
+  @media (min-width:780px){ body{ padding-bottom:0; } }
+
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#top" class="brandmark"><span class="keg" aria-hidden="true">N</span> Nelson Pub</a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <a href="#biere">Biere</a>
+      <a href="#karte">Bar-Karte</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#besuch">Öffnungszeiten</a>
+    </nav>
+    <a class="nav-call" href="tel:+41522128483">📞 052 212 84 83</a>
+    <button class="burger" id="burgerBtn" aria-expanded="false" aria-controls="mobileNav">☰ <span class="visually-hidden">Menü</span></button>
+  </div>
+  <nav id="mobileNav" class="wrap" aria-label="Mobile Navigation">
+    <a href="#biere">Biere</a>
+    <a href="#karte">Bar-Karte</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#besuch">Öffnungszeiten</a>
+    <a href="tel:+41522128483">052 212 84 83 anrufen</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Technikumstrasse 73 · Winterthur</p>
+        <h1>Englisches Pub.<span>Hausgebrautes Bier.</span></h1>
+        <p class="tagline">More than just a meeting point – internationale Pub-Kultur. Nelson Pub bringt frisch gezapfte, hauseigene Biere, Cocktails, Live-Events und Sportübertragungen in eine rustikale Stube mit Indoor- und Terrassensitzplätzen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+41522128483">Jetzt anrufen</a>
+          <a class="btn btn-ghost" href="#biere">Zu den Bieren ↓</a>
+        </div>
+      </div>
+      <div class="status-card reveal" id="statusCard">
+        <div class="status-top">
+          <span class="status-dot" id="statusDot" aria-hidden="true"></span>
+          <span class="status-label" id="statusLabel">Status wird geprüft …</span>
+        </div>
+        <p class="status-detail" id="statusDetail">Öffnungszeiten werden geladen.</p>
+        <div class="rating-row">
+          <span class="rating-num">4.4</span>
+          <span class="stars" aria-hidden="true">★★★★☆</span>
+          <span class="rating-sub">271 Google-Bewertungen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / USPs ===== -->
+  <section class="about" id="ueber">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow">Über uns</p>
+        <h2>Was den Nelson zum Nelson macht</h2>
+        <p class="lead" style="margin-top:1rem;">Nelson Pub ist ein englisches Pub mit internationalem Flair in der Winterthurer Technikumstrasse. Das Lokal bietet frisch gezapfte Biere, Cocktails, Live-Events und Sportübertragungen in rustikaler Atmosphäre mit Indoor- und Terrassensitzplätzen.</p>
+      </div>
+      <ul class="usp-board reveal">
+        <li><span class="mark">✓</span> English Pub Atmosphere mit internationalem Publikum</li>
+        <li><span class="mark">✓</span> Frisch gezapfte Biere und umfangreiche Cocktail-Auswahl</li>
+        <li><span class="mark">✓</span> Live-Events und Sportübertragungen</li>
+        <li><span class="mark">✓</span> Indoor- und Terrassensitzplätze</li>
+        <li><span class="mark">✓</span> Order &amp; Pickup Bar-Service</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== BEER DECK — CENTERPIECE ===== -->
+  <section class="beer-section" id="biere">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Die Kronjuwelen</p>
+          <h2>Unsere Biere</h2>
+        </div>
+        <p class="deck-hint">Karte tippen oder <kbd>Tab</kbd> + <kbd>Enter</kbd> zum Umdrehen, <kbd>←</kbd><kbd>→</kbd> zum Scrollen</p>
+      </div>
+
+      <div class="deck-group reveal">
+        <h3>Nelson's Eigene · vom Fass</h3>
+        <div class="deck-outer">
+          <div class="deck-fade left" aria-hidden="true"></div>
+          <div class="deck-fade right" aria-hidden="true"></div>
+          <div class="deck" id="deckHouse" tabindex="0" aria-label="Hauseigene Biere, horizontal scrollbar"></div>
+        </div>
+      </div>
+
+      <div class="deck-group reveal">
+        <h3>Weitere vom Fass</h3>
+        <div class="deck-outer">
+          <div class="deck-fade left" aria-hidden="true"></div>
+          <div class="deck-fade right" aria-hidden="true"></div>
+          <div class="deck" id="deckDraught" tabindex="0" aria-label="Weitere Fassbiere, horizontal scrollbar"></div>
+        </div>
+      </div>
+
+      <div class="deck-group reveal">
+        <h3>In der Flasche</h3>
+        <div class="deck-outer">
+          <div class="deck-fade left" aria-hidden="true"></div>
+          <div class="deck-fade right" aria-hidden="true"></div>
+          <div class="deck" id="deckBottle" tabindex="0" aria-label="Flaschenbiere, horizontal scrollbar"></div>
+        </div>
+        <div class="deck-controls">
+          <button class="deck-btn" id="scrollLeft" aria-label="Nach links scrollen">←</button>
+          <button class="deck-btn" id="scrollRight" aria-label="Nach rechts scrollen">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU BOARD (non-beer) ===== -->
+  <section class="menu-section" id="karte">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Bar-Karte</p>
+        <h2>Cocktails, Softs &amp; mehr</h2>
+        <p>Die hauseigenen und Fassbiere findest du weiter oben — hier der Rest der Karte, wie an der Bar aufgeschrieben.</p>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Impressionen</p>
+        <h2>Ein Blick in den Pub</h2>
+      </div>
+      <div class="gallery-strip reveal" id="galleryStrip"></div>
+    </div>
+  </section>
+
+  <!-- ===== HOURS & LOCATION ===== -->
+  <section id="besuch">
+    <div class="wrap visit">
+      <div class="reveal">
+        <p class="eyebrow">Öffnungszeiten</p>
+        <h2>Wann wir aufsperren</h2>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>So – Do</td><td>16:00 – 00:00</td></tr>
+            <tr><td>Fr – Sa</td><td>16:00 – 03:00</td></tr>
+          </tbody>
+        </table>
+        <ul class="contact-list">
+          <li>📍 <a href="https://maps.google.com/maps?q=Technikumstrasse%2073%2C%208400%20Winterthur&amp;z=16" target="_blank" rel="noopener">Technikumstrasse 73, 8400 Winterthur</a></li>
+          <li>📞 <a href="tel:+41522128483">+41 52 212 84 83</a></li>
+          <li>✉️ <a href="mailto:info@nelsonpub-winterthur.ch">info@nelsonpub-winterthur.ch</a></li>
+        </ul>
+      </div>
+      <div class="map-frame reveal">
+        <iframe title="Karte Nelson Pub Winterthur" loading="lazy" src="https://maps.google.com/maps?q=Nelson%20Pub%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Nelson Pub</h4>
+        <p style="color:var(--muted); font-size:0.92rem; max-width:34ch;">Technikumstrasse 73, 8400 Winterthur — englische Pub-Kultur, hauseigene Biere und Live-Sport.</p>
+        <div class="socials" style="margin-top:1.1rem;">
+          <a href="https://www.instagram.com/nelsonpubwinterthur/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/eveloungewinterthur/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+41522128483">052 212 84 83</a></li>
+          <li><a href="mailto:info@nelsonpub-winterthur.ch">info@nelsonpub-winterthur.ch</a></li>
+          <li><a href="https://www.nelsonpub-winterthur.ch/" target="_blank" rel="noopener">nelsonpub-winterthur.ch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Öffnungszeiten</h4>
+        <ul>
+          <li>So – Do: 16:00 – 00:00</li>
+          <li>Fr – Sa: 16:00 – 03:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Nelson Pub, Winterthur</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+41522128483">📞 Jetzt anrufen — 052 212 84 83</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Mobile nav ---------- */
+  var burger = document.getElementById('burgerBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobileNav.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- Live "geöffnet jetzt" status (from JSON hours) ---------- */
+  // So–Do 16:00–00:00 ; Fr–Sa 16:00–03:00
+  var HOURS = [
+    { days: [0,1,2,3,4], label: 'So–Do', opens: 16*60, closes: 24*60 },   // Sun..Thu
+    { days: [5,6],       label: 'Fr–Sa', opens: 16*60, closes: 27*60 }    // Fri,Sat (closes 03:00 next day)
+  ];
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function fmt(mins){
+    mins = ((mins % 1440) + 1440) % 1440;
+    return pad(Math.floor(mins/60)) + ':' + pad(mins % 60);
+  }
+
+  function computeStatus(now){
+    var day = now.getDay();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var prevDay = (day + 6) % 7;
+
+    // Is today's own window open right now?
+    for (var i=0;i<HOURS.length;i++){
+      var w = HOURS[i];
+      if (w.days.indexOf(day) !== -1 && mins >= w.opens && mins < w.closes){
+        return { open:true, until: fmt(w.closes) };
+      }
+    }
+    // Did yesterday's window spill past midnight into now?
+    for (var j=0;j<HOURS.length;j++){
+      var w2 = HOURS[j];
+      if (w2.days.indexOf(prevDay) !== -1 && w2.closes > 1440 && mins < (w2.closes - 1440)){
+        return { open:true, until: fmt(w2.closes) };
+      }
+    }
+    // Closed — find next opening
+    for (var k=0; k<8; k++){
+      var checkDay = (day + k) % 7;
+      for (var m=0;m<HOURS.length;m++){
+        var w3 = HOURS[m];
+        if (w3.days.indexOf(checkDay) !== -1){
+          if (k === 0 && mins < w3.opens){
+            return { open:false, next: 'heute ab ' + fmt(w3.opens) + ' Uhr' };
+          }
+          if (k > 0){
+            var names = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+            return { open:false, next: names[checkDay] + ' ab ' + fmt(w3.opens) + ' Uhr' };
+          }
+        }
+      }
+    }
+    return { open:false, next: null };
+  }
+
+  function paintStatus(){
+    var dot = document.getElementById('statusDot');
+    var label = document.getElementById('statusLabel');
+    var detail = document.getElementById('statusDetail');
+    var s = computeStatus(new Date());
+    if (s.open){
+      dot.className = 'status-dot open';
+      label.textContent = 'Jetzt geöffnet';
+      detail.textContent = 'Bis ' + s.until + ' Uhr geöffnet — Order & Pickup an der Bar.';
+    } else {
+      dot.className = 'status-dot closed';
+      label.textContent = 'Gerade geschlossen';
+      detail.textContent = s.next ? ('Wir öffnen wieder ' + s.next + '.') : 'Öffnungszeiten siehe unten.';
+    }
+  }
+  paintStatus();
+  setInterval(paintStatus, 60000);
+
+  /* ---------- Beer deck data (verbatim from JSON) ---------- */
+  var houseBeers = [
+    { name: "Nelson's Helles", type: "Hauseigen · vom Fass", desc: "Hauseigene Biersorte", price: "CHF 5.00–9.50" },
+    { name: "Nelson's Amber", type: "Hauseigen · vom Fass", desc: "Hauseigene Biersorte", price: "CHF 5.00–9.50" },
+    { name: "Nelson's Hefeweizen", type: "Hauseigen · vom Fass", desc: "Hauseigene Biersorte", price: "CHF 5.00–9.50" }
+  ];
+  var draughtBeers = [
+    { name: "Woodford's Volt IPA", type: "Vom Fass", desc: null, price: "CHF 5.00–9.50" },
+    { name: "Guinness Draught Stout", type: "Vom Fass", desc: null, price: "CHF 5.00–9.50" }
+  ];
+  var bottleBeers = [
+    { name: "Sullivan Irish Ales", type: "Flasche", desc: null, price: "CHF 7.00–19.50" },
+    { name: "Shipyard IPA", type: "Flasche", desc: null, price: "CHF 7.00–19.50" },
+    { name: "Kona", type: "Flasche", desc: null, price: "CHF 7.00–19.50" },
+    { name: "Abteibiere", type: "Flasche", desc: null, price: "CHF 7.00–19.50" },
+    { name: "Früchtebiere", type: "Flasche", desc: null, price: "CHF 7.00–19.50" }
+  ];
+
+  function buildCard(beer){
+    var card = document.createElement('div');
+    card.className = 'beer-card';
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-pressed', 'false');
+    card.setAttribute('aria-label', beer.name + ' — Karte umdrehen für Preis');
+
+    var inner = document.createElement('div');
+    inner.className = 'beer-card-inner';
+
+    var front = document.createElement('div');
+    front.className = 'beer-face front';
+    front.innerHTML =
+      '<div class="glass" aria-hidden="true"></div>' +
+      '<p class="kind">' + beer.type + '</p>' +
+      '<p class="name">' + beer.name + '</p>' +
+      '<p class="flip-cta">Antippen für Preis →</p>';
+
+    var back = document.createElement('div');
+    back.className = 'beer-face back';
+    var descHtml = beer.desc ? '<p class="desc">' + beer.desc + '</p>' : '';
+    back.innerHTML =
+      '<p class="name">' + beer.name + '</p>' +
+      descHtml +
+      '<p class="price">' + beer.price + '</p>';
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+
+    function toggle(){
+      var flipped = card.classList.toggle('flipped');
+      card.setAttribute('aria-pressed', flipped ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        toggle();
+      }
+    });
+    return card;
+  }
+
+  function fillDeck(id, beers){
+    var deck = document.getElementById(id);
+    beers.forEach(function(b){ deck.appendChild(buildCard(b)); });
+    deck.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight'){ deck.scrollBy({ left: 220, behavior: 'smooth' }); }
+      if (e.key === 'ArrowLeft'){ deck.scrollBy({ left: -220, behavior: 'smooth' }); }
+    });
+  }
+  fillDeck('deckHouse', houseBeers);
+  fillDeck('deckDraught', draughtBeers);
+  fillDeck('deckBottle', bottleBeers);
+
+  var scrollLeftBtn = document.getElementById('scrollLeft');
+  var scrollRightBtn = document.getElementById('scrollRight');
+  var lastDeck = document.getElementById('deckBottle');
+  scrollLeftBtn.addEventListener('click', function(){ lastDeck.scrollBy({ left: -260, behavior: 'smooth' }); });
+  scrollRightBtn.addEventListener('click', function(){ lastDeck.scrollBy({ left: 260, behavior: 'smooth' }); });
+
+  /* ---------- Menu board (non-beer sections, verbatim from JSON) ---------- */
+  var menuSections = [
+    { section: "Soft Drinks", items: [
+        { name: "Wasser, Coca-Cola, Sprite, Rivella, Eistee", price: "CHF 5.20–7.00" },
+        { name: "Homemade Lemonade", price: "CHF 5.20–7.00" }
+      ]},
+    { section: "Cocktails & Longdrinks", items: [
+        { name: "Caipirinha, Mojito, Piña Colada, Cosmopolitan, Negroni", price: "CHF 15.00–18.00" },
+        { name: "Martini Varianten", price: "CHF 15.00–18.00" }
+      ]},
+    { section: "Shots", items: [
+        { name: "Diverse Spirits und Liköre", price: "CHF 5.00" }
+      ]},
+    { section: "Aperitifs & Spritz", items: [
+        { name: "Martini, Campari, Aperol Spritz, Hugo, Lillet Vive", price: "CHF 8.00–13.00" }
+      ]}
+  ];
+
+  var menuGrid = document.getElementById('menuGrid');
+  menuSections.forEach(function(sec){
+    var block = document.createElement('div');
+    block.className = 'menu-block reveal';
+    var h3 = document.createElement('h3');
+    h3.textContent = sec.section;
+    block.appendChild(h3);
+    sec.items.forEach(function(it){
+      var row = document.createElement('div');
+      row.className = 'menu-item';
+      row.innerHTML = '<span class="mi-name">' + it.name + '</span><span class="mi-price">' + it.price + '</span>';
+      block.appendChild(row);
+    });
+    menuGrid.appendChild(block);
+  });
+
+  /* ---------- Gallery (verbatim JSON image URLs) ---------- */
+  var images = [
+    "https://framerusercontent.com/images/nzZw8SvpsPaiLY3nDHEM09scVpQ.png",
+    "https://framerusercontent.com/images/ptSapbbpJD2zCXSSIbzqEZ28a0.png",
+    "https://framerusercontent.com/images/UuBAlBZZlYgqHRj8lCSk3s52KU.png",
+    "https://framerusercontent.com/images/dYPUOevetIOrS8cISiGoejdue8.png",
+    "https://framerusercontent.com/images/H7I8w9PM3ilRLBx48Izn3VSUzBU.png",
+    "https://framerusercontent.com/images/U171y3X5odGc4z2SyzVcKlAPlA.png",
+    "https://framerusercontent.com/images/ypQVtTwx08ralnWJgEDQ9YRhFM.png",
+    "https://framerusercontent.com/images/mdHohhCEac2dy5qj6Hz8xLx3o.png",
+    "https://framerusercontent.com/images/BRZswjxPpBLmdU7qf3BFuicY0.png",
+    "https://framerusercontent.com/images/wBV16oExSW6wsnMNkzCkyqntm4.png"
+  ];
+  var strip = document.getElementById('galleryStrip');
+  images.forEach(function(src, i){
+    var mat = document.createElement('div');
+    mat.className = 'mat';
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Nelson Pub Winterthur — Impression ' + (i+1);
+    img.loading = 'lazy';
+    img.setAttribute('onerror', "this.parentElement.style.display='none'");
+    mat.appendChild(img);
+    strip.appendChild(mat);
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Park Hotel Winterthur – 4-Sterne-Hotel, 8 Zimmertypen im Vergleich</title>
+<meta name="description" content="Park Hotel Winterthur, Stadthausstrasse 4: stilvolles 4-Sterne-Hotel mit 8 Zimmertypen, Restaurant bloom, Fitnessstudio und Sauna. Frühstücksbuffet und Minibar in jedem Zimmer inklusive.">
+<meta property="og:title" content="Park Hotel Winterthur">
+<meta property="og:description" content="Stilvolles 4-Sterne-Hotel mit 8 Zimmertypen, Restaurant bloom, Fitnessstudio und Sauna.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://phwin.ch/wp-content/uploads/2019/12/Park_Hotel_Winterthur_Zimmer_Classic-EZ-6-700x466.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Park Hotel Winterthur",
+  "description": "Elegantes 4-Sterne-Hotel mit 8 verschiedenen Zimmertypen, Restaurant bloom mit Bar und Terrasse, Fitnessstudio, Sauna, kostenlose Fahrradabstellanlage und öffentliche Tageskarte für Direktbucher. Alle Zimmer mit kostenlosem Frühstücksbuffet und Minibar.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stadthausstrasse 4",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41522650265",
+  "email": "welcome@phwin.ch",
+  "url": "https://phwin.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "773"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#faf7f0;
+    --surface:#ffffff;
+    --fg:#2b2820;
+    --muted:#5f5b4e;
+    --brand:#2f4a3d;
+    --accent:#b8863b;
+    --line:#e5ddcb;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:clamp(15px,0.4vw + 13.5px,17px);
+    line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-0.01em;
+    line-height:1.05;margin:0;color:var(--fg);
+  }
+  h1{font-size:clamp(2.4rem,5.5vw + 1rem,4.6rem);font-weight:500;}
+  h2{font-size:clamp(1.8rem,3vw + 1rem,2.7rem);}
+  h3{font-size:clamp(1.15rem,1.4vw + 1rem,1.4rem);}
+  p{margin:0 0 1em;}
+  a{color:var(--brand);}
+  img{max-width:100%;display:block;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem clamp(1.2rem,4vw,3rem);
+    background:rgba(250,247,240,0.94);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{display:flex;align-items:center;gap:0.7rem;}
+  .brand-mark img{height:30px;width:auto;}
+  .brand-mark span{font-family:'Fraunces',serif;font-size:1.25rem;letter-spacing:0.01em;}
+  nav.primary{display:flex;gap:clamp(0.9rem,2.4vw,2rem);align-items:center;}
+  nav.primary a.nav-link{font-size:0.86rem;letter-spacing:0.02em;text-decoration:none;color:var(--fg);}
+  nav.primary a.nav-link:hover{color:var(--brand);}
+  .call-pill{background:var(--brand);color:#fff;padding:0.55em 1.2em;border-radius:2px;text-decoration:none;font-size:0.86rem;font-weight:600;white-space:nowrap;}
+  .mobile-menu{display:none;}
+  @media (max-width:800px){
+    nav.primary a.nav-link{display:none;}
+    .mobile-menu{display:block;position:relative;}
+    .mobile-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);padding:0.4em 0.8em;font-size:0.82rem;border-radius:2px;color:var(--fg);}
+    .mobile-menu summary::-webkit-details-marker{display:none;}
+    .mobile-menu-panel{
+      position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--line);
+      padding:0.9rem;display:flex;flex-direction:column;gap:0.8rem;min-width:160px;z-index:10;box-shadow:0 8px 24px rgba(43,40,32,0.1);
+    }
+    .mobile-menu-panel a{text-decoration:none;color:var(--fg);font-size:0.88rem;}
+  }
+
+  main{display:block;}
+  section{padding:clamp(4.5rem,8vw,7rem) clamp(1.2rem,5vw,4rem);}
+  .section-inner{max-width:1180px;margin:0 auto;}
+  .overline{
+    display:block;text-transform:uppercase;letter-spacing:0.14em;font-size:0.78rem;
+    color:var(--accent);font-weight:600;margin-bottom:1em;
+  }
+
+  /* hero */
+  #hero{
+    padding-top:9rem;min-height:86vh;display:flex;align-items:center;
+    background:linear-gradient(180deg,#f2ede1,var(--bg));
+  }
+  .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero-lede{max-width:36em;font-size:clamp(1rem,1vw + 0.75rem,1.18rem);color:var(--muted);margin-top:1rem;}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem;}
+  .btn{display:inline-block;padding:0.9em 1.7em;border-radius:2px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid transparent;}
+  .btn-brand{background:var(--brand);color:#fff;}
+  .btn-outline{border-color:var(--fg);color:var(--fg);}
+  .hero-rating{
+    display:inline-flex;align-items:center;gap:0.6em;margin-top:2rem;font-size:0.92rem;color:var(--muted);
+  }
+  .hero-rating b{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--brand);}
+  .hero-photo{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:3px;}
+
+  /* about */
+  #ueber{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .about-inner{max-width:52em;}
+  .usp-row{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:1.6rem;}
+  .usp-chip{
+    border:1px solid var(--line);color:var(--muted);font-size:0.82rem;padding:0.4em 0.9em;border-radius:100px;
+  }
+
+  /* room finder */
+  #zimmer{background:var(--bg);}
+  .finder-controls{
+    display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:flex-end;margin-top:2rem;
+    padding:1.2rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  }
+  .finder-field{display:flex;flex-direction:column;gap:0.4rem;}
+  .finder-field label{font-size:0.76rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+  .finder-field select{
+    background:var(--bg);border:1px solid var(--line);color:var(--fg);padding:0.6em 0.8em;
+    font-family:inherit;font-size:0.9rem;border-radius:2px;min-width:180px;
+  }
+  .finder-count{margin-left:auto;font-size:0.85rem;color:var(--muted);align-self:center;}
+
+  .room-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem;margin-top:1.6rem;}
+  .room-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:1.4rem;
+    display:flex;flex-direction:column;gap:0.6rem;
+  }
+  .room-card.is-selected{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand) inset;}
+  .room-card .rc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:0.6rem;}
+  .room-card h3{font-size:1.15rem;}
+  .room-card .rc-size{font-size:0.82rem;color:var(--muted);}
+  .room-card .rc-price{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--brand);margin-top:0.2rem;}
+  .room-card .rc-price small{font-family:'Inter';font-size:0.7rem;color:var(--muted);font-weight:500;}
+  .room-card .rc-cap{
+    font-size:0.76rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:0.6rem;margin-top:0.2rem;
+  }
+  .room-card .rc-incl{font-size:0.82rem;color:var(--muted);}
+  .room-card button{
+    margin-top:0.6rem;background:none;border:1px solid var(--brand);color:var(--brand);
+    padding:0.6em 1em;font-size:0.84rem;font-family:inherit;border-radius:2px;cursor:pointer;font-weight:600;
+  }
+  .room-card.is-selected button{background:var(--brand);color:#fff;}
+  .finder-empty{margin-top:1.4rem;color:var(--muted);font-size:0.9rem;}
+
+  /* amenities */
+  #ausstattung{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .amenity-grid{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 2rem;}
+  @media (max-width:640px){ .amenity-grid{grid-template-columns:1fr;} }
+  .amenity-grid li{display:flex;gap:0.8em;align-items:flex-start;font-size:0.95rem;}
+  .amenity-grid li::before{content:'✓';color:var(--brand);font-weight:700;flex:none;}
+  .restaurant-note{
+    margin-top:1.8rem;font-size:0.88rem;color:var(--muted);border-left:2px solid var(--accent);padding-left:1rem;
+  }
+
+  /* enquiry */
+  #anfrage{background:var(--bg);}
+  .composer{border:1px solid var(--line);background:var(--surface);padding:clamp(1.5rem,3vw,2.4rem);margin-top:2rem;border-radius:3px;}
+  .composer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+  @media (max-width:640px){ .composer-grid{grid-template-columns:1fr;} }
+  .field{display:flex;flex-direction:column;gap:0.4rem;}
+  .field label{font-size:0.76rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+  .field select, .field input{
+    background:var(--bg);border:1px solid var(--line);color:var(--fg);
+    padding:0.7em 0.8em;font-size:0.92rem;font-family:inherit;border-radius:2px;
+  }
+  .composer-output{margin-top:1.6rem;border-top:1px dashed var(--line);padding-top:1.4rem;}
+  .composer-output p{font-size:0.88rem;background:var(--bg);padding:0.9em 1em;border:1px solid var(--line);border-radius:2px;white-space:pre-line;}
+  .composer-actions{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1rem;}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--fg);cursor:pointer;padding:0.75em 1.2em;font-size:0.85rem;font-family:inherit;border-radius:2px;}
+  .copy-status{font-size:0.78rem;color:var(--brand);margin-left:0.4rem;align-self:center;}
+  .discount-note{margin-top:1.4rem;font-size:0.86rem;color:var(--muted);}
+
+  /* location */
+  #lage{background:var(--surface);border-top:1px solid var(--line);}
+  .lage-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);margin-top:2rem;align-items:start;}
+  @media (max-width:820px){ .lage-grid{grid-template-columns:1fr;} }
+  #lage iframe{width:100%;height:320px;border:0;border-radius:3px;}
+  .lage-meta{font-size:0.95rem;color:var(--muted);display:flex;flex-direction:column;gap:0.6rem;}
+  .lage-meta strong{color:var(--fg);}
+
+  /* faq */
+  #faq{background:var(--bg);}
+  .faq-list{margin-top:1.8rem;display:flex;flex-direction:column;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    cursor:pointer;padding:1.1em 0.2em;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:0.96rem;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';color:var(--accent);font-size:1.4rem;flex:none;font-family:'Fraunces';}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin:0 0.2em 1.1em;color:var(--muted);max-width:40em;font-size:0.92rem;}
+
+  footer{padding:2.6rem clamp(1.2rem,5vw,4rem) 7rem;border-top:1px solid var(--line);font-size:0.82rem;color:var(--muted);}
+  footer .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;margin-bottom:1.2rem;}
+  footer strong{color:var(--fg);}
+  @media (max-width:760px){ footer{padding-bottom:5.5rem;} }
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+  .mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:600;font-size:0.92rem;}
+  @media (min-width:761px){ .mobile-bar{display:none;} }
+
+  [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">
+    <img src="https://phwin.ch/wp-content/uploads/2019/08/Phwin_Logo_schwarz-1.png" alt="Park Hotel Winterthur Logo" onerror="this.style.display='none'">
+    <span>Park Hotel Winterthur</span>
+  </div>
+  <nav class="primary" aria-label="Hauptnavigation">
+    <a class="nav-link" href="#zimmer">Zimmer</a>
+    <a class="nav-link" href="#ausstattung">Ausstattung</a>
+    <a class="nav-link" href="#lage">Lage</a>
+    <details class="mobile-menu">
+      <summary>Menü</summary>
+      <div class="mobile-menu-panel">
+        <a href="#zimmer">Zimmer</a>
+        <a href="#ausstattung">Ausstattung</a>
+        <a href="#anfrage">Anfrage</a>
+        <a href="#lage">Lage</a>
+      </div>
+    </details>
+    <a class="call-pill" href="tel:+41522650265">Anrufen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section id="hero">
+    <div class="section-inner hero-grid">
+      <div>
+        <span class="overline">Stadthausstrasse 4 · Winterthur</span>
+        <h1>Stilvolles 4-Sterne-Hotel in der Innenstadt.</h1>
+        <p class="hero-lede">Acht Zimmertypen, Restaurant bloom mit Bar und Terrasse, Fitnessstudio
+          und Sauna. Frühstücksbuffet und Minibar sind in jedem Zimmer inklusive.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brand" href="#zimmer">Zimmer vergleichen</a>
+          <a class="btn btn-outline" href="tel:+41522650265">+41 52 265 02 65</a>
+        </div>
+        <div class="hero-rating"><b>4.6</b> · 773 Google-Bewertungen</div>
+      </div>
+      <img class="hero-photo" src="https://phwin.ch/wp-content/uploads/2019/12/Park_Hotel_Winterthur_Zimmer_Classic-EZ-6-700x466.jpg" alt="Park Hotel Winterthur, Classic Zimmer" loading="lazy" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <section id="ueber" data-reveal>
+    <div class="section-inner about-inner">
+      <span class="overline">Über das Haus</span>
+      <h2>Acht Zimmertypen, ein Standard.</h2>
+      <p style="margin-top:1rem;color:var(--muted);">
+        Elegantes 4-Sterne-Hotel mit 8 verschiedenen Zimmertypen, Restaurant bloom mit Bar und Terrasse,
+        Fitnessstudio, Sauna, kostenloser Fahrradabstellanlage und öffentlicher Tageskarte für Direktbucher.
+        Alle Zimmer mit kostenlosem Frühstücksbuffet und Minibar.
+      </p>
+      <div class="usp-row">
+        <span class="usp-chip">Vielfältige Zimmertypen</span>
+        <span class="usp-chip">Frühstücksbuffet inklusive</span>
+        <span class="usp-chip">Restaurant bloom vor Ort</span>
+        <span class="usp-chip">Fitnessstudio und Sauna</span>
+        <span class="usp-chip">10% Rabatt bei Direktbuchung</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="zimmer" data-reveal>
+    <div class="section-inner">
+      <span class="overline">Signature Modul</span>
+      <h2>Zimmer finden &amp; vergleichen.</h2>
+      <p class="hero-lede" style="margin-top:0.8rem;">Nach Personenzahl filtern, nach Preis oder
+        Grösse sortieren – alle acht Zimmertypen im direkten Vergleich.</p>
+
+      <div class="finder-controls">
+        <div class="finder-field">
+          <label for="filter-cap">Personen</label>
+          <select id="filter-cap">
+            <option value="all">Alle Zimmer</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Personen</option>
+          </select>
+        </div>
+        <div class="finder-field">
+          <label for="sort-order">Sortieren nach</label>
+          <select id="sort-order">
+            <option value="price-asc">Preis aufsteigend</option>
+            <option value="price-desc">Preis absteigend</option>
+            <option value="size-asc">Grösse aufsteigend</option>
+            <option value="size-desc">Grösse absteigend</option>
+          </select>
+        </div>
+        <span class="finder-count" id="finder-count"></span>
+      </div>
+
+      <div class="room-grid" id="room-grid">
+        <!-- room cards injected/annotated via data attributes, rendered server-side here -->
+        <article class="room-card" data-name="Classic Single" data-price="165" data-size="17" data-cap="1" data-desc="17 m²">
+          <div class="rc-top"><h3>Classic Single</h3></div>
+          <div class="rc-size">17 m²</div>
+          <div class="rc-price">CHF 165<small>.– / Nacht</small></div>
+          <div class="rc-cap">1 Person</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Classic Single with Balcony" data-price="175" data-size="17" data-cap="1" data-desc="17 m² mit Balkon">
+          <div class="rc-top"><h3>Classic Single with Balcony</h3></div>
+          <div class="rc-size">17 m² mit Balkon</div>
+          <div class="rc-price">CHF 175<small>.– / Nacht</small></div>
+          <div class="rc-cap">1 Person</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Business Room" data-price="220" data-size="20" data-cap="2" data-desc="20 m²">
+          <div class="rc-top"><h3>Business Room</h3></div>
+          <div class="rc-size">20 m²</div>
+          <div class="rc-price">CHF 220<small>.– / Nacht</small></div>
+          <div class="rc-cap">2 Personen</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Superior Room" data-price="240" data-size="24" data-cap="2" data-desc="24 m²">
+          <div class="rc-top"><h3>Superior Room</h3></div>
+          <div class="rc-size">24 m²</div>
+          <div class="rc-price">CHF 240<small>.– / Nacht</small></div>
+          <div class="rc-cap">2 Personen</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Deluxe Room" data-price="260" data-size="20" data-cap="2" data-desc="20 m², 1 Kind möglich">
+          <div class="rc-top"><h3>Deluxe Room</h3></div>
+          <div class="rc-size">20 m², 1 Kind möglich</div>
+          <div class="rc-price">CHF 260<small>.– / Nacht</small></div>
+          <div class="rc-cap">2 Personen</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Junior Suite" data-price="320" data-size="35" data-cap="2" data-desc="35 m², 1 Kind möglich">
+          <div class="rc-top"><h3>Junior Suite</h3></div>
+          <div class="rc-size">35 m², 1 Kind möglich</div>
+          <div class="rc-price">CHF 320<small>.– / Nacht</small></div>
+          <div class="rc-cap">2 Personen</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Art Suite" data-price="370" data-size="38" data-cap="2" data-desc="38 m², 1 Kind möglich">
+          <div class="rc-top"><h3>Art Suite</h3></div>
+          <div class="rc-size">38 m², 1 Kind möglich</div>
+          <div class="rc-price">CHF 370<small>.– / Nacht</small></div>
+          <div class="rc-cap">2 Personen</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+
+        <article class="room-card" data-name="Park Suite" data-price="420" data-size="54" data-cap="2" data-desc="54 m², 2 Kinder möglich">
+          <div class="rc-top"><h3>Park Suite</h3></div>
+          <div class="rc-size">54 m², 2 Kinder möglich</div>
+          <div class="rc-price">CHF 420<small>.– / Nacht</small></div>
+          <div class="rc-cap">2 Personen</div>
+          <div class="rc-incl">Frühstücksbuffet &amp; Minibar inklusive</div>
+          <button type="button" class="select-room">Für Anfrage wählen</button>
+        </article>
+      </div>
+      <p class="finder-empty" id="finder-empty" hidden>Keine Zimmer für diese Auswahl.</p>
+    </div>
+  </section>
+
+  <section id="ausstattung" data-reveal>
+    <div class="section-inner">
+      <span class="overline">Ausstattung</span>
+      <h2>Was inklusive ist.</h2>
+      <ul class="amenity-grid">
+        <li>Frühstücksbuffet inklusive (lokal und international)</li>
+        <li>Kostenlose Fahrradabstellanlage (überdacht und sicher)</li>
+        <li>Fitnessstudio mit Geräten</li>
+        <li>Sauna-Zugang</li>
+        <li>Kostenlose öffentliche Tageskarte (Direktbuchung)</li>
+        <li>Kostenlose Minibar</li>
+      </ul>
+      <p class="restaurant-note">Im Haus: Restaurant bloom mit Bar und Terrasse.</p>
+    </div>
+  </section>
+
+  <section id="anfrage" data-reveal>
+    <div class="section-inner">
+      <span class="overline">Signature Modul</span>
+      <h2>Anfrage zusammenstellen.</h2>
+      <p class="hero-lede" style="margin-top:0.8rem;">Zimmerwahl aus dem Vergleich oben plus
+        Personenzahl – als fertige Anfrage per Telefon oder E-Mail.</p>
+
+      <div class="composer">
+        <div class="composer-grid">
+          <div class="field">
+            <label for="selected-room-display">Gewähltes Zimmer</label>
+            <input id="selected-room-display" type="text" readonly placeholder="Noch kein Zimmer gewählt">
+          </div>
+          <div class="field">
+            <label for="guest-count">Personen</label>
+            <select id="guest-count">
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Personen</option>
+            </select>
+          </div>
+        </div>
+        <div class="composer-output">
+          <p id="composer-text"></p>
+          <div class="composer-actions">
+            <a class="btn btn-brand" id="call-link" href="tel:+41522650265">Anrufen</a>
+            <a class="btn btn-outline" id="mail-link" href="#">E-Mail senden</a>
+            <button class="btn-ghost" id="copy-btn" type="button">Text kopieren</button>
+            <span class="copy-status" id="copy-status" role="status"></span>
+          </div>
+        </div>
+        <p class="discount-note">10% Rabatt bei Direktbuchung, inklusive kostenloser öffentlicher Tageskarte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="section-inner">
+      <span class="overline">Lage</span>
+      <h2>Stadthausstrasse 4, Winterthur.</h2>
+      <div class="lage-grid">
+        <div class="lage-meta">
+          <span><strong>Adresse</strong><br>Stadthausstrasse 4, 8400 Winterthur</span>
+          <span><strong>Telefon</strong><br><a href="tel:+41522650265">+41 52 265 02 65</a></span>
+          <span><strong>E-Mail</strong><br><a href="mailto:welcome@phwin.ch">welcome@phwin.ch</a></span>
+          <span><strong>Bewertung</strong><br>4.6 · 773 Google-Bewertungen</span>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=Park%20Hotel%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Karte Park Hotel Winterthur"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-reveal>
+    <div class="section-inner">
+      <span class="overline">Gut zu wissen</span>
+      <h2 style="font-size:clamp(1.6rem,2.6vw + 1rem,2.3rem);">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Ist das Frühstück im Zimmerpreis inbegriffen?</summary>
+          <p>Ja. Alle Zimmer beinhalten ein kostenloses Frühstücksbuffet und eine Minibar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kann ich mit Kindern reisen?</summary>
+          <p>Mehrere Zimmertypen erlauben Kinder: Deluxe Room, Junior Suite und Art Suite je 1 Kind, Park Suite 2 Kinder.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Lohnt sich die Direktbuchung?</summary>
+          <p>Ja: 10% Rabatt bei Direktbuchung, plus eine kostenlose öffentliche Tageskarte.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es einen Fahrradabstellplatz?</summary>
+          <p>Ja, kostenlos, überdacht und sicher.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Park Hotel Winterthur</strong><br>
+      Stadthausstrasse 4, 8400 Winterthur<br>
+      <a href="tel:+41522650265">+41 52 265 02 65</a><br>
+      <a href="mailto:welcome@phwin.ch">welcome@phwin.ch</a>
+    </div>
+    <div>
+      <strong>Restaurant</strong><br>
+      bloom – Bar &amp; Terrasse im Haus
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://phwin.ch/" target="_blank" rel="noopener">phwin.ch</a>
+    </div>
+  </div>
+  <p>Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522650265">Anrufen · +41 52 265 02 65</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* room finder: filter + sort */
+  var grid = document.getElementById('room-grid');
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.room-card'));
+  var filterCap = document.getElementById('filter-cap');
+  var sortOrder = document.getElementById('sort-order');
+  var countEl = document.getElementById('finder-count');
+  var emptyEl = document.getElementById('finder-empty');
+
+  function applyFinder(){
+    var cap = filterCap.value;
+    var order = sortOrder.value;
+    var visible = cards.filter(function(c){
+      return cap === 'all' || c.getAttribute('data-cap') === cap;
+    });
+
+    var sorted = visible.slice().sort(function(a,b){
+      var pa = parseInt(a.getAttribute('data-price'),10);
+      var pb = parseInt(b.getAttribute('data-price'),10);
+      var sa = parseInt(a.getAttribute('data-size'),10);
+      var sb = parseInt(b.getAttribute('data-size'),10);
+      if(order === 'price-asc') return pa - pb;
+      if(order === 'price-desc') return pb - pa;
+      if(order === 'size-asc') return sa - sb;
+      if(order === 'size-desc') return sb - sa;
+      return 0;
+    });
+
+    cards.forEach(function(c){ c.hidden = true; });
+    sorted.forEach(function(c, i){
+      c.hidden = false;
+      c.style.order = i;
+    });
+
+    countEl.textContent = sorted.length + ' von ' + cards.length + ' Zimmertypen';
+    emptyEl.hidden = sorted.length !== 0;
+  }
+  grid.style.display = 'grid';
+  filterCap.addEventListener('change', applyFinder);
+  sortOrder.addEventListener('change', applyFinder);
+  applyFinder();
+
+  /* selection -> enquiry composer */
+  var selectedRoomName = '';
+  var roomDisplay = document.getElementById('selected-room-display');
+  var guestSelect = document.getElementById('guest-count');
+  var output = document.getElementById('composer-text');
+  var mailLink = document.getElementById('mail-link');
+  var copyBtn = document.getElementById('copy-btn');
+  var copyStatus = document.getElementById('copy-status');
+
+  function renderComposer(){
+    var guests = guestSelect.value;
+    var room = selectedRoomName || '(noch keine Auswahl)';
+    roomDisplay.value = selectedRoomName;
+    var text = 'Anfrage Park Hotel Winterthur\n' +
+      'Zimmer: ' + room + '\n' +
+      'Personen: ' + guests + '\n' +
+      'Hinweis: 10% Rabatt bei Direktbuchung';
+    output.textContent = text;
+    var subject = encodeURIComponent('Zimmeranfrage Park Hotel Winterthur');
+    var body = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:welcome@phwin.ch?subject=' + subject + '&body=' + body);
+    copyStatus.textContent = '';
+  }
+
+  cards.forEach(function(card){
+    var btn = card.querySelector('.select-room');
+    btn.addEventListener('click', function(){
+      cards.forEach(function(c){ c.classList.remove('is-selected'); });
+      card.classList.add('is-selected');
+      selectedRoomName = card.getAttribute('data-name') + ' (' + card.getAttribute('data-desc') + ', CHF ' + card.getAttribute('data-price') + '.–/Nacht)';
+      renderComposer();
+      var target = document.getElementById('anfrage');
+      if(target){ target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'}); }
+    });
+  });
+
+  guestSelect.addEventListener('change', renderComposer);
+  renderComposer();
+
+  copyBtn.addEventListener('click', function(){
+    var text = output.textContent;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        copyStatus.textContent = 'Kopiert.';
+      }, function(){
+        copyStatus.textContent = 'Kopieren nicht möglich.';
+      });
+    } else {
+      copyStatus.textContent = 'Kopieren nicht unterstützt.';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

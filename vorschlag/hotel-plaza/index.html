@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plaza Hotel Winterthur – Telefon, Ort, Bewertung</title>
+<meta name="description" content="Plaza Hotel Winterthur: Hotel in Winterthur. Telefon +41 52 212 15 15. Bewertung 3.8 von 333 Google-Rezensionen. Weitere Angaben sind nicht öffentlich verzeichnet.">
+<meta property="og:title" content="Plaza Hotel Winterthur">
+<meta property="og:description" content="Hotel in Winterthur. Telefon +41 52 212 15 15. Diese Seite zeigt nur, was tatsächlich bekannt ist.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Plaza Hotel Winterthur",
+  "telephone": "+41 52 212 15 15",
+  "address": { "@type": "PostalAddress", "addressLocality": "Winterthur", "addressCountry": "CH" },
+  "url": "https://plazahotel.ch/",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.8", "reviewCount": "333" }
+}
+</script>
+<style>
+  :root{
+    --bg:#f0efe8;
+    --surface:#ffffff;
+    --fg:#14181c;
+    --muted:#424a52;
+    --brand:#1e3350;
+    --accent:#7d431f;
+    --line:#c9c6ba;
+    --line-strong:#14181c;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'IBM Plex Sans',system-ui,sans-serif;
+    font-size:clamp(15px,0.9vw + 12px,17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    font-weight:600;
+    line-height:1.02;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  h1{font-size:clamp(2.6rem,7vw + 1rem,6rem);font-weight:700;}
+  h2{font-size:clamp(1.5rem,2.6vw + 1rem,2.2rem);}
+  h3{font-size:clamp(1.05rem,1.2vw + 1rem,1.3rem);}
+  p{margin:0 0 1em;color:var(--muted);}
+  a{color:inherit;text-decoration:none;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--fg);color:var(--bg);padding:0.75em 1.2em;z-index:200;}
+  .skip-link:focus{left:1rem;top:1rem;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(1.2rem,4vw,3rem);}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(240,239,232,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding-block:0.9rem;}
+  .brandmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,1.4vw + 0.7rem,1.25rem);}
+  .brandmark span{color:var(--accent);}
+  .nav-call{
+    border:1.5px solid var(--line-strong);
+    padding:0.5em 1em;
+    font-size:0.85rem;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:0.5em;
+  }
+  .nav-call:hover{background:var(--fg);color:var(--bg);}
+  .nav-links{
+    display:flex;gap:clamp(1rem,2vw,1.6rem);align-items:center;
+    list-style:none;margin:0;padding:0;font-size:0.9rem;
+  }
+  .nav-links a{text-decoration:none;font-weight:600;}
+  .nav-links a:hover{color:var(--accent);}
+  @media (max-width:700px){
+    .nav-links{display:none;}
+  }
+
+  main{display:block;}
+  section{padding-block:clamp(3rem,8vw,6rem);}
+  section + section{border-top:1px solid var(--line);}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.is-visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+  }
+
+  /* ===== HERO: the plaza grid ===== */
+  .plaza{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:auto;
+    gap:clamp(0.6rem,1.6vw,1.4rem);
+    align-items:stretch;
+  }
+  .plaza-title{
+    grid-column:1 / 8;
+    grid-row:1;
+    align-self:start;
+    padding-top:clamp(1rem,3vw,2.2rem);
+  }
+  .plaza-title .eyebrow{
+    display:block;
+    font-size:0.8rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:0.9em;
+  }
+  .plaza-void{
+    grid-column:8 / 13;
+    grid-row:1 / 3;
+    aspect-ratio:1;
+    border:1.5px solid var(--line-strong);
+    position:relative;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:20% 20%;
+  }
+  .plaza-void::before,.plaza-void::after{
+    content:"";
+    position:absolute;
+    background:var(--line-strong);
+  }
+  .plaza-void::before{top:50%;left:8%;right:8%;height:1px;transform:translateY(-50%);}
+  .plaza-void::after{left:50%;top:8%;bottom:8%;width:1px;transform:translateX(-50%);}
+  .plaza-void .tag{
+    position:absolute;bottom:0.9rem;left:0.9rem;
+    font-size:0.75rem;color:var(--muted);
+    letter-spacing:0.08em;text-transform:uppercase;
+  }
+  .plaza-meta{
+    grid-column:1 / 8;
+    grid-row:2;
+    display:flex;
+    flex-wrap:wrap;
+    gap:clamp(0.5rem,1.5vw,1rem);
+    align-self:end;
+    padding-bottom:0.5rem;
+  }
+  .meta-tile{
+    border:1px solid var(--line-strong);
+    padding:0.8em 1.1em;
+    min-width:8.5em;
+  }
+  .meta-tile .k{display:block;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.35em;}
+  .meta-tile .v{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;}
+  .meta-tile.rating .v{font-weight:500;font-size:0.95rem;color:var(--muted);}
+
+  @media (max-width:760px){
+    .plaza{grid-template-columns:1fr;}
+    .plaza-title{grid-column:1;grid-row:1;}
+    .plaza-void{grid-column:1;grid-row:2;margin-top:1.5rem;aspect-ratio:16/10;}
+    .plaza-meta{grid-column:1;grid-row:3;margin-top:1.5rem;}
+  }
+
+  /* ===== Fakten ===== */
+  .fakten-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .fakt{
+    background:var(--surface);
+    padding:1.6rem 1.4rem;
+    aspect-ratio:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .fakt .k{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+  .fakt .v{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(1.1rem,1.6vw,1.5rem);}
+  @media (max-width:700px){ .fakten-grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* ===== Die Lücke: known vs unknown squares ===== */
+  .luecke-intro{max-width:42em;margin-bottom:2.4rem;}
+  .luecke-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:clamp(0.6rem,1.5vw,1rem);
+  }
+  .cell{
+    aspect-ratio:1;
+    padding:1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    font-size:0.85rem;
+  }
+  .cell.known{
+    background:var(--brand);
+    color:#fff;
+    border:1px solid var(--brand);
+  }
+  .cell.known .k{color:#fff;opacity:0.75;}
+  .cell.unknown{
+    border:1.5px dashed var(--line-strong);
+    color:var(--muted);
+  }
+  .cell .k{display:block;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.3em;}
+  .cell .v{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  @media (max-width:700px){ .luecke-grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* ===== Ruf-Planer signature module ===== */
+  .planer{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(1.2rem,3vw,2.4rem);
+    align-items:start;
+  }
+  .planer-tiles{display:flex;flex-direction:column;gap:0.7rem;}
+  .reason-btn{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:1em 1.2em;
+    border:1.5px solid var(--line-strong);
+    background:var(--surface);
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:0.95rem;
+    font-weight:500;
+    color:var(--fg);
+    cursor:pointer;
+  }
+  .reason-btn[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .planer-output{
+    border:1.5px solid var(--line-strong);
+    padding:clamp(1.4rem,3vw,2rem);
+    background:var(--surface);
+    min-height:14rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .planer-output .script{font-size:1.05rem;color:var(--fg);}
+  .planer-output .script em{font-style:normal;color:var(--accent);}
+  .call-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:0.6em;
+    background:var(--fg);
+    color:var(--bg);
+    padding:0.9em 1.3em;
+    font-weight:600;
+    margin-top:1.4rem;
+    width:fit-content;
+  }
+  .call-cta:hover{background:var(--brand);}
+  @media (max-width:700px){ .planer{grid-template-columns:1fr;} }
+
+  /* ===== Lage ===== */
+  .map-frame{
+    border:1.5px solid var(--line-strong);
+    aspect-ratio:16/9;
+    width:100%;
+  }
+  .map-frame iframe{width:100%;height:100%;border:0;display:block;}
+
+  footer{
+    background:var(--fg);
+    color:var(--bg);
+    padding-block:3rem;
+  }
+  footer a{text-decoration:underline;}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-end;}
+  .foot-note{font-size:0.8rem;opacity:0.6;margin-top:2rem;}
+
+  /* sticky mobile call bar */
+  .call-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:100;
+    display:none;
+    background:var(--fg);
+    border-top:1px solid var(--line-strong);
+  }
+  .call-bar a{
+    display:flex;align-items:center;justify-content:center;gap:0.6em;
+    padding:1em;color:#fff;font-weight:600;font-size:0.95rem;
+  }
+  @media (max-width:700px){
+    .call-bar{display:block;}
+    body{padding-bottom:3.6rem;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="wrap nav-row">
+    <div class="brandmark">Plaza <span>Hotel</span> Winterthur</div>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-links">
+        <li><a href="#fakten">Fakten</a></li>
+        <li><a href="#planer">Ruf-Planer</a></li>
+        <li><a href="#lage">Lage</a></li>
+      </ul>
+    </nav>
+    <a class="nav-call" href="tel:+41522121515">☎ 052 212 15 15</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap plaza">
+      <div class="plaza-title">
+        <span class="eyebrow">Hotel · Winterthur</span>
+        <h1>Plaza Hotel<br>Winterthur</h1>
+      </div>
+      <div class="plaza-void" aria-hidden="true">
+        <span class="tag">nicht publiziert</span>
+      </div>
+      <div class="plaza-meta">
+        <div class="meta-tile"><span class="k">Ort</span><span class="v">Winterthur</span></div>
+        <div class="meta-tile"><span class="k">Telefon</span><span class="v">052 212 15 15</span></div>
+        <div class="meta-tile rating"><span class="k">Google-Bewertung</span><span class="v">3.8 · 333 Rezensionen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="fakten">
+    <div class="wrap">
+      <h2>Fakten</h2>
+      <p style="max-width:38em;margin-top:0.8rem;">Alles, was für diese Seite bestätigt werden konnte. Die eigene Website des Hauses liefert seit einiger Zeit einen 403-Fehler – wir bauen deshalb auf öffentlich bekannten Angaben auf, nicht auf Annahmen.</p>
+      <div class="fakten-grid" style="margin-top:2rem;">
+        <div class="fakt"><span class="k">Name</span><span class="v">Plaza Hotel Winterthur</span></div>
+        <div class="fakt"><span class="k">Kategorie</span><span class="v">Hotel</span></div>
+        <div class="fakt"><span class="k">Ort</span><span class="v">Winterthur</span></div>
+        <div class="fakt"><span class="k">Telefon</span><span class="v">052 212 15 15</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="wrap">
+      <h2>Der offene Platz</h2>
+      <p class="luecke-intro" style="margin-top:0.8rem;">Eine Plaza lebt von dem, was in der Mitte frei bleibt. Auf dieser Seite bleiben Felder bewusst leer, statt sie mit erfundenen Angaben zu füllen. Ausgefüllt: bestätigt. Gestrichelt: von uns nicht auffindbar.</p>
+      <div class="luecke-grid">
+        <div class="cell known"><span class="k">bestätigt</span><span class="v">Ort</span></div>
+        <div class="cell known"><span class="k">bestätigt</span><span class="v">Telefon</span></div>
+        <div class="cell known"><span class="k">bestätigt</span><span class="v">Bewertung</span></div>
+        <div class="cell unknown"><span class="k">nicht publiziert</span><span class="v">Zimmer</span></div>
+        <div class="cell unknown"><span class="k">nicht publiziert</span><span class="v">Preise</span></div>
+        <div class="cell unknown"><span class="k">nicht publiziert</span><span class="v">Adresse</span></div>
+        <div class="cell unknown"><span class="k">nicht publiziert</span><span class="v">Öffnungszeiten</span></div>
+        <div class="cell unknown"><span class="k">nicht publiziert</span><span class="v">Fotos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="planer">
+    <div class="wrap">
+      <h2>Ruf-Planer</h2>
+      <p style="max-width:38em;margin-top:0.8rem;">Ohne Zimmerliste und ohne Online-Formular bleibt das Telefon der einzige verlässliche Weg. Dieser kleine Planer bereitet den Anruf vor – wählen Sie einen Grund, wir formulieren den ersten Satz.</p>
+      <div class="planer" style="margin-top:2rem;">
+        <div class="planer-tiles" role="group" aria-label="Anrufgrund wählen">
+          <button class="reason-btn" data-reason="zimmer" aria-pressed="false">Zimmeranfrage</button>
+          <button class="reason-btn" data-reason="rueckruf" aria-pressed="false">Rückruf gewünscht</button>
+          <button class="reason-btn" data-reason="frage" aria-pressed="false">Allgemeine Frage</button>
+        </div>
+        <div class="planer-output">
+          <p class="script" id="planerScript" aria-live="polite">Wählen Sie links einen Grund – wir zeigen den passenden ersten Satz für Ihren Anruf beim Plaza Hotel Winterthur.</p>
+          <a class="call-cta" href="tel:+41522121515">☎ 052 212 15 15 anrufen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" id="lage">
+    <div class="wrap">
+      <h2>Lage</h2>
+      <p style="max-width:38em;margin-top:0.8rem;">Eine genaue Adresse ist nicht öffentlich verzeichnet. So lässt sich das Plaza Hotel Winterthur trotzdem finden:</p>
+      <div class="map-frame" style="margin-top:1.6rem;">
+        <iframe title="Karte: Plaza Hotel Winterthur" loading="lazy" src="https://maps.google.com/maps?q=Plaza%20Hotel%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brandmark">Plaza Hotel Winterthur</div>
+        <p style="color:inherit;opacity:0.75;margin-top:0.6rem;">Winterthur · <a href="tel:+41522121515">052 212 15 15</a></p>
+      </div>
+      <div>
+        <p style="color:inherit;opacity:0.75;">Bewertung: 3.8 aus 333 Google-Rezensionen.</p>
+      </div>
+    </div>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="call-bar">
+  <a href="tel:+41522121515">☎ Jetzt anrufen · 052 212 15 15</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var scripts = {
+    zimmer: "Sagen Sie: „Guten Tag, ich rufe wegen einer ",
+    rueckruf: "Sagen Sie: „Guten Tag, ich hätte gerne einen ",
+    frage: "Sagen Sie: „Guten Tag, ich habe eine "
+  };
+  var tails = {
+    zimmer: "Zimmeranfrage beim Plaza Hotel Winterthur an.“",
+    rueckruf: "Rückruf vom Plaza Hotel Winterthur, mein Anliegen betrifft…“",
+    frage: "Frage zum Plaza Hotel Winterthur.“"
+  };
+  var buttons = document.querySelectorAll('.reason-btn');
+  var out = document.getElementById('planerScript');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+      var r = btn.getAttribute('data-reason');
+      out.innerHTML = scripts[r] + '<em>' + tails[r] + '</em>';
+    });
+  });
+})();
+</script>
+</body>
+</html>

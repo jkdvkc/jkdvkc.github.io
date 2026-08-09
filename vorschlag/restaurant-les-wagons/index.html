@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Wagons — Tavolata in der Eisenbahn-Werkstatt, Winterthur</title>
+<meta name="description" content="Les Wagons, Lagerplatz 17a, Winterthur: Tavolata-Restaurant in einer ehemaligen Eisenbahn-Werkstatt. Saisonale Themengänge zum Teilen — Summer Znacht, Milk-Tavolata, Hof-Tavolata. Mi–Sa geöffnet.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Les Wagons — Tavolata in der Eisenbahn-Werkstatt">
+<meta property="og:description" content="Gemeinsam am langen Tisch, mitten in einer historischen Eisenbahn-Anlage am Lagerplatz. Saisonale Themengänge, frisch und geteilt.">
+<meta property="og:url" content="https://www.leswagons.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Les Wagons",
+  "url": "https://www.leswagons.ch/",
+  "telephone": "+41 52 508 50 17",
+  "servesCuisine": "Moderne europäische Küche",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lagerplatz 17a",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "218"
+  },
+  "sameAs": ["https://www.facebook.com/leswagons/"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday"], "opens": "16:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "15:00", "closes": "24:00"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#151109;
+    --surface:#211a10;
+    --fg:#f4ecdd;
+    --muted:#b7a894;
+    --brand:#c23b2c;
+    --accent:#d9a23b;
+    --line: rgba(244,236,221,.16);
+    --steel: #3a3227;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Work Sans', system-ui, sans-serif;
+    font-size:clamp(15px, .95vw + .55rem, 17.5px);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Big Shoulders Display', system-ui, sans-serif;
+    font-weight:800; line-height:.94; margin:0; letter-spacing:.005em;
+    text-transform:uppercase;
+  }
+  .mono{font-family:'IBM Plex Mono', ui-monospace, monospace; letter-spacing:.03em;}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 clamp(20px,5vw,64px);}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px;}
+  .kicker{
+    font-family:'IBM Plex Mono', monospace; text-transform:uppercase; letter-spacing:.16em;
+    font-size:.76rem; color:var(--accent); margin:0 0 .6em; font-weight:600;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:.5em; padding:.85em 1.5em;
+    font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:.85rem;
+    text-transform:uppercase; letter-spacing:.06em; text-decoration:none;
+    border-radius:2px; border:1px solid transparent; cursor:pointer;
+  }
+  .btn.primary{background:var(--brand); color:#fff5ee;}
+  .btn.primary:hover{background:#a83023;}
+  .btn.ghost{border-color:var(--line); color:var(--fg);}
+  .btn.ghost:hover{border-color:var(--accent); color:var(--accent);}
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);
+    white-space:nowrap; border:0; padding:0; margin:-1px;
+  }
+  .skip-link{
+    position:absolute; left:-999px; top:0; background:var(--brand); color:#fff;
+    padding:.8em 1.2em; z-index:200; font-family:'IBM Plex Mono',monospace; font-size:.85rem;
+  }
+  .skip-link:focus{left:12px; top:12px;}
+
+  /* HEADER */
+  header.site{
+    position:sticky; top:0; z-index:60;
+    background:rgba(21,17,9,.94); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding-block:14px; gap:1rem;}
+  .wordmark{
+    font-family:'Big Shoulders Display',sans-serif; font-weight:900; text-transform:uppercase;
+    font-size:clamp(1.15rem,1vw+.85rem,1.5rem); text-decoration:none; color:var(--fg); letter-spacing:.02em;
+  }
+  .wordmark span{color:var(--brand);}
+  nav.primary ul{list-style:none; display:flex; gap:clamp(12px,2vw,24px); margin:0; padding:0;}
+  nav.primary a{
+    text-decoration:none; font-size:.78rem; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--muted); font-family:'IBM Plex Mono',monospace; border-bottom:2px solid transparent; padding-bottom:.25em;
+  }
+  nav.primary a:hover{color:var(--accent); border-color:var(--accent);}
+  .header-cta{display:flex; align-items:center; gap:.8rem;}
+  .status-pill{
+    display:inline-flex; align-items:center; gap:.5em; font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; padding:.4em .8em;
+    border:1px solid var(--line); border-radius:20px; color:var(--muted);
+  }
+  .status-pill .dot{width:8px; height:8px; border-radius:50%; background:var(--muted); flex:none;}
+  .status-pill.live .dot{background:#79c26b; box-shadow:0 0 0 3px rgba(121,194,107,.22);}
+  .status-pill.closed .dot{background:#c23b2c;}
+  @media (max-width:760px){ nav.primary{display:none;} }
+
+  main{display:block;}
+  section{padding-block:clamp(56px,9vw,116px); position:relative;}
+
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* HERO */
+  .hero{
+    padding-top:clamp(48px,8vw,90px);
+    background:
+      linear-gradient(180deg, rgba(21,17,9,.55), rgba(21,17,9,.94)),
+      url('https://www.leswagons.ch/uploads/7/3/9/3/73934475/published/summerznacht.png');
+    background-size:cover; background-position:center 30%;
+  }
+  .hero-noimg{ background:linear-gradient(160deg, #1c1509, #15110a 60%); }
+  .hero-grid{display:grid; grid-template-columns:1.5fr .9fr; gap:clamp(24px,4vw,60px); align-items:end;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero h1{
+    font-size:clamp(2.6rem, 6.4vw, 5.6rem);
+    margin:.15em 0 .3em;
+  }
+  .hero h1 em{ font-style:normal; color:var(--brand); }
+  .hero-lede{ max-width:46ch; color:var(--fg); font-size:clamp(1rem,.5vw+.9rem,1.18rem); }
+  .hero-pills{display:flex; flex-wrap:wrap; gap:.6rem; margin:1.4em 0;}
+  .pill{
+    font-family:'IBM Plex Mono',monospace; font-size:.74rem; text-transform:uppercase;
+    letter-spacing:.05em; padding:.5em .9em; border:1px solid var(--line); border-radius:20px; color:var(--muted);
+  }
+  .pill strong{color:var(--fg);}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.4em;}
+  .hero-side{
+    border-left:2px solid var(--steel); padding-left:clamp(16px,2vw,28px);
+  }
+  .hero-side .ticket{
+    font-family:'IBM Plex Mono',monospace; font-size:.82rem; color:var(--muted); line-height:1.9;
+  }
+  .hero-side .ticket strong{display:block; color:var(--fg); font-size:1rem; margin-bottom:.3em;}
+
+  /* CONCEPT / ABOUT */
+  .concept-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,80px); align-items:start;}
+  @media (max-width:820px){ .concept-grid{grid-template-columns:1fr;} }
+  .concept h2{font-size:clamp(2rem,4vw,3.2rem); margin-bottom:.5em;}
+  .concept p{color:var(--fg); font-size:1.02rem;}
+  .usp-list{list-style:none; margin:0; padding:0; display:grid; gap:14px;}
+  .usp-list li{
+    display:flex; gap:.8em; align-items:flex-start; padding:14px 0; border-top:1px solid var(--line);
+    font-size:.98rem; color:var(--fg);
+  }
+  .usp-list li:first-child{border-top:none;}
+  .usp-num{font-family:'IBM Plex Mono',monospace; color:var(--accent); font-weight:600; flex:none;}
+
+  /* TRAIN — signature module */
+  .train-section{
+    background:var(--surface);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .train-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:1.6em;}
+  .train-head h2{font-size:clamp(2rem,4vw,3.2rem);}
+  .train-counter{font-family:'IBM Plex Mono',monospace; font-size:.9rem; color:var(--muted);}
+  .train-controls{display:flex; align-items:center; gap:.7rem; margin-bottom:1.2em;}
+  .train-btn{
+    width:42px; height:42px; border-radius:50%; border:1px solid var(--line); background:transparent;
+    color:var(--fg); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    flex:none;
+  }
+  .train-btn:hover{border-color:var(--accent); color:var(--accent);}
+  .train-dots{display:flex; gap:6px; flex-wrap:wrap;}
+  .train-dots button{
+    width:9px; height:9px; border-radius:50%; border:1px solid var(--line); background:transparent; padding:0; cursor:pointer;
+  }
+  .train-dots button[aria-current="true"]{background:var(--brand); border-color:var(--brand);}
+  .track-wrap{position:relative;}
+  .track{
+    display:flex; align-items:stretch; gap:0; overflow-x:auto; overflow-y:hidden;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; touch-action:pan-x;
+    padding:8px 8px 22px; margin:0 -8px; scrollbar-width:thin; scrollbar-color:var(--steel) transparent;
+  }
+  .track:focus-visible{outline:3px solid var(--accent); outline-offset:6px;}
+  .track::-webkit-scrollbar{height:8px;}
+  .track::-webkit-scrollbar-thumb{background:var(--steel); border-radius:8px;}
+  .car{
+    flex:0 0 auto; width:min(78vw,300px); scroll-snap-align:center;
+    background:var(--bg); border:1px solid var(--line); border-radius:4px;
+    padding:22px 20px 20px; margin:6px 0; position:relative; display:flex; flex-direction:column; gap:.6em;
+    cursor:pointer;
+  }
+  .car:hover, .car:focus-visible{border-color:var(--accent);}
+  .car[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 1px var(--brand) inset;}
+  .car-tag{font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--accent); text-transform:uppercase; letter-spacing:.1em;}
+  .car h3{font-size:1.4rem; text-transform:none; font-family:'Big Shoulders Display'; font-weight:700; line-height:1.05;}
+  .car-desc{font-size:.88rem; color:var(--muted); flex:1;}
+  .car-price{font-family:'IBM Plex Mono',monospace; font-size:.85rem; color:var(--fg); margin-top:auto; padding-top:.4em; border-top:1px dashed var(--line);}
+  .car.loco{background:linear-gradient(160deg,#26190f,#1a1309); border-color:var(--steel);}
+  .car.loco h3{font-size:1.6rem;}
+  .car.caboose{background:linear-gradient(160deg,#2a1610,#1a1309); border-color:var(--brand);}
+  .coupler{
+    flex:0 0 26px; align-self:center; height:14px; margin:0 -1px; position:relative; scroll-snap-align:none;
+  }
+  .coupler::before{
+    content:""; position:absolute; inset:5px -4px; background:var(--steel); border-radius:2px;
+  }
+  .coupler::after{
+    content:""; position:absolute; top:0; bottom:0; left:9px; width:8px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--steel);
+  }
+  .car-detail{
+    margin-top:1.6em; border-top:1px solid var(--line); padding-top:1.4em;
+    display:grid; grid-template-columns:auto 1fr; gap:.5em 1.4em; align-items:baseline;
+  }
+  .car-detail .cd-label{font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em;}
+  .car-detail .cd-value{font-size:1rem;}
+  .car-detail .cd-name{font-family:'Big Shoulders Display'; font-weight:700; font-size:1.6rem; text-transform:uppercase; grid-column:1/-1;}
+  .train-hint{font-size:.82rem; color:var(--muted); margin-top:.6em;}
+  .train-legend{
+    list-style:none; margin:1.8em 0 0; padding:1.2em 0 0; border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:1.4em; font-family:'IBM Plex Mono',monospace; font-size:.76rem; color:var(--muted);
+  }
+  .train-legend li{display:flex; align-items:center; gap:.5em;}
+  .legend-swatch{width:12px; height:12px; border-radius:2px; flex:none; border:1px solid var(--steel);}
+  .legend-swatch.loco{background:#26190f;}
+  .legend-swatch.item{background:var(--bg);}
+  .legend-swatch.caboose{background:#2a1610; border-color:var(--brand);}
+
+  /* SHARED TABLE */
+  .table-section{}
+  .table-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(28px,5vw,64px); align-items:center;}
+  @media (max-width:860px){ .table-grid{grid-template-columns:1fr;} }
+  .table-section h2{font-size:clamp(2rem,4vw,3.4rem); margin-bottom:.45em;}
+  .fact-strip{display:flex; flex-wrap:wrap; gap:10px; margin-top:1.4em;}
+  .fact{
+    border:1px solid var(--line); border-radius:3px; padding:.7em 1em; font-family:'IBM Plex Mono',monospace;
+    font-size:.78rem; color:var(--muted);
+  }
+  .photo-stack{display:grid; gap:12px;}
+  .photo-stack img{border-radius:4px; border:1px solid var(--line); width:100%; height:auto; object-fit:cover;}
+  .photo-row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+
+  /* GALLERY */
+  .gallery-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:1.6em;}
+  .gallery-grid figure{margin:0; border:1px solid var(--line); border-radius:4px; overflow:hidden; aspect-ratio:4/3;}
+  .gallery-grid img{width:100%; height:100%; object-fit:cover;}
+  @media (max-width:600px){ .gallery-grid{grid-template-columns:1fr;} }
+
+  /* HOURS + RATING */
+  .hr-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(24px,4vw,56px); align-items:start; margin-top:2em;}
+  @media (max-width:760px){ .hr-grid{grid-template-columns:1fr;} }
+  table.hours{width:100%; border-collapse:collapse; font-size:1.02rem;}
+  table.hours th, table.hours td{padding:14px 0; border-top:1px solid var(--line); font-weight:400; text-align:left;}
+  table.hours tr:first-child th, table.hours tr:first-child td{border-top:none;}
+  table.hours td:last-child{text-align:right; font-family:'IBM Plex Mono',monospace; color:var(--accent);}
+  table.hours td.closed{color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+  .rating-block{
+    border:1px solid var(--line); border-radius:4px; padding:26px; text-align:center; background:var(--surface);
+  }
+  .rating-num{font-family:'Big Shoulders Display'; font-weight:900; font-size:clamp(3.2rem,6vw,4.6rem); color:var(--accent); line-height:1;}
+  .rating-meta{color:var(--muted); font-size:.92rem; margin-top:.4em;}
+
+  /* CONTACT */
+  .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(24px,4vw,60px); align-items:start; margin-top:2em;}
+  @media (max-width:820px){ .contact-grid{grid-template-columns:1fr;} }
+  .info-list{list-style:none; margin:0 0 1.6em; padding:0; display:grid; gap:14px;}
+  .info-list li{display:flex; flex-direction:column; gap:.2em; padding-bottom:14px; border-bottom:1px solid var(--line); font-size:1rem;}
+  .info-list .label{font-family:'IBM Plex Mono',monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
+  .info-list a{text-decoration:none; color:var(--fg);}
+  .info-list a:hover{color:var(--accent);}
+  .map-frame{border:1px solid var(--line); border-radius:4px; overflow:hidden; aspect-ratio:4/3;}
+  .map-frame iframe{width:100%; height:100%; border:0; filter:grayscale(.25) contrast(1.05);}
+
+  footer.site{border-top:1px solid var(--line); padding-block:34px; background:var(--surface);}
+  footer.site .wrap{display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center;}
+  .fmark{font-family:'Big Shoulders Display'; font-weight:800; text-transform:uppercase; font-size:1.1rem;}
+  footer.site a{color:var(--muted); text-decoration:none; font-size:.85rem;}
+  footer.site a:hover{color:var(--accent);}
+  .legal{display:flex; flex-direction:column; gap:.2em; font-size:.76rem; color:var(--muted); text-align:right;}
+
+  .mobile-bar{
+    display:none; position:sticky; bottom:0; z-index:70; background:var(--brand); border-top:1px solid rgba(0,0,0,.2);
+  }
+  .mobile-bar a{
+    flex:1; text-align:center; padding:14px 0; color:#fff5ee; text-decoration:none; font-family:'IBM Plex Mono',monospace;
+    font-weight:600; text-transform:uppercase; letter-spacing:.06em; font-size:.85rem;
+  }
+  .mobile-bar .route{background:rgba(0,0,0,.14);}
+  @media (max-width:640px){ .mobile-bar{display:flex;} }
+
+  /* SMALL SCREENS DOWN TO 360PX */
+  @media (max-width:400px){
+    .wrap{padding-inline:16px;}
+    .nav-row{padding-block:10px;}
+    .header-cta{gap:.5rem;}
+    .status-pill{display:none;}
+    .hero h1{font-size:clamp(2.1rem,9vw,2.8rem);}
+    .hero-pills .pill{font-size:.68rem; padding:.42em .7em;}
+    .car{width:82vw;}
+    .car-detail{grid-template-columns:1fr;}
+    .car-detail .cd-label{margin-top:.4em;}
+    table.hours td{font-size:.92rem;}
+    .rating-num{font-size:2.8rem;}
+    .contact-grid, .hr-grid, .table-grid, .concept-grid, .gallery-grid{gap:20px;}
+    footer.site .wrap{flex-direction:column; align-items:flex-start;}
+    .legal{text-align:left;}
+  }
+
+  @media print{
+    header.site, .mobile-bar, .train-controls, .status-pill{display:none !important;}
+    body{background:#fff; color:#111;}
+    section{padding-block:20px;}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">Les <span>Wagons</span></a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#konzept">Konzept</a></li>
+        <li><a href="#wagen">Der Zug</a></li>
+        <li><a href="#tisch">Am Tisch</a></li>
+        <li><a href="#impressionen">Impressionen</a></li>
+        <li><a href="#zeiten">Zeiten</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <span class="status-pill" id="statusPill"><span class="dot"></span><span id="statusText">Status wird geladen…</span></span>
+      <a class="btn primary" href="tel:+41525085017">Anrufen</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="kicker">Lagerplatz 17a · Eisenbahn-Werkstatt</p>
+        <h1>Ein Tisch<br>für alle. <em>Ein Zug</em><br>voller Gänge.</h1>
+        <p class="hero-lede">Les Wagons ist ein Restaurantkonzept in einer ehemaligen Eisenbahn-Werkstatt am Lagerplatz. Tavolata-Erlebnisse — gemeinsame Tellerkombinationen — mit frischen, saisonalen Zutaten, serviert an langen, geteilten Tischen.</p>
+        <div class="hero-pills">
+          <span class="pill"><strong>4.7</strong> · 218 Google-Rezensionen</span>
+          <span class="pill">Moderne europäische Küche</span>
+          <span class="pill">Tavolata-Konzept</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="tel:+41525085017">052 508 50 17</a>
+          <a class="btn ghost" href="#wagen">Speisekarte als Zug ansehen</a>
+        </div>
+      </div>
+      <div class="hero-side reveal">
+        <div class="ticket mono">
+          <strong>Fahrplan</strong>
+          Mi – Do · 16:00–23:00<br>
+          Fr – Sa · 15:00–24:00<br>
+          So – Di · Geschlossen
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT / ABOUT -->
+  <section id="konzept">
+    <div class="wrap concept-grid">
+      <div class="concept reveal">
+        <p class="kicker">Der Ort</p>
+        <h2>Werkstatt.<br>Umgebaut. Gedeckt.</h2>
+        <p>In einer ehemaligen Eisenbahn-Werkstatt am Lagerplatz serviert Les Wagons Tavolata-Erlebnisse: gemeinsame Tellerkombinationen mit frischen, saisonalen Zutaten. Kein Einzeltisch, keine à la carte Insel — alle sitzen am gleichen langen Tisch, wie in einem Wagen, der durch den Abend fährt.</p>
+      </div>
+      <ul class="usp-list reveal" aria-label="Was Les Wagons besonders macht">
+        <li><span class="usp-num mono">01</span><span>Einzigartiger Ort in historischer Eisenbahn-Anlage</span></li>
+        <li><span class="usp-num mono">02</span><span>Tavolata-Konzept — gemeinsam geniessen, an einem Tisch</span></li>
+        <li><span class="usp-num mono">03</span><span>Saisonale Themengänge: Summer Znacht, Milk-Tavolata, Hof-Tavolata</span></li>
+        <li><span class="usp-num mono">04</span><span>Hausgemachte Kuchen und Desserts</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE TRAIN — signature module -->
+  <section id="wagen" class="train-section">
+    <div class="wrap">
+      <div class="train-head reveal">
+        <div>
+          <p class="kicker">Speisekarte</p>
+          <h2>Der Zug hält<br>bei jedem Gang.</h2>
+        </div>
+        <p class="train-counter mono" id="trainCounter" aria-hidden="true">Wagen 01 / 10</p>
+      </div>
+      <p class="train-hint reveal">Mit den Pfeiltasten, per Wisch oder über die Punkte durch die Wagen fahren. Ein Wagen antippen oder mit Enter bestätigen zeigt die Details unten.</p>
+      <div class="train-controls reveal">
+        <button type="button" class="train-btn" id="prevCar" aria-label="Vorheriger Wagen">‹</button>
+        <button type="button" class="train-btn" id="nextCar" aria-label="Nächster Wagen">›</button>
+        <div class="train-dots" id="trainDots" role="tablist" aria-label="Wagen-Übersicht"></div>
+      </div>
+      <div class="track-wrap reveal">
+        <div class="track" id="track" tabindex="0" role="group" aria-label="Speisekarte als Zug, mit Pfeiltasten durchblättern" aria-describedby="trainCounter">
+          <!-- cars injected by JS from real menu data + built via markup below as fallback -->
+        </div>
+      </div>
+      <div class="car-detail" id="carDetail">
+        <span class="cd-name" id="cdName">Lokomotive</span>
+        <span class="cd-label">Rubrik</span><span class="cd-value" id="cdSection">Les Wagons</span>
+        <span class="cd-label" id="cdDescLabel">Beschreibung</span><span class="cd-value" id="cdDesc">Werkstatt-Halle am Lagerplatz — Startpunkt der Tavolata.</span>
+        <span class="cd-label" id="cdPriceLabel" hidden>Preis</span><span class="cd-value" id="cdPrice" hidden></span>
+      </div>
+      <ul class="train-legend reveal" aria-label="Legende der Wagentypen">
+        <li><span class="legend-swatch loco" aria-hidden="true"></span>Lokomotive — der Ort</li>
+        <li><span class="legend-swatch item" aria-hidden="true"></span>Spezialitäten &amp; Tavolata</li>
+        <li><span class="legend-swatch item" aria-hidden="true"></span>Desserts &amp; Kuchen</li>
+        <li><span class="legend-swatch caboose" aria-hidden="true"></span>Schlusswagen — reservieren</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SHARED TABLE -->
+  <section id="tisch" class="table-section">
+    <div class="wrap table-grid">
+      <div class="reveal">
+        <p class="kicker">Tavolata</p>
+        <h2>Alle steigen<br>am selben Tisch ein.</h2>
+        <p>Bei der Hof-Tavolata kommt das Farm-to-Table-Erlebnis direkt vom Hof Rinderbrunnen auf den Tisch. Bei der Milk-Tavolata stehen regionale Milchprodukte und pflanzenbasierte Alternativen im Zentrum. Freitags und samstags nachmittags gibt es zusätzlich Andreis Graubündner Nuss-Torte und wechselnde saisonale Kuchen.</p>
+        <div class="fact-strip">
+          <span class="fact mono">Hof-Tavolata · CHF 100 (Mahlzeit)</span>
+          <span class="fact mono">Schokoladendessert · CHF 10</span>
+          <span class="fact mono">Kuchen · Fr &amp; Sa nachmittags</span>
+        </div>
+      </div>
+      <div class="photo-stack reveal">
+        <img src="https://www.leswagons.ch/uploads/7/3/9/3/73934475/published/img-5870.jpeg" alt="Innenraum von Les Wagons in der Eisenbahn-Werkstatt" loading="lazy" onerror="this.closest('.photo-stack').style.display='none'">
+        <div class="photo-row">
+          <img src="https://www.leswagons.ch/uploads/7/3/9/3/73934475/editor/bunteds-2026.jpg" alt="Gedeckter Tisch bei Les Wagons" loading="lazy" onerror="this.style.display='none'">
+          <img src="https://www.leswagons.ch/uploads/1/2/2/4/12249656/9876293_orig.png" alt="Les Wagons am Lagerplatz Winterthur" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="impressionen" class="gallery-section">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Impressionen</p>
+        <h2>Aus der Halle.</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <figure>
+          <img src="https://www.leswagons.ch/uploads/1/2/2/4/12249656/4003073.png" alt="Les Wagons — Impression aus dem Restaurant" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://www.leswagons.ch/uploads/7/3/9/3/73934475/1_orig.png" alt="Les Wagons — Impression aus dem Restaurant" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS + RATING -->
+  <section id="zeiten">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Fahrplan &amp; Bewertung</p>
+        <h2>Wann der Zug fährt.</h2>
+      </div>
+      <div class="hr-grid reveal">
+        <table class="hours">
+          <caption class="visually-hidden">Öffnungszeiten von Les Wagons</caption>
+          <tbody>
+            <tr><th scope="row">Mittwoch – Donnerstag</th><td>16:00–23:00</td></tr>
+            <tr><th scope="row">Freitag – Samstag</th><td>15:00–24:00</td></tr>
+            <tr><th scope="row">Sonntag – Dienstag</th><td class="closed">Geschlossen</td></tr>
+          </tbody>
+        </table>
+        <div class="rating-block">
+          <div class="rating-num">4.7</div>
+          <div class="rating-meta">aus <strong>218 Google-Rezensionen</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Vorbeikommen</p>
+        <h2>Lagerplatz 17a</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <div>
+          <ul class="info-list">
+            <li><span class="label">Adresse</span><span>Lagerplatz 17a, 8400 Winterthur</span></li>
+            <li><span class="label">Telefon</span><a href="tel:+41525085017">+41 52 508 50 17</a></li>
+            <li><span class="label">Facebook</span><a href="https://www.facebook.com/leswagons/" target="_blank" rel="noopener">leswagons</a></li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn primary" href="tel:+41525085017">Jetzt anrufen</a>
+            <a class="btn ghost" href="https://maps.google.com/maps?q=Lagerplatz%2017a%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe title="Les Wagons auf der Karte" loading="lazy"
+            src="https://maps.google.com/maps?q=Lagerplatz%2017a%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="fmark">Les Wagons</span>
+    <a href="https://www.facebook.com/leswagons/" target="_blank" rel="noopener">Facebook</a>
+    <span class="legal">
+      <span>Les Wagons, Lagerplatz 17a, 8400 Winterthur</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+41525085017">Anrufen</a>
+  <a class="route" href="https://maps.google.com/maps?q=Lagerplatz%2017a%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- real menu data, verbatim from JSON ---------- */
+  var cars = [
+    { kind:"loco", tag:"Wagen 00 · Lokomotive", name:"Les Wagons", section:"Der Ort", desc:"Ehemalige Eisenbahn-Werkstatt am Lagerplatz — hier beginnt der Abend.", price:null },
+    { kind:"item", tag:"Spezialitäten & Tavolata", name:"Summer Znacht", section:"Spezialitäten & Tavolata", desc:"Fünf verschiedene Tellerkombinationen zum Teilen, leicht und frisch", price:null },
+    { kind:"item", tag:"Spezialitäten & Tavolata", name:"Tavolata (Vegetarisch)", section:"Spezialitäten & Tavolata", desc:null, price:null },
+    { kind:"item", tag:"Spezialitäten & Tavolata", name:"Tavolata (Fleisch-Variante)", section:"Spezialitäten & Tavolata", desc:null, price:null },
+    { kind:"item", tag:"Spezialitäten & Tavolata", name:"Milk-Tavolata", section:"Spezialitäten & Tavolata", desc:"Mit regionalen Milchprodukten und pflanzenbasierten Alternativen", price:null },
+    { kind:"item", tag:"Spezialitäten & Tavolata", name:"Hof-Tavolata", section:"Spezialitäten & Tavolata", desc:"Farm-to-Table Erlebnis vom Hof Rinderbrunnen", price:"CHF 100 (Mahlzeit)" },
+    { kind:"item", tag:"Desserts & Kuchen", name:"Schokoladendessert", section:"Desserts & Kuchen", desc:null, price:"CHF 10" },
+    { kind:"item", tag:"Desserts & Kuchen", name:"Graubündner Nuss-Torte", section:"Desserts & Kuchen", desc:"Andreis Spezialität, jeden Freitag und Samstag", price:null },
+    { kind:"item", tag:"Desserts & Kuchen", name:"Saisonale Kuchen", section:"Desserts & Kuchen", desc:"Wechselnd, freitags und samstags nachmittags", price:null },
+    { kind:"caboose", tag:"Schlusswagen", name:"Ein Tisch für alle", section:"Reservieren", desc:"Für Gruppen und Tavolata-Abende: kurz anrufen unter 052 508 50 17.", price:null }
+  ];
+
+  var track = document.getElementById("track");
+  var dotsWrap = document.getElementById("trainDots");
+  var counterEl = document.getElementById("trainCounter");
+  var cdName = document.getElementById("cdName");
+  var cdSection = document.getElementById("cdSection");
+  var cdDesc = document.getElementById("cdDesc");
+  var cdDescLabel = document.getElementById("cdDescLabel");
+  var cdPrice = document.getElementById("cdPrice");
+  var cdPriceLabel = document.getElementById("cdPriceLabel");
+
+  var carEls = [];
+
+  function buildTrack(){
+    cars.forEach(function(car, i){
+      if(i > 0){
+        var coupler = document.createElement("div");
+        coupler.className = "coupler";
+        coupler.setAttribute("aria-hidden","true");
+        track.appendChild(coupler);
+      }
+      var el = document.createElement("button");
+      el.type = "button";
+      el.className = "car" + (car.kind === "loco" ? " loco" : "") + (car.kind === "caboose" ? " caboose" : "");
+      el.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+      el.dataset.index = i;
+
+      var tag = document.createElement("span");
+      tag.className = "car-tag mono";
+      tag.textContent = car.tag;
+      el.appendChild(tag);
+
+      var h3 = document.createElement("h3");
+      h3.textContent = car.name;
+      el.appendChild(h3);
+
+      if(car.desc){
+        var d = document.createElement("span");
+        d.className = "car-desc";
+        d.textContent = car.desc;
+        el.appendChild(d);
+      }
+
+      if(car.price){
+        var p = document.createElement("span");
+        p.className = "car-price mono";
+        p.textContent = car.price;
+        el.appendChild(p);
+      }
+
+      el.addEventListener("click", function(){ setActive(i, true); });
+      track.appendChild(el);
+      carEls.push(el);
+
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("role","tab");
+      dot.setAttribute("aria-label", "Zu Wagen " + (i+1) + ": " + car.name);
+      dot.setAttribute("aria-current", i === 0 ? "true" : "false");
+      dot.addEventListener("click", function(){ setActive(i, true); });
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  var activeIndex = 0;
+
+  function setActive(i, scrollTo){
+    if(i < 0 || i >= cars.length) return;
+    activeIndex = i;
+    carEls.forEach(function(el, idx){ el.setAttribute("aria-pressed", idx === i ? "true" : "false"); });
+    var dots = dotsWrap.querySelectorAll("button");
+    dots.forEach(function(d, idx){ d.setAttribute("aria-current", idx === i ? "true" : "false"); });
+
+    var car = cars[i];
+    cdName.textContent = car.name;
+    cdSection.textContent = car.section;
+    if(car.desc){
+      cdDescLabel.hidden = false; cdDesc.hidden = false; cdDesc.textContent = car.desc;
+    } else {
+      cdDescLabel.hidden = true; cdDesc.hidden = true; cdDesc.textContent = "";
+    }
+    if(car.price){
+      cdPriceLabel.hidden = false; cdPrice.hidden = false; cdPrice.textContent = car.price;
+    } else {
+      cdPriceLabel.hidden = true; cdPrice.hidden = true; cdPrice.textContent = "";
+    }
+    counterEl.textContent = "Wagen " + String(i+1).padStart(2,"0") + " / " + cars.length;
+
+    if(scrollTo && carEls[i]){
+      carEls[i].scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", inline:"center", block:"nearest" });
+    }
+  }
+
+  function reduceMotion(){
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  buildTrack();
+  setActive(0, false);
+
+  document.getElementById("prevCar").addEventListener("click", function(){ setActive(activeIndex - 1, true); });
+  document.getElementById("nextCar").addEventListener("click", function(){ setActive(activeIndex + 1, true); });
+
+  track.addEventListener("keydown", function(e){
+    if(e.key === "ArrowRight"){ e.preventDefault(); setActive(activeIndex + 1, true); }
+    else if(e.key === "ArrowLeft"){ e.preventDefault(); setActive(activeIndex - 1, true); }
+    else if(e.key === "Home"){ e.preventDefault(); setActive(0, true); }
+    else if(e.key === "End"){ e.preventDefault(); setActive(cars.length - 1, true); }
+    else if(e.key === "Enter" || e.key === " "){ e.preventDefault(); setActive(activeIndex, true); }
+  });
+
+  /* keep active state loosely in sync while the user scrolls/swipes by hand */
+  var scrollTimer = null;
+  track.addEventListener("scroll", function(){
+    if(scrollTimer) clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function(){
+      var trackRect = track.getBoundingClientRect();
+      var center = trackRect.left + trackRect.width / 2;
+      var closest = 0, closestDist = Infinity;
+      carEls.forEach(function(el, idx){
+        var r = el.getBoundingClientRect();
+        var dist = Math.abs((r.left + r.width/2) - center);
+        if(dist < closestDist){ closestDist = dist; closest = idx; }
+      });
+      if(closest !== activeIndex) setActive(closest, false);
+    }, 90);
+  }, { passive:true });
+
+  /* ---------- live "jetzt offen" badge, computed only from real hours ---------- */
+  var weekRows = [
+    { days:[3,4], label:"Mi – Do", open:"16:00", close:"23:00" },
+    { days:[5,6], label:"Fr – Sa", open:"15:00", close:"24:00" }
+  ];
+
+  function toMinutes(hhmm){
+    var b = hhmm.split(":");
+    return parseInt(b[0],10) * 60 + parseInt(b[1],10);
+  }
+
+  function renderStatus(){
+    var now = new Date();
+    var dow = now.getDay(); /* 0=So..6=Sa */
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    var pill = document.getElementById("statusPill");
+    var text = document.getElementById("statusText");
+
+    var row = null;
+    weekRows.forEach(function(r){ if(r.days.indexOf(dow) !== -1) row = r; });
+
+    if(row){
+      var closeMin = toMinutes(row.close === "24:00" ? "23:59" : row.close);
+      var isOpen = nowMin >= toMinutes(row.open) && nowMin <= closeMin;
+      pill.classList.toggle("live", isOpen);
+      pill.classList.toggle("closed", !isOpen);
+      text.textContent = isOpen ? "Jetzt offen — bis " + row.close + " Uhr" : "Heute ab " + row.open + " Uhr (" + row.label + ")";
+    } else {
+      pill.classList.remove("live");
+      pill.classList.add("closed");
+      text.textContent = "Heute geschlossen";
+    }
+  }
+  renderStatus();
+  setInterval(renderStatus, 60000);
+
+  /* ---------- scroll reveals ---------- */
+  var els = document.querySelectorAll(".reveal");
+  if(reduceMotion() || !("IntersectionObserver" in window)){
+    els.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add("in"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

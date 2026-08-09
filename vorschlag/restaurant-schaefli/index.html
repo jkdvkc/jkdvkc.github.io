@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Schäfli — Tschechische Spezialitäten &amp; Schweizer Klassiker, Winterthur</title>
+<meta name="description" content="Restaurant Schäfli am Oberen Graben in Winterthur: authentische tschechische Spezialitäten und Schweizer Klassiker, 28 Gerichte in 10 Kategorien, gute Preise, Kindermenü.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Restaurant Schäfli — Tschechische Spezialitäten &amp; Schweizer Klassiker">
+<meta property="og:description" content="Gemütliches Restaurant mit authentischer tschechischer und Schweizer Küche. Oberer Graben 18/20, Winterthur.">
+<meta property="og:url" content="https://restaurant-schaefli-winterthur.ch/">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/waW9Gw5d7rySq8oThE1T/media/65f83ced4d7869c962be4c78.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;0,800;1,500&amp;family=Mulish:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Schäfli",
+  "description": "Gemütliches Restaurant mit authentischer tschechischer und Schweizer Küche",
+  "url": "https://restaurant-schaefli-winterthur.ch/",
+  "telephone": "+41 52 213 04 13",
+  "email": "schaefli-winterthur@bluewin.ch",
+  "servesCuisine": ["Czech", "Swiss"],
+  "image": [
+    "https://assets.cdn.filesafe.space/waW9Gw5d7rySq8oThE1T/media/65f83ced4d7869c962be4c78.png",
+    "https://assets.cdn.filesafe.space/waW9Gw5d7rySq8oThE1T/media/3e9dfa62-1473-49bc-b11f-932643a908e2.png"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Oberer Graben 18/20",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "944"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "23:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "23:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "23:30" }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#f2e4c4;
+    --surface:#fbf2dc;
+    --fg:#241812;
+    --muted:#5a4429;
+    --brand:#a3283a;
+    --accent:#6b4d0f;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Mulish', system-ui, sans-serif;
+    font-size:clamp(15px, 0.4vw + 14px, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{ font-family:'Bitter', Georgia, serif; font-weight:700; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 clamp(1.1rem, 4vw, 2.5rem); }
+  section{ padding:clamp(2.8rem, 6vw, 5.5rem) 0; }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; border-radius:2px; }
+  button{ font:inherit; }
+
+  /* ---------- header ---------- */
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(242,228,196,0.95); backdrop-filter:blur(6px); border-bottom:1px solid rgba(36,24,18,0.14); }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:0.85rem clamp(1.1rem, 4vw, 2.5rem); gap:1rem; }
+  .brandmark{ text-decoration:none; color:var(--fg); font-family:'Bitter', serif; font-weight:800; font-size:1.2rem; }
+  .brandmark small{ display:block; font-family:'Mulish',sans-serif; font-weight:700; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--brand); }
+  nav.primary{ display:flex; align-items:center; gap:clamp(0.8rem,1.8vw,1.5rem); }
+  nav.primary a{ text-decoration:none; font-weight:700; font-size:0.85rem; letter-spacing:0.02em; color:var(--muted); }
+  nav.primary a:hover{ color:var(--brand); }
+  .call-btn{ background:var(--brand); color:#fbf2dc; padding:0.55rem 1.1rem; border-radius:3px; font-weight:800; font-size:0.85rem; text-decoration:none; white-space:nowrap; }
+  .nav-toggle{ display:none; background:none; border:2px solid var(--fg); border-radius:2px; width:42px; height:38px; cursor:pointer; }
+  .nav-toggle span{ display:block; width:20px; height:2px; background:var(--fg); margin:4px auto; }
+  @media (max-width:820px){
+    nav.primary{ position:absolute; top:100%; left:0; right:0; background:var(--surface); flex-direction:column; align-items:flex-start; padding:1rem clamp(1.1rem,4vw,2.5rem) 1.4rem; gap:0.9rem; display:none; border-bottom:1px solid rgba(36,24,18,0.14); }
+    nav.primary.open{ display:flex; }
+    .nav-toggle{ display:block; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{ padding-top:clamp(2.6rem,6vw,4.5rem); }
+  .hero-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:2rem; flex-wrap:wrap; }
+  .hero h1{ font-size:clamp(2.3rem, 5vw, 4rem); line-height:1.04; max-width:16ch; }
+  .hero h1 .accent-word{ color:var(--brand); }
+  .hero .lede{ margin-top:1.1rem; max-width:48ch; font-size:clamp(1.02rem,1.1vw,1.2rem); color:var(--muted); font-weight:600; }
+  .price-strip{ background:var(--fg); color:var(--bg); border-radius:6px; padding:1.2rem 1.4rem; min-width:230px; }
+  .price-strip .lbl{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:#c69a3a; font-weight:800; }
+  .price-strip .range{ font-family:'Bitter',serif; font-size:1.9rem; font-weight:800; margin-top:0.4rem; }
+  .price-strip .sub{ margin-top:0.4rem; font-size:0.85rem; color:#d9c9a3; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.6rem; }
+  .chip{ display:inline-flex; align-items:center; gap:0.4rem; background:var(--surface); border:1px solid rgba(36,24,18,0.16); padding:0.5rem 0.85rem; border-radius:99px; font-size:0.85rem; font-weight:700; }
+  .chip b{ color:var(--brand); }
+  .cta-row{ margin-top:1.6rem; display:flex; gap:0.8rem; flex-wrap:wrap; }
+  .btn{ display:inline-block; padding:0.85rem 1.4rem; border-radius:4px; font-weight:800; text-decoration:none; font-size:0.95rem; }
+  .btn.primary{ background:var(--brand); color:#fbf2dc; }
+  .btn.ghost{ border:2px solid var(--fg); color:var(--fg); }
+  @media (max-width:600px){ .hero-top{ flex-direction:column; } }
+
+  /* ---------- status ---------- */
+  .status-section{ background:var(--surface); border-top:1px solid rgba(36,24,18,0.12); border-bottom:1px solid rgba(36,24,18,0.12); }
+  .status-grid{ display:grid; grid-template-columns:auto 1fr; gap:clamp(1.4rem,4vw,3rem); align-items:center; }
+  .status-badge{ display:inline-flex; align-items:center; gap:0.6rem; padding:0.85rem 1.3rem; border-radius:99px; font-weight:800; font-size:0.98rem; white-space:nowrap; }
+  .status-badge .dot{ width:11px; height:11px; border-radius:50%; }
+  .status-badge.open{ background:rgba(90,68,41,0.14); color:#3d3011; }
+  .status-badge.open .dot{ background:#5f7a35; box-shadow:0 0 0 4px rgba(95,122,53,0.22); }
+  .status-badge.closed{ background:rgba(163,40,58,0.12); color:var(--brand); }
+  .status-badge.closed .dot{ background:var(--brand); box-shadow:0 0 0 4px rgba(163,40,58,0.18); }
+  #statusSub{ margin-top:0.5rem; color:var(--muted); font-weight:600; font-size:0.94rem; }
+  .hours-table{ width:100%; border-collapse:collapse; font-size:0.95rem; }
+  .hours-table td{ padding:0.45rem 0; border-bottom:1px solid rgba(36,24,18,0.12); }
+  .hours-table td:last-child{ text-align:right; font-weight:700; }
+  .hours-table tr.today td{ color:var(--brand); font-weight:800; }
+
+  /* ---------- usp band ---------- */
+  .usp-band{ display:flex; flex-wrap:wrap; gap:0.9rem 2rem; justify-content:space-between; }
+  .usp-band .u{ flex:1 1 200px; border-left:3px solid var(--brand); padding-left:0.9rem; }
+  .usp-band .u b{ display:block; font-family:'Bitter',serif; font-size:1.05rem; }
+
+  /* ---------- MENU (dominant) ---------- */
+  .menu-section{ background:var(--surface); }
+  .menu-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:1.2rem; flex-wrap:wrap; }
+  .menu-head h2{ font-size:clamp(2rem,4vw,3rem); }
+  .menu-head .kicker{ color:var(--brand); text-transform:uppercase; letter-spacing:0.12em; font-size:0.78rem; font-weight:800; }
+  .menu-count{ font-weight:700; color:var(--muted); font-size:0.92rem; white-space:nowrap; }
+
+  .menu-controls{ position:sticky; top:66px; z-index:30; background:var(--surface); padding:1.1rem 0; margin-top:1.4rem; border-bottom:1px solid rgba(36,24,18,0.12); }
+  .search-row{ display:flex; gap:0.8rem; flex-wrap:wrap; align-items:center; }
+  .search-input{ flex:1 1 240px; padding:0.75rem 1rem; border-radius:99px; border:1.5px solid rgba(36,24,18,0.28); background:var(--bg); color:var(--fg); font-size:0.95rem; font-family:'Mulish',sans-serif; }
+  .search-input::placeholder{ color:var(--muted); }
+  .pill-row{ display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.9rem; }
+  .pill{ border:1.5px solid rgba(36,24,18,0.28); background:transparent; color:var(--muted); padding:0.4rem 0.9rem; border-radius:99px; font-weight:700; font-size:0.82rem; cursor:pointer; }
+  .pill:hover{ border-color:var(--brand); color:var(--brand); }
+  .pill.active{ background:var(--brand); border-color:var(--brand); color:#fbf2dc; }
+  .no-results{ display:none; padding:2rem 0; color:var(--muted); font-weight:700; text-align:center; }
+  .no-results.show{ display:block; }
+
+  .menu-category{ margin-top:clamp(2rem,4vw,3rem); }
+  .menu-category h3{ font-size:clamp(1.35rem,2.4vw,1.7rem); border-bottom:2px solid var(--brand); padding-bottom:0.5rem; margin-bottom:1.1rem; }
+  .menu-items{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:0.9rem 1.6rem; }
+  .menu-item{ padding:0.9rem 0; border-bottom:1px dashed rgba(36,24,18,0.2); }
+  .menu-item .row1{ display:flex; justify-content:space-between; gap:0.8rem; align-items:baseline; }
+  .menu-item .name{ font-weight:800; font-size:1.02rem; }
+  .menu-item .price{ font-weight:800; color:var(--brand); white-space:nowrap; font-size:0.98rem; }
+  .menu-item .desc{ margin-top:0.3rem; color:var(--muted); font-size:0.88rem; font-weight:600; }
+
+  /* ---------- gallery ---------- */
+  .gallery-grid{ display:grid; grid-template-columns:1.4fr 0.8fr; gap:1.1rem; margin-top:clamp(1.6rem,4vw,2.6rem); }
+  .gallery-grid .g-side{ display:grid; gap:1.1rem; }
+  .figure{ overflow:hidden; border-radius:8px; background:var(--surface); }
+  .figure img{ width:100%; height:100%; object-fit:cover; }
+  .gallery-grid .g-main img{ aspect-ratio:4/3; }
+  .gallery-grid .g-side img{ aspect-ratio:16/9; }
+  @media (max-width:760px){ .gallery-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- reviews ---------- */
+  .review-bar{ display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap; background:var(--fg); color:var(--bg); padding:clamp(1.6rem,3vw,2.4rem); border-radius:8px; }
+  .review-bar .num{ font-family:'Bitter',serif; font-size:clamp(2.4rem,5vw,3.4rem); font-weight:800; color:#c69a3a; }
+  .review-bar .stars{ letter-spacing:0.14em; color:#c69a3a; }
+  .review-bar p.small{ color:#d9c9a3; font-weight:700; margin-top:0.2rem; }
+
+  /* ---------- location ---------- */
+  .loc-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(1.6rem,4vw,3rem); align-items:start; }
+  .loc-card{ background:var(--surface); border-radius:8px; padding:clamp(1.4rem,3vw,2rem); }
+  .loc-card dl{ margin:1.1rem 0 0; }
+  .loc-card dt{ font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-weight:800; margin-top:1rem; }
+  .loc-card dd{ margin:0.25rem 0 0; font-weight:700; font-size:1.02rem; }
+  .loc-card dd a{ text-decoration:none; color:var(--brand); }
+  .map-frame{ border-radius:8px; overflow:hidden; border:1px solid rgba(36,24,18,0.16); }
+  .map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; display:block; }
+  @media (max-width:840px){ .loc-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- footer ---------- */
+  footer{ background:var(--fg); color:#c9b89c; padding:2.6rem 0 6rem; }
+  footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.2rem; align-items:center; }
+  footer .fine{ font-size:0.78rem; color:#8a7761; margin-top:0.6rem; }
+  footer a{ color:#f3e6cf; text-decoration:none; }
+
+  /* ---------- sticky mobile bar ---------- */
+  .mobile-bar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--fg); border-top:1px solid rgba(255,255,255,0.12); padding:0.7rem 1rem; }
+  .mobile-bar a{ display:block; text-align:center; background:var(--brand); color:#fbf2dc; font-weight:800; padding:0.85rem; border-radius:6px; text-decoration:none; }
+  @media (max-width:820px){ .mobile-bar{ display:block; } body{ padding-bottom:76px; } .menu-controls{ top:0; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:380px){
+    .hero h1{ font-size:2rem; }
+    .price-strip{ min-width:0; width:100%; }
+    .menu-items{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="brandmark" href="#top">Restaurant Schäfli<small>Winterthur</small></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary" id="primaryNav">
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#status">Öffnungszeiten</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="call-btn" href="tel:+41522130413">052 213 04 13</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <h1 class="reveal">Tschechische Wirtshausküche <span class="accent-word">in Winterthur.</span></h1>
+          <p class="lede reveal">Gemütliches Restaurant mit authentischer tschechischer und Schweizer Küche — tschechische Spezialitäten, Schweizer Klassiker, gute Preise, Kindermenü.</p>
+          <div class="chip-row reveal">
+            <span class="chip">⭐ <b>4.4</b>&nbsp;· 944 Google-Bewertungen</span>
+            <span class="chip">Oberer Graben 18/20, 8400 Winterthur</span>
+          </div>
+          <div class="cta-row reveal">
+            <a class="btn primary" href="#speisekarte">Zur Speisekarte</a>
+            <a class="btn ghost" href="tel:+41522130413">Anrufen</a>
+          </div>
+        </div>
+        <div class="price-strip reveal">
+          <p class="lbl">Speisekarte</p>
+          <p class="range">CHF 9.80–49.80</p>
+          <p class="sub">28 Gerichte in 10 Kategorien</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="status-section" id="status">
+    <div class="wrap status-grid reveal">
+      <div>
+        <div class="status-badge" id="statusBadge">
+          <span class="dot"></span><span id="statusText">Wird geladen…</span>
+        </div>
+        <p id="statusSub"></p>
+      </div>
+      <table class="hours-table" id="hoursTable" aria-label="Öffnungszeiten Restaurant Schäfli"><tbody></tbody></table>
+    </div>
+  </section>
+
+  <section id="usps">
+    <div class="wrap usp-band reveal">
+      <div class="u"><b>Tschechische Spezialitäten</b></div>
+      <div class="u"><b>Schweizer Klassiker</b></div>
+      <div class="u"><b>Gute Preise</b></div>
+      <div class="u"><b>Kindermenü</b></div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="speisekarte">
+    <div class="wrap">
+      <div class="menu-head reveal">
+        <div>
+          <p class="kicker">Speisekarte</p>
+          <h2>28 Gerichte, zum Durchsuchen</h2>
+        </div>
+        <p class="menu-count" id="menuCount">28 von 28 Gerichten</p>
+      </div>
+
+      <div class="menu-controls reveal">
+        <div class="search-row">
+          <input type="search" id="menuSearch" class="search-input" placeholder="Gericht suchen, z. B. „Knödel“ oder „Schnitzel“…" aria-label="Speisekarte durchsuchen">
+        </div>
+        <div class="pill-row" id="pillRow" role="group" aria-label="Nach Kategorie filtern">
+          <button class="pill active" data-cat="all">Alle</button>
+          <button class="pill" data-cat="Salate">Salate</button>
+          <button class="pill" data-cat="Kalte Teller">Kalte Teller</button>
+          <button class="pill" data-cat="Suppen">Suppen</button>
+          <button class="pill" data-cat="Vegetarische Gerichte">Vegetarisch</button>
+          <button class="pill" data-cat="Fisch">Fisch</button>
+          <button class="pill" data-cat="Geflügel">Geflügel</button>
+          <button class="pill" data-cat="Schwein">Schwein</button>
+          <button class="pill" data-cat="Rind">Rind</button>
+          <button class="pill" data-cat="Kalb">Kalb</button>
+          <button class="pill" data-cat="Desserts">Desserts</button>
+        </div>
+      </div>
+
+      <p class="no-results" id="noResults">Kein Gericht gefunden. Suchbegriff anpassen oder Filter zurücksetzen.</p>
+
+      <div id="menuList">
+
+        <div class="menu-category" data-cat="Salate">
+          <h3>Salate</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Grüner Salat" data-desc="">
+              <div class="row1"><span class="name">Grüner Salat</span><span class="price">CHF 10.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Gemischter Salat" data-desc="">
+              <div class="row1"><span class="name">Gemischter Salat</span><span class="price">CHF 12.80–22.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Nusssalat" data-desc="mit gehacktem Ei und Croutons">
+              <div class="row1"><span class="name">Nusssalat</span><span class="price">CHF 14.80</span></div>
+              <p class="desc">mit gehacktem Ei und Croutons</p>
+            </div>
+            <div class="menu-item" data-name="Tomaten &amp; Büffelmozzarella" data-desc="">
+              <div class="row1"><span class="name">Tomaten &amp; Büffelmozzarella</span><span class="price">CHF 15.80–21.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Chef's Salat" data-desc="Hähnchenbrust mit Speckwürfeln, Croutons, Ei und Tomaten">
+              <div class="row1"><span class="name">Chef's Salat</span><span class="price">CHF 29.80</span></div>
+              <p class="desc">Hähnchenbrust mit Speckwürfeln, Croutons, Ei und Tomaten</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Kalte Teller">
+          <h3>Kalte Teller</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Bauernspeck" data-desc="auf Holzbrett serviert">
+              <div class="row1"><span class="name">Bauernspeck</span><span class="price">CHF 19.80</span></div>
+              <p class="desc">auf Holzbrett serviert</p>
+            </div>
+            <div class="menu-item" data-name="Bündnerfleisch-Platte" data-desc="">
+              <div class="row1"><span class="name">Bündnerfleisch-Platte</span><span class="price">CHF 31.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Marinated Camembert Hermelín" data-desc="Böhmische Art mit Knoblauch und Pepperoncini">
+              <div class="row1"><span class="name">Marinated Camembert Hermelín</span><span class="price">CHF 12.80</span></div>
+              <p class="desc">Böhmische Art mit Knoblauch und Pepperoncini</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Suppen">
+          <h3>Suppen</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Tagessuppe" data-desc="hausgemacht">
+              <div class="row1"><span class="name">Tagessuppe</span><span class="price">CHF 9.80</span></div>
+              <p class="desc">hausgemacht</p>
+            </div>
+            <div class="menu-item" data-name="Gulaschsuppe" data-desc="">
+              <div class="row1"><span class="name">Gulaschsuppe</span><span class="price">CHF 12.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Tschechische Knoblauchsuppe Oukrop" data-desc="">
+              <div class="row1"><span class="name">Tschechische Knoblauchsuppe Oukrop</span><span class="price">CHF 12.80</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Vegetarische Gerichte">
+          <h3>Vegetarische Gerichte</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Gemüseteller" data-desc="Saisongemüse, Spiegelei">
+              <div class="row1"><span class="name">Gemüseteller</span><span class="price">CHF 25.80</span></div>
+              <p class="desc">Saisongemüse, Spiegelei</p>
+            </div>
+            <div class="menu-item" data-name="Käsespätzle" data-desc="hausgemacht">
+              <div class="row1"><span class="name">Käsespätzle</span><span class="price">CHF 27.80</span></div>
+              <p class="desc">hausgemacht</p>
+            </div>
+            <div class="menu-item" data-name="Rösti" data-desc="mit Gemüse">
+              <div class="row1"><span class="name">Rösti</span><span class="price">CHF 27.80</span></div>
+              <p class="desc">mit Gemüse</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Fisch">
+          <h3>Fisch</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Felchen Crispies" data-desc="mit Tartarsosse und Pommes oder frische Salate">
+              <div class="row1"><span class="name">Felchen Crispies</span><span class="price">CHF 33.80</span></div>
+              <p class="desc">mit Tartarsosse und Pommes oder frische Salate</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Geflügel">
+          <h3>Geflügel</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Hähnchenbrust-Filets" data-desc="Kräuterbutter, Rösti und Gemüse">
+              <div class="row1"><span class="name">Hähnchenbrust-Filets</span><span class="price">CHF 35.80</span></div>
+              <p class="desc">Kräuterbutter, Rösti und Gemüse</p>
+            </div>
+            <div class="menu-item" data-name="Hähnchen-Gulasch" data-desc="Paprika-Sahnesauce, Brotknödel oder Spätzle">
+              <div class="row1"><span class="name">Hähnchen-Gulasch</span><span class="price">CHF 35.80</span></div>
+              <p class="desc">Paprika-Sahnesauce, Brotknödel oder Spätzle</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Schwein">
+          <h3>Schwein</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Hausgemachtes Cordon Bleu" data-desc="Pommes und Gemüse">
+              <div class="row1"><span class="name">Hausgemachtes Cordon Bleu</span><span class="price">CHF 36.80</span></div>
+              <p class="desc">Pommes und Gemüse</p>
+            </div>
+            <div class="menu-item" data-name="Zwei panierte Schweine-Schnitzel" data-desc="">
+              <div class="row1"><span class="name">Zwei panierte Schweine-Schnitzel</span><span class="price">CHF 26.80–34.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Schweinesteak (200g)" data-desc="Kräuterbutter">
+              <div class="row1"><span class="name">Schweinesteak (200g)</span><span class="price">CHF 35.80</span></div>
+              <p class="desc">Kräuterbutter</p>
+            </div>
+            <div class="menu-item" data-name="Tschechisches Nationalgericht Vepřová Knedlík Zelí" data-desc="Schweinebraten, Brotknödel, Kraut">
+              <div class="row1"><span class="name">Tschechisches Nationalgericht Vepřová Knedlík Zelí</span><span class="price">CHF 35.80</span></div>
+              <p class="desc">Schweinebraten, Brotknödel, Kraut</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Rind">
+          <h3>Rind</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Rindsfilet-Gulasch Stroganoff" data-desc="Paprikasauce mit Gurken, Pilzen">
+              <div class="row1"><span class="name">Rindsfilet-Gulasch Stroganoff</span><span class="price">CHF 45.80</span></div>
+              <p class="desc">Paprikasauce mit Gurken, Pilzen</p>
+            </div>
+            <div class="menu-item" data-name="Gegrilltes Rindsfilet (200g)" data-desc="Chili-Sauce, Kräuterbutter">
+              <div class="row1"><span class="name">Gegrilltes Rindsfilet (200g)</span><span class="price">CHF 49.80</span></div>
+              <p class="desc">Chili-Sauce, Kräuterbutter</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Kalb">
+          <h3>Kalb</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Zwei panierte Kalbs-Schnitzel" data-desc="Böhmischer Kartoffelsalat">
+              <div class="row1"><span class="name">Zwei panierte Kalbs-Schnitzel</span><span class="price">CHF 41.80</span></div>
+              <p class="desc">Böhmischer Kartoffelsalat</p>
+            </div>
+            <div class="menu-item" data-name="Wiener Schnitzel" data-desc="Pommes und Salat">
+              <div class="row1"><span class="name">Wiener Schnitzel</span><span class="price">CHF 45.80</span></div>
+              <p class="desc">Pommes und Salat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category" data-cat="Desserts">
+          <h3>Desserts</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-name="Apricot Dumplings Meruňkové knedlíky" data-desc="">
+              <div class="row1"><span class="name">Apricot Dumplings Meruňkové knedlíky</span><span class="price">CHF 13.80–19.80</span></div>
+            </div>
+            <div class="menu-item" data-name="Prague Crêpe" data-desc="Vanilleeis, Fruchtsalat, warme Schokolade, Schlag">
+              <div class="row1"><span class="name">Prague Crêpe</span><span class="price">CHF 14.80</span></div>
+              <p class="desc">Vanilleeis, Fruchtsalat, warme Schokolade, Schlag</p>
+            </div>
+            <div class="menu-item" data-name="Apple Strudel" data-desc="">
+              <div class="row1"><span class="name">Apple Strudel</span><span class="price">CHF 9.80–13.80</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="fotos">
+    <div class="wrap">
+      <p class="kicker reveal" style="color:var(--brand); text-transform:uppercase; letter-spacing:0.12em; font-size:0.78rem; font-weight:800;">Fotos</p>
+      <h2 class="reveal" style="font-size:clamp(1.9rem,3.8vw,2.8rem); margin-top:0.5rem;">Aus dem Schäfli</h2>
+      <div class="gallery-grid reveal">
+        <figure class="figure g-main">
+          <img src="https://assets.cdn.filesafe.space/waW9Gw5d7rySq8oThE1T/media/65f83ced4d7869c962be4c78.png" alt="Restaurant Schäfli Winterthur" loading="lazy" onerror="this.closest('.figure').style.display='none'">
+        </figure>
+        <div class="g-side">
+          <figure class="figure">
+            <img src="https://assets.cdn.filesafe.space/waW9Gw5d7rySq8oThE1T/media/3e9dfa62-1473-49bc-b11f-932643a908e2.png" alt="Innenansicht Restaurant Schäfli" loading="lazy" onerror="this.closest('.figure').style.display='none'">
+          </figure>
+          <figure class="figure">
+            <img src="https://storage.googleapis.com/msgsndr/waW9Gw5d7rySq8oThE1T/media/66eaa6e70fbb9167fc3af268.jpeg" alt="Restaurant Schäfli Winterthur" loading="lazy" onerror="this.closest('.figure').style.display='none'">
+          </figure>
+          <figure class="figure">
+            <img src="https://storage.googleapis.com/msgsndr/waW9Gw5d7rySq8oThE1T/media/66eaa6e7c19a101ad9a0c1c3.jpeg" alt="Restaurant Schäfli Winterthur" loading="lazy" onerror="this.closest('.figure').style.display='none'">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bewertungen">
+    <div class="wrap reveal">
+      <div class="review-bar">
+        <span class="num">4.4</span>
+        <div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p class="small">944 Bewertungen auf Google</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap loc-grid">
+      <div class="loc-card reveal">
+        <p class="kicker" style="color:var(--brand); text-transform:uppercase; letter-spacing:0.12em; font-size:0.78rem; font-weight:800;">Lage &amp; Kontakt</p>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>Oberer Graben 18/20<br>8400 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522130413">+41 52 213 04 13</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:schaefli-winterthur@bluewin.ch">schaefli-winterthur@bluewin.ch</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://restaurant-schaefli-winterthur.ch/" target="_blank" rel="noopener">restaurant-schaefli-winterthur.ch</a></dd>
+        </dl>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://maps.google.com/maps?q=Restaurant%20Sch%C3%A4fli%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Restaurant Schäfli, Winterthur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div>Restaurant Schäfli · Oberer Graben 18/20, 8400 Winterthur</div>
+      <div class="fine">Design-Vorschlag · unverbindliches Muster</div>
+    </div>
+    <a href="tel:+41522130413">052 213 04 13</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522130413">Anrufen — 052 213 04 13</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var navToggle = document.getElementById('navToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  if (navToggle && primaryNav){
+    navToggle.addEventListener('click', function(){
+      var open = primaryNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    primaryNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ primaryNav.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* =========================================================
+     SIGNATURE MODULE 1: live "jetzt offen" badge
+     Data: real hours — Mo–Do 11:00–23:30, Fr 09:00–23:30,
+     Sa 11:00–23:30, So geschlossen.
+     ========================================================= */
+  var HOURS = [
+    { dow:[1,2,3,4], label:"Mo–Do", open:"11:00", close:"23:30", closed:false },
+    { dow:[5],       label:"Fr",    open:"09:00", close:"23:30", closed:false },
+    { dow:[6],       label:"Sa",    open:"11:00", close:"23:30", closed:false },
+    { dow:[0],       label:"So",    open:null,    close:null,    closed:true  }
+  ];
+  var DAY_NAMES = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+
+  function todaysRule(dow){ for (var i=0;i<HOURS.length;i++){ if (HOURS[i].dow.indexOf(dow)!==-1) return HOURS[i]; } return null; }
+  function toMinutes(hhmm){ var p = hhmm.split(':'); return parseInt(p[0],10)*60 + parseInt(p[1],10); }
+
+  function computeStatus(now){
+    var rule = todaysRule(now.getDay());
+    var nowMin = now.getHours()*60 + now.getMinutes();
+    var open = false;
+    if (rule && !rule.closed){
+      if (nowMin >= toMinutes(rule.open) && nowMin < toMinutes(rule.close)) open = true;
+    }
+    return { open: open, rule: rule };
+  }
+
+  function findNextOpening(now){
+    for (var add=0; add<=7; add++){
+      var d = new Date(now.getTime()); d.setDate(d.getDate()+add);
+      var rule = todaysRule(d.getDay());
+      if (rule && !rule.closed){
+        if (add===0){
+          var nowMin = now.getHours()*60+now.getMinutes();
+          if (nowMin < toMinutes(rule.open)) return { rule: rule, dayOffset:0 };
+          continue;
+        }
+        return { rule: rule, dayOffset: add };
+      }
+    }
+    return null;
+  }
+
+  function renderStatus(){
+    var now = new Date();
+    var status = computeStatus(now);
+    var badge = document.getElementById('statusBadge');
+    var text = document.getElementById('statusText');
+    var sub = document.getElementById('statusSub');
+    if (!badge) return;
+    if (status.open){
+      badge.className = 'status-badge open';
+      text.textContent = 'Jetzt geöffnet';
+      sub.textContent = 'Heute (' + status.rule.label + ') bis ' + status.rule.close + ' Uhr geöffnet.';
+    } else {
+      badge.className = 'status-badge closed';
+      text.textContent = 'Gerade geschlossen';
+      var next = findNextOpening(now);
+      if (next){
+        var when = next.dayOffset===0 ? 'heute' : (next.dayOffset===1 ? 'morgen' : 'am ' + DAY_NAMES[(now.getDay()+next.dayOffset)%7]);
+        sub.textContent = 'Öffnet wieder ' + when + ' um ' + next.rule.open + ' Uhr.';
+      } else { sub.textContent = ''; }
+    }
+  }
+
+  function renderHoursTable(){
+    var tbody = document.querySelector('#hoursTable tbody');
+    if (!tbody) return;
+    var todayDow = new Date().getDay();
+    var html = '';
+    HOURS.forEach(function(h){
+      var isToday = h.dow.indexOf(todayDow) !== -1;
+      html += '<tr' + (isToday ? ' class="today"' : '') + '><td>' + h.label + '</td><td>' + (h.closed ? 'Geschlossen' : h.open + '–' + h.close + ' Uhr') + '</td></tr>';
+    });
+    tbody.innerHTML = html;
+  }
+
+  renderStatus();
+  renderHoursTable();
+  setInterval(renderStatus, 60000);
+
+  /* =========================================================
+     SIGNATURE MODULE 2: navigable / filterable / searchable menu
+     Data: the real 28-item menu from the JSON, grouped exactly
+     as the 10 sections given. Search matches name or description.
+     ========================================================= */
+  var searchInput = document.getElementById('menuSearch');
+  var pillRow = document.getElementById('pillRow');
+  var menuCategories = Array.prototype.slice.call(document.querySelectorAll('.menu-category'));
+  var menuCountEl = document.getElementById('menuCount');
+  var noResultsEl = document.getElementById('noResults');
+  var totalItems = document.querySelectorAll('.menu-item').length;
+  var activeCat = 'all';
+
+  function normalize(s){ return (s || '').toLowerCase(); }
+
+  function applyFilter(){
+    var term = normalize(searchInput.value.trim());
+    var visibleCount = 0;
+
+    menuCategories.forEach(function(cat){
+      var catName = cat.getAttribute('data-cat');
+      var catMatches = (activeCat === 'all' || activeCat === catName);
+      var items = cat.querySelectorAll('.menu-item');
+      var anyVisibleInCat = false;
+
+      items.forEach(function(item){
+        var hay = normalize(item.getAttribute('data-name')) + ' ' + normalize(item.getAttribute('data-desc'));
+        var textMatches = term === '' || hay.indexOf(term) !== -1;
+        var show = catMatches && textMatches;
+        item.style.display = show ? '' : 'none';
+        if (show){ anyVisibleInCat = true; visibleCount++; }
+      });
+
+      cat.style.display = anyVisibleInCat ? '' : 'none';
+    });
+
+    menuCountEl.textContent = visibleCount + ' von ' + totalItems + ' Gerichten';
+    noResultsEl.classList.toggle('show', visibleCount === 0);
+  }
+
+  if (searchInput){ searchInput.addEventListener('input', applyFilter); }
+
+  if (pillRow){
+    pillRow.querySelectorAll('.pill').forEach(function(pill){
+      pill.addEventListener('click', function(){
+        pillRow.querySelectorAll('.pill').forEach(function(p){ p.classList.remove('active'); });
+        pill.classList.add('active');
+        activeCat = pill.getAttribute('data-cat');
+        applyFilter();
+      });
+    });
+  }
+
+  applyFilter();
+})();
+</script>
+</body>
+</html>

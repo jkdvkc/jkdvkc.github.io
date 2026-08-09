@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victoria — Winterthur</title>
+<meta name="description" content="Victoria in Winterthur: 4.6 Sterne aus 253 Google-Bewertungen. Reservationen unter 052 238 07 72.">
+<meta property="og:title" content="Victoria — Winterthur">
+<meta property="og:description" content="4.6 Sterne aus 253 Google-Bewertungen. Victoria, Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Victoria",
+  "telephone": "+41 52 238 07 72",
+  "address": { "@type": "PostalAddress", "addressLocality": "Winterthur", "addressCountry": "CH" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "253" }
+}
+</script>
+<style>
+:root{
+  --bg:#f5f2e7; --surface:#ffffff; --fg:#16261f; --muted:#3f5448;
+  --brand:#1f3d2f; --accent:#5c7a63; --rule:#1f3d2f;
+  --maxw:60rem; --gutter:clamp(1.25rem,5vw,4rem);
+}
+*,*::before,*::after{box-sizing:border-box;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:'Karla',sans-serif; font-size:clamp(15px,1vw + .75rem,17px);
+  line-height:1.75;
+}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+h1,h2,h3{font-family:'EB Garamond',serif; margin:0; font-weight:600;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter);}
+:focus-visible{outline:3px solid var(--brand); outline-offset:3px;}
+
+/* Symmetrical frame — fine rules top/bottom/sides */
+.framed{
+  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+}
+.hairline{height:1px; background:var(--rule); width:100%;}
+.double-rule{border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); height:5px; margin:0 auto;}
+
+.site-header{position:sticky; top:0; z-index:40; background:rgba(245,242,231,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--rule);}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:1rem var(--gutter); max-width:var(--maxw); margin:0 auto;}
+.nav .mark{font-family:'EB Garamond',serif; letter-spacing:.14em; text-transform:uppercase; font-size:1.05rem; font-weight:600;}
+.nav a.callbtn{border:1px solid var(--brand); color:var(--brand); text-decoration:none; padding:.5rem 1.1rem; font-size:.82rem; letter-spacing:.05em;}
+.nav a.callbtn:hover{background:var(--brand); color:#fff;}
+
+/* HERO — symmetrical, centred, rules above/below */
+.hero{text-align:center; padding:clamp(3.5rem,10vw,7rem) var(--gutter) clamp(3rem,7vw,5rem);}
+.hero .crest{width:2.75rem; height:2.75rem; margin:0 auto 1.8rem; border:1px solid var(--brand); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'EB Garamond',serif; font-style:italic; font-size:1.2rem; color:var(--brand);}
+.hero .eyebrow{display:block; text-transform:uppercase; letter-spacing:.32em; font-size:.7rem; color:var(--muted); margin-bottom:1.4rem;}
+.hero h1{font-size:clamp(2.9rem,9vw,5.4rem); letter-spacing:.01em; color:var(--brand);}
+.hero .sub{max-width:32rem; margin:1.6rem auto 0; color:var(--muted); font-size:clamp(1rem,.95rem + .25vw,1.15rem); font-style:italic; font-family:'EB Garamond',serif;}
+.hero .actions{margin-top:2.4rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;}
+.btn{display:inline-block; padding:.85rem 2rem; text-decoration:none; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; font-weight:500; font-family:'Karla',sans-serif;}
+.btn-solid{background:var(--brand); color:#fff;}
+.btn-solid:hover{background:var(--accent);}
+.btn-outline{border:1px solid var(--brand); color:var(--brand);}
+.btn-outline:hover{background:var(--brand); color:#fff;}
+.hero .rating{margin-top:2.2rem; font-family:'EB Garamond',serif; font-style:italic; color:var(--muted); font-size:1.05rem;}
+
+/* SECTION scaffolding, symmetric columns */
+.section{padding:clamp(3.2rem,8vw,5.5rem) var(--gutter);}
+.section .wrap{padding:0;}
+.section-head{text-align:center; max-width:34rem; margin:0 auto clamp(2rem,5vw,3rem);}
+.kicker{display:block; text-transform:uppercase; letter-spacing:.3em; font-size:.68rem; color:var(--accent); margin-bottom:1rem;}
+.section h2{font-size:clamp(1.7rem,3.6vw,2.3rem); color:var(--brand);}
+.lede{color:var(--muted); margin-top:1rem; font-size:1.02rem;}
+
+/* Ledger — signature module: tally of reviews & rating, Victorian account-book style */
+.ledger{max-width:34rem; margin:0 auto; background:var(--surface); border:1px solid var(--rule);}
+.ledger-head{display:grid; grid-template-columns:1fr auto; padding:1rem 1.4rem; border-bottom:1px solid var(--rule); font-family:'EB Garamond',serif; font-style:italic; color:var(--muted); font-size:.9rem;}
+.ledger-row{display:grid; grid-template-columns:1fr auto; padding:1rem 1.4rem; border-bottom:1px dashed rgba(31,61,47,.35); align-items:baseline;}
+.ledger-row:last-child{border-bottom:none;}
+.ledger-row dt{margin:0; font-size:.95rem; color:var(--fg);}
+.ledger-row dd{margin:0; font-family:'EB Garamond',serif; font-size:1.15rem; color:var(--brand); font-variant-numeric:tabular-nums;}
+.ledger-total{display:grid; grid-template-columns:1fr auto; padding:1.1rem 1.4rem; background:var(--brand); color:#fff;}
+.ledger-total dt{margin:0; text-transform:uppercase; letter-spacing:.1em; font-size:.78rem; align-self:center;}
+.ledger-total dd{margin:0; font-family:'EB Garamond',serif; font-size:1.6rem;}
+.ledger-btn{display:block; margin:1.6rem auto 0; background:none; border:1px solid var(--brand); color:var(--brand); padding:.75rem 1.8rem; font-family:'Karla',sans-serif; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; cursor:pointer;}
+.ledger-btn:hover{background:var(--brand); color:#fff;}
+.tally{font-variant-numeric:tabular-nums;}
+
+/* CONTACT — symmetric two column, centred rule between */
+.contact{background:var(--surface); border-top:1px solid var(--rule);}
+.contact-grid{display:grid; gap:0; grid-template-columns:1fr; max-width:44rem; margin:0 auto; border:1px solid var(--rule);}
+@media(min-width:42rem){.contact-grid{grid-template-columns:1fr 1fr;}}
+.contact-col{padding:clamp(1.6rem,4vw,2.4rem);}
+.contact-col:first-child{border-bottom:1px solid var(--rule);}
+@media(min-width:42rem){.contact-col:first-child{border-bottom:none; border-right:1px solid var(--rule);}}
+.contact-col h3{font-size:1.05rem; text-transform:uppercase; letter-spacing:.1em; color:var(--brand); margin-bottom:1rem; font-family:'Karla',sans-serif; font-weight:600;}
+.contact-list{list-style:none; margin:0; padding:0; display:grid; gap:.9rem;}
+.contact-list dt{font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted);}
+.contact-list dd{margin:.2rem 0 0; font-size:1.05rem; font-family:'EB Garamond',serif;}
+.contact-list a{text-decoration:none; border-bottom:1px solid var(--rule);}
+.contact-list a:hover{color:var(--accent); border-color:var(--accent);}
+.map-frame{border-radius:0; overflow:hidden; aspect-ratio:1/1;}
+.map-frame iframe{width:100%; height:100%; border:0; filter:grayscale(.4) contrast(1.05);}
+
+footer.site{padding:2.5rem var(--gutter) 6rem; text-align:center; color:var(--muted); font-size:.85rem;}
+footer.site .mark{font-family:'EB Garamond',serif; letter-spacing:.14em; text-transform:uppercase; color:var(--brand); font-size:1rem; margin-bottom:.6rem;}
+footer.site .legal{margin-top:1rem; opacity:.75; font-size:.78rem;}
+
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:none;}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none;}}
+
+.mobile-bar{position:fixed; left:0; right:0; bottom:0; z-index:50; display:flex; background:var(--brand);}
+.mobile-bar a{flex:1; text-align:center; padding:.95rem; text-decoration:none; font-weight:600; color:#fff; letter-spacing:.04em;}
+@media(min-width:52rem){.mobile-bar{display:none;}}
+@media(max-width:52rem){body{padding-bottom:3.4rem;}}
+
+@media(max-width:400px){
+  .nav{padding:.85rem 1rem;}
+  .ledger-row, .ledger-head, .ledger-total{padding-left:1rem; padding-right:1rem;}
+  .hero .crest{width:2.2rem; height:2.2rem;}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav aria-label="Hauptnavigation" class="sr-only">
+    <ul>
+      <li><a href="#ledger-section">Was verzeichnet ist</a></li>
+      <li><a href="#kontakt">Erreichbar in Winterthur</a></li>
+    </ul>
+  </nav>
+  <div class="nav">
+    <span class="mark">Victoria</span>
+    <a class="callbtn" href="tel:+41522380772">052 238 07 72</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero framed reveal">
+    <div class="wrap">
+      <div class="crest" aria-hidden="true">V</div>
+      <span class="eyebrow">Winterthur</span>
+      <h1>Victoria</h1>
+      <p class="sub">Ein Name mit Geschichte, eine Adresse in Winterthur, ein guter Ruf bei den Gästen.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="tel:+41522380772">Anrufen</a>
+        <a class="btn btn-outline" href="#kontakt">Zur Lage</a>
+      </div>
+      <p class="rating">★ 4.6 von 5 — aus 253 Google-Bewertungen</p>
+    </div>
+  </section>
+
+  <div class="hairline" aria-hidden="true"></div>
+
+  <section class="section reveal" id="ledger-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Das Hauptbuch</span>
+        <h2>Was verzeichnet ist</h2>
+        <p class="lede">Wie in einem alten Gästebuch geführt: nur, was tatsächlich vermerkt wurde.</p>
+      </div>
+      <div class="ledger">
+        <div class="ledger-head"><span>Eintrag</span><span>Vermerkt</span></div>
+        <div class="ledger-row"><dt>Bewertung</dt><dd class="tally">4.6 / 5</dd></div>
+        <div class="ledger-row"><dt>Telefon</dt><dd><a href="tel:+41522380772" style="color:inherit; text-decoration:none;">052 238 07 72</a></dd></div>
+        <div class="ledger-row"><dt>Standort</dt><dd>Winterthur</dd></div>
+        <div class="ledger-total"><dt>Summe der Stimmen</dt><dd class="tally" id="tallyNum">0</dd></div>
+      </div>
+      <button class="ledger-btn" id="tallyBtn" type="button" aria-controls="tallyNum">Stimmen zählen</button>
+    </div>
+  </section>
+
+  <div class="hairline" aria-hidden="true"></div>
+
+  <section class="section contact reveal" id="kontakt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Kontakt</span>
+        <h2>Erreichbar in Winterthur</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-col">
+          <h3>Reservieren</h3>
+          <dl class="contact-list">
+            <div><dt>Telefon</dt><dd><a href="tel:+41522380772">+41 52 238 07 72</a></dd></div>
+            <div><dt>Google-Bewertung</dt><dd>4.6 von 5 · 253 Bewertungen</dd></div>
+          </dl>
+        </div>
+        <div class="contact-col map-frame">
+          <iframe src="https://maps.google.com/maps?q=Victoria+Winterthur&amp;z=16&amp;output=embed" title="Karte: Victoria Winterthur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="mark">Victoria</div>
+  <p>Winterthur · <a href="tel:+41522380772" style="color:var(--brand)">052 238 07 72</a></p>
+  <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522380772">Anrufen · 052 238 07 72</a>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('tallyBtn');
+  var num = document.getElementById('tallyNum');
+  if(btn && num){
+    btn.addEventListener('click', function(){
+      var target = 253, cur = 0, step = Math.max(1, Math.round(target/40));
+      btn.setAttribute('disabled','disabled');
+      var tick = function(){
+        cur += step;
+        if(cur >= target){ num.textContent = target; btn.textContent='Gezählt'; return; }
+        num.textContent = cur;
+        requestAnimationFrame(function(){ setTimeout(tick, 20); });
+      };
+      tick();
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>

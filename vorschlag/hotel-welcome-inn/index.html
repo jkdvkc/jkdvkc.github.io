@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Welcome Inn, Kloten – Zimmerhotel mit kostenlosem WLAN, Fitness &amp; Parkplatz</title>
+<meta name="description" content="Hotel Welcome Inn, Holbergstrasse 1, Kloten: modernes Zimmerhotel mit kostenlosem WLAN, Fitnessstudio, Parkplatz und Kaffee-/Teestation. Direktverbindung zum Flughafen Zürich.">
+<meta property="og:title" content="Hotel Welcome Inn, Kloten">
+<meta property="og:description" content="Modernes Zimmerhotel in Kloten mit kostenlosen Extras wie WLAN, Fitnessstudio und Parkplatz.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/08/wlcminn.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Welcome Inn, Kloten",
+  "description": "Modernes Zimmerhotel in Kloten mit kostenlosen Extras wie WLAN, Fitnessstudio und Parkplatz.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Holbergstrasse 1",
+    "postalCode": "8302",
+    "addressLocality": "Kloten",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41448047575",
+  "email": "welcomeinn@a-chesa.ch",
+  "url": "https://hotel-welcomeinn.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "1113"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#fff6ec;
+  --surface:#ffffff;
+  --fg:#241b12;
+  --muted:#6b5c4a;
+  --brand:#d4790f;
+  --accent:#f4b942;
+  --line:#f0ddc4;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:clamp(15px,0.3vw + 14px,17px);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:'Sora',system-ui,sans-serif;font-weight:700;letter-spacing:-0.01em;
+  line-height:1.08;margin:0;color:var(--fg);
+}
+h1{font-size:clamp(2.1rem,5vw + 1rem,3.6rem);}
+h2{font-size:clamp(1.6rem,2.6vw + 1rem,2.3rem);}
+h3{font-size:clamp(1.05rem,1vw + 0.9rem,1.25rem);}
+p{margin:0 0 1em;}
+a{color:var(--brand);}
+img{max-width:100%;display:block;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+.skip-link:focus{left:1rem;top:1rem;}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.8rem clamp(1.2rem,4vw,3rem);
+  background:rgba(255,246,236,0.95);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.brand-mark img{height:28px;width:auto;}
+nav ul{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0;}
+nav a{color:var(--fg);text-decoration:none;font-size:0.85rem;font-weight:600;}
+nav a:hover{color:var(--brand);}
+.call-pill{background:var(--brand);color:#fff;padding:0.55rem 1.1rem;border-radius:6px;text-decoration:none;font-size:0.82rem;font-weight:700;}
+@media (max-width:860px){ nav{display:none;} }
+
+main{padding-top:62px;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+[data-reveal].is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+/* HERO */
+.hero{position:relative;min-height:min(88vh,720px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,12,5,0.85) 0%,rgba(20,12,5,0.35) 55%,rgba(20,12,5,0.15) 100%);z-index:1;}
+.hero-inner{position:relative;z-index:2;padding:clamp(2.4rem,7vw,4.5rem) clamp(1.2rem,4vw,3rem) clamp(2.4rem,6vw,3.6rem);max-width:1180px;margin:0 auto;width:100%;}
+.hero h1{color:#fff;max-width:16ch;}
+.hero .sub{color:#f4e7d8;max-width:48ch;font-size:clamp(1rem,0.5vw + 0.9rem,1.2rem);margin:1rem 0 1.5rem;}
+.hero-cta{display:flex;gap:0.9rem;flex-wrap:wrap;align-items:center;}
+.btn{display:inline-block;text-align:center;padding:0.8rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.92rem;border:2px solid transparent;}
+.btn-accent{background:var(--accent);color:#241b12;}
+.btn-line{border-color:#fff;color:#fff;}
+.rating-line{color:#f4e7d8;font-size:0.85rem;margin-left:0.2rem;}
+
+/* SECTIONS */
+section.block{padding:clamp(2.6rem,6vw,4.4rem) 0;border-bottom:1px solid var(--line);}
+.block-head{max-width:64ch;margin-bottom:2rem;}
+.block-head .eyebrow{color:var(--brand);font-weight:700;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;}
+.block-head p{color:var(--muted);}
+
+/* INCLUDED GRID */
+.incl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;}
+.incl-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+.incl-card .photo{aspect-ratio:4/3;overflow:hidden;background:var(--line);}
+.incl-card .photo img{width:100%;height:100%;object-fit:cover;}
+.incl-card .body{padding:1rem 1.1rem 1.2rem;}
+.incl-card .tag{display:inline-block;background:var(--brand);color:#fff;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.25rem 0.55rem;border-radius:999px;margin-bottom:0.55rem;}
+.incl-card.optional .tag{background:var(--muted);}
+.incl-card h3{font-size:1.05rem;margin-bottom:0.3rem;}
+.incl-card p{color:var(--muted);font-size:0.88rem;margin:0;}
+@media (max-width:900px){ .incl-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:560px){ .incl-grid{grid-template-columns:1fr;} }
+
+/* MODULE: PACKAGE BUILDER */
+.builder{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(1.4rem,3vw,2.2rem);}
+.builder-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;}
+.check-list{list-style:none;margin:0;padding:0;display:grid;gap:0.6rem;}
+.check-list li{display:flex;align-items:flex-start;gap:0.7rem;padding:0.6rem 0.7rem;border:1px solid var(--line);border-radius:8px;}
+.check-list input{margin-top:0.25rem;}
+.check-list label{font-size:0.92rem;cursor:pointer;}
+.builder-form{display:grid;gap:1rem;align-content:start;}
+.builder-form label{display:block;font-size:0.8rem;font-weight:600;color:var(--muted);margin-bottom:0.35rem;}
+.builder-form select{width:100%;padding:0.6rem;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff;}
+.builder-out{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:1rem;font-size:0.86rem;white-space:pre-wrap;}
+.builder-actions{display:flex;gap:0.8rem;flex-wrap:wrap;}
+@media (max-width:800px){ .builder-grid{grid-template-columns:1fr;} }
+
+/* ROOMS */
+.room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;}
+.room-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;}
+.room-card .photo{width:38%;flex:none;aspect-ratio:3/4;overflow:hidden;background:var(--line);}
+.room-card .photo img{width:100%;height:100%;object-fit:cover;}
+.room-card .body{padding:1.1rem 1.2rem;}
+.room-card h3{font-size:1.1rem;margin-bottom:0.3rem;}
+.room-card .cap{color:var(--brand);font-size:0.8rem;font-weight:700;margin-bottom:0.4rem;}
+.room-card p{color:var(--muted);font-size:0.88rem;margin:0;}
+@media (max-width:700px){ .room-grid{grid-template-columns:1fr;} }
+
+/* QUAD PHOTO */
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:0.7rem;}
+.quad figure{margin:0;border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:var(--line);}
+.quad img{width:100%;height:100%;object-fit:cover;}
+@media (max-width:800px){ .quad{grid-template-columns:repeat(2,1fr);} }
+
+/* PARTNER GROUP */
+.partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.partner-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);}
+.partner-card .photo{aspect-ratio:16/10;overflow:hidden;background:var(--line);}
+.partner-card .photo img{width:100%;height:100%;object-fit:cover;}
+.partner-card .body{padding:0.9rem 1.05rem;}
+.partner-card h3{font-size:0.98rem;margin-bottom:0.2rem;}
+.partner-card p{color:var(--muted);font-size:0.84rem;margin:0;}
+@media (max-width:900px){ .partner-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:560px){ .partner-grid{grid-template-columns:1fr;} }
+.badge-strip{display:flex;gap:1.6rem;align-items:center;margin-top:1.8rem;flex-wrap:wrap;}
+.badge-strip img{height:44px;width:auto;filter:grayscale(15%);}
+.badge-strip span{font-size:0.8rem;color:var(--muted);max-width:22ch;}
+
+/* LOCATION */
+.loc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.loc-facts{border:1px solid var(--line);border-radius:12px;padding:1.4rem;background:var(--surface);}
+.loc-facts dt{font-weight:700;color:var(--brand);margin-top:1rem;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em;}
+.loc-facts dt:first-child{margin-top:0;}
+.loc-facts dd{margin:0.2rem 0 0;}
+.map-box{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+.map-box iframe{width:100%;height:320px;border:0;display:block;}
+@media (max-width:800px){ .loc-wrap{grid-template-columns:1fr;} }
+
+footer{padding:2.4rem clamp(1.2rem,4vw,3rem) 6rem;background:#2a1c10;color:#e9d9c6;}
+footer a{color:#fff;}
+.foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1180px;margin:0 auto 1.4rem;font-size:0.88rem;}
+footer p.legal{max-width:1180px;margin:0 auto;font-size:0.78rem;color:#b39c82;}
+@media (max-width:700px){ .foot-grid{grid-template-columns:1fr;} }
+
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+.mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.9rem;}
+@media (min-width:761px){ .mobile-bar{display:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <div class="brand-mark">
+    <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/08/welcome-inn.svg" alt="Hotel Welcome Inn Logo" onerror="this.style.display='none'">
+  </div>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#inklusive">Inklusive</a></li>
+      <li><a href="#paket">Paket</a></li>
+      <li><a href="#zimmer">Zimmer</a></li>
+      <li><a href="#gruppe">Achesa-Gruppe</a></li>
+      <li><a href="#rezeption">Rezeption</a></li>
+      <li><a href="#lage">Lage</a></li>
+    </ul>
+  </nav>
+  <a class="call-pill" href="tel:+41448047575">Anrufen</a>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/08/wlcminn.webp" alt="Hotel Welcome Inn, Kloten" onerror="this.style.display='none'">
+    <div class="hero-inner">
+      <h1>Alles inklusive, bevor Sie einchecken.</h1>
+      <p class="sub">Modernes Zimmerhotel in Kloten mit kostenlosen Extras wie WLAN, Fitnessstudio und Parkplatz.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="tel:+41448047575">+41 44 804 75 75</a>
+        <a class="btn btn-line" href="#paket">Paket zusammenstellen</a>
+        <span class="rating-line">4.3 · 1113 Google-Bewertungen</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Über das Haus</span>
+        <h2>Ein Zimmerhotel, kein Rundum-Resort</h2>
+        <p>Das Hotel Welcome Inn in Kloten ist ein modernes Zimmerhotel: kein eigenes Restaurant, dafür eine Direktverbindung zum Flughafen Zürich und eine Reihe kostenloser Extras, die sonst oft extra kosten. Teil der Achesa-Gruppe.</p>
+      </div>
+      <div class="incl-card" style="max-width:34ch;">
+        <div class="body">
+          <span class="tag">Flughafen Zürich</span>
+          <h3>Direktverbindung</h3>
+          <p>Nächster Hotel-Partner mit Direktverbindung zum Flughafen Zürich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="inklusive" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Was inklusive ist</span>
+        <h2>Sechs Extras, real fotografiert</h2>
+        <p>Direktverbindung zum Flughafen Zürich, dazu kostenloses WLAN, Fitnessstudio, Parkplatz, Mineralwasser im Zimmer und eine Kaffee-, Tee- und Wasserstation in der Lobby. Frühstück ist optional buchbar, nicht inklusive.</p>
+      </div>
+      <div class="incl-grid">
+        <article class="incl-card">
+          <div class="photo">
+            <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/fitnessraum-hotel-welcome-inn-zurich-airport-achesa-group-1024x683.jpg" alt="Fitnessraum im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="body">
+            <span class="tag">Kostenlos</span>
+            <h3>Fitnessstudio</h3>
+            <p>Frei zugänglich für Hotelgäste.</p>
+          </div>
+        </article>
+        <article class="incl-card">
+          <div class="photo">
+            <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/parking-hotel-welcome-inn-zurich-airport-achesa-group-1024x683.jpg" alt="Parkplatz beim Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="body">
+            <span class="tag">Kostenlos</span>
+            <h3>Parkplatz</h3>
+            <p>Tiefgarage oder Parkplatz, kostenlos.</p>
+          </div>
+        </article>
+        <article class="incl-card">
+          <div class="photo">
+            <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-kaffeeecke-1-1024x734.jpg" alt="Kaffee-, Tee- und Wasserstation in der Lobby" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="body">
+            <span class="tag">Kostenlos</span>
+            <h3>Kaffee, Tee &amp; Wasser</h3>
+            <p>Station in der Lobby, kostenlos.</p>
+          </div>
+        </article>
+        <article class="incl-card">
+          <div class="photo">
+            <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-doppelzimmer-8.webp" alt="Zimmer im Hotel Welcome Inn mit Mineralwasser" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="body">
+            <span class="tag">Kostenlos</span>
+            <h3>Mineralwasser im Zimmer</h3>
+            <p>In jedem Zimmer, kostenlos.</p>
+          </div>
+        </article>
+        <article class="incl-card">
+          <div class="photo">
+            <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/08/wlcminn.webp" alt="Hotel Welcome Inn, Kloten" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="body">
+            <span class="tag">Kostenlos</span>
+            <h3>WLAN</h3>
+            <p>Im ganzen Haus, kostenlos.</p>
+          </div>
+        </article>
+        <article class="incl-card optional">
+          <div class="photo">
+            <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/gedeckter-tisch-ristorante-mercato-kloten-achesa-group-0724.jpg" alt="Gedeckter Tisch im Ristorante Mercato, Kloten" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="body">
+            <span class="tag">Optional</span>
+            <h3>Frühstück</h3>
+            <p>Optional buchbar, nicht im Zimmerpreis inklusive.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="paket" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Modul</span>
+        <h2>Ihr Inklusive-Paket zusammenstellen</h2>
+        <p>Extras auswählen, Zimmertyp und Personenzahl angeben — die Anfrage wird automatisch zusammengestellt.</p>
+      </div>
+      <div class="incl-grid" style="margin-bottom:2rem;">
+        <article class="incl-card" style="background:transparent;border:none;">
+          <div class="body" style="padding:0;"><span class="tag">Schritt 1</span><h3>Extras anhaken</h3><p>Welche kostenlosen Extras wichtig sind, links ankreuzen.</p></div>
+        </article>
+        <article class="incl-card" style="background:transparent;border:none;">
+          <div class="body" style="padding:0;"><span class="tag">Schritt 2</span><h3>Zimmer &amp; Personen wählen</h3><p>Rechts Zimmertyp und Anzahl Personen angeben.</p></div>
+        </article>
+        <article class="incl-card" style="background:transparent;border:none;">
+          <div class="body" style="padding:0;"><span class="tag">Schritt 3</span><h3>Absenden</h3><p>Per Telefon +41 44 804 75 75 oder E-Mail welcomeinn@a-chesa.ch.</p></div>
+        </article>
+      </div>
+      <div class="builder">
+        <div class="builder-grid">
+          <ul class="check-list" id="check-list">
+            <li>
+              <input type="checkbox" id="ex1" value="Kostenlos: WLAN" checked>
+              <label for="ex1">Kostenlos: WLAN</label>
+            </li>
+            <li>
+              <input type="checkbox" id="ex2" value="Kostenlos: Fitnessstudio" checked>
+              <label for="ex2">Kostenlos: Fitnessstudio</label>
+            </li>
+            <li>
+              <input type="checkbox" id="ex3" value="Kostenlos: Parkplatz (Tiefgarage oder Parkplatz)">
+              <label for="ex3">Kostenlos: Parkplatz (Tiefgarage oder Parkplatz)</label>
+            </li>
+            <li>
+              <input type="checkbox" id="ex4" value="Kostenlos: Mineralwasser in Zimmer">
+              <label for="ex4">Kostenlos: Mineralwasser in Zimmer</label>
+            </li>
+            <li>
+              <input type="checkbox" id="ex5" value="Kostenlos: Kaffee-, Tee- und Wasserstation in Lobby">
+              <label for="ex5">Kostenlos: Kaffee-, Tee- und Wasserstation in Lobby</label>
+            </li>
+            <li>
+              <input type="checkbox" id="ex6" value="Optionales Frühstück">
+              <label for="ex6">Optionales Frühstück</label>
+            </li>
+          </ul>
+          <div class="builder-form">
+            <div>
+              <label for="room-select">Zimmertyp</label>
+              <select id="room-select">
+                <option>Queenzimmer</option>
+                <option>Kingzimmer</option>
+                <option>Zweibettzimmer</option>
+                <option>Dreibettzimmer</option>
+              </select>
+            </div>
+            <div>
+              <label for="guest-count">Anzahl Personen</label>
+              <select id="guest-count">
+                <option>1</option><option>2</option><option>3</option>
+              </select>
+            </div>
+            <div class="builder-out" id="builder-out"></div>
+            <div class="builder-actions">
+              <a class="btn btn-accent" id="mail-link" style="border-color:var(--accent);" href="mailto:welcomeinn@a-chesa.ch">Per E-Mail anfragen</a>
+              <a class="btn btn-line" style="border-color:var(--brand);color:var(--brand);" href="tel:+41448047575">Per Telefon anfragen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="zimmer" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Zimmer</span>
+        <h2>Vier Zimmertypen</h2>
+        <p>Preise sind auf der Website nicht angegeben — daher hier bewusst ausgelassen.</p>
+      </div>
+      <div class="room-grid">
+        <article class="room-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-doppelzimmer-8.webp" alt="Zimmer im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><span class="cap">2 Personen</span><h3>Queenzimmer</h3><p>Queen Room mit Boxspringbett 160×200 cm</p></div>
+        </article>
+        <article class="room-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-doppelzimmer-8.webp" alt="Zimmer im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><span class="cap">2 Personen</span><h3>Kingzimmer</h3><p>King Room mit Boxspringbett 180×200 cm</p></div>
+        </article>
+        <article class="room-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-doppelzimmer-8.webp" alt="Zimmer im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><span class="cap">2 Personen</span><h3>Zweibettzimmer</h3><p>Twin Room mit zwei Boxspringbetten à 90×200 cm</p></div>
+        </article>
+        <article class="room-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-doppelzimmer-8.webp" alt="Zimmer im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><span class="cap">3 Personen</span><h3>Dreibettzimmer</h3><p>Triple Room mit zwei Boxspringbetten + Sofabett</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="rezeption" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Ankunft</span>
+        <h2>Rezeption &amp; erste Minuten</h2>
+        <p>Vier Ansichten aus dem Haus: Rezeption, Parkplatz, Fitnessraum und die Direktbuchungs-Information der Achesa-Gruppe.</p>
+      </div>
+      <div class="quad">
+        <figure>
+          <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/02/achesa-welcome-inn-kloten-rezeption-4.webp" alt="Rezeption im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Rezeption</figcaption>
+        </figure>
+        <figure>
+          <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/parking-hotel-welcome-inn-zurich-airport-achesa-group-1024x683.jpg" alt="Parkplatz beim Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Parkplatz</figcaption>
+        </figure>
+        <figure>
+          <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/fitnessraum-hotel-welcome-inn-zurich-airport-achesa-group-1024x683.jpg" alt="Fitnessraum im Hotel Welcome Inn" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Fitnessraum</figcaption>
+        </figure>
+        <figure>
+          <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/sparen-direkt-buchen-kloten-zurich-airport-achesa-group-0924-1024x683.jpg" alt="Werbegrafik zur Direktbuchung, Achesa-Gruppe" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Direktbuchung</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="gruppe" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Achesa-Gruppe</span>
+        <h2>Partnerbetriebe in Kloten</h2>
+        <p>Das Hotel Welcome Inn ist Teil der Achesa-Gruppe. In der Nähe liegen weitere Betriebe der Gruppe.</p>
+      </div>
+      <div class="partner-grid">
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/gedeckter-tisch-ristorante-mercato-kloten-achesa-group-0724.jpg" alt="Ristorante Mercato, Kloten" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Ristorante Mercato</h3><p>Achesa-Gruppe, Kloten</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/innenbereich-restaurant-tschadun-kloten-achesa-group-0524.jpg" alt="Restaurant Tschadun, Kloten" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Restaurant Tschadun</h3><p>Achesa-Gruppe, Kloten</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/innenbereich-pizzeria-giardino-kloten-achesa-group-0524.jpg" alt="Pizzeria Giardino, Kloten" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Pizzeria Giardino</h3><p>Achesa-Gruppe, Kloten</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/aussenansicht-hotel-allegra-lodge-zurich-airport-achesa-group-0924.jpg" alt="Hotel Allegra Lodge, Achesa-Gruppe" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Hotel Allegra Lodge</h3><p>Schwesterhaus, Zürich Flughafen</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/apartment-achesa-homes-kloten-zurich-airport-achesa-group.jpg" alt="Apartment, Achesa Homes Kloten" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Achesa Homes</h3><p>Serviced Apartments, Kloten</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/share-living-rooms-zurich-airport-achesa-group-1123.jpg" alt="Share Living Rooms, Achesa-Gruppe" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Share Living</h3><p>Achesa-Gruppe, Zürich Flughafen</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/achesa-single-apartment-achesa-homes-zurich-airport-achesa-group-0823.jpg" alt="Single Apartment, Achesa Homes" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Achesa Homes, Single Apartment</h3><p>Serviced Apartments, Zürich Flughafen</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/allegra-studio-achesa-homes-kloten-zurich-airport-achesa-group-0125.jpg" alt="Allegra Studio, Achesa Homes Kloten" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Allegra Studio</h3><p>Achesa Homes, Kloten</p></div>
+        </article>
+        <article class="partner-card">
+          <div class="photo"><img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/03/achesa-living-zurich-airport-achesa-group-1123.jpg" alt="Achesa Living, Zürich Flughafen" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          <div class="body"><h3>Achesa Living</h3><p>Achesa-Gruppe, Zürich Flughafen</p></div>
+        </article>
+      </div>
+      <div class="badge-strip">
+        <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/07/swisstainable_committed.webp" alt="Swisstainable Committed" loading="lazy" onerror="this.style.display='none'">
+        <img src="https://a-chesa.ch/wp-content/uploads/sites/17/2025/07/OKGO-black.png" alt="OKGO Partnerlogo" loading="lazy" onerror="this.style.display='none'">
+        <span>Nachhaltigkeitsprogramm Swisstainable und Partnerlogo der Achesa-Gruppe.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Fragen</span>
+        <h2>Vor der Anfrage</h2>
+      </div>
+      <div class="room-grid">
+        <article class="room-card" style="display:block;">
+          <div class="body"><h3>Sind die Zimmerpreise online sichtbar?</h3><p>Nein, Zimmerpreise sind auf der Website nicht angegeben.</p></div>
+        </article>
+        <article class="room-card" style="display:block;">
+          <div class="body"><h3>Ist Frühstück im Preis inbegriffen?</h3><p>Nein, Frühstück ist optional buchbar, nicht standardmässig inklusive.</p></div>
+        </article>
+        <article class="room-card" style="display:block;">
+          <div class="body"><h3>Was ist wirklich kostenlos?</h3><p>WLAN, Fitnessstudio, Parkplatz, Mineralwasser im Zimmer sowie die Kaffee-, Tee- und Wasserstation in der Lobby.</p></div>
+        </article>
+        <article class="room-card" style="display:block;">
+          <div class="body"><h3>Gehört das Hotel zu einer Gruppe?</h3><p>Ja, zur Achesa-Gruppe, mit weiteren Häusern und Partnerbetrieben in Kloten und am Flughafen Zürich.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="lage" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Lage</span>
+        <h2>Holbergstrasse 1, Kloten</h2>
+      </div>
+      <div class="loc-wrap">
+        <dl class="loc-facts">
+          <dt>Adresse</dt>
+          <dd>Holbergstrasse 1, Kloten</dd>
+          <dt>Flughafen Zürich</dt>
+          <dd>Nächster Hotel-Partner mit Direktverbindung</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41448047575">+41 44 804 75 75</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:welcomeinn@a-chesa.ch">welcomeinn@a-chesa.ch</a></dd>
+          <dt>Google-Bewertung</dt>
+          <dd>4.3 von 5 · 1113 Bewertungen</dd>
+        </dl>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Holbergstrasse%201%2C%20CH-8302%20Kloten&amp;z=16&amp;output=embed" loading="lazy" title="Karte Hotel Welcome Inn"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <img src="https://hotel-welcomeinn.ch/wp-content/uploads/sites/22/2025/08/welcome-inn-black.svg" alt="Hotel Welcome Inn Logo" style="height:26px;width:auto;margin:0 auto 1.6rem;filter:invert(1);" onerror="this.style.display='none'">
+  <div class="foot-grid">
+    <div>
+      <strong>Hotel Welcome Inn</strong><br>
+      Holbergstrasse 1, Kloten<br>
+      <a href="tel:+41448047575">+41 44 804 75 75</a><br>
+      <a href="mailto:welcomeinn@a-chesa.ch">welcomeinn@a-chesa.ch</a>
+    </div>
+    <div>
+      <strong>Inklusive</strong><br>
+      WLAN, Fitnessstudio, Parkplatz, Mineralwasser, Kaffee-/Teestation
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://hotel-welcomeinn.ch/" target="_blank" rel="noopener">hotel-welcomeinn.ch</a>
+    </div>
+  </div>
+  <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41448047575">Anrufen · +41 44 804 75 75</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var checkList = document.getElementById('check-list');
+  var checkboxes = Array.prototype.slice.call(checkList.querySelectorAll('input[type="checkbox"]'));
+  var roomSelect = document.getElementById('room-select');
+  var guestSelect = document.getElementById('guest-count');
+  var out = document.getElementById('builder-out');
+  var mailLink = document.getElementById('mail-link');
+
+  function renderBuilder(){
+    var extras = checkboxes.filter(function(c){ return c.checked; }).map(function(c){ return c.value; });
+    var extrasText = extras.length ? extras.join('; ') : '(keine ausgewählt)';
+    var text = 'Anfrage Hotel Welcome Inn, Kloten\n' +
+      'Zimmer: ' + roomSelect.value + '\n' +
+      'Personen: ' + guestSelect.value + '\n' +
+      'Gewünschte Extras: ' + extrasText;
+    out.textContent = text;
+    var subject = encodeURIComponent('Zimmeranfrage Hotel Welcome Inn');
+    var mbody = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:welcomeinn@a-chesa.ch?subject=' + subject + '&body=' + mbody);
+  }
+
+  checkboxes.forEach(function(c){ c.addEventListener('change', renderBuilder); });
+  roomSelect.addEventListener('change', renderBuilder);
+  guestSelect.addEventListener('change', renderBuilder);
+  renderBuilder();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Banane — Hotel Banana City, Winterthur</title>
+<meta name="description" content="Restaurant Banane im Hotel Banana City, Schaffhauserstrasse 8, 8400 Winterthur: mehrere Venues, Dachterrasse und Eventsaal. 4.6 von 5 Sternen bei 21 Google-Bewertungen. Tel. +41 52 268 16 16.">
+<meta property="og:title" content="Restaurant Banane, Hotel Banana City, Winterthur">
+<meta property="og:description" content="Kulinarische Vielfalt im Hotel Banana City — Restaurant, Café de Paris, Eventsaal und eine Dachterrasse mit Blick über Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bananacity.ch/en">
+<meta property="og:image" content="https://www.bananacity.ch/fileadmin/_processed_/f/0/csm_HERO_Startseite_2fd16de41f.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Banane",
+  "url": "https://www.bananacity.ch/en",
+  "image": "https://www.bananacity.ch/_assets/9936fbff2fa9683e2f00411c767453f4/Images/logo.svg",
+  "telephone": "+41 52 268 16 16",
+  "email": "info@bananacity.ch",
+  "servesCuisine": ["French","International"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Schaffhauserstrasse 8",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "21"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#f2f6f8;
+    --surface:#ffffff;
+    --fg:#12283a;
+    --muted:#3f5b74;
+    --brand:#0f5c66;
+    --accent:#bd8f38;
+    --line: rgba(18,40,58,0.13);
+    --maxw:1220px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.75vw + 12.8px, 17px);
+    line-height:1.66;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Libre Caslon Display', ui-serif, Georgia, serif; font-weight:400; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  ::selection{ background:var(--accent); color:#12283a; }
+  section[id]{ scroll-margin-top:5.6rem; }
+  .eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:0.16em; font-size:0.7rem; color:var(--accent); }
+  .skip-link{ position:absolute; left:0.6rem; top:-3rem; z-index:100; background:var(--fg); color:#fff; padding:0.6rem 1rem; font-weight:700; text-decoration:none; transition:top .2s ease; }
+  .skip-link:focus{ top:0.6rem; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(242,246,248,0.94); backdrop-filter:blur(6px); padding:0.85rem 0; border-bottom:1px solid var(--line); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  .logo img{ height:1.9rem; width:auto; }
+  .logo-fallback{ font-family:'Libre Caslon Display',serif; font-size:1.2rem; }
+  nav.pill-nav{ display:flex; gap:0.15rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:600; font-size:0.78rem; padding:0.5rem 0.85rem; border-radius:999px; }
+  nav.pill-nav a:hover{ background:rgba(15,92,102,0.1); }
+  .navtoggle{ display:none; background:var(--brand); color:#fff; border:none; border-radius:999px; padding:0.5rem 1rem; font-weight:700; cursor:pointer; }
+
+  /* HERO — full-bleed photo */
+  .hero{ position:relative; min-height:min(72vh,620px); display:flex; align-items:flex-end; overflow:hidden; }
+  .hero img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(18,40,58,0.9), rgba(18,40,58,0.25) 60%); z-index:1; }
+  .hero-inner{ position:relative; z-index:2; color:#fff; padding:clamp(2.4rem,6vw,4rem) 0; width:100%; }
+  .hero h1{ font-size:clamp(2.3rem,6vw,4rem); line-height:1.05; max-width:16ch; color:#fff; }
+  .hero .sub{ font-size:clamp(1rem,1.6vw,1.2rem); font-weight:500; max-width:52ch; margin-top:1.2rem; opacity:0.95; }
+  .cta-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.6rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:700; text-decoration:none; padding:0.8rem 1.4rem; border-radius:4px; border:2px solid transparent; }
+  .btn.solid{ background:var(--accent); color:#12283a; border-color:var(--accent); }
+  .btn.ghost{ background:transparent; color:#fff; border-color:rgba(255,255,255,0.6); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.4rem; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35); border-radius:999px; padding:0.5rem 1.05rem; font-weight:700; font-size:0.85rem; margin-top:1.4rem; }
+  .rating-chip b{ font-family:'Libre Caslon Display',serif; font-size:1.15rem; color:var(--accent); }
+  .fact-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem; margin-top:clamp(1.6rem,4vw,2.4rem); max-width:680px; }
+  .fact-card{ background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); border-radius:12px; padding:1rem 1.1rem; }
+  .fact-card .k{ display:block; font-size:0.64rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--accent); margin-bottom:0.3rem; }
+  .fact-card .v{ font-weight:700; font-size:0.9rem; }
+
+  section{ padding:clamp(2.4rem,5vw,4rem) 0; }
+  .section-head{ margin-bottom:clamp(1.6rem,3.5vw,2.3rem); max-width:64ch; }
+  .section-head h2{ font-size:clamp(1.7rem,3.4vw,2.5rem); }
+  .section-head p{ color:var(--muted); font-weight:500; margin-top:0.6rem; }
+
+  /* ---------- SIGNATURE MODULE: venues as a set ---------- */
+  .venue-select{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(1.6rem,4vw,2.6rem); align-items:stretch; }
+  .venue-photo{ position:relative; border-radius:20px; overflow:hidden; min-height:320px; background:var(--fg); }
+  .venue-photo img{ width:100%; height:100%; min-height:320px; object-fit:cover; position:absolute; inset:0; }
+  .venue-photo .cap{ position:absolute; left:0; right:0; bottom:0; z-index:2; padding:1.2rem 1.4rem; background:linear-gradient(0deg, rgba(18,40,58,0.88), transparent); color:#fff; font-weight:700; }
+  .venue-list{ display:flex; flex-direction:column; gap:0.6rem; }
+  .venue-btn{ text-align:left; background:var(--surface); border:1px solid var(--line); border-left:4px solid transparent; border-radius:14px; padding:1.1rem 1.3rem; cursor:pointer; font-family:'Inter',sans-serif; transition:border-color .2s ease, transform .2s ease; }
+  .venue-btn:hover{ transform:translateX(3px); }
+  @media (prefers-reduced-motion: reduce){ .venue-btn:hover{ transform:none; } }
+  .venue-btn.active{ border-left-color:var(--brand); background:#eef5f4; }
+  .venue-btn h3{ font-size:1.05rem; font-family:'Libre Caslon Display',serif; }
+  .venue-btn p{ margin:0.4rem 0 0; font-size:0.86rem; color:var(--muted); font-weight:500; }
+
+  /* ---------- Terrace payoff ---------- */
+  .terrace{ position:relative; border-radius:28px; overflow:hidden; min-height:min(56vh,460px); display:flex; align-items:center; }
+  .terrace img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .terrace::after{ content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(18,40,58,0.85), rgba(18,40,58,0.15) 70%); z-index:1; }
+  .terrace-txt{ position:relative; z-index:2; color:#fff; padding:clamp(1.8rem,5vw,3rem); max-width:48ch; }
+  .terrace-txt h2{ font-size:clamp(1.8rem,4.4vw,3rem); color:#fff; }
+  .terrace-txt p{ margin-top:1rem; font-weight:500; font-size:clamp(1rem,1.6vw,1.15rem); opacity:0.95; }
+
+  /* ---------- Kitchen strip ---------- */
+  .kitchen-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:0.9rem; }
+  .kitchen-grid figure{ margin:0; border-radius:18px; overflow:hidden; border:1px solid var(--line); position:relative; }
+  .kitchen-grid img{ width:100%; height:220px; object-fit:cover; display:block; transition:transform .35s ease; }
+  .kitchen-grid figure:hover img{ transform:scale(1.05); }
+  @media (prefers-reduced-motion: reduce){ .kitchen-grid figure:hover img{ transform:none; } }
+  .kitchen-grid figcaption{ position:absolute; left:0; right:0; bottom:0; padding:0.7rem 0.9rem; background:linear-gradient(0deg, rgba(18,40,58,0.85), transparent); color:#fff; font-weight:700; font-size:0.86rem; }
+
+  /* ---------- About / USPs ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(1.8rem,4vw,3.2rem); align-items:start; }
+  .about-grid p{ max-width:56ch; font-weight:500; }
+  .usp-band{ display:grid; grid-template-columns:1fr 1fr; gap:0.9rem; }
+  .usp-tile{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1.2rem; }
+  .usp-tile h3{ font-size:0.98rem; font-family:'Inter',sans-serif; font-weight:800; }
+  .usp-tile p{ margin:0.4rem 0 0; font-size:0.85rem; color:var(--muted); font-weight:500; }
+
+  /* ---------- Reviews (honest low count) ---------- */
+  .review-strip{ display:flex; align-items:center; gap:clamp(1.2rem,3vw,2rem); background:var(--fg); color:#fff; border-radius:26px; padding:clamp(1.6rem,4vw,2.6rem); flex-wrap:wrap; }
+  .review-strip .stars{ font-size:clamp(2rem,4.6vw,2.8rem); font-family:'Libre Caslon Display',serif; color:var(--accent); }
+  .review-strip p{ margin:0; font-weight:600; max-width:44ch; }
+  .review-strip .count{ font-weight:700; }
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{ display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .contact-card{ background:var(--surface); border-radius:20px; padding:clamp(1.4rem,3vw,2rem); border:1px solid var(--line); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .contact-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .contact-card .row span.k{ font-size:0.66rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--accent); }
+  .contact-card a{ text-decoration:none; font-weight:700; }
+  .contact-card a:hover{ color:var(--brand); }
+  .honest-note{ font-size:0.85rem; font-weight:500; color:var(--muted); background:var(--bg); border:1px dashed var(--line); border-radius:12px; padding:0.7rem 0.9rem; }
+  .mapwrap{ border-radius:20px; overflow:hidden; border:1px solid var(--line); }
+  .mapwrap iframe{ width:100%; height:100%; min-height:280px; border:0; display:block; }
+
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:#fff; }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:600; font-size:0.88rem; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.75; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--accent); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.85rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:700; font-family:'Libre Caslon Display',serif; font-size:1rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.2rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:900px){
+    .venue-select{ grid-template-columns:1fr; }
+    .terrace{ min-height:340px; }
+    .about-grid{ grid-template-columns:1fr; }
+    .contact-wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width:640px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.8rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+    .usp-band{ grid-template-columns:1fr; }
+  }
+  @media (max-width:560px){ .fact-strip{ grid-template-columns:1fr; } }
+  @media (max-width:400px){ .hero h1{ font-size:2rem; } }
+  @media (max-width:360px){
+    .navrow{ gap:0.5rem; }
+    .rating-chip{ font-size:0.78rem; padding:0.4rem 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top">
+      <img src="https://www.bananacity.ch/_assets/9936fbff2fa9683e2f00411c767453f4/Images/logo.svg" alt="Hotel Banana City Logo" height="30"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span class="logo-fallback" style="display:none;">Restaurant Banane</span>
+    </a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#venues">Die Venues</a>
+      <a href="#terrasse">Dachterrasse</a>
+      <a href="#kueche">Küche</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO — full-bleed photo -->
+  <section class="hero">
+    <img src="https://www.bananacity.ch/fileadmin/_processed_/f/0/csm_HERO_Startseite_2fd16de41f.jpg" alt="Hotel Banana City, Winterthur" loading="eager"
+      onerror="this.style.display='none'; this.closest('.hero').style.background='var(--fg)';">
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal">Restaurant · Hotel Banana City · Winterthur</p>
+      <h1 class="reveal">Kulinarische Vielfalt im Hotel Banana City</h1>
+      <p class="sub reveal">Restaurant im Hotel Banana City mit umfangreicher Gastronomie,
+      Konferenzeinrichtungen und Eventhosting in zentraler Lage Winterthurs.</p>
+      <div class="cta-row reveal">
+        <a class="btn solid" href="tel:+41522681616">Anrufen</a>
+        <a class="btn ghost" href="#venues">Die Venues ansehen ↓</a>
+      </div>
+      <div class="rating-chip reveal"><b>4.6</b>&nbsp;/ 5 · nur 21 Google-Bewertungen</div>
+      <div class="fact-strip reveal">
+        <div class="fact-card"><span class="k">Adresse</span><span class="v">Schaffhauserstrasse 8</span></div>
+        <div class="fact-card"><span class="k">Telefon</span><span class="v">+41 52 268 16 16</span></div>
+        <div class="fact-card"><span class="k">Küche</span><span class="v">French, International</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: venues as a set -->
+  <section id="venues">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Vier Räume, ein Haus</h2>
+        <p>Restaurant, Café de Paris, Eventsaal und Dachterrasse — wählen Sie einen Raum, um Foto
+        und Beschreibung zu wechseln.</p>
+      </div>
+      <div class="venue-select reveal">
+        <div class="venue-photo">
+          <img id="venue-img" src="https://www.bananacity.ch/fileadmin/_processed_/f/0/csm_HERO_Startseite_2fd16de41f.jpg" alt="Restaurant Banane"
+            onerror="this.closest('.venue-photo').style.display='none'">
+          <div class="cap" id="venue-cap">Restaurant Banane</div>
+        </div>
+        <div class="venue-list" role="tablist" aria-label="Venue wählen">
+          <button class="venue-btn active" role="tab" aria-selected="true"
+            data-img="https://www.bananacity.ch/fileadmin/_processed_/f/0/csm_HERO_Startseite_2fd16de41f.jpg"
+            data-cap="Restaurant Banane"
+            data-alt="Restaurant Banane">
+            <h3>Restaurant Banane</h3>
+            <p>Upscale Dining mitten im Hotel Banana City</p>
+          </button>
+          <button class="venue-btn" role="tab" aria-selected="false"
+            data-img="https://www.bananacity.ch/fileadmin/_processed_/7/3/csm_HBC-CMS-Cafedeparis-Web_18c51c2d5c.jpg"
+            data-cap="Café de Paris"
+            data-alt="Café de Paris im Hotel Banana City">
+            <h3>Café de Paris</h3>
+            <p>Der zweite Venue im Haus</p>
+          </button>
+          <button class="venue-btn" role="tab" aria-selected="false"
+            data-img="https://www.bananacity.ch/fileadmin/_processed_/a/b/csm_SEMINARZIMMER_Eventsaal_6040485a61.jpg"
+            data-cap="Seminarzimmer &amp; Eventsaal"
+            data-alt="Seminarzimmer und Eventsaal, Hotel Banana City">
+            <h3>Eventsaal</h3>
+            <p>Konferenzeinrichtungen &amp; Eventhosting</p>
+          </button>
+          <button class="venue-btn" role="tab" aria-selected="false"
+            data-img="https://www.bananacity.ch/fileadmin/_processed_/9/a/csm_Dachterrasse8_b7f869f737.jpg"
+            data-cap="Dachterrasse"
+            data-alt="Dachterrasse Hotel Banana City">
+            <h3>Dachterrasse</h3>
+            <p>Panoramablick über Winterthur</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERRACE PAYOFF -->
+  <section id="terrasse">
+    <div class="wrap">
+      <div class="terrace reveal">
+        <img src="https://www.bananacity.ch/fileadmin/_processed_/9/a/csm_Dachterrasse8_b7f869f737.jpg" alt="Dachterrasse mit Blick über Winterthur"
+          onerror="this.style.display='none'; this.closest('.terrace').style.background='var(--fg)';">
+        <div class="terrace-txt">
+          <h2>Der Blick, der bleibt</h2>
+          <p>Die Dachterrasse ist einer von mehreren Venues im Hotel Banana City — mit Panoramablick
+          über Winterthur, für Events und zum Verweilen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KITCHEN STRIP -->
+  <section id="kueche">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Aus der Küche</h2>
+        <p>Impressionen der Gastronomie im Hotel Banana City.</p>
+      </div>
+      <div class="kitchen-grid reveal">
+        <figure>
+          <img src="https://www.bananacity.ch/fileadmin/_processed_/4/8/csm_Hummerschwanz-03.2022_e9e5681ae2.jpg" alt="Hummerschwanz, Restaurant Banane" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+          <figcaption>Hummerschwanz</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.bananacity.ch/fileadmin/_processed_/4/b/csm_Moules-et-Frites_02e007009d.jpg" alt="Moules et Frites, Restaurant Banane" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+          <figcaption>Moules et Frites</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.bananacity.ch/fileadmin/_processed_/7/a/csm_Trueffelzauber_-765x435_2fdf0d8b10.jpg" alt="Trüffelzauber, Restaurant Banane" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+          <figcaption>Trüffelzauber</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.bananacity.ch/fileadmin/_processed_/a/1/csm_Brunch3_e563a7b958.jpg" alt="Brunch, Restaurant Banane" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+          <figcaption>Brunch</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="ueber-uns">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow reveal">Teil des Hotel Banana City</p>
+        <h2 class="reveal" style="margin-top:0.5rem;">Ein Haus, viele Anlässe</h2>
+        <p class="reveal" style="margin-top:1rem;">Restaurant im Hotel Banana City mit
+        umfangreicher Gastronomie, Konferenzeinrichtungen und Eventhosting in zentraler Lage
+        Winterthurs.</p>
+      </div>
+      <div class="usp-band reveal">
+        <div class="usp-tile"><h3>Teil des Hotels</h3><p>Integriert im Hotel Banana City</p></div>
+        <div class="usp-tile"><h3>Mehrere Venues</h3><p>Inklusive Dachterrasse</p></div>
+        <div class="usp-tile"><h3>Events &amp; Catering</h3><p>Konferenzeinrichtungen im Haus</p></div>
+        <div class="usp-tile"><h3>Upscale Dining</h3><p>Gehobenes kulinarisches Erlebnis</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="bewertung">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <p class="stars">4.6 ★</p>
+        <p><span class="count">Nur 21 Google-Bewertungen</span> — die volle, ungekürzte Zahl,
+        direkt von Google übernommen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Kontakt &amp; Lage</h2>
+        <p>Schaffhauserstrasse 8, Winterthur — im Hotel Banana City.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card reveal">
+          <div class="row">
+            <span class="k">Adresse</span>
+            <span>Schaffhauserstrasse 8, 8400 Winterthur</span>
+          </div>
+          <div class="row">
+            <span class="k">Telefon</span>
+            <a href="tel:+41522681616">+41 52 268 16 16</a>
+          </div>
+          <div class="row">
+            <span class="k">E-Mail</span>
+            <a href="mailto:info@bananacity.ch">info@bananacity.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Web</span>
+            <a href="https://www.bananacity.ch/en" target="_blank" rel="noopener">bananacity.ch</a>
+          </div>
+          <p class="honest-note">Öffnungszeiten und eine feste Speisekarte sind auf der Website
+          nicht hinterlegt — am besten kurz anrufen.</p>
+          <div class="cta-row" style="margin-top:0.2rem;">
+            <a class="btn ghost" style="padding:0.6rem 1.1rem; font-size:0.85rem; color:var(--fg); border-color:var(--line);"
+               href="https://maps.google.com/maps?daddr=Restaurant%20Banane%20Hotel%20Banana%20City%20Schaffhauserstrasse%208%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte Restaurant Banane" loading="lazy"
+            src="https://maps.google.com/maps?q=Restaurant%20Banane%20Hotel%20Banana%20City%20Schaffhauserstrasse%208%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>Restaurant Banane<br>Schaffhauserstrasse 8, 8400 Winterthur</div>
+      <div><a href="tel:+41522681616">+41 52 268 16 16</a><br><a href="https://www.bananacity.ch/en" target="_blank" rel="noopener">bananacity.ch</a></div>
+      <div>Öffnungszeiten nicht hinterlegt</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+41522681616" aria-label="Restaurant Banane anrufen">📞 Anrufen · +41 52 268 16 16</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* SIGNATURE MODULE: the venues as a set. No hours or menu exist for this
+     business, so the honest module swaps between the real photographed
+     venues (restaurant, Café de Paris, Eventsaal, Dachterrasse) using only
+     the images and venue references present in the JSON. */
+  var img = document.getElementById('venue-img');
+  var cap = document.getElementById('venue-cap');
+  var buttons = document.querySelectorAll('.venue-btn');
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      img.src = btn.getAttribute('data-img');
+      img.alt = btn.getAttribute('data-alt');
+      cap.textContent = btn.getAttribute('data-cap');
+    });
+  });
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Das Taggenberg – Gehobenes Restaurant mit Blick über Winterthur</title>
+<meta name="description" content="Restaurant Das Taggenberg, Taggenbergstrasse 79, Winterthur: saisonale Schweizer Gourmet-Küche, Panoramablick über die Stadt, Weinbegleitung. Karte, Öffnungszeiten und Reservierung.">
+<meta property="og:title" content="Das Taggenberg – Gehobenes Restaurant mit Blick über Winterthur">
+<meta property="og:description" content="Saisonale Fine-Dining Küche mit regionalen Zutaten, Weinbegleitung und Panoramablick über Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://dastaggenberg.ch/wp-content/uploads/2022/08/A9B845E2-1285-48FE-80E5-FB602E54A696.jpg">
+<meta property="og:url" content="https://dastaggenberg.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Das Taggenberg",
+  "image": "https://dastaggenberg.ch/wp-content/uploads/2022/08/A9B845E2-1285-48FE-80E5-FB602E54A696.jpg",
+  "servesCuisine": "Moderne Schweizer Küche",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Taggenbergstrasse 79",
+    "postalCode": "8408",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41 52 222 05 22",
+  "email": "gruezi@dastaggenberg.ch",
+  "url": "https://dastaggenberg.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "325"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "11:30", "closes": "14:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "18:00", "closes": "24:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "18:00", "closes": "24:00"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#15110d;
+    --surface:#1e1810;
+    --surface2:#241d13;
+    --fg:#efe7d7;
+    --muted:#b3a88f;
+    --brand:#a9822f;
+    --accent:#7c3b33;
+    --line:rgba(239,231,215,.14);
+    --maxw:1180px;
+    --menuw:760px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'EB Garamond',Georgia,serif;
+    font-size:clamp(15px,.3vw + 14.4px,17.5px);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased
+  }
+  h1,h2,h3,.display{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    line-height:1.08;
+    margin:0;
+    font-weight:600;
+    letter-spacing:.005em
+  }
+  p{margin:0 0 1.15em}
+  a{color:inherit}
+  img{
+    max-width:100%;
+    display:block
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 clamp(1.15rem,4vw,3.2rem)
+  }
+  :focus-visible{
+    outline:2px solid var(--brand);
+    outline-offset:3px
+  }
+  .sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    white-space:nowrap
+  }
+  .eyebrow{
+    font-family:'EB Garamond',serif;
+    font-size:.78rem;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--brand);
+    font-weight:600;
+    margin-bottom:1rem
+  }
+  .tabnum{
+    font-variant-numeric:tabular-nums;
+    font-feature-settings:"tnum" 1,"lnum" 1
+  }
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:80;
+    background:rgba(21,17,13,.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line)
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.7rem clamp(1.15rem,4vw,3.2rem);
+    gap:1rem
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    gap:.7rem;
+    text-decoration:none
+  }
+  .brandmark img{
+    height:38px;
+    width:38px;
+    object-fit:contain
+  }
+  .brandmark span{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:1.3rem;
+    letter-spacing:.01em;
+    color:var(--fg)
+  }
+  .navlinks{
+    display:none;
+    gap:clamp(1rem,2vw,2rem);
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:.92rem;
+    letter-spacing:.03em
+  }
+  .navlinks a{
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .2s;
+    border-bottom:1px solid transparent
+  }
+  .navlinks a:hover{
+    color:var(--fg);
+    border-color:var(--brand)
+  }
+  @media(min-width:900px){
+    .navlinks{display:flex}
+  }
+  .navcta{
+    display:flex;
+    align-items:center;
+    gap:.8rem
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    padding:.62rem 1.2rem;
+    border-radius:1px;
+    background:var(--brand);
+    color:#1a140d;
+    text-decoration:none;
+    font-family:'EB Garamond',serif;
+    font-size:.92rem;
+    letter-spacing:.03em;
+    font-weight:600;
+    border:1px solid var(--brand);
+    transition:opacity .2s
+  }
+  .btn:hover{opacity:.85}
+  .btn.ghost{
+    background:transparent;
+    color:var(--fg);
+    border-color:var(--line)
+  }
+  .btn.ghost:hover{
+    border-color:var(--brand);
+    opacity:1;
+    color:var(--brand)
+  }
+  .navburger{
+    display:inline-flex;
+    border:1px solid var(--line);
+    background:transparent;
+    padding:.5rem;
+    border-radius:1px;
+    color:var(--fg)
+  }
+  @media(min-width:900px){
+    .navburger{display:none}
+  }
+  .mobilepanel{
+    display:none;
+    flex-direction:column;
+    gap:.9rem;
+    padding:1rem clamp(1.15rem,4vw,3.2rem) 1.5rem;
+    border-top:1px solid var(--line);
+    background:var(--bg)
+  }
+  .mobilepanel.open{display:flex}
+  .mobilepanel a{
+    text-decoration:none;
+    color:var(--fg);
+    font-size:1.05rem
+  }
+  @media(min-width:900px){
+    .mobilepanel{display:none !important}
+  }
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    height:min(92vh,820px);
+    min-height:480px;
+    overflow:hidden
+  }
+  .hero img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover
+  }
+  .hero .scrim{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(11,9,6,.35) 0%,rgba(11,9,6,.25) 35%,rgba(11,9,6,.86) 100%)
+  }
+  .hero-inner{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:clamp(2rem,6vw,4rem) clamp(1.15rem,4vw,3.2rem) clamp(2.6rem,7vw,4.6rem)
+  }
+  .hero-inner h1{
+    color:#fbf6ea;
+    font-size:clamp(2.3rem,5.6vw,4.6rem);
+    max-width:17ch;
+    text-wrap:balance;
+    font-style:italic
+  }
+  .hero-inner .sub{
+    color:#d9cfb8;
+    max-width:44ch;
+    margin-top:1.1rem;
+    font-size:clamp(1rem,.6vw + .8rem,1.15rem)
+  }
+  .hero-rating{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    margin-top:1.4rem;
+    padding:.5rem .9rem;
+    border:1px solid rgba(239,231,215,.3);
+    border-radius:1px;
+    font-size:.85rem;
+    color:#fbf6ea
+  }
+  .hero-rating strong{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.15rem;
+    color:var(--brand)
+  }
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.9rem;
+    margin-top:1.8rem
+  }
+  /* ---------- generic sections ---------- */
+  main section{padding:clamp(3.4rem,8vw,6.5rem) 0}
+  h2.headline{
+    font-size:clamp(1.9rem,3.4vw,2.9rem);
+    max-width:22ch;
+    font-style:italic
+  }
+  .lede{
+    max-width:58ch;
+    color:var(--muted);
+    margin-top:1.1rem;
+    font-size:1.05rem
+  }
+  /* ---------- philosophy ---------- */
+  .phil{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:clamp(2rem,5vw,4rem);
+    align-items:center
+  }
+  @media(min-width:880px){
+    .phil{grid-template-columns:.95fr 1.05fr}
+  }
+  .phil-quote{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:clamp(1.4rem,2.2vw,1.85rem);
+    line-height:1.5;
+    color:#f3ecdd;
+    max-width:32ch
+  }
+  .phil-media{
+    position:relative;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    border:1px solid var(--line)
+  }
+  .phil-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover
+  }
+  .usp-list{
+    list-style:none;
+    margin:1.8rem 0 0;
+    padding:0;
+    display:grid;
+    gap:.8rem
+  }
+  .usp-list li{
+    display:flex;
+    gap:.8rem;
+    align-items:baseline;
+    font-size:1rem;
+    color:var(--fg)
+  }
+  .usp-list li::before{
+    content:"—";
+    color:var(--brand);
+    flex:none
+  }
+  /* ---------- die karte (centrepiece) ---------- */
+  .karte-section{
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line)
+  }
+  .karte-head{
+    text-align:center;
+    max-width:var(--menuw);
+    margin:0 auto
+  }
+  .karte{
+    max-width:var(--menuw);
+    margin:clamp(2.4rem,6vw,3.6rem) auto 0
+  }
+  .karte-course{margin-bottom:clamp(2.2rem,5vw,3.2rem)}
+  .karte-course:last-child{margin-bottom:0}
+  .karte-course h3{
+    font-size:clamp(1.3rem,2vw,1.6rem);
+    font-style:italic;
+    color:var(--brand);
+    text-align:center;
+    position:relative;
+    padding-bottom:.9rem;
+    margin-bottom:1.6rem
+  }
+  .karte-course h3::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:2.4rem;
+    height:1px;
+    background:var(--brand)
+  }
+  .karte-item{
+    display:flex;
+    align-items:baseline;
+    gap:.7rem;
+    padding:.85rem 0;
+    border-bottom:1px solid var(--line)
+  }
+  .karte-item:last-child{border-bottom:none}
+  .karte-item .name{
+    font-size:clamp(1.05rem,1.2vw,1.18rem);
+    color:var(--fg)
+  }
+  .karte-item .leader{
+    flex:1;
+    border-bottom:1px dotted rgba(239,231,215,.25);
+    margin:0 .2rem 6px
+  }
+  .karte-item .price{
+    font-size:1.05rem;
+    color:var(--brand);
+    white-space:nowrap
+  }
+  .karte-note{
+    text-align:center;
+    margin-top:2.2rem;
+    font-size:.88rem;
+    color:var(--muted)
+  }
+  /* ---------- reservation composer (signature module) ---------- */
+  .composer{
+    background:var(--surface2);
+    border:1px solid var(--line);
+    padding:clamp(1.6rem,4vw,2.8rem);
+    border-radius:1px
+  }
+  .composer-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.6rem
+  }
+  @media(min-width:760px){
+    .composer-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  .field{
+    display:flex;
+    flex-direction:column;
+    gap:.5rem
+  }
+  .field label{
+    font-size:.78rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted)
+  }
+  .field input,.field select{
+    font-family:'EB Garamond',serif;
+    font-size:1.05rem;
+    background:var(--bg);
+    border:1px solid var(--line);
+    color:var(--fg);
+    padding:.65rem .75rem;
+    border-radius:1px
+  }
+  .field input:focus-visible,.field select:focus-visible{
+    outline:2px solid var(--brand);
+    outline-offset:1px
+  }
+  .composer-status{
+    margin-top:1.5rem;
+    padding:.9rem 1.1rem;
+    border-left:2px solid var(--brand);
+    background:rgba(169,130,47,.08);
+    font-size:.95rem;
+    color:var(--fg)
+  }
+  .composer-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:1.6rem
+  }
+  .composer-hint{
+    margin-top:1rem;
+    font-size:.82rem;
+    color:var(--muted)
+  }
+  /* ---------- gallery ---------- */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:.6rem
+  }
+  @media(min-width:700px){
+    .gallery{
+      grid-template-columns:repeat(4,1fr);
+      grid-auto-rows:14vw
+    }
+  }
+  .gallery figure{
+    margin:0;
+    overflow:hidden;
+    position:relative;
+    background:var(--surface)
+  }
+  .gallery img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block
+  }
+  .gallery .g1{aspect-ratio:1/1}
+  @media(min-width:700px){
+    .gallery .g1{
+      aspect-ratio:auto;
+      grid-row:span 2
+    }
+  }
+  @media(min-width:700px){
+    .gallery .gtall{grid-row:span 2}
+  }
+  .gallery figcaption{
+    position:absolute;
+    left:.7rem;
+    bottom:.6rem;
+    font-size:.72rem;
+    letter-spacing:.05em;
+    color:#f3ecdd;
+    text-shadow:0 1px 6px rgba(0,0,0,.6);
+    opacity:0
+  }
+  /* ---------- hours + location ---------- */
+  .hl-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.2rem
+  }
+  @media(min-width:880px){
+    .hl-grid{grid-template-columns:1fr 1.15fr}
+  }
+  .hourstable{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:1.6rem
+  }
+  .hourstable td{
+    padding:.6rem 0;
+    border-top:1px solid var(--line);
+    font-size:1.05rem
+  }
+  .hourstable td:last-child{text-align:right}
+  .facts{margin-top:1.8rem}
+  .facts dt{
+    font-size:.78rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:1.1rem
+  }
+  .facts dt:first-child{margin-top:0}
+  .facts dd{
+    margin:.3rem 0 0;
+    font-size:1.08rem
+  }
+  .facts a{
+    text-decoration:none;
+    border-bottom:1px solid var(--line)
+  }
+  .mapwrap{
+    border:1px solid var(--line);
+    aspect-ratio:4/3;
+    overflow:hidden
+  }
+  .mapwrap iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block;
+    filter:grayscale(.25) contrast(1.05)
+  }
+  /* ---------- reviews ---------- */
+  .reviews{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:1.4rem 2.4rem
+  }
+  .rating-num{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:clamp(3.2rem,7vw,5.2rem);
+    line-height:1;
+    color:var(--brand)
+  }
+  .stars{
+    color:var(--brand);
+    font-size:1.2rem;
+    letter-spacing:.15em
+  }
+  .reviews .rtext{
+    color:var(--muted);
+    max-width:36ch
+  }
+  /* ---------- footer ---------- */
+  footer.site-foot{
+    background:#0f0c08;
+    border-top:1px solid var(--line);
+    padding:clamp(3rem,7vw,5rem) 0 2rem
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.4rem
+  }
+  @media(min-width:780px){
+    .footer-grid{grid-template-columns:1.3fr 1fr 1fr}
+  }
+  footer.site-foot img.foot-logo{
+    height:44px;
+    width:44px;
+    object-fit:contain;
+    margin-bottom:1rem
+  }
+  footer.site-foot h4{
+    font-size:.78rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 1rem
+  }
+  footer.site-foot ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:.6rem;
+    font-size:.98rem
+  }
+  footer.site-foot a{
+    text-decoration:none;
+    color:var(--fg)
+  }
+  footer.site-foot a:hover{color:var(--brand)}
+  .foot-bottom{
+    margin-top:3rem;
+    padding-top:1.4rem;
+    border-top:1px solid var(--line);
+    display:flex;
+    flex-wrap:wrap;
+    gap:.7rem 1.4rem;
+    justify-content:space-between;
+    font-size:.8rem;
+    color:var(--muted)
+  }
+  /* ---------- reveal ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .7s ease,transform .7s ease
+  }
+  .reveal.in{
+    opacity:1;
+    transform:none
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{
+      opacity:1;
+      transform:none;
+      transition:none
+    }
+  }
+  /* ---------- mobile call bar ---------- */
+  .mobilebar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:90;
+    display:flex;
+    background:#0f0c08;
+    border-top:1px solid var(--line)
+  }
+  .mobilebar a{
+    flex:1;
+    text-align:center;
+    padding:.9rem 1rem;
+    color:var(--fg);
+    text-decoration:none;
+    font-size:.95rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    font-family:'EB Garamond',serif
+  }
+  .mobilebar a.alt{
+    background:var(--brand);
+    color:#1a140d
+  }
+  @media(min-width:900px){
+    .mobilebar{display:none}
+  }
+  @media(max-width:899px){
+    body{padding-bottom:56px}
+  }
+  @media(max-width:400px){
+    .hero-inner h1{font-size:2rem}
+    .karte-item .name,.karte-item .price{font-size:1rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brandmark" href="#top">
+      <img src="https://dastaggenberg.ch/wp-content/uploads/2021/05/LogoDasRestaurant_Kreis-neg_450x450-150x150.png" alt="Das Taggenberg Logo" onerror="this.style.display='none'">
+      <span>Das Taggenberg</span>
+    </a>
+    <ul class="navlinks">
+      <li><a href="#philosophie">Philosophie</a></li>
+      <li><a href="#karte">Karte</a></li>
+      <li><a href="#reservieren">Reservieren</a></li>
+      <li><a href="#lage">Lage</a></li>
+    </ul>
+    <div class="navcta">
+      <a class="btn ghost" href="tel:+41522220522" style="display:none" id="navcall-desktop">Anrufen</a>
+      <a class="btn" href="#reservieren">Reservieren</a>
+      <button class="navburger" id="burgerBtn" aria-expanded="false" aria-controls="mobilepanel" aria-label="Menü öffnen">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobilepanel" id="mobilepanel">
+    <a href="#philosophie">Philosophie</a>
+    <a href="#karte">Karte</a>
+    <a href="#reservieren">Reservieren</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#lage">Öffnungszeiten &amp; Lage</a>
+    <a class="btn" href="tel:+41522220522">+41 52 222 05 22 anrufen</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="Restaurant Das Taggenberg">
+    <img src="https://dastaggenberg.ch/wp-content/uploads/2022/08/A9B845E2-1285-48FE-80E5-FB602E54A696.jpg" alt="Gedeckter Tisch im Restaurant Das Taggenberg mit Blick über Winterthur" onerror="this.closest('.hero').style.background='#15110d'">
+    <div class="scrim"></div>
+    <div class="hero-inner">
+      <h1>Gehobenes Restaurant mit Blick über Winterthur</h1>
+      <p class="sub">Das Taggenberg ist ein feines Gourmet-Restaurant über der Stadt, bekannt für saisonale Küche mit regionalen Zutaten und elegante Atmosphäre.</p>
+      <div class="hero-rating">
+        <strong>4.8</strong>
+        <span>· 325 Google-Bewertungen</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="#karte">Die Karte</a>
+        <a class="btn ghost" style="border-color:rgba(239,231,215,.4);color:#fbf6ea" href="#reservieren">Reservierung anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophie">
+    <div class="wrap phil">
+      <div class="phil-media reveal">
+        <img src="https://dastaggenberg.ch/wp-content/uploads/2021/05/L1009358-1-WEBsmallsquare.jpg" alt="Impression aus dem Restaurant Das Taggenberg" onerror="this.closest('.phil-media').style.display='none'">
+      </div>
+      <div>
+        <p class="eyebrow">Philosophie</p>
+        <p class="phil-quote reveal">„Das Taggenberg ist ein feines Gourmet-Restaurant über der Stadt, bekannt für saisonale Küche mit regionalen Zutaten und elegante Atmosphäre.“</p>
+        <ul class="usp-list reveal">
+          <li>Lage mit Panoramablick über Winterthur</li>
+          <li>Saisonale Fine-Dining Menüs</li>
+          <li>Vegetarische Menü-Optionen</li>
+          <li>Wine Pairing Angebot</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="karte" class="karte-section">
+    <div class="wrap">
+      <div class="karte-head">
+        <p class="eyebrow" style="text-align:center">Die Karte</p>
+        <h2 class="headline reveal" style="margin:0 auto">Saisonal, regional, à la carte</h2>
+      </div>
+
+      <div class="karte reveal">
+        <div class="karte-course">
+          <h3>Vorspeisen</h3>
+          <div class="karte-item">
+            <span class="name">Taggenberg Salat</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 19</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Gegrillte Wassermelone</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 21</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Gegrillter Oktopus</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 28</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Erdbeer-Gazpacho</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 19</span>
+          </div>
+        </div>
+
+        <div class="karte-course">
+          <h3>Hauptgänge</h3>
+          <div class="karte-item">
+            <span class="name">Taggenberg Pasta</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 27–35</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Auberginen-Medley</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 37</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Zander-Filet alpin</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 56</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Rind-Duo (Entrecôte &amp; Brasato)</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 65</span>
+          </div>
+        </div>
+
+        <div class="karte-course">
+          <h3>Desserts</h3>
+          <div class="karte-item">
+            <span class="name">Erdbeer-Tarte</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 20</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Mascarpone-Creme</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 21</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Hausmachtes Eis pro Kugel</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 6</span>
+          </div>
+          <div class="karte-item">
+            <span class="name">Käseauswahl</span>
+            <span class="leader"></span>
+            <span class="price tabnum">CHF 19–28</span>
+          </div>
+        </div>
+
+        <p class="karte-note">Alle Preise in CHF. Änderungen vorbehalten.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservieren">
+    <div class="wrap">
+      <p class="eyebrow">Reservierung</p>
+      <h2 class="headline reveal">Tisch anfragen</h2>
+      <p class="lede reveal">Das Taggenberg führt keine Online-Reservierung. Stellen Sie Ihre Anfrage zusammen und senden Sie sie direkt per E-Mail, oder rufen Sie uns an.</p>
+
+      <div class="composer reveal" style="margin-top:2rem">
+        <div class="composer-grid">
+          <div class="field">
+            <label for="resDate">Datum</label>
+            <input type="date" id="resDate">
+          </div>
+          <div class="field">
+            <label for="resTime">Uhrzeit</label>
+            <input type="time" id="resTime">
+          </div>
+          <div class="field">
+            <label for="resGuests">Personen</label>
+            <input type="number" id="resGuests" min="1" max="20" value="2">
+          </div>
+        </div>
+
+        <div class="composer-status" id="dayStatus" aria-live="polite">Öffnungszeiten werden geprüft …</div>
+
+        <div class="composer-actions">
+          <a class="btn" id="mailtoBtn" href="mailto:gruezi@dastaggenberg.ch">Anfrage per E-Mail senden</a>
+          <a class="btn ghost" href="tel:+41522220522">Jetzt anrufen · +41 52 222 05 22</a>
+        </div>
+        <p class="composer-hint">Reguläre Öffnungszeiten: Di–Fr 11:30–14:30, 18:00–24:00 · Sa 18:00–24:00 · So–Mo geschlossen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie">
+    <div class="wrap">
+      <p class="eyebrow">Galerie</p>
+      <h2 class="headline reveal">Aus Küche und Raum</h2>
+      <div class="gallery reveal" style="margin-top:2rem">
+        <figure class="g1">
+          <img src="https://dastaggenberg.ch/wp-content/uploads/2026/02/IMG_0174.jpg" alt="Impression aus dem Restaurant Das Taggenberg" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://dastaggenberg.ch/wp-content/uploads/2021/05/L1009231-WEBsmallsquare.jpg" alt="Angerichteter Teller im Restaurant Das Taggenberg" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://dastaggenberg.ch/wp-content/uploads/2021/05/L1009272-WEBsmallsquare.jpg" alt="Angerichteter Teller im Restaurant Das Taggenberg" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure class="gtall">
+          <img src="https://dastaggenberg.ch/wp-content/uploads/2026/02/Irene-und-Filip-768x1152.jpg" alt="Impression aus dem Restaurant Das Taggenberg" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://dastaggenberg.ch/wp-content/uploads/2021/05/L1030492-WEBsmallsquare.jpg" alt="Angerichteter Teller im Restaurant Das Taggenberg" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://dastaggenberg.ch/wp-content/uploads/2021/05/L1030567-WEBsmallsquare.jpg" alt="Angerichteter Teller im Restaurant Das Taggenberg" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage">
+    <div class="wrap hl-grid">
+      <div>
+        <p class="eyebrow">Öffnungszeiten &amp; Lage</p>
+        <h2 class="headline reveal">Taggenbergstrasse 79</h2>
+        <table class="hourstable reveal">
+          <tbody>
+            <tr><td>Di–Fr</td><td>11:30–14:30, 18:00–24:00</td></tr>
+            <tr><td>Sa</td><td>18:00–24:00</td></tr>
+            <tr><td>So–Mo</td><td>Geschlossen</td></tr>
+          </tbody>
+        </table>
+        <dl class="facts reveal">
+          <dt>Adresse</dt>
+          <dd>Taggenbergstrasse 79, 8408 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522220522">+41 52 222 05 22</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:gruezi@dastaggenberg.ch">gruezi@dastaggenberg.ch</a></dd>
+        </dl>
+      </div>
+      <div class="mapwrap reveal">
+        <iframe src="https://maps.google.com/maps?q=Taggenbergstrasse%2079%2C%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Restaurant Das Taggenberg, Taggenbergstrasse 79, Winterthur" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="bewertungen">
+    <div class="wrap">
+      <p class="eyebrow">Bewertungen</p>
+      <div class="reviews reveal">
+        <span class="rating-num">4.8</span>
+        <div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p class="rtext">4.8 von 5 auf Google, basierend auf 325 Bewertungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="foot-logo" src="https://dastaggenberg.ch/wp-content/uploads/2021/05/LogoDasRestaurant_Kreis-neg_450x450-150x150.png" alt="Das Taggenberg Logo" onerror="this.style.display='none'">
+      <p style="max-width:38ch;color:var(--muted)">Saisonale Schweizer Gourmet-Küche mit Panoramablick über Winterthur.</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+41522220522">+41 52 222 05 22</a></li>
+        <li><a href="mailto:gruezi@dastaggenberg.ch">gruezi@dastaggenberg.ch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse &amp; Zeiten</h4>
+      <ul>
+        <li>Taggenbergstrasse 79</li>
+        <li>8408 Winterthur</li>
+        <li>Di–Fr 11:30–14:30, 18:00–24:00</li>
+        <li>Sa 18:00–24:00 · So–Mo geschlossen</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© Restaurant Das Taggenberg</span>
+    <span>Design-Vorschlag · unverbindliches Muster</span>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a href="tel:+41522220522">Anrufen</a>
+  <a class="alt" href="#reservieren">Reservieren</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* mobile nav */
+  var burger = document.getElementById('burgerBtn');
+  var panel = document.getElementById('mobilepanel');
+  if(burger && panel){
+    burger.addEventListener('click', function(){
+      var open = panel.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  /* scroll reveals */
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduceMotion || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -6% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---- reservation-intent composer — signature module, built from real hours + real contact data ---- */
+  var HOURS = [
+    { days: [2,3,4,5], label: 'Di–Fr', time: '11:30–14:30, 18:00–24:00' }, /* Tue–Fri */
+    { days: [6],       label: 'Sa',    time: '18:00–24:00' },              /* Sat */
+    { days: [0,1],     label: 'So–Mo', time: 'Geschlossen' }               /* Sun, Mon */
+  ];
+  var DAY_NAMES = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+
+  function entryForDay(dow){
+    for(var i=0;i<HOURS.length;i++){ if(HOURS[i].days.indexOf(dow) !== -1) return HOURS[i]; }
+    return null;
+  }
+
+  function updateDayStatus(){
+    var el = document.getElementById('dayStatus');
+    if(!el) return;
+    var now = new Date();
+    var dow = now.getDay();
+    var entry = entryForDay(dow);
+    var todayName = DAY_NAMES[dow];
+    if(!entry || entry.time === 'Geschlossen'){
+      el.textContent = 'Heute (' + todayName + ') bleibt Das Taggenberg geschlossen. Reguläre Zeiten: Di–Fr 11:30–14:30, 18:00–24:00 · Sa 18:00–24:00.';
+    } else{el.textContent = 'Heute (' + todayName + ') geöffnet: ' + entry.time + '.';}
+  }
+  updateDayStatus();
+
+  /* build the mailto: reservation request from the composer fields */
+  var dateEl = document.getElementById('resDate');
+  var timeEl = document.getElementById('resTime');
+  var guestsEl = document.getElementById('resGuests');
+  var mailtoBtn = document.getElementById('mailtoBtn');
+  var EMAIL = 'gruezi@dastaggenberg.ch';
+
+  function fmtDate(v){
+    if(!v) return '(Datum bitte ergänzen)';
+    var parts = v.split('-');
+    if(parts.length !== 3) return v;
+    return parts[2] + '.' + parts[1] + '.' + parts[0];
+  }
+
+  function updateMailto(){
+    if(!mailtoBtn) return;
+    var d = fmtDate(dateEl ? dateEl.value : '');
+    var t = (timeEl && timeEl.value) ? timeEl.value + ' Uhr' : '(Uhrzeit bitte ergänzen)';
+    var g = (guestsEl && guestsEl.value) ? guestsEl.value : '2';
+    var subject = 'Reservierungsanfrage – Das Taggenberg';
+    var body = 'Guten Tag\n\nGerne möchte ich einen Tisch im Restaurant Das Taggenberg anfragen:\n\n'
+      + 'Datum: ' + d + '\n'
+      + 'Uhrzeit: ' + t + '\n'
+      + 'Personen: ' + g + '\n\n'
+      + 'Freundliche Grüsse';
+    mailtoBtn.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+  [dateEl, timeEl, guestsEl].forEach(function(el){
+    if(el) el.addEventListener('input', updateMailto);
+  });
+  updateMailto();
+})();
+</script>
+</body>
+</html>

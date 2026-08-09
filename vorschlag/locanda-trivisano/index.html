@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locanda Trivisano — Italienische Spezialitäten &amp; Weine, Winterthur</title>
+<meta name="description" content="Locanda Trivisano an der Stadthausstrasse in Winterthur: Fleisch- und Käseplatten, italienische Spezialitäten, exzellente Weine und ausgezeichneter Kaffee. Das Angebot ändert laufend — täglich neu angerichtet.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Locanda Trivisano — Italienische Spezialitäten &amp; Weine, Winterthur">
+<meta property="og:description" content="Fleisch- und Käseplatten, italienische Spezialitäten, exzellente Weine, ausgezeichneter Kaffee. Stadthausstrasse 121, Winterthur.">
+<meta property="og:url" content="https://www.locanda-trivisano.ch/">
+<meta property="og:image" content="https://www.locanda-trivisano.ch/wp-content/uploads/locanda-trivisano_065.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Locanda Trivisano",
+  "description": "Ausgezeichneter Kaffee, exzellente Weine, Barbetrieb, Antipasti, exquisite Fleisch- und Käseplatten, italienische Spezialitäten",
+  "url": "https://www.locanda-trivisano.ch/",
+  "telephone": "+41 52 202 31 85",
+  "email": "info@locanda-trivisano.ch",
+  "servesCuisine": "Italian",
+  "image": [
+    "https://www.locanda-trivisano.ch/wp-content/uploads/locanda-trivisano_065.jpg",
+    "https://www.locanda-trivisano.ch/wp-content/uploads/locanda-trivisano_067.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stadthausstrasse 121",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "623"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "23:59" }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#f7ede0;
+    --surface:#fffaf3;
+    --fg:#2a1a10;
+    --muted:#5b4636;
+    --brand:#7a2331;
+    --accent:#5c6b3f;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Nunito Sans', system-ui, sans-serif;
+    font-size:clamp(15px, 0.4vw + 14px, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  p{ margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(1.1rem, 4vw, 2.5rem); }
+  section{ padding:clamp(3rem, 7vw, 6.5rem) 0; }
+
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; border-radius:3px; }
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,237,224,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(42,26,16,0.12);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:0.85rem clamp(1.1rem, 4vw, 2.5rem); gap:1rem; }
+  .brandmark{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--fg); }
+  .brandmark img{ height:34px; width:auto; }
+  .brandmark span{ font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; }
+  nav.primary{ display:flex; align-items:center; gap:clamp(0.9rem,2vw,1.7rem); }
+  nav.primary a{ text-decoration:none; font-weight:700; font-size:0.86rem; letter-spacing:0.03em; text-transform:uppercase; color:var(--muted); }
+  nav.primary a:hover{ color:var(--brand); }
+  .call-btn{ background:var(--brand); color:#fff; padding:0.55rem 1.1rem; border-radius:2px; font-weight:700; font-size:0.85rem; text-decoration:none; white-space:nowrap; }
+  .nav-toggle{ display:none; background:none; border:2px solid var(--fg); border-radius:2px; width:42px; height:38px; cursor:pointer; }
+  .nav-toggle span{ display:block; width:20px; height:2px; background:var(--fg); margin:4px auto; }
+
+  @media (max-width: 780px){
+    nav.primary{ position:absolute; top:100%; left:0; right:0; background:var(--surface); flex-direction:column; align-items:flex-start; padding:1rem clamp(1.1rem,4vw,2.5rem) 1.4rem; gap:0.9rem; border-bottom:1px solid rgba(42,26,16,0.12); display:none; }
+    nav.primary.open{ display:flex; }
+    nav.primary .call-btn{ align-self:flex-start; }
+    .nav-toggle{ display:block; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{ padding-top:clamp(3rem,8vw,6rem); padding-bottom:clamp(2.5rem,6vw,4rem); }
+  .hero-grid{ display:grid; grid-template-columns:1.3fr 0.9fr; gap:clamp(2rem,5vw,4rem); align-items:end; }
+  .hero h1{ font-size:clamp(2.5rem, 5.4vw, 4.6rem); line-height:0.98; }
+  .hero .lede{ margin-top:1.2rem; max-width:44ch; font-size:clamp(1.05rem, 1.2vw, 1.25rem); color:var(--muted); font-weight:600; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.6rem; }
+  .chip{ display:inline-flex; align-items:center; gap:0.4rem; background:var(--surface); border:1px solid rgba(42,26,16,0.16); padding:0.5rem 0.85rem; border-radius:99px; font-size:0.85rem; font-weight:700; }
+  .chip b{ color:var(--brand); }
+  .hero-side{ background:var(--fg); color:var(--bg); padding:clamp(1.5rem,3vw,2.2rem); border-radius:4px; }
+  .hero-side .k{ font-family:'Fraunces',serif; font-size:2.6rem; font-weight:600; color:#e9c96b; }
+  .hero-side p{ font-size:0.92rem; color:#d9cdbe; margin-top:0.4rem; }
+  .hero-side hr{ border:none; border-top:1px solid rgba(255,255,255,0.18); margin:1.1rem 0; }
+  .hero-side address{ font-style:normal; font-size:0.95rem; line-height:1.55; }
+
+  @media (max-width:840px){
+    .hero-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- status / signature module ---------- */
+  .status-section{ background:var(--surface); border-top:1px solid rgba(42,26,16,0.1); border-bottom:1px solid rgba(42,26,16,0.1); }
+  .status-grid{ display:grid; grid-template-columns:auto 1fr; gap:clamp(1.5rem,4vw,3rem); align-items:center; }
+  .status-badge{ display:inline-flex; align-items:center; gap:0.6rem; padding:0.9rem 1.4rem; border-radius:99px; font-weight:800; font-size:1rem; }
+  .status-badge .dot{ width:11px; height:11px; border-radius:50%; }
+  .status-badge.open{ background:rgba(92,107,63,0.15); color:#3c4629; }
+  .status-badge.open .dot{ background:var(--accent); box-shadow:0 0 0 4px rgba(92,107,63,0.25); }
+  .status-badge.closed{ background:rgba(122,35,49,0.1); color:var(--brand); }
+  .status-badge.closed .dot{ background:var(--brand); box-shadow:0 0 0 4px rgba(122,35,49,0.18); }
+  #statusSub{ margin-top:0.6rem; color:var(--muted); font-weight:600; font-size:0.95rem; }
+  .hours-table{ width:100%; border-collapse:collapse; font-size:0.95rem; }
+  .hours-table td{ padding:0.5rem 0; border-bottom:1px solid rgba(42,26,16,0.1); }
+  .hours-table td:last-child{ text-align:right; font-weight:700; }
+  .hours-table tr.today td{ color:var(--brand); font-weight:800; }
+
+  /* ---------- board section ---------- */
+  .board-head{ max-width:60ch; }
+  .board-head .kicker{ text-transform:uppercase; letter-spacing:0.14em; font-size:0.78rem; font-weight:800; color:var(--brand); }
+  .board-head h2{ font-size:clamp(1.9rem,3.6vw,2.9rem); margin-top:0.5rem; }
+  .board-head p{ margin-top:1rem; color:var(--muted); font-weight:600; }
+
+  .board{
+    margin-top:clamp(2.2rem,5vw,3.5rem);
+    background:linear-gradient(180deg,#e7d4b3,#dcc39b);
+    border-radius:14px;
+    padding:clamp(1.6rem,4vw,3rem);
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:clamp(1.1rem,2.5vw,1.8rem);
+    box-shadow:inset 0 0 0 1px rgba(42,26,16,0.12), 0 20px 40px -28px rgba(42,26,16,0.5);
+  }
+  .plate{
+    background:var(--surface);
+    border-radius:10px;
+    padding:1.3rem 1.2rem 1.5rem;
+    box-shadow:0 14px 22px -16px rgba(42,26,16,0.45);
+    transform:rotate(var(--r,0deg));
+  }
+  .plate:nth-child(1){ --r:-2.2deg; }
+  .plate:nth-child(2){ --r:1.6deg; }
+  .plate:nth-child(3){ --r:-1.1deg; }
+  .plate:nth-child(4){ --r:2deg; }
+  .plate:nth-child(5){ --r:-2.6deg; }
+  .plate img{ width:52px; height:52px; object-fit:contain; margin-bottom:0.8rem; }
+  .plate.icon-dark{ background:var(--fg); }
+  .plate.icon-dark h3{ color:#f3e6cf; }
+  .plate.icon-dark p{ color:#c9b89c; }
+  .plate h3{ font-family:'Fraunces',serif; font-size:1.15rem; font-weight:600; }
+  .plate p{ margin-top:0.4rem; font-size:0.88rem; color:var(--muted); }
+  .plate.no-icon{ display:flex; flex-direction:column; justify-content:center; min-height:150px; border:2px dashed rgba(42,26,16,0.28); background:transparent; box-shadow:none; }
+
+  /* ---------- angebot / changes constantly ---------- */
+  .angebot{ background:var(--fg); color:var(--bg); }
+  .angebot .wrap{ display:grid; grid-template-columns:1fr; gap:1.6rem; }
+  .angebot .kicker{ text-transform:uppercase; letter-spacing:0.14em; font-size:0.78rem; font-weight:800; color:#e9c96b; }
+  .angebot h2{ font-size:clamp(1.9rem,3.8vw,3rem); margin-top:0.5rem; color:#fbf3e4; max-width:18ch; }
+  .ticker{ font-family:'Fraunces',serif; font-style:italic; font-size:clamp(1.3rem,2.4vw,1.8rem); color:#e9c96b; min-height:2.4em; margin-top:1.2rem; }
+  .angebot p.note{ margin-top:1.4rem; max-width:56ch; color:#d9cdbe; font-size:1rem; }
+  .angebot p.note strong{ color:#fbf3e4; }
+
+  /* ---------- photos ---------- */
+  .photos-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(1rem,2.5vw,1.6rem); margin-top:clamp(2rem,4vw,3rem); }
+  .figure{ overflow:hidden; border-radius:10px; background:var(--surface); }
+  .figure img{ width:100%; height:100%; object-fit:cover; aspect-ratio:4/5; }
+  .figure figcaption{ padding:0.7rem 0.9rem; font-size:0.82rem; color:var(--muted); font-weight:700; }
+  @media (max-width:780px){ .photos-grid{ grid-template-columns:1fr; } .figure img{ aspect-ratio:16/10; } }
+  @media (max-width:380px){
+    .hero-side .k{ font-size:2.1rem; }
+    .board{ padding:1.2rem; }
+    .review-num{ font-size:2.4rem; }
+  }
+
+  /* ---------- reviews ---------- */
+  .reviews{ background:var(--surface); }
+  .reviews-grid{ display:flex; align-items:center; gap:clamp(1.6rem,4vw,3rem); flex-wrap:wrap; }
+  .review-badge img{ width:96px; height:96px; }
+  .review-num{ font-family:'Fraunces',serif; font-size:clamp(3rem,7vw,5rem); font-weight:600; line-height:1; }
+  .review-num sup{ font-size:1.6rem; color:var(--muted); }
+  .review-copy{ max-width:42ch; }
+  .stars{ color:var(--brand); letter-spacing:0.15em; font-size:1.1rem; }
+  .reviews p.small{ margin-top:0.5rem; color:var(--muted); font-weight:700; font-size:0.92rem; }
+
+  /* ---------- location ---------- */
+  .loc-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(1.6rem,4vw,3rem); align-items:start; }
+  .loc-card{ background:var(--surface); border-radius:10px; padding:clamp(1.4rem,3vw,2rem); }
+  .loc-card dl{ margin:1.1rem 0 0; }
+  .loc-card dt{ font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-weight:800; margin-top:1rem; }
+  .loc-card dd{ margin:0.25rem 0 0; font-weight:700; font-size:1.02rem; }
+  .loc-card dd a{ text-decoration:none; color:var(--brand); }
+  .lageplan{ margin-top:1.4rem; border-radius:8px; overflow:hidden; }
+  .map-frame{ border-radius:10px; overflow:hidden; border:1px solid rgba(42,26,16,0.14); }
+  .map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; display:block; }
+  @media (max-width:840px){ .loc-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- footer ---------- */
+  footer{ background:var(--fg); color:#c9b89c; padding:2.6rem 0 6rem; }
+  footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.2rem; align-items:center; }
+  footer .fine{ font-size:0.78rem; color:#8a7761; margin-top:0.6rem; }
+  footer a{ color:#f3e6cf; text-decoration:none; }
+
+  /* ---------- sticky mobile bar ---------- */
+  .mobile-bar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--fg); border-top:1px solid rgba(255,255,255,0.12); padding:0.7rem 1rem; }
+  .mobile-bar a{ display:block; text-align:center; background:var(--brand); color:#fff; font-weight:800; padding:0.85rem; border-radius:6px; text-decoration:none; }
+  @media (max-width:780px){ .mobile-bar{ display:block; } body{ padding-bottom:76px; } }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="brandmark" href="#top">
+      <img src="https://www.locanda-trivisano.ch/wp-content/uploads/Logo-Locanda-Trivisano-Winterthur-Italienisches-Restaurant-super-Kaffee-Expresso-gutes-Essen-und-exzellente-Weine-400weiss-e1671616929980.png" alt="Locanda Trivisano Logo" onerror="this.closest('.brandmark').querySelector('img').style.display='none'">
+      <span>Locanda Trivisano</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary" id="primaryNav">
+      <a href="#about">Über uns</a>
+      <a href="#tagliere">Il Tagliere</a>
+      <a href="#angebot">Angebot</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#kontakt">Lage &amp; Kontakt</a>
+      <a class="call-btn" href="tel:+41522023185">052 202 31 85</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 class="reveal">Nichts hier ist für immer&nbsp;auf&nbsp;der Karte.</h1>
+        <p class="lede reveal">Italienische Spezialitäten, Barbetrieb und exzellente Weine — an der Stadthausstrasse, gleich beim Bahnhof Winterthur.</p>
+        <div class="chip-row reveal">
+          <span class="chip">⭐ <b>4.6</b>&nbsp;· 623 Google-Bewertungen</span>
+          <span class="chip">Stadthausstrasse 121, 8400 Winterthur</span>
+        </div>
+      </div>
+      <div class="hero-side reveal">
+        <p style="text-transform:uppercase; letter-spacing:0.12em; font-size:0.75rem; font-weight:800; color:#e9c96b;">Öffnungszeiten</p>
+        <div class="k" id="heroClockText">—</div>
+        <p id="heroClockSub">Wird geladen…</p>
+        <hr>
+        <address>
+          Stadthausstrasse 121<br>8400 Winterthur<br>
+          <a href="tel:+41522023185" style="color:#f3e6cf;">+41 52 202 31 85</a>
+        </address>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="board-head reveal">
+        <p class="kicker">Über die Locanda</p>
+        <h2>Ausgezeichneter Kaffee, exzellente Weine, Barbetrieb.</h2>
+        <p>Antipasti, exquisite Fleisch- und Käseplatten, italienische Spezialitäten — die Locanda Trivisano liegt an der Stadthausstrasse, nur wenige Gehminuten vom Bahnhof Winterthur entfernt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="status-section" id="status">
+    <div class="wrap status-grid reveal">
+      <div>
+        <div class="status-badge" id="statusBadge">
+          <span class="dot"></span>
+          <span id="statusText">Wird geladen…</span>
+        </div>
+        <p id="statusSub"></p>
+      </div>
+      <table class="hours-table" id="hoursTable" aria-label="Öffnungszeiten Locanda Trivisano">
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tagliere">
+    <div class="wrap">
+      <div class="board-head reveal">
+        <p class="kicker">Il Tagliere</p>
+        <h2>Fünf Dinge, für die man herkommt — angerichtet wie auf dem Brett.</h2>
+        <p>Kein Menü mit fixen Positionen, sondern das, was die Locanda ausmacht: Platten, Wein, Kaffee, Bar. So, wie es auch am Tisch serviert wird.</p>
+      </div>
+      <div class="board reveal">
+        <div class="plate">
+          <img src="https://www.locanda-trivisano.ch/wp-content/uploads/piktogramm-01-gutes-italienisches-essen-fleischplatten-antipasti-desserts-locanda-trivisano-winterthur-green-x600.png" alt="" onerror="this.style.display='none'">
+          <h3>Fleisch- und Käseplatten</h3>
+          <p>Exquisit angerichtet, zum Teilen auf dem Tisch.</p>
+        </div>
+        <div class="plate">
+          <img src="https://www.locanda-trivisano.ch/wp-content/uploads/piktogramm-weiss-02-4in1-tavolata-feine-italienische-spezialitaeten-in-der-locanda-trivisano-winterthur-geniessen-x600.png" alt="" onerror="this.style.display='none'">
+          <h3>Italienische Spezialitäten</h3>
+          <p>Antipasti und Küche nach italienischer Art.</p>
+        </div>
+        <div class="plate icon-dark">
+          <img src="https://www.locanda-trivisano.ch/wp-content/uploads/piktogramm-03-kaffee-drinks-guten-wein-geniessen-locanda-trivisano-winterthur-rot-x600.png.png" alt="" onerror="this.style.display='none'">
+          <h3>Exzellente Weine</h3>
+          <p>Zur Platte oder zum Apéro an der Bar.</p>
+        </div>
+        <div class="plate">
+          <img src="https://www.locanda-trivisano.ch/wp-content/uploads/piktogramm-01-kaffee-trinken-locanda-trivisano-winterthur-rot-x600.png" alt="" onerror="this.style.display='none'">
+          <h3>Ausgezeichneter Kaffee</h3>
+          <p>Vor, nach oder statt allem anderen.</p>
+        </div>
+        <div class="plate no-icon">
+          <h3>Barbetrieb</h3>
+          <p>Auch ohne Essen willkommen — Bar durchgehend geöffnet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="angebot" id="angebot">
+    <div class="wrap">
+      <p class="kicker reveal">Wechselndes Angebot</p>
+      <h2 class="reveal">Eine gedruckte Karte gibt es bewusst nicht.</h2>
+      <p class="ticker reveal" id="ticker" aria-live="polite">Fleisch- und Käseplatten</p>
+      <p class="note reveal">Die Locanda Trivisano führt kein festes, online publiziertes Menü mit Preisen — <strong>das Angebot ändert laufend</strong>, je nach Tag und Küche. Was es aktuell auf den Platten und in den Gläsern gibt, erfahren Sie am zuverlässigsten direkt am Tisch oder telefonisch unter <a href="tel:+41522023185" style="color:#e9c96b; text-decoration:underline;">052 202 31 85</a>.</p>
+    </div>
+  </section>
+
+  <section id="fotos">
+    <div class="wrap">
+      <div class="board-head reveal">
+        <p class="kicker">Fotos</p>
+        <h2>Aus der Locanda</h2>
+      </div>
+      <div class="photos-grid reveal">
+        <figure class="figure">
+          <img src="https://www.locanda-trivisano.ch/wp-content/uploads/locanda-trivisano_065.jpg" alt="Innenansicht der Locanda Trivisano" loading="lazy" onerror="this.closest('.figure').style.display='none'">
+          <figcaption>Locanda Trivisano, Winterthur</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="https://www.locanda-trivisano.ch/wp-content/uploads/locanda-trivisano_067.jpg" alt="Innenansicht der Locanda Trivisano" loading="lazy" onerror="this.closest('.figure').style.display='none'">
+          <figcaption>Bar &amp; Tavolata</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap reviews-grid reveal">
+      <div class="review-badge">
+        <img src="https://www.locanda-trivisano.ch/wp-content/uploads/Signet-Locanda-Trivisano-Winterthur-270x270-DeckWeiss.png" alt="Signet Locanda Trivisano" onerror="this.closest('.review-badge').style.display='none'">
+      </div>
+      <div class="review-num">4.6<sup>/5</sup></div>
+      <div class="review-copy">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="small">623 Bewertungen auf Google</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap loc-grid">
+      <div class="loc-card reveal">
+        <p class="kicker">Lage &amp; Kontakt</p>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>Stadthausstrasse 121<br>8400 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41522023185">+41 52 202 31 85</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@locanda-trivisano.ch">info@locanda-trivisano.ch</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.locanda-trivisano.ch/" target="_blank" rel="noopener">locanda-trivisano.ch</a></dd>
+        </dl>
+        <img class="lageplan" src="https://www.locanda-trivisano.ch/wp-content/uploads/lageplan-reservationen-locanda-trivisano-winterthur-logo-signet.png" alt="Lageplan Locanda Trivisano" onerror="this.style.display='none'">
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://maps.google.com/maps?q=Locanda%20Trivisano%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Locanda Trivisano, Winterthur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div>Locanda Trivisano · Stadthausstrasse 121, 8400 Winterthur</div>
+      <div class="fine">Design-Vorschlag · unverbindliches Muster</div>
+    </div>
+    <a href="tel:+41522023185">052 202 31 85</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522023185">Anrufen — 052 202 31 85</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* nav toggle */
+  var navToggle = document.getElementById('navToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  if (navToggle && primaryNav){
+    navToggle.addEventListener('click', function(){
+      var open = primaryNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    primaryNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ primaryNav.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  /* reveal on scroll */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.14 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* =========================================================
+     SIGNATURE MODULE: live "jetzt offen" badge
+     Data: real hours from JSON — Mo–Sa 09:00–24:00, So geschlossen.
+     ========================================================= */
+  var HOURS = [
+    { dow:[1,2,3,4,5,6], label:"Mo–Sa", open:"09:00", close:"24:00", closed:false },
+    { dow:[0],           label:"So",    open:null,    close:null,    closed:true  }
+  ];
+  var DAY_NAMES = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+
+  function todaysRule(dow){
+    for (var i=0;i<HOURS.length;i++){ if (HOURS[i].dow.indexOf(dow)!==-1) return HOURS[i]; }
+    return null;
+  }
+  function toMinutes(hhmm){ var p = hhmm.split(':'); return parseInt(p[0],10)*60 + parseInt(p[1],10); }
+
+  function computeStatus(now){
+    var rule = todaysRule(now.getDay());
+    var nowMin = now.getHours()*60 + now.getMinutes();
+    var open = false;
+    if (rule && !rule.closed){
+      var o = toMinutes(rule.open), c = toMinutes(rule.close);
+      if (nowMin >= o && nowMin < c) open = true;
+    }
+    return { open: open, rule: rule };
+  }
+
+  function findNextOpening(now){
+    for (var add=0; add<=7; add++){
+      var d = new Date(now.getTime()); d.setDate(d.getDate()+add);
+      var rule = todaysRule(d.getDay());
+      if (rule && !rule.closed){
+        if (add===0){
+          var nowMin = now.getHours()*60+now.getMinutes();
+          if (nowMin < toMinutes(rule.open)) return { rule: rule, dayOffset:0 };
+          continue;
+        }
+        return { rule: rule, dayOffset: add };
+      }
+    }
+    return null;
+  }
+
+  function renderStatus(){
+    var now = new Date();
+    var status = computeStatus(now);
+    var badge = document.getElementById('statusBadge');
+    var text = document.getElementById('statusText');
+    var sub = document.getElementById('statusSub');
+    var heroText = document.getElementById('heroClockText');
+    var heroSub = document.getElementById('heroClockSub');
+    if (!badge) return;
+
+    if (status.open){
+      badge.className = 'status-badge open';
+      text.textContent = 'Jetzt geöffnet';
+      var closeStr = status.rule.close === '24:00' ? 'Mitternacht' : status.rule.close + ' Uhr';
+      sub.textContent = 'Heute (' + status.rule.label + ') bis ' + closeStr + ' geöffnet.';
+      if (heroText){ heroText.textContent = 'Offen'; heroSub.textContent = 'bis ' + closeStr; }
+    } else {
+      badge.className = 'status-badge closed';
+      text.textContent = 'Gerade geschlossen';
+      var next = findNextOpening(now);
+      if (next){
+        var when = next.dayOffset===0 ? 'heute' : (next.dayOffset===1 ? 'morgen' : 'am ' + DAY_NAMES[(now.getDay()+next.dayOffset)%7]);
+        sub.textContent = 'Öffnet wieder ' + when + ' um ' + next.rule.open + ' Uhr.';
+        if (heroText){ heroText.textContent = 'Zu'; heroSub.textContent = 'öffnet ' + when + ' ' + next.rule.open; }
+      } else {
+        sub.textContent = '';
+      }
+    }
+  }
+
+  function renderHoursTable(){
+    var tbody = document.querySelector('#hoursTable tbody');
+    if (!tbody) return;
+    var todayDow = new Date().getDay();
+    var html = '';
+    HOURS.forEach(function(h){
+      var isToday = h.dow.indexOf(todayDow) !== -1;
+      html += '<tr' + (isToday ? ' class="today"' : '') + '><td>' + h.label + '</td><td>' + (h.closed ? 'Geschlossen' : h.open + '–' + h.close + ' Uhr') + '</td></tr>';
+    });
+    tbody.innerHTML = html;
+  }
+
+  renderStatus();
+  renderHoursTable();
+  setInterval(renderStatus, 60000);
+
+  /* ---- ticker: "nothing is fixed" — cycles the real USPs, not invented dishes ---- */
+  var TICKER_ITEMS = ["Fleisch- und Käseplatten", "Italienische Spezialitäten", "Exzellente Weine", "Ausgezeichneter Kaffee", "Barbetrieb"];
+  var tickerEl = document.getElementById('ticker');
+  if (tickerEl){
+    var ti = 0;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion){
+      setInterval(function(){
+        ti = (ti+1) % TICKER_ITEMS.length;
+        tickerEl.style.opacity = 0;
+        setTimeout(function(){ tickerEl.textContent = TICKER_ITEMS[ti]; tickerEl.style.opacity = 1; }, 260);
+      }, 2600);
+      tickerEl.style.transition = 'opacity 0.26s ease';
+    }
+  }
+})();
+</script>
+</body>
+</html>

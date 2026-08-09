@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JC's HouseCafe — Kaffee &amp; Tee in Winterthur</title>
+<meta name="description" content="JC's HouseCafe, Haldenstrasse 52, Winterthur: gemütliches Kaffeehaus-Ambiente, spezialisiert auf hochwertige Kaffees und Tees. 4.8 von 5 auf Google, 129 Rezensionen.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="JC's HouseCafe — Winterthur">
+<meta property="og:description" content="Gemütliches Kaffeehaus-Ambiente, spezialisiert auf hochwertige Kaffees und Tees. Haldenstrasse 52, 8400 Winterthur.">
+<meta property="og:url" content="https://www.jcs-housecafe.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "JC's HouseCafe",
+  "url": "https://www.jcs-housecafe.ch/",
+  "telephone": "+41 52 203 45 45",
+  "email": "info@jcs-housecafe.ch",
+  "servesCuisine": "Café, Coffee & Tea",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Haldenstrasse 52",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "129"
+  },
+  "sameAs": ["https://www.instagram.com/jcshousecafe/"]
+}
+</script>
+<style>
+  :root{
+    --bg:#faf6ee;
+    --surface:#f0e3ce;
+    --fg:#382c20;
+    --muted:#7a6a56;
+    --brand:#bc6640;
+    --accent:#7c8b5d;
+    --line: rgba(56,44,32,.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Nunito', system-ui, sans-serif;
+    font-size:clamp(15px, .9vw + .6rem, 17px);
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{ font-family:'Lora', Georgia, serif; font-weight:600; line-height:1.12; margin:0; }
+  p{margin:0 0 1em; max-width:56ch;}
+  a{color:inherit;}
+  :focus-visible{outline:3px solid var(--brand); outline-offset:3px; border-radius:4px;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,60px);}
+
+  header.site{position:sticky; top:0; z-index:50; background:rgba(250,246,238,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding-block:12px; gap:1em;}
+  .wordmark{font-family:'Lora',serif; font-weight:600; font-size:clamp(1.05rem,1vw+.8rem,1.3rem); text-decoration:none; color:var(--fg);}
+  .wordmark span{color:var(--brand);}
+  .rooms-nav{list-style:none; display:flex; gap:.5em; margin:0; padding:0; flex-wrap:wrap;}
+  .rooms-nav a{
+    text-decoration:none; font-size:.82rem; font-weight:700; color:var(--muted);
+    padding:.5em 1em; border-radius:999px; border:1px solid transparent;
+  }
+  .rooms-nav a:hover{border-color:var(--line);}
+  .rooms-nav a.active{background:var(--surface); color:var(--brand); border-color:var(--line);}
+  .nav-call{display:inline-flex; align-items:center; gap:.5em; background:var(--brand); color:#fff8ee; padding:.55em 1.1em; border-radius:999px; text-decoration:none; font-weight:800; font-size:.85rem; white-space:nowrap;}
+  @media (max-width:900px){ .rooms-nav{display:none;} }
+
+  .room{padding-block:clamp(52px,8vw,100px);}
+  .room-eyebrow{font-weight:800; letter-spacing:.1em; text-transform:uppercase; font-size:.75rem; color:var(--brand); display:flex; align-items:center; gap:.6em; margin-bottom:1em;}
+  .room-eyebrow::before{content:""; width:24px; height:2px; background:var(--brand); border-radius:2px;}
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* EINGANG / hero */
+  .eingang{padding-top:clamp(60px,9vw,110px);}
+  .eingang .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:clamp(30px,5vw,60px); align-items:center;}
+  .eingang h1{font-size:clamp(2.4rem,4vw+1rem,4.2rem);}
+  .eingang .sub{font-size:clamp(1.05rem,.4vw+1rem,1.25rem); color:var(--muted); margin-top:.8em; max-width:36ch;}
+  .eingang-cta{display:flex; gap:.8em; flex-wrap:wrap; margin-top:1.8em;}
+  .btn{display:inline-flex; align-items:center; gap:.5em; padding:.85em 1.5em; border-radius:999px; text-decoration:none; font-weight:800; font-size:.92rem;}
+  .btn.primary{background:var(--brand); color:#fff8ee;}
+  .btn.ghost{background:transparent; color:var(--fg); border:2px solid var(--fg);}
+  .btn.ghost:hover{border-color:var(--brand); color:var(--brand);}
+  /* door graphic — CSS only */
+  .door{
+    aspect-ratio:3/4; border-radius:120px 120px 14px 14px; background:linear-gradient(160deg,var(--surface),#e6d3b6);
+    border:8px solid var(--bg); box-shadow:0 20px 40px -20px rgba(56,44,32,.35); position:relative;
+  }
+  .door::before{content:""; position:absolute; left:18%; top:22%; width:64%; height:56%; border-radius:80px 80px 8px 8px; background:rgba(255,255,255,.35);}
+  .door::after{content:""; position:absolute; right:16%; top:52%; width:12px; height:12px; border-radius:50%; background:var(--brand);}
+
+  /* WOHNZIMMER */
+  .wohnzimmer{background:var(--surface);}
+  .wz-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,60px); align-items:center;}
+  .wz-grid h2{font-size:clamp(1.8rem,1.6vw+1.2rem,2.6rem); max-width:14ch;}
+  .wz-grid p{font-size:1.05rem; color:var(--muted); margin-top:.8em;}
+  .armchair{position:relative; height:clamp(220px,26vw,300px);}
+  .armchair .seat{position:absolute; left:10%; right:10%; bottom:14%; height:38%; background:var(--bg); border-radius:24px 24px 8px 8px; box-shadow:inset 0 8px 0 rgba(56,44,32,.06);}
+  .armchair .back{position:absolute; left:14%; right:14%; bottom:38%; height:52%; background:var(--bg); border-radius:26px 26px 0 0;}
+  .armchair .arm{position:absolute; bottom:14%; width:16%; height:34%; background:var(--bg); border-radius:16px;}
+  .armchair .arm.l{left:2%;}
+  .armchair .arm.r{right:2%;}
+  .armchair .cup{position:absolute; right:20%; bottom:52%; width:34px; height:26px; background:var(--brand); border-radius:0 0 10px 10px;}
+  .armchair .cup::after{content:""; position:absolute; right:-11px; top:2px; width:12px; height:12px; border:3px solid var(--brand); border-radius:50%; background:transparent;}
+  .armchair .steam{position:absolute; right:calc(20% + 10px); bottom:80%; width:3px; height:22px; background:var(--accent); opacity:.5; border-radius:3px;}
+
+  /* KÜCHE — Kaffee/Tee toggle module */
+  .kueche h2{font-size:clamp(1.8rem,1.6vw+1.2rem,2.6rem); text-align:center;}
+  .kueche .room-eyebrow{justify-content:center;}
+  .toggle{display:flex; justify-content:center; gap:.6em; margin:1.6em 0 2.2em;}
+  .toggle button{
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:.95rem; letter-spacing:.02em;
+    padding:.75em 1.8em; border-radius:999px; border:2px solid var(--fg); background:transparent; color:var(--fg);
+    cursor:pointer;
+  }
+  .toggle button.active{background:var(--fg); color:var(--bg);}
+  .toggle button:focus-visible{outline:3px solid var(--brand); outline-offset:2px;}
+  .brew-panel{max-width:52ch; margin:0 auto; text-align:center; background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:clamp(28px,5vw,44px);}
+  .brew-panel .icon{font-size:2.4rem; margin-bottom:.3em; display:block;}
+  .brew-panel h3{font-size:1.4rem; margin-bottom:.3em;}
+  .brew-panel p{color:var(--muted); margin:0 auto;}
+  .brew-panel[hidden]{display:none;}
+
+  /* GASTSTUBE — rating + honest hours */
+  .gaststube{background:var(--surface);}
+  .gast-grid{display:grid; grid-template-columns:auto 1fr; gap:clamp(24px,4vw,48px); align-items:center;}
+  .rating-num{font-family:'Lora',serif; font-size:clamp(3rem,5vw+1rem,4.6rem); color:var(--brand); line-height:1;}
+  .stars{letter-spacing:.15em; color:var(--brand); font-size:1.1rem; margin-top:.2em;}
+  .hours-note{margin-top:1.6em; padding:1.2em 1.4em; background:var(--bg); border-radius:14px; border:1px solid var(--line); font-size:.94rem; color:var(--muted); max-width:52ch;}
+  .hours-note strong{color:var(--fg);}
+  @media (max-width:700px){ .gast-grid{grid-template-columns:1fr;} }
+
+  /* FLUR — map + contact */
+  .flur-grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,60px); align-items:start;}
+  .info-list{list-style:none; margin:0; padding:0;}
+  .info-list li{padding-block:.85em; border-bottom:1px solid var(--line); display:grid; grid-template-columns:6.5rem 1fr; gap:1em; font-size:.94rem;}
+  .info-list .label{color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:.05em; font-size:.72rem;}
+  .info-list a{text-decoration:none; font-weight:700;}
+  .info-list a:hover{color:var(--brand);}
+  .map-frame{border-radius:20px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3;}
+  .map-frame iframe{width:100%; height:100%; border:0;}
+  @media (max-width:800px){ .flur-grid{grid-template-columns:1fr;} }
+
+  footer.site{background:var(--fg); color:var(--bg); padding-block:clamp(36px,6vw,56px) clamp(90px,8vw,56px);}
+  footer.site .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4em; align-items:center;}
+  footer.site .fmark{font-family:'Lora',serif; font-size:1.3rem;}
+  footer.site a{color:var(--bg); text-decoration:none; font-weight:700;}
+  footer.site a:hover{color:#e3b98a;}
+  footer.site .legal{width:100%; margin-top:1.6em; padding-top:1.2em; border-top:1px solid rgba(250,246,238,.2); font-size:.8rem; color:#cbb8a2; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8em;}
+
+  .mobile-bar{display:none;}
+  @media (max-width:900px){
+    .mobile-bar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--fg); padding:.8em 1em; padding-bottom:max(.8em, env(safe-area-inset-bottom)); gap:.7em;}
+    .mobile-bar a{flex:1; text-align:center; padding:.85em; border-radius:999px; text-decoration:none; font-weight:800; font-size:.92rem;}
+    .mobile-bar .call{background:var(--brand); color:#fff8ee;}
+    .mobile-bar .route{background:transparent; color:var(--bg); border:2px solid rgba(250,246,238,.4);}
+    body{padding-bottom:78px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#eingang">JC's <span>HouseCafe</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="rooms-nav" aria-label="Durch das Haus">
+        <li><a href="#eingang" data-room="eingang">Eingang</a></li>
+        <li><a href="#wohnzimmer" data-room="wohnzimmer">Wohnzimmer</a></li>
+        <li><a href="#kueche" data-room="kueche">Küche</a></li>
+        <li><a href="#gaststube" data-room="gaststube">Gaststube</a></li>
+        <li><a href="#flur" data-room="flur">Flur</a></li>
+      </ul>
+    </nav>
+    <a class="nav-call" href="tel:+41522034545">Anrufen</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- EINGANG -->
+  <section class="room eingang" id="eingang">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="room-eyebrow">Eingang</p>
+        <h1>Ein Kaffeehaus. Wie ein Zuhause.</h1>
+        <p class="sub">Gemütliches Kaffeehaus-Ambiente, spezialisiert auf hochwertige Kaffees und Tees — Haldenstrasse 52, Winterthur.</p>
+        <div class="eingang-cta">
+          <a class="btn primary" href="tel:+41522034545">052 203 45 45 anrufen</a>
+          <a class="btn ghost" href="#wohnzimmer">Reinkommen</a>
+        </div>
+      </div>
+      <div class="door reveal" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- WOHNZIMMER -->
+  <section class="room wohnzimmer" id="wohnzimmer">
+    <div class="wrap">
+      <div class="wz-grid reveal">
+        <div class="armchair" aria-hidden="true">
+          <div class="back"></div>
+          <div class="arm l"></div>
+          <div class="arm r"></div>
+          <div class="seat"></div>
+          <div class="steam"></div>
+          <div class="cup"></div>
+        </div>
+        <div>
+          <p class="room-eyebrow">Wohnzimmer</p>
+          <h2>Gemütliches Kaffeehaus-Ambiente</h2>
+          <p>Ein Ort zum Ankommen und Bleiben — die Atmosphäre steht im Zentrum von JC's HouseCafe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KÜCHE -->
+  <section class="room kueche" id="kueche">
+    <div class="wrap reveal">
+      <p class="room-eyebrow">Küche</p>
+      <h2>Kaffee oder Tee?</h2>
+      <div class="toggle" role="tablist" aria-label="Kaffee oder Tee">
+        <button type="button" id="btnKaffee" class="active" role="tab" aria-selected="true" aria-controls="panelKaffee">☕ Kaffee</button>
+        <button type="button" id="btnTee" role="tab" aria-selected="false" aria-controls="panelTee">🍵 Tee</button>
+      </div>
+      <div class="brew-panel" id="panelKaffee" role="tabpanel">
+        <span class="icon" aria-hidden="true">☕</span>
+        <h3>Hochwertige Kaffees</h3>
+        <p>Spezialisiert auf hochwertige Kaffees — ausgewählt für das Haus.</p>
+      </div>
+      <div class="brew-panel" id="panelTee" role="tabpanel" hidden>
+        <span class="icon" aria-hidden="true">🍵</span>
+        <h3>Hochwertige Tees</h3>
+        <p>Spezialisiert auf hochwertige Tees — ebenso sorgfältig ausgesucht.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GASTSTUBE -->
+  <section class="room gaststube" id="gaststube">
+    <div class="wrap">
+      <p class="room-eyebrow reveal">Gaststube</p>
+      <div class="gast-grid reveal">
+        <div>
+          <div class="rating-num">4.8</div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+        </div>
+        <div>
+          <p>aus <strong>129 Google-Rezensionen</strong>.</p>
+          <div class="hours-note">
+            <strong>Öffnungszeiten:</strong> uns liegen keine geprüften Öffnungszeiten vor. Am schnellsten erfährst du sie telefonisch unter <a href="tel:+41522034545" style="color:var(--brand); font-weight:700;">052 203 45 45</a> oder auf <a href="https://www.instagram.com/jcshousecafe/" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700;">Instagram</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLUR -->
+  <section class="room flur" id="flur">
+    <div class="wrap">
+      <p class="room-eyebrow reveal">Flur</p>
+      <div class="flur-grid reveal">
+        <div>
+          <h2 style="font-size:clamp(1.6rem,1.4vw+1.1rem,2.2rem); margin-bottom:.7em;">Haldenstrasse 52</h2>
+          <ul class="info-list">
+            <li><span class="label">Adresse</span><span>Haldenstrasse 52, 8400 Winterthur</span></li>
+            <li><span class="label">Telefon</span><a href="tel:+41522034545">+41 52 203 45 45</a></li>
+            <li><span class="label">E-Mail</span><a href="mailto:info@jcs-housecafe.ch">info@jcs-housecafe.ch</a></li>
+            <li><span class="label">Instagram</span><a href="https://www.instagram.com/jcshousecafe/" target="_blank" rel="noopener">@jcshousecafe</a></li>
+          </ul>
+          <div class="eingang-cta">
+            <a class="btn primary" href="tel:+41522034545">Jetzt anrufen</a>
+            <a class="btn ghost" href="https://maps.google.com/maps?q=JC%27s%20HouseCafe%20Haldenstrasse%2052%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe title="JC's HouseCafe auf der Karte" loading="lazy"
+            src="https://maps.google.com/maps?q=JC%27s%20HouseCafe%20Haldenstrasse%2052%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="fmark">JC's HouseCafe</span>
+    <a href="https://www.instagram.com/jcshousecafe/" target="_blank" rel="noopener">Instagram</a>
+    <span class="legal">
+      <span>JC's HouseCafe, Haldenstrasse 52, 8400 Winterthur</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+41522034545">Anrufen</a>
+  <a class="route" href="https://maps.google.com/maps?q=JC%27s%20HouseCafe%20Haldenstrasse%2052%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* signature module: Kaffee/Tee toggle built from the two real USP facts —
+     no hours exist for JC's HouseCafe, so this replaces the open-badge with
+     an honest, data-grounded interactive piece. */
+  var btnKaffee = document.getElementById("btnKaffee");
+  var btnTee = document.getElementById("btnTee");
+  var panelKaffee = document.getElementById("panelKaffee");
+  var panelTee = document.getElementById("panelTee");
+
+  function showKaffee(){
+    btnKaffee.classList.add("active"); btnTee.classList.remove("active");
+    btnKaffee.setAttribute("aria-selected","true"); btnTee.setAttribute("aria-selected","false");
+    panelKaffee.hidden = false; panelTee.hidden = true;
+  }
+  function showTee(){
+    btnTee.classList.add("active"); btnKaffee.classList.remove("active");
+    btnTee.setAttribute("aria-selected","true"); btnKaffee.setAttribute("aria-selected","false");
+    panelTee.hidden = false; panelKaffee.hidden = true;
+  }
+  btnKaffee.addEventListener("click", showKaffee);
+  btnTee.addEventListener("click", showTee);
+
+  /* room-tracker nav: highlights the pill for the room currently in view,
+     echoing the "walk through the house" structure of the page */
+  var rooms = document.querySelectorAll(".room[id]");
+  var navLinks = document.querySelectorAll(".rooms-nav a");
+  if("IntersectionObserver" in window && rooms.length){
+    var roomIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var id = entry.target.id;
+          navLinks.forEach(function(a){
+            a.classList.toggle("active", a.getAttribute("data-room") === id);
+          });
+        }
+      });
+    }, { threshold: 0.4, rootMargin: "-20% 0px -55% 0px" });
+    rooms.forEach(function(r){ roomIO.observe(r); });
+  }
+
+  /* scroll reveals */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els = document.querySelectorAll(".reveal");
+  if(reduce || !("IntersectionObserver" in window)){
+    els.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add("in"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

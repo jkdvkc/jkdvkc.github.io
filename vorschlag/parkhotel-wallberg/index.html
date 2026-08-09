@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parkhotel Wallberg, Volketswil – Hotel, Restaurant &amp; Bowling-Bar</title>
+<meta name="description" content="Parkhotel Wallberg in Volketswil: familiengeführtes 3-Stern-Hotel mit Restaurant, Bar, Bowling-Bar und Veranstaltungsräumen für bis 300 Gäste.">
+<meta property="og:title" content="Parkhotel Wallberg, Volketswil">
+<meta property="og:description" content="Familiengeführtes 3-Stern-Hotel mit Restaurant, Bar und Tagungseinrichtungen – inklusive Bowling-Bar.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.wallberg.ch/images/parkhotel-wallberg-hotel2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Parkhotel Wallberg, Volketswil",
+  "description": "Familiengeführtes 3-Stern-Hotel mit Restaurant, Bar und Tagungseinrichtungen.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Weiherstrasse",
+    "addressLocality": "Volketswil",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41449473040",
+  "email": "parkhotel@wallberg.ch",
+  "url": "https://www.wallberg.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.9",
+    "reviewCount": "554"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#f4ecda;
+  --surface:#fffdf6;
+  --fg:#1f2a1f;
+  --muted:#4c5847;
+  --brand:#1e4030;
+  --accent:#b8862e;
+  --line:#d9cba4;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'Karla',system-ui,sans-serif;
+  font-size:clamp(15px,0.3vw + 14px,17px);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:'Bebas Neue',system-ui,sans-serif;font-weight:400;letter-spacing:0.02em;
+  line-height:0.95;margin:0;color:var(--brand);text-transform:uppercase;
+}
+h1{font-size:clamp(2.8rem,7vw + 1rem,6.4rem);}
+h2{font-size:clamp(2rem,3.6vw + 1rem,3.4rem);}
+h3{font-size:clamp(1.3rem,1.4vw + 1rem,1.7rem);}
+p{margin:0 0 1em;}
+a{color:var(--accent);}
+img{max-width:100%;display:block;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+.skip-link:focus{left:1rem;top:1rem;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.9rem clamp(1.2rem,4vw,3rem);
+  background:rgba(30,64,48,0.96);
+}
+.brand-mark{font-family:'Bebas Neue',sans-serif;color:#fff;font-size:1.3rem;letter-spacing:0.03em;}
+.brand-mark span{color:var(--accent);}
+nav ul{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0;}
+nav a{color:#f1ead4;text-decoration:none;font-size:0.86rem;font-weight:600;}
+nav a:hover{color:var(--accent);}
+.call-pill{background:var(--accent);color:#241a05;padding:0.55rem 1.1rem;border-radius:999px;text-decoration:none;font-size:0.82rem;font-weight:700;}
+@media (max-width:840px){ nav{display:none;} }
+
+main{padding-top:60px;}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+[data-reveal].is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+/* HERO: the lane, converging perspective */
+.hero{
+  position:relative;overflow:hidden;background:var(--brand);color:#fff;
+  padding:clamp(6.5rem,14vw,10rem) 0 clamp(3rem,7vw,4.5rem);
+}
+.lane-floor{
+  position:absolute;left:0;right:0;bottom:0;height:52%;
+  background:repeating-linear-gradient(90deg,#c99a3f 0 3px,#b8862e 3px 6px);
+  clip-path:polygon(38% 0,62% 0,100% 100%,0 100%);
+  opacity:0.9;
+}
+.hero-content{position:relative;z-index:2;text-align:center;}
+.hero h1{color:#fff;}
+.hero .sub{font-size:clamp(1rem,0.6vw + 0.9rem,1.3rem);color:#dfe7de;max-width:44ch;margin:1rem auto 1.6rem;}
+.hero-cta{display:flex;gap:0.9rem;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-block;text-align:center;padding:0.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:0.95rem;border:2px solid transparent;}
+.btn-accent{background:var(--accent);color:#241a05;}
+.btn-line{border-color:#fff;color:#fff;}
+.rating-line{color:#cdd8cb;font-size:0.85rem;margin-top:1.3rem;}
+
+/* LANE STRIPS (usps) */
+.lane-strip{
+  display:flex;align-items:center;gap:1.4rem;padding:1.1rem clamp(1.2rem,4vw,3rem);
+  border-bottom:1px solid var(--line);background:var(--surface);
+}
+.lane-strip:nth-child(even){background:var(--bg);}
+.lane-strip .pin-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--accent);width:2.4ch;flex:none;}
+.lane-strip .txt strong{display:block;font-size:1.05rem;color:var(--brand);}
+.lane-strip .txt span{color:var(--muted);font-size:0.92rem;}
+
+/* SECTION COMMON */
+section.block{padding:clamp(2.8rem,6vw,4.6rem) 0;border-bottom:1px solid var(--line);}
+.block-head{margin-bottom:2rem;max-width:60ch;}
+.block-head .eyebrow{font-family:'Bebas Neue',sans-serif;color:var(--accent);letter-spacing:0.08em;font-size:1.05rem;}
+.block-head p{color:var(--muted);}
+
+/* SCOREBOARD ROOMS */
+.frames{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;}
+.frame{background:var(--surface);border:2px solid var(--brand);border-radius:10px;overflow:hidden;}
+.frame-head{background:var(--brand);color:#fff;padding:0.6rem 1.2rem;display:flex;justify-content:space-between;align-items:center;}
+.frame-head span{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;}
+.frame-body{padding:1.3rem 1.2rem;}
+.frame-body h3{color:var(--fg);font-size:1.4rem;margin-bottom:0.5rem;}
+.frame-body p{color:var(--muted);font-size:0.92rem;margin:0;}
+@media (max-width:720px){ .frames{grid-template-columns:1fr;} }
+
+/* PINS DECORATIVE */
+.pin-rack{display:flex;justify-content:center;gap:1.6rem;margin:2.2rem 0 1rem;flex-wrap:wrap;}
+.pin-row{display:flex;gap:0.9rem;}
+.pin{
+  width:22px;height:44px;border-radius:50% 50% 40% 40% / 60% 60% 40% 40%;
+  background:linear-gradient(180deg,#fff 0 62%,#c02b2b 62% 72%,#fff 72%);
+  border:1px solid #d8cfae;cursor:pointer;transition:transform 0.3s ease;
+}
+.pin.is-down{transform:rotate(85deg) translateY(10px);}
+@media (prefers-reduced-motion:reduce){ .pin{transition:none;} }
+.pin-hint{text-align:center;color:var(--muted);font-size:0.85rem;}
+
+/* COMPARATOR / COMPOSER */
+.comparator{background:var(--surface);border:2px solid var(--brand);border-radius:12px;padding:clamp(1.4rem,3vw,2.2rem);}
+.comp-picker{display:flex;flex-wrap:wrap;gap:0.7rem;margin-bottom:1.4rem;}
+.comp-picker button{
+  font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:0.03em;
+  padding:0.55rem 1.2rem;border:2px solid var(--brand);background:var(--bg);color:var(--brand);cursor:pointer;border-radius:999px;
+}
+.comp-picker button[aria-pressed="true"]{background:var(--brand);color:#fff;}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.94rem;margin-bottom:1.6rem;}
+.comp-table th,.comp-table td{text-align:left;padding:0.75rem 0.7rem;border-bottom:1px solid var(--line);vertical-align:top;}
+.comp-table th{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;font-size:1rem;color:var(--brand);}
+.comp-empty{color:var(--muted);font-style:italic;}
+.composer{border-top:2px dashed var(--line);padding-top:1.6rem;display:grid;gap:1rem;grid-template-columns:1fr 1fr;}
+.composer label{display:block;font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem;font-weight:600;}
+.composer select{width:100%;padding:0.6rem;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff;}
+.composer-out{grid-column:1 / -1;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1rem;font-size:0.88rem;white-space:pre-wrap;}
+.composer-actions{grid-column:1 / -1;display:flex;gap:0.8rem;flex-wrap:wrap;}
+@media (max-width:600px){ .composer{grid-template-columns:1fr;} }
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:0.6rem;}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:8px;}
+.gallery a:first-child, .gallery figure:first-child{grid-row:1 / 3;}
+.gallery figure{margin:0;height:100%;}
+@media (max-width:760px){ .gallery{grid-template-columns:1fr 1fr;} .gallery figure:first-child{grid-row:auto;grid-column:1 / -1;} }
+
+/* EVENTS */
+.event-band{
+  background:var(--brand);color:#fff;padding:clamp(2.4rem,5vw,3.6rem) 0;border-bottom:none;
+}
+.event-band .wrap{display:flex;gap:2rem;align-items:center;flex-wrap:wrap;justify-content:space-between;}
+.event-band h2{color:#fff;}
+.event-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);color:var(--accent);}
+
+/* LOCATION */
+.loc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.loc-facts{border:2px solid var(--brand);border-radius:10px;padding:1.4rem;background:var(--surface);}
+.loc-facts dt{font-weight:700;color:var(--brand);margin-top:1rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;}
+.loc-facts dt:first-child{margin-top:0;}
+.loc-facts dd{margin:0.2rem 0 0;}
+.map-box{border:2px solid var(--brand);border-radius:10px;overflow:hidden;}
+.map-box iframe{width:100%;height:320px;border:0;display:block;}
+@media (max-width:800px){ .loc-wrap{grid-template-columns:1fr;} }
+
+footer{padding:2.4rem clamp(1.2rem,4vw,3rem) 6rem;background:var(--brand);color:#dfe7de;}
+footer a{color:#fff;}
+.foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1180px;margin:0 auto 1.4rem;font-size:0.9rem;}
+footer p.legal{max-width:1180px;margin:0 auto;font-size:0.78rem;color:#a7b8a3;}
+@media (max-width:700px){ .foot-grid{grid-template-columns:1fr;} }
+
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--accent);display:flex;}
+.mobile-bar a{flex:1;text-align:center;color:#241a05;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.9rem;}
+@media (min-width:761px){ .mobile-bar{display:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <div class="brand-mark">PARKHOTEL <span>WALLBERG</span></div>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#bahn">Die Bahn</a></li>
+      <li><a href="#zimmer">Zimmer</a></li>
+      <li><a href="#bowling">Bowling</a></li>
+      <li><a href="#anlaesse">Anlässe</a></li>
+      <li><a href="#lage">Lage</a></li>
+    </ul>
+  </nav>
+  <a class="call-pill" href="tel:+41449473040">Anrufen</a>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="lane-floor" aria-hidden="true"></div>
+    <div class="wrap hero-content">
+      <h1>Parkhotel Wallberg</h1>
+      <p class="sub">Familiengeführtes 3-Stern-Hotel in Volketswil mit Restaurant, Bar und Tagungseinrichtungen — inklusive eigener Bowling-Bar.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="tel:+41449473040">+41 44 947 30 40</a>
+        <a class="btn btn-line" href="#zimmer">Zimmer ansehen</a>
+      </div>
+      <p class="rating-line">Google-Bewertung: 3.9 · 554 Bewertungen</p>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Über uns</span>
+        <h2>Familiengeführt in Volketswil</h2>
+        <p>Familiengeführtes 3-Stern-Hotel mit Restaurant, Bar und Tagungseinrichtungen. Direkt im Haus: eine Bowling-Bar, die aus einer Übernachtung oder einem Restaurantbesuch schnell einen ganzen Abend macht.</p>
+        <p>Vier feste Punkte im Haus — Restaurant, Bar, Bowling, Veranstaltungsräume — bilden zusammen die Bahn, auf der sich Geschäftsreise und Familienwochenende gleichermassen abspielen.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="bahn">
+    <div class="lane-strip" data-reveal><span class="pin-num">01</span><div class="txt"><strong>Restaurant mit mediterraner Küche</strong><span>Hausrestaurant im Parkhotel Wallberg</span></div></div>
+    <div class="lane-strip" data-reveal><span class="pin-num">02</span><div class="txt"><strong>Bar</strong><span>Für Gäste und Anlässe</span></div></div>
+    <div class="lane-strip" data-reveal><span class="pin-num">03</span><div class="txt"><strong>Bowling</strong><span>Die Bowling-Bar im Haus</span></div></div>
+    <div class="lane-strip" data-reveal><span class="pin-num">04</span><div class="txt"><strong>Veranstaltungsräume</strong><span>Für bis zu 300 Gäste</span></div></div>
+  </div>
+
+  <section class="block" id="zimmer" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Frame 1–2</span>
+        <h2>Die Zimmer</h2>
+        <p>17 renovierte 3-Stern-Zimmer. Preise sind auf der Website nicht angegeben — daher hier bewusst ausgelassen.</p>
+      </div>
+      <div class="frames">
+        <div class="frame">
+          <div class="frame-head"><span>Frame 1</span><span>1 Gast</span></div>
+          <div class="frame-body"><h3>Einzelzimmer</h3><p>Einzelzimmer in renoviertem 3-Stern-Hotel</p></div>
+        </div>
+        <div class="frame">
+          <div class="frame-head"><span>Frame 2</span><span>2 Gäste</span></div>
+          <div class="frame-body"><h3>Doppelzimmer</h3><p>Doppelzimmer in renoviertem 3-Stern-Hotel</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Modul</span>
+        <h2>Zimmer vergleichen &amp; anfragen</h2>
+        <p>Zimmertyp und Personenzahl wählen — die Anfrage wird automatisch zusammengestellt.</p>
+      </div>
+      <div class="comparator">
+        <div class="comp-picker" id="comp-picker" role="group" aria-label="Zimmer für Vergleich wählen">
+          <button type="button" data-room="0" aria-pressed="true">Einzelzimmer</button>
+          <button type="button" data-room="1" aria-pressed="true">Doppelzimmer</button>
+        </div>
+        <table class="comp-table" id="comp-table">
+          <thead><tr><th>Zimmer</th><th>Kapazität</th><th>Beschreibung</th></tr></thead>
+          <tbody id="comp-body"></tbody>
+        </table>
+        <p class="comp-empty" id="comp-empty" hidden>Bitte mindestens ein Zimmer auswählen.</p>
+        <div class="composer">
+          <div>
+            <label for="guest-count">Anzahl Personen</label>
+            <select id="guest-count">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div>
+            <label for="anlass">Anlass</label>
+            <select id="anlass">
+              <option>Übernachtung</option>
+              <option>Restaurantbesuch</option>
+              <option>Bowling-Bar</option>
+              <option>Veranstaltung</option>
+            </select>
+          </div>
+          <div class="composer-out mono" id="composer-out"></div>
+          <div class="composer-actions">
+            <a class="btn btn-accent" id="mail-link" href="mailto:parkhotel@wallberg.ch">Per E-Mail anfragen</a>
+            <a class="btn btn-line" style="border-color:var(--brand);color:var(--brand);" href="tel:+41449473040">Per Telefon anfragen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="bowling" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Strike</span>
+        <h2>Die Bowling-Bar</h2>
+        <p>Zwischen Restaurant und Bar liegt die Bowling-Bar des Parkhotels — auf die Pins klicken und selbst räumen.</p>
+      </div>
+      <div class="pin-rack" id="pin-rack" aria-hidden="true">
+        <div class="pin-row"><span class="pin" data-pin></span></div>
+        <div class="pin-row"><span class="pin" data-pin></span><span class="pin" data-pin></span></div>
+        <div class="pin-row"><span class="pin" data-pin></span><span class="pin" data-pin></span><span class="pin" data-pin></span></div>
+        <div class="pin-row"><span class="pin" data-pin></span><span class="pin" data-pin></span><span class="pin" data-pin></span><span class="pin" data-pin></span></div>
+      </div>
+      <p class="pin-hint">Ein dekoratives Zehner-Rack — keine Buchungsfunktion.</p>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Küche</span>
+        <h2>Restaurant &amp; Bar</h2>
+        <p>Das Restaurant im Parkhotel Wallberg kocht mediterran, die Bar bedient Hotelgäste und Besucher der Bowling-Bar gleichermassen.</p>
+      </div>
+      <div class="frames">
+        <div class="frame">
+          <div class="frame-head"><span>Restaurant</span><span>Mediterran</span></div>
+          <div class="frame-body"><h3>Restaurant mit mediterraner Küche</h3><p>Hausrestaurant im Parkhotel Wallberg</p></div>
+        </div>
+        <div class="frame">
+          <div class="frame-head"><span>Bar</span><span>Hotel &amp; Bowling</span></div>
+          <div class="frame-body"><h3>Bar</h3><p>Bar im Parkhotel Wallberg, direkt neben der Bowling-Bar</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Ansichten</span>
+        <h2>Hotel, Restaurant &amp; Seminar</h2>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="https://www.wallberg.ch/images/parkhotel-wallberg-hotel2.jpg" alt="Parkhotel Wallberg, Aussenansicht" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Aussenansicht Parkhotel Wallberg</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.wallberg.ch/images/parkhotel-wallberg-restaurant.jpg" alt="Restaurant im Parkhotel Wallberg" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Restaurant im Haus</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.wallberg.ch/images/parkhotel-wallberg-seminar.jpg" alt="Seminarraum im Parkhotel Wallberg" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Seminarraum</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.wallberg.ch/site/wp-content/uploads/2014/10/Speisen-Slide3-Wallberg_10-2014_91-330x220.jpg" alt="Speisen im Restaurant" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Speisen aus der Küche</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.wallberg.ch/site/wp-content/uploads/2014/10/Wallberg_10-2014_66-gaumenfreuden.jpeg" alt="Gaumenfreuden aus der Küche" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Gaumenfreuden aus der Küche</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Ablauf</span>
+        <h2>So läuft die Anfrage</h2>
+      </div>
+      <div class="frames" style="grid-template-columns:repeat(3,1fr);">
+        <div class="frame">
+          <div class="frame-head"><span>Schritt 1</span><span></span></div>
+          <div class="frame-body"><h3>Zimmer wählen</h3><p>Einzel- oder Doppelzimmer im Vergleichsmodul markieren.</p></div>
+        </div>
+        <div class="frame">
+          <div class="frame-head"><span>Schritt 2</span><span></span></div>
+          <div class="frame-body"><h3>Personen &amp; Anlass angeben</h3><p>Übernachtung, Restaurant, Bowling-Bar oder Veranstaltung.</p></div>
+        </div>
+        <div class="frame">
+          <div class="frame-head"><span>Schritt 3</span><span></span></div>
+          <div class="frame-body"><h3>Absenden</h3><p>Per Telefon +41 44 947 30 40 oder E-Mail parkhotel@wallberg.ch.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="event-band" id="anlaesse" data-reveal>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" style="color:var(--accent);">Veranstaltungsräume</span>
+        <h2>Platz für bis zu</h2>
+      </div>
+      <div class="event-num">300 Gäste</div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Fragen</span>
+        <h2>Vor dem Anruf</h2>
+      </div>
+      <div class="frames" style="grid-template-columns:repeat(3,1fr);">
+        <div class="frame">
+          <div class="frame-head"><span>01</span><span></span></div>
+          <div class="frame-body"><h3>Wie viele Zimmer gibt es?</h3><p>17 renovierte 3-Stern-Zimmer.</p></div>
+        </div>
+        <div class="frame">
+          <div class="frame-head"><span>02</span><span></span></div>
+          <div class="frame-body"><h3>Sind Preise online?</h3><p>Nein, Preise sind auf der Website nicht angegeben.</p></div>
+        </div>
+        <div class="frame">
+          <div class="frame-head"><span>03</span><span></span></div>
+          <div class="frame-body"><h3>Für wie viele Gäste sind Anlässe möglich?</h3><p>Die Veranstaltungsräume fassen bis zu 300 Gäste.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="lage" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Anfahrt</span>
+        <h2>Weiherstrasse, Volketswil</h2>
+      </div>
+      <div class="loc-wrap">
+        <dl class="loc-facts">
+          <dt>Name</dt>
+          <dd>Parkhotel Wallberg, Volketswil</dd>
+          <dt>Adresse</dt>
+          <dd>Weiherstrasse, Volketswil</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41449473040">+41 44 947 30 40</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:parkhotel@wallberg.ch">parkhotel@wallberg.ch</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.wallberg.ch/" target="_blank" rel="noopener">wallberg.ch</a></dd>
+          <dt>Google-Bewertung</dt>
+          <dd>3.9 von 5 · 554 Bewertungen</dd>
+        </dl>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Parkhotel%20Wallberg%2C%20Volketswil&amp;z=16&amp;output=embed" loading="lazy" title="Karte Parkhotel Wallberg"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Parkhotel Wallberg</strong><br>
+      Weiherstrasse, Volketswil<br>
+      <a href="tel:+41449473040">+41 44 947 30 40</a><br>
+      <a href="mailto:parkhotel@wallberg.ch">parkhotel@wallberg.ch</a>
+    </div>
+    <div>
+      <strong>Im Haus</strong><br>
+      Restaurant, Bar, Bowling, Veranstaltungsräume (bis 300 Gäste)
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.wallberg.ch/" target="_blank" rel="noopener">wallberg.ch</a>
+    </div>
+  </div>
+  <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41449473040">Anrufen · +41 44 947 30 40</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* decorative pin rack: click to knock down / reset */
+  var pins = Array.prototype.slice.call(document.querySelectorAll('[data-pin]'));
+  pins.forEach(function(pin){
+    pin.addEventListener('click', function(){
+      pin.classList.toggle('is-down');
+    });
+  });
+  var rack = document.getElementById('pin-rack');
+  if(rack){
+    rack.setAttribute('role','group');
+    rack.setAttribute('aria-label','Dekoratives Bowling-Pin-Rack, anklickbar');
+  }
+
+  /* room comparator + composer */
+  var rooms = [
+    {name:'Einzelzimmer', cap:'1 Gast', desc:'Einzelzimmer in renoviertem 3-Stern-Hotel'},
+    {name:'Doppelzimmer', cap:'2 Gäste', desc:'Doppelzimmer in renoviertem 3-Stern-Hotel'}
+  ];
+
+  var picker = document.getElementById('comp-picker');
+  var buttons = Array.prototype.slice.call(picker.querySelectorAll('button'));
+  var body = document.getElementById('comp-body');
+  var empty = document.getElementById('comp-empty');
+  var table = document.getElementById('comp-table');
+
+  function selectedRooms(){
+    return buttons.filter(function(b){ return b.getAttribute('aria-pressed') === 'true'; })
+      .map(function(b){ return rooms[parseInt(b.getAttribute('data-room'),10)]; });
+  }
+
+  function renderTable(){
+    var sel = selectedRooms();
+    body.innerHTML = '';
+    if(sel.length === 0){
+      table.hidden = true; empty.hidden = false;
+      return;
+    }
+    table.hidden = false; empty.hidden = true;
+    sel.forEach(function(r){
+      var tr = document.createElement('tr');
+      var t1 = document.createElement('td'); t1.textContent = r.name;
+      var t2 = document.createElement('td'); t2.textContent = r.cap;
+      var t3 = document.createElement('td'); t3.textContent = r.desc;
+      tr.appendChild(t1); tr.appendChild(t2); tr.appendChild(t3);
+      body.appendChild(tr);
+    });
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+      renderTable();
+      renderComposer();
+    });
+  });
+
+  var guestSelect = document.getElementById('guest-count');
+  var anlassSelect = document.getElementById('anlass');
+  var out = document.getElementById('composer-out');
+  var mailLink = document.getElementById('mail-link');
+
+  function renderComposer(){
+    var sel = selectedRooms();
+    var names = sel.length ? sel.map(function(r){ return r.name; }).join(', ') : '(keine Auswahl)';
+    var text = 'Anfrage Parkhotel Wallberg\n' +
+      'Zimmer: ' + names + '\n' +
+      'Personen: ' + guestSelect.value + '\n' +
+      'Anlass: ' + anlassSelect.value;
+    out.textContent = text;
+    var subject = encodeURIComponent('Zimmeranfrage Parkhotel Wallberg');
+    var mbody = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:parkhotel@wallberg.ch?subject=' + subject + '&body=' + mbody);
+  }
+
+  guestSelect.addEventListener('change', renderComposer);
+  anlassSelect.addEventListener('change', renderComposer);
+
+  renderTable();
+  renderComposer();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timmuccino – Kaukasisches Bistro &amp; Café in Winterthur</title>
+<meta name="description" content="Timmuccino: authentische georgische und kaukasische Küche mit Khinkali und Khachapuri. Wülflingerstrasse 36, Winterthur. Tisch reservieren.">
+<meta property="og:title" content="Timmuccino – Kaukasisches Bistro &amp; Café">
+<meta property="og:description" content="Authentische kaukasische Küche mit Khinkali und Khachapuri, mitten in Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://timmuccino.ch/">
+<meta property="og:image" content="https://timmuccino.ch/wp-content/uploads/2025/03/Logo_Timmuccino-Final-01-White-950x950.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Timmuccino – Kaukasisches Bistro & Café",
+  "image": "https://timmuccino.ch/wp-content/uploads/2025/03/Logo_Timmuccino-Final-01-White-950x950.jpg",
+  "url": "https://timmuccino.ch/",
+  "telephone": "+41 76 242 22 66",
+  "email": "reservation@timmuccino.ch",
+  "servesCuisine": "Georgian/Caucasian",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wülflingerstrasse 36",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "08:30", "closes": "13:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "17:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "08:30", "closes": "13:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "17:00", "closes": "00:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "16:00", "closes": "00:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "95" },
+  "sameAs": ["https://www.instagram.com/timmuccino.winterthur/"]
+}
+</script>
+<style>
+  :root{
+    --bg:#211016;
+    --surface:#341620;
+    --fg:#f8ece0;
+    --muted:#dcbfa8;
+    --brand:#b4142f;
+    --accent:#e0a734;
+    --line:rgba(224,167,52,0.28);
+    --maxw:1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:"Karla",system-ui,sans-serif;
+    font-size:clamp(15px,0.9vw + 12px,17px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:600;line-height:1.06;margin:0;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(18px,4vw,48px);}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+
+  /* geometric ornament: diamond lattice band built from gradients/clip-path, no images */
+  .ornament-band{
+    height:16px;
+    background:
+      linear-gradient(135deg, var(--accent) 25%, transparent 25.5%) 0 0/16px 16px,
+      linear-gradient(-135deg, var(--accent) 25%, transparent 25.5%) 0 0/16px 16px,
+      var(--brand);
+    background-repeat:repeat;
+  }
+  .ornament-band.thin{height:8px;background-size:8px 8px,8px 8px;}
+  .cross-divider{
+    display:flex;justify-content:center;align-items:center;gap:10px;
+    margin-block:8px;
+  }
+  .cross-divider span{
+    width:9px;height:9px;
+    background:var(--accent);
+    clip-path:polygon(50% 0,65% 35%,100% 50%,65% 65%,50% 100%,35% 65%,0 50%,35% 35%);
+  }
+  .cross-divider::before,.cross-divider::after{
+    content:"";flex:1;max-width:120px;height:1px;background:var(--line);
+  }
+
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(33,16,22,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .headbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;}
+  .brand-mark{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .brand-mark img{width:36px;height:36px;object-fit:cover;border-radius:50%;border:2px solid var(--accent);}
+  .brand-mark strong{font-family:"Bodoni Moda",serif;font-size:18px;font-weight:600;color:var(--fg);}
+  nav.primary{display:none;gap:clamp(14px,2vw,28px);}
+  nav.primary a{font-size:13.5px;letter-spacing:.04em;text-decoration:none;color:var(--fg);opacity:.85;}
+  nav.primary a:hover{opacity:1;color:var(--accent);}
+  @media(min-width:760px){ nav.primary{display:flex;} }
+  .call-btn{
+    display:none;
+  }
+  @media(min-width:640px){
+    .call-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--brand);color:#fff;text-decoration:none;
+      font-size:13px;font-weight:700;letter-spacing:.04em;
+      padding:9px 18px;border-radius:999px;
+      border:1px solid var(--accent);
+    }
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;
+    padding-block:clamp(56px,9vw,110px) clamp(50px,7vw,80px);
+    background:
+      radial-gradient(circle at 15% 20%, rgba(180,20,47,0.55), transparent 55%),
+      radial-gradient(circle at 85% 10%, rgba(224,167,52,0.28), transparent 45%),
+      conic-gradient(from 45deg at 50% 120%, #2c1119, #3a1420, #2c1119);
+  }
+  .hero-grid{display:grid;gap:36px;align-items:center;}
+  @media(min-width:880px){ .hero-grid{grid-template-columns:1.15fr 0.85fr;} }
+  .hero h1{
+    font-size:clamp(2.3rem,5.6vw,4.2rem);
+    margin-top:14px;
+    max-width:14ch;
+  }
+  .hero .lede{max-width:48ch;color:var(--muted);font-size:clamp(1rem,1.3vw,1.15rem);margin-top:16px;}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:30px;}
+  .hero-facts div{font-size:13px;color:var(--muted);}
+  .hero-facts strong{display:block;color:var(--fg);font-size:15px;margin-top:2px;}
+  .hero-photo{
+    position:relative;border-radius:6px;overflow:hidden;
+    aspect-ratio:4/5;
+    border:3px solid var(--accent);
+    box-shadow:0 24px 60px rgba(0,0,0,.45);
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg, rgba(33,16,22,.7), transparent 45%);
+    pointer-events:none;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:700;font-size:13.5px;letter-spacing:.03em;
+    padding:12px 22px;border-radius:999px;text-decoration:none;
+  }
+  .btn-solid{background:var(--accent);color:#241109;}
+  .btn-outline{border:1px solid var(--accent);color:var(--fg);}
+
+  main{display:block;}
+  section{padding-block:clamp(48px,6vw,84px);position:relative;}
+  .section-head{max-width:60ch;margin-bottom:clamp(26px,3vw,42px);}
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.6rem);margin-top:8px;}
+  .section-head p{color:var(--muted);margin-top:12px;}
+
+  /* Menu / dish explorer — signature module 1 */
+  .menu-section{background:var(--surface);border-block:1px solid var(--line);}
+  .filter-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+  .chip{
+    all:unset;cursor:pointer;
+    padding:8px 18px;border-radius:999px;
+    border:1px solid var(--line);
+    font-size:13px;font-weight:600;letter-spacing:.03em;
+    color:var(--muted);
+  }
+  .chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .chip:hover{border-color:var(--accent);}
+  .dish-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+  .dish-card{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:22px;
+    position:relative;
+    overflow:hidden;
+  }
+  .dish-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:5px;
+    background:repeating-linear-gradient(90deg, var(--accent) 0 10px, var(--brand) 10px 20px);
+  }
+  .dish-card h3{font-size:1.3rem;margin-top:10px;}
+  .dish-card .region{
+    display:inline-block;margin-top:10px;
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;
+  }
+  .dish-card p.desc{margin-top:10px;color:var(--muted);font-size:14.5px;}
+  .dish-card[hidden]{display:none;}
+  .menu-note{margin-top:22px;font-size:13px;color:var(--muted);}
+
+  /* Hospitality / about */
+  .hospitality{}
+  .hosp-grid{display:grid;gap:32px;}
+  @media(min-width:900px){ .hosp-grid{grid-template-columns:1fr 1fr;} }
+  .usp-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+  .usp-list li{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:14px 16px;border:1px solid var(--line);border-radius:6px;
+    background:var(--surface);
+  }
+  .usp-list li .dot{
+    width:10px;height:10px;margin-top:5px;flex:none;
+    background:var(--accent);
+    clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+  }
+  .about-copy p{max-width:56ch;color:var(--fg);}
+
+  /* supra: cultural context — general knowledge, not a business-specific claim */
+  .supra-grid{display:grid;gap:20px;margin-top:32px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  .supra-card{
+    border:1px solid var(--line);border-radius:8px;
+    padding:22px;background:var(--surface);
+    position:relative;overflow:hidden;
+  }
+  .supra-card::after{
+    content:"";position:absolute;right:-30px;top:-30px;width:80px;height:80px;
+    background:conic-gradient(from 0deg, var(--accent) 0 25%, transparent 0 50%, var(--accent) 0 75%, transparent 0);
+    opacity:.18;border-radius:50%;
+  }
+  .supra-num{
+    font-family:"Bodoni Moda",serif;font-size:1.6rem;color:var(--accent);font-weight:600;
+  }
+  .supra-card h3{font-size:1.1rem;margin-top:8px;}
+  .supra-card p{margin-top:8px;color:var(--muted);font-size:14px;}
+
+  /* Reservation composer — signature module 2 */
+  .reserve-section{background:var(--surface);border-block:1px solid var(--line);}
+  .reserve-grid{display:grid;gap:32px;}
+  @media(min-width:900px){ .reserve-grid{grid-template-columns:1fr 1fr;} }
+  .reserve-form{display:grid;gap:14px;}
+  .field{display:grid;gap:6px;}
+  .field label{font-size:12.5px;color:var(--muted);letter-spacing:.03em;}
+  .field input, .field textarea{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:6px;
+    color:var(--fg);
+    padding:11px 12px;
+    font-family:inherit;
+    font-size:15px;
+  }
+  .field input:focus, .field textarea:focus{border-color:var(--accent);}
+  .field-row{display:grid;gap:14px;grid-template-columns:1fr 1fr;}
+  .reserve-output{
+    border:1px dashed var(--line);border-radius:6px;
+    padding:18px;background:var(--bg);
+    font-size:14px;color:var(--muted);
+  }
+  .reserve-output strong{color:var(--fg);}
+  .reserve-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;}
+  .direct-contacts{margin-top:24px;display:grid;gap:10px;font-size:14px;color:var(--muted);}
+  .direct-contacts a{color:var(--accent);text-decoration:none;}
+
+  /* Hours */
+  table.hours{width:100%;border-collapse:collapse;margin-top:8px;}
+  table.hours th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);padding-bottom:10px;border-bottom:1px solid var(--line);}
+  table.hours td{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;}
+  table.hours tr[data-today="true"] td{color:var(--accent);font-weight:700;}
+  .closed-note{margin-top:18px;font-size:13.5px;color:var(--muted);}
+
+  .hours-wrap{display:grid;gap:32px;}
+  @media(min-width:900px){ .hours-wrap{grid-template-columns:1fr 1fr;} }
+  .rating-card{
+    border:1px solid var(--line);border-radius:8px;padding:26px;
+    background:var(--surface);display:flex;flex-direction:column;gap:10px;align-self:start;
+  }
+  .stars{color:var(--accent);font-size:22px;letter-spacing:3px;}
+  .rating-num{font-family:"Bodoni Moda",serif;font-size:2rem;font-weight:600;}
+  .rating-sub{color:var(--muted);font-size:13.5px;}
+
+  /* location */
+  .loc-grid{display:grid;gap:28px;}
+  @media(min-width:900px){ .loc-grid{grid-template-columns:1.1fr 0.9fr;} }
+  .loc-grid iframe{width:100%;height:320px;border:1px solid var(--line);border-radius:6px;filter:sepia(.15) saturate(1.1);}
+  .addr-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px;}
+  .addr-list dt{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);}
+  .addr-list dd{margin:2px 0 0;font-size:15.5px;}
+  .social-row{display:flex;gap:12px;margin-top:22px;}
+  .social-row a{
+    border:1px solid var(--line);padding:9px 18px;border-radius:999px;text-decoration:none;
+    font-size:13px;font-weight:600;
+  }
+  .social-row a:hover{border-color:var(--accent);color:var(--accent);}
+
+  footer.site{border-top:1px solid var(--line);padding-block:34px 100px;}
+  .foot-grid{display:grid;gap:22px;}
+  @media(min-width:760px){ .foot-grid{grid-template-columns:2fr 1fr 1fr;} }
+  footer.site h3{font-size:15px;font-family:"Bodoni Moda",serif;}
+  footer.site p, footer.site a{font-size:13.5px;color:var(--muted);text-decoration:none;}
+  footer.site a:hover{color:var(--accent);}
+  .fine{
+    margin-top:26px;padding-top:18px;border-top:1px dashed var(--line);
+    font-size:12px;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;
+  }
+
+  .mobile-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
+    background:var(--surface);border-top:1px solid var(--line);
+    box-shadow:0 -4px 18px rgba(0,0,0,.35);
+  }
+  .mobile-bar a{
+    flex:1;text-align:center;color:var(--fg);text-decoration:none;
+    font-size:13px;font-weight:700;letter-spacing:.03em;
+    padding:14px 8px;
+  }
+  .mobile-bar a.primary{background:var(--brand);}
+  @media(min-width:640px){ .mobile-bar{display:none;} }
+  body{padding-bottom:64px;}
+  @media(min-width:640px){ body{padding-bottom:0;} }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.is-visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap headbar">
+    <a class="brand-mark" href="#top">
+      <img src="https://timmuccino.ch/wp-content/uploads/2025/03/cropped-Caucasian-Logo-270x270.jpg" alt="Timmuccino Logo" onerror="this.parentElement.removeChild(this)">
+      <strong>Timmuccino</strong>
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#gastfreundschaft">Gastfreundschaft</a>
+      <a href="#tradition">Supra</a>
+      <a href="#reservieren">Reservieren</a>
+      <a href="#zeiten">Öffnungszeiten</a>
+      <a href="#standort">Standort</a>
+    </nav>
+    <a class="call-btn" href="tel:+41762422266">Anrufen</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Kaukasisches Bistro &amp; Café</p>
+        <h1>Khinkali, Khachapuri und echte kaukasische Gastfreundschaft.</h1>
+        <p class="lede">Timmuccino ist ein Bistro und Café, das authentische georgische und kaukasische Speisen serviert – Khinkali, Khachapuri und weitere traditionelle Gerichte in einer warmen Atmosphäre.</p>
+        <div class="hero-facts">
+          <div>Adresse<strong>Wülflingerstrasse 36, 8400 Winterthur</strong></div>
+          <div>Telefon<strong><a href="tel:+41762422266" style="color:inherit;text-decoration:none;">+41 76 242 22 66</a></strong></div>
+          <div>Google-Bewertung<strong>4.8 · 95 Rezensionen</strong></div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="https://timmuccino.ch/reservation-booking-calendar/" target="_blank" rel="noopener">Online reservieren</a>
+          <a class="btn btn-outline" href="#speisekarte">Zur Speisekarte</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <img src="https://timmuccino.ch/wp-content/uploads/2025/01/pexels-valeriya-25390110-scaled-e1761001162969.jpg" alt="Kaukasische Speisen bei Timmuccino" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-band" aria-hidden="true"></div>
+
+  <section class="menu-section" id="speisekarte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Zuerst das Wesentliche</p>
+        <h2>Signature-Gerichte</h2>
+        <p>Vier Gerichte aus der kaukasischen und osteuropäischen Küche – von Hand gefüllt, traditionell zubereitet.</p>
+      </div>
+      <div class="filter-row reveal" id="filterRow" role="group" aria-label="Nach Herkunft filtern">
+        <button class="chip" data-region="all" aria-pressed="true">Alle</button>
+        <button class="chip" data-region="Georgian">Georgisch</button>
+        <button class="chip" data-region="Russian">Russisch</button>
+        <button class="chip" data-region="Ukrainian">Ukrainisch</button>
+      </div>
+      <div class="dish-grid reveal" id="dishGrid">
+        <article class="dish-card" data-region="Georgian">
+          <h3>Khinkali</h3>
+          <span class="region">Georgisch</span>
+          <p class="desc">Georgian dumplings with meat filling</p>
+        </article>
+        <article class="dish-card" data-region="">
+          <h3>Khachapuri</h3>
+          <p class="desc">Cheese-filled bread</p>
+        </article>
+        <article class="dish-card" data-region="Russian">
+          <h3>Pelmeni</h3>
+          <span class="region">Russisch</span>
+          <p class="desc">Russian dumplings</p>
+        </article>
+        <article class="dish-card" data-region="Ukrainian">
+          <h3>Vareniky</h3>
+          <span class="region">Ukrainisch</span>
+          <p class="desc">Ukrainian potato dumplings</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-band thin" aria-hidden="true"></div>
+
+  <section class="hospitality reveal" id="gastfreundschaft">
+    <div class="wrap hosp-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Über uns</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.4rem);">Am Tisch ist jeder Gast</h2>
+        <p style="margin-top:16px;">Timmuccino ist ein Bistro und Café, das authentische georgische und kaukasische Speisen serviert. Das Lokal bietet Khinkali (gefüllte Teigtaschen), Khachapuri und andere traditionelle Gerichte in einer warmen Atmosphäre.</p>
+      </div>
+      <ul class="usp-list">
+        <li><span class="dot"></span>Authentische georgische Küche</li>
+        <li><span class="dot"></span>Khinkali- und Khachapuri-Spezialitäten</li>
+        <li><span class="dot"></span>Warme Gastfreundschaft</li>
+        <li><span class="dot"></span>Online-Reservation verfügbar</li>
+        <li><span class="dot"></span>Mittags- und Abendservice</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="cross-divider" aria-hidden="true"><span></span></div>
+
+  <section class="supra reveal" id="tradition">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Kaukasische Tischkultur</p>
+        <h2>Die Supra – ein Tisch, viele Stimmen</h2>
+        <p>In Georgien ist die Supra weit mehr als ein Essen: eine festliche Tafel, angeführt von einem Tamada (Tischmeister), reich an Trinksprüchen, Gesang und geteiltem Brot. Dieser Geist von Grosszügigkeit und Gastfreundschaft prägt die georgische Küche bis heute.</p>
+      </div>
+      <div class="supra-grid">
+        <div class="supra-card">
+          <span class="supra-num">01</span>
+          <h3>Tamada</h3>
+          <p>Der Tischmeister leitet die Runde, spricht Trinksprüche und hält die Tafel zusammen.</p>
+        </div>
+        <div class="supra-card">
+          <span class="supra-num">02</span>
+          <h3>Gemeinsame Platten</h3>
+          <p>Gerichte wie Khinkali und Khachapuri kommen in die Mitte – zum Teilen gedacht.</p>
+        </div>
+        <div class="supra-card">
+          <span class="supra-num">03</span>
+          <h3>Grosszügigkeit</h3>
+          <p>Gäste sollen satt und willkommen die Tafel verlassen – der Kern kaukasischer Gastfreundschaft.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-band thin" aria-hidden="true"></div>
+
+  <section class="reserve-section" id="reservieren">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Tisch anfragen</p>
+        <h2>Reservation zusammenstellen</h2>
+        <p>Angaben eintragen – daraus wird eine fertige Anfrage per E-Mail, direkt an Timmuccino.</p>
+      </div>
+      <div class="reserve-grid reveal">
+        <form class="reserve-form" id="reserveForm">
+          <div class="field-row">
+            <div class="field">
+              <label for="rName">Name</label>
+              <input id="rName" type="text" placeholder="Vor- und Nachname" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="rGuests">Personen</label>
+              <input id="rGuests" type="number" min="1" max="20" value="2">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="rDate">Datum</label>
+              <input id="rDate" type="date">
+            </div>
+            <div class="field">
+              <label for="rTime">Uhrzeit</label>
+              <input id="rTime" type="time" value="19:00">
+            </div>
+          </div>
+          <div class="field">
+            <label for="rNote">Anmerkung (optional)</label>
+            <textarea id="rNote" rows="2" placeholder="z. B. Allergien, Anlass"></textarea>
+          </div>
+        </form>
+        <div>
+          <div class="reserve-output" id="reserveOutput">Angaben eintragen, um die Anfrage zu sehen.</div>
+          <div class="reserve-actions">
+            <a class="btn btn-solid" id="mailtoBtn" href="mailto:reservation@timmuccino.ch">Per E-Mail anfragen</a>
+            <a class="btn btn-outline" href="https://timmuccino.ch/reservation-booking-calendar/" target="_blank" rel="noopener">Online-Kalender</a>
+          </div>
+          <div class="direct-contacts">
+            <div>Telefon: <a href="tel:+41762422266">+41 76 242 22 66</a></div>
+            <div>E-Mail: <a href="mailto:reservation@timmuccino.ch">reservation@timmuccino.ch</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-band" aria-hidden="true"></div>
+
+  <section id="zeiten">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Planbar vorbeikommen</p>
+        <h2>Öffnungszeiten &amp; Bewertungen</h2>
+      </div>
+      <div class="hours-wrap">
+        <div class="reveal">
+          <table class="hours" id="hoursTable">
+            <thead><tr><th scope="col">Tage</th><th scope="col">Uhrzeit</th></tr></thead>
+            <tbody>
+              <tr data-days="2,3,4"><td>Di–Do</td><td>08:30–13:30, 17:00–22:00</td></tr>
+              <tr data-days="5"><td>Fr</td><td>08:30–13:30, 17:00–00:00</td></tr>
+              <tr data-days="6"><td>Sa</td><td>16:00–00:00</td></tr>
+            </tbody>
+          </table>
+          <p class="closed-note">Sonntag &amp; Montag geschlossen. Reservation empfohlen.</p>
+        </div>
+        <div class="rating-card reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <div class="rating-num">4.8 <span style="font-size:14px;color:var(--muted);font-family:'Karla',sans-serif;">/ 5</span></div>
+          <div class="rating-sub">95 Google-Bewertungen</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-band thin" aria-hidden="true"></div>
+
+  <section id="standort">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Vorbeikommen</p>
+        <h2>Standort</h2>
+      </div>
+      <div class="loc-grid reveal">
+        <iframe src="https://maps.google.com/maps?q=W%C3%BClflingerstrasse%2036%2C%208400%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Karte: Wülflingerstrasse 36, 8400 Winterthur" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+          <dl class="addr-list">
+            <div><dt>Adresse</dt><dd>Wülflingerstrasse 36, 8400 Winterthur</dd></div>
+            <div><dt>Telefon</dt><dd><a href="tel:+41762422266">+41 76 242 22 66</a></dd></div>
+            <div><dt>E-Mail</dt><dd><a href="mailto:reservation@timmuccino.ch">reservation@timmuccino.ch</a></dd></div>
+          </dl>
+          <div class="social-row">
+            <a href="https://www.instagram.com/timmuccino.winterthur/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Timmuccino</h3>
+        <p>Wülflingerstrasse 36, 8400 Winterthur</p>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <p><a href="tel:+41762422266">+41 76 242 22 66</a></p>
+        <p><a href="mailto:reservation@timmuccino.ch">reservation@timmuccino.ch</a></p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <p><a href="https://www.instagram.com/timmuccino.winterthur/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="fine">
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+      <span>Kaukasische Küche in Winterthur</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" role="navigation" aria-label="Mobile Schnellaktionen">
+  <a href="tel:+41762422266" class="primary">Anrufen</a>
+  <a href="#reservieren">Reservieren</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- dish explorer: filters real menu items by region parsed from real descriptions ---------- */
+  var chips = document.querySelectorAll("#filterRow .chip");
+  var cards = document.querySelectorAll("#dishGrid .dish-card");
+  chips.forEach(function(chip){
+    chip.addEventListener("click", function(){
+      chips.forEach(function(c){ c.setAttribute("aria-pressed","false"); });
+      chip.setAttribute("aria-pressed","true");
+      var region = chip.getAttribute("data-region");
+      cards.forEach(function(card){
+        if(region === "all" || card.getAttribute("data-region") === region){
+          card.hidden = false;
+        } else {
+          card.hidden = true;
+        }
+      });
+    });
+  });
+
+  /* ---------- reservation composer: builds a mailto: request from real contact data ---------- */
+  var form = document.getElementById("reserveForm");
+  var output = document.getElementById("reserveOutput");
+  var mailtoBtn = document.getElementById("mailtoBtn");
+  var EMAIL = "reservation@timmuccino.ch";
+
+  function buildMessage(){
+    var name = document.getElementById("rName").value.trim();
+    var guests = document.getElementById("rGuests").value;
+    var date = document.getElementById("rDate").value;
+    var time = document.getElementById("rTime").value;
+    var note = document.getElementById("rNote").value.trim();
+
+    var lines = [];
+    lines.push("Tischreservation Timmuccino");
+    lines.push("");
+    if(name) lines.push("Name: " + name);
+    lines.push("Personen: " + (guests || "–"));
+    if(date) lines.push("Datum: " + date);
+    if(time) lines.push("Uhrzeit: " + time);
+    if(note) lines.push("Anmerkung: " + note);
+
+    var summary = (name ? "<strong>" + name + "</strong> · " : "") +
+      (guests || "?") + " Pers." +
+      (date ? " · " + date : "") +
+      (time ? " · " + time + " Uhr" : "") +
+      (note ? " · " + note : "");
+    output.innerHTML = summary || "Angaben eintragen, um die Anfrage zu sehen.";
+
+    var subject = encodeURIComponent("Tischreservation – " + (name || "Timmuccino"));
+    var body = encodeURIComponent(lines.join("\n"));
+    mailtoBtn.href = "mailto:" + EMAIL + "?subject=" + subject + "&body=" + body;
+  }
+  if(form){
+    form.addEventListener("input", buildMessage);
+    buildMessage();
+  }
+
+  /* ---------- highlight today's row in the hours table ---------- */
+  var todayDow = new Date().getDay();
+  document.querySelectorAll("#hoursTable tbody tr").forEach(function(row){
+    var days = row.getAttribute("data-days").split(",").map(Number);
+    row.setAttribute("data-today", days.indexOf(todayDow) > -1 ? "true" : "false");
+  });
+
+  /* ---------- scroll reveals ---------- */
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+</body>
+</html>

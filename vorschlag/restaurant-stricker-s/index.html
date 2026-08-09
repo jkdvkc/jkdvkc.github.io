@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stricker's Restaurant &amp; Bar — Fusion-Küche &amp; Bar in Winterthur</title>
+<meta name="description" content="Stricker's Restaurant &amp; Bar Winterthur: Fusionsküche mit globalen Einflüssen, Shared-Dining-Erlebnisse, saisonale Zutaten, Garten. Restaurant und Bar an einem Ort.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Stricker's Restaurant &amp; Bar — Winterthur">
+<meta property="og:description" content="Vier Winterthurer Freunde teilen Gastfreundschaft und kulinarische Leidenschaft. Fusionsküche, Garten, Bar.">
+<meta property="og:url" content="https://restaurant-strickers.ch/">
+<meta property="og:image" content="https://restaurant-strickers.ch/wp-content/uploads/2020/01/ek-strickers-10.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Stricker's Restaurant & Bar",
+  "description": "Das Restaurant-Konzept betont Shared-Dining-Erlebnisse mit saisonalen Zutaten und globalen Einflüssen, die Fusionsküche an einem zentralen Ort mit Garten schaffen.",
+  "url": "https://restaurant-strickers.ch/",
+  "telephone": "+41 52 213 69 69",
+  "servesCuisine": ["Fusion", "International"],
+  "image": [
+    "https://restaurant-strickers.ch/wp-content/uploads/2020/01/ek-strickers-10.jpg",
+    "https://restaurant-strickers.ch/wp-content/uploads/2025/12/20251009_154710-scaled.jpg",
+    "https://restaurant-strickers.ch/wp-content/uploads/2020/01/ek-strickers-8.jpg"
+  ],
+  "logo": "https://restaurant-strickers.ch/wp-content/uploads/2016/05/strickers_logo_web.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "897"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --bg:#14171a;
+    --surface:#1d2124;
+    --fg:#f3efe4;
+    --muted:#aca79c;
+    --brand:#ff5a36;
+    --accent:#d7ff57;
+    --line: rgba(243,239,228,.14);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important}
+  }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Work Sans', sans-serif;
+    font-size:clamp(15px, .4vw + 14.3px, 18px);
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:'Big Shoulders Display', sans-serif; font-weight:900; margin:0; text-transform:uppercase; letter-spacing:.01em; line-height:.92}
+  .label{font-family:'Work Sans',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:.2em; font-size:12px; color:var(--accent)}
+  .wrap{max-width:1220px; margin:0 auto; padding:0 clamp(20px,5vw,64px)}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1; transform:none}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none} }
+
+  /* header */
+  header.site{position:sticky; top:0; z-index:50; background:rgba(20,23,26,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line)}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:14px clamp(20px,5vw,64px)}
+  .brandmark{display:flex; align-items:center; gap:10px; text-decoration:none}
+  .brandmark img{height:34px; width:auto; filter:brightness(0) invert(1)}
+  .brandmark span{font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:22px; letter-spacing:.02em}
+  nav.links{display:flex; gap:clamp(14px,2vw,30px)}
+  nav.links a{text-decoration:none; font-weight:600; font-size:13.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--fg); padding:6px 2px; border-bottom:2px solid transparent}
+  nav.links a:hover, nav.links a.active{border-color:var(--accent); color:var(--accent)}
+  .call-pill{font-weight:800; font-size:13.5px; text-transform:uppercase; letter-spacing:.05em; background:var(--brand); color:#191113; padding:11px 20px; text-decoration:none; white-space:nowrap}
+  .call-pill:hover{background:#ff7a5c}
+  .nav-toggle{display:none; background:none; border:1px solid var(--fg); width:42px; height:42px; cursor:pointer; position:relative}
+  .nav-toggle::before, .nav-toggle::after{content:''; position:absolute; left:11px; right:11px; height:2px; background:var(--fg)}
+  .nav-toggle::before{top:16px} .nav-toggle::after{bottom:16px}
+  .mobile-menu{display:none; flex-direction:column; padding:0 clamp(20px,5vw,64px) 16px; border-top:1px solid var(--line)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{text-decoration:none; color:var(--fg); font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:13px 0; border-bottom:1px solid var(--line)}
+
+  /* hero split */
+  .hero{position:relative; overflow:hidden; min-height:clamp(520px,86vh,880px); display:flex; align-items:stretch}
+  .hero-half{position:relative; width:50%; overflow:hidden; display:flex; align-items:flex-end}
+  .hero-half img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+  .hero-half.restaurant{background:#241a15}
+  .hero-half.restaurant::after{content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,10,6,.92), rgba(20,10,6,.35) 55%, rgba(20,10,6,.5))}
+  .hero-half.bar{background:#0f1c17}
+  .hero-half.bar::after{content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(6,18,12,.92), rgba(6,18,12,.35) 55%, rgba(6,18,12,.5))}
+  .hero-half-label{position:relative; z-index:2; padding:clamp(20px,4vw,40px); font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:clamp(30px,6vw,64px); text-transform:uppercase}
+  .hero-half.restaurant .hero-half-label{color:var(--brand)}
+  .hero-half.bar .hero-half-label{color:var(--accent)}
+  .hero-seam{
+    position:absolute; top:0; bottom:0; left:50%; width:3px; background:var(--fg); z-index:3; transform:translateX(-1.5px);
+  }
+  .hero-center{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:4; text-align:center; width:min(90vw,640px);
+  }
+  .hero-center h1{font-size:clamp(40px,7vw,88px); color:var(--fg); text-shadow:0 4px 30px rgba(0,0,0,.6)}
+  .hero-center .tag{font-family:'Work Sans',sans-serif; font-weight:500; font-style:italic; font-size:clamp(15px,1.6vw,20px); color:var(--fg); margin-top:16px; text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .hero-cta{margin-top:26px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+  .btn-primary{background:var(--brand); color:#19110d; text-decoration:none; font-weight:800; font-size:13.5px; text-transform:uppercase; letter-spacing:.05em; padding:15px 26px; display:inline-block}
+  .btn-primary:hover{background:#ff7a5c}
+  .btn-outline{background:transparent; color:var(--fg); border:1px solid var(--fg); text-decoration:none; font-weight:800; font-size:13.5px; text-transform:uppercase; letter-spacing:.05em; padding:14px 26px; display:inline-block}
+  .btn-outline:hover{border-color:var(--accent); color:var(--accent)}
+
+  @media (max-width:760px){
+    .hero{flex-direction:column; min-height:auto}
+    .hero-half{width:100%; height:46vh}
+    .hero-seam{display:none}
+    .hero-center{position:static; transform:none; width:auto; padding:32px clamp(20px,5vw,40px); background:var(--bg)}
+  }
+
+  /* concept / usps */
+  .concept{padding:clamp(48px,8vw,90px) 0; border-top:1px solid var(--line)}
+  .concept-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px,6vw,70px); align-items:start}
+  .concept h2{font-size:clamp(34px,4.4vw,58px)}
+  .concept p{max-width:52ch; color:var(--fg); margin-top:18px}
+  .tag-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
+  .tag-pill{
+    border:1px solid var(--line); padding:9px 16px; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.04em;
+  }
+  .tag-pill:nth-child(odd){border-color:var(--brand); color:var(--brand)}
+  .tag-pill:nth-child(even){border-color:var(--accent); color:var(--accent)}
+  @media (max-width:820px){ .concept-grid{grid-template-columns:1fr} }
+
+  /* shared dining calculator — signature module */
+  .split{padding:clamp(54px,8vw,100px) 0; border-top:1px solid var(--line); background:var(--surface)}
+  .split-head{max-width:680px}
+  .split-head h2{font-size:clamp(32px,4vw,54px)}
+  .split-head p{color:var(--muted); margin-top:14px; max-width:56ch}
+  .calc{
+    margin-top:clamp(34px,5vw,52px); display:grid; grid-template-columns:1.3fr .9fr; gap:0;
+    border:1px solid var(--line);
+  }
+  .calc-items{padding:clamp(20px,3vw,32px); border-right:1px solid var(--line)}
+  .calc-item{display:grid; grid-template-columns:1fr auto auto; gap:14px; align-items:center; padding:14px 0; border-bottom:1px solid var(--line)}
+  .calc-item:last-child{border-bottom:none}
+  .calc-item .name{font-weight:600; font-size:15px}
+  .calc-item .name small{display:block; color:var(--muted); font-weight:500; font-size:12.5px; margin-top:2px}
+  .calc-item .price{font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:19px; color:var(--brand); white-space:nowrap}
+  .stepper{display:flex; align-items:center; gap:0; border:1px solid var(--line)}
+  .stepper button{
+    background:none; border:0; color:var(--fg); width:32px; height:32px; font-size:16px; cursor:pointer; font-family:inherit;
+  }
+  .stepper button:hover{color:var(--accent)}
+  .stepper .qty{width:28px; text-align:center; font-weight:700; font-size:14px}
+  .calc-summary{padding:clamp(20px,3vw,32px); display:flex; flex-direction:column; gap:18px}
+  .guests-field{display:flex; align-items:center; justify-content:space-between; gap:10px}
+  .guests-field label{font-weight:700; font-size:13.5px; text-transform:uppercase; letter-spacing:.05em}
+  .guests-field .stepper .qty{width:32px}
+  .calc-total{border-top:1px solid var(--line); padding-top:18px}
+  .calc-total .row{display:flex; justify-content:space-between; padding:6px 0; font-size:14.5px; color:var(--muted)}
+  .calc-total .row.grand{color:var(--fg); font-weight:700; font-size:16px; border-top:1px solid var(--line); padding-top:12px; margin-top:6px}
+  .calc-total .row.per{color:var(--accent); font-weight:800; font-size:22px; font-family:'Big Shoulders Display',sans-serif; padding-top:10px}
+  .calc-note{font-size:12.5px; color:var(--muted)}
+  @media (max-width:780px){ .calc{grid-template-columns:1fr} .calc-items{border-right:none; border-bottom:1px solid var(--line)} }
+
+  /* menu */
+  .menu{padding:clamp(52px,8vw,96px) 0; border-top:1px solid var(--line)}
+  .menu-head{max-width:640px}
+  .menu-head h2{font-size:clamp(32px,4vw,54px)}
+  .menu-sections{display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,60px); margin-top:clamp(30px,5vw,50px)}
+  .menu-section h3{font-size:clamp(20px,2vw,26px); color:var(--accent); margin-bottom:16px; text-transform:uppercase}
+  .menu-row{display:flex; justify-content:space-between; gap:10px; padding:12px 0; border-bottom:1px solid var(--line)}
+  .menu-row .n{font-weight:600}
+  .menu-row .p{font-family:'Big Shoulders Display',sans-serif; font-weight:800; color:var(--brand); white-space:nowrap}
+  .menu-section.desserts{grid-column:1 / -1; max-width:560px}
+  @media (max-width:760px){ .menu-sections{grid-template-columns:1fr} .menu-section.desserts{max-width:none} }
+
+  /* gallery */
+  .gallery{padding:clamp(48px,7vw,90px) 0; border-top:1px solid var(--line); background:var(--surface)}
+  .gallery-head{max-width:640px; margin-bottom:clamp(28px,4vw,40px)}
+  .gallery-head h2{font-size:clamp(30px,3.4vw,46px)}
+  .grid-photos{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+  .grid-photos figure{margin:0; overflow:hidden; aspect-ratio:4/5; background:var(--bg)}
+  .grid-photos img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease; filter:grayscale(.15)}
+  .grid-photos figure:hover img{transform:scale(1.05)}
+  @media (prefers-reduced-motion:reduce){ .grid-photos figure:hover img{transform:none} }
+  @media (max-width:700px){ .grid-photos{grid-template-columns:1fr 1fr} }
+
+  /* contact */
+  .contact{padding:clamp(52px,8vw,100px) 0; border-top:1px solid var(--line)}
+  .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px,6vw,70px)}
+  .contact h2{font-size:clamp(30px,3.6vw,50px)}
+  .info-list{list-style:none; padding:0; margin:24px 0 0}
+  .info-list li{padding:14px 0; border-top:1px solid var(--line)}
+  .info-list li:last-child{border-bottom:1px solid var(--line)}
+  .info-list .k{display:block; font-size:11.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:4px}
+  .info-list .v{font-size:16px; font-weight:600}
+  .info-list a{text-decoration:none; border-bottom:1px solid var(--line)}
+  .hours-note{margin-top:22px; padding:16px 18px; border:1px solid var(--line); font-size:14px; color:var(--muted)}
+  .map-frame{border:1px solid var(--line); overflow:hidden; min-height:320px}
+  .map-frame iframe{width:100%; height:100%; min-height:320px; border:0; display:block}
+  @media (max-width:860px){ .contact-grid{grid-template-columns:1fr} }
+
+  footer{padding:32px 0 96px; border-top:1px solid var(--line)}
+  .foot-row{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center; font-size:12.5px; color:var(--muted); font-weight:600}
+
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:50; display:none; align-items:center; justify-content:center;
+    background:var(--brand); color:#19110d; padding:14px 20px; text-decoration:none; font-weight:800; letter-spacing:.03em; text-transform:uppercase;
+  }
+  @media (max-width:760px){
+    .mobile-bar{display:flex} body{padding-bottom:58px}
+    nav.links{display:none} .nav-toggle{display:block}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="brandmark" href="#top">
+      <img src="https://restaurant-strickers.ch/wp-content/uploads/2016/05/strickers_logo_web.png" alt="Stricker's Logo" onerror="this.remove()">
+      <span>Stricker's</span>
+    </a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="#konzept">Konzept</a>
+      <a href="#teilen">Teilen-Rechner</a>
+      <a href="#karte">Karte</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="call-pill" href="tel:+41522136969">Reservieren</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menü öffnen"></button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+    <a href="#konzept">Konzept</a>
+    <a href="#teilen">Teilen-Rechner</a>
+    <a href="#karte">Karte</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO — bold editorial split -->
+  <section class="hero">
+    <div class="hero-half restaurant">
+      <img src="https://restaurant-strickers.ch/wp-content/uploads/2020/01/ek-strickers-10.jpg" alt="Restaurant-Bereich bei Stricker's" onerror="this.remove()">
+      <span class="hero-half-label">Restaurant</span>
+    </div>
+    <span class="hero-seam" aria-hidden="true"></span>
+    <div class="hero-half bar">
+      <img src="https://restaurant-strickers.ch/wp-content/uploads/2020/01/ek-strickers-8.jpg" alt="Bar-Bereich bei Stricker's" onerror="this.remove()">
+      <span class="hero-half-label">Bar</span>
+    </div>
+    <div class="hero-center">
+      <h1>Stricker's</h1>
+      <p class="tag">Vier Winterthurer Freunde teilen Gastfreundschaft und kulinarische Leidenschaft.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="tel:+41522136969">Tisch reservieren</a>
+        <a class="btn-outline" href="#karte">Zur Karte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="concept" id="konzept">
+    <div class="wrap concept-grid">
+      <div class="reveal">
+        <p class="label">Das Konzept</p>
+        <h2>Eine Adresse.<br>Zwei Welten.</h2>
+      </div>
+      <div class="reveal">
+        <p>Das Restaurant-Konzept betont Shared-Dining-Erlebnisse mit saisonalen Zutaten und globalen Einflüssen, die Fusionsküche an einem zentralen Ort mit Garten schaffen.</p>
+        <div class="tag-row">
+          <span class="tag-pill">Fusion cuisine with global influences</span>
+          <span class="tag-pill">Shared dining experiences</span>
+          <span class="tag-pill">Seasonal ingredients</span>
+          <span class="tag-pill">Garden setting</span>
+          <span class="tag-pill">City-center location</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARED-DINING CALCULATOR — signature module -->
+  <section class="split" id="teilen">
+    <div class="wrap">
+      <div class="split-head reveal">
+        <p class="label">Signature · Teilen-Rechner</p>
+        <h2>Teilen wie bei Freunden</h2>
+        <p>Shared Dining ist unser Konzept — also rechnen wir es vor. Wählen Sie Gerichte von unserer echten Karte, tragen Sie die Anzahl Gäste ein: der Rechner teilt live auf.</p>
+      </div>
+
+      <div class="calc reveal">
+        <div class="calc-items" id="calcItems"><!-- filled by JS from real menu data --></div>
+        <div class="calc-summary">
+          <div class="guests-field">
+            <label for="guestCount">Anzahl Gäste</label>
+            <div class="stepper">
+              <button type="button" id="guestMinus" aria-label="Gäste verringern">−</button>
+              <span class="qty" id="guestCount">2</span>
+              <button type="button" id="guestPlus" aria-label="Gäste erhöhen">+</button>
+            </div>
+          </div>
+          <div class="calc-total">
+            <div class="row"><span>Gerichte gewählt</span><span id="calcCountItems">0</span></div>
+            <div class="row grand"><span>Zwischensumme</span><span id="calcSubtotal">CHF 0.00</span></div>
+            <div class="row per"><span>Pro Person</span><span id="calcPerPerson">CHF 0.00</span></div>
+          </div>
+          <p class="calc-note">Richtwert auf Basis der Kartenpreise. Getränke, Suppe/Gartensalat (im Hauptgang inbegriffen) und Servicepauschale nicht eingerechnet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="karte">
+    <div class="wrap">
+      <div class="menu-head reveal">
+        <p class="label">Die Karte</p>
+        <h2>Vorspeisen. Hauptgänge. Dessert.</h2>
+      </div>
+      <div class="menu-sections reveal">
+        <div class="menu-section">
+          <h3>Vorspeisen</h3>
+          <div class="menu-row"><span class="n">Suppe oder Gartensalat</span><span class="p">Included with main</span></div>
+        </div>
+        <div class="menu-section">
+          <h3>Hauptgänge</h3>
+          <div class="menu-row"><span class="n">Paniertes Putenschnitzel</span><span class="p">CHF 28</span></div>
+          <div class="menu-row"><span class="n">Pflanzliches Auberginen-Ragout</span><span class="p">CHF 25</span></div>
+          <div class="menu-row"><span class="n">Hausmadische Pasta mit Pesto</span><span class="p">CHF 25</span></div>
+          <div class="menu-row"><span class="n">Schweizer Rinderschmorbraten</span><span class="p">CHF 38</span></div>
+          <div class="menu-row"><span class="n">Rindertartar (klein/gross)</span><span class="p">CHF 24/38</span></div>
+          <div class="menu-row"><span class="n">Reisschüsseln (Tofu/Huhn/Lachs)</span><span class="p">CHF 25–30</span></div>
+        </div>
+        <div class="menu-section desserts">
+          <h3>Desserte</h3>
+          <div class="menu-row"><span class="n">Schwarzer Sesam Eis</span><span class="p">CHF 8.50</span></div>
+          <div class="menu-row"><span class="n">Hausgemachter Kuchen</span><span class="p">CHF 6.50</span></div>
+          <div class="menu-row"><span class="n">Eiscreme-Kreationen</span><span class="p">CHF 5.50</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="wrap">
+      <div class="gallery-head reveal">
+        <p class="label">Impressionen</p>
+        <h2>Restaurant, Garten &amp; Bar</h2>
+      </div>
+      <div class="grid-photos reveal">
+        <figure><img src="https://restaurant-strickers.ch/wp-content/uploads/2025/12/20251009_154710-scaled.jpg" alt="Ambiente bei Stricker's" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://restaurant-strickers.ch/wp-content/uploads/2025/12/20251009_160505-scaled.jpg" alt="Gastraum bei Stricker's" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://restaurant-strickers.ch/wp-content/uploads/2025/12/20250812_162846-scaled.jpg" alt="Garten bei Stricker's" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="label">Kontakt</p>
+        <h2>Reservieren Sie.</h2>
+        <ul class="info-list">
+          <li><span class="k">Telefon</span><span class="v"><a href="tel:+41522136969">+41 52 213 69 69</a></span></li>
+          <li><span class="k">Website</span><span class="v"><a href="https://restaurant-strickers.ch/" target="_blank" rel="noopener">restaurant-strickers.ch</a></span></li>
+        </ul>
+        <p class="hours-note">Öffnungszeiten Di–Fr, genaue Zeiten sind auf der Website nicht angegeben — bitte telefonisch erfragen. Eine Adresse ist online nicht hinterlegt.</p>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://maps.google.com/maps?q=Stricker%27s%20Restaurant%20%26%20Bar%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Stricker's Restaurant &amp; Bar Winterthur" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <p>© 2026 Stricker's Restaurant &amp; Bar, Winterthur</p>
+    <p>Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="mobile-bar" href="tel:+41522136969">Jetzt anrufen · +41 52 213 69 69</a>
+
+<script>
+(function(){
+  "use strict";
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.14});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Mobile nav toggle
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(navToggle && mobileMenu){
+    navToggle.addEventListener('click', function(){
+      var open = mobileMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  // Scrollspy
+  var navAnchors = document.querySelectorAll('nav.links a[href^="#"]');
+  var sections = Array.prototype.map.call(navAnchors, function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if('IntersectionObserver' in window && sections.length){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id = '#' + en.target.id;
+          navAnchors.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === id); });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+  // ---- Signature module: Shared-Dining "Teilen-Rechner" — built from real, verbatim menu prices ----
+  var DISHES = [
+    { name:'Paniertes Putenschnitzel', price:28 },
+    { name:'Pflanzliches Auberginen-Ragout', price:25 },
+    { name:'Hausmadische Pasta mit Pesto', price:25 },
+    { name:'Schweizer Rinderschmorbraten', price:38 },
+    { name:'Rindertartar', note:'klein — CHF 24', price:24 },
+    { name:'Rindertartar', note:'gross — CHF 38', price:38 },
+    { name:'Reisschüsseln', note:'Tofu/Huhn/Lachs — ab CHF 25', price:25 },
+    { name:'Schwarzer Sesam Eis', price:8.50 },
+    { name:'Hausgemachter Kuchen', price:6.50 },
+    { name:'Eiscreme-Kreationen', price:5.50 }
+  ];
+
+  var state = { qty: DISHES.map(function(){ return 0; }), guests: 2 };
+
+  function chf(n){ return 'CHF ' + n.toFixed(2); }
+
+  function renderItems(){
+    var host = document.getElementById('calcItems');
+    host.innerHTML = '';
+    DISHES.forEach(function(dish, i){
+      var row = document.createElement('div');
+      row.className = 'calc-item';
+      row.innerHTML =
+        '<span class="name">' + dish.name + (dish.note ? '<small>' + dish.note + '</small>' : '') + '</span>' +
+        '<span class="price">' + chf(dish.price) + '</span>' +
+        '<span class="stepper">' +
+          '<button type="button" data-action="minus" data-i="' + i + '" aria-label="' + dish.name + ' entfernen">−</button>' +
+          '<span class="qty" id="qty-' + i + '">0</span>' +
+          '<button type="button" data-action="plus" data-i="' + i + '" aria-label="' + dish.name + ' hinzufügen">+</button>' +
+        '</span>';
+      host.appendChild(row);
+    });
+  }
+
+  function recalc(){
+    var subtotal = 0, count = 0;
+    state.qty.forEach(function(q, i){
+      subtotal += q * DISHES[i].price;
+      count += q;
+      var qtyEl = document.getElementById('qty-' + i);
+      if(qtyEl) qtyEl.textContent = q;
+    });
+    document.getElementById('calcCountItems').textContent = count;
+    document.getElementById('calcSubtotal').textContent = chf(subtotal);
+    document.getElementById('calcPerPerson').textContent = chf(state.guests > 0 ? subtotal / state.guests : subtotal);
+    document.getElementById('guestCount').textContent = state.guests;
+  }
+
+  renderItems();
+  recalc();
+
+  document.getElementById('calcItems').addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-action]');
+    if(!btn) return;
+    var i = parseInt(btn.getAttribute('data-i'), 10);
+    if(btn.getAttribute('data-action') === 'plus'){ state.qty[i]++; }
+    else { state.qty[i] = Math.max(0, state.qty[i] - 1); }
+    recalc();
+  });
+
+  document.getElementById('guestPlus').addEventListener('click', function(){
+    state.guests = Math.min(20, state.guests + 1); recalc();
+  });
+  document.getElementById('guestMinus').addEventListener('click', function(){
+    state.guests = Math.max(1, state.guests - 1); recalc();
+  });
+})();
+</script>
+
+</body>
+</html>

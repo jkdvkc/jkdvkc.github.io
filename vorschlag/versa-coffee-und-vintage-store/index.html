@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>versa. coffee &amp; vintage store — Winterthur Altstadt</title>
+<meta name="description" content="versa. coffee &amp; vintage store, Stadthausstrasse 57 (Marktgasse 20), 8400 Winterthur: kuratierte Vintage-Mode und Kaffeebar unter einem Dach. 4.9 von 5 Sternen bei 75 Google-Bewertungen. Di–Sa 09:00–18:00, So–Mo geschlossen.">
+<meta property="og:title" content="versa. coffee &amp; vintage store, Winterthur">
+<meta property="og:description" content="Kuratierte Vintage-Mode, eine Kaffeebar und eine Bühne für lokale Kreativschaffende — in der Altstadt von Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://versavintage.ch/">
+<meta property="og:image" content="https://versavintage.ch/cdn/shop/files/DSCF0426.jpg?v=1739828768&width=3840">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["ClothingStore","CafeOrCoffeeShop"],
+  "name": "versa. coffee & vintage store",
+  "url": "https://versavintage.ch/",
+  "image": "https://versavintage.ch/cdn/shop/files/Logo_versa_gruen_transparent_1.png?height=628&pad_color=ffffff&v=1737280881&width=1200",
+  "email": "info@versavintage.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stadthausstrasse 57 (Marktgasse 20)",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "75"
+  },
+  "sameAs": [
+    "https://instagram.com/versa.xyz"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#f6f1e5;
+    --surface:#fffdf7;
+    --fg:#1c2a1c;
+    --muted:#4d5a4a;
+    --brand:#0a7a41;
+    --brand-bright:#00a64f;
+    --accent:#b04d1e;
+    --line: rgba(28,42,28,0.14);
+    --maxw:1180px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.75vw + 12.8px, 17px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Fraunces', ui-serif, Georgia, serif; font-weight:600; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  ::selection{ background:var(--brand-bright); color:#0e1a0f; }
+  section[id]{ scroll-margin-top:5.6rem; }
+  .eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:0.14em; font-size:0.72rem; color:var(--accent); }
+  .skip-link{ position:absolute; left:0.6rem; top:-3rem; z-index:100; background:var(--fg); color:var(--bg); padding:0.6rem 1rem; font-weight:700; text-decoration:none; transition:top .2s ease; }
+  .skip-link:focus{ top:0.6rem; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(246,241,229,0.92); backdrop-filter:blur(6px); padding:0.8rem 0; border-bottom:1px solid var(--line); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  .logo img{ height:2rem; width:auto; }
+  .logo-fallback{ font-family:'Fraunces',serif; font-weight:700; font-size:1.25rem; }
+  .badge-mini{ display:none; align-items:center; gap:0.4rem; font-size:0.76rem; font-weight:700; background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:0.32rem 0.75rem; }
+  .badge-mini .dot{ width:0.55rem; height:0.55rem; border-radius:50%; background:var(--brand-bright); }
+  .badge-mini.closed .dot{ background:var(--accent); }
+  nav.pill-nav{ display:flex; gap:0.2rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:600; font-size:0.8rem; padding:0.5rem 0.85rem; border-radius:999px; }
+  nav.pill-nav a:hover{ background:rgba(10,122,65,0.1); }
+  .navtoggle{ display:none; background:var(--fg); color:var(--bg); border:none; border-radius:999px; padding:0.5rem 1rem; font-weight:700; cursor:pointer; }
+
+  /* HERO — statement led, no photo */
+  .hero{ padding:clamp(2.4rem,7vw,4.4rem) 0 clamp(1.8rem,4vw,2.6rem); }
+  .hero h1{ font-size:clamp(2.3rem,6vw,4.1rem); line-height:1.03; max-width:15ch; }
+  .hero h1 em{ font-style:italic; color:var(--brand); }
+  .hero .sub{ font-size:clamp(1rem,1.6vw,1.2rem); color:var(--muted); font-weight:500; max-width:52ch; margin-top:1.2rem; }
+  .cta-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.6rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:700; text-decoration:none; padding:0.8rem 1.4rem; border-radius:999px; border:2px solid var(--fg); }
+  .btn.solid{ background:var(--fg); color:var(--bg); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.4rem; background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:0.5rem 1.05rem; font-weight:700; font-size:0.85rem; margin-top:1.4rem; }
+  .rating-chip b{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--brand); }
+  .fact-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem; margin-top:clamp(1.6rem,4vw,2.4rem); }
+  .fact-card{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1rem 1.1rem; }
+  .fact-card .k{ display:block; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--accent); margin-bottom:0.3rem; }
+  .fact-card .v{ font-weight:700; font-size:0.92rem; }
+
+  section{ padding:clamp(2.2rem,5vw,3.8rem) 0; }
+  .section-head{ margin-bottom:clamp(1.4rem,3vw,2.1rem); max-width:62ch; }
+  .section-head h2{ font-size:clamp(1.6rem,3.2vw,2.4rem); }
+  .section-head p{ color:var(--muted); font-weight:500; margin-top:0.55rem; }
+
+  /* ---------- SIGNATURE MODULE: the rail (weekly hours, hanging tags) ---------- */
+  .rail{ position:relative; padding-top:2.3rem; margin-top:0.4rem; }
+  .rail::before{ content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--fg),var(--brand)); border-radius:4px; }
+  .rail::after{ content:""; position:absolute; top:-4px; right:-4px; width:12px; height:12px; border-radius:50%; background:var(--accent); }
+  .rail-scroll{ overflow-x:auto; padding-bottom:0.6rem; -webkit-overflow-scrolling:touch; }
+  .rail-items{ display:flex; gap:1.5rem; width:max-content; padding:0 0.2rem; }
+  .tag{ position:relative; background:var(--surface); border:1px solid var(--line); border-radius:6px 6px 16px 16px; padding:1.5rem 1.15rem 1.1rem; min-width:118px; box-shadow:0 12px 20px -16px rgba(20,30,20,0.4); transition:transform .25s ease, border-color .25s ease; }
+  .tag::before{ content:""; position:absolute; top:-1.7rem; left:50%; width:2px; height:1.7rem; background:var(--fg); transform:translateX(-50%); }
+  .tag::after{ content:""; position:absolute; top:-2rem; left:50%; width:0.55rem; height:0.55rem; border-radius:50%; border:2px solid var(--fg); background:var(--bg); transform:translateX(-50%); }
+  .tag .day{ font-family:'Fraunces',serif; font-weight:700; font-size:1.05rem; }
+  .tag .stat{ display:block; margin-top:0.5rem; font-size:0.76rem; font-weight:700; color:var(--muted); }
+  .tag.open .stat{ color:var(--brand); }
+  .tag.today{ transform:translateY(-8px); border-color:var(--fg); }
+  @media (prefers-reduced-motion: reduce){ .tag.today{ transform:none; } }
+  .tag.today .stat::after{ content:" · heute"; }
+  .rail-status{ display:flex; align-items:center; gap:0.7rem; font-weight:700; margin-top:1.6rem; }
+  .rail-status .dot{ width:0.85rem; height:0.85rem; border-radius:50%; background:var(--brand-bright); flex:none; }
+  .rail-status.closed .dot{ background:var(--accent); }
+
+  /* ---------- second rail: two inventories in one room ---------- */
+  .tag.kind-mode{ border-top:4px solid var(--accent); }
+  .tag.kind-drink{ border-top:4px solid var(--brand-bright); }
+  .tag h4{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; margin:0.5rem 0 0.3rem; max-width:16ch; }
+  .tag p{ margin:0; font-size:0.82rem; color:var(--muted); font-weight:500; max-width:16ch; }
+  .tag .kind{ font-size:0.65rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; }
+  .tag.kind-mode .kind{ color:var(--accent); }
+  .tag.kind-drink .kind{ color:var(--brand); }
+  .legend{ display:flex; gap:1.4rem; flex-wrap:wrap; margin-top:1.6rem; font-size:0.82rem; font-weight:700; }
+  .legend span{ display:inline-flex; align-items:center; gap:0.45rem; }
+  .legend i{ width:0.8rem; height:0.8rem; border-radius:3px; display:inline-block; }
+  .legend .i-mode{ background:var(--accent); }
+  .legend .i-drink{ background:var(--brand-bright); }
+
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns:1fr 0.62fr; gap:clamp(1.8rem,4vw,3.2rem); align-items:start; }
+  .about-grid p{ max-width:58ch; font-weight:500; }
+  .mark-stamp{ width:96px; height:auto; opacity:0.9; margin-bottom:1rem; }
+  .founders{ background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:1.4rem 1.5rem; }
+  .founders .k{ font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--accent); }
+  .founders p{ margin:0.4rem 0 0; font-weight:700; font-family:'Fraunces',serif; font-size:1.05rem; }
+  .founders .since{ margin-top:0.9rem; font-weight:500; font-size:0.85rem; color:var(--muted); font-family:'Space Grotesk',sans-serif; }
+  .usp-list{ list-style:none; margin:1.2rem 0 0; padding:0; display:grid; gap:0.65rem; }
+  .usp-list li{ display:flex; gap:0.6rem; align-items:baseline; font-weight:600; }
+  .usp-list li::before{ content:"—"; color:var(--brand); flex:none; }
+
+  /* ---------- Gallery ---------- */
+  .photo-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0.9rem; }
+  .photo-grid figure{ margin:0; border-radius:18px; overflow:hidden; border:1px solid var(--line); }
+  .photo-grid img{ width:100%; height:230px; object-fit:cover; display:block; transition:transform .35s ease; }
+  .photo-grid figure:hover img{ transform:scale(1.05); }
+  @media (prefers-reduced-motion: reduce){ .photo-grid figure:hover img{ transform:none; } }
+
+  /* ---------- Reviews ---------- */
+  .review-strip{ display:flex; align-items:center; gap:clamp(1.2rem,3vw,2rem); background:var(--fg); color:var(--bg); border-radius:26px; padding:clamp(1.6rem,4vw,2.6rem); flex-wrap:wrap; }
+  .review-strip .stars{ font-size:clamp(2rem,4.6vw,2.8rem); font-family:'Fraunces',serif; font-weight:700; color:var(--brand-bright); }
+  .review-strip p{ margin:0; font-weight:600; max-width:42ch; }
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{ display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .contact-card{ background:var(--surface); border-radius:22px; padding:clamp(1.4rem,3vw,2rem); border:1px solid var(--line); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .contact-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .contact-card .row span.k{ font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--accent); }
+  .contact-card a{ text-decoration:none; font-weight:700; }
+  .contact-card a:hover{ color:var(--brand); }
+  .mapwrap{ border-radius:22px; overflow:hidden; border:1px solid var(--line); }
+  .mapwrap iframe{ width:100%; height:100%; min-height:280px; border:0; display:block; }
+  .social-row{ display:flex; gap:0.6rem; flex-wrap:wrap; }
+  .social-row a{ display:inline-flex; align-items:center; gap:0.4rem; text-decoration:none; font-weight:700; background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:0.5rem 1rem; font-size:0.85rem; }
+  .social-row a:hover{ background:var(--brand); color:#fff; }
+
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:var(--bg); }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:600; font-size:0.88rem; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.75; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--brand-bright); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--fg); color:var(--bg); padding:0.7rem 0.8rem; align-items:center; justify-content:center; gap:0.5rem; }
+  .callbar a{ flex:1; text-align:center; text-decoration:none; font-weight:700; font-family:'Fraunces',serif; font-size:0.92rem; padding:0.6rem 0.5rem; border-radius:999px; }
+  .callbar a.primary{ background:var(--brand-bright); color:#0e1a0f; }
+  .callbar a.secondary{ border:1.5px solid var(--bg); }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.4rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (min-width:640px){ .badge-mini{ display:inline-flex; } }
+  @media (max-width:860px){
+    .about-grid{ grid-template-columns:1fr; }
+    .contact-wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width:640px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.8rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+  }
+  @media (max-width:560px){ .fact-strip{ grid-template-columns:1fr; } }
+  @media (max-width:400px){ .hero h1{ font-size:2rem; } }
+  @media (max-width:360px){
+    .navrow{ gap:0.5rem; }
+    .rating-chip{ font-size:0.78rem; padding:0.4rem 0.8rem; }
+    .tag{ min-width:100px; padding:1.3rem 0.9rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top">
+      <img src="https://versavintage.ch/cdn/shop/files/Logo_versa_gruen_transparent_1.png?height=628&pad_color=ffffff&v=1737280881&width=1200" alt="versa. coffee &amp; vintage store Logo" height="32"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span class="logo-fallback" style="display:none;">versa.</span>
+    </a>
+    <span class="badge-mini" id="badge-mini" role="status" aria-live="polite"><span class="dot"></span><span id="badge-mini-text">…</span></span>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#rail-woche">Öffnungszeiten</a>
+      <a href="#sortiment">Sortiment</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO — statement, no photo -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow reveal">Vintage-Mode &amp; Kaffeebar · Altstadt Winterthur</p>
+      <h1 class="reveal">Zwei Sortimente. <em>Ein</em> Raum.</h1>
+      <p class="sub reveal">Kuratierte Vintage- und 2ndhand-Mode trifft auf eine gemütliche Kaffeebar.
+      Ein vielschichtiger Concept-Space, in dem Mode, Kaffee, Kunst und Kultur aufeinandertreffen —
+      und eine Bühne für lokale Marken und Kreativschaffende.</p>
+      <div class="cta-row reveal">
+        <a class="btn solid" href="mailto:info@versavintage.ch">E-Mail schreiben</a>
+        <a class="btn ghost" href="#rail-woche">Wann ist offen? ↓</a>
+      </div>
+      <div class="rating-chip reveal"><b>4.9</b>&nbsp;/ 5 · 75 Google-Bewertungen</div>
+      <div class="fact-strip reveal">
+        <div class="fact-card"><span class="k">Adresse</span><span class="v">Stadthausstrasse 57 (Marktgasse 20)</span></div>
+        <div class="fact-card"><span class="k">Öffnungszeiten</span><span class="v">Di–Sa 09:00–18:00</span></div>
+        <div class="fact-card"><span class="k">Kontakt</span><span class="v">info@versavintage.ch</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE 1: the rail — weekly hours as hanging tags, live status -->
+  <section id="rail-woche">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Die Woche am Rail</h2>
+        <p>Jeder Tag hängt als Etikett an der Stange — genau wie die Kleider im Laden. Der
+        heutige Tag ist hervorgehoben, live berechnet aus den echten Öffnungszeiten.</p>
+      </div>
+      <div class="rail reveal">
+        <div class="rail-scroll">
+          <div class="rail-items" id="week-rail">
+            <div class="tag" data-day="1"><span class="day">Mo</span><span class="stat">geschlossen</span></div>
+            <div class="tag" data-day="2"><span class="day">Di</span><span class="stat">09–18</span></div>
+            <div class="tag" data-day="3"><span class="day">Mi</span><span class="stat">09–18</span></div>
+            <div class="tag" data-day="4"><span class="day">Do</span><span class="stat">09–18</span></div>
+            <div class="tag" data-day="5"><span class="day">Fr</span><span class="stat">09–18</span></div>
+            <div class="tag" data-day="6"><span class="day">Sa</span><span class="stat">09–18</span></div>
+            <div class="tag" data-day="0"><span class="day">So</span><span class="stat">geschlossen</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="rail-status reveal" id="rail-status" role="status" aria-live="polite">
+        <span class="dot"></span><span id="rail-status-text">Status wird berechnet …</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE 2: two inventories, one rail -->
+  <section id="sortiment">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Was am Rail hängt</h2>
+        <p>Mode und Getränke, an derselben Stange: rostrot markiert das kuratierte
+        Vintage-Konzept, grün die Karte der Kaffeebar.</p>
+      </div>
+      <div class="rail reveal">
+        <div class="rail-scroll">
+          <div class="rail-items">
+            <div class="tag kind-mode"><span class="kind">Konzept</span><h4>Kuratierte Vintage-Mode</h4><p>2ndhand-Fundstücke</p></div>
+            <div class="tag kind-drink"><span class="kind">Heissgetränke</span><h4>Kaffee</h4><p>Espresso-Maschine</p></div>
+            <div class="tag kind-drink"><span class="kind">Heissgetränke</span><h4>Matcha</h4><p>hausgemacht</p></div>
+            <div class="tag kind-mode"><span class="kind">Konzept</span><h4>Plattform für lokale Marken</h4><p>&amp; Kreativschaffende</p></div>
+            <div class="tag kind-drink"><span class="kind">Speisen</span><h4>Frühstück</h4><p>&nbsp;</p></div>
+            <div class="tag kind-drink"><span class="kind">Speisen</span><h4>Kardamom-Zimt Brötchen</h4><p>White Rabbit Bakery</p></div>
+            <div class="tag kind-drink"><span class="kind">Speisen</span><h4>Saisonale Bowls &amp; Suppen</h4><p>&nbsp;</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="legend reveal">
+        <span><i class="i-mode"></i>Mode-Konzept</span>
+        <span><i class="i-drink"></i>Kaffeebar-Karte</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="ueber-uns">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow reveal">Über versa.</p>
+        <h2 class="reveal" style="margin-top:0.4rem;">Mode, Kaffee, Kunst und Kultur — im selben Raum</h2>
+        <p class="reveal" style="margin-top:1rem;">Ein vielschichtiger Concept-Space: kuratierte
+        Vintage-Mode, eine gemütliche Kaffeebar und eine Plattform für lokale Marken und
+        Kreativschaffende. Hier treffen sich Mode, kulinarische Erlebnisse, Kunst und Kultur.</p>
+        <ul class="usp-list reveal">
+          <li>Vintage-Mode-Shopping kombiniert mit Kaffeebar</li>
+          <li>Hausgemachter Chai und Gebäck lokaler Bäckereien</li>
+          <li>Plattform für lokale Marken und Kreativschaffende</li>
+          <li>Treffpunkt für die Community</li>
+        </ul>
+      </div>
+      <div class="founders reveal">
+        <img class="mark-stamp" src="https://junge-altstadt.ch/wp-content/uploads/2025/05/Versa_Logo_Gruen-300x104.png" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="k">Gegründet von</span>
+        <p>Katrin Tiefenauer &amp; Emmanuel Laryea</p>
+        <p class="since">Eröffnet am 19. Februar 2025 · Private Events auf Anfrage</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Impressionen</h2>
+      </div>
+      <div class="photo-grid reveal">
+        <figure>
+          <img src="https://versavintage.ch/cdn/shop/files/DSCF0426.jpg?v=1739828768&width=3840" alt="Innenraum von versa. coffee &amp; vintage store" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://junge-altstadt.ch/wp-content/uploads/2025/05/VERSA_Concept-1-1140x641.png" alt="Concept-Space bei versa." loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://junge-altstadt.ch/wp-content/uploads/2025/05/VERSA_3_DSCF1157-760x1140.jpg" alt="Vintage-Kleiderrail bei versa." loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+        <figure>
+          <img src="https://junge-altstadt.ch/wp-content/uploads/2025/05/VERSA_2-913x1140.jpg" alt="Impression aus versa. coffee &amp; vintage store" loading="lazy"
+            onerror="this.closest('figure').style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="bewertung">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <p class="stars">4.9 ★</p>
+        <p>75 Google-Bewertungen — ohne Auswahl, ohne Kürzung, direkt von Google übernommen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Kontakt &amp; Lage</h2>
+        <p>Stadthausstrasse 57 (Marktgasse 20), Winterthur Altstadt. Keine Telefonnummer hinterlegt —
+        am schnellsten erreichen Sie uns per E-Mail oder Instagram.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card reveal">
+          <div class="row">
+            <span class="k">Adresse</span>
+            <span>Stadthausstrasse 57 (Marktgasse 20), 8400 Winterthur</span>
+          </div>
+          <div class="row">
+            <span class="k">E-Mail</span>
+            <a href="mailto:info@versavintage.ch">info@versavintage.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Web</span>
+            <a href="https://versavintage.ch/" target="_blank" rel="noopener">versavintage.ch</a>
+          </div>
+          <div class="row">
+            <span class="k">Öffnungszeiten</span>
+            <span>Di–Sa 09:00–18:00 · So–Mo geschlossen</span>
+          </div>
+          <div class="row">
+            <span class="k">Social</span>
+            <div class="social-row">
+              <a href="https://instagram.com/versa.xyz" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+          <div class="cta-row" style="margin-top:0.2rem;">
+            <a class="btn ghost" style="padding:0.6rem 1.1rem; font-size:0.85rem;"
+               href="https://maps.google.com/maps?daddr=versa%20coffee%20vintage%20Stadthausstrasse%2057%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte versa. coffee &amp; vintage store" loading="lazy"
+            src="https://maps.google.com/maps?q=versa%20coffee%20vintage%20Stadthausstrasse%2057%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>versa. coffee &amp; vintage store<br>Stadthausstrasse 57 (Marktgasse 20), 8400 Winterthur</div>
+      <div><a href="mailto:info@versavintage.ch">info@versavintage.ch</a><br><a href="https://versavintage.ch/" target="_blank" rel="noopener">versavintage.ch</a></div>
+      <div>Di–Sa 09:00–18:00<br>So–Mo geschlossen</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="primary" href="mailto:info@versavintage.ch">E-Mail schreiben</a>
+  <a class="secondary" href="https://maps.google.com/maps?daddr=versa%20coffee%20vintage%20Stadthausstrasse%2057%20Winterthur" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* SIGNATURE MODULE: the rail — live "jetzt offen" computed from the real
+     hours (Di–Sa 09:00–18:00, So–Mo geschlossen). Highlights today's tag. */
+  var openBlocks = {
+    2: { open: 9*60, close: 18*60 },
+    3: { open: 9*60, close: 18*60 },
+    4: { open: 9*60, close: 18*60 },
+    5: { open: 9*60, close: 18*60 },
+    6: { open: 9*60, close: 18*60 }
+  };
+
+  function pad(n){ return n < 10 ? '0'+n : String(n); }
+  function fmt(mins){ return pad(Math.floor(mins/60)) + ':' + pad(mins%60); }
+
+  function render(){
+    var now = new Date();
+    var day = now.getDay();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var block = openBlocks[day];
+    var isOpen = !!block && mins >= block.open && mins < block.close;
+
+    var badge = document.getElementById('badge-mini');
+    var badgeText = document.getElementById('badge-mini-text');
+    var railStatus = document.getElementById('rail-status');
+    var railText = document.getElementById('rail-status-text');
+
+    if (isOpen) {
+      badge.classList.remove('closed'); railStatus.classList.remove('closed');
+      badgeText.textContent = 'Jetzt offen';
+      railText.textContent = 'Jetzt offen — heute bis ' + fmt(block.close) + ' Uhr.';
+    } else {
+      badge.classList.add('closed'); railStatus.classList.add('closed');
+      badgeText.textContent = 'Geschlossen';
+      railText.textContent = block
+        ? 'Gerade geschlossen — heute ab ' + fmt(block.open) + ' Uhr offen.'
+        : 'Heute geschlossen.';
+    }
+
+    document.querySelectorAll('#week-rail .tag').forEach(function(tag){
+      var d = Number(tag.getAttribute('data-day'));
+      tag.classList.toggle('today', d === day);
+      tag.classList.toggle('open', !!openBlocks[d]);
+    });
+  }
+  render();
+  window.setInterval(render, 60000);
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

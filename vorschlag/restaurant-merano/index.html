@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Merano Winterthur — Italienische &amp; Schweizer Klassiker seit über 20 Jahren</title>
+<meta name="description" content="Restaurant Merano, Wartstrasse 35, Winterthur: familiengeführte italienische und Schweizer Küche seit über 20 Jahren, mit eigener Kegelbahn. Mo–Sa 11–23 Uhr.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Restaurant Merano Winterthur — Italienische &amp; Schweizer Klassiker">
+<meta property="og:description" content="Familiengeführtes Restaurant seit über 20 Jahren: frische Zutaten, Schweizer Herzlichkeit, eigene Kegelbahn im Haus.">
+<meta property="og:url" content="https://www.restaurant-merano.ch/">
+<meta property="og:image" content="https://le-de.cdn-website.com/43ceee43ba0a4f8e914e69f898baec70/dms3rep/multi/opt/AdobeStock_292203735-9a92059a-1920w.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurant Merano",
+  "description": "Familiengeführtes italienisches Restaurant seit über 20 Jahren mit Schweizer Herzlichkeit und Kegelbahn.",
+  "url": "https://www.restaurant-merano.ch/",
+  "telephone": "+41 52 222 58 88",
+  "email": "info@restaurant-merano.ch",
+  "servesCuisine": ["Italian", "Swiss"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wartstrasse 35",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "35"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "23:00" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg:#f6f0e3;
+    --surface:#ece1c9;
+    --fg:#291f17;
+    --muted:#5e4f3e;
+    --brand:#7c1f2b;
+    --accent:#1f5c3f;
+  }
+  *,*::before,*::after {
+    box-sizing:border-box;
+  }
+  html {
+    scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior:auto;
+    }
+  }
+  body {
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:clamp(15px, 0.3vw + 14.4px, 17.5px);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  img {
+    max-width:100%;
+    display:block;
+  }
+  a {
+    color:inherit;
+  }
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  :focus-visible {
+    outline:3px solid var(--accent);
+    outline-offset:3px;
+  }
+  h1,h2,h3 {
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    line-height:1;
+    margin:0;
+    letter-spacing:0.01em;
+  }
+  .mono {
+    font-family:'JetBrains Mono', monospace;
+  }
+  .wrap {
+    max-width:1080px;
+    margin:0 auto;
+    padding-inline:clamp(1.1rem, 4vw, 2.6rem);
+  }
+  .skip-link {
+    position:absolute;
+    left:1rem;
+    top:-3rem;
+    background:var(--brand);
+    color:#fff;
+    padding:0.6rem 1rem;
+    font-weight:600;
+    z-index:100;
+    transition:top .2s ease;
+    text-decoration:none;
+  }
+  .skip-link:focus {
+    top:1rem;
+  }
+  .reveal {
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity .55s ease, transform .55s ease;
+  }
+  .reveal.is-visible {
+    opacity:1;
+    transform:none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity:1;
+      transform:none;
+      transition:none;
+    }
+  }
+  hr.rule {
+    border:none;
+    border-top:1px solid var(--fg);
+    margin:0;
+  }
+  hr.rule.thin {
+    border-top:1px solid rgba(41,31,23,0.25);
+  }
+  /* header */
+  header.site {
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:var(--bg);
+    border-bottom:2px solid var(--fg);
+  }
+  .nav-row {
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    padding-block:0.85rem;
+    gap:1rem;
+  }
+  .wordmark {
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:1.5rem;
+    text-decoration:none;
+    color:var(--fg);
+    letter-spacing:0.02em;
+  }
+  nav.primary {
+    justify-self:end;
+  }
+  nav.primary ul {
+    display:flex;
+    gap:clamp(0.8rem, 2vw, 1.6rem);
+    flex-wrap:wrap;
+  }
+  nav.primary a {
+    text-decoration:none;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--muted);
+  }
+  nav.primary a:hover {
+    color:var(--brand);
+  }
+  .nav-est {
+    justify-self:start;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    color:var(--muted);
+    letter-spacing:0.06em;
+  }
+  @media (max-width:760px) {
+    .nav-est {
+      display:none;
+    }
+    .nav-row {
+      grid-template-columns:1fr auto;
+    }
+  }
+  /* hero — typographic grid, opens with stat not photo */
+  .hero {
+    padding-block:clamp(2.6rem, 7vw, 4.6rem) clamp(2rem, 5vw, 3.2rem);
+    border-bottom:2px solid var(--fg);
+  }
+  .hero-grid {
+    display:grid;
+    grid-template-columns: 2fr 1px 1fr;
+    gap:clamp(1.6rem, 4vw, 3rem);
+  }
+  .hero-div {
+    background:var(--fg);
+  }
+  @media (max-width:860px) {
+    .hero-grid {
+      grid-template-columns:1fr;
+    }
+    .hero-div {
+      display:none;
+    }
+  }
+  .eyebrow {
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--brand);
+    margin-bottom:0.9rem;
+  }
+  .hero h1 {
+    font-size:clamp(2.6rem, 6.2vw, 4.8rem);
+  }
+  .hero-tag {
+    margin-top:1.1rem;
+    max-width:44ch;
+    font-size:1.12rem;
+    color:var(--fg);
+  }
+  .hero-cta {
+    margin-top:1.6rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.8rem;
+  }
+  .btn {
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    font-family:'JetBrains Mono', monospace;
+    font-weight:600;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+    text-decoration:none;
+    padding:0.75rem 1.1rem;
+    border:2px solid var(--fg);
+  }
+  .btn.solid {
+    background:var(--brand);
+    color:#fff;
+    border-color:var(--brand);
+  }
+  .btn.solid:hover {
+    background:var(--fg);
+    border-color:var(--fg);
+  }
+  .btn.ghost:hover {
+    background:var(--fg);
+    color:var(--bg);
+  }
+  .stat-block {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:1.4rem;
+  }
+  .stat {
+  }
+  .stat .num {
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:clamp(2.4rem, 6vw, 3.4rem);
+    color:var(--brand);
+    line-height:0.9;
+  }
+  .stat .label {
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.07em;
+    color:var(--muted);
+    margin-top:0.35rem;
+  }
+  /* section shell */
+  section {
+    border-bottom:2px solid var(--fg);
+  }
+  section:last-of-type {
+    border-bottom:none;
+  }
+  .section-pad {
+    padding-block:clamp(2.4rem, 6vw, 4rem);
+  }
+  .on-surface {
+    background:var(--surface);
+  }
+  .kicker {
+    font-family:'JetBrains Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--brand);
+    font-size:0.75rem;
+    margin-bottom:0.6rem;
+  }
+  h2 {
+    font-size:clamp(2rem, 4.6vw, 3.2rem);
+  }
+  .lede {
+    max-width:58ch;
+    color:var(--muted);
+    margin-top:0.8rem;
+    font-size:1.02rem;
+  }
+  /* about grid */
+  .about-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.4rem;
+    margin-top:2rem;
+  }
+  @media (max-width:820px) {
+    .about-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .usp-list {
+    display:grid;
+    gap:0.8rem;
+  }
+  .usp-list li {
+    display:flex;
+    gap:0.8rem;
+    align-items:baseline;
+    padding-block:0.6rem;
+    border-bottom:1px solid rgba(41,31,23,0.15);
+  }
+  .usp-list li .n {
+    font-family:'JetBrains Mono', monospace;
+    color:var(--brand);
+    font-weight:600;
+  }
+  .about-photo {
+    border:2px solid var(--fg);
+  }
+  .about-photo img {
+    width:100%;
+    height:clamp(220px, 30vw, 340px);
+    object-fit:cover;
+    filter:grayscale(15%) contrast(1.02);
+  }
+  .pull-quote {
+    margin:2.4rem 0 0;
+    padding-left:1.4rem;
+    border-left:4px solid var(--brand);
+    max-width:52ch;
+  }
+  .pull-quote p {
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(1.3rem, 2.4vw, 1.7rem);
+    color:var(--brand);
+    margin:0;
+  }
+  .price-range {
+    margin-top:1.6rem;
+    display:inline-flex;
+    align-items:baseline;
+    gap:0.7rem;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .pr-label {
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--muted);
+  }
+  .pr-value {
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--brand);
+  }
+  /* menu — dominant section, plain typographic grid */
+  .menu-cols {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:2.6rem 3rem;
+    margin-top:2.4rem;
+  }
+  @media (max-width:760px) {
+    .menu-cols {
+      grid-template-columns:1fr;
+    }
+  }
+  .menu-block h3 {
+    font-size:clamp(1.5rem, 2.6vw, 1.9rem);
+    color:var(--brand);
+    padding-bottom:0.5rem;
+    border-bottom:2px solid var(--fg);
+    margin-bottom:0.9rem;
+  }
+  .menu-row {
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    padding-block:0.75rem;
+    border-bottom:1px dotted rgba(41,31,23,0.35);
+  }
+  .menu-name {
+    font-weight:600;
+  }
+  .menu-price {
+    font-family:'JetBrains Mono', monospace;
+    white-space:nowrap;
+    font-weight:600;
+    color:var(--fg);
+  }
+  .menu-block.full {
+    grid-column:1 / -1;
+    max-width:52ch;
+  }
+  /* kegelbahn — dedicated section */
+  .kegel-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.4rem;
+    align-items:center;
+    margin-top:2rem;
+  }
+  @media (max-width:820px) {
+    .kegel-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .kegel-illustration {
+    border:2px solid var(--fg);
+    background:var(--bg);
+    aspect-ratio:16/10;
+    position:relative;
+    overflow:hidden;
+  }
+  .kegel-illustration .lane {
+    position:absolute;
+    left:12%;
+    right:12%;
+    top:10%;
+    bottom:10%;
+    background:repeating-linear-gradient(180deg, #caa96b 0 3px, #b8965a 3px 6px);
+    border:2px solid var(--fg);
+  }
+  .kegel-illustration .pin {
+    position:absolute;
+    width:0.6rem;
+    height:1.3rem;
+    background:var(--fg);
+    border-radius:40% 40% 20% 20%;
+  }
+  .kegel-illustration .ball {
+    position:absolute;
+    width:1.1rem;
+    height:1.1rem;
+    border-radius:50%;
+    background:var(--brand);
+    bottom:14%;
+    left:46%;
+  }
+  /* bewertungen */
+  .stimmen-row {
+    margin-top:1.6rem;
+    display:flex;
+    align-items:center;
+    gap:2.2rem;
+    flex-wrap:wrap;
+  }
+  .rating-big {
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:clamp(3.2rem, 9vw, 5.2rem);
+    color:var(--brand);
+    line-height:0.85;
+  }
+  .stars {
+    font-size:1.3rem;
+    color:var(--accent);
+    letter-spacing:0.1em;
+  }
+  .stimmen-copy {
+    max-width:46ch;
+    color:var(--muted);
+  }
+  .review-flag {
+    margin-top:1rem;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.78rem;
+    color:var(--muted);
+    border:1px solid var(--muted);
+    display:inline-block;
+    padding:0.35rem 0.7rem;
+  }
+  /* status / jetzt geoeffnet — plain, no gimmicks */
+  .status-row {
+    margin-top:1.6rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+  .status-dot {
+    width:0.7rem;
+    height:0.7rem;
+    border-radius:50%;
+    background:var(--muted);
+    flex:none;
+  }
+  .status-dot.open {
+    background:var(--accent);
+  }
+  .status-dot.closed {
+    background:var(--brand);
+  }
+  .status-text {
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.95rem;
+  }
+  table.hours {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:1.4rem;
+    max-width:44ch;
+  }
+  table.hours caption {
+    text-align:left;
+    font-family:'JetBrains Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    font-size:0.72rem;
+    color:var(--muted);
+    margin-bottom:0.5rem;
+  }
+  table.hours th,table.hours td {
+    text-align:left;
+    padding:0.6rem 0.4rem;
+    border-bottom:1px solid rgba(41,31,23,0.2);
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.9rem;
+  }
+  table.hours tr.today th, table.hours tr.today td {
+    color:var(--brand);
+    font-weight:700;
+  }
+  /* lage */
+  .lage-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.2rem;
+    margin-top:2rem;
+  }
+  @media (max-width:820px) {
+    .lage-grid {
+      grid-template-columns:1fr;
+    }
+  }
+  .info-list {
+    display:grid;
+    gap:1rem;
+  }
+  .info-list dt {
+    font-family:'JetBrains Mono', monospace;
+    text-transform:uppercase;
+    font-size:0.7rem;
+    letter-spacing:0.07em;
+    color:var(--muted);
+  }
+  .info-list dd {
+    margin:0.15rem 0 0;
+    font-size:1.08rem;
+  }
+  .info-list a {
+    text-decoration:underline;
+    text-decoration-color:var(--brand);
+  }
+  .map-frame {
+    border:2px solid var(--fg);
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe {
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  footer.site {
+    padding-block:2.2rem 6.5rem;
+  }
+  .footer-grid {
+    display:flex;
+    justify-content:space-between;
+    gap:1.2rem;
+    flex-wrap:wrap;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.75rem;
+    color:var(--muted);
+  }
+  .footer-grid a {
+    text-decoration:underline;
+  }
+  .footer-note {
+    margin-top:1rem;
+    font-size:0.72rem;
+    color:var(--muted);
+    opacity:0.85;
+  }
+  .mobile-bar {
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:60;
+    display:flex;
+    border-top:2px solid var(--fg);
+    background:var(--brand);
+  }
+  .mobile-bar a {
+    flex:1;
+    text-align:center;
+    padding:0.9rem 0.5rem;
+    font-family:'JetBrains Mono', monospace;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    text-decoration:none;
+    color:#fff;
+  }
+  .mobile-bar a.alt {
+    background:var(--fg);
+  }
+  @media (min-width:760px) {
+    .mobile-bar {
+      display:none;
+    }
+  }
+  @media (max-width:759px) {
+    body {
+      padding-bottom:3.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <span class="nav-est">Seit über 20&nbsp;Jahren</span>
+    <a class="wordmark" href="#top">Merano</a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#kegelbahn">Kegelbahn</a></li>
+        <li><a href="#geoeffnet">Geöffnet</a></li>
+        <li><a href="#lage">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO — typographischer Aufschlag, keine Fotos ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Wartstrasse 35 · Winterthur</p>
+        <h1>Italienische &amp; Schweizer Klassiker, plain und gut gemacht.</h1>
+        <p class="hero-tag">Familiengeführtes Restaurant seit über 20 Jahren. Frische Zutaten mit regionalem Fokus, kombiniert mit Schweizer Herzlichkeit — und einer eigenen Kegelbahn im Haus.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="tel:+41522225888">+41 52 222 58 88</a>
+          <a class="btn ghost" href="#karte">Zur Karte</a>
+        </div>
+      </div>
+      <div class="hero-div" aria-hidden="true"></div>
+      <div class="stat-block reveal">
+        <div class="stat">
+          <div class="num">4.5<span class="mono" style="font-size:0.4em; color:var(--muted);"> / 5</span></div>
+          <div class="label">35 Google-Bewertungen</div>
+        </div>
+        <div class="stat">
+          <div class="num">20+</div>
+          <div class="label">Jahre familiengeführt</div>
+        </div>
+        <div class="stat">
+          <div class="num">Mo–Sa</div>
+          <div class="label">11:00–23:00 Uhr</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KÜCHE / ABOUT ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <p class="kicker">Die Küche</p>
+      <h2>Was seit über<br>20 Jahren trägt</h2>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>Familiengeführtes italienisches Restaurant seit über 20 Jahren. Kombiniert frische Zutaten mit Schweizer Herzlichkeit. Authentische Küche mit frischen Zutaten und leidenschaftlicher Zubereitung — Pizza und Pasta sowie traditionelle Schweizer Gerichte.</p>
+          <ul class="usp-list">
+            <li><span class="n">01</span> Italienische Klassiker &amp; Schweizer Spezialitäten</li>
+            <li><span class="n">02</span> Frische Zutaten mit regionalem Fokus</li>
+            <li><span class="n">03</span> Bowlinganlage im Haus</li>
+            <li><span class="n">04</span> Familiengeführt seit über 20 Jahren</li>
+          </ul>
+        </div>
+        <div class="about-photo reveal">
+          <img
+            src="https://le-de.cdn-website.com/43ceee43ba0a4f8e914e69f898baec70/dms3rep/multi/opt/AdobeStock_234200318-2880w.png"
+            alt="Italienisch-Schweizer Küche im Restaurant Merano"
+            loading="lazy"
+            onerror="this.closest('.about-photo').style.display='none'">
+        </div>
+      </div>
+      <blockquote class="pull-quote reveal">
+        <p>„Klassische italienische &amp; Schweizer Küche seit 20 Jahren mit Bowling.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ KARTE — dominanter Abschnitt, reiner Grid-Satz ============ -->
+  <section class="section-pad on-surface" id="karte">
+    <div class="wrap">
+      <p class="kicker">Die Klassiker</p>
+      <h2>Was gegessen wird</h2>
+      <p class="lede">Ausschnitt der Karte, wie sie auf der Restaurant-Website steht — Preise wie angegeben, ohne Aufrundung.</p>
+      <div class="price-range reveal" id="price-range" aria-live="polite">
+        <span class="pr-label">Preisspanne der gezeigten Gerichte</span>
+        <span class="pr-value" id="price-range-value">wird berechnet…</span>
+      </div>
+      <div class="menu-cols">
+        <div class="menu-block reveal">
+          <h3>Suppen &amp; Vorspeisen</h3>
+          <div class="menu-row"><span class="menu-name">Tomaten-Crème-Suppe</span><span class="menu-price">CHF 10.50</span></div>
+          <div class="menu-row"><span class="menu-name">Beef Tatar (klein)</span><span class="menu-price">CHF 20.50</span></div>
+          <div class="menu-row"><span class="menu-name">Beef Tatar (gross)</span><span class="menu-price">CHF 28.50</span></div>
+        </div>
+        <div class="menu-block reveal">
+          <h3>Pasta &amp; Pizza</h3>
+          <div class="menu-row"><span class="menu-name">Spaghetti Merano</span><span class="menu-price">CHF 24.50</span></div>
+          <div class="menu-row"><span class="menu-name">Pizza Merano</span><span class="menu-price">CHF 23.50</span></div>
+        </div>
+        <div class="menu-block full reveal">
+          <h3>Hauptgänge</h3>
+          <div class="menu-row"><span class="menu-name">Cordon Bleu Merano (Schwein)</span><span class="menu-price">CHF 29.50</span></div>
+          <div class="menu-row"><span class="menu-name">Cordon Bleu Merano (Kalbfleisch)</span><span class="menu-price">CHF 38.50</span></div>
+          <div class="menu-row"><span class="menu-name">Lachssteak mit Dill-Sauce</span><span class="menu-price">CHF 31.50</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KEGELBAHN — eigene Sektion ============ -->
+  <section class="section-pad" id="kegelbahn">
+    <div class="wrap">
+      <p class="kicker">Im Haus</p>
+      <h2>Die Kegelbahn</h2>
+      <div class="kegel-grid">
+        <div class="reveal">
+          <p>Das Restaurant Merano verfügt über eine eigene Bowlinganlage im Haus — eine der Besonderheiten, die das Haus seit über 20 Jahren von einem gewöhnlichen Restaurant unterscheidet. Für Gruppen, Vereinsabende oder einfach einen Abend nach dem Essen.</p>
+          <div class="hero-cta">
+            <a class="btn solid" href="tel:+41522225888">Reservation anfragen</a>
+          </div>
+        </div>
+        <div class="kegel-illustration reveal" aria-hidden="true">
+          <div class="lane"></div>
+          <div class="pin" style="top:14%; left:44%;"></div>
+          <div class="pin" style="top:14%; left:52%;"></div>
+          <div class="pin" style="top:22%; left:40%;"></div>
+          <div class="pin" style="top:22%; left:48%;"></div>
+          <div class="pin" style="top:22%; left:56%;"></div>
+          <div class="ball"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE MODUL: JETZT GEÖFFNET? — schlicht ============ -->
+  <section class="section-pad on-surface" id="geoeffnet">
+    <div class="wrap">
+      <p class="kicker">Live-Status</p>
+      <h2>Jetzt geöffnet?</h2>
+      <p class="lede">Berechnet aus den echten Öffnungszeiten: Mo–Sa 11:00–23:00 Uhr, sonntags geschlossen.</p>
+      <div class="status-row reveal">
+        <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+        <span class="status-text" id="status-text">Status wird berechnet…</span>
+      </div>
+      <table class="hours reveal" id="hours-table">
+        <caption>Öffnungszeiten</caption>
+        <thead><tr><th scope="col">Tage</th><th scope="col">Zeit</th></tr></thead>
+        <tbody>
+          <tr data-day="1,2,3,4,5,6"><th scope="row">Mo–Sa</th><td>11:00–23:00</td></tr>
+          <tr data-day="0"><th scope="row">So</th><td>Geschlossen</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ BEWERTUNGEN ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <p class="kicker">Bewertungen</p>
+      <h2>Was Gäste sagen</h2>
+      <div class="stimmen-row reveal">
+        <div>
+          <div class="rating-big">4.5</div>
+          <div class="stars" aria-hidden="true">★★★★☆</div>
+        </div>
+        <div>
+          <p class="stimmen-copy">Google-Bewertung von Gästen des Restaurant Merano.</p>
+          <span class="review-flag">Nur 35 Bewertungen — kleine, aber verlässliche Zahl</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LAGE / KONTAKT ============ -->
+  <section class="section-pad on-surface" id="lage">
+    <div class="wrap">
+      <p class="kicker">Anfahrt &amp; Kontakt</p>
+      <h2>Bis bald an<br>der Wartstrasse</h2>
+      <div class="lage-grid">
+        <div class="reveal">
+          <dl class="info-list">
+            <div>
+              <dt>Adresse</dt>
+              <dd>Wartstrasse 35, 8400 Winterthur</dd>
+            </div>
+            <div>
+              <dt>Telefon</dt>
+              <dd><a href="tel:+41522225888">+41 52 222 58 88</a></dd>
+            </div>
+            <div>
+              <dt>E-Mail</dt>
+              <dd><a href="mailto:info@restaurant-merano.ch">info@restaurant-merano.ch</a></dd>
+            </div>
+            <div>
+              <dt>Website</dt>
+              <dd><a href="https://www.restaurant-merano.ch/" target="_blank" rel="noopener">restaurant-merano.ch</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Restaurant%20Merano%20Winterthur&amp;z=16&amp;output=embed"
+            title="Karte: Restaurant Merano, Wartstrasse 35, Winterthur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span>Restaurant Merano · Wartstrasse 35, 8400 Winterthur</span>
+      <span><a href="tel:+41522225888">+41 52 222 58 88</a> · <a href="mailto:info@restaurant-merano.ch">info@restaurant-merano.ch</a></span>
+      <span><a href="https://www.restaurant-merano.ch/" target="_blank" rel="noopener">restaurant-merano.ch</a></span>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522225888">📞 Anrufen</a>
+  <a class="alt" href="mailto:info@restaurant-merano.ch">✉️ Schreiben</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Signature module: jetzt geöffnet? ---------------- */
+  // 0=So,1=Mo,2=Di,3=Mi,4=Do,5=Fr,6=Sa — real hours from JSON: Mo–Sa 11:00–23:00, So geschlossen
+  var openDays = [1,2,3,4,5,6];
+  var OPEN_H = 11, CLOSE_H = 23;
+
+  function computeStatus(now){
+    var day = now.getDay();
+    var hour = now.getHours() + now.getMinutes()/60;
+    if (openDays.indexOf(day) !== -1 && hour >= OPEN_H && hour < CLOSE_H){
+      return { state:"open", until:CLOSE_H };
+    }
+    if (openDays.indexOf(day) !== -1 && hour < OPEN_H){
+      return { state:"soon", opens:OPEN_H };
+    }
+    return { state:"closed" };
+  }
+  function fmt(h){
+    var hh = Math.floor(h), mm = Math.round((h % 1) * 60);
+    return (hh<10?"0":"")+hh+":"+(mm<10?"0":"")+mm;
+  }
+  var dayNames = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+
+  function render(){
+    var now = new Date();
+    var r = computeStatus(now);
+    var dot = document.getElementById("status-dot");
+    var text = document.getElementById("status-text");
+
+    dot.classList.remove("open","closed");
+    if (r.state === "open"){
+      dot.classList.add("open");
+      text.textContent = "Geöffnet — bis " + fmt(r.until) + " Uhr. (" + dayNames[now.getDay()] + " " + now.toLocaleTimeString("de-CH",{hour:"2-digit",minute:"2-digit"}) + " Uhr)";
+    } else if (r.state === "soon"){
+      dot.classList.add("closed");
+      text.textContent = "Geschlossen — öffnet heute um " + fmt(r.opens) + " Uhr.";
+    } else {
+      dot.classList.add("closed");
+      text.textContent = "Geschlossen — Öffnungszeiten Mo–Sa, 11:00–23:00 Uhr.";
+    }
+
+    var rows = document.querySelectorAll("#hours-table tbody tr");
+    rows.forEach(function(row){
+      var days = row.dataset.day.split(",").map(Number);
+      row.classList.toggle("today", days.indexOf(now.getDay()) !== -1);
+    });
+  }
+  render();
+  setInterval(render, 60000);
+
+  /* ---------------- Preisspanne: berechnet aus den echten, angezeigten Preisen ---------------- */
+  (function(){
+    var priceEls = document.querySelectorAll(".menu-price");
+    var values = [];
+    priceEls.forEach(function(el){
+      var m = el.textContent.match(/([\d]+(?:\.\d+)?)/);
+      if (m) values.push(parseFloat(m[1]));
+    });
+    var out = document.getElementById("price-range-value");
+    if (values.length && out){
+      var min = Math.min.apply(null, values).toFixed(2);
+      var max = Math.max.apply(null, values).toFixed(2);
+      out.textContent = "CHF " + min + " – " + max;
+    } else if (out){
+      out.textContent = "keine Angabe";
+    }
+  })();
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
+      });
+    }, { threshold:0.15 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Sulzerareal – Winterthur</title>
+<meta name="description" content="Hotel Sulzerareal in Winterthur: 3.0 von nur 1 Bewertung, keine Telefonnummer hinterlegt, keine eigene Website.">
+<meta property="og:title" content="Hotel Sulzerareal – Winterthur">
+<meta property="og:description" content="Auf dem Sulzer-Areal gelegen. 3.0 aus 1 Bewertung – so ehrlich wie möglich gezeigt.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Sulzerareal",
+  "address": { "@type": "PostalAddress", "addressLocality": "Winterthur", "addressCountry": "CH" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.0", "reviewCount": "1" }
+}
+</script>
+<style>
+:root{
+  --bg:#1d1d1c;
+  --surface:#242422;
+  --fg:#ececE7;
+  --muted:#a6a49c;
+  --brand:#e8641c;
+  --accent:#4f6b78;
+  --line:rgba(236,236,231,.16);
+  --grid:rgba(236,236,231,.09);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{
+  margin:0; background:
+    linear-gradient(var(--grid) 1px, transparent 1px) 0 0/40px 40px,
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0/40px 40px,
+    var(--bg);
+  color:var(--fg); font-family:'Barlow',system-ui,sans-serif; font-size:clamp(15px,0.3vw + 14px,17px); line-height:1.65;
+}
+h1,h2,.stencil{ font-family:'Allerta Stencil',system-ui,sans-serif; font-weight:400; margin:0; line-height:1.05; letter-spacing:.02em; }
+a{ color:inherit; }
+.skip-link{ position:absolute; left:-999px; top:0; background:var(--brand); color:#1d1d1c; padding:.6em 1em; z-index:100; }
+.skip-link:focus{ left:1rem; top:1rem; }
+:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+
+header{ position:sticky; top:0; z-index:20; background:rgba(29,29,28,.92); backdrop-filter:blur(3px); border-bottom:1px solid var(--line); padding:.9rem 1.25rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+header .word{ font-family:'Allerta Stencil',sans-serif; font-size:clamp(.95rem,2.2vw,1.2rem); color:var(--brand); }
+header nav{ display:none; gap:1.1rem; font-size:.85rem; }
+header nav a{ text-decoration:none; color:var(--muted); }
+header nav a:hover, header nav a:focus-visible{ color:var(--brand); }
+@media (min-width:700px){ header nav{ display:flex; } }
+header .callbtn{ border:1px solid var(--muted); padding:.5em 1em; text-decoration:none; font-size:.8rem; color:var(--muted); }
+
+main{ max-width:900px; margin:0 auto; padding:0 1.25rem; }
+section{ padding:clamp(2.4rem,6vw,4.5rem) 0; border-bottom:1px dashed var(--line); }
+section:last-of-type{ border-bottom:none; }
+.reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+/* THE PARCEL — plot plan with a stencilled number */
+.parcel{ border:2px solid var(--brand); padding:clamp(1.6rem,4vw,2.6rem); position:relative; }
+.parcel .corner{ position:absolute; width:14px; height:14px; border:2px solid var(--brand); }
+.corner.tl{ top:-2px; left:-2px; border-right:0; border-bottom:0; }
+.corner.tr{ top:-2px; right:-2px; border-left:0; border-bottom:0; }
+.corner.bl{ bottom:-2px; left:-2px; border-right:0; border-top:0; }
+.corner.br{ bottom:-2px; right:-2px; border-left:0; border-top:0; }
+.parcel-id{ font-family:'Allerta Stencil',sans-serif; color:var(--brand); font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; }
+
+.compass{ position:absolute; bottom:1rem; right:1rem; width:34px; height:34px; opacity:.5; }
+.compass::before, .compass::after{ content:""; position:absolute; background:var(--muted); }
+.compass::before{ left:50%; top:0; bottom:0; width:1px; transform:translateX(-50%); }
+.compass::after{ top:50%; left:0; right:0; height:1px; transform:translateY(-50%); }
+.compass span{ position:absolute; top:-1.1rem; left:50%; transform:translateX(-50%); font-size:.6rem; color:var(--muted); letter-spacing:.1em; }
+.kicker{ font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+h1{ font-size:clamp(2.1rem,6.5vw,3.8rem); margin:.4em 0 .3em; }
+.lead{ max-width:48ch; color:var(--muted); font-size:clamp(1rem,1.4vw,1.1rem); }
+
+.no-phone-block{
+  border:2px dashed var(--brand); padding:1.4rem 1.6rem; margin-top:1.6rem; background:rgba(232,100,28,.06);
+}
+.no-phone-block .stencil{ font-size:1.1rem; color:var(--brand); }
+.no-phone-block p{ color:var(--muted); margin-top:.6rem; font-size:.92rem; max-width:52ch; }
+
+.rating-line{ display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; }
+.rating-line .score{ font-family:'Allerta Stencil',sans-serif; font-size:2.4rem; color:var(--brand); }
+.rating-line .count{ font-size:.88rem; color:var(--muted); }
+.rating-candour{ margin-top:1rem; max-width:52ch; padding:1rem 1.2rem; border-left:3px solid var(--brand); background:var(--surface); font-size:.92rem; color:var(--muted); }
+.rating-candour strong{ color:var(--fg); }
+
+.fact-toggle{ border:1px solid var(--brand); background:var(--surface); }
+.fact-toggle summary{ cursor:pointer; list-style:none; padding:1rem 1.2rem; display:flex; justify-content:space-between; font-family:'Allerta Stencil',sans-serif; font-size:1rem; }
+.fact-toggle summary::-webkit-details-marker{ display:none; }
+.fact-toggle .content{ padding:0 1.2rem 1.2rem; }
+.factline{ display:flex; gap:.7rem; padding:.55rem 0; border-top:1px solid var(--line); font-size:.9rem; }
+.factline .k{ color:var(--muted); width:9rem; flex-shrink:0; }
+.factline .missing{ color:var(--muted); font-style:italic; }
+
+.stamp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:.9rem; }
+.stamp{
+  border:1px solid var(--line); padding:1rem 1.1rem;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.stamp:hover{ transform:translateY(-2px); }
+.stamp .k{ font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.stamp .v{ font-family:'Allerta Stencil',sans-serif; font-size:1.1rem; color:var(--fg); margin-top:.3rem; }
+.stamp .v.missing{ color:var(--muted); font-family:'Barlow',sans-serif; font-style:italic; font-size:.95rem; }
+@media (prefers-reduced-motion:reduce){ .stamp{ transition:none; } .stamp:hover{ transform:none; } }
+
+.mapwrap{ border:1px solid var(--line); }
+.mapwrap iframe{ width:100%; height:300px; border:0; display:block; filter:grayscale(60%) contrast(1.05); }
+
+.gap-block{ background:var(--surface); border:1px solid var(--brand); padding:clamp(1.6rem,4vw,2.4rem); }
+.gap-block h2{ color:var(--brand); font-size:clamp(1.5rem,3.5vw,2rem); margin-bottom:.6rem; }
+.gap-block p{ max-width:56ch; color:var(--muted); }
+.gap-block ul{ list-style:none; margin:1.1rem 0 0; padding:0; display:grid; gap:.5rem; }
+.gap-block li{ font-size:.9rem; padding-left:1.3em; position:relative; }
+.gap-block li::before{ content:"—"; position:absolute; left:0; color:var(--brand); }
+.gap-block .callout a{ display:inline-block; margin-top:1.4rem; background:var(--brand); color:#1d1d1c; padding:.75em 1.4em; text-decoration:none; font-weight:700; }
+
+footer{ padding:2.4rem 1.25rem 4rem; text-align:center; color:var(--muted); font-size:.85rem; }
+footer p{ margin:.3rem 0; }
+.muster{ margin-top:.8rem; font-size:.78rem; }
+
+.mobile-bar{ position:fixed; bottom:0; left:0; right:0; z-index:30; background:var(--surface); border-top:2px solid var(--brand); display:flex; }
+.mobile-bar a{ flex:1; text-align:center; padding:1rem; color:var(--fg); text-decoration:none; font-size:.9rem; }
+@media (min-width:760px){ .mobile-bar{ display:none; } }
+
+noscript div{ display:block; background:var(--surface); border:1px solid var(--line); padding:1rem 1.25rem; margin:1.5rem 0; font-size:.9rem; color:var(--muted); }
+@media print{ header, .mobile-bar{ display:none; } body{ background:#fff; } }
+
+.fact-toggle summary:focus-visible,
+.gap-block a:focus-visible,
+.mobile-bar a:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+.mapwrap iframe:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+@media (max-width:400px){ .parcel{ padding:1.3rem; } .parcel-id{ font-size:.7rem; } }
+header .callbtn:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+.stamp:hover{ border-color:var(--brand); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <span class="word">Hotel Sulzerareal</span>
+  <nav aria-label="Sprungmarken">
+    <a href="#bewertung">Bewertung</a>
+    <a href="#fakten">Fakten</a>
+    <a href="#ort">Ort</a>
+  </nav>
+  <a class="callbtn" href="#kontakt">Kontaktweg</a>
+</header>
+
+<main id="main">
+  <noscript><div>Diese Seite bleibt auch ohne JavaScript vollständig lesbar – nur die Einblend-Animationen entfallen.</div></noscript>
+
+  <section class="reveal">
+    <p class="kicker">Winterthur · Sulzer-Areal · Hotel</p>
+    <div class="parcel">
+      <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+      <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+      <p class="parcel-id">PARZELLE · SULZERAREAL · KEIN AUFTRITT ERFASST</p>
+      <h1>Hotel<br>Sulzerareal</h1>
+      <p class="lead">Der Ortsname ist das Einzige, was dieses Haus online überhaupt greifbar macht. Keine Website, keine hinterlegte Telefonnummer – nur eine einzelne Bewertung und eine Lage auf dem Areal.</p>
+      <div class="compass" aria-hidden="true"><span>N</span></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Ein Grundriss ohne Eintrag</h2>
+    <p class="lead">Diese Seite ist wie ein Katasterplan aufgebaut: ein Raster im Hintergrund, eine Parzelle mit Eckmarken, eine gestempelte Kennung. Es gibt keinen zweiten, vollen Grundriss dazu – nur diesen einen, unvollständigen Ausschnitt, weil mehr Daten schlicht nicht vorliegen.</p>
+    <p class="lead" style="margin-top:1rem;">Jede Eckmarke im Kasten oben steht für eine bestätigte Angabe. Wo keine Marke sitzt, fehlt auch die Information – bewusst, nicht aus Nachlässigkeit.</p>
+  </section>
+
+  <section class="reveal" id="kontakt">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Kontaktweg</h2>
+    <div class="no-phone-block">
+      <p class="stencil">KEINE TELEFONNUMMER HINTERLEGT</p>
+      <p>Das ist der eigentliche Befund dieser Seite: Selbst bei der Recherche liess sich keine Telefonnummer finden. Der einzig gesicherte Kontaktweg ist die Lage auf der Karte unten – alles Weitere müsste ein Gast vor Ort klären.</p>
+      <p>Für ein Hotel ist das ein seltener Fall: Kein Anruf, keine Anfrage, kein Reservationsweg lässt sich von hier aus auslösen. Genau das macht diese Seite zur Pitch – nicht die Zimmer, sondern die fehlende Erreichbarkeit ist das Thema.</p>
+    </div>
+  </section>
+
+  <section class="reveal" id="bewertung">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Bewertung</h2>
+    <div class="rating-line">
+      <span class="score">3.0</span>
+      <span class="count">aus 1 Google-Bewertung</span>
+    </div>
+    <p class="rating-candour"><strong>Eine einzige Bewertung.</strong> Das ist keine belastbare Grundlage für irgendeine Aussage – wir zeigen die Zahl trotzdem unverändert, weil Weglassen hier genauso irreführend wäre wie Beschönigen.</p>
+    <p class="rating-candour">Kein Sternebild, kein Durchschnitt aus vielen Stimmen – nur ein einzelner Eintrag. Diese Seite tut nicht so, als wäre das mehr.</p>
+    <p class="rating-candour">Sollte eine zweite Bewertung dazukommen, würde sich diese Zahl über Nacht verschieben. Genau deshalb bleibt sie hier klein.</p>
+  </section>
+
+  <section class="reveal">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Parzellenübersicht</h2>
+    <div class="stamp-grid">
+      <div class="stamp"><div class="k">Ort</div><div class="v">Winterthur</div></div>
+      <div class="stamp"><div class="k">Areal</div><div class="v">Sulzerareal</div></div>
+      <div class="stamp"><div class="k">Kategorie</div><div class="v">Hotel</div></div>
+      <div class="stamp"><div class="k">Telefon</div><div class="v missing">nicht hinterlegt</div></div>
+    </div>
+  </section>
+
+  <section class="reveal" id="fakten">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Was wir sicher wissen</h2>
+    <details class="fact-toggle">
+      <summary>Bestätigte Angaben <span>+</span></summary>
+      <div class="content">
+        <div class="factline"><span class="k">Name</span><span>Hotel Sulzerareal</span></div>
+        <div class="factline"><span class="k">Ort</span><span>Winterthur, Sulzerareal</span></div>
+        <div class="factline"><span class="k">Kategorie</span><span>Hotel</span></div>
+        <div class="factline"><span class="k">Telefon</span><span class="missing">nicht hinterlegt</span></div>
+        <div class="factline"><span class="k">Bewertung</span><span>3.0 · 1 Google-Bewertung</span></div>
+        <div class="factline"><span class="k">Eigene Website</span><span>keine gefunden</span></div>
+        <div class="factline"><span class="k">Quelle</span><span>Google-Unternehmenseintrag</span></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="reveal" id="ort">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Ort (ungefähr)</h2>
+    <div class="mapwrap">
+      <iframe src="https://maps.google.com/maps?q=Hotel%20Sulzerareal%20in%20Winterthur%20Winterthur&amp;z=15&amp;output=embed" title="Standort Hotel Sulzerareal auf Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="rating-candour" style="margin-top:1rem;">Keine Adresse hinterlegt. Die Karte zeigt die Google-Suche nach Name und Ort, nicht eine geprüfte Parzellenadresse.</p>
+  </section>
+
+  <section class="reveal">
+    <div class="gap-block">
+      <h2>Was hier fehlt</h2>
+      <p>Kein Zimmertyp, kein Preis, keine Adresse, keine Ausstattung, keine Fotos, keine Öffnungszeiten – und, ungewöhnlich für diese Reihe, nicht einmal eine Telefonnummer. Ein Haus auf dem Sulzerareal, das online praktisch nicht existiert.</p>
+      <ul>
+        <li>Telefonnummer: nicht hinterlegt</li>
+        <li>Adresse: nicht publiziert</li>
+        <li>Zimmer &amp; Preise: nicht publiziert</li>
+        <li>Fotos: keine vorhanden</li>
+        <li>Öffnungszeiten / Check-in: nicht publiziert</li>
+        <li>Ausstattung: nicht publiziert</li>
+      </ul>
+      <p class="callout"><a href="https://maps.google.com/maps?q=Hotel%20Sulzerareal%20in%20Winterthur%20Winterthur" target="_blank" rel="noopener">Lage auf Google Maps öffnen</a></p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Der Vorschlag dahinter</h2>
+    <p class="lead">Eine Telefonnummer wäre der naheliegendste erste Schritt für dieses Haus – noch vor einer Website. Diese Seite zeigt, wie wenig dafür bereits reicht: ein Ort, eine Kategorie, eine einzelne Bewertung.</p>
+  </section>
+
+  <section class="reveal">
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:1rem;">Kurz gesagt</h2>
+    <p class="lead">Sulzerareal, Winterthur, Hotel, 3.0 aus 1 Bewertung, keine Telefonnummer. Fünf Zeilen auf dem Plan, sonst nichts Erfasstes.</p>
+    <div class="stamp-grid" style="margin-top:1.4rem;">
+      <div class="stamp"><div class="k">Bewertung</div><div class="v">3.0 · 1</div></div>
+      <div class="stamp"><div class="k">Website</div><div class="v missing">keine gefunden</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Hotel Sulzerareal</p>
+  <p>Winterthur, Sulzerareal</p>
+  <p>Hotel · 3.0 aus 1 Bewertung</p>
+  <p>Kein Telefon hinterlegt · <a href="https://maps.google.com/maps?q=Hotel%20Sulzerareal%20in%20Winterthur%20Winterthur" target="_blank" rel="noopener">Lage auf Google Maps</a></p>
+  <p class="muster">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="https://maps.google.com/maps?q=Hotel%20Sulzerareal%20in%20Winterthur%20Winterthur" target="_blank" rel="noopener">Lage öffnen (keine Telefonnummer bekannt)</a>
+</div>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold:.15 });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>

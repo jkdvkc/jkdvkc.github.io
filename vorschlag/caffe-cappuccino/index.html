@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caffè Cappuccino — Specialty Coffee, Bier &amp; Kunst, Winterthur</title>
+<meta name="description" content="Caffè Cappuccino Winterthur: Specialty-Coffee-Café und Beer-Bar mit über 100 internationalen Biersorten, Kaffee von Caffè Ferrari und monatlich wechselnden Kunstausstellungen. Obergasse 14, 8400 Winterthur.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Caffè Cappuccino — Kaffee, Bier und Kunst in Winterthur">
+<meta property="og:description" content="Specialty-Coffee von Caffè Ferrari, über 100 Biersorten und monatlich wechselnde Kunstausstellungen. Obergasse 14, 8400 Winterthur.">
+<meta property="og:image" content="https://www.cappuccino-winterthur.ch/wp-content/uploads/2020/03/cappu-inside-cappu.jpg">
+<meta property="og:url" content="https://www.cappuccino-winterthur.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Caffè Cappuccino",
+  "image": "https://www.cappuccino-winterthur.ch/wp-content/uploads/2020/03/cappu-inside-cappu.jpg",
+  "logo": "https://www.cappuccino-winterthur.ch/wp-content/uploads/2020/03/cropped-Unbenannt-270x270.png",
+  "url": "https://www.cappuccino-winterthur.ch/",
+  "telephone": "+41 52 213 23 88",
+  "email": "cappuccino@cappuccino-winterthur.ch",
+  "servesCuisine": "Specialty Coffee Café, Beer Bar",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Obergasse 14",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "319"
+  },
+  "sameAs": ["https://www.instagram.com/cappuccino_winterthur/", "https://www.facebook.com/cappuccinowinterthur/"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "08:00", "closes": "23:59"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --surface:#F4F1EC;
+    --fg:#111111;
+    --muted:#5B5B5B;
+    --brand:#8A2E2E;
+    --accent:#0F5C4B;
+    --line: rgba(17,17,17,.16);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Space Grotesk', system-ui, sans-serif;
+    font-size:clamp(16px, 1.2vw + .6rem, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk', system-ui, sans-serif;
+    font-weight:600;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-.01em;
+  }
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .mono{
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+  }
+  .wrap{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 clamp(20px, 5vw, 64px);
+  }
+  :focus-visible{
+    outline:3px solid var(--brand);
+    outline-offset:3px;
+  }
+
+  /* ===== header : gallery signage ===== */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--fg);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:16px;
+  }
+  .wordmark{
+    text-decoration:none; color:var(--fg);
+    display:flex; align-items:center; gap:.6em;
+  }
+  .wordmark .plate{
+    font-family:'IBM Plex Mono', monospace; font-size:.68rem;
+    border:1px solid var(--fg); border-radius:2px;
+    padding:.2em .5em; letter-spacing:.08em;
+  }
+  .wordmark strong{
+    font-size:clamp(1.05rem, .8vw + .8rem, 1.3rem);
+    font-weight:700; letter-spacing:-.02em;
+  }
+  nav.primary ul{
+    list-style:none; display:flex; gap:clamp(16px,2vw,30px);
+    margin:0; padding:0;
+  }
+  nav.primary a{
+    text-decoration:none; font-size:.86rem; font-weight:500;
+    text-transform:uppercase; letter-spacing:.06em;
+    font-family:'IBM Plex Mono', monospace;
+    padding-bottom:.25em; border-bottom:2px solid transparent;
+  }
+  nav.primary a:hover{border-color:var(--brand); color:var(--brand);}
+  .nav-call{
+    display:inline-flex; align-items:center;
+    background:var(--fg); color:var(--bg);
+    padding:.55em 1.1em;
+    text-decoration:none; font-weight:600; font-size:.85rem;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .nav-call:hover{background:var(--brand);}
+  @media (max-width:840px){ nav.primary{display:none;} }
+
+  /* ===== section shell ===== */
+  section{padding-block:clamp(52px, 7vw, 100px);}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap;
+    gap:1em; margin-bottom:clamp(30px,4vw,52px);
+    border-bottom:1px solid var(--fg);
+    padding-bottom:1em;
+  }
+  .plate-no{
+    font-family:'IBM Plex Mono', monospace; font-size:.78rem; color:var(--muted);
+    letter-spacing:.06em;
+  }
+  .section-head h2{font-size:clamp(1.9rem, 1.6vw + 1.3rem, 2.9rem);}
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .65s ease, transform .65s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* ===== hero ===== */
+  .hero{
+    padding-top:clamp(44px,7vw,88px);
+    padding-bottom:clamp(40px,6vw,72px);
+  }
+  .hero-top{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:2em; flex-wrap:wrap;
+    padding-bottom:clamp(20px,3vw,32px); margin-bottom:clamp(28px,4vw,44px);
+    border-bottom:1px solid var(--fg);
+  }
+  .hero-top .mono{font-size:.85rem; color:var(--muted); max-width:32ch;}
+  .hero h1{
+    font-size:clamp(2.5rem, 5vw + 1rem, 5.6rem);
+    max-width:16ch;
+  }
+  .hero h1 .accent-word{ color:var(--brand); }
+  .hero-sub{
+    display:grid; grid-template-columns: 1.3fr .7fr; gap:clamp(24px,4vw,56px);
+    margin-top:clamp(28px,4vw,44px); align-items:start;
+  }
+  .hero-lead{ font-size:clamp(1.05rem,.3vw+1rem,1.25rem); color:var(--muted); max-width:52ch; }
+  .hero-cta{ display:flex; gap:.7em; flex-wrap:wrap; margin-top:1.6em; }
+  .btn{
+    display:inline-flex; align-items:center; gap:.5em;
+    padding:.85em 1.4em; text-decoration:none; font-weight:600; font-size:.92rem;
+    border:2px solid var(--fg);
+  }
+  .btn.primary{ background:var(--fg); color:var(--bg); }
+  .btn.primary:hover{ background:var(--brand); border-color:var(--brand); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn.ghost:hover{ border-color:var(--brand); color:var(--brand); }
+  .hero-stat{ border-left:1px solid var(--fg); padding-left:clamp(18px,3vw,28px); }
+  .hero-stat .num{ font-size:clamp(2.4rem,3vw+1rem,3.6rem); font-weight:700; line-height:1; }
+  .hero-stat .cap{ font-family:'IBM Plex Mono', monospace; font-size:.78rem; color:var(--muted); margin-top:.5em; text-transform:uppercase; letter-spacing:.06em;}
+
+  /* ===== exhibition wall ===== */
+  .wall{
+    position:relative;
+    padding-top:clamp(50px,7vw,80px);
+  }
+  .rail{
+    position:relative;
+    height:1px; background:var(--fg);
+    margin-bottom:clamp(40px,6vw,72px);
+  }
+  .rail::before{
+    content:""; position:absolute; left:0; top:-4px; width:9px; height:9px;
+    border-radius:50%; background:var(--fg);
+  }
+  .rail::after{
+    content:""; position:absolute; right:0; top:-4px; width:9px; height:9px;
+    border-radius:50%; background:var(--fg);
+  }
+  .hung{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:clamp(28px,4vw,52px);
+  }
+  .piece{
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .piece .wire{
+    width:1px; height:clamp(20px,3vw,34px);
+    background:var(--muted);
+  }
+  .piece .frame{
+    width:100%; aspect-ratio:4/5;
+    background:var(--surface);
+    border:1px solid var(--fg);
+    overflow:hidden;
+  }
+  .piece .frame img{ width:100%; height:100%; object-fit:cover; }
+  .piece .label{
+    margin-top:.9em; width:100%;
+    border-top:1px solid var(--line); padding-top:.7em;
+  }
+  .piece .label .lno{ font-family:'IBM Plex Mono', monospace; font-size:.72rem; color:var(--brand); }
+  .piece .label .lt{ font-weight:600; font-size:.98rem; margin-top:.2em; }
+  .piece .label .ld{ font-family:'IBM Plex Mono', monospace; font-size:.76rem; color:var(--muted); margin-top:.3em; }
+  @media (max-width:900px){
+    .hung{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:560px){
+    .hung{ grid-template-columns:1fr; max-width:280px; margin-inline:auto; }
+  }
+
+  /* ===== about / concept ===== */
+  .concept{
+    display:grid; grid-template-columns: .85fr 1.15fr; gap:clamp(30px,5vw,64px);
+  }
+  .concept-quote{
+    font-size:clamp(1.3rem,1.4vw+1rem,1.9rem);
+    line-height:1.3;
+    border-left:3px solid var(--accent);
+    padding-left:.9em;
+  }
+  .concept-body p{ color:var(--muted); max-width:56ch; }
+  @media (max-width:800px){ .concept{ grid-template-columns:1fr; } }
+
+  /* ===== menu switch (signature module) ===== */
+  .switcher{
+    display:inline-flex; border:1px solid var(--fg); margin-bottom:clamp(28px,4vw,44px);
+  }
+  .switcher button{
+    font-family:'IBM Plex Mono', monospace; font-size:.85rem; font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em;
+    background:transparent; border:0; color:var(--fg);
+    padding:.85em 1.5em; cursor:pointer;
+    border-right:1px solid var(--fg);
+  }
+  .switcher button:last-child{ border-right:0; }
+  .switcher button[aria-selected="true"]{ background:var(--fg); color:var(--bg); }
+  .switcher button:hover:not([aria-selected="true"]){ background:var(--surface); }
+  .menu-panel{ display:none; }
+  .menu-panel.active{ display:block; }
+  .menu-rail{ list-style:none; margin:0; padding:0; border-top:1px solid var(--fg); }
+  .menu-rail li{
+    display:grid; grid-template-columns: 3.5rem 1fr;
+    gap:clamp(14px,3vw,28px);
+    padding:clamp(16px,2.4vw,24px) 0;
+    border-bottom:1px solid var(--line);
+  }
+  .menu-rail .mi{ font-family:'IBM Plex Mono', monospace; color:var(--brand); font-size:.85rem; padding-top:.2em; }
+  .menu-rail .name{ font-weight:600; font-size:clamp(1.02rem,.4vw+1rem,1.2rem); }
+  .menu-rail .desc{ color:var(--muted); font-size:.92rem; margin-top:.25em; }
+
+  /* ===== reviews plaque ===== */
+  .plaque{
+    display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,64px); align-items:center;
+    border:1px solid var(--fg); padding:clamp(28px,4vw,44px);
+  }
+  .plaque .num{ font-size:clamp(3.2rem,5vw+1rem,5.4rem); font-weight:700; line-height:1; }
+  .plaque .meta .stars{ letter-spacing:.15em; font-size:1.2rem; color:var(--brand); margin-bottom:.3em; }
+  .plaque .meta p{ color:var(--muted); max-width:44ch; }
+
+  /* ===== hours / visit ===== */
+  .visit-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:clamp(30px,5vw,64px);
+  }
+  .hours-list{ list-style:none; margin:0; padding:0; border-top:1px solid var(--fg); }
+  .hours-list li{
+    display:flex; justify-content:space-between; padding:.85em 0;
+    border-bottom:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:.95rem;
+  }
+  .hours-list li.today{ font-weight:700; color:var(--brand); }
+  .open-pill{
+    display:inline-flex; align-items:center; gap:.6em;
+    font-family:'IBM Plex Mono', monospace; font-size:.8rem;
+    border:1px solid var(--fg); padding:.5em 1em; margin-top:1.2em;
+  }
+  .open-pill .dot{ width:9px; height:9px; border-radius:50%; background:var(--accent); }
+  .open-pill .dot.closed{ background:var(--brand); }
+  @media (max-width:800px){ .visit-grid{ grid-template-columns:1fr; } }
+
+  /* ===== contact ===== */
+  .contact-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:clamp(30px,5vw,64px); align-items:start;
+  }
+  .info-list{ list-style:none; margin:0 0 1.6em; padding:0; border-top:1px solid var(--fg); }
+  .info-list li{
+    padding:.9em 0; border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:7rem 1fr; gap:1em;
+  }
+  .info-list .label{
+    font-family:'IBM Plex Mono', monospace; font-size:.74rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted);
+  }
+  .info-list a{ text-decoration:none; font-weight:600; }
+  .info-list a:hover{ color:var(--brand); }
+  .map-frame{ border:1px solid var(--fg); aspect-ratio:4/3; overflow:hidden; }
+  .map-frame iframe{ width:100%; height:100%; border:0; }
+  @media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
+
+  /* ===== footer ===== */
+  footer.site{
+    background:var(--fg); color:var(--bg);
+    padding-block:clamp(40px,6vw,64px) clamp(90px,8vw,64px);
+  }
+  footer.site .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:2em; }
+  footer.site .fmark{ font-weight:700; font-size:1.3rem; }
+  footer.site .fsocial{ display:flex; gap:1.4em; font-family:'IBM Plex Mono', monospace; font-size:.85rem; }
+  footer.site .fsocial a{ color:var(--bg); text-decoration:none; }
+  footer.site .fsocial a:hover{ color:#e0a4a4; }
+  footer.site .legal{
+    width:100%; margin-top:2em; padding-top:1.4em; border-top:1px solid rgba(255,255,255,.2);
+    font-size:.82rem; color:#bdbdbd; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8em;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ===== mobile bottom bar ===== */
+  .mobile-bar{ display:none; }
+  @media (max-width:840px){
+    .mobile-bar{
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60;
+      background:var(--fg); padding:.8em 1em; padding-bottom:max(.8em, env(safe-area-inset-bottom));
+      gap:.7em; box-shadow:0 -8px 24px rgba(0,0,0,.2);
+    }
+    .mobile-bar a{
+      flex:1; text-align:center; padding:.85em; text-decoration:none; font-weight:700; font-size:.92rem;
+      font-family:'IBM Plex Mono', monospace;
+    }
+    .mobile-bar .call{ background:var(--brand); color:var(--bg); }
+    .mobile-bar .route{ background:transparent; color:var(--bg); border:1px solid rgba(255,255,255,.4); }
+    body{ padding-bottom:78px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">
+      <span class="plate mono">CH · 8400</span>
+      <strong>Caffè Cappuccino</strong>
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#wand">Ausstellung</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#besuch">Öffnungszeiten</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-call" href="tel:+41522132388">Anrufen</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <p class="mono">Specialty Coffee Café · Beer Bar · Obergasse 14, Winterthur</p>
+        <p class="mono">genuss, kultur und freundschaft</p>
+      </div>
+      <h1>Eine Galerie,<br>die <span class="accent-word">Kaffee</span> &amp; <span class="accent-word">Bier</span> ausschenkt.</h1>
+      <div class="hero-sub">
+        <div>
+          <p class="hero-lead">Specialty-Coffee von Caffè Ferrari, über 100 internationale Biersorten und Wände, die monatlich neuen lokalen Künstlern gehören. Mitten in der Winterthurer Altstadt.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="tel:+41522132388">052 213 23 88 anrufen</a>
+            <a class="btn ghost" href="#karte">Zur Karte</a>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">100+</div>
+          <div class="cap">Internationale Biersorten im Haus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXHIBITION WALL -->
+  <section id="wand" class="wall">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="plate-no mono">Rundgang · Aktuelle Hängung</p>
+          <h2>An der Wand</h2>
+        </div>
+        <p class="mono" style="max-width:30ch; color:var(--muted); font-size:.85rem;">Die Räumlichkeiten beherbergen monatlich wechselnde Kunstausstellungen mit lokalen Künstlern — daneben hängt, was den Raum sonst noch ausmacht.</p>
+      </div>
+      <div class="rail reveal" aria-hidden="true"></div>
+      <div class="hung reveal">
+        <figure class="piece img-wrap">
+          <span class="wire" aria-hidden="true"></span>
+          <span class="frame">
+            <img src="https://www.cappuccino-winterthur.ch/wp-content/uploads/2020/03/cappu-inside-cappu.jpg"
+                 alt="Innenraum des Caffè Cappuccino Winterthur"
+                 onerror="this.closest('.img-wrap').style.display='none'">
+          </span>
+          <figcaption class="label">
+            <span class="lno mono">01 / 03</span>
+            <div class="lt">Innenraum</div>
+            <div class="ld mono">Café · Obergasse 14</div>
+          </figcaption>
+        </figure>
+        <figure class="piece img-wrap">
+          <span class="wire" aria-hidden="true"></span>
+          <span class="frame">
+            <img src="https://www.cappuccino-winterthur.ch/wp-content/uploads/2020/03/cappu-all.jpg"
+                 alt="Gesamtansicht des Caffè Cappuccino Winterthur"
+                 onerror="this.closest('.img-wrap').style.display='none'">
+          </span>
+          <figcaption class="label">
+            <span class="lno mono">02 / 03</span>
+            <div class="lt">Gesamtansicht</div>
+            <div class="ld mono">Café · Winterthur</div>
+          </figcaption>
+        </figure>
+        <figure class="piece img-wrap">
+          <span class="wire" aria-hidden="true"></span>
+          <span class="frame">
+            <img src="https://www.cappuccino-winterthur.ch/wp-content/uploads/2020/03/Cappu-takea-away-square.jpg"
+                 alt="Take-away beim Caffè Cappuccino Winterthur"
+                 onerror="this.closest('.img-wrap').style.display='none'">
+          </span>
+          <figcaption class="label">
+            <span class="lno mono">03 / 03</span>
+            <div class="lt">Take-away</div>
+            <div class="ld mono">Café · Winterthur</div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section id="konzept">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="plate-no mono">Das Konzept</p>
+        <h2>Kaffee, Bier &amp; lokale Kunst</h2>
+      </div>
+      <div class="concept reveal">
+        <p class="concept-quote">«Fusion aus Kaffeegenuss, Bierkultur und lokaler Kunstförderung.»</p>
+        <div class="concept-body">
+          <p>Caffè Cappuccino ist ein Specialty-Coffee-Café und Beer-Bar mit besonderem Fokus auf Kultur und Gemeinschaft. Das Café bezieht seine Kaffees von der renommierten Rösterei Caffè Ferrari und lagert über 100 internationale Biersorten.</p>
+          <p>Die Räumlichkeiten beherbergen monatlich wechselnde Kunstausstellungen mit lokalen Künstlern — ein Kultur- und Genussdrehscheibe mitten in Winterthur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: KAFFEE / BIER / ESSEN SWITCH -->
+  <section id="karte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="plate-no mono">Die Karte</p>
+        <h2>Kaffee oder Bier?</h2>
+      </div>
+      <div role="tablist" aria-label="Menü umschalten" class="switcher reveal" id="menuSwitch">
+        <button role="tab" id="tab-kaffee" aria-controls="panel-kaffee" aria-selected="true">Kaffee</button>
+        <button role="tab" id="tab-bier" aria-controls="panel-bier" aria-selected="false">Bier</button>
+        <button role="tab" id="tab-essen" aria-controls="panel-essen" aria-selected="false">Essen</button>
+      </div>
+
+      <div class="menu-panel active reveal" id="panel-kaffee" role="tabpanel" aria-labelledby="tab-kaffee">
+        <ul class="menu-rail">
+          <li>
+            <span class="mi mono">01</span>
+            <div>
+              <div class="name">Cappuccino</div>
+              <div class="desc">Von Caffè Ferrari, langsam in Terra Keramik Tassen geröstet</div>
+            </div>
+          </li>
+          <li>
+            <span class="mi mono">02</span>
+            <div>
+              <div class="name">Espresso</div>
+              <div class="desc">Von Caffè Ferrari</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-bier" role="tabpanel" aria-labelledby="tab-bier" hidden>
+        <ul class="menu-rail">
+          <li>
+            <span class="mi mono">01</span>
+            <div>
+              <div class="name">Internationale Biersorten</div>
+              <div class="desc">Über 100 verschiedene Varianten aus aller Welt</div>
+            </div>
+          </li>
+          <li>
+            <span class="mi mono">02</span>
+            <div>
+              <div class="name">Chimay Trappistes «Grande Reserve» Blue Label</div>
+            </div>
+          </li>
+          <li>
+            <span class="mi mono">03</span>
+            <div>
+              <div class="name">Alkoholfreies Bier</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-essen" role="tabpanel" aria-labelledby="tab-essen" hidden>
+        <ul class="menu-rail">
+          <li>
+            <span class="mi mono">01</span>
+            <div>
+              <div class="name">Hackbällchen mit Sauce und Polenta</div>
+            </div>
+          </li>
+          <li>
+            <span class="mi mono">02</span>
+            <div>
+              <div class="name">Feine Quiches</div>
+            </div>
+          </li>
+          <li>
+            <span class="mi mono">03</span>
+            <div>
+              <div class="name">Leckere Obstkuchen</div>
+            </div>
+          </li>
+          <li>
+            <span class="mi mono">04</span>
+            <div>
+              <div class="name">Snacks</div>
+              <div class="desc">Toast, Pizza, Focaccia</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS PLAQUE -->
+  <section id="bewertungen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="plate-no mono">Auf Google</p>
+        <h2>Publikumsstimme</h2>
+      </div>
+      <div class="plaque reveal">
+        <div class="num">4.5</div>
+        <div class="meta">
+          <div class="stars" aria-hidden="true">★★★★☆</div>
+          <p>Bewertung von <strong>4.5 / 5</strong> aus <strong>319 Google-Rezensionen</strong> — eine der meistbewerteten Adressen der Winterthurer Altstadt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS / VISIT -->
+  <section id="besuch">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="plate-no mono">Öffnungszeiten</p>
+        <h2>Wann geöffnet ist</h2>
+      </div>
+      <div class="visit-grid reveal">
+        <div>
+          <ul class="hours-list" id="hoursList">
+            <li data-days="Mo–Do"><span>Montag – Donnerstag</span><span>08:00 – 23:00</span></li>
+            <li data-days="Fr–Sa"><span>Freitag – Samstag</span><span>08:00 – 24:00</span></li>
+            <li data-days="So"><span>Sonntag</span><span>Geschlossen</span></li>
+          </ul>
+          <div class="open-pill" id="openPill">
+            <span class="dot" id="openDot"></span>
+            <span id="openText" class="mono">Status wird geladen …</span>
+          </div>
+        </div>
+        <div class="concept-body">
+          <p>Caffè Cappuccino liegt in der Winterthurer Altstadt, an der Obergasse 14 — auf dem Weg zwischen Markt und Museen. Ob morgens ein Espresso von Caffè Ferrari oder abends eine der über 100 Biersorten: die Wände wechseln monatlich, die Tür bleibt offen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="plate-no mono">Kontakt</p>
+        <h2>Obergasse 14</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <div>
+          <ul class="info-list">
+            <li><span class="label mono">Adresse</span><span>Obergasse 14, 8400 Winterthur</span></li>
+            <li><span class="label mono">Telefon</span><a href="tel:+41522132388">+41 52 213 23 88</a></li>
+            <li><span class="label mono">E-Mail</span><a href="mailto:cappuccino@cappuccino-winterthur.ch">cappuccino@cappuccino-winterthur.ch</a></li>
+            <li><span class="label mono">Instagram</span><a href="https://www.instagram.com/cappuccino_winterthur/" target="_blank" rel="noopener">@cappuccino_winterthur</a></li>
+            <li><span class="label mono">Facebook</span><a href="https://www.facebook.com/cappuccinowinterthur/" target="_blank" rel="noopener">cappuccinowinterthur</a></li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn primary" href="tel:+41522132388">Jetzt anrufen</a>
+            <a class="btn ghost" href="https://maps.google.com/maps?q=Caff%C3%A8%20Cappuccino%2C%20Obergasse%2014%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe title="Caffè Cappuccino auf der Karte" loading="lazy"
+            src="https://maps.google.com/maps?q=Caff%C3%A8%20Cappuccino%2C%20Obergasse%2014%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="fmark">Caffè Cappuccino</span>
+    <span class="fsocial">
+      <a href="https://www.instagram.com/cappuccino_winterthur/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/cappuccinowinterthur/" target="_blank" rel="noopener">Facebook</a>
+    </span>
+    <span class="legal">
+      <span>© 2026 Caffè Cappuccino, Obergasse 14, 8400 Winterthur</span>
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+    </span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+41522132388">Anrufen</a>
+  <a class="route" href="https://maps.google.com/maps?q=Caff%C3%A8%20Cappuccino%2C%20Obergasse%2014%2C%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- signature module: Kaffee / Bier / Essen switch over the real menu ---- */
+  var tabs = document.querySelectorAll('#menuSwitch [role="tab"]');
+  var panels = {
+    "tab-kaffee": document.getElementById("panel-kaffee"),
+    "tab-bier": document.getElementById("panel-bier"),
+    "tab-essen": document.getElementById("panel-essen")
+  };
+  tabs.forEach(function(tab){
+    tab.addEventListener("click", function(){
+      tabs.forEach(function(t){ t.setAttribute("aria-selected", "false"); });
+      Object.keys(panels).forEach(function(key){
+        panels[key].classList.remove("active");
+        panels[key].hidden = true;
+      });
+      tab.setAttribute("aria-selected", "true");
+      var panel = panels[tab.id];
+      panel.hidden = false;
+      panel.classList.add("active");
+    });
+  });
+
+  /* ---- open/closed pill from real opening hours ---- */
+  var hours = [
+    { key: "Mo–Do", days: [1,2,3,4], open: "08:00", close: "23:00" },
+    { key: "Fr–Sa", days: [5,6], open: "08:00", close: "23:59" }
+    /* Sonntag: geschlossen — kein Eintrag */
+  ];
+  function toMinutes(hhmm){
+    var b = hhmm.split(":");
+    return parseInt(b[0],10) * 60 + parseInt(b[1],10);
+  }
+  function renderOpenPill(){
+    var now = new Date();
+    var day = now.getDay(); /* 0 = So */
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    var match = null;
+    hours.forEach(function(h){
+      if(h.days.indexOf(day) !== -1) match = h;
+    });
+    var dot = document.getElementById("openDot");
+    var text = document.getElementById("openText");
+    if(match && nowMin >= toMinutes(match.open) && nowMin < toMinutes(match.close)){
+      dot.classList.remove("closed");
+      text.textContent = "Jetzt geöffnet · bis " + (match.close === "23:59" ? "24:00" : match.close) + " Uhr";
+    } else {
+      dot.classList.add("closed");
+      text.textContent = day === 0 ? "Heute (Sonntag) geschlossen" : "Gerade geschlossen";
+    }
+    var list = document.getElementById("hoursList");
+    Array.prototype.forEach.call(list.children, function(li){
+      li.classList.remove("today");
+      var d = li.getAttribute("data-days");
+      if(match && d === match.key) li.classList.add("today");
+      if(!match && d === "So" && day === 0) li.classList.add("today");
+    });
+  }
+  renderOpenPill();
+  setInterval(renderOpenPill, 60000);
+
+  /* ---- scroll reveals ---- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealEls = document.querySelectorAll(".reveal");
+  if(reduce || !("IntersectionObserver" in window)){
+    revealEls.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albani Winterthur — Live-Konzerte, Club Nights &amp; Bar seit 1862</title>
+<meta name="description" content="Albani Winterthur: ältester Musikclub der Stadt, über 70 Konzerte pro Jahr in einem 1862 erbauten Haus an der Steinberggasse 16. Programm, Öffnungszeiten, Tickets.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Albani Winterthur — Live-Konzerte, Club Nights &amp; Bar seit 1862">
+<meta property="og:description" content="Winterthurs ältester Musikclub: Live-Konzerte, Club Nights, Bar und Garten in einem historischen Haus von 1862.">
+<meta property="og:url" content="https://www.albani.ch/de/">
+<meta property="og:image" content="https://www.albani.ch/client/media/images/3535/2000x1334x0/v1/CRUDA_8_Giulia_Dabala_Nadia_Tarra_-_CRUDA_3_Giulia_Dabala_Nadia_Tarra_-_Irascible_Music.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Mono:wght@400;700&amp;family=Work+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NightClub",
+  "name": "Albani Winterthur",
+  "description": "Winterthurs ältester Musikclub mit Live-Konzerten und vielfältigem Programm",
+  "url": "https://www.albani.ch/de/",
+  "telephone": "+41 52 212 69 96",
+  "email": "club@albani.ch",
+  "image": [
+    "https://www.albani.ch/client/media/images/3534/1326x2000x0/v1/1_BAND_WAOP_PRESS_2024.jpg",
+    "https://www.albani.ch/client/media/images/3535/2000x1334x0/v1/CRUDA_8_Giulia_Dabala_Nadia_Tarra_-_CRUDA_3_Giulia_Dabala_Nadia_Tarra_-_Irascible_Music.jpg",
+    "https://www.albani.ch/client/media/images/657/1321x2000x0/v1/AlbaniMusicClub_Aussenansicht___1996.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Steinberggasse 16",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "724"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "15:00", "closes": "00:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "15:00", "closes": "03:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "15:00", "closes": "03:00" }
+  ]
+}
+</script>
+
+<style>
+  /* ---------- tokens ---------- */
+  :root{
+    --bg:#0c0c0a;
+    --surface:#18160f;
+    --fg:#f3ecd9;
+    --muted:#b7ad93;
+    --brand:#e6392c;
+    --accent:#f0b429;
+    --line: 2px solid var(--fg);
+    --radius: 2px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Work Sans', system-ui, sans-serif;
+    font-size:clamp(15px, 0.95vw + 12px, 18px);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Anton', 'Work Sans', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:0.92;
+    margin:0;
+  }
+
+  .mono{ font-family:'Space Mono', monospace; }
+
+  img{ max-width:100%; display:block; }
+
+  a{ color:inherit; }
+
+  ul{ margin:0; padding:0; list-style:none; }
+
+  :focus-visible{
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding-inline: clamp(1.1rem, 4vw, 2.5rem);
+  }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:var(--bg);
+    border-bottom: var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:0.85rem;
+  }
+  .wordmark{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(1.4rem, 2.4vw, 1.9rem);
+    letter-spacing:0.03em;
+    text-decoration:none;
+    color:var(--fg);
+    display:flex; align-items:baseline; gap:.4rem;
+  }
+  .wordmark span{ color:var(--brand); }
+  nav.primary ul{ display:flex; gap:clamp(0.9rem,2vw,1.6rem); flex-wrap:wrap; }
+  nav.primary a{
+    text-decoration:none;
+    font-family:'Space Mono', monospace;
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--muted);
+    border-bottom:2px solid transparent;
+    padding-bottom:2px;
+  }
+  nav.primary a:hover{ color:var(--fg); border-color:var(--accent); }
+  .nav-cta{
+    display:none;
+  }
+  @media (min-width:760px){
+    .nav-cta{
+      display:inline-block;
+      background:var(--accent);
+      color:#101006;
+      font-family:'Space Mono', monospace;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:0.8rem;
+      letter-spacing:0.05em;
+      text-decoration:none;
+      padding:0.55rem 0.9rem;
+      border:2px solid var(--fg);
+    }
+  }
+  @media (max-width:640px){
+    nav.primary ul{ gap:0.7rem 1rem; font-size:0.78rem; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding-block: clamp(2.6rem, 8vw, 5rem) clamp(2.2rem, 6vw, 3.5rem);
+    overflow:hidden;
+    border-bottom: var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(135deg, rgba(230,57,44,0.07) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;
+    display:grid;
+    gap:1.6rem;
+    grid-template-columns: 1.35fr 1fr;
+    align-items:end;
+  }
+  @media (max-width:840px){ .hero-grid{ grid-template-columns:1fr; } }
+
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.78rem;
+    color:var(--brand);
+    display:flex; align-items:center; gap:0.6rem;
+    margin-bottom:0.9rem;
+  }
+  .eyebrow::before{
+    content:"";
+    width:0.6rem; height:0.6rem;
+    background:var(--brand);
+    display:inline-block;
+    transform:rotate(45deg);
+  }
+
+  .hero h1{
+    font-size:clamp(3rem, 10vw, 7.4rem);
+    color:var(--fg);
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--bg);
+    background:var(--accent);
+    padding-inline:0.12em;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+  }
+  .hero-tag{
+    margin-top:1.1rem;
+    font-size:clamp(1.05rem, 1.6vw, 1.3rem);
+    max-width:34ch;
+    color:var(--fg);
+  }
+  .hero-meta{
+    margin-top:1.6rem;
+    display:flex; flex-wrap:wrap; gap:0.7rem;
+  }
+  .stamp{
+    border:2px solid var(--fg);
+    padding:0.4rem 0.7rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    transform:rotate(-2deg);
+  }
+  .stamp.alt{ transform:rotate(2deg); border-color:var(--brand); color:var(--brand); }
+
+  .hero-side{
+    border:2px solid var(--fg);
+    background:var(--surface);
+    padding:1.3rem 1.4rem;
+    position:relative;
+  }
+  .hero-side::before{
+    content:"POSTER Nº 001";
+    position:absolute; top:-0.7rem; left:1rem;
+    background:var(--bg);
+    padding-inline:0.5rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    color:var(--muted);
+  }
+  .hero-rating{
+    display:flex; align-items:baseline; gap:0.5rem;
+    font-family:'Anton', sans-serif;
+    font-size:2.6rem;
+    color:var(--accent);
+  }
+  .hero-rating small{
+    font-family:'Space Mono', monospace;
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  .hero-cta{
+    margin-top:1.2rem;
+    display:flex; flex-wrap:wrap; gap:0.7rem;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    font-family:'Space Mono', monospace;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+    text-decoration:none;
+    padding:0.75rem 1.05rem;
+    border:2px solid var(--fg);
+  }
+  .btn.solid{ background:var(--accent); color:#101006; border-color:var(--accent); }
+  .btn.solid:hover{ background:var(--fg); border-color:var(--fg); }
+  .btn.ghost{ color:var(--fg); }
+  .btn.ghost:hover{ background:var(--fg); color:var(--bg); }
+
+  /* ---------- section shell ---------- */
+  section{ border-bottom: var(--line); }
+  .section-pad{ padding-block:clamp(2.4rem, 6vw, 4.2rem); }
+  .kicker{
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--brand);
+    font-size:0.8rem;
+    margin-bottom:0.6rem;
+  }
+  .h2-row{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:1rem;
+    flex-wrap:wrap;
+    margin-bottom:1.8rem;
+  }
+  h2{ font-size:clamp(2.1rem, 5vw, 3.6rem); }
+  .lede{ max-width:56ch; color:var(--muted); font-size:1.02rem; }
+
+  /* ---------- läuft heute (signature module 1) ---------- */
+  .status-panel{ background:var(--surface); }
+  .status-grid{
+    display:grid;
+    grid-template-columns: minmax(240px, 380px) 1fr;
+    gap:2rem;
+    align-items:start;
+  }
+  @media (max-width:780px){ .status-grid{ grid-template-columns:1fr; } }
+
+  .badge-box{
+    border:2px solid var(--fg);
+    padding:1.4rem;
+    background:var(--bg);
+  }
+  .badge-light{
+    display:inline-flex; align-items:center; gap:0.6rem;
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    letter-spacing:0.06em;
+    padding:0.5rem 0.8rem;
+    border:2px solid currentColor;
+  }
+  .badge-light .dot{
+    width:0.7rem; height:0.7rem; border-radius:50%;
+    background:currentColor;
+  }
+  .badge-light.is-open{ color:#3fbf5f; }
+  .badge-light.is-closed{ color:var(--brand); }
+  .badge-light.is-unknown{ color:var(--accent); }
+  @media (prefers-reduced-motion: no-preference){
+    .badge-light.is-open .dot{ animation: pulse 1.6s ease-in-out infinite; }
+  }
+  @keyframes pulse{
+    0%,100%{ box-shadow:0 0 0 0 rgba(63,191,95,0.5); }
+    50%{ box-shadow:0 0 0 6px rgba(63,191,95,0); }
+  }
+  .badge-headline{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(1.5rem, 3vw, 2.1rem);
+    margin-top:0.9rem;
+  }
+  .badge-sub{
+    margin-top:0.5rem;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+  .badge-clock{
+    margin-top:1rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.8rem;
+    color:var(--muted);
+  }
+
+  table.hours{
+    width:100%;
+    border-collapse:collapse;
+    font-family:'Space Mono', monospace;
+    font-size:0.95rem;
+  }
+  table.hours th{ text-align:left; }
+  table.hours th, table.hours td{
+    padding:0.7rem 0.4rem;
+    border-bottom:1px solid rgba(243,236,217,0.18);
+  }
+  table.hours tr.today td, table.hours tr.today th{
+    color:var(--accent);
+  }
+  table.hours caption{
+    text-align:left;
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-size:0.78rem;
+    color:var(--muted);
+    margin-bottom:0.6rem;
+  }
+
+  /* ---------- poster wall (dominant programme section) ---------- */
+  .plakatwand{ background:var(--bg); }
+  .wall-lede{ display:flex; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; align-items:flex-end; }
+  .wall-tags{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .genre-tag{
+    font-family:'Space Mono', monospace;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    border:1px solid var(--muted);
+    color:var(--muted);
+    padding:0.3rem 0.6rem;
+  }
+
+  .wall{
+    margin-top:2.6rem;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:2.4rem 1.6rem;
+  }
+  @media (max-width:980px){ .wall{ grid-template-columns:repeat(2,1fr); gap:2.6rem 1.2rem; } }
+  @media (max-width:520px){ .wall{ grid-template-columns:1fr; max-width:340px; margin-inline:auto; } }
+
+  .poster-item{
+    all:unset;
+    cursor:pointer;
+    display:block;
+    position:relative;
+    background:var(--surface);
+    border:2px solid var(--fg);
+    padding:0.5rem 0.5rem 0.9rem;
+    transform:rotate(var(--rot,0deg));
+    transition:transform .25s ease, box-shadow .25s ease, z-index 0s;
+    box-shadow:8px 8px 0 rgba(0,0,0,0.55);
+  }
+  .poster-item:nth-child(4n+1){ --rot:-3deg; }
+  .poster-item:nth-child(4n+2){ --rot:2deg; }
+  .poster-item:nth-child(4n+3){ --rot:-1.5deg; }
+  .poster-item:nth-child(4n+4){ --rot:3deg; }
+  .poster-item:hover, .poster-item:focus-visible{
+    transform:rotate(0deg) scale(1.05);
+    z-index:5;
+    box-shadow:12px 12px 0 rgba(230,57,44,0.65);
+  }
+  .poster-item .frame{
+    aspect-ratio:3/4;
+    overflow:hidden;
+    background:#000;
+  }
+  .poster-item img{ width:100%; height:100%; object-fit:cover; }
+  .poster-item .cap{
+    margin-top:0.6rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--muted);
+  }
+  .pin{
+    position:absolute; top:-0.5rem; left:50%; transform:translateX(-50%);
+    width:1rem; height:1rem; border-radius:50%;
+    background:var(--brand);
+    border:2px solid var(--fg);
+  }
+
+  .wall-note{
+    margin-top:2.2rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.82rem;
+    color:var(--muted);
+    max-width:62ch;
+  }
+
+  /* lightbox */
+  .lightbox{
+    position:fixed; inset:0; z-index:80;
+    background:rgba(5,5,4,0.92);
+    display:none;
+    align-items:center; justify-content:center;
+    padding:1.4rem;
+  }
+  .lightbox.is-active{ display:flex; }
+  .lightbox-box{
+    max-width:min(90vw, 640px);
+    max-height:88vh;
+    border:2px solid var(--fg);
+    background:var(--surface);
+    padding:1rem;
+    position:relative;
+  }
+  .lightbox-box img{ max-height:70vh; margin-inline:auto; }
+  .lightbox-cap{
+    margin-top:0.8rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  .lightbox-close{
+    position:absolute; top:-1rem; right:-1rem;
+    width:2.4rem; height:2.4rem;
+    background:var(--brand);
+    color:var(--fg);
+    border:2px solid var(--fg);
+    font-family:'Space Mono', monospace;
+    font-size:1.1rem;
+    cursor:pointer;
+  }
+
+  /* ---------- haus / about ---------- */
+  .haus{ background:var(--surface); }
+  .haus-grid{
+    display:grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap:2.4rem;
+    align-items:center;
+  }
+  @media (max-width:840px){ .haus-grid{ grid-template-columns:1fr; } }
+  .haus-photo{
+    border:2px solid var(--fg);
+    box-shadow:10px 10px 0 var(--brand);
+  }
+  .haus-photo img{ aspect-ratio:2/3; object-fit:cover; width:100%; }
+  .usp-list{ margin-top:1.4rem; display:grid; gap:0.7rem; }
+  .usp-list li{
+    display:flex; gap:0.7rem; align-items:flex-start;
+    font-size:1rem;
+  }
+  .usp-list li::before{
+    content:"";
+    flex:none;
+    width:0.55rem; height:0.55rem;
+    margin-top:0.5rem;
+    background:var(--accent);
+    transform:rotate(45deg);
+  }
+
+  /* ---------- programme prices / drinks ---------- */
+  .karte{ background:var(--bg); }
+  .karte-grid{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:2.2rem;
+    align-items:start;
+  }
+  @media (max-width:840px){ .karte-grid{ grid-template-columns:1fr; } }
+  .menu-block h3{
+    font-size:clamp(1.4rem, 2.6vw, 1.9rem);
+    color:var(--accent);
+    margin-bottom:1rem;
+  }
+  .menu-row{
+    display:flex; justify-content:space-between; gap:1rem;
+    padding-block:0.9rem;
+    border-bottom:1px dashed rgba(243,236,217,0.3);
+  }
+  .menu-row:first-of-type{ border-top:1px dashed rgba(243,236,217,0.3); }
+  .menu-name{ font-weight:600; }
+  .menu-desc{ color:var(--muted); font-size:0.92rem; margin-top:0.2rem; }
+  .menu-price{
+    font-family:'Space Mono', monospace;
+    white-space:nowrap;
+    color:var(--fg);
+    font-weight:700;
+  }
+  .menu-price.na{ color:var(--muted); font-weight:400; }
+  .menu-block + .menu-block{ margin-top:2.2rem; }
+
+  /* ---------- reviews ---------- */
+  .stimmen{ background:var(--surface); }
+  .stimmen-row{
+    display:flex; gap:2.4rem; flex-wrap:wrap; align-items:center;
+  }
+  .rating-big{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(3.5rem, 10vw, 6rem);
+    color:var(--accent);
+    line-height:0.85;
+  }
+  .stars{
+    font-size:1.4rem;
+    color:var(--accent);
+    letter-spacing:0.15em;
+  }
+  .stimmen-copy{ max-width:48ch; color:var(--muted); }
+
+  /* ---------- contact / lage ---------- */
+  .lage{ background:var(--bg); }
+  .lage-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2.2rem;
+  }
+  @media (max-width:840px){ .lage-grid{ grid-template-columns:1fr; } }
+  .info-list{ display:grid; gap:1rem; }
+  .info-list dt{
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    color:var(--muted);
+  }
+  .info-list dd{ margin:0.15rem 0 0; font-size:1.05rem; }
+  .info-list a{ text-decoration:underline; text-decoration-color:var(--brand); }
+  .map-frame{
+    border:2px solid var(--fg);
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe{ width:100%; height:100%; border:0; }
+
+  /* ---------- footer ---------- */
+  footer.site{
+    padding-block:2.4rem 6.5rem;
+  }
+  .footer-grid{
+    display:flex; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;
+    font-family:'Space Mono', monospace;
+    font-size:0.78rem;
+    color:var(--muted);
+  }
+  .footer-grid a{ text-decoration:underline; }
+  .footer-note{ margin-top:1.2rem; font-size:0.72rem; color:var(--muted); opacity:0.85; }
+
+  /* ---------- sticky mobile call bar ---------- */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    display:flex;
+    border-top:2px solid var(--fg);
+    background:var(--accent);
+  }
+  .mobile-bar a{
+    flex:1;
+    text-align:center;
+    padding:0.9rem 0.5rem;
+    font-family:'Space Mono', monospace;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    text-decoration:none;
+    color:#101006;
+  }
+  .mobile-bar a.tickets{
+    background:var(--brand);
+    color:var(--fg);
+  }
+  @media (min-width:760px){
+    .mobile-bar{ display:none; }
+  }
+  body{ padding-bottom:0; }
+  @media (max-width:759px){
+    body{ padding-bottom:3.6rem; }
+  }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px;
+    overflow:hidden; clip:rect(0,0,0,0);
+    white-space:nowrap;
+  }
+
+  .skip-link{
+    position:absolute; left:1rem; top:-3rem;
+    background:var(--accent); color:#101006;
+    padding:0.6rem 1rem;
+    font-family:'Space Mono', monospace;
+    font-size:0.8rem;
+    z-index:100;
+    transition:top .2s ease;
+  }
+  .skip-link:focus{ top:1rem; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">ALBANI<span>.</span></a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#programm">Programm</a></li>
+        <li><a href="#haus">Haus</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#lage">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="https://ticketino.com" target="_blank" rel="noopener">Tickets</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Steinberggasse 16 · Winterthur</p>
+        <h1>Musik<br>Club<br><em>Albani</em></h1>
+        <p class="hero-tag">Winterthurs ältester Musikclub mit Live-Konzerten und vielfältigem Programm.</p>
+        <div class="hero-meta">
+          <span class="stamp">1862 erbaut</span>
+          <span class="stamp alt">70+ Konzerte / Jahr</span>
+          <span class="stamp">ca. 100 Partys / Jahr</span>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-rating">4.3<small>／5 · 724 Google-Rezensionen</small></div>
+        <p class="hero-tag" style="margin-top:0.8rem; font-size:0.95rem;">Historisches Haus mit 250 Plätzen, Aussengarten und 9 Hotelzimmern — Konzertort, Nightclub, Bar.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="https://ticketino.com" target="_blank" rel="noopener">Tickets sichern</a>
+          <a class="btn ghost" href="tel:+41522126996">Anrufen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE MODUL: LÄUFT HEUTE ETWAS ============ -->
+  <section class="status-panel section-pad" id="jetzt">
+    <div class="wrap">
+      <p class="kicker">Live-Status</p>
+      <div class="h2-row">
+        <h2>Läuft heute<br>etwas?</h2>
+        <p class="lede">Der Badge unten rechnet in Echtzeit mit den echten Öffnungszeiten des Albani — kein Rätselraten, kein Anruf nötig.</p>
+      </div>
+      <div class="status-grid reveal">
+        <div class="badge-box">
+          <span class="badge-light" id="status-badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="status-text">Status wird berechnet…</span>
+          </span>
+          <p class="badge-headline" id="status-headline">Einen Moment…</p>
+          <p class="badge-sub" id="status-sub">Wir prüfen die aktuelle Zeit gegen die Öffnungszeiten.</p>
+          <p class="badge-clock mono" id="status-clock"></p>
+        </div>
+        <div>
+          <table class="hours">
+            <caption>Öffnungszeiten Bar &amp; Club</caption>
+            <thead>
+              <tr><th scope="col">Tag</th><th scope="col">Zeit</th></tr>
+            </thead>
+            <tbody id="hours-body">
+              <tr data-day="1,2,3,4"><th scope="row">Mo–Do</th><td>15:00–00:00</td></tr>
+              <tr data-day="5"><th scope="row">Fr</th><td>15:00–03:00</td></tr>
+              <tr data-day="6"><th scope="row">Sa</th><td>15:00–03:00</td></tr>
+              <tr data-day="0"><th scope="row">So</th><td>Event-abhängig</td></tr>
+            </tbody>
+          </table>
+          <p class="badge-sub" style="margin-top:1rem;">Am Sonntag richten sich die Zeiten nach dem jeweiligen Anlass — am sichersten ist ein Blick ins Plakat unten oder ein Anruf.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMM / PLAKATWAND — DOMINANTE SEKTION ============ -->
+  <section class="plakatwand section-pad" id="programm">
+    <div class="wrap">
+      <p class="kicker">Das Programm</p>
+      <div class="wall-lede">
+        <h2>Die Plakat-<br>wand</h2>
+        <div class="wall-tags" aria-hidden="true">
+          <span class="genre-tag">Indie</span>
+          <span class="genre-tag">Techno</span>
+          <span class="genre-tag">Hip-Hop</span>
+          <span class="genre-tag">Drum &amp; Bass</span>
+          <span class="genre-tag">Club Nights</span>
+        </div>
+      </div>
+      <p class="lede">Ausschnitte aus dem Albani-Archiv: Konzerte, Club Nights und Anlässe, wie sie tatsächlich an der Steinberggasse stattfinden. Antippen zum Vergrössern.</p>
+
+      <div class="wall" id="poster-wall">
+        <!-- populated by JS from real image data, with generic captions -->
+      </div>
+
+      <p class="wall-note">Bildmaterial aus dem Programm-Archiv des Albani. Konkrete Termine, Bands und Ticketpreise für einzelne Abende entnehmen Sie bitte dem aktuellen Vorverkauf.</p>
+    </div>
+  </section>
+
+  <!-- ============ HAUS / GESCHICHTE ============ -->
+  <section class="haus section-pad" id="haus">
+    <div class="wrap haus-grid">
+      <div class="haus-photo reveal">
+        <img
+          src="https://www.albani.ch/client/media/images/657/1321x2000x0/v1/AlbaniMusicClub_Aussenansicht___1996.jpg"
+          alt="Aussenansicht des Albani-Gebäudes an der Steinberggasse"
+          loading="lazy"
+          onerror="this.closest('.haus-photo').style.display='none'">
+      </div>
+      <div class="reveal">
+        <p class="kicker">Seit 1862</p>
+        <h2>Ein Haus mit<br>Geschichte</h2>
+        <p style="margin-top:1.1rem; max-width:52ch;">Historischer Musikclub in einem 1862 erbauten Gebäude, seit Anfang der 1900er-Jahre als Konzertveranstaltungsort, Nightclub, Bar und Hotel tätig. Das Haus bietet 250 Plätze, ein Aussengartengelände und beherbergt 9 Hotelzimmer. Jährlich rund 70 Konzerte und 100 Partys.</p>
+        <ul class="usp-list">
+          <li>Ältester Musikclub in Winterthur</li>
+          <li>70+ Konzerte pro Jahr</li>
+          <li>Historisches Gebäude von 1862</li>
+          <li>Hotel mit 9 Zimmern</li>
+          <li>Grosser Aussengarten</li>
+          <li>Vielfältige Musikgenres: Indie, Techno, Hip-Hop, Drum &amp; Bass</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMM-PREISE & GETRÄNKE (unterhalb der Konzerte) ============ -->
+  <section class="karte section-pad" id="karte">
+    <div class="wrap">
+      <p class="kicker">Eintritt &amp; Karte</p>
+      <h2>Was es kostet,<br>was es gibt</h2>
+      <div class="karte-grid" style="margin-top:2rem;">
+        <div class="menu-block reveal">
+          <h3>Events</h3>
+          <div class="menu-row">
+            <div>
+              <div class="menu-name">Club Nights</div>
+              <div class="menu-desc">DJ-Sets und elektronische Musik</div>
+            </div>
+            <div class="menu-price">CHF 10–15</div>
+          </div>
+          <div class="menu-row">
+            <div>
+              <div class="menu-name">Live Konzerte</div>
+              <div class="menu-desc">Bands und Solokünstler verschiedener Genres</div>
+            </div>
+            <div class="menu-price">CHF 25–36</div>
+          </div>
+          <div class="menu-row">
+            <div>
+              <div class="menu-name">PubQuiz</div>
+              <div class="menu-desc">Musikquiz-Events</div>
+            </div>
+            <div class="menu-price">CHF 25 pro Team</div>
+          </div>
+        </div>
+        <div class="menu-block reveal">
+          <h3>Getränke</h3>
+          <div class="menu-row">
+            <div>
+              <div class="menu-name">Kühle Getränke</div>
+              <div class="menu-desc">Breite Auswahl an Bier und Spirits</div>
+            </div>
+            <div class="menu-price na">—</div>
+          </div>
+          <div class="menu-row">
+            <div>
+              <div class="menu-name">Sirup on the Rocks</div>
+              <div class="menu-desc">Für Kinderveranstaltungen</div>
+            </div>
+            <div class="menu-price na">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STIMMEN ============ -->
+  <section class="stimmen section-pad" id="stimmen">
+    <div class="wrap">
+      <p class="kicker">Stimmen aus dem Publikum</p>
+      <div class="stimmen-row reveal">
+        <div>
+          <div class="rating-big">4.3</div>
+          <div class="stars" aria-hidden="true">★★★★☆</div>
+        </div>
+        <p class="stimmen-copy">724 Bewertungen bei Google — gesammelt über Jahre voller Konzerte, Club Nights und langer Abende im Garten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ANFAHRT / KONTAKT ============ -->
+  <section class="lage section-pad" id="lage">
+    <div class="wrap">
+      <p class="kicker">Anfahrt &amp; Kontakt</p>
+      <h2>Bis später<br>an der Steinberggasse</h2>
+      <div class="lage-grid" style="margin-top:2rem;">
+        <div class="reveal">
+          <dl class="info-list">
+            <div>
+              <dt>Adresse</dt>
+              <dd>Steinberggasse 16, CH-8400 Winterthur</dd>
+            </div>
+            <div>
+              <dt>Telefon</dt>
+              <dd><a href="tel:+41522126996">+41 52 212 69 96</a></dd>
+            </div>
+            <div>
+              <dt>E-Mail</dt>
+              <dd><a href="mailto:club@albani.ch">club@albani.ch</a></dd>
+            </div>
+            <div>
+              <dt>Tickets</dt>
+              <dd><a href="https://ticketino.com" target="_blank" rel="noopener">ticketino.com</a></dd>
+            </div>
+            <div>
+              <dt>Website</dt>
+              <dd><a href="https://www.albani.ch/de/" target="_blank" rel="noopener">albani.ch</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Albani%20Winterthur%20Steinberggasse%2016&amp;z=16&amp;output=embed"
+            title="Karte: Albani Winterthur, Steinberggasse 16"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span>Albani Winterthur · Steinberggasse 16, CH-8400 Winterthur</span>
+      <span><a href="tel:+41522126996">+41 52 212 69 96</a> · <a href="mailto:club@albani.ch">club@albani.ch</a></span>
+      <span><a href="https://www.albani.ch/de/" target="_blank" rel="noopener">albani.ch</a></span>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY BAR ============ -->
+<div class="mobile-bar">
+  <a href="tel:+41522126996">📞 Anrufen</a>
+  <a class="tickets" href="https://ticketino.com" target="_blank" rel="noopener">Tickets</a>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Plakat-Ansicht">
+  <div class="lightbox-box">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Schliessen">✕</button>
+    <img id="lightbox-img" src="" alt="" onerror="this.style.display='none'">
+    <p class="lightbox-cap mono" id="lightbox-cap"></p>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Poster wall data (real image URLs from JSON only) ---------------- */
+  var posters = [
+    { src:"https://www.albani.ch/client/media/images/3547/1000x1000x1/v1/MFW_Afterhours_Zeichenflaeche_1.png", cap:"Club Night — Afterhours" },
+    { src:"https://www.albani.ch/client/media/images/3534/1326x2000x0/v1/1_BAND_WAOP_PRESS_2024.jpg", cap:"Live-Konzert im Albani" },
+    { src:"https://www.albani.ch/client/media/images/3535/2000x1334x0/v1/CRUDA_8_Giulia_Dabala_Nadia_Tarra_-_CRUDA_3_Giulia_Dabala_Nadia_Tarra_-_Irascible_Music.jpg", cap:"Live-Konzert im Albani" },
+    { src:"https://www.albani.ch/client/media/images/3536/2000x1334x0/v1/kombinat_sf__72.JPG", cap:"Konzertabend im Saal" },
+    { src:"https://www.albani.ch/client/media/images/3549/1924x2000x0/v1/Tia_photo_bis_Das_Playground.jpg", cap:"Live-Musik im Albani" },
+    { src:"https://www.albani.ch/client/media/images/3550/2000x2000x0/v1/Psycho_Weazel_photo_2.JPEG", cap:"Konzert im Albani" },
+    { src:"https://www.albani.ch/client/media/images/3522/1000x1000x1/v1/2507_Steibi_Slam_Plakat.png", cap:"Programm-Plakat" },
+    { src:"https://www.albani.ch/client/media/images/3525/1000x1000x1/v1/Albani_RHR_A3_260531_ohneText-b.png", cap:"Programm-Plakat" }
+  ];
+
+  var wall = document.getElementById("poster-wall");
+  posters.forEach(function(p, i){
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "poster-item";
+    btn.setAttribute("aria-label", p.cap + " — vergrössern");
+    btn.dataset.src = p.src;
+    btn.dataset.cap = p.cap;
+
+    var pin = document.createElement("span");
+    pin.className = "pin";
+    pin.setAttribute("aria-hidden", "true");
+    btn.appendChild(pin);
+
+    var frame = document.createElement("span");
+    frame.className = "frame";
+    var img = document.createElement("img");
+    img.src = p.src;
+    img.alt = p.cap;
+    img.loading = "lazy";
+    img.onerror = function(){
+      var item = btn;
+      item.style.display = "none";
+    };
+    frame.appendChild(img);
+    btn.appendChild(frame);
+
+    var cap = document.createElement("span");
+    cap.className = "cap";
+    cap.textContent = "0" + (i+1) + " — " + p.cap;
+    btn.appendChild(cap);
+
+    wall.appendChild(btn);
+  });
+
+  /* ---------------- Lightbox ---------------- */
+  var lightbox = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lightbox-img");
+  var lbCap = document.getElementById("lightbox-cap");
+  var lbClose = document.getElementById("lightbox-close");
+  var lastFocused = null;
+
+  function openLightbox(src, cap){
+    lastFocused = document.activeElement;
+    lbImg.src = src;
+    lbImg.alt = cap;
+    lbImg.style.display = "block";
+    lbCap.textContent = cap;
+    lightbox.classList.add("is-active");
+    lbClose.focus();
+    document.addEventListener("keydown", onKeydown);
+  }
+  function closeLightbox(){
+    lightbox.classList.remove("is-active");
+    lbImg.src = "";
+    document.removeEventListener("keydown", onKeydown);
+    if(lastFocused){ lastFocused.focus(); }
+  }
+  function onKeydown(e){
+    if(e.key === "Escape"){ closeLightbox(); }
+  }
+
+  wall.addEventListener("click", function(e){
+    var item = e.target.closest(".poster-item");
+    if(!item) return;
+    openLightbox(item.dataset.src, item.dataset.cap);
+  });
+  lbClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", function(e){
+    if(e.target === lightbox){ closeLightbox(); }
+  });
+
+  /* ---------------- Signature module: läuft heute etwas? ---------------- */
+  // schedule keyed by JS getDay(): 0=So,1=Mo,2=Di,3=Mi,4=Do,5=Fr,6=Sa
+  // close values >24 mean "next day, HH-24 Uhr"
+  var schedule = {
+    1: { open: 15, close: 24 },
+    2: { open: 15, close: 24 },
+    3: { open: 15, close: 24 },
+    4: { open: 15, close: 24 },
+    5: { open: 15, close: 27 },
+    6: { open: 15, close: 27 },
+    0: null
+  };
+  var dayNames = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+
+  function computeStatus(now){
+    var day = now.getDay();
+    var hour = now.getHours() + now.getMinutes() / 60;
+    var today = schedule[day];
+    var yesterday = schedule[(day + 6) % 7];
+
+    // still open from yesterday's overnight stretch?
+    if (yesterday && yesterday.close > 24) {
+      var spillEnd = yesterday.close - 24;
+      if (hour < spillEnd) {
+        return { state: "open", untilHour: spillEnd, fromYesterday: true };
+      }
+    }
+    // open per today's own schedule?
+    if (today && hour >= today.open && hour < Math.min(today.close, 24)) {
+      return { state: "open", untilHour: today.close, fromYesterday: false };
+    }
+    // today has no fixed schedule (Sunday) and not covered by Saturday spill above
+    if (today === null) {
+      return { state: "unknown" };
+    }
+    // before today's opening
+    if (today && hour < today.open) {
+      return { state: "closed", opensHour: today.open };
+    }
+    return { state: "closed" };
+  }
+
+  function fmtHour(h){
+    var hh = Math.floor(h % 24);
+    var mm = Math.round((h % 1) * 60);
+    return (hh < 10 ? "0" : "") + hh + ":" + (mm < 10 ? "0" : "") + mm;
+  }
+
+  function renderStatus(){
+    var now = new Date();
+    var result = computeStatus(now);
+    var badge = document.getElementById("status-badge");
+    var text = document.getElementById("status-text");
+    var headline = document.getElementById("status-headline");
+    var sub = document.getElementById("status-sub");
+    var clock = document.getElementById("status-clock");
+
+    badge.classList.remove("is-open", "is-closed", "is-unknown");
+
+    if (result.state === "open") {
+      badge.classList.add("is-open");
+      text.textContent = "Geöffnet";
+      headline.textContent = "Ja — heute läuft was.";
+      sub.textContent = result.fromYesterday
+        ? "Wir sind noch offen bis " + fmtHour(result.untilHour) + " Uhr."
+        : "Geöffnet bis " + (result.untilHour >= 24 ? "00:00" : fmtHour(result.untilHour)) + " Uhr.";
+    } else if (result.state === "unknown") {
+      badge.classList.add("is-unknown");
+      text.textContent = "Event-abhängig";
+      headline.textContent = "Kommt auf den Anlass an.";
+      sub.textContent = "Sonntags richten sich die Zeiten nach dem Programm — Plakatwand oben oder direkt anrufen.";
+    } else {
+      badge.classList.add("is-closed");
+      text.textContent = "Geschlossen";
+      headline.textContent = "Gerade zu.";
+      sub.textContent = result.opensHour
+        ? "Öffnet heute um " + fmtHour(result.opensHour) + " Uhr."
+        : "Schau in der Tabelle rechts, wann's weitergeht.";
+    }
+
+    clock.textContent = dayNames[now.getDay()] + " · " + now.toLocaleTimeString("de-CH", { hour: "2-digit", minute: "2-digit" }) + " Uhr";
+
+    var rows = document.querySelectorAll("#hours-body tr");
+    rows.forEach(function(row){
+      var days = row.dataset.day.split(",").map(Number);
+      row.classList.toggle("today", days.indexOf(now.getDay()) !== -1);
+    });
+  }
+
+  renderStatus();
+  setInterval(renderStatus, 60000);
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+
+</body>
+</html>

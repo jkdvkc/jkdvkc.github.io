@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Duchessa Ristorante Pizzeria Winterthur</title>
+<meta name="description" content="Villa Duchessa Ristorante Pizzeria in Winterthur: italienische Küche und Pizza, 4.6 Sterne bei 1281 Google-Bewertungen. Telefonisch erreichbar unter 052 212 00 09.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Villa Duchessa Ristorante Pizzeria Winterthur">
+<meta property="og:description" content="Italienische Küche und Pizza in Winterthur — 4.6 Sterne bei 1281 Google-Bewertungen.">
+<meta property="og:url" content="https://villa-duchessa-winterthur.ch/">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Villa Duchessa Ristorante Pizzeria",
+  "servesCuisine": "Italian, Pizza",
+  "url": "https://villa-duchessa-winterthur.ch/",
+  "telephone": "+41 52 212 00 09",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "1281"
+  }
+}
+</script>
+
+<style>
+  /*
+    Design system — Villa Duchessa Ristorante Pizzeria
+    ----------------------------------------------------
+    The business JSON carries almost no facts: phone, a Google
+    rating, a review count, "Italian, Pizza". No address, no hours,
+    no menu, no images, no brand colours. That thinness is the
+    brief: build a short, confident page around the one real asset
+    — 1281 happy reviews at 4.6 — using type, colour and CSS shapes
+    only. The layout borrows the villa's own logic: a centred,
+    symmetrical composition (arch, columns, cypress silhouettes)
+    standing in for a photograph that does not exist.
+
+    --bg      warm stone / travertine ground
+    --surface card ground, near-white
+    --fg      primary text, near-black warm brown
+    --muted   secondary text, still ≥4.5:1 on bg
+    --brand   cypress green — CTAs, architecture, cypress shapes
+    --accent  aged stone gold — rule, arch glow, stars
+  */
+  :root{
+    --bg:#f6f0e4;
+    --surface:#fffdf8;
+    --fg:#2c2820;
+    --muted:#5c5546;
+    --brand:#4b5d3a;
+    --accent:#a9762f;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Montserrat', system-ui, sans-serif;
+    font-size:clamp(15px, 0.35vw + 14px, 17.5px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; }
+  ul{ margin:0; padding:0; list-style:none; }
+
+  h1,h2,h3,.display{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:600;
+    line-height:1.06;
+    margin:0;
+  }
+
+  :focus-visible{ outline:3px solid var(--accent); outline-offset:3px; }
+
+  .wrap{ max-width:980px; margin:0 auto; padding-inline:clamp(1.1rem, 5vw, 2.6rem); }
+
+  .skip-link{
+    position:absolute; left:1rem; top:-3.4rem; background:var(--accent); color:#fffdf8;
+    padding:0.6rem 1rem; font-weight:700; z-index:100; transition:top .2s ease; border-radius:3px;
+  }
+  .skip-link:focus{ top:1rem; }
+
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  .eyebrow{
+    font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); font-weight:600;
+    display:block; margin-bottom:0.7rem; text-align:center;
+  }
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(246,240,228,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(44,40,32,0.1);
+  }
+  /* symmetric header: nav-left / wordmark-centre / phone-right */
+  .nav-row{
+    display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+    gap:1rem; padding-block:1rem;
+  }
+  .wordmark{
+    justify-self:center;
+    font-family:'Cormorant Garamond', serif; font-weight:700; font-size:1.4rem; text-decoration:none; color:var(--fg);
+    letter-spacing:0.03em; white-space:nowrap;
+  }
+  nav.primary{ display:flex; gap:clamp(0.9rem,2vw,1.5rem); }
+  nav.primary a{
+    text-decoration:none; font-weight:600; font-size:0.8rem; letter-spacing:0.03em; color:var(--muted);
+    border-bottom:1px solid transparent;
+  }
+  nav.primary a:hover{ color:var(--brand); border-color:var(--brand); }
+  .nav-call{
+    justify-self:end;
+    display:inline-flex; align-items:center; gap:0.4rem; color:var(--brand);
+    text-decoration:none; font-weight:600; font-size:0.8rem; border-bottom:1px solid var(--brand);
+    white-space:nowrap;
+  }
+  @media (max-width:640px){ nav.primary{ display:none; } }
+  @media (max-width:400px){ .nav-call{ display:none; } }
+
+  /* ---------- villa architectural device ---------- */
+  /* a symmetrical facade built entirely from CSS shapes: cypress · column · pediment+arch · column · cypress */
+  .villa{
+    display:flex; justify-content:center; align-items:flex-end; gap:clamp(0.5rem,1.6vw,1.1rem);
+    margin:0 auto clamp(1.6rem,4vw,2.6rem);
+    max-width:640px;
+  }
+  .cypress{
+    width:clamp(16px,3vw,24px);
+    height:clamp(64px,12vw,96px);
+    background:linear-gradient(180deg, var(--brand), #384a2b);
+    border-radius:50% 50% 8% 8% / 60% 60% 6% 6%;
+    flex:none;
+    transform-origin:bottom center;
+    transition:transform 2.4s ease-in-out;
+  }
+  .hero:hover .cypress:nth-child(1){ transform:rotate(-1.5deg); }
+  .hero:hover .cypress:nth-child(5){ transform:rotate(1.5deg); }
+  @media (prefers-reduced-motion: reduce){ .cypress{ transition:none; } .hero:hover .cypress{ transform:none; } }
+  @media (max-width:480px){ .cypress{ display:none; } }
+  .column{
+    width:clamp(10px,2.4vw,16px);
+    height:clamp(70px,14vw,110px);
+    background:linear-gradient(180deg, var(--surface), rgba(75,93,58,0.12));
+    border:1px solid rgba(44,40,32,0.18);
+    border-top:none;
+    flex:none;
+  }
+  .facade{ display:flex; flex-direction:column; align-items:center; }
+  .pediment{
+    width:0; height:0; flex:none;
+    border-left:clamp(64px,17vw,116px) solid transparent;
+    border-right:clamp(64px,17vw,116px) solid transparent;
+    border-bottom:clamp(30px,8vw,54px) solid rgba(75,93,58,0.16);
+    filter:drop-shadow(0 -1px 0 rgba(44,40,32,0.18));
+  }
+  .arch{
+    width:clamp(120px,32vw,220px);
+    height:clamp(150px,34vw,240px);
+    border:1px solid rgba(44,40,32,0.18);
+    border-bottom:none;
+    border-top-left-radius:120px 220px;
+    border-top-right-radius:120px 220px;
+    background:linear-gradient(180deg, rgba(169,118,47,0.12), transparent 70%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:1.4rem;
+    margin-top:-1px;
+  }
+  .arch span{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:600; color:var(--accent);
+    font-size:clamp(0.85rem,1.6vw,1rem);
+  }
+  /* small echo of the facade, bookending the page above the footer */
+  .villa-echo{ transform:scale(0.42); transform-origin:bottom center; margin-bottom:-2.2rem; opacity:0.75; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding-block:clamp(2.6rem,6vw,4.6rem) clamp(2rem,4vw,3rem); text-align:center; }
+  .hero h1{ font-size:clamp(2.2rem,5.6vw,3.8rem); color:var(--fg); }
+  .hero .tag{ color:var(--muted); font-size:clamp(1rem,1.6vw,1.2rem); max-width:44ch; margin:1.1rem auto 0; }
+  .hero-rule{ width:64px; height:2px; background:var(--accent); margin:1.6rem auto; }
+  .cta-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem; margin-top:1.6rem; }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; font-weight:600;
+    padding:0.85rem 1.6rem; font-size:0.9rem; border-radius:2px; letter-spacing:0.03em;
+  }
+  .btn{ transition:background .2s ease, border-color .2s ease, transform .2s ease; }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--brand); color:#fff8ec; }
+  .btn-primary:hover{ background:#3c4b2e; }
+  .btn-ghost{ background:transparent; color:var(--fg); border:1px solid rgba(44,40,32,0.35); }
+  .btn-ghost:hover{ border-color:var(--fg); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+
+  /* ---------- sections ---------- */
+  section{ padding-block:clamp(2.2rem,5vw,3.6rem); scroll-margin-top:4.5rem; }
+  .center{ text-align:center; }
+  .about-text{ max-width:60ch; margin:0 auto; text-align:center; color:#4a4436; font-size:1.05rem; }
+
+  /* ---------- symmetric stat pillars ---------- */
+  .pillars{
+    display:grid; grid-template-columns:1fr 1fr 1fr; text-align:center;
+    border-top:1px solid rgba(44,40,32,0.14); border-bottom:1px solid rgba(44,40,32,0.14);
+  }
+  .pillar{
+    padding:clamp(1.4rem,3vw,2rem) 0.6rem; border-left:1px solid rgba(44,40,32,0.14);
+    display:flex; flex-direction:column; gap:0.4rem;
+    transition:background .2s ease;
+  }
+  .pillar:hover{ background:rgba(75,93,58,0.06); }
+  .pillar:first-child{ border-left:none; }
+  .pillar-mid{ background:rgba(75,93,58,0.05); }
+  .pillar-num{
+    font-family:'Cormorant Garamond', serif; font-weight:700; color:var(--brand);
+    font-size:clamp(1.8rem,4.4vw,2.6rem); line-height:1;
+  }
+  .pillar-lbl{ font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); }
+  @media (max-width:480px){ .pillar-lbl{ font-size:0.66rem; } }
+
+  /* ---------- reviews signature module ---------- */
+  .reviews-card{
+    background:var(--surface); border:1px solid rgba(44,40,32,0.1); border-radius:8px;
+    padding:clamp(2rem,5vw,3rem); text-align:center; position:relative;
+  }
+  .reviews-card::before, .reviews-card::after{
+    content:""; position:absolute; top:0; bottom:0; width:1px; background:rgba(169,118,47,0.25);
+  }
+  .reviews-card::before{ left:14px; } .reviews-card::after{ right:14px; }
+  .review-count{
+    font-family:'Cormorant Garamond', serif; font-weight:700; color:var(--brand);
+    font-size:clamp(3.4rem,10vw,5.6rem); line-height:1; font-variant-numeric:tabular-nums;
+  }
+  .review-label{ font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-top:0.6rem; }
+  .review-stars{ color:var(--accent); font-size:1.6rem; letter-spacing:0.1em; margin-top:1.1rem; }
+  .review-rating{ font-weight:700; font-size:1.1rem; margin-top:0.3rem; }
+  .review-sub{ color:var(--muted); font-size:0.92rem; margin-top:0.5rem; }
+
+  /* ---------- honesty ---------- */
+  .honest{
+    background:var(--surface); border:1px solid rgba(169,118,47,0.3); border-radius:8px;
+    padding:clamp(1.6rem,4vw,2.2rem); text-align:center;
+  }
+  .honest h3{ font-size:1.4rem; margin-bottom:0.6rem; }
+  .honest p{ color:var(--muted); font-size:0.96rem; max-width:52ch; margin:0 auto; }
+  .honest .btn{ margin-top:1.3rem; }
+
+  /* ---------- contact ---------- */
+  .map-frame{ border-radius:8px; overflow:hidden; border:1px solid rgba(44,40,32,0.15); aspect-ratio:16/9; max-width:640px; margin:0 auto; }
+  .map-frame iframe{ width:100%; height:100%; border:0; }
+  .contact-line{ text-align:center; margin-top:1.6rem; }
+  .contact-line a{
+    font-family:'Cormorant Garamond', serif; font-weight:700; font-size:1.6rem; text-decoration:none; color:var(--brand);
+  }
+  .contact-line a:hover{ color:var(--accent); }
+
+  /* ---------- footer ---------- */
+  footer.site{ padding-block:2.2rem 6.5rem; border-top:1px solid rgba(44,40,32,0.12); margin-top:1.6rem; text-align:center; }
+  .footer-note{ margin-top:0.7rem; font-size:0.72rem; color:var(--muted); opacity:0.85; }
+  footer.site p{ font-size:0.85rem; color:var(--muted); margin:0; }
+
+  /* ---------- mobile bottom bar ---------- */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:60; display:flex;
+    border-top:1px solid rgba(44,40,32,0.15); background:var(--brand);
+  }
+  .mobile-bar a{
+    flex:1; text-align:center; padding:0.9rem 0.5rem; font-weight:700; text-transform:uppercase;
+    font-size:0.85rem; letter-spacing:0.03em; text-decoration:none; color:#fff8ec;
+  }
+  @media (min-width:760px){ .mobile-bar{ display:none; } }
+  @media (max-width:759px){ body{ padding-bottom:3.6rem; } }
+
+  /* ---------- small-phone refinements (down to 360px) ---------- */
+  @media (max-width:400px){
+    .wordmark{ font-size:1.2rem; }
+    .hero h1{ font-size:clamp(1.9rem,9vw,2.4rem); }
+    .review-count{ font-size:clamp(2.8rem,16vw,3.6rem); }
+    .cta-row .btn, .mobile-bar a{ font-size:0.8rem; padding-inline:1.2rem; }
+    .honest{ padding:1.3rem 1.1rem; }
+    .wrap{ padding-inline:1rem; }
+  }
+
+  /* ---------- print ---------- */
+  @media print{
+    .mobile-bar, header.site, .skip-link{ display:none; }
+    body{ background:#fff; color:#111; }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <nav class="primary" aria-label="Hauptnavigation">
+      <a href="#haus">Die Villa</a>
+      <a href="#bewertungen">Bewertungen</a>
+    </nav>
+    <a class="wordmark" href="#top">Villa Duchessa</a>
+    <a class="nav-call" href="tel:+41522120009">052 212 00 09</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO — symmetrical villa/arch composition -->
+  <section class="hero" id="top">
+    <div class="wrap reveal">
+      <div class="villa" aria-hidden="true">
+        <div class="cypress"></div>
+        <div class="column"></div>
+        <div class="facade">
+          <div class="pediment"></div>
+          <div class="arch"><span>Ristorante · Pizzeria</span></div>
+        </div>
+        <div class="column"></div>
+        <div class="cypress"></div>
+      </div>
+      <span class="eyebrow">Winterthur</span>
+      <h1>Villa Duchessa</h1>
+      <div class="hero-rule"></div>
+      <p class="tag">Ristorante Pizzeria mit italienischer Küche — eine der meistbewerteten Adressen der Stadt.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+41522120009">052 212 00 09 anrufen</a>
+        <a class="btn btn-ghost" href="#lage">Zur Karte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYMMETRIC STAT ROW — three pillars, mirroring the facade -->
+  <section id="fakten" aria-label="Kurzfakten">
+    <div class="wrap reveal">
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-num">4.6</span>
+          <span class="pillar-lbl">Google-Bewertung</span>
+        </div>
+        <div class="pillar pillar-mid">
+          <span class="pillar-num">1281</span>
+          <span class="pillar-lbl">Google-Bewertungen</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num" style="font-size:clamp(1.3rem,3vw,1.7rem);">Italienisch</span>
+          <span class="pillar-lbl">Küche &amp; Pizza</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="haus">
+    <div class="wrap reveal">
+      <span class="eyebrow">Die Villa</span>
+      <h2 class="center" style="font-size:clamp(1.7rem,3.4vw,2.4rem); margin-bottom:1.2rem;">Pizzeria &amp; italienische Küche.</h2>
+      <p class="about-text">Villa Duchessa ist eine Ristorante Pizzeria in Winterthur mit italienischer Küche. Speisekarte, Öffnungszeiten und Adresse veröffentlicht das Haus online nicht — was zählt, sagen die Gäste.</p>
+      <p class="about-text" style="margin-top:1rem;">1281 Google-Bewertungen bei einem Schnitt von 4.6 sprechen für eine breite, treue Stammkundschaft in Winterthur.</p>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE — the review volume -->
+  <section id="bewertungen" aria-label="Bewertungen">
+    <div class="wrap reveal">
+      <div class="reviews-card">
+        <span class="review-count" id="review-count">0</span>
+        <div class="review-label">Google-Bewertungen</div>
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <div class="review-rating">4.6 von 5</div>
+        <p class="review-sub">Eine der meistbewerteten italienischen Adressen in Winterthur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONESTY — thin data -->
+  <section id="anfrage" aria-label="Kontaktanfrage">
+    <div class="wrap reveal">
+      <div class="honest">
+        <h3>Speisekarte, Zeiten &amp; Adresse auf Anfrage</h3>
+        <p>Diese Angaben sind online nicht öffentlich einsehbar. Am schnellsten und zuverlässigsten erfahren Sie alles direkt am Telefon.</p>
+        <a class="btn btn-primary" href="tel:+41522120009">052 212 00 09</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / MAP -->
+  <section id="lage">
+    <div class="wrap reveal">
+      <span class="eyebrow">Lage</span>
+      <h2 class="center" style="font-size:clamp(1.7rem,3.4vw,2.4rem); margin-bottom:1.6rem;">In Winterthur.</h2>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Villa%20Duchessa%20Ristorante%20Pizzeria%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Villa Duchessa Ristorante Pizzeria, Winterthur" loading="lazy"></iframe>
+      </div>
+      <div class="contact-line">
+        <a href="tel:+41522120009">052 212 00 09</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="villa villa-echo" aria-hidden="true">
+      <div class="cypress"></div>
+      <div class="column"></div>
+      <div class="facade"><div class="pediment"></div><div class="arch"></div></div>
+      <div class="column"></div>
+      <div class="cypress"></div>
+    </div>
+    <p>Villa Duchessa Ristorante Pizzeria · Winterthur</p>
+    <p><a href="#top" style="color:var(--brand); text-decoration:underline;">Nach oben ↑</a></p>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522120009">052 212 00 09 anrufen</a>
+</div>
+
+<script>
+(function(){
+  /* ---------------- Scrollspy for the header nav ---------------- */
+  var navLinks = document.querySelectorAll("nav.primary a[href^='#']");
+  var spySections = [];
+  navLinks.forEach(function(a){
+    var id = a.getAttribute("href").slice(1);
+    var target = document.getElementById(id);
+    if (target) spySections.push({ link:a, el:target });
+  });
+  if (spySections.length && "IntersectionObserver" in window){
+    var spyIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var match = spySections.filter(function(s){ return s.el === entry.target; })[0];
+        if (!match) return;
+        if (entry.isIntersecting){
+          navLinks.forEach(function(a){ a.style.color = ""; a.style.borderColor = ""; });
+          match.link.style.color = "var(--brand)";
+          match.link.style.borderColor = "var(--brand)";
+        }
+      });
+    }, { rootMargin:"-45% 0px -50% 0px", threshold:0 });
+    spySections.forEach(function(s){ spyIo.observe(s.el); });
+  }
+
+  /* ---------------- Review count-up (signature module) ---------------- */
+  var TARGET = 1281;
+  var el = document.getElementById("review-count");
+  var animated = false;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function countUp(){
+    if (animated || !el) return;
+    animated = true;
+    if (reduceMotion){ el.textContent = TARGET; return; }
+    var start = null;
+    var duration = 1400;
+    function step(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * TARGET);
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = TARGET;
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ---------------- Scroll reveal ---------------- */
+  if ("IntersectionObserver" in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+    var reviewsIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ countUp(); reviewsIo.disconnect(); }
+      });
+    }, { threshold:0.4 });
+    var reviewsSection = document.getElementById("bewertungen");
+    if (reviewsSection) reviewsIo.observe(reviewsSection);
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(e){ e.classList.add("is-visible"); });
+    countUp();
+  }
+})();
+</script>
+
+</body>
+</html>

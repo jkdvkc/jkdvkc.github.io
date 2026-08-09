@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15130f">
+<title>No18 Restaurant &amp; Bar — Wülflingerstrasse 18, Winterthur</title>
+<meta name="description" content="No18 Restaurant &amp; Bar in Winterthur: Fait-Maison-Küche, saisonale Regionalprodukte, ehrliche Handschrift. Wülflingerstrasse 18. 4.8 Sterne bei 216 Bewertungen.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="No18 Restaurant &amp; Bar — Winterthur">
+<meta property="og:description" content="Fait-Maison-Küche mit persönlicher Handschrift. Saisonale Regionalprodukte, traditionelle Techniken, keine vorgefertigten Komponenten.">
+<meta property="og:url" content="https://18-winterthur.ch/">
+<meta property="og:image" content="https://18-winterthur.ch/wp-content/uploads/2026/01/Salat.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,600;12..96,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "No18 Restaurant & Bar",
+  "description": "Fait Maison: saisonale Regionalprodukte, traditionelle kulinarische Techniken, keine vorgefertigten Komponenten.",
+  "url": "https://18-winterthur.ch/",
+  "telephone": "+41 52 222 01 45",
+  "email": "info@18-winterthur.ch",
+  "servesCuisine": "Contemporary, International",
+  "image": [
+    "https://18-winterthur.ch/wp-content/uploads/2026/01/Salat.jpg",
+    "https://18-winterthur.ch/wp-content/uploads/2026/01/Kotelette.jpg",
+    "https://18-winterthur.ch/wp-content/uploads/2026/01/Fisch.jpg",
+    "https://18-winterthur.ch/wp-content/uploads/2026/01/Pastete.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wülflingerstrasse 18",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "216"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --bg:#15130f;
+    --surface:#211d17;
+    --fg:#f4ede0;
+    --muted:#a99b86;
+    --brand:#7a3219;
+    --accent:#e6b354;
+    --line:rgba(244,237,224,0.14);
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Inter',sans-serif;
+    font-size:clamp(15px,0.95vw + 0.6rem,17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Bricolage Grotesque',sans-serif;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(1.1rem,4vw,3rem);}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  /* ---------- number-18 device ---------- */
+  .num18{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-variant-numeric:oldstyle-nums;
+    color:var(--accent);
+  }
+  .ghost18{
+    position:absolute;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:600;
+    color:var(--brand);
+    opacity:0.06;
+    line-height:0.8;
+    pointer-events:none;
+    user-select:none;
+    z-index:0;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(21,19,15,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-block:0.9rem;
+  }
+  .brandmark{
+    display:flex;align-items:center;gap:0.6rem;
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.3rem;
+    text-decoration:none;
+  }
+  .brandmark .badge18{
+    display:inline-grid;place-items:center;
+    width:2.1rem;height:2.1rem;border-radius:50%;
+    background:var(--brand);color:var(--fg);
+    font-size:1rem;font-weight:600;
+  }
+  nav ul{list-style:none;display:flex;gap:1.6rem;margin:0;padding:0;}
+  nav ul a{text-decoration:none;font-size:0.92rem;letter-spacing:0.02em;position:relative;}
+  nav ul a::after{
+    content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;
+    background:var(--accent);transition:width .25s ease;
+  }
+  nav ul a:hover::after,nav ul a:focus-visible::after{width:100%;}
+  .navlinks{display:none;}
+  @media(min-width:820px){.navlinks{display:flex;}}
+  .navtel{
+    border:1px solid var(--brand);padding:0.5rem 1rem;text-decoration:none;
+    font-size:0.85rem;white-space:nowrap;border-radius:var(--radius);
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    padding-block:clamp(3.5rem,10vw,7rem) clamp(3rem,8vw,5.5rem);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .ghost18{
+    font-size:clamp(14rem,42vw,32rem);
+    right:clamp(-4rem,-2vw,-1rem);top:-6%;
+  }
+  .hero-inner{position:relative;z-index:1;max-width:46rem;}
+  .eyebrow{
+    font-size:0.82rem;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin:0 0 1rem;
+  }
+  h1.title{
+    font-size:clamp(2.6rem,6vw,4.6rem);
+    font-weight:500;line-height:1.02;margin:0 0 1.1rem;
+  }
+  h1.title em{font-style:italic;color:var(--accent);}
+  .tagline{
+    font-size:clamp(1.05rem,1.4vw,1.3rem);color:var(--muted);
+    max-width:34rem;margin:0 0 2rem;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center;margin-bottom:2.2rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:0.5rem;
+    padding:0.85rem 1.5rem;border-radius:var(--radius);
+    text-decoration:none;font-size:0.95rem;font-weight:600;
+    border:1px solid var(--brand);
+  }
+  .btn-solid{background:var(--brand);color:var(--fg);}
+  .btn-solid:hover{background:#5c2612;}
+  .btn-line{background:transparent;color:var(--accent);border-color:var(--accent);}
+  .rating-pill{
+    display:inline-flex;align-items:baseline;gap:0.45rem;
+    font-family:'Bricolage Grotesque',sans-serif;
+  }
+  .rating-pill .num{font-size:1.6rem;font-weight:600;color:var(--accent);}
+  .rating-pill .stars{color:var(--accent);letter-spacing:0.05em;}
+  .rating-pill .count{font-size:0.85rem;color:var(--muted);font-family:'Inter',sans-serif;}
+
+  /* ---------- section shell ---------- */
+  section{padding-block:clamp(3.2rem,7vw,5.5rem);position:relative;}
+  .section-head{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;
+    margin-bottom:clamp(2rem,5vw,3rem);border-bottom:1px solid var(--line);
+    padding-bottom:1.2rem;flex-wrap:wrap;
+  }
+  .section-head .tag{
+    font-family:'Bricolage Grotesque',sans-serif;font-size:0.9rem;color:var(--accent);
+  }
+  h2.section-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:500;margin:0;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- der tisch / about ---------- */
+  .tisch{display:grid;gap:clamp(2rem,5vw,4rem);grid-template-columns:1fr;}
+  @media(min-width:900px){.tisch{grid-template-columns:1.1fr 1fr;}}
+  .tisch p.lead{font-size:clamp(1.05rem,1.3vw,1.25rem);max-width:38rem;}
+  .usp-list{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;gap:0.9rem;}
+  .usp-list li{
+    display:grid;grid-template-columns:3.4rem 1fr;gap:1rem;align-items:baseline;
+    border-top:1px solid var(--line);padding-top:0.9rem;
+  }
+  .usp-list li .idx{font-family:'Bricolage Grotesque',sans-serif;color:var(--accent);font-size:1.05rem;}
+  .place-setting{
+    position:relative;aspect-ratio:1/1;max-width:24rem;margin-inline:auto;
+  }
+  .place-setting .plate{
+    position:absolute;inset:0;border-radius:50%;
+    border:1.5px solid var(--line);
+  }
+  .place-setting .plate::before{
+    content:"";position:absolute;inset:14%;border-radius:50%;border:1px solid var(--line);
+  }
+  .place-setting .plate::after{
+    content:"18";position:absolute;inset:0;display:grid;place-items:center;
+    font-family:'Bricolage Grotesque',sans-serif;font-style:italic;font-weight:500;
+    font-size:clamp(3.4rem,9vw,5.4rem);color:var(--accent);
+  }
+  .place-setting .cutlery{
+    position:absolute;top:6%;bottom:6%;width:6px;background:var(--accent);
+    border-radius:3px;opacity:0.85;
+  }
+  .place-setting .fork{left:-6%;}
+  .place-setting .knife{right:-6%;}
+
+  /* ---------- menu ---------- */
+  .menu-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:1fr;}
+  @media(min-width:800px){.menu-grid{grid-template-columns:1fr 1fr;}}
+  .menu-section h3{
+    font-size:1.15rem;text-transform:uppercase;letter-spacing:0.08em;
+    font-family:'Inter',sans-serif;font-weight:600;color:var(--fg);
+    margin:0 0 1.2rem;display:flex;align-items:center;gap:0.7rem;
+  }
+  .menu-section h3::before{content:"18.";color:var(--accent);}
+  .menu-item{border-top:1px solid var(--line);padding:1.1rem 0;}
+  .menu-item h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:1.2rem;margin:0 0 0.35rem;}
+  .menu-item p{margin:0;color:var(--muted);font-size:0.96rem;}
+  .menu-note{
+    margin-top:2rem;padding:1rem 1.2rem;border:1px dashed var(--line);
+    font-size:0.9rem;color:var(--muted);border-radius:var(--radius);
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery{
+    display:grid;gap:0.9rem;
+    grid-template-columns:repeat(6,1fr);
+  }
+  .gallery figure{margin:0;overflow:hidden;border-radius:var(--radius);background:var(--surface);}
+  .gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;transition:transform .5s ease;}
+  .gallery figure:hover img{transform:scale(1.045);}
+  .g1{grid-column:span 6;}
+  .g2{grid-column:span 3;}
+  .g3{grid-column:span 3;}
+  .g4{grid-column:span 4;}
+  .g5{grid-column:span 2;}
+  @media(min-width:760px){
+    .g1{grid-column:span 3;}
+    .g2{grid-column:span 3;}
+    .g3{grid-column:span 2;}
+    .g4{grid-column:span 2;}
+    .g5{grid-column:span 2;}
+  }
+  figcaption{font-size:0.78rem;color:var(--muted);padding:0.5rem 0.1rem 0;}
+
+  /* ---------- signature module ---------- */
+  .status-wrap{
+    background:var(--brand);color:var(--fg);border-radius:4px;
+    padding:clamp(1.8rem,4vw,3rem);
+  }
+  .status-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;align-items:baseline;margin-bottom:1.6rem;}
+  .status-head h2{color:var(--fg);}
+  .status-clock{font-size:0.85rem;opacity:0.75;font-variant-numeric:tabular-nums;}
+  .status-cards{display:grid;gap:1rem;grid-template-columns:1fr;}
+  @media(min-width:760px){.status-cards{grid-template-columns:repeat(3,1fr);}}
+  .status-card{
+    background:rgba(244,237,224,0.08);
+    border:1px solid rgba(244,237,224,0.18);
+    border-radius:3px;padding:1.2rem 1.3rem;
+  }
+  .status-card .row{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.6rem;}
+  .dot{width:0.6rem;height:0.6rem;border-radius:50%;background:#8a8378;flex:none;}
+  .dot.open{background:#7fbf7f;box-shadow:0 0 0 3px rgba(127,191,127,0.22);}
+  .dot.closed{background:#c97b6a;}
+  .status-card h4{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:1.05rem;}
+  .status-card .state{font-size:0.85rem;letter-spacing:0.03em;}
+  .status-card .times{font-size:0.82rem;opacity:0.72;margin-top:0.5rem;line-height:1.5;}
+
+  .hours-table{margin-top:2.2rem;width:100%;border-collapse:collapse;}
+  .hours-table th,.hours-table td{
+    text-align:left;padding:0.7rem 0.4rem;border-top:1px solid var(--line);
+    font-size:0.92rem;
+  }
+  .hours-table th{color:var(--muted);font-weight:500;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;}
+
+  /* ---------- kontakt ---------- */
+  .kontakt-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:1fr;}
+  @media(min-width:900px){.kontakt-grid{grid-template-columns:1fr 1.15fr;}}
+  .kontakt-list{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:1rem;}
+  .kontakt-list a{text-decoration:none;border-bottom:1px solid var(--line);}
+  .kontakt-list dt{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+  .kontakt-list dd{margin:0.15rem 0 0;font-size:1.05rem;}
+  .map-frame{border:0;width:100%;height:100%;min-height:320px;border-radius:var(--radius);}
+  .map-box{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-height:320px;}
+
+  footer{border-top:1px solid var(--line);padding-block:2.4rem 6rem;}
+  .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:0.85rem;color:var(--muted);}
+  .foot-legal{font-size:0.78rem;color:var(--muted);margin-top:1rem;}
+
+  /* ---------- sticky mobile bar ---------- */
+  .mobilebar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    display:flex;background:var(--brand);color:var(--fg);
+    box-shadow:0 -4px 14px rgba(0,0,0,0.18);
+  }
+  .mobilebar a{
+    flex:1;text-align:center;padding:0.95rem 0.5rem;text-decoration:none;
+    font-size:0.92rem;font-weight:600;letter-spacing:0.02em;
+  }
+  .mobilebar a:first-child{border-right:1px solid rgba(244,237,224,0.25);}
+  @media(min-width:820px){.mobilebar{display:none;}}
+  body{padding-bottom:0;}
+  @media(max-width:819px){body{padding-bottom:3.6rem;}}
+
+  @media(max-width:360px){
+    .rating-pill .num{font-size:1.35rem;}
+    .btn{padding:0.75rem 1.1rem;font-size:0.88rem;}
+    .status-wrap{padding:1.3rem;}
+    .place-setting{max-width:16rem;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .gallery figure:hover img{transform:none;}
+    nav ul a::after{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Hauptnavigation">
+    <a class="brandmark" href="#top"><span class="badge18">18</span> No18 Restaurant &amp; Bar</a>
+    <ul class="navlinks">
+      <li><a href="#tisch">Der Tisch</a></li>
+      <li><a href="#karte">Karte</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#status">Jetzt geöffnet</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a class="navtel" href="tel:+41522220145">052 222 01 45</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <span class="ghost18" aria-hidden="true">18</span>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Wülflingerstrasse 18 · Winterthur</p>
+      <h1 class="title">Ehrliche Küche, <em>Tisch für Tisch.</em></h1>
+      <p class="tagline">No18 Restaurant &amp; Bar: Fait-Maison-Küche mit persönlicher Handschrift — saisonale Regionalprodukte, traditionelle Techniken, keine vorgefertigten Komponenten.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="tel:+41522220145">Tisch reservieren</a>
+        <a class="btn btn-line" href="#karte">Karte ansehen</a>
+      </div>
+      <div class="rating-pill">
+        <span class="num num18">4.8</span>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="count">216 Google-Bewertungen</span>
+      </div>
+      <p style="margin-top:1.6rem;font-size:0.86rem;color:var(--muted);max-width:30rem;">Die Hausnummer ist Programm: Wülflingerstrasse 18 ist auch die Adresse, an der im No18 Tisch für Tisch gedeckt wird.</p>
+    </div>
+  </section>
+
+  <section id="tisch">
+    <div class="wrap tisch">
+      <div class="reveal">
+        <p class="section-head-mini" style="font-family:'Bricolage Grotesque',sans-serif;color:var(--accent);margin:0 0 0.6rem;">18 · Der Tisch</p>
+        <h2 class="section-title" style="margin-bottom:1.2rem;">Fait Maison, ohne Umwege.</h2>
+        <p class="lead">Fait-Maison-Label: Saisonale Regionalprodukte mit traditionellen kulinarischen Techniken, keine vorgefertigten Komponenten. Ganzheitliche Zutaten, handwerkliche Zubereitung.</p>
+        <ul class="usp-list">
+          <li><span class="idx">18.1</span><span>Fait-Maison-Label: ehrliche, direkte Küche</span></li>
+          <li><span class="idx">18.2</span><span>Saisonale, regionale Produkte</span></li>
+          <li><span class="idx">18.3</span><span>Keine vorgefertigten Komponenten</span></li>
+          <li><span class="idx">18.4</span><span>Traditionelle kulinarische Techniken</span></li>
+          <li><span class="idx">18.5</span><span>Persönliche kulinarische Handschrift</span></li>
+        </ul>
+      </div>
+      <div class="reveal place-setting" aria-hidden="true">
+        <div class="cutlery fork"></div>
+        <div class="plate"></div>
+        <div class="cutlery knife"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="karte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="tag">18 · Karte</p>
+          <h2 class="section-title">Aus der Küche</h2>
+        </div>
+      </div>
+      <div class="menu-grid reveal">
+        <div class="menu-section">
+          <h3>Specials</h3>
+          <div class="menu-item">
+            <h4>Chicory Salad</h4>
+            <p>mit Brombeeren, Feigen, Nüssen, Kräutern, Microgreens</p>
+          </div>
+          <div class="menu-item">
+            <h4>White Chocolate Cream</h4>
+            <p>mit Quark, Passionsfrucht, Meringue</p>
+          </div>
+        </div>
+        <div class="menu-section">
+          <h3>Hauptgänge</h3>
+          <div class="menu-item">
+            <h4>Fleischgerichte</h4>
+            <p>Saisonale Regionalprodukte</p>
+          </div>
+          <div class="menu-item">
+            <h4>Fischgerichte</h4>
+            <p>Saisonale Regionalprodukte</p>
+          </div>
+        </div>
+      </div>
+      <p class="menu-note reveal">Die Karte wechselt saisonal, Preise auf Anfrage. Mittagessen ist für Gruppen ab 10 Personen auf Anfrage möglich.</p>
+      <p class="reveal" style="margin-top:1.4rem;font-size:0.9rem;color:var(--muted);max-width:38rem;">Alle Gerichte entstehen fait maison: keine vorgefertigten Komponenten, dafür ganzheitliche Zutaten und handwerkliche Zubereitung — Tag für Tag neu zusammengestellt.</p>
+    </div>
+  </section>
+
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="tag">18 · Galerie</p>
+          <h2 class="section-title">Vom Tisch No18</h2>
+        </div>
+      </div>
+      <div class="gallery reveal">
+        <figure class="g1">
+          <img src="https://18-winterthur.ch/wp-content/uploads/2026/01/Salat.jpg" alt="Chicory-Salat mit Beeren und Feigen im No18" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Chicory Salad — mit Brombeeren &amp; Feigen</figcaption>
+        </figure>
+        <figure class="g2">
+          <img src="https://18-winterthur.ch/wp-content/uploads/2026/01/Kotelette.jpg" alt="Fleischgericht im No18" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Aus den Fleischgerichten</figcaption>
+        </figure>
+        <figure class="g3">
+          <img src="https://18-winterthur.ch/wp-content/uploads/2026/01/Fisch.jpg" alt="Fischgericht im No18" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Aus den Fischgerichten</figcaption>
+        </figure>
+        <figure class="g4">
+          <img src="https://18-winterthur.ch/wp-content/uploads/2026/01/Pastete.jpg" alt="Vorspeise im No18" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Aus der Küche</figcaption>
+        </figure>
+        <figure class="g5">
+          <img src="https://18-winterthur.ch/wp-content/uploads/2020/10/Logo300.jpg" alt="Logo von No18 Restaurant &amp; Bar" loading="lazy" onerror="this.closest('figure').style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="status">
+    <div class="wrap">
+      <div class="status-wrap reveal">
+        <div class="status-head">
+          <div>
+            <p class="tag" style="color:var(--accent);">18 · Live</p>
+            <h2 class="section-title" style="font-size:clamp(1.7rem,3.2vw,2.4rem);">Was hat jetzt geöffnet?</h2>
+          </div>
+          <span class="status-clock" id="clockNow">—</span>
+        </div>
+        <p style="font-size:0.88rem;opacity:0.8;max-width:36rem;margin:0 0 1.6rem;">Restaurant, Bar &amp; Smoker-Lounge und Boulevard laufen nach eigenen Zeiten. Dieser Block prüft live, welcher Bereich von No18 gerade offen hat.</p>
+        <div class="status-cards" id="statusCards" aria-live="polite"></div>
+        <table class="hours-table">
+          <caption style="text-align:left;font-size:0.85rem;opacity:0.7;padding-bottom:0.4rem;">Alle Öffnungszeiten</caption>
+          <thead><tr><th>Bereich</th><th>Tage</th><th>Zeit</th></tr></thead>
+          <tbody id="hoursBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap kontakt-grid">
+      <div class="reveal">
+        <p class="tag">18 · Kontakt</p>
+        <h2 class="section-title" style="margin-bottom:1.4rem;">Reservieren Sie Tisch No18</h2>
+        <dl class="kontakt-list">
+          <div>
+            <dt>Adresse</dt>
+            <dd>Wülflingerstrasse 18, 8400 Winterthur</dd>
+          </div>
+          <div>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+41522220145">+41 52 222 01 45</a></dd>
+          </div>
+          <div>
+            <dt>E-Mail</dt>
+            <dd><a href="mailto:info@18-winterthur.ch">info@18-winterthur.ch</a></dd>
+          </div>
+          <div>
+            <dt>Website</dt>
+            <dd><a href="https://18-winterthur.ch/" rel="noopener">18-winterthur.ch</a></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="reveal map-box">
+        <iframe class="map-frame" src="https://maps.google.com/maps?q=No18%20Restaurant%20%26%20Bar%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Standort No18 Restaurant &amp; Bar auf Google Maps"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <span>No18 Restaurant &amp; Bar · Wülflingerstrasse 18 · 8400 Winterthur</span>
+      <span>052 222 01 45 · info@18-winterthur.ch</span>
+    </div>
+    <p class="foot-legal">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a href="tel:+41522220145">Anrufen</a>
+  <a href="#kontakt">Adresse</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- real hours data, verbatim from source JSON ----
+  var hours = [
+    { cat:"Restaurant", days:"Di–Sa", time:"18:00–23:30", note:"warme Küche bis 21:30 Uhr" },
+    { cat:"Bar &amp; Smoker-Lounge", days:"Mo–Do", time:"15:00–01:00", note:"" },
+    { cat:"Bar &amp; Smoker-Lounge", days:"Fr–Sa", time:"15:00–02:00", note:"" },
+    { cat:"Boulevard", days:"Di–Sa", time:"15:00–24:00", note:"" }
+  ];
+
+  var dayMap = { Mo:1, Di:2, Mi:3, Do:4, Fr:5, Sa:6, So:0 };
+  var weekOrder = [1,2,3,4,5,6,0];
+
+  function expandDays(code){
+    var parts = code.split(/[–-]/).map(function(s){return s.trim();});
+    if(parts.length === 1) return [dayMap[parts[0]]];
+    var startIdx = weekOrder.indexOf(dayMap[parts[0]]);
+    var endIdx = weekOrder.indexOf(dayMap[parts[1]]);
+    var days = [], i = startIdx;
+    while(true){
+      days.push(weekOrder[i]);
+      if(i === endIdx) break;
+      i = (i + 1) % 7;
+    }
+    return days;
+  }
+
+  function parseRange(str){
+    var m = str.match(/(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})/);
+    if(!m) return null;
+    return { start: (+m[1])*60 + (+m[2]), end: (+m[3])*60 + (+m[4]) };
+  }
+
+  function isOpenAt(rule, now){
+    var days = expandDays(rule.days);
+    var range = parseRange(rule.time);
+    if(!range) return false;
+    var nowDay = now.getDay();
+    var nowMin = now.getHours()*60 + now.getMinutes();
+    var overnight = range.end <= range.start;
+    if(!overnight){
+      return days.indexOf(nowDay) > -1 && nowMin >= range.start && nowMin < range.end;
+    }
+    var prevDay = (nowDay + 6) % 7;
+    if(days.indexOf(nowDay) > -1 && nowMin >= range.start) return true;
+    if(days.indexOf(prevDay) > -1 && nowMin < range.end) return true;
+    return false;
+  }
+
+  // group by category for the status cards
+  var categories = [];
+  hours.forEach(function(r){
+    var existing = categories.filter(function(c){ return c.cat === r.cat; })[0];
+    if(!existing){ existing = { cat:r.cat, rules:[] }; categories.push(existing); }
+    existing.rules.push(r);
+  });
+
+  var cardsEl = document.getElementById("statusCards");
+  var bodyEl = document.getElementById("hoursBody");
+  var clockEl = document.getElementById("clockNow");
+
+  hours.forEach(function(r){
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td>" + r.cat + "</td><td>" + r.days + "</td><td>" + r.time + (r.note ? " · " + r.note : "") + "</td>";
+    bodyEl.appendChild(tr);
+  });
+
+  function render(){
+    var now = new Date();
+    clockEl.textContent = "Stand: " + now.toLocaleTimeString("de-CH", {hour:"2-digit", minute:"2-digit"}) + " Uhr";
+    cardsEl.innerHTML = "";
+    categories.forEach(function(c){
+      var open = c.rules.some(function(r){ return isOpenAt(r, now); });
+      var card = document.createElement("div");
+      card.className = "status-card";
+      var timesHtml = c.rules.map(function(r){ return r.days + " " + r.time + (r.note ? " (" + r.note + ")" : ""); }).join("<br>");
+      card.innerHTML =
+        '<div class="row"><span class="dot ' + (open ? "open" : "closed") + '"></span><h4>' + c.cat + '</h4></div>' +
+        '<div class="state">' + (open ? "Jetzt geöffnet" : "Aktuell geschlossen") + '</div>' +
+        '<div class="times">' + timesHtml + '</div>';
+      cardsEl.appendChild(card);
+    });
+  }
+
+  render();
+  setInterval(render, 30000);
+
+  // ---- scroll reveals ----
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+
+</body>
+</html>

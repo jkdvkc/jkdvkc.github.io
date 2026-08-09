@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VISIONAPARTMENTS Glattbrugg – Serviced Apartments, 3 Einheitentypen</title>
+<meta name="description" content="VISIONAPARTMENTS Glattbrugg, Industriestrasse 10: möblierte Serviced Apartments für längere Aufenthalte, mit Spa, Fitnessstudio und La Lup Bistro vor Ort.">
+<meta property="og:title" content="VISIONAPARTMENTS Glattbrugg">
+<meta property="og:description" content="Moderne Serviced Apartments mit vollständiger Ausstattung, ideal für längere Aufenthalte. Spa, Fitnessstudio, La Lup Bistro.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://vabusiness.blob.core.windows.net/website/uploads/main_center_1437ef0eb1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "VISIONAPARTMENTS Glattbrugg",
+  "description": "Moderne Serviced Apartments mit vollständiger Ausstattung, ideal für längere Aufenthalte.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Industriestrasse 10",
+    "postalCode": "8152",
+    "addressLocality": "Glattbrugg",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41442483434",
+  "email": "glattbrugg@visionapartments.com",
+  "url": "https://www.visionapartments.com/en/locations/glattbrugg",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.6",
+    "reviewCount": "704"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#eef0f3;
+  --surface:#ffffff;
+  --fg:#1b2230;
+  --muted:#4d5568;
+  --brand:#2b3a5c;
+  --accent:#3f6fb3;
+  --line:#c9cfda;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  font-size:clamp(15px,0.3vw + 14px,17px);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;letter-spacing:-0.01em;
+  line-height:1.05;margin:0;color:var(--fg);
+}
+h1{font-size:clamp(2.3rem,5vw + 1rem,4.2rem);}
+h2{font-size:clamp(1.6rem,2.6vw + 1rem,2.4rem);}
+h3{font-size:clamp(1.05rem,1vw + 0.9rem,1.25rem);}
+p{margin:0 0 1em;}
+a{color:var(--accent);}
+img{max-width:100%;display:block;}
+.mono{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+.skip-link:focus{left:1rem;top:1rem;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem clamp(1.2rem,4vw,3rem);
+  background:rgba(238,240,243,0.95);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.brand-mark{display:flex;align-items:baseline;gap:0.5rem;}
+.brand-mark strong{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;letter-spacing:-0.01em;}
+.brand-mark span{font-size:0.7rem;color:var(--muted);}
+nav ul{list-style:none;display:flex;gap:1.6rem;margin:0;padding:0;}
+nav a{color:var(--fg);text-decoration:none;font-size:0.85rem;font-weight:500;}
+nav a:hover{color:var(--accent);}
+.call-pill{
+  background:var(--brand);color:#fff;padding:0.55rem 1.1rem;border-radius:2px;
+  text-decoration:none;font-size:0.82rem;font-weight:600;
+}
+@media (max-width:820px){ nav{display:none;} }
+
+main{padding-top:64px;}
+
+.grid-shell{
+  max-width:1240px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);
+}
+
+/* HERO */
+.hero{
+  padding:clamp(2.6rem,6vw,5rem) 0 clamp(2.2rem,5vw,3.4rem);
+  border-bottom:1px solid var(--line);
+}
+.hero-top{
+  display:grid;grid-template-columns:auto 1fr;gap:1rem 2rem;align-items:end;
+  border-bottom:1px solid var(--line);padding-bottom:1.4rem;margin-bottom:1.6rem;
+}
+.hero-index{font-size:0.78rem;color:var(--muted);}
+.hero-fact{font-size:0.78rem;color:var(--muted);text-align:right;}
+.hero h1{max-width:14ch;}
+.hero-lede{
+  display:grid;grid-template-columns:2fr 1fr;gap:clamp(1.6rem,4vw,3.5rem);align-items:start;
+}
+.hero-lede p{font-size:clamp(1rem,0.4vw + 0.95rem,1.2rem);color:var(--muted);max-width:46ch;}
+.hero-cta{display:flex;flex-direction:column;gap:0.7rem;}
+.btn{
+  display:inline-block;text-align:center;padding:0.75rem 1.2rem;border-radius:2px;
+  text-decoration:none;font-weight:600;font-size:0.9rem;border:1px solid transparent;
+}
+.btn-brand{background:var(--brand);color:#fff;}
+.btn-outline{border-color:var(--fg);color:var(--fg);}
+.rating-line{font-size:0.82rem;color:var(--muted);margin-top:0.4rem;}
+
+@media (max-width:720px){
+  .hero-lede{grid-template-columns:1fr;}
+}
+
+/* MODULE GRID (usps) */
+.usp-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);
+  margin-top:clamp(2rem,4vw,3rem);
+}
+.usp-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.3rem 1.1rem;}
+.usp-cell .num{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--accent);display:block;margin-bottom:0.6rem;}
+.usp-cell p{margin:0;font-size:0.92rem;color:var(--fg);}
+@media (max-width:900px){ .usp-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:480px){ .usp-grid{grid-template-columns:1fr;} }
+
+/* SECTIONS COMMON */
+section{padding:clamp(2.6rem,6vw,4.6rem) 0;border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:1rem;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;}
+.sec-head .tag{font-size:0.75rem;color:var(--accent);}
+.sec-head p.intro{max-width:52ch;color:var(--muted);margin:0.6rem 0 0;}
+
+[data-reveal]{opacity:0;transform:translateY(14px);transition:opacity 0.6s ease,transform 0.6s ease;}
+[data-reveal].is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+/* ROOMS SPEC GRID */
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+.unit-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.6rem 1.4rem;background:var(--surface);}
+.unit-card .num{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--accent);display:block;margin-bottom:0.8rem;}
+.unit-card h3{margin-bottom:0.6rem;}
+.unit-card p{color:var(--muted);font-size:0.92rem;margin:0;}
+@media (max-width:900px){ .units{grid-template-columns:1fr;} }
+
+/* COMPARATOR MODULE */
+.comparator{background:var(--surface);border:1px solid var(--line);padding:clamp(1.4rem,3vw,2.2rem);}
+.comp-picker{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.4rem;}
+.comp-picker button{
+  font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.03em;text-transform:uppercase;
+  padding:0.6rem 0.9rem;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer;border-radius:2px;
+}
+.comp-picker button[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.92rem;}
+.comp-table th,.comp-table td{text-align:left;padding:0.75rem 0.7rem;border-bottom:1px solid var(--line);vertical-align:top;}
+.comp-table th{font-family:'JetBrains Mono',monospace;font-size:0.7rem;text-transform:uppercase;color:var(--muted);letter-spacing:0.06em;}
+.comp-empty{color:var(--muted);font-size:0.9rem;font-style:italic;}
+.composer{margin-top:1.8rem;border-top:1px dashed var(--line);padding-top:1.6rem;display:grid;gap:1rem;grid-template-columns:1fr 1fr;}
+.composer label{display:block;font-size:0.78rem;color:var(--muted);margin-bottom:0.35rem;}
+.composer select{width:100%;padding:0.6rem;border:1px solid var(--line);border-radius:2px;font:inherit;background:#fff;}
+.composer-out{grid-column:1 / -1;background:var(--bg);border:1px solid var(--line);padding:1rem;font-family:'JetBrains Mono',monospace;font-size:0.82rem;white-space:pre-wrap;color:var(--fg);}
+.composer-actions{grid-column:1 / -1;display:flex;gap:0.8rem;flex-wrap:wrap;}
+@media (max-width:600px){ .composer{grid-template-columns:1fr;} }
+
+/* AMENITIES */
+.amenity-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);}
+.amenity-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.1rem 1.3rem;display:flex;gap:0.9rem;align-items:flex-start;}
+.amenity-cell .num{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:0.8rem;flex:none;}
+@media (max-width:640px){ .amenity-grid{grid-template-columns:1fr;} }
+
+/* PHOTOS */
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);}
+.photo-cell{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface);}
+.photo-cell img{width:100%;height:100%;object-fit:cover;}
+.photo-cell .num{position:absolute;top:0.5rem;left:0.5rem;background:rgba(27,34,48,0.7);color:#fff;font-family:'JetBrains Mono',monospace;font-size:0.68rem;padding:0.15rem 0.4rem;}
+@media (max-width:900px){ .photo-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:480px){ .photo-grid{grid-template-columns:1fr 1fr;} }
+
+/* LOCATION */
+.loc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.loc-facts{border:1px solid var(--line);padding:1.4rem;background:var(--surface);}
+.loc-facts dt{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1rem;}
+.loc-facts dt:first-child{margin-top:0;}
+.loc-facts dd{margin:0.2rem 0 0;font-size:0.98rem;}
+.map-box{border:1px solid var(--line);overflow:hidden;}
+.map-box iframe{width:100%;height:320px;border:0;display:block;}
+@media (max-width:800px){ .loc-wrap{grid-template-columns:1fr;} }
+
+/* CONTACT */
+.contact-wrap{display:flex;flex-wrap:wrap;gap:2.5rem;justify-content:space-between;align-items:flex-start;}
+.contact-block h3{margin-bottom:0.6rem;}
+.contact-block a{display:block;color:var(--fg);text-decoration:none;font-size:1.05rem;margin-bottom:0.3rem;}
+.contact-block a:hover{color:var(--accent);}
+
+footer{padding:2.4rem clamp(1.2rem,4vw,3rem) 6rem;background:var(--brand);color:#dfe4ee;}
+footer a{color:#fff;}
+.foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1240px;margin:0 auto 1.4rem;font-size:0.88rem;}
+footer p.legal{max-width:1240px;margin:0 auto;font-size:0.78rem;color:#b7c0d6;}
+@media (max-width:700px){ .foot-grid{grid-template-columns:1fr;} }
+
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+.mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:600;font-size:0.9rem;}
+@media (min-width:761px){ .mobile-bar{display:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <div class="brand-mark">
+    <strong>VISIONAPARTMENTS</strong><span>Glattbrugg</span>
+  </div>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#prinzip">Prinzip</a></li>
+      <li><a href="#einheiten">Einheiten</a></li>
+      <li><a href="#vergleich">Vergleich</a></li>
+      <li><a href="#ausstattung">Ausstattung</a></li>
+      <li><a href="#bilder">Bilder</a></li>
+      <li><a href="#lage">Lage</a></li>
+      <li><a href="#anfrage">Anfrage</a></li>
+    </ul>
+  </nav>
+  <a class="call-pill" href="tel:+41442483434">Anrufen</a>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="grid-shell">
+      <div class="hero-top">
+        <span class="hero-index mono">N° Übersicht</span>
+        <span class="hero-fact mono">Serviced Apartments · Glattbrugg</span>
+      </div>
+      <h1>Serviced Apartments in Glattbrugg, systematisch gedacht.</h1>
+      <div class="hero-lede">
+        <div>
+          <p>Moderne Serviced Apartments mit vollständiger Ausstattung, ideal für längere Aufenthalte.</p>
+          <p class="rating-line">Google-Bewertung: 3.6 · 704 Bewertungen</p>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-brand" href="tel:+41442483434">+41 44 248 34 34</a>
+          <a class="btn btn-outline" href="mailto:glattbrugg@visionapartments.com">glattbrugg@visionapartments.com</a>
+        </div>
+      </div>
+      <div class="usp-grid" aria-label="Kennzahlen">
+        <div class="usp-cell"><span class="num mono">Einheiten</span><p>3 Apartmenttypen</p></div>
+        <div class="usp-cell"><span class="num mono">Ausstattung</span><p>8 Merkmale</p></div>
+        <div class="usp-cell"><span class="num mono">Bilder</span><p>8 Fotografien</p></div>
+        <div class="usp-cell"><span class="num mono">Bewertung</span><p>3.6 · 704 Reviews</p></div>
+      </div>
+      <div class="usp-grid">
+        <div class="usp-cell"><span class="num mono">01</span><p>Spa mit Sauna und Dampfbad</p></div>
+        <div class="usp-cell"><span class="num mono">02</span><p>La Lup Bistro vor Ort</p></div>
+        <div class="usp-cell"><span class="num mono">03</span><p>Rooftop-Küche</p></div>
+        <div class="usp-cell"><span class="num mono">04</span><p>Fitnessstudio</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prinzip" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">00 / Prinzip</span>
+          <h2>Ein Haus, das sich an den Aufenthalt anpasst</h2>
+          <p class="intro">VISIONAPARTMENTS Glattbrugg richtet sich an Gäste, die nicht eine Nacht, sondern Wochen oder Monate bleiben. Jede Einheit ist vollständig möbliert und mit eigener Küche oder Kitchenette ausgestattet — die Infrastruktur des Hauses (Spa, Fitnessstudio, Bistro) ist auf diese Aufenthaltsdauer ausgelegt, nicht auf den Kurzbesuch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="einheiten" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">01 / Einheiten</span>
+          <h2>Drei Apartmenttypen</h2>
+          <p class="intro">Alle Einheiten vollständig möbliert, mit eigener Küche oder Kitchenette. Preise sind auf der Website nicht angegeben — daher hier bewusst ausgelassen.</p>
+        </div>
+      </div>
+      <div class="units">
+        <article class="unit-card"><span class="num mono">Einheit 01</span><h3>Studio Mini (Kitchenette)</h3><p>Kompaktes Apartment mit Kitchenette</p></article>
+        <article class="unit-card"><span class="num mono">Einheit 02</span><h3>Studio Junior (Kitchenette)</h3><p>Geräumigeres Studio mit Kitchenette</p></article>
+        <article class="unit-card"><span class="num mono">Einheit 03</span><h3>One Bedroom Junior (Kitchenette)</h3><p>Apartment mit separatem Schlafzimmer und Kitchenette</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="vergleich" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">02 / Modul</span>
+          <h2>Einheiten-Vergleich &amp; Anfrage</h2>
+          <p class="intro">Zwei oder drei Einheiten auswählen und direkt vergleichen. Anschliessend als Anfrage per Telefon oder E-Mail versenden.</p>
+        </div>
+      </div>
+      <div class="comparator">
+        <div class="comp-picker" id="comp-picker" role="group" aria-label="Einheiten für Vergleich wählen">
+          <button type="button" data-unit="0" aria-pressed="true">Studio Mini</button>
+          <button type="button" data-unit="1" aria-pressed="true">Studio Junior</button>
+          <button type="button" data-unit="2" aria-pressed="false">One Bedroom Junior</button>
+        </div>
+        <div id="comp-table-wrap">
+          <table class="comp-table" id="comp-table">
+            <thead><tr><th>Einheit</th><th>Beschreibung</th></tr></thead>
+            <tbody id="comp-body"></tbody>
+          </table>
+          <p class="comp-empty" id="comp-empty" hidden>Bitte mindestens eine Einheit auswählen.</p>
+        </div>
+        <div class="composer">
+          <div>
+            <label for="guest-count">Anzahl Personen</label>
+            <select id="guest-count">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div>
+            <label for="move-in">Ungefährer Einzug</label>
+            <select id="move-in">
+              <option>so bald wie möglich</option>
+              <option>in 1–2 Wochen</option>
+              <option>in 1–2 Monaten</option>
+              <option>noch offen</option>
+            </select>
+          </div>
+          <div class="composer-out mono" id="composer-out"></div>
+          <div class="composer-actions">
+            <a class="btn btn-brand" id="mail-link" href="mailto:glattbrugg@visionapartments.com">Anfrage per E-Mail</a>
+            <a class="btn btn-outline" href="tel:+41442483434">Anfrage per Telefon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ausstattung" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">03 / Ausstattung</span>
+          <h2>Was im Haus vorhanden ist</h2>
+        </div>
+      </div>
+      <div class="amenity-grid">
+        <div class="amenity-cell"><span class="num mono">01</span><span>Vollständig möbliert</span></div>
+        <div class="amenity-cell"><span class="num mono">02</span><span>Ausgestattete Küche oder Kitchenette</span></div>
+        <div class="amenity-cell"><span class="num mono">03</span><span>Privates Badezimmer</span></div>
+        <div class="amenity-cell"><span class="num mono">04</span><span>Arbeitsplatz</span></div>
+        <div class="amenity-cell"><span class="num mono">05</span><span>Fitnessstudio</span></div>
+        <div class="amenity-cell"><span class="num mono">06</span><span>Spa mit Sauna und Dampfbad</span></div>
+        <div class="amenity-cell"><span class="num mono">07</span><span>La Lup Bistro</span></div>
+        <div class="amenity-cell"><span class="num mono">08</span><span>WLAN</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bilder" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">04 / Bilder</span>
+          <h2>Haus, Apartments &amp; Bistro</h2>
+        </div>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-cell"><span class="num mono">01</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/2_Bedroom_Apartment_Junior_Top_Floor_035fc0c68d.jpg" alt="Apartment mit Doppelzimmer, oberste Etage" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">02</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/lobby_3_1_8d646e34bf.jpg" alt="Lobby von VISIONAPARTMENTS Glattbrugg" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">03</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/main_right_6b0a9262ed.jpg" alt="Gebäudeansicht" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">04</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/main_center_1437ef0eb1.jpg" alt="Gebäudeansicht, Zentrum" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">05</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/Main_left_02ceb3afcf.jpg" alt="Gebäudeansicht, linker Flügel" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">06</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/La_Lup_1_c991743b42.jpg" alt="La Lup Bistro" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">07</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/Gym_4_28d17e1ba3.jpg" alt="Fitnessstudio" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <div class="photo-cell"><span class="num mono">08</span><img src="https://vabusiness.blob.core.windows.net/website/uploads/footer_1037de06d3.webp" alt="Aussenansicht" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">05 / Lage</span>
+          <h2>Industriestrasse 10, Glattbrugg</h2>
+        </div>
+      </div>
+      <div class="loc-wrap">
+        <dl class="loc-facts">
+          <dt>Adresse</dt>
+          <dd>Industriestrasse 10, Glattbrugg</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41442483434">+41 44 248 34 34</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:glattbrugg@visionapartments.com">glattbrugg@visionapartments.com</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.visionapartments.com/en/locations/glattbrugg" target="_blank" rel="noopener">visionapartments.com</a></dd>
+          <dt>Google-Bewertung</dt>
+          <dd>3.6 von 5 · 704 Bewertungen</dd>
+        </dl>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Industriestrasse%2010%2C%208152%20Glattbrugg&amp;z=16&amp;output=embed" loading="lazy" title="Karte VISIONAPARTMENTS Glattbrugg"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">06 / Ablauf</span>
+          <h2>Von der Auswahl zur Anfrage</h2>
+        </div>
+      </div>
+      <div class="units">
+        <article class="unit-card">
+          <span class="num mono">Schritt 01</span>
+          <h3>Einheiten vergleichen</h3>
+          <p>Im Vergleichs-Modul oben eine oder mehrere Einheiten auswählen und die Beschreibungen nebeneinander lesen.</p>
+        </article>
+        <article class="unit-card">
+          <span class="num mono">Schritt 02</span>
+          <h3>Personenzahl und Einzug angeben</h3>
+          <p>Die Anfrage wird automatisch aus Auswahl, Personenzahl und ungefährem Einzugstermin zusammengestellt.</p>
+        </article>
+        <article class="unit-card">
+          <span class="num mono">Schritt 03</span>
+          <h3>Per Telefon oder E-Mail senden</h3>
+          <p>Direkt an +41 44 248 34 34 oder glattbrugg@visionapartments.com — für Verfügbarkeit und Konditionen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">07 / Fragen</span>
+          <h2>Vor der Anfrage</h2>
+        </div>
+      </div>
+      <div class="units">
+        <article class="unit-card">
+          <span class="num mono">Frage 01</span>
+          <h3>Sind Preise online einsehbar?</h3>
+          <p>Nein. VISIONAPARTMENTS gibt keine Preise auf der Website an — eine Anfrage per Telefon oder E-Mail liefert die aktuelle Verfügbarkeit und Konditionen.</p>
+        </article>
+        <article class="unit-card">
+          <span class="num mono">Frage 02</span>
+          <h3>Sind die Apartments möbliert?</h3>
+          <p>Ja, alle Einheiten sind vollständig möbliert und verfügen über eine ausgestattete Küche oder Kitchenette sowie ein privates Badezimmer.</p>
+        </article>
+        <article class="unit-card">
+          <span class="num mono">Frage 03</span>
+          <h3>Was gehört zur Infrastruktur des Hauses?</h3>
+          <p>Ein Spa mit Sauna und Dampfbad, ein Fitnessstudio, eine Rooftop-Küche und das La Lup Bistro direkt im Haus.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="anfrage" data-reveal>
+    <div class="grid-shell">
+      <div class="sec-head">
+        <div>
+          <span class="tag mono">08 / Kontakt</span>
+          <h2>Direkt anfragen</h2>
+        </div>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-block">
+          <h3>Telefon</h3>
+          <a href="tel:+41442483434">+41 44 248 34 34</a>
+        </div>
+        <div class="contact-block">
+          <h3>E-Mail</h3>
+          <a href="mailto:glattbrugg@visionapartments.com">glattbrugg@visionapartments.com</a>
+        </div>
+        <div class="contact-block">
+          <h3>Adresse</h3>
+          <span>Industriestrasse 10, Glattbrugg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>VISIONAPARTMENTS Glattbrugg</strong><br>
+      Industriestrasse 10, Glattbrugg<br>
+      <a href="tel:+41442483434">+41 44 248 34 34</a><br>
+      <a href="mailto:glattbrugg@visionapartments.com">glattbrugg@visionapartments.com</a>
+    </div>
+    <div>
+      <strong>Vor Ort</strong><br>
+      Spa, Fitnessstudio, La Lup Bistro, Rooftop-Küche
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.visionapartments.com/en/locations/glattbrugg" target="_blank" rel="noopener">visionapartments.com</a>
+    </div>
+  </div>
+  <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41442483434">Anrufen · +41 44 248 34 34</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var units = [
+    {name:'Studio Mini (Kitchenette)', desc:'Kompaktes Apartment mit Kitchenette'},
+    {name:'Studio Junior (Kitchenette)', desc:'Geräumigeres Studio mit Kitchenette'},
+    {name:'One Bedroom Junior (Kitchenette)', desc:'Apartment mit separatem Schlafzimmer und Kitchenette'}
+  ];
+
+  var picker = document.getElementById('comp-picker');
+  var buttons = Array.prototype.slice.call(picker.querySelectorAll('button'));
+  var body = document.getElementById('comp-body');
+  var empty = document.getElementById('comp-empty');
+  var table = document.getElementById('comp-table');
+
+  function selected(){
+    return buttons.filter(function(b){ return b.getAttribute('aria-pressed') === 'true'; })
+      .map(function(b){ return units[parseInt(b.getAttribute('data-unit'),10)]; });
+  }
+
+  function renderTable(){
+    var sel = selected();
+    body.innerHTML = '';
+    if(sel.length === 0){
+      table.hidden = true; empty.hidden = false;
+      return;
+    }
+    table.hidden = false; empty.hidden = true;
+    sel.forEach(function(u){
+      var tr = document.createElement('tr');
+      var tdName = document.createElement('td');
+      tdName.textContent = u.name;
+      var tdDesc = document.createElement('td');
+      tdDesc.textContent = u.desc;
+      tr.appendChild(tdName); tr.appendChild(tdDesc);
+      body.appendChild(tr);
+    });
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+      renderTable();
+      renderComposer();
+    });
+  });
+
+  var guestSelect = document.getElementById('guest-count');
+  var moveIn = document.getElementById('move-in');
+  var out = document.getElementById('composer-out');
+  var mailLink = document.getElementById('mail-link');
+
+  function renderComposer(){
+    var sel = selected();
+    var names = sel.length ? sel.map(function(u){ return u.name; }).join(', ') : '(keine Auswahl)';
+    var text = 'Anfrage VISIONAPARTMENTS Glattbrugg\n' +
+      'Einheiten: ' + names + '\n' +
+      'Personen: ' + guestSelect.value + '\n' +
+      'Einzug: ' + moveIn.value;
+    out.textContent = text;
+    var subject = encodeURIComponent('Anfrage Serviced Apartment Glattbrugg');
+    var mbody = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:glattbrugg@visionapartments.com?subject=' + subject + '&body=' + mbody);
+  }
+
+  guestSelect.addEventListener('change', renderComposer);
+  moveIn.addEventListener('change', renderComposer);
+
+  renderTable();
+  renderComposer();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work Life Residence Winterthur – Serviced Apartments am Bahnhof</title>
+<meta name="description" content="Work Life Residence Winterthur, Lagerhausstrasse 6a: möblierte Serviced Apartments mit Küche und Co-Working, für kurze, mittlere und lange Aufenthalte. Zentral am Bahnhof.">
+<meta property="og:title" content="Work Life Residence Winterthur">
+<meta property="og:description" content="Serviced Apartments mit Küche und Co-Working-Space – für Aufenthalte von wenigen Nächten bis mehreren Monaten.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://workliferesidence.ch/wp-content/uploads/2022/09/4_PRIMESTAY_ROOFTOP-1800.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Hotel Work Life Residence Winterthur",
+  "description": "Moderne Serviced Apartments im Herzen Winterthurs, ideal für Geschäftsreisende, Studierende und längerfristige Aufenthalte. Zentral gelegen mit direkter Nähe zum Bahnhof.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lagerhausstrasse 6a",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41522022011",
+  "email": "info@workliferesidence.ch",
+  "url": "https://workliferesidence.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.5",
+    "reviewCount": "54"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#f2f4f7;
+    --surface:#ffffff;
+    --fg:#161b22;
+    --muted:#4c5563;
+    --brand:#1d3557;
+    --accent:#e0592f;
+    --line:#dbe1e9;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'DM Sans',system-ui,sans-serif;
+    font-size:clamp(15px,0.35vw + 13.6px,17px);
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;letter-spacing:-0.01em;
+    line-height:1.08;margin:0;color:var(--fg);
+  }
+  h1{font-size:clamp(2.3rem,5vw + 1rem,4.1rem);font-weight:700;}
+  h2{font-size:clamp(1.7rem,2.6vw + 1rem,2.5rem);}
+  h3{font-size:clamp(1.1rem,1.2vw + 1rem,1.3rem);}
+  p{margin:0 0 1em;}
+  a{color:var(--brand);}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;list-style:none;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1.2rem,4vw,3rem);
+    background:rgba(242,244,247,0.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{display:flex;align-items:center;gap:0.6rem;}
+  .brand-mark img{height:32px;width:auto;border-radius:4px;}
+  .brand-mark span{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:-0.01em;}
+  nav{display:flex;align-items:center;gap:1.6rem;}
+  nav a{color:var(--fg);text-decoration:none;font-size:0.92rem;font-weight:500;}
+  nav a:hover{color:var(--accent);}
+  .nav-cta{background:var(--brand);color:#fff !important;padding:0.55em 1.1em;border-radius:6px;}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:0.4em 0.6em;font-size:1.1rem;}
+  @media (max-width:820px){
+    nav{position:fixed;top:64px;left:0;right:0;background:var(--surface);flex-direction:column;align-items:flex-start;
+      padding:1.2rem clamp(1.2rem,4vw,3rem);gap:1rem;border-bottom:1px solid var(--line);transform:translateY(-130%);
+      transition:transform 0.3s ease;}
+    nav.is-open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+  }
+
+  main{padding-top:64px;}
+
+  section{padding:clamp(3rem,6vw,6rem) 0;}
+  section.alt{background:var(--surface);}
+
+  [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+  /* hero */
+  .hero{padding-top:calc(64px + clamp(2rem,5vw,4rem));display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;}
+  @media (max-width:900px){ .hero{grid-template-columns:1fr;} }
+  .hero-tag{display:inline-block;font-size:0.8rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--brand);background:#e4e9f1;padding:0.35em 0.8em;border-radius:999px;margin-bottom:1.1rem;}
+  .hero h1{margin-bottom:1rem;}
+  .hero .lead{font-size:clamp(1.05rem,0.5vw + 1rem,1.25rem);color:var(--muted);max-width:38ch;}
+  .cta-row{display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.6rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.5em;padding:0.8em 1.4em;border-radius:7px;font-weight:600;
+    text-decoration:none;font-size:0.96rem;border:1px solid transparent;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{background:#c74a25;}
+  .btn-ghost{background:transparent;color:var(--fg);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--brand);}
+  .hero-photo-wrap{border-radius:14px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(22,27,34,0.35);}
+  .hero-photo-wrap img{width:100%;height:clamp(260px,32vw,420px);object-fit:cover;}
+  .rezeption-badge{display:flex;align-items:center;gap:0.5em;font-size:0.85rem;color:var(--muted);margin-top:1.4rem;}
+  .dot{width:9px;height:9px;border-radius:50%;background:#2f9e59;display:inline-block;box-shadow:0 0 0 3px rgba(47,158,89,0.18);}
+
+  .stat-strip{display:flex;gap:clamp(1.5rem,4vw,3rem);flex-wrap:wrap;margin-top:2.2rem;padding-top:1.6rem;border-top:1px solid var(--line);}
+  .stat-strip div b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--brand);}
+  .stat-strip div span{font-size:0.82rem;color:var(--muted);}
+
+  /* about / usps */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;}
+  @media (max-width:820px){ .about-grid{grid-template-columns:1fr;} }
+  .usp-list{display:grid;gap:0.9rem;}
+  .usp-item{display:flex;gap:0.8rem;padding:1rem 1.1rem;background:var(--bg);border:1px solid var(--line);border-radius:10px;}
+  .usp-item b{display:block;font-family:'Space Grotesk',sans-serif;font-size:0.98rem;margin-bottom:0.1rem;}
+  .usp-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--accent);font-size:1.1rem;flex-shrink:0;}
+
+  /* rhythm module */
+  .rhythm-head{max-width:62ch;margin-bottom:2.2rem;}
+  .weekstrip{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+  .weekstrip span{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:600;padding:0.5em 0.9em;
+    border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted);}
+  .mode-toggle{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:0.3rem;margin-bottom:2rem;}
+  .mode-toggle button{border:none;background:transparent;padding:0.6em 1.3em;border-radius:999px;font-weight:600;
+    font-family:'Space Grotesk',sans-serif;font-size:0.92rem;cursor:pointer;color:var(--muted);}
+  .mode-toggle button.is-active{background:var(--brand);color:#fff;}
+  .rhythm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;}
+  .rhythm-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.3rem;transition:opacity 0.25s ease,transform 0.25s ease;}
+  .rhythm-card[data-belongs]{opacity:0.35;transform:scale(0.98);}
+  .rhythm-card[data-belongs].is-active{opacity:1;transform:scale(1);border-color:var(--accent);}
+  .rhythm-card b{display:block;font-family:'Space Grotesk',sans-serif;margin-bottom:0.3rem;}
+  .rhythm-card span.tag{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent);font-weight:700;}
+
+  /* rooms */
+  .room-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;}
+  .room-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;gap:0.7rem;}
+  .room-card.is-selected{border-color:var(--accent);box-shadow:0 0 0 3px rgba(224,89,47,0.15);}
+  .room-card h3{margin-bottom:0.1rem;}
+  .cap-row{display:flex;gap:0.3rem;color:var(--muted);font-size:0.9rem;}
+  .price-tag{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--brand);font-size:1.05rem;}
+  .select-room{margin-top:auto;background:var(--brand);color:#fff;border:none;padding:0.7em 1em;border-radius:7px;font-weight:600;cursor:pointer;}
+  .select-room:hover{background:var(--accent);}
+
+  /* photos */
+  .photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;}
+  @media (max-width:820px){ .photo-strip{grid-template-columns:repeat(2,1fr);} }
+  .photo-strip figure{margin:0;border-radius:10px;overflow:hidden;background:var(--line);aspect-ratio:4/3;}
+  .photo-strip img{width:100%;height:100%;object-fit:cover;}
+
+  /* amenities full */
+  .amenity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.9rem;}
+  .amenity-grid li{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:0.9rem 1.1rem;font-size:0.94rem;
+    display:flex;gap:0.6rem;align-items:flex-start;}
+  .amenity-grid li::before{content:"✓";color:var(--accent);font-weight:700;}
+
+  /* location */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;}
+  @media (max-width:820px){ .loc-grid{grid-template-columns:1fr;} }
+  .map-frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .map-frame iframe{width:100%;height:320px;border:0;display:block;}
+  .distance-note{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.3rem;margin-top:1rem;}
+
+  /* composer */
+  .composer{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(1.5rem,3vw,2.5rem);}
+  .composer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;}
+  @media (max-width:820px){ .composer-grid{grid-template-columns:1fr;} }
+  .field{margin-bottom:1rem;}
+  .field label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.35rem;}
+  .field select,.field input{width:100%;padding:0.65em 0.8em;border:1px solid var(--line);border-radius:7px;
+    font-family:inherit;font-size:0.95rem;background:var(--bg);color:var(--fg);}
+  .composer-output{background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:1rem 1.2rem;
+    font-family:'DM Sans',monospace;font-size:0.88rem;white-space:pre-wrap;color:var(--muted);min-height:120px;}
+  .composer-actions{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem;}
+  .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand);padding:0.7em 1.2em;border-radius:7px;
+    font-weight:600;cursor:pointer;font-size:0.9rem;text-decoration:none;display:inline-block;}
+
+  /* rating */
+  .rating-line{display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;color:var(--muted);}
+
+  /* audience */
+  .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+  @media (max-width:820px){ .audience-grid{grid-template-columns:1fr;} }
+  .audience-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem;}
+  .audience-card .icon{font-size:1.6rem;margin-bottom:0.6rem;display:block;}
+
+  /* faq */
+  .faq-list{max-width:64ch;}
+  .faq-item{border-bottom:1px solid var(--line);padding:1.1rem 0;}
+  .faq-item summary{cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.02rem;list-style:none;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";float:right;font-size:1.2rem;color:var(--accent);}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin-top:0.7rem;color:var(--muted);}
+
+  /* booking ways */
+  .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+  @media (max-width:820px){ .book-grid{grid-template-columns:1fr;} }
+  .book-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:1.5rem;text-align:left;}
+  .book-card a{display:inline-block;margin-top:0.6rem;font-weight:600;}
+  .book-card .icon{font-size:1.5rem;display:block;margin-bottom:0.5rem;}
+
+  footer{background:var(--brand);color:#eef1f6;padding:clamp(2.4rem,5vw,3.5rem) 0 6rem;}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+  @media (max-width:720px){ .foot-grid{grid-template-columns:1fr;} }
+  footer a{color:#fff;}
+  footer .foot-note{max-width:1180px;margin:2.2rem auto 0;padding:0 clamp(1.2rem,4vw,3rem);font-size:0.8rem;color:#b9c3d6;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--accent);display:none;}
+  .mobile-bar a{display:block;text-align:center;color:#fff;font-weight:700;padding:0.9rem;text-decoration:none;}
+  @media (max-width:720px){ .mobile-bar{display:block;} main{padding-bottom:0;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">
+    <img src="https://workliferesidence.ch/wp-content/uploads/2022/09/cropped-logo_workliferesidence-1-270x270.png" alt="Work Life Residence Winterthur Logo" onerror="this.style.display='none'">
+    <span>Work Life Residence</span>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menü</button>
+  <nav id="mainNav">
+    <a href="#ueber">Über uns</a>
+    <a href="#rhythmus">Leben &amp; Arbeiten</a>
+    <a href="#zimmer">Zimmer</a>
+    <a href="#lage">Lage</a>
+    <a class="nav-cta" href="#anfrage">Anfragen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap">
+    <div>
+      <span class="hero-tag">Serviced Apartments · Winterthur</span>
+      <h1>Bleiben Sie ganz nach Ihrem Wunsch: kurz, lang &amp; darüber hinaus</h1>
+      <p class="lead">Moderne Serviced Apartments im Herzen Winterthurs, ideal für Geschäftsreisende, Studierende und längerfristige Aufenthalte. Zentral gelegen mit direkter Nähe zum Bahnhof.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#anfrage">Anfrage stellen</a>
+        <a class="btn btn-ghost" href="tel:+41522022011">+41 52 202 20 11</a>
+      </div>
+      <div class="rezeption-badge"><span class="dot" id="statusDot"></span><span id="statusText">Rezeption: 24/7 Hotline</span></div>
+      <div class="stat-strip">
+        <div><b>3</b><span>Zimmertypen</span></div>
+        <div><b>8</b><span>Ausstattungsmerkmale</span></div>
+        <div><b>24/7</b><span>Hotline Support</span></div>
+        <div><b>3.5</b><span>★ · 54 Bewertungen</span></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="https://workliferesidence.ch/wp-content/uploads/2022/09/4_PRIMESTAY_ROOFTOP-1800.jpg" alt="Dachterrasse des Work Life Residence Winterthur" loading="eager" onerror="this.parentElement.style.display='none'">
+    </div>
+  </section>
+
+  <section id="ueber" class="alt" data-reveal>
+    <div class="wrap about-grid">
+      <div>
+        <h2>Ein Haus für zwei Rhythmen</h2>
+        <p>Wer hier einzieht, bleibt nicht für eine Nacht – sondern für eine Arbeitswoche, ein Semester oder ein Projekt. Die Apartments sind so eingerichtet, dass Wohnen und Arbeiten im gleichen Zuhause Platz haben, ohne sich zu stören.</p>
+      </div>
+      <ul class="usp-list">
+        <li class="usp-item"><span class="usp-num">01</span><div><b>Flexible Mietdauer</b>kurz-, mittel- und langfristig</div></li>
+        <li class="usp-item"><span class="usp-num">02</span><div><b>Vollständig ausgestattete Küchen</b>in jedem Apartment</div></li>
+        <li class="usp-item"><span class="usp-num">03</span><div><b>Meeting- und Co-Working Spaces</b>im Haus</div></li>
+        <li class="usp-item"><span class="usp-num">04</span><div><b>24/7 Hotline Support</b>rund um die Uhr erreichbar</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rhythmus" data-reveal>
+    <div class="wrap">
+      <div class="rhythm-head">
+        <h2>Leben &amp; Arbeiten – im gleichen Haus</h2>
+        <p>Ob Montagfrüh im Co-Working-Space oder Sonntagabend am eigenen Herd: die Ausstattung ist auf beide Seiten der Woche ausgelegt. Wählen Sie einen Modus, um zu sehen, was ihn trägt.</p>
+      </div>
+      <div class="weekstrip" aria-hidden="true">
+        <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span>
+      </div>
+      <div class="mode-toggle" role="group" aria-label="Ansicht wählen">
+        <button type="button" id="btnArbeiten" class="is-active">Arbeiten</button>
+        <button type="button" id="btnLeben">Wohnen</button>
+      </div>
+      <div class="rhythm-grid" id="rhythmGrid">
+        <div class="rhythm-card" data-belongs="arbeiten"><span class="tag">Arbeiten</span><b>Kostenlos WLAN</b>im ganzen Haus</div>
+        <div class="rhythm-card" data-belongs="arbeiten"><span class="tag">Arbeiten</span><b>Meeting- und Co-Working Spaces</b>für Calls und Fokusarbeit</div>
+        <div class="rhythm-card" data-belongs="arbeiten"><span class="tag">Arbeiten</span><b>Kaffee/Tee in den Zimmern</b>für lange Arbeitstage</div>
+        <div class="rhythm-card" data-belongs="leben"><span class="tag">Wohnen</span><b>Vollständig ausgestattete Küche</b>selbst kochen statt auswärts essen</div>
+        <div class="rhythm-card" data-belongs="leben"><span class="tag">Wohnen</span><b>Frühstücksbuffet</b>CHF 15 bei Direktbuchung</div>
+        <div class="rhythm-card" data-belongs="leben"><span class="tag">Wohnen</span><b>Wäscherei</b>CHF 6</div>
+        <div class="rhythm-card" data-belongs="leben"><span class="tag">Wohnen</span><b>Reinigungsservice</b>auf Wunsch</div>
+        <div class="rhythm-card" data-belongs="leben"><span class="tag">Wohnen</span><b>Parkplatz</b>CHF 10 bei Direktbuchung</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Für wen dieses Haus gemacht ist</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <span class="icon" aria-hidden="true">💼</span>
+          <h3>Geschäftsreisende</h3>
+          <p style="color:var(--muted);">Co-Working-Space und Meetingraum im Haus, WLAN inklusive – der Arbeitstag muss nicht im Zimmer enden.</p>
+        </div>
+        <div class="audience-card">
+          <span class="icon" aria-hidden="true">🎓</span>
+          <h3>Studierende</h3>
+          <p style="color:var(--muted);">Eigene Küche statt Mensa, mittelfristige Mietverträge für ein Semester oder länger.</p>
+        </div>
+        <div class="audience-card">
+          <span class="icon" aria-hidden="true">🧳</span>
+          <h3>Langzeit-Gäste</h3>
+          <p style="color:var(--muted);">Wäscherei, Reinigungsservice und Frühstücksbuffet auf Wunsch – Alltag statt Hotelroutine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zimmer" class="alt" data-reveal>
+    <div class="wrap">
+      <h2>Zimmer</h2>
+      <p style="max-width:56ch;color:var(--muted);margin-bottom:2rem;">Drei Zimmertypen, unterschieden nach Belegung. Preise auf Anfrage – wählen Sie einen Typ, um ihn in die Anfrage zu übernehmen.</p>
+      <div class="room-grid" id="roomGrid">
+        <div class="room-card" data-name="Einzelzimmer" data-cap="1">
+          <h3>Einzelzimmer</h3>
+          <div class="cap-row">👤 1 Person</div>
+          <div class="price-tag">Preis auf Anfrage</div>
+          <button class="select-room" type="button">Für Anfrage wählen</button>
+        </div>
+        <div class="room-card" data-name="Doppelzimmer" data-cap="2">
+          <h3>Doppelzimmer</h3>
+          <div class="cap-row">👤👤 2 Personen</div>
+          <div class="price-tag">Preis auf Anfrage</div>
+          <button class="select-room" type="button">Für Anfrage wählen</button>
+        </div>
+        <div class="room-card" data-name="Dreibettzimmer" data-cap="3">
+          <h3>Dreibettzimmer</h3>
+          <div class="cap-row">👤👤👤 3 Personen</div>
+          <div class="price-tag">Preis auf Anfrage</div>
+          <button class="select-room" type="button">Für Anfrage wählen</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Einblicke</h2>
+      <div class="photo-strip">
+        <figure><img src="https://workliferesidence.ch/wp-content/uploads/2022/09/business-accomodation-768x686.png" alt="Zimmer mit Arbeitsplatz" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+        <figure><img src="https://workliferesidence.ch/wp-content/uploads/2022/09/triple-primestay-room-768x714.png" alt="Zimmer mit mehreren Betten" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+        <figure><img src="https://workliferesidence.ch/wp-content/uploads/2022/09/longstay-accomodation.png" alt="Apartment für längere Aufenthalte" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+        <figure><img src="https://workliferesidence.ch/wp-content/uploads/2022/09/studenten-accomodation-768x894.png" alt="Zimmer für Studierende" loading="lazy" onerror="this.parentElement.style.display='none'"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Alle Ausstattungsmerkmale</h2>
+      <ul class="amenity-grid">
+        <li>Kostenlos WLAN</li>
+        <li>Frühstücksbuffet (CHF 15 bei Direktbuchung)</li>
+        <li>Vollständig ausgestattete Küche</li>
+        <li>Wäscherei (CHF 6)</li>
+        <li>Meeting- und Co-Working Spaces</li>
+        <li>Parkplatz (CHF 10 bei Direktbuchung)</li>
+        <li>Reinigungsservice</li>
+        <li>Kaffee/Tee in den Zimmern</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="wrap loc-grid">
+      <div>
+        <h2>Lage</h2>
+        <p>Lagerhausstrasse 6a, 8400 Winterthur</p>
+        <div class="distance-note">Zentrale Lage, Nähe zum Bahnhof Winterthur.</div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Lagerhausstrasse%206a%2C%208400%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Work Life Residence Winterthur" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="anfrage" class="alt" data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:0.6rem;">Anfrage zusammenstellen</h2>
+      <p style="color:var(--muted);max-width:56ch;margin-bottom:2rem;">Zimmertyp und Personenzahl wählen – die Nachricht wird automatisch formuliert, bereit für E-Mail oder Telefon.</p>
+      <div class="composer">
+        <div class="composer-grid">
+          <div>
+            <div class="field">
+              <label for="selRoom">Zimmertyp</label>
+              <select id="selRoom">
+                <option value="Einzelzimmer" data-cap="1">Einzelzimmer (1 Person)</option>
+                <option value="Doppelzimmer" data-cap="2">Doppelzimmer (2 Personen)</option>
+                <option value="Dreibettzimmer" data-cap="3">Dreibettzimmer (3 Personen)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="selDuration">Geplante Mietdauer</label>
+              <select id="selDuration">
+                <option value="kurzfristig">kurzfristig</option>
+                <option value="mittelfristig">mittelfristig</option>
+                <option value="langfristig">langfristig</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="selGuests">Anzahl Personen</label>
+              <input type="number" id="selGuests" min="1" max="3" value="1">
+            </div>
+          </div>
+          <div>
+            <div class="composer-output" id="composerOut"></div>
+            <div class="composer-actions">
+              <a class="btn btn-primary" id="mailLink" href="#">Per E-Mail senden</a>
+              <a class="btn-outline" id="telLink" href="tel:+41522022011">Anrufen</a>
+              <a class="btn-outline" href="https://www.simplebooking.it/ibe2/hotel/10768" target="_blank" rel="noopener">Online buchen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="rating-line" style="margin-top:2rem;">★ 3.5 · 54 Google-Bewertungen</p>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Ist Frühstück inklusive?</summary>
+          <p>Das Frühstücksbuffet kostet CHF 15 bei Direktbuchung.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es einen Parkplatz?</summary>
+          <p>Ja, ein Parkplatz ist bei Direktbuchung für CHF 10 verfügbar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kann ich meine Wäsche waschen?</summary>
+          <p>Ja, die Wäscherei im Haus kostet CHF 6.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie lange kann ich bleiben?</summary>
+          <p>Die Mietdauer ist flexibel: kurz-, mittel- oder langfristig.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ist die Rezeption immer erreichbar?</summary>
+          <p>Ja, über die 24/7 Hotline.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Buchungswege</h2>
+      <div class="book-grid">
+        <div class="book-card">
+          <span class="icon" aria-hidden="true">🖥️</span>
+          <h3>Online buchen</h3>
+          <p style="color:var(--muted);">Direkt über das Buchungssystem.</p>
+          <a href="https://www.simplebooking.it/ibe2/hotel/10768" target="_blank" rel="noopener">simplebooking.it →</a>
+        </div>
+        <div class="book-card">
+          <span class="icon" aria-hidden="true">☎️</span>
+          <h3>Anrufen</h3>
+          <p style="color:var(--muted);">Rezeption via 24/7 Hotline.</p>
+          <a href="tel:+41522022011">+41 52 202 20 11</a>
+        </div>
+        <div class="book-card">
+          <span class="icon" aria-hidden="true">✉️</span>
+          <h3>E-Mail</h3>
+          <p style="color:var(--muted);">Für Anfragen mit Details zur Mietdauer.</p>
+          <a href="mailto:info@workliferesidence.ch">info@workliferesidence.ch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Work Life Residence Winterthur</strong><br>
+      Lagerhausstrasse 6a, 8400 Winterthur<br>
+      <a href="tel:+41522022011">+41 52 202 20 11</a><br>
+      <a href="mailto:info@workliferesidence.ch">info@workliferesidence.ch</a>
+    </div>
+    <div>
+      <strong>Rezeption</strong><br>
+      24/7 Hotline
+    </div>
+    <div>
+      <strong>Online</strong><br>
+      <a href="https://workliferesidence.ch/" target="_blank" rel="noopener">workliferesidence.ch</a><br>
+      <a href="https://instagram.com/workliferesidence.winterthur" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41522022011">Anrufen · +41 52 202 20 11</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mainNav.classList.remove('is-open'); navToggle.setAttribute('aria-expanded','false'); });
+  });
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* rezeption badge: hours are 24/7 hotline, always on */
+  document.getElementById('statusText').textContent = 'Rezeption jetzt offen · 24/7 Hotline';
+
+  /* rhythm toggle */
+  var btnArbeiten = document.getElementById('btnArbeiten');
+  var btnLeben = document.getElementById('btnLeben');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.rhythm-card'));
+  function setMode(mode){
+    btnArbeiten.classList.toggle('is-active', mode === 'arbeiten');
+    btnLeben.classList.toggle('is-active', mode === 'leben');
+    cards.forEach(function(c){ c.classList.toggle('is-active', c.getAttribute('data-belongs') === mode); });
+  }
+  btnArbeiten.addEventListener('click', function(){ setMode('arbeiten'); });
+  btnLeben.addEventListener('click', function(){ setMode('leben'); });
+  setMode('arbeiten');
+
+  /* room cards -> composer */
+  var selRoom = document.getElementById('selRoom');
+  var selDuration = document.getElementById('selDuration');
+  var selGuests = document.getElementById('selGuests');
+  var composerOut = document.getElementById('composerOut');
+  var mailLink = document.getElementById('mailLink');
+  var roomCards = document.querySelectorAll('#roomGrid .room-card');
+
+  function renderComposer(){
+    var room = selRoom.options[selRoom.selectedIndex].text;
+    var duration = selDuration.value;
+    var guests = selGuests.value;
+    var text = 'Anfrage Work Life Residence Winterthur\n' +
+      'Zimmertyp: ' + room + '\n' +
+      'Mietdauer: ' + duration + '\n' +
+      'Personen: ' + guests;
+    composerOut.textContent = text;
+    var subject = encodeURIComponent('Anfrage Work Life Residence Winterthur');
+    var body = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:info@workliferesidence.ch?subject=' + subject + '&body=' + body);
+  }
+  roomCards.forEach(function(card){
+    var btn = card.querySelector('.select-room');
+    btn.addEventListener('click', function(){
+      roomCards.forEach(function(c){ c.classList.remove('is-selected'); });
+      card.classList.add('is-selected');
+      var name = card.getAttribute('data-name');
+      for(var i=0;i<selRoom.options.length;i++){
+        if(selRoom.options[i].value === name){ selRoom.selectedIndex = i; break; }
+      }
+      selGuests.value = card.getAttribute('data-cap');
+      renderComposer();
+      document.getElementById('anfrage').scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'});
+    });
+  });
+  selRoom.addEventListener('change', function(){
+    selGuests.max = selRoom.options[selRoom.selectedIndex].getAttribute('data-cap');
+    renderComposer();
+  });
+  selDuration.addEventListener('change', renderComposer);
+  selGuests.addEventListener('input', renderComposer);
+  renderComposer();
+})();
+</script>
+
+</body>
+</html>

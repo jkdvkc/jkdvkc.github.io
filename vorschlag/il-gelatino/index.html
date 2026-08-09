@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Gelatino — Artisanales Gelato aus Schweizer Milch, Winterthur</title>
+<meta name="description" content="Il Gelatino am Bahnhofplatz Winterthur: hausgemachtes Gelato aus 100% Schweizer Milch, palmölfrei, artisanale Produktion, täglich frischer Kaffee.">
+<meta name="theme-color" content="#fbf3e7">
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Il Gelatino — Artisanales Gelato aus Schweizer Milch">
+<meta property="og:description" content="Hausgemachte Gelato-Spezialitäten aus 100% Schweizer Milch. Bahnhofplatz 9, 8400 Winterthur.">
+<meta property="og:locale" content="de_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "IceCreamShop",
+  "name": "Il Gelatino",
+  "servesCuisine": "Gelateria",
+  "description": "Artisanale Gelateria mit Spezialisierung auf hausgemachte Gelato aus ausschliesslich Schweizer Milch. Palmölfrei, täglich frischer Kaffee, einzigartige Speisekarte mit Fokus auf Qualität und handwerkliche Herstellung.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bahnhofplatz 9",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41 52 243 37 74",
+  "email": "sinaniamir@gmx.ch",
+  "sameAs": [
+    "https://www.instagram.com/il_gelatino_/"
+  ]
+}
+</script>
+<style>
+  /* ============================================================
+     IL GELATINO — die Theke aus Farbe.
+     Kein Foto im Haus, also übernimmt Farbe die Bildsprache.
+     ============================================================ */
+  :root {
+    /* six-token colour system */
+    --bg: #fbf3e7;
+    --surface: #ffffff;
+    --fg: #241209;
+    --muted: #5f4531;
+    --brand: #d6336c;
+    --accent: #2f8f5c;
+    /* gelato-counter tones (used only inside the signature module) */
+    --scoop-1: #fff1d6; /* fior di latte */
+    --scoop-1-ink: #4a3419;
+    --scoop-2: #e0507f; /* lampone */
+    --scoop-2-ink: #fff6f6;
+    --scoop-3: #3f8f63; /* pistacchio */
+    --scoop-3-ink: #f4fbf3;
+    --scoop-4: #6b3a20; /* cioccolato */
+    --scoop-4-ink: #fdf1e6;
+    --scoop-5: #a9713f; /* caffè */
+    --scoop-5-ink: #fff6ea;
+    --scoop-6: #6a4a9c; /* mirtillo */
+    --scoop-6-ink: #f8f4ff;
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 10px;
+    --maxw: 1180px;
+    --ease: cubic-bezier(.22,.68,0,1);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Manrope', system-ui, sans-serif;
+    font-size: clamp(15px, 0.95rem + 0.15vw, 18px);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Baloo 2', 'Manrope', sans-serif;
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .skip-link {
+    position: absolute; left: 1rem; top: -3rem;
+    background: var(--fg); color: var(--bg);
+    padding: .6rem 1rem; border-radius: var(--radius-sm);
+    z-index: 200; transition: top .2s var(--ease);
+  }
+  .skip-link:focus { top: 1rem; }
+  :focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding-inline: clamp(1.1rem, 4vw, 2.5rem);
+  }
+  /* ---------------- header ---------------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 243, 231, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(36, 18, 9, 0.08);
+  }
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: .85rem;
+  }
+  .wordmark {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.7rem);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--fg);
+  }
+  .wordmark .dot {
+    width: .6em; height: .6em; border-radius: 50%;
+    background: conic-gradient(from 200deg,
+      var(--scoop-2), var(--scoop-3), var(--scoop-5), var(--scoop-6), var(--scoop-2));
+    flex: none;
+  }
+  nav.primary {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  nav.primary a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    color: var(--fg);
+    position: relative;
+    padding-block: .2rem;
+  }
+  nav.primary a::after {
+    content: '';
+    position: absolute; left: 0; right: 100%; bottom: -2px;
+    height: 2px; background: var(--brand);
+    transition: right .25s var(--ease);
+  }
+  nav.primary a:hover::after, nav.primary a:focus-visible::after { right: 0; }
+  .nav-links { display: flex; gap: clamp(1rem, 2vw, 1.8rem); }
+  .btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .92rem;
+    padding: .65rem 1.1rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px -8px rgba(214,51,108,.65);
+    transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+  }
+  .btn-call:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -8px rgba(214,51,108,.75); }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+  }
+  /* ---------------- hero ---------------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(2.5rem, 8vw, 6rem) clamp(3rem, 9vw, 7rem);
+  }
+  .hero-blobs {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0px);
+    opacity: .85;
+  }
+  .blob-a {
+    width: min(46vw, 480px); height: min(46vw, 480px);
+    background: var(--scoop-2);
+    top: -14%; right: -12%;
+    opacity: .28;
+  }
+  .blob-b {
+    width: min(30vw, 320px); height: min(30vw, 320px);
+    background: var(--scoop-3);
+    bottom: -10%; left: -8%;
+    opacity: .25;
+  }
+  .blob-c {
+    width: min(18vw, 200px); height: min(18vw, 200px);
+    background: var(--scoop-6);
+    top: 55%; left: 62%;
+    opacity: .18;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--brand);
+    background: rgba(214,51,108,.09);
+    padding: .4rem .85rem;
+    border-radius: 999px;
+    width: fit-content;
+  }
+  .eyebrow::before {
+    content: '';
+    width: .5em; height: .5em; border-radius: 50%;
+    background: var(--brand);
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 1.7rem + 4.4vw, 5.3rem);
+    max-width: 16ch;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(100deg, var(--scoop-2), var(--brand) 55%, var(--scoop-6));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-sub {
+    max-width: 46ch;
+    font-size: clamp(1.05rem, .95rem + .4vw, 1.3rem);
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .btn-primary, .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .9rem 1.5rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease);
+  }
+  .btn-primary {
+    background: var(--fg);
+    color: var(--bg);
+    box-shadow: 0 10px 24px -10px rgba(36,18,9,.5);
+  }
+  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--fg);
+    border: 2px solid rgba(36,18,9,.18);
+  }
+  .btn-ghost:hover { border-color: var(--fg); transform: translateY(-2px); }
+  .hero-usps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem .9rem;
+    padding-top: .5rem;
+  }
+  .usp-chip {
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--fg);
+    background: var(--surface);
+    border: 1px solid rgba(36,18,9,.1);
+    padding: .45rem .85rem;
+    border-radius: 999px;
+  }
+  /* ---------------- section scaffolding ---------------- */
+  section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+  .section-head {
+    max-width: 60ch;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+  .section-kicker {
+    font-weight: 800;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-size: .8rem;
+    margin-bottom: .6rem;
+    display: block;
+  }
+  .section-head h2 {
+    font-size: clamp(1.9rem, 1.5rem + 1.8vw, 2.9rem);
+  }
+  .section-head p {
+    margin-top: .9rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 52ch;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+  /* ---------------- signature module: die Theke ---------------- */
+  .theke {
+    background: var(--fg);
+    color: var(--bg);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .theke::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,.05), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(255,255,255,.04), transparent 50%);
+    pointer-events: none;
+  }
+  .theke-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: clamp(1.5rem, 4vw, 2.4rem);
+    position: relative;
+    z-index: 1;
+  }
+  .theke-head h2 { color: var(--bg); font-size: clamp(1.7rem, 1.4rem + 1.4vw, 2.4rem); }
+  .theke-hint {
+    font-size: .85rem;
+    color: rgba(251,243,231,.55);
+    font-weight: 600;
+  }
+  .scoops {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(210px, 1fr);
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: .75rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(251,243,231,.35) transparent;
+  }
+  .scoops::-webkit-scrollbar { height: 8px; }
+  .scoops::-webkit-scrollbar-thumb { background: rgba(251,243,231,.3); border-radius: 999px; }
+  @media (min-width: 900px) {
+    .scoops {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: visible;
+    }
+  }
+  .scoop {
+    scroll-snap-align: start;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.3rem;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    min-height: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .9rem;
+    transition: transform .28s var(--ease), box-shadow .28s var(--ease), min-height .28s var(--ease);
+    box-shadow: 0 10px 26px -14px rgba(0,0,0,.55);
+  }
+  .scoop:hover, .scoop:focus-visible { transform: translateY(-6px) rotate(-.3deg); }
+  .scoop[aria-expanded="true"] { min-height: 210px; box-shadow: 0 18px 34px -14px rgba(0,0,0,.6); }
+  .scoop-num {
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    opacity: .65;
+  }
+  .scoop-name {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.15;
+  }
+  .scoop-desc {
+    font-size: .88rem;
+    font-weight: 500;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .3s var(--ease), opacity .25s var(--ease) .05s;
+  }
+  .scoop[aria-expanded="true"] .scoop-desc {
+    max-height: 200px;
+    opacity: .92;
+  }
+  .scoop-toggle-icon {
+    align-self: flex-end;
+    width: 1.6rem; height: 1.6rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,.22);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    transition: transform .28s var(--ease), background .2s;
+  }
+  .scoop[aria-expanded="true"] .scoop-toggle-icon { transform: rotate(45deg); background: rgba(255,255,255,.32); }
+  .scoop-1 { background: var(--scoop-1); color: var(--scoop-1-ink); }
+  .scoop-2 { background: var(--scoop-2); color: var(--scoop-2-ink); }
+  .scoop-3 { background: var(--scoop-3); color: var(--scoop-3-ink); }
+  .scoop-4 { background: var(--scoop-4); color: var(--scoop-4-ink); }
+  .scoop-5 { background: var(--scoop-5); color: var(--scoop-5-ink); }
+  .scoop-6 { background: var(--scoop-6); color: var(--scoop-6-ink); }
+  .scoop-1 .scoop-toggle-icon { background: rgba(36,18,9,.12); color: var(--scoop-1-ink); }
+  .scoop-1[aria-expanded="true"] .scoop-toggle-icon { background: rgba(36,18,9,.2); }
+  .theke-foot {
+    position: relative; z-index: 1;
+    margin-top: clamp(1.5rem, 4vw, 2.2rem);
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(251,243,231,.14);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem 1.4rem;
+    align-items: center;
+    font-size: .9rem;
+    color: rgba(251,243,231,.72);
+  }
+  .theke-foot strong { color: var(--bg); }
+  /* ---------------- about ---------------- */
+  .about-grid {
+    display: grid;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 880px) {
+    .about-grid { grid-template-columns: 1.1fr .9fr; align-items: start; }
+  }
+  .about-copy p {
+    font-size: clamp(1.05rem, 1rem + .25vw, 1.25rem);
+    color: var(--fg);
+    max-width: 56ch;
+  }
+  .about-copy p + p { margin-top: 1rem; }
+  .swatch-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.6rem, 4vw, 2.2rem);
+    border: 1px solid rgba(36,18,9,.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .swatch-bar {
+    display: flex;
+    height: 14px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+  }
+  .swatch-bar span { flex: 1; }
+  .swatch-bar span:nth-child(1) { background: var(--scoop-1); }
+  .swatch-bar span:nth-child(2) { background: var(--scoop-2); }
+  .swatch-bar span:nth-child(3) { background: var(--scoop-3); }
+  .swatch-bar span:nth-child(4) { background: var(--scoop-4); }
+  .swatch-bar span:nth-child(5) { background: var(--scoop-5); }
+  .swatch-bar span:nth-child(6) { background: var(--scoop-6); }
+  .fact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+  .fact-list li {
+    display: flex; gap: .8rem; align-items: flex-start;
+    font-weight: 600; font-size: .98rem;
+  }
+  .fact-list .fact-mark {
+    flex: none;
+    width: 1.6rem; height: 1.6rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 800;
+    margin-top: .1rem;
+  }
+  /* ---------------- standort ---------------- */
+  .standort {
+    background: var(--surface);
+  }
+  .standort-grid {
+    display: grid;
+    gap: clamp(1.8rem, 4vw, 2.6rem);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 900px) {
+    .standort-grid { grid-template-columns: .85fr 1.15fr; }
+  }
+  .info-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    display: grid;
+    gap: 1.5rem;
+  }
+  .info-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .info-icon {
+    flex: none;
+    width: 2.5rem; height: 2.5rem;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid rgba(36,18,9,.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem;
+  }
+  .info-row h3 {
+    font-size: 1.02rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    margin-bottom: .25rem;
+  }
+  .info-row a { text-decoration: underline; text-decoration-color: rgba(214,51,108,.4); text-underline-offset: 3px; }
+  .info-row a:hover { text-decoration-color: var(--brand); }
+  .info-row p { margin: 0; color: var(--muted); }
+  .notice-hours {
+    font-size: .9rem;
+    color: var(--muted);
+    background: rgba(214,51,108,.08);
+    border: 1px dashed rgba(214,51,108,.35);
+    border-radius: var(--radius-sm);
+    padding: .85rem 1rem;
+  }
+  .notice-hours strong { color: var(--fg); }
+  .map-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(36,18,9,.1);
+    min-height: 320px;
+    background: var(--bg);
+  }
+  .map-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+    display: block;
+    filter: saturate(1.05);
+  }
+  /* ---------------- contact / kontakt ---------------- */
+  .kontakt {
+    background: var(--fg);
+    color: var(--bg);
+    border-radius: var(--radius-lg);
+    margin-inline: clamp(1.1rem, 4vw, 2.5rem);
+    margin-bottom: clamp(3rem, 8vw, 6rem);
+    padding: clamp(2.2rem, 6vw, 4rem);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    gap: 1.6rem;
+    justify-items: center;
+  }
+  .kontakt::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 20% 15%, rgba(224,80,127,.28), transparent 55%),
+                radial-gradient(circle at 82% 85%, rgba(63,143,99,.24), transparent 55%);
+    pointer-events: none;
+  }
+  .kontakt > * { position: relative; z-index: 1; }
+  .kontakt h2 { color: var(--bg); font-size: clamp(1.9rem, 1.5rem + 2vw, 2.9rem); max-width: 18ch; }
+  .kontakt p { color: rgba(251,243,231,.78); max-width: 46ch; font-size: 1.05rem; }
+  .kontakt-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .kontakt-actions .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 12px 26px -10px rgba(214,51,108,.55); }
+  .kontakt-actions .btn-ghost { border-color: rgba(251,243,231,.3); color: var(--bg); }
+  .kontakt-actions .btn-ghost:hover { border-color: var(--bg); }
+  /* ---------------- footer ---------------- */
+  footer.site {
+    padding-block: 2.5rem clamp(6rem, 10vw, 3rem);
+  }
+  .footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(36,18,9,.1);
+    padding-top: 1.6rem;
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  .footer-grid a { text-decoration: underline; text-underline-offset: 2px; }
+  .footer-note { font-weight: 700; color: var(--fg); }
+  /* ---------------- sticky mobile call bar ---------------- */
+  .mobile-bar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 150;
+    display: none;
+    background: var(--fg);
+    padding: .7rem .9rem;
+    padding-bottom: calc(.7rem + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 24px -12px rgba(0,0,0,.4);
+  }
+  .mobile-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: .85rem;
+    border-radius: 999px;
+  }
+  @media (max-width: 640px) {
+    .mobile-bar { display: block; }
+    body { padding-bottom: 4.4rem; }
+  }
+  /* ---------------- utility ---------------- */
+  .center-copy { text-align: center; margin-inline: auto; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="site">
+  <div class="wrap header-row">
+    <a class="wordmark" href="#main">
+      <span class="dot" aria-hidden="true"></span>
+      Il Gelatino
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <div class="nav-links">
+        <a href="#theke">Die Theke</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#standort">Standort</a>
+      </div>
+      <a class="btn-call" href="tel:+41522433774">
+        <span aria-hidden="true">☎</span> 052 243 37 74
+      </a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-blobs" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <span class="blob blob-c"></span>
+    </div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Gelateria am Bahnhofplatz Winterthur</span>
+      <h1>Gelato, <em>ganz aus Schweizer Milch.</em></h1>
+      <p class="hero-sub">Hausgemachte Gelato-Spezialitäten aus 100&nbsp;% Schweizer Milch — von Hand hergestellt, ohne Palmöl, gleich beim Bahnhof Winterthur.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="tel:+41522433774">Jetzt anrufen</a>
+        <a class="btn-ghost" href="#theke">Was uns wichtig ist ↓</a>
+      </div>
+      <div class="hero-usps" aria-label="Auf einen Blick">
+        <span class="usp-chip">100% Schweizer Milch</span>
+        <span class="usp-chip">Palmölfrei</span>
+        <span class="usp-chip">Hausgemacht</span>
+        <span class="usp-chip">Täglich frischer Kaffee</span>
+      </div>
+    </div>
+  </section>
+  <!-- ============ SIGNATURE MODULE: DIE THEKE ============ -->
+  <section id="theke" class="wrap">
+    <div class="theke reveal">
+      <div class="theke-head">
+        <h2>Die Theke — ohne Foto, nur mit Farbe</h2>
+        <span class="theke-hint">Antippen oder anklicken zum Aufklappen</span>
+      </div>
+      <div class="scoops" id="scoops" role="list">
+        <!-- populated identically in markup + enhanced by JS; content sourced only from usps[] in the data -->
+        <button type="button" class="scoop scoop-1" role="listitem" aria-expanded="false" data-detail="Unser Gelato entsteht ausschliesslich aus Schweizer Milch — keine Kompromisse bei der Basis.">
+          <span class="scoop-num">01</span>
+          <span class="scoop-name">100% Schweizer Milch</span>
+          <span class="scoop-desc">Unser Gelato entsteht ausschliesslich aus Schweizer Milch — keine Kompromisse bei der Basis.</span>
+          <span class="scoop-toggle-icon" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="scoop scoop-2" role="listitem" aria-expanded="false" data-detail="Jede Sorte wird bei uns hausgemacht — hergestellt, nicht einfach angeliefert.">
+          <span class="scoop-num">02</span>
+          <span class="scoop-name">Hausgemachte Spezialitäten</span>
+          <span class="scoop-desc">Jede Sorte wird bei uns hausgemacht — hergestellt, nicht einfach angeliefert.</span>
+          <span class="scoop-toggle-icon" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="scoop scoop-3" role="listitem" aria-expanded="false" data-detail="Unser Gelato ist palmölfrei — bewusst weggelassen, wo andere sparen.">
+          <span class="scoop-num">03</span>
+          <span class="scoop-name">Palmölfrei</span>
+          <span class="scoop-desc">Unser Gelato ist palmölfrei — bewusst weggelassen, wo andere sparen.</span>
+          <span class="scoop-toggle-icon" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="scoop scoop-4" role="listitem" aria-expanded="false" data-detail="Artisanale Gelateria: Herstellung mit Fokus auf Qualität und Handwerk statt Grossproduktion.">
+          <span class="scoop-num">04</span>
+          <span class="scoop-name">Artisanale Produktion</span>
+          <span class="scoop-desc">Artisanale Gelateria: Herstellung mit Fokus auf Qualität und Handwerk statt Grossproduktion.</span>
+          <span class="scoop-toggle-icon" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="scoop scoop-5" role="listitem" aria-expanded="false" data-detail="Neben dem Gelato gibt es täglich frisch zubereiteten Kaffee.">
+          <span class="scoop-num">05</span>
+          <span class="scoop-name">Täglich frischer Kaffee</span>
+          <span class="scoop-desc">Neben dem Gelato gibt es täglich frisch zubereiteten Kaffee.</span>
+          <span class="scoop-toggle-icon" aria-hidden="true">+</span>
+        </button>
+        <button type="button" class="scoop scoop-6" role="listitem" aria-expanded="false" data-detail="Eine einzigartige, kuratierte Speisekarte mit Fokus auf Qualität statt endloser Auswahl.">
+          <span class="scoop-num">06</span>
+          <span class="scoop-name">Kuratierte Geschmacksrichtungen</span>
+          <span class="scoop-desc">Eine einzigartige, kuratierte Speisekarte mit Fokus auf Qualität statt endloser Auswahl.</span>
+          <span class="scoop-toggle-icon" aria-hidden="true">+</span>
+        </button>
+      </div>
+      <div class="theke-foot">
+        <span><strong>Kein Sortenmenü online.</strong> Die Auswahl wechselt saisonal — am besten direkt vor Ort oder telefonisch erfragen.</span>
+      </div>
+    </div>
+  </section>
+  <!-- ============ ABOUT ============ -->
+  <section id="ueber-uns">
+    <div class="wrap about-grid">
+      <div class="about-copy reveal">
+        <span class="section-kicker">Über uns</span>
+        <h2>Handwerk statt Fertigware.</h2>
+        <p>Artisanale Gelateria mit Spezialisierung auf hausgemachte Gelato aus ausschliesslich Schweizer Milch.</p>
+        <p>Palmölfrei, täglich frischer Kaffee, einzigartige Speisekarte mit Fokus auf Qualität und handwerkliche Herstellung.</p>
+      </div>
+      <div class="swatch-card reveal">
+        <div class="swatch-bar" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <ul class="fact-list">
+          <li><span class="fact-mark" aria-hidden="true">✓</span> 100% Schweizer Milch als Basis für jede Sorte</li>
+          <li><span class="fact-mark" aria-hidden="true">✓</span> Palmölfrei produziert</li>
+          <li><span class="fact-mark" aria-hidden="true">✓</span> Täglich frischer Kaffee im Angebot</li>
+          <li><span class="fact-mark" aria-hidden="true">✓</span> Artisanale, hausgemachte Herstellung</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- ============ STANDORT ============ -->
+  <section id="standort" class="standort">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-kicker">Standort</span>
+        <h2>Gleich beim Bahnhof.</h2>
+        <p>Mitten in Winterthur, direkt am Bahnhofplatz.</p>
+      </div>
+      <div class="standort-grid">
+        <div class="info-card reveal">
+          <div class="info-row">
+            <span class="info-icon" aria-hidden="true">📍</span>
+            <div>
+              <h3>Adresse</h3>
+              <p>Bahnhofplatz 9<br>8400 Winterthur</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon" aria-hidden="true">☎</span>
+            <div>
+              <h3>Telefon</h3>
+              <p><a href="tel:+41522433774">052 243 37 74</a></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon" aria-hidden="true">✉</span>
+            <div>
+              <h3>E-Mail</h3>
+              <p><a href="mailto:sinaniamir@gmx.ch">sinaniamir@gmx.ch</a></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon" aria-hidden="true">📷</span>
+            <div>
+              <h3>Instagram</h3>
+              <p><a href="https://www.instagram.com/il_gelatino_/" target="_blank" rel="noopener noreferrer">@il_gelatino_</a></p>
+            </div>
+          </div>
+          <p class="notice-hours"><strong>Öffnungszeiten:</strong> aktuell nicht online hinterlegt — am schnellsten per Telefon erfragen.</p>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Il%20Gelatino%20Winterthur%20Bahnhofplatz&amp;z=16&amp;output=embed"
+            title="Il Gelatino auf Google Maps — Bahnhofplatz 9, Winterthur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ KONTAKT / CTA ============ -->
+  <section aria-labelledby="kontakt-heading">
+    <div class="kontakt reveal">
+      <h2 id="kontakt-heading">Lust auf eine Kugel Handwerk?</h2>
+      <p>Vorbeikommen am Bahnhofplatz 9, anrufen oder auf Instagram vorbeischauen — Il Gelatino freut sich auf Sie.</p>
+      <div class="kontakt-actions">
+        <a class="btn-primary" href="tel:+41522433774">052 243 37 74 anrufen</a>
+        <a class="btn-ghost" href="https://www.instagram.com/il_gelatino_/" target="_blank" rel="noopener noreferrer">Instagram öffnen</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap footer-grid">
+    <span class="footer-note">Design-Vorschlag · unverbindliches Muster</span>
+    <span>Il Gelatino · Bahnhofplatz 9, 8400 Winterthur · <a href="tel:+41522433774">052 243 37 74</a></span>
+  </div>
+</footer>
+<!-- sticky mobile call bar -->
+<div class="mobile-bar">
+  <a href="tel:+41522433774">☎ 052 243 37 74 — jetzt anrufen</a>
+</div>
+<script>
+(function () {
+  "use strict";
+  /* ---------- Die Theke: expand/collapse scoops ---------- */
+  var scoops = document.querySelectorAll('.scoop');
+  scoops.forEach(function (scoop) {
+    scoop.addEventListener('click', function () {
+      var isOpen = scoop.getAttribute('aria-expanded') === 'true';
+      // close any other open scoop for a tidy "one tub open" feel
+      scoops.forEach(function (s) {
+        if (s !== scoop) s.setAttribute('aria-expanded', 'false');
+      });
+      scoop.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+  /* ---------- scroll reveals ---------- */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

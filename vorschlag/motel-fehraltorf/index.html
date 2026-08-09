@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motel Fehraltorf – Studios &amp; Lofts mit Kitchenette für längere Aufenthalte</title>
+<meta name="description" content="Motel Fehraltorf, Luppmenstrasse 13: 36 Studios und Lofts mit Kitchenette, wöchentlicher Reinigung und Wäschewechsel. Frühstück über Partner Bäckerei Steiner.">
+<meta property="og:title" content="Motel Fehraltorf">
+<meta property="og:description" content="Praktisches Motel mit 36 Studios und Lofts, ideale Wahl für längere Aufenthalte mit Kochnische.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/home-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Motel Fehraltorf",
+  "description": "Praktisches Motel mit 36 Studios und Lofts, ideale Wahl für längere Aufenthalte mit Kochnische.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Luppmenstrasse 13",
+    "postalCode": "8320",
+    "addressLocality": "Fehraltorf",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41444977171",
+  "email": "info@motel-fehraltorf.ch",
+  "url": "https://www.motel-fehraltorf.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.9",
+    "reviewCount": "101"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#eef1f0;
+  --surface:#ffffff;
+  --fg:#1c2321;
+  --muted:#535d59;
+  --brand:#2b3d3a;
+  --accent:#1f8a7a;
+  --line:#d7dedb;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'Public Sans',system-ui,sans-serif;
+  font-size:clamp(15px,0.3vw + 14px,17px);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:'Archivo',system-ui,sans-serif;font-weight:800;letter-spacing:-0.005em;
+  line-height:1.05;margin:0;color:var(--fg);text-transform:uppercase;
+}
+h1{font-size:clamp(2.1rem,4.6vw + 1rem,3.6rem);}
+h2{font-size:clamp(1.5rem,2.4vw + 1rem,2.1rem);}
+h3{font-size:clamp(1rem,0.9vw + 0.9rem,1.15rem);text-transform:none;font-weight:700;}
+p{margin:0 0 1em;}
+a{color:var(--accent);}
+img{max-width:100%;display:block;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+.skip-link:focus{left:1rem;top:1rem;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.8rem clamp(1.2rem,4vw,3rem);
+  background:rgba(238,241,240,0.95);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.brand-mark{display:flex;align-items:center;gap:0.6rem;}
+.brand-mark img{height:30px;width:auto;}
+.brand-mark span{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1rem;letter-spacing:0.01em;}
+nav ul{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0;}
+nav a{color:var(--fg);text-decoration:none;font-size:0.85rem;font-weight:600;}
+nav a:hover{color:var(--accent);}
+.call-pill{background:var(--brand);color:#fff;padding:0.55rem 1.1rem;border-radius:4px;text-decoration:none;font-size:0.82rem;font-weight:700;}
+@media (max-width:860px){ nav{display:none;} }
+
+main{padding-top:60px;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+[data-reveal].is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+/* HERO */
+.hero{background:var(--brand);color:#fff;padding:clamp(6rem,13vw,9rem) 0 clamp(3rem,6vw,4rem);}
+.hero h1{color:#fff;max-width:18ch;}
+.hero .sub{color:#cbd8d4;max-width:52ch;font-size:clamp(1rem,0.5vw + 0.9rem,1.15rem);margin:1rem 0 1.6rem;}
+.hero-cta{display:flex;gap:0.9rem;flex-wrap:wrap;align-items:center;}
+.btn{display:inline-block;text-align:center;padding:0.8rem 1.4rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.92rem;border:2px solid transparent;}
+.btn-accent{background:var(--accent);color:#08201b;}
+.btn-line{border-color:#fff;color:#fff;}
+.rating-line{color:#a9beb8;font-size:0.85rem;}
+
+/* WEEK RULER */
+.week-ruler{display:grid;grid-template-columns:repeat(7,1fr);border-top:2px solid var(--line);border-left:2px solid var(--line);margin-top:2.4rem;}
+.week-tick{border-right:2px solid var(--line);border-bottom:2px solid var(--line);padding:1rem 0.6rem;text-align:center;background:var(--surface);}
+.week-tick .d{font-family:'Archivo',sans-serif;font-weight:800;color:var(--accent);font-size:1.1rem;}
+.week-tick .l{display:block;font-size:0.72rem;color:var(--muted);margin-top:0.2rem;}
+@media (max-width:700px){ .week-ruler{grid-template-columns:repeat(4,1fr);} }
+
+/* SECTIONS */
+section.block{padding:clamp(2.6rem,6vw,4.4rem) 0;border-bottom:1px solid var(--line);}
+.block-head{max-width:62ch;margin-bottom:2rem;}
+.block-head .eyebrow{color:var(--accent);font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;}
+.block-head p{color:var(--muted);}
+
+/* WEEKLY CADENCE LIST */
+.cadence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.cadence-card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);padding:1.2rem 1.3rem;}
+.cadence-card h3{margin-bottom:0.4rem;}
+.cadence-card p{color:var(--muted);font-size:0.9rem;margin:0;}
+@media (max-width:800px){ .cadence-grid{grid-template-columns:1fr;} }
+
+/* ROOMS */
+.room-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;border-top:2px solid var(--line);border-left:2px solid var(--line);}
+.room-card{border-right:2px solid var(--line);border-bottom:2px solid var(--line);background:var(--surface);padding:1.4rem 1.3rem;}
+.room-card .cap{font-family:'Archivo',sans-serif;font-weight:800;color:var(--accent);font-size:0.8rem;text-transform:uppercase;}
+.room-card h3{margin:0.5rem 0 0.5rem;}
+.room-card p{color:var(--muted);font-size:0.9rem;margin:0;}
+@media (max-width:900px){ .room-grid{grid-template-columns:1fr;} }
+
+/* CALCULATOR MODULE */
+.calc{background:var(--surface);border:1px solid var(--line);padding:clamp(1.4rem,3vw,2.2rem);}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.calc-form label{display:block;font-size:0.8rem;font-weight:700;color:var(--muted);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.03em;}
+.calc-form select{width:100%;padding:0.6rem;border:1px solid var(--line);border-radius:4px;font:inherit;background:#fff;margin-bottom:1rem;}
+.calc-result{background:var(--bg);border:1px solid var(--line);padding:1.2rem;}
+.calc-result .big{font-family:'Archivo',sans-serif;font-weight:800;font-size:2.4rem;color:var(--accent);line-height:1;}
+.calc-result p{color:var(--muted);font-size:0.88rem;margin:0.6rem 0 0;}
+.calc-out{margin-top:1rem;background:#fff;border:1px solid var(--line);padding:0.9rem;font-size:0.85rem;white-space:pre-wrap;}
+.calc-actions{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem;}
+@media (max-width:760px){ .calc-grid{grid-template-columns:1fr;} }
+
+/* AMENITIES */
+.amenity-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--line);border-left:2px solid var(--line);}
+.amenity-cell{border-right:2px solid var(--line);border-bottom:2px solid var(--line);padding:1.1rem 1.2rem;background:var(--surface);}
+.amenity-cell strong{display:block;font-family:'Archivo',sans-serif;font-size:0.92rem;margin-bottom:0.2rem;}
+.amenity-cell span{color:var(--muted);font-size:0.85rem;}
+@media (max-width:800px){ .amenity-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:480px){ .amenity-grid{grid-template-columns:1fr;} }
+
+/* GALLERY */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;}
+.photo-grid figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--line);}
+.photo-grid img{width:100%;height:100%;object-fit:cover;}
+@media (max-width:760px){ .photo-grid{grid-template-columns:repeat(2,1fr);} }
+
+/* LOCATION */
+.loc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.loc-facts{border:1px solid var(--line);padding:1.4rem;background:var(--surface);}
+.loc-facts dt{font-weight:700;color:var(--accent);margin-top:1rem;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em;}
+.loc-facts dt:first-child{margin-top:0;}
+.loc-facts dd{margin:0.2rem 0 0;}
+.map-box{border:1px solid var(--line);overflow:hidden;}
+.map-box iframe{width:100%;height:320px;border:0;display:block;}
+@media (max-width:800px){ .loc-wrap{grid-template-columns:1fr;} }
+
+footer{padding:2.4rem clamp(1.2rem,4vw,3rem) 6rem;background:var(--brand);color:#cbd8d4;}
+footer a{color:#fff;}
+.foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1180px;margin:0 auto 1.4rem;font-size:0.88rem;}
+footer p.legal{max-width:1180px;margin:0 auto;font-size:0.78rem;color:#8ea39c;}
+@media (max-width:700px){ .foot-grid{grid-template-columns:1fr;} }
+
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;display:flex;}
+.mobile-bar a{flex:1;text-align:center;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.9rem;}
+.mobile-bar a:first-child{background:var(--accent);color:#08201b;}
+.mobile-bar a:last-child{background:var(--brand);color:#fff;}
+@media (min-width:761px){ .mobile-bar{display:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <div class="brand-mark">
+    <img src="https://www.motel-fehraltorf.ch/cm/wp-content/themes/motel-fehraltorf/img/site/logo.png" alt="Motel Fehraltorf Logo" onerror="this.style.display='none'">
+    <span>Motel Fehraltorf</span>
+  </div>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#woche">Die Woche</a></li>
+      <li><a href="#zimmer">Zimmer</a></li>
+      <li><a href="#rechner">Rechner</a></li>
+      <li><a href="#bilder">Bilder</a></li>
+      <li><a href="#lage">Lage</a></li>
+    </ul>
+  </nav>
+  <a class="call-pill" href="tel:+41444977171">Anrufen</a>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Wohnen für eine Weile, nicht nur übernachten.</h1>
+      <p class="sub">Praktisches Motel mit 36 Studios und Lofts, ideale Wahl für längere Aufenthalte mit Kochnische.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="tel:+41444977171">+41 44 497 71 71</a>
+        <a class="btn btn-line" href="#rechner">Aufenthalt berechnen</a>
+        <span class="rating-line">3.9 · 101 Google-Bewertungen</span>
+      </div>
+      <div class="cadence-grid" style="margin-top:2rem;">
+        <div class="cadence-card" style="border-left-color:#fff;background:rgba(255,255,255,0.06);">
+          <h3 style="color:#fff;">36 Einheiten</h3>
+          <p style="color:#cbd8d4;">32 Studio-Zimmer, 4 Loft-Zimmer</p>
+        </div>
+        <div class="cadence-card" style="border-left-color:#fff;background:rgba(255,255,255,0.06);">
+          <h3 style="color:#fff;">1× pro Woche</h3>
+          <p style="color:#cbd8d4;">Wäsche &amp; Badezimmerreinigung</p>
+        </div>
+        <div class="cadence-card" style="border-left-color:#fff;background:rgba(255,255,255,0.06);">
+          <h3 style="color:#fff;">3.9 · 101</h3>
+          <p style="color:#cbd8d4;">Google-Bewertung &amp; Anzahl Bewertungen</p>
+        </div>
+      </div>
+      <div class="week-ruler" aria-hidden="true">
+        <div class="week-tick"><span class="d">1</span><span class="l">Tag</span></div>
+        <div class="week-tick"><span class="d">2</span><span class="l">Tag</span></div>
+        <div class="week-tick"><span class="d">3</span><span class="l">Tag</span></div>
+        <div class="week-tick"><span class="d">4</span><span class="l">Tag</span></div>
+        <div class="week-tick"><span class="d">5</span><span class="l">Tag</span></div>
+        <div class="week-tick"><span class="d">6</span><span class="l">Tag</span></div>
+        <div class="week-tick"><span class="d">7</span><span class="l">Tag</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Über uns</span>
+        <h2>Gebaut für den längeren Aufenthalt</h2>
+        <p>Das Motel Fehraltorf ist kein Ort für eine einzelne Nacht — jedes der 36 Studios und Lofts hat eine eigene Kitchenette, damit Kochen zum Alltag gehört statt zur Ausnahme. Wöchentliche Reinigung und Wäschewechsel sorgen dafür, dass sich auch nach mehreren Wochen nichts anhäuft.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="woche" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Der Rhythmus</span>
+        <h2>Was sich jede Woche wiederholt</h2>
+        <p>Kein Hotel-Glamour, dafür eine feste Kadenz: einmal pro Woche Wäsche und Badezimmerreinigung, jeden Tag eine eigene Kitchenette.</p>
+        <p>Sieben Tage, ein wiederkehrender Service-Tag — das ist der ganze Trick eines Aufenthalts, der länger dauert als ein Wochenende.</p>
+      </div>
+      <div class="cadence-grid">
+        <div class="cadence-card">
+          <h3>Wöchentliche Reinigung</h3>
+          <p>Wöchentliche Wäsche und Badezimmerreinigung, einmal pro Woche.</p>
+        </div>
+        <div class="cadence-card">
+          <h3>Kitchenette, täglich</h3>
+          <p>Kitchenette in allen Zimmern — jeden Tag selbst kochen statt auswärts essen.</p>
+        </div>
+        <div class="cadence-card">
+          <h3>Waschanlage</h3>
+          <p>Separate Waschanlage im Haus, für die eigene Wäsche zwischendurch.</p>
+        </div>
+      </div>
+      <div class="week-ruler" style="margin-top:1.6rem;" aria-hidden="true">
+        <div class="week-tick"><span class="d">1</span><span class="l">Kitchenette</span></div>
+        <div class="week-tick"><span class="d">2</span><span class="l">Kitchenette</span></div>
+        <div class="week-tick"><span class="d">3</span><span class="l">Kitchenette</span></div>
+        <div class="week-tick"><span class="d">4</span><span class="l">Kitchenette</span></div>
+        <div class="week-tick"><span class="d">5</span><span class="l">Kitchenette</span></div>
+        <div class="week-tick"><span class="d">6</span><span class="l">Kitchenette</span></div>
+        <div class="week-tick" style="background:var(--accent);"><span class="d" style="color:#fff;">7</span><span class="l" style="color:#e5f5f1;">+ Reinigung</span></div>
+      </div>
+      <p style="color:var(--muted);font-size:0.82rem;margin-top:0.8rem;">Kitchenette steht an jedem Tag zur Verfügung, die Reinigung findet einmal pro Woche statt (Wochentag variiert).</p>
+    </div>
+  </section>
+
+  <section class="block" id="zimmer" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">36 Einheiten</span>
+        <h2>Studios &amp; Lofts</h2>
+        <p>32 Studio-Zimmer, 4 Loft-Zimmer — eine praktische Wahl für längere Aufenthalte mit Kochnische.</p>
+        <p>Preise sind auf der Website nicht angegeben — daher hier bewusst ausgelassen.</p>
+      </div>
+      <div class="room-grid">
+        <article class="room-card">
+          <span class="cap">2 Personen</span>
+          <h3>Studio-Zimmer 22 m² (Einzel/Doppel)</h3>
+          <p>Kingsize-Bett (180 cm) oder Einzelbetten (je 90 cm), Kitchenette, WLAN, Flachbildschirm-TV, Parkplatz, Wäscheservice.</p>
+        </article>
+        <article class="room-card">
+          <span class="cap">2 Personen</span>
+          <h3>Studio-Zimmer 28 m² (Doppel)</h3>
+          <p>Zweibett-Konfiguration (2×90 cm), Kitchenette, WLAN, Flachbildschirm-TV, Parkplatz, Wäscheservice.</p>
+        </article>
+        <article class="room-card">
+          <span class="cap">2 Personen</span>
+          <h3>Loft-Zimmer ca. 35 m²</h3>
+          <p>Kingsize-Bett, Balkon, Kitchenette, WLAN, Flachbildschirm-TV, Parkplatz, Wäscheservice.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="rechner" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Modul</span>
+        <h2>Aufenthalt in Wochen berechnen</h2>
+        <p>Zimmer, Aufenthaltsdauer und Personenzahl wählen — der Rechner zeigt, wie oft die wöchentliche Reinigung während des Aufenthalts stattfindet, und stellt die Anfrage zusammen.</p>
+      </div>
+      <div class="cadence-grid" style="margin-bottom:1.6rem;">
+        <div class="cadence-card">
+          <h3>1. Zimmer wählen</h3>
+          <p>Studio 22 m², Studio 28 m² oder Loft ca. 35 m².</p>
+        </div>
+        <div class="cadence-card">
+          <h3>2. Wochen &amp; Personen angeben</h3>
+          <p>Von 1 bis 12 Wochen, 1 oder 2 Personen.</p>
+        </div>
+        <div class="cadence-card">
+          <h3>3. Absenden</h3>
+          <p>Per Telefon +41 44 497 71 71 oder E-Mail info@motel-fehraltorf.ch.</p>
+        </div>
+      </div>
+      <div class="calc">
+        <div class="calc-grid">
+          <div class="calc-form">
+            <label for="room-select">Zimmertyp</label>
+            <select id="room-select">
+              <option>Studio-Zimmer 22 m² (Einzel/Doppel)</option>
+              <option>Studio-Zimmer 28 m² (Doppel)</option>
+              <option>Loft-Zimmer ca. 35 m²</option>
+            </select>
+            <label for="weeks-select">Aufenthaltsdauer</label>
+            <select id="weeks-select">
+              <option value="1">1 Woche</option>
+              <option value="2">2 Wochen</option>
+              <option value="3">3 Wochen</option>
+              <option value="4">4 Wochen</option>
+              <option value="8">8 Wochen</option>
+              <option value="12">12 Wochen</option>
+            </select>
+            <label for="guest-count">Anzahl Personen</label>
+            <select id="guest-count">
+              <option>1</option><option>2</option>
+            </select>
+          </div>
+          <div class="calc-result">
+            <span class="big" id="calc-big">1</span>
+            <p id="calc-label">wöchentliche Reinigung &amp; Wäschewechsel inbegriffen</p>
+          </div>
+        </div>
+        <div class="calc-out" id="calc-out"></div>
+        <div class="calc-actions">
+          <a class="btn btn-accent" style="color:#fff;background:var(--brand);" id="mail-link" href="mailto:info@motel-fehraltorf.ch">Per E-Mail anfragen</a>
+          <a class="btn btn-line" style="border-color:var(--brand);color:var(--brand);" href="tel:+41444977171">Per Telefon anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Ausstattung</span>
+        <h2>In jedem Zimmer, im ganzen Haus</h2>
+        <p>Sieben Punkte, die für einen mehrwöchigen Aufenthalt zählen — nicht für eine einzelne Nacht.</p>
+      </div>
+      <div class="amenity-grid">
+        <div class="amenity-cell">
+          <strong>Kitchenette</strong>
+          <span>In allen Zimmern</span>
+        </div>
+        <div class="amenity-cell">
+          <strong>WLAN</strong>
+          <span>Kostenlos</span>
+        </div>
+        <div class="amenity-cell">
+          <strong>Flachbildschirm-TV</strong>
+          <span>In allen Zimmern</span>
+        </div>
+        <div class="amenity-cell">
+          <strong>Parkplatz</strong>
+          <span>Vorhanden</span>
+        </div>
+        <div class="amenity-cell">
+          <strong>Wäsche &amp; Reinigung</strong>
+          <span>Wöchentlich, Bad und Wäsche</span>
+        </div>
+        <div class="amenity-cell">
+          <strong>Waschanlage</strong>
+          <span>Separat im Haus</span>
+        </div>
+        <div class="amenity-cell">
+          <strong>Frühstück</strong>
+          <span>Partner: Bäckerei Steiner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="bilder" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Bilder</span>
+        <h2>Haus, Apartments &amp; Frühstückspartner</h2>
+      </div>
+      <div class="photo-grid">
+        <figure>
+          <img src="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/home-1.jpg" alt="Motel Fehraltorf, Aussenansicht" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Aussenansicht</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/home2-1.jpg" alt="Motel Fehraltorf, Ansicht" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Ansicht</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/lage-2-1.jpg" alt="Lage des Motel Fehraltorf" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Lage</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/Appartment2-1-440x270.jpg" alt="Apartment im Motel Fehraltorf" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Apartment</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/social-440x270.jpg" alt="Impression Motel Fehraltorf" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Impression</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.motel-fehraltorf.ch/cm/wp-content/uploads/Bild-Brunch-für-Web-2-800x533.jpg" alt="Frühstück, Partner Bäckerei Steiner" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <figcaption class="visually-hidden">Frühstück, Partner Bäckerei Steiner</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Fragen</span>
+        <h2>Vor der Anfrage</h2>
+      </div>
+      <div class="room-grid">
+        <article class="room-card">
+          <span class="cap">Frage 1</span>
+          <h3>Sind Zimmerpreise online sichtbar?</h3>
+          <p>Nein, Preise sind auf der Website nicht angegeben.</p>
+        </article>
+        <article class="room-card">
+          <span class="cap">Frage 2</span>
+          <h3>Wie oft wird gereinigt?</h3>
+          <p>Wäsche und Badezimmerreinigung finden wöchentlich statt.</p>
+        </article>
+        <article class="room-card">
+          <span class="cap">Frage 3</span>
+          <h3>Gibt es Frühstück?</h3>
+          <p>Ja, über den Partner Bäckerei Steiner.</p>
+        </article>
+        <article class="room-card">
+          <span class="cap">Frage 4</span>
+          <h3>Ist Wäsche waschen selbst möglich?</h3>
+          <p>Ja, im Haus steht eine separate Waschanlage zur Verfügung.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="lage" data-reveal>
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow">Lage</span>
+        <h2>Luppmenstrasse 13, Fehraltorf</h2>
+        <p>Direkter Kontakt für Fragen zu Verfügbarkeit und Aufenthaltsdauer: telefonisch oder per E-Mail.</p>
+      </div>
+      <div class="loc-wrap">
+        <dl class="loc-facts">
+          <dt>Name</dt>
+          <dd>Motel Fehraltorf</dd>
+          <dt>Adresse</dt>
+          <dd>Luppmenstrasse 13, Fehraltorf</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41444977171">+41 44 497 71 71</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@motel-fehraltorf.ch">info@motel-fehraltorf.ch</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.motel-fehraltorf.ch/" target="_blank" rel="noopener">motel-fehraltorf.ch</a></dd>
+          <dt>Kategorie</dt>
+          <dd>Motel</dd>
+          <dt>Google-Bewertung</dt>
+          <dd>3.9 von 5 · 101 Bewertungen</dd>
+        </dl>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Luppmenstrasse%2013%2C%20CH-8320%20Fehraltorf&amp;z=16&amp;output=embed" loading="lazy" title="Karte Motel Fehraltorf"></iframe>
+        </div>
+      </div>
+      <div class="cadence-grid" style="margin-top:1.6rem;">
+        <div class="cadence-card">
+          <h3>Telefon</h3>
+          <p><a href="tel:+41444977171">+41 44 497 71 71</a></p>
+        </div>
+        <div class="cadence-card">
+          <h3>E-Mail</h3>
+          <p><a href="mailto:info@motel-fehraltorf.ch">info@motel-fehraltorf.ch</a></p>
+        </div>
+        <div class="cadence-card">
+          <h3>Website</h3>
+          <p><a href="https://www.motel-fehraltorf.ch/" target="_blank" rel="noopener">motel-fehraltorf.ch</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Motel Fehraltorf</strong><br>
+      Luppmenstrasse 13, Fehraltorf<br>
+      <a href="tel:+41444977171">+41 44 497 71 71</a><br>
+      <a href="mailto:info@motel-fehraltorf.ch">info@motel-fehraltorf.ch</a>
+    </div>
+    <div>
+      <strong>Einheiten</strong><br>
+      32 Studio-Zimmer, 4 Loft-Zimmer
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.motel-fehraltorf.ch/" target="_blank" rel="noopener">motel-fehraltorf.ch</a>
+    </div>
+  </div>
+  <p class="legal">Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41444977171">Anrufen</a>
+  <a href="mailto:info@motel-fehraltorf.ch">E-Mail</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var roomSelect = document.getElementById('room-select');
+  var weeksSelect = document.getElementById('weeks-select');
+  var guestSelect = document.getElementById('guest-count');
+  var big = document.getElementById('calc-big');
+  var label = document.getElementById('calc-label');
+  var out = document.getElementById('calc-out');
+  var mailLink = document.getElementById('mail-link');
+
+  function renderCalc(){
+    var weeks = parseInt(weeksSelect.value, 10);
+    big.textContent = String(weeks);
+    label.textContent = (weeks === 1 ? 'wöchentliche Reinigung & Wäschewechsel inbegriffen' : 'wöchentliche Reinigungen & Wäschewechsel inbegriffen (1× pro Woche)');
+    var text = 'Anfrage Motel Fehraltorf\n' +
+      'Zimmer: ' + roomSelect.value + '\n' +
+      'Aufenthaltsdauer: ' + weeks + ' Woche(n)\n' +
+      'Personen: ' + guestSelect.value + '\n' +
+      'Hinweis: Reinigung & Wäschewechsel finden 1× pro Woche statt.';
+    out.textContent = text;
+    var subject = encodeURIComponent('Anfrage Motel Fehraltorf');
+    var mbody = encodeURIComponent(text);
+    mailLink.setAttribute('href', 'mailto:info@motel-fehraltorf.ch?subject=' + subject + '&body=' + mbody);
+  }
+
+  roomSelect.addEventListener('change', renderCalc);
+  weeksSelect.addEventListener('change', renderCalc);
+  guestSelect.addEventListener('change', renderCalc);
+  renderCalc();
+})();
+</script>
+
+</body>
+</html>

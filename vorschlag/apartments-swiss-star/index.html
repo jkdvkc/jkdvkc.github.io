@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apartments Swiss Star AG – Zürich</title>
+<meta name="description" content="Apartments Swiss Star AG, Zürich. 3.2 Sterne aus 1194 Google-Bewertungen — die Zahl, um die es hier ehrlich geht.">
+<meta property="og:title" content="Apartments Swiss Star AG – Zürich">
+<meta property="og:description" content="3.2 aus 1194 Bewertungen. Eine grosse Stichprobe, ein durchschnittliches Ergebnis — offen gezeigt.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Apartments Swiss Star AG",
+  "address": { "@type": "PostalAddress", "addressLocality": "Zürich", "addressCountry": "CH" },
+  "telephone": "+41432555757",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.2", "reviewCount": "1194" }
+}
+</script>
+<style>
+  :root{
+    --bg:#f4f3ef; --surface:#ffffff; --fg:#161513; --muted:#5a564e;
+    --brand:#201f1c; --accent:#d1451f; --line:#ddd9d0;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;
+    font-size:clamp(15px,0.35vw + 13.6px,17px);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Unbounded',system-ui,sans-serif;font-weight:600;letter-spacing:-0.01em;line-height:1.1;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2rem,4.4vw + 1rem,3.6rem);font-weight:700;}
+  h2{font-size:clamp(1.4rem,2.2vw + 1rem,2.1rem);}
+  h3{font-size:clamp(1rem,1vw + 1rem,1.15rem);}
+  p{margin:0 0 1em;}
+  a{color:var(--brand);}
+  ul{margin:0;padding:0;list-style:none;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1.2rem,4vw,3rem);background:rgba(244,243,239,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .brand-mark{font-family:'Unbounded',sans-serif;font-weight:700;font-size:0.98rem;}
+  nav{display:flex;align-items:center;gap:1.4rem;}
+  nav a{color:var(--fg);text-decoration:none;font-size:0.9rem;font-weight:500;}
+  nav a:hover{color:var(--accent);}
+  .nav-cta{background:var(--brand);color:#fff !important;padding:0.5em 1.1em;border-radius:4px;}
+  @media (max-width:560px){ nav a:not(.nav-cta){display:none;} }
+
+  main{padding-top:62px;}
+  section{padding:clamp(2.6rem,5.5vw,5.5rem) 0;}
+  section.dark{background:var(--brand);color:#f4f3ef;}
+  section.dark h2{color:#fff;}
+  section.dark .muted-l{color:#c6c2b8;}
+
+  [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+
+  .hero{padding-top:calc(62px + clamp(2.2rem,5vw,4rem));}
+  .hero-tag{display:inline-block;font-size:0.76rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:1rem;}
+  .hero .lead{font-size:clamp(1.02rem,0.5vw + 1rem,1.2rem);color:var(--muted);max-width:52ch;margin-top:1rem;}
+  .cta-row{display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.6rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.5em;padding:0.8em 1.4em;border-radius:5px;font-weight:600;
+    text-decoration:none;font-size:0.95rem;border:1px solid transparent;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{background:#a8341a;}
+  .btn-ghost{background:transparent;color:var(--fg);border-color:var(--line);}
+
+  /* weight module */
+  .weight-head{max-width:60ch;margin-bottom:1.6rem;}
+  .weight-stats{display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center;margin-bottom:1.8rem;}
+  .weight-stats .num{display:inline-flex;align-items:baseline;font-family:'Unbounded',sans-serif;font-weight:800;
+    font-size:clamp(1.15rem,0.6vw + 1rem,1.5rem);line-height:1;color:#fff;
+    background:rgba(255,255,255,0.1);border-radius:8px;padding:0.4em 0.85em;}
+  .weight-stats .num.small{color:var(--accent);}
+  .weight-stats .cap{font-size:0.85rem;color:#c6c2b8;max-width:22ch;}
+  .dotfield{display:grid;grid-template-columns:repeat(auto-fill,minmax(6px,1fr));gap:3px;max-height:220px;overflow:hidden;
+    padding:1rem;background:rgba(255,255,255,0.04);border-radius:8px;border:1px solid rgba(255,255,255,0.1);}
+  .dotfield span{width:6px;height:6px;border-radius:50%;background:#4a473f;display:block;}
+  .dotfield span.lit{background:var(--accent);}
+  .dotfield-cap{font-size:0.82rem;color:#9b968a;margin-top:0.8rem;}
+
+  /* context */
+  .context-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:clamp(1.6rem,4vw,3rem);align-items:start;}
+  @media (max-width:840px){ .context-grid{grid-template-columns:1fr;} }
+  .context-quote{border-left:4px solid var(--accent);padding-left:1.2rem;font-size:1.1rem;color:var(--fg);font-weight:500;}
+  .fact-list{display:grid;gap:0.8rem;}
+  .fact-item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:0.9rem 1.1rem;font-size:0.92rem;
+    display:flex;justify-content:space-between;gap:1rem;}
+  .fact-item span:first-child{color:var(--muted);}
+  .fact-item span:last-child{font-weight:600;}
+
+  /* location */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,3rem);align-items:start;}
+  @media (max-width:840px){ .loc-grid{grid-template-columns:1fr;} }
+  .map-frame{border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .map-frame iframe{width:100%;height:300px;border:0;display:block;}
+
+  /* research audit */
+  .audit-panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:clamp(1.6rem,3.4vw,2.4rem);}
+  .audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,2rem);margin-top:1.4rem;}
+  @media (max-width:600px){ .audit-grid{grid-template-columns:1fr;} }
+  .audit-col h3{font-size:0.98rem;margin-bottom:0.7rem;}
+  .audit-col ul{display:flex;flex-direction:column;gap:0.5rem;}
+  .audit-col li{font-size:0.9rem;padding:0.6em 0.2em;border-top:1px solid var(--line);}
+  .audit-col.audit-known li{color:var(--fg);}
+  .audit-col.audit-known li::before{content:"✓ ";color:var(--accent);font-weight:700;}
+  .audit-col.audit-unknown li{color:var(--muted);}
+  .audit-col.audit-unknown li::before{content:"✕ ";color:var(--muted);}
+  .audit-line{margin-top:1.5rem;font-family:'Unbounded',sans-serif;font-size:1.02rem;}
+  .audit-line a{color:var(--accent);}
+
+  footer{background:var(--brand);color:#e6e3db;padding:clamp(2.2rem,5vw,3.2rem) 0 6rem;}
+  .foot-wrap{max-width:1100px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+  footer a{color:#fff;}
+  .foot-note{margin-top:1.6rem;font-size:0.78rem;color:#9b968a;}
+
+  .way-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
+  @media (max-width:640px){ .way-grid{grid-template-columns:1fr;} }
+  .way-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.5rem;}
+  .way-card .icon{font-family:'Unbounded',sans-serif;font-size:1.3rem;color:var(--accent);display:block;margin-bottom:0.5rem;}
+  .way-card a{font-weight:600;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--accent);display:none;}
+  .mobile-bar a{display:block;text-align:center;color:#fff;font-weight:700;padding:0.9rem;text-decoration:none;}
+  @media (max-width:720px){ .mobile-bar{display:block;} main{padding-bottom:0;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Apartments Swiss Star AG</div>
+  <nav>
+    <a href="#gewicht">Die Zahl</a>
+    <a href="#lage">Lage</a>
+    <a class="nav-cta" href="tel:+41432555757">+41 43 255 57 57</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" data-reveal>
+    <span class="hero-tag">Serviced Apartments · Zürich</span>
+    <h1>Apartments Swiss Star AG</h1>
+    <p class="lead">Ein grosser Apartment-Anbieter in Zürich, Teil der Kette Swiss Star. Über die Ausstattung ist öffentlich fast nichts bekannt — die Bewertung dagegen schon, und mit sehr grosser Stichprobe.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+41432555757">Anrufen: +41 43 255 57 57</a>
+    </div>
+  </section>
+
+  <section id="gewicht" class="dark" data-reveal>
+    <div class="wrap">
+      <div class="weight-head">
+        <h2>Das Gewicht vieler Stimmen</h2>
+        <p class="muted-l">1194 Google-Bewertungen sind kein Zufallsmuster. Bei dieser Grösse verschwindet Einzelmeinung — übrig bleibt ein stabiler Schnitt: 3.2. Diese Seite zeigt die Zahl, statt sie zu verstecken.</p>
+      </div>
+      <div class="weight-stats">
+        <div><span class="num" id="reviewCount">0</span><div class="cap">Google-Bewertungen</div></div>
+        <div><span class="num small" id="ratingNum">0.0</span><div class="cap">Ø Bewertung von 5</div></div>
+      </div>
+      <div class="dotfield" id="dotfield" aria-hidden="true"></div>
+      <p class="dotfield-cap">Jeder Punkt steht für rund 10 der 1194 Bewertungen — eine massstäbliche Annäherung, keine Einzelbewertung.</p>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap context-grid">
+      <div>
+        <h2 style="margin-bottom:1rem;">Was die Zahl bedeutet</h2>
+        <p class="context-quote">3.2 aus 1194 Bewertungen ist für die Grösse dieses Anbieters auffällig schwach — und genau deshalb das ehrlichste, was wir über dieses Haus sagen können.</p>
+        <p style="color:var(--muted);margin-top:1.1rem;">Wir schönen das nicht: Eine grosse Zahl an Stimmen bei mittlerem Schnitt ist ein eigenes Signal, kein Ausreisser. Wer bucht, sollte diese Zahl kennen — nicht erst nach der Ankunft.</p>
+      </div>
+      <div class="fact-list">
+        <div class="fact-item"><span>Anbieter</span><span>Apartments Swiss Star AG</span></div>
+        <div class="fact-item"><span>Kette</span><span>Swiss Star</span></div>
+        <div class="fact-item"><span>Kategorie</span><span>Serviced Apartments</span></div>
+        <div class="fact-item"><span>Ort</span><span>Zürich</span></div>
+        <div class="fact-item"><span>Bewertung</span><span>3.2 · 1194</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" class="dark" data-reveal>
+    <div class="wrap loc-grid">
+      <div>
+        <h2>Lage</h2>
+        <p class="muted-l">Zürich. Eine genaue Adresse ist öffentlich nicht bekannt — die Karte zeigt die Standortsuche nach Name und Ort.</p>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Apartments%20Swiss%20Star%20AG%20Z%C3%BCrich&amp;z=16&amp;output=embed" title="Karte: Apartments Swiss Star AG Zürich" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.2rem;">Recherche-Stand</h2>
+      <p style="color:var(--muted);max-width:62ch;margin-bottom:1.4rem;">Bevor eine Zahl auf diese Seite kommt, wird sie geprüft. So sieht der Stand für „Apartments Swiss Star AG“ aus:</p>
+      <div class="fact-list">
+        <div class="fact-item"><span>Eigene Website</span><span>nicht gefunden</span></div>
+        <div class="fact-item"><span>Suchergebnisse</span><span>nur OTA-Portale</span></div>
+        <div class="fact-item"><span>Zugehörigkeit</span><span>Kette Swiss Star</span></div>
+        <div class="fact-item"><span>Bewertungsschnitt</span><span>3.2 — schwach für die Grösse</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <h2 style="margin-bottom:1.4rem;">Kontaktwege</h2>
+      <div class="way-grid">
+        <div class="way-card">
+          <span class="icon" aria-hidden="true">☎</span>
+          <h3>Telefon</h3>
+          <p style="color:var(--muted);">Der einzige direkt gesicherte Kontaktweg zu diesem Standort.</p>
+          <a href="tel:+41432555757">+41 43 255 57 57</a>
+        </div>
+        <div class="way-card">
+          <span class="icon" aria-hidden="true">⌂</span>
+          <h3>Online-Buchung</h3>
+          <p style="color:var(--muted);">Kein eigener Buchungslink bekannt — Anfragen laufen telefonisch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="audit-panel">
+        <h2>Kurzbilanz der Recherche</h2>
+        <p style="color:var(--muted);max-width:60ch;">Keine eigene, standortgenaue Website konnte gefunden werden — nur Einträge auf Buchungsportalen. Diese Bilanz trennt bestätigt von unbestätigt, ohne Lücken zu füllen.</p>
+        <div class="audit-grid">
+          <div class="audit-col audit-known">
+            <h3>Bestätigt</h3>
+            <ul>
+              <li>Anbieter: Apartments Swiss Star AG</li>
+              <li>Kette: Swiss Star</li>
+              <li>Ort: Zürich</li>
+              <li>Bewertung: 3.2 aus 1194</li>
+            </ul>
+          </div>
+          <div class="audit-col audit-unknown">
+            <h3>Unbestätigt</h3>
+            <ul>
+              <li>Adresse</li>
+              <li>Zimmerliste</li>
+              <li>Preise</li>
+              <li>Ausstattungsliste</li>
+            </ul>
+          </div>
+        </div>
+        <p class="audit-line">Was fehlt, klärt sich am schnellsten am Telefon: <a href="tel:+41432555757">+41 43 255 57 57</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-wrap">
+    <strong>Apartments Swiss Star AG</strong><br>
+    Zürich · Kette Swiss Star<br>
+    <a href="tel:+41432555757">+41 43 255 57 57</a>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar"><a href="tel:+41432555757">Anrufen · +41 43 255 57 57</a></div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* dot field: one dot per ~10 reviews of the real total 1194 */
+  var TOTAL_REVIEWS = 1194;
+  var RATING = 3.2;
+  var dotfield = document.getElementById('dotfield');
+  var dotCount = Math.round(TOTAL_REVIEWS / 10);
+  var litCount = Math.round(dotCount * (RATING / 5));
+  var frag = document.createDocumentFragment();
+  for(var i=0;i<dotCount;i++){
+    var s = document.createElement('span');
+    if(i < litCount){ s.className = 'lit'; }
+    frag.appendChild(s);
+  }
+  dotfield.appendChild(frag);
+
+  /* count-up on reveal */
+  var countEl = document.getElementById('reviewCount');
+  var ratingEl = document.getElementById('ratingNum');
+  var weightSection = document.getElementById('gewicht');
+  var animated = false;
+  function animateCounts(){
+    if(animated) return;
+    animated = true;
+    if(reduceMotion){ countEl.textContent = TOTAL_REVIEWS; ratingEl.textContent = RATING.toFixed(1); return; }
+    var start = null;
+    var duration = 1400;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      countEl.textContent = Math.round(p * TOTAL_REVIEWS);
+      ratingEl.textContent = (p * RATING).toFixed(1);
+      if(p < 1){ requestAnimationFrame(step); }
+      else { countEl.textContent = TOTAL_REVIEWS; ratingEl.textContent = RATING.toFixed(1); }
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var countIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){ if(entry.isIntersecting){ animateCounts(); countIO.unobserve(entry.target); } });
+    }, {threshold:0.3});
+    countIO.observe(weightSection);
+  } else {
+    animateCounts();
+  }
+})();
+</script>
+
+</body>
+</html>

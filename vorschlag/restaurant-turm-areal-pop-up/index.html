@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turm Areal Pop Up — Fondue-Yurten in Winterthur, nur diesen Winter</title>
+<meta name="description" content="Zwei Yurten auf dem Turm Areal Winterthur: Fondue, Glühwein, Raclette und winterliches Mehrgang-Menü für Weihnachtsfeiern und Teamevents. Ein saisonaler Pop-up, temporär.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Turm Areal Pop Up — Fondue-Yurten in Winterthur">
+<meta property="og:description" content="Zwei Yurten für Weihnachtsfeiern, Teamanlässe und gesellige Zusammenkünfte. Fondue, Glühwein, Raclette. Nur diesen Winter, Theaterstrasse 17.">
+<meta property="og:url" content="https://www.turmareal-popup.ch/">
+<meta property="og:image" content="https://static.wixstatic.com/media/4af12f_76ed974101084d65852c96ae56289257~mv2.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&amp;family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Turm Areal Pop Up",
+  "description": "Der Hof beherbergt zwei liebevoll eingerichtete Yurten ideal für Weihnachtsfeiern, Teamanlässe und gesellige Zusammenkünfte in Winterthur",
+  "url": "https://www.turmareal-popup.ch/",
+  "email": "ahoi@turmareal-popup.ch",
+  "servesCuisine": "Fondue, Raclette, Swiss Seasonal",
+  "image": [
+    "https://static.wixstatic.com/media/4af12f_76ed974101084d65852c96ae56289257~mv2.png",
+    "https://static.wixstatic.com/media/4af12f_29e35d784db744a384595c256ee18db8~mv2.png",
+    "https://static.wixstatic.com/media/4af12f_0394597fbe364b8b865783e8e308646d~mv2.png",
+    "https://static.wixstatic.com/media/4af12f_1a1c0405935443b4be2582e1334ea883~mv2.png"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Theaterstrasse 17",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0d1520;
+    --surface:#16212f;
+    --fg:#eef3f7;
+    --muted:#9fb0c2;
+    --brand:#e2793a;
+    --accent:#8fd0d9;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Public Sans', system-ui, sans-serif;
+    font-size:clamp(15px, 0.4vw + 14px, 18px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+  p{ margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(1.1rem, 4vw, 2.5rem); }
+  section{ padding:clamp(2.8rem, 6.5vw, 6rem) 0; }
+  :focus-visible{ outline:3px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  /* ---------- impermanence ribbon ---------- */
+  .ribbon{ background:var(--brand); color:#241205; overflow:hidden; white-space:nowrap; position:relative; }
+  .ribbon-track{ display:inline-flex; gap:2.5rem; padding:0.5rem 0; animation:scroll-left 26s linear infinite; }
+  .ribbon-track span{ font-weight:800; font-size:0.82rem; letter-spacing:0.14em; text-transform:uppercase; }
+  @keyframes scroll-left{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){ .ribbon-track{ animation:none; overflow-x:auto; } }
+
+  /* ---------- header ---------- */
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(13,21,32,0.92); backdrop-filter:blur(6px); border-bottom:1px solid rgba(238,243,247,0.1); }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:0.9rem clamp(1.1rem, 4vw, 2.5rem); gap:1rem; }
+  .brandmark{ text-decoration:none; color:var(--fg); font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:1.3rem; letter-spacing:0.01em; text-transform:uppercase; }
+  .brandmark small{ display:block; font-family:'Public Sans', sans-serif; text-transform:none; font-weight:600; font-size:0.7rem; color:var(--accent); letter-spacing:0.06em; }
+  nav.primary{ display:flex; align-items:center; gap:clamp(0.9rem,2vw,1.6rem); }
+  nav.primary a{ text-decoration:none; font-weight:700; font-size:0.85rem; letter-spacing:0.03em; color:var(--muted); }
+  nav.primary a:hover{ color:var(--accent); }
+  .mail-btn{ background:var(--brand); color:#241205 !important; padding:0.55rem 1.05rem; border-radius:2px; font-weight:800 !important; white-space:nowrap; }
+  .nav-toggle{ display:none; background:none; border:2px solid var(--fg); border-radius:2px; width:42px; height:38px; cursor:pointer; }
+  .nav-toggle span{ display:block; width:20px; height:2px; background:var(--fg); margin:4px auto; }
+  @media (max-width:800px){
+    nav.primary{ position:absolute; top:100%; left:0; right:0; background:var(--surface); flex-direction:column; align-items:flex-start; padding:1rem clamp(1.1rem,4vw,2.5rem) 1.4rem; gap:0.9rem; display:none; border-bottom:1px solid rgba(238,243,247,0.1); }
+    nav.primary.open{ display:flex; }
+    .nav-toggle{ display:block; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{ padding-top:clamp(3rem,8vw,5.5rem); position:relative; }
+  .hero-kicker{ color:var(--accent); font-weight:800; letter-spacing:0.14em; text-transform:uppercase; font-size:0.8rem; }
+  .hero h1{ font-size:clamp(3rem,9vw,7.5rem); line-height:0.86; margin-top:0.6rem; }
+  .hero h1 em{ font-style:normal; color:var(--brand); }
+  .hero .lede{ margin-top:1.4rem; max-width:52ch; font-size:clamp(1.05rem,1.3vw,1.3rem); color:var(--muted); font-weight:600; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.8rem; }
+  .chip{ display:inline-flex; align-items:center; gap:0.4rem; background:var(--surface); border:1px solid rgba(238,243,247,0.14); padding:0.5rem 0.9rem; border-radius:99px; font-size:0.85rem; font-weight:700; }
+  .chip b{ color:var(--brand); }
+  .hero-cta{ display:inline-block; margin-top:1.8rem; background:var(--brand); color:#241205; font-weight:800; padding:0.9rem 1.5rem; border-radius:3px; text-decoration:none; }
+
+  /* ---------- signature module: status ---------- */
+  .status-section{ background:var(--surface); border-top:1px solid rgba(238,243,247,0.08); border-bottom:1px solid rgba(238,243,247,0.08); }
+  .status-card{ display:grid; grid-template-columns:auto 1fr; gap:1.6rem; align-items:center; }
+  .status-badge{ display:inline-flex; align-items:center; gap:0.6rem; padding:0.9rem 1.3rem; border-radius:99px; font-weight:800; font-size:0.98rem; white-space:nowrap; }
+  .status-badge .dot{ width:11px; height:11px; border-radius:50%; }
+  .status-badge.open{ background:rgba(226,121,58,0.16); color:var(--brand); }
+  .status-badge.open .dot{ background:var(--brand); box-shadow:0 0 0 4px rgba(226,121,58,0.25); }
+  .status-badge.soon{ background:rgba(143,208,217,0.14); color:var(--accent); }
+  .status-badge.soon .dot{ background:var(--accent); box-shadow:0 0 0 4px rgba(143,208,217,0.22); }
+  .status-badge.unknown{ background:rgba(159,176,194,0.14); color:var(--muted); }
+  .status-badge.unknown .dot{ background:var(--muted); }
+  #statusSub{ color:var(--muted); font-weight:600; margin-top:0.5rem; font-size:0.95rem; }
+  .venue-rows{ display:grid; gap:0.7rem; }
+  .venue-row{ display:flex; justify-content:space-between; border-bottom:1px solid rgba(238,243,247,0.1); padding-bottom:0.6rem; font-size:0.95rem; }
+  .venue-row b{ color:var(--fg); }
+  .venue-row span.t{ color:var(--muted); font-weight:700; }
+
+  /* ---------- season section ---------- */
+  .season{ }
+  .season-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:start; }
+  .season .kicker{ color:var(--accent); text-transform:uppercase; letter-spacing:0.14em; font-weight:800; font-size:0.78rem; }
+  .season h2{ font-size:clamp(1.9rem,4vw,3rem); margin-top:0.5rem; }
+  .season p{ margin-top:1rem; color:var(--muted); font-weight:600; max-width:48ch; }
+  .season-note{ background:var(--surface); border-left:3px solid var(--brand); padding:1.2rem 1.4rem; border-radius:2px; font-size:0.95rem; }
+  .season-note strong{ color:var(--fg); }
+  @media (max-width:840px){ .season-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- usps ---------- */
+  .usp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.2rem; margin-top:clamp(2rem,4vw,3rem); }
+  .usp-card{ background:var(--surface); border-radius:8px; padding:1.4rem 1.3rem; border-top:3px solid var(--brand); transition:transform 0.25s ease, box-shadow 0.25s ease; }
+  .usp-card:hover{ transform:translateY(-4px); box-shadow:0 16px 30px -20px rgba(0,0,0,0.6); }
+  @media (prefers-reduced-motion: reduce){ .usp-card:hover{ transform:none; } }
+  .usp-card h3{ font-family:'Big Shoulders Display', sans-serif; font-size:1.3rem; font-weight:700; text-transform:none; letter-spacing:0; }
+  .usp-card .num{ display:block; font-family:'Big Shoulders Display', sans-serif; font-size:2.4rem; color:var(--brand); font-weight:900; margin-bottom:0.3rem; }
+
+  /* ---------- filmstrip gallery ---------- */
+  .filmstrip{ display:flex; gap:1rem; overflow-x:auto; padding-bottom:0.6rem; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+  .filmstrip .frame{ flex:0 0 auto; width:min(78vw,380px); scroll-snap-align:start; }
+  .filmstrip img{ width:100%; height:260px; object-fit:cover; border-radius:8px; background:var(--surface); }
+  .filmstrip .frame figcaption{ margin-top:0.5rem; font-size:0.82rem; color:var(--muted); font-weight:700; }
+
+  /* ---------- location ---------- */
+  .loc-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(1.6rem,4vw,3rem); align-items:start; }
+  .loc-card{ background:var(--surface); border-radius:8px; padding:clamp(1.4rem,3vw,2rem); }
+  .loc-card dl{ margin:1.1rem 0 0; }
+  .loc-card dt{ font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-weight:800; margin-top:1rem; }
+  .loc-card dd{ margin:0.25rem 0 0; font-weight:700; font-size:1.02rem; }
+  .loc-card dd a{ text-decoration:none; color:var(--accent); }
+  .map-frame{ border-radius:8px; overflow:hidden; border:1px solid rgba(238,243,247,0.12); }
+  .map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; display:block; filter:grayscale(0.15) invert(0.92) contrast(0.9); }
+  @media (max-width:840px){ .loc-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- footer ---------- */
+  footer{ background:#080d14; color:#7f93a6; padding:2.6rem 0 6rem; }
+  footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.2rem; align-items:center; }
+  footer .fine{ font-size:0.78rem; color:#54627a; margin-top:0.6rem; }
+  footer a{ color:var(--accent); text-decoration:none; }
+
+  /* ---------- sticky mobile bar (no phone -> email CTA) ---------- */
+  .mobile-bar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:#080d14; border-top:1px solid rgba(238,243,247,0.1); padding:0.7rem 1rem; }
+  .mobile-bar a{ display:block; text-align:center; background:var(--brand); color:#241205; font-weight:800; padding:0.85rem; border-radius:6px; text-decoration:none; }
+  @media (max-width:800px){ .mobile-bar{ display:block; } body{ padding-bottom:76px; } }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:380px){
+    .hero h1{ font-size:2.6rem; }
+    .status-card{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span>NUR DIESEN WINTER · TURM AREAL WINTERTHUR</span>
+    <span>KEIN FESTES ENDDATUM KOMMUNIZIERT · POP-UP</span>
+    <span>ZWEI YURTEN · FONDUE &amp; GLÜHWEIN</span>
+    <span>NUR DIESEN WINTER · TURM AREAL WINTERTHUR</span>
+    <span>KEIN FESTES ENDDATUM KOMMUNIZIERT · POP-UP</span>
+    <span>ZWEI YURTEN · FONDUE &amp; GLÜHWEIN</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="brandmark" href="#top">Turm Areal<small>Pop Up · Winterthur</small></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary" id="primaryNav">
+      <a href="#status">Jetzt</a>
+      <a href="#saison">Saison</a>
+      <a href="#fuer-wen">Für wen</a>
+      <a href="#angebot">Angebot</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#kontakt">Lage</a>
+      <a class="mail-btn" href="mailto:ahoi@turmareal-popup.ch">Anfrage senden</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-kicker reveal">Saisonaler Pop-up · temporär</p>
+      <h1 class="reveal">Zwei Yurten.<br><em>Ein</em> Winter.</h1>
+      <p class="lede reveal">Gemütliche Yurten für Weihnachtsfeiern und Teamevents auf dem Turm Areal — der Hof beherbergt zwei liebevoll eingerichtete Yurten, ideal für gesellige Zusammenkünfte in Winterthur.</p>
+      <div class="chip-row reveal">
+        <span class="chip">⭐ <b>4.9</b>&nbsp;· 47 Google-Bewertungen</span>
+        <span class="chip">Theaterstrasse 17, 8400 Winterthur</span>
+      </div>
+      <a class="hero-cta reveal" href="mailto:ahoi@turmareal-popup.ch">Anlass anfragen — ahoi@turmareal-popup.ch</a>
+    </div>
+  </section>
+
+  <section class="status-section" id="status">
+    <div class="wrap status-card reveal">
+      <div>
+        <div class="status-badge" id="statusBadge">
+          <span class="dot"></span><span id="statusText">Wird geladen…</span>
+        </div>
+        <p id="statusSub"></p>
+      </div>
+      <div class="venue-rows" id="venueRows"></div>
+    </div>
+  </section>
+
+  <section class="season" id="saison">
+    <div class="wrap season-grid">
+      <div class="reveal">
+        <p class="kicker">Nichts hier ist auf Dauer angelegt</p>
+        <h2>Ein Pop-up ist per Definition vorübergehend.</h2>
+        <p>Der Hof beherbergt zwei liebevoll eingerichtete Yurten — ideal für Weihnachtsfeiern, Teamanlässe und gesellige Zusammenkünfte in Winterthur. Sobald die Saison vorbei ist, sind auch die Yurten wieder weg.</p>
+      </div>
+      <div class="season-note reveal">
+        <p><strong>Kein festes Enddatum kommuniziert.</strong> Unsere Quelle nennt keinen Schlusstag — deshalb steht hier auch kein Countdown mit erfundenem Zieldatum. Was feststeht: Geöffnet ist <strong>Mo–Sa</strong>, die Fondue-Jurte ab 16:00 Uhr, die Outdoor Bar ab 17:00 Uhr, jeweils bis spät. Am besten vorher kurz anfragen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fuer-wen">
+    <div class="wrap">
+      <p class="hero-kicker reveal">Für wen</p>
+      <h2 class="reveal" style="font-size:clamp(1.9rem,3.8vw,3rem); margin-top:0.5rem;">Weihnachtsfeiern, Teamanlässe, gesellige Runden</h2>
+      <div class="usp-grid reveal">
+        <div class="usp-card"><h3>Weihnachtsfeiern</h3><p style="margin-top:0.6rem; font-weight:600; color:var(--muted); font-size:0.92rem;">Zwei liebevoll eingerichtete Yurten für die Feier im Team.</p></div>
+        <div class="usp-card"><h3>Teamanlässe</h3><p style="margin-top:0.6rem; font-weight:600; color:var(--muted); font-size:0.92rem;">Fondue statt Konferenzraum — für Firmen und Vereine.</p></div>
+        <div class="usp-card"><h3>Gesellige Zusammenkünfte</h3><p style="margin-top:0.6rem; font-weight:600; color:var(--muted); font-size:0.92rem;">Auch spontan, ohne grossen Anlass — Hauptsache warm.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="angebot">
+    <div class="wrap">
+      <p class="hero-kicker reveal">Was es hier gibt</p>
+      <h2 class="reveal" style="font-size:clamp(1.9rem,3.8vw,3rem); margin-top:0.5rem;">Fünf Dinge, die diesen Winter zählen</h2>
+      <div class="usp-grid reveal">
+        <div class="usp-card"><span class="num">01</span><h3>Fondue-Spezialitäten aus Ostschweiz</h3></div>
+        <div class="usp-card"><span class="num">02</span><h3>Glühwein-Angebot</h3></div>
+        <div class="usp-card"><span class="num">03</span><h3>Raclette-Optionen</h3></div>
+        <div class="usp-card"><span class="num">04</span><h3>Winterliches Mehrgang-Menü</h3></div>
+        <div class="usp-card"><span class="num">05</span><h3>Yurten-Ambiente</h3></div>
+      </div>
+      <p style="margin-top:1.6rem; color:var(--muted); font-weight:600; max-width:58ch;">Einzelne Gerichte und Preise sind online nicht hinterlegt — für Weihnachtsfeiern und Teamanlässe empfiehlt sich eine kurze Anfrage per E-Mail.</p>
+    </div>
+  </section>
+
+  <section id="raeume">
+    <div class="wrap">
+      <p class="hero-kicker reveal">Zwei Räume, ein Areal</p>
+      <h2 class="reveal" style="font-size:clamp(1.9rem,3.8vw,3rem); margin-top:0.5rem; margin-bottom:1.6rem;">Fondue-Jurte &amp; Outdoor Bar</h2>
+      <div class="usp-grid reveal">
+        <div class="usp-card" style="border-top-color:var(--accent);">
+          <span class="num" style="color:var(--accent);">Jurte</span>
+          <h3>Fondue-Jurte</h3>
+          <p style="margin-top:0.6rem; font-weight:600; color:var(--muted); font-size:0.92rem;">Geöffnet Mo–Sa ab 16:00 Uhr, bis spät.</p>
+        </div>
+        <div class="usp-card">
+          <span class="num">Bar</span>
+          <h3>Outdoor Bar</h3>
+          <p style="margin-top:0.6rem; font-weight:600; color:var(--muted); font-size:0.92rem;">Geöffnet Mo–Sa ab 17:00 Uhr, bis spät.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fotos">
+    <div class="wrap">
+      <p class="hero-kicker reveal">Fotos</p>
+      <h2 class="reveal" style="font-size:clamp(1.9rem,3.8vw,3rem); margin-top:0.5rem; margin-bottom:1.6rem;">Aus den Yurten</h2>
+      <div class="filmstrip reveal">
+        <figure class="frame">
+          <img src="https://static.wixstatic.com/media/4af12f_76ed974101084d65852c96ae56289257~mv2.png" alt="Yurte auf dem Turm Areal Winterthur" loading="lazy" onerror="this.closest('.frame').style.display='none'">
+          <figcaption>Turm Areal Pop Up</figcaption>
+        </figure>
+        <figure class="frame">
+          <img src="https://static.wixstatic.com/media/4af12f_29e35d784db744a384595c256ee18db8~mv2.png" alt="Innenansicht der Yurte" loading="lazy" onerror="this.closest('.frame').style.display='none'">
+          <figcaption>Innen: Fondue-Jurte</figcaption>
+        </figure>
+        <figure class="frame">
+          <img src="https://static.wixstatic.com/media/4af12f_0394597fbe364b8b865783e8e308646d~mv2.png" alt="Aussenbereich Turm Areal" loading="lazy" onerror="this.closest('.frame').style.display='none'">
+          <figcaption>Outdoor Bar</figcaption>
+        </figure>
+        <figure class="frame">
+          <img src="https://static.wixstatic.com/media/4af12f_1a1c0405935443b4be2582e1334ea883~mv2.png" alt="Abendstimmung auf dem Turm Areal" loading="lazy" onerror="this.closest('.frame').style.display='none'">
+          <figcaption>Abends auf dem Areal</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap loc-grid">
+      <div class="loc-card reveal">
+        <p class="hero-kicker">Lage &amp; Kontakt</p>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>Theaterstrasse 17<br>8400 Winterthur</dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:ahoi@turmareal-popup.ch">ahoi@turmareal-popup.ch</a></dd>
+          <dt>Website</dt>
+          <dd><a href="https://www.turmareal-popup.ch/" target="_blank" rel="noopener">turmareal-popup.ch</a></dd>
+          <dt>Telefon</dt>
+          <dd style="color:var(--muted); font-weight:600;">Keine Telefonnummer hinterlegt — bitte per E-Mail anfragen.</dd>
+        </dl>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://maps.google.com/maps?q=Turm%20Areal%20Pop%20Up%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Turm Areal Pop Up, Winterthur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div>Turm Areal Pop Up · Theaterstrasse 17, 8400 Winterthur</div>
+      <div class="fine">Design-Vorschlag · unverbindliches Muster</div>
+    </div>
+    <a href="mailto:ahoi@turmareal-popup.ch">ahoi@turmareal-popup.ch</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="mailto:ahoi@turmareal-popup.ch">E-Mail schreiben — ahoi@turmareal-popup.ch</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var navToggle = document.getElementById('navToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  if (navToggle && primaryNav){
+    navToggle.addEventListener('click', function(){
+      var open = primaryNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    primaryNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ primaryNav.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.14 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* =========================================================
+     SIGNATURE MODULE — honest, uncertainty-aware status.
+     Data: real hours from JSON. Only Mo–Sa is recorded, with two
+     venues opening at different times and closing "late" — an
+     exact closing time is not published, so the module says so
+     rather than inventing one. Sunday has no recorded hours at
+     all, so it is shown as "no data", not "closed".
+     ========================================================= */
+  var VENUES = [
+    { name: "Fondue-Jurte", open: "16:00" },
+    { name: "Outdoor Bar",  open: "17:00" }
+  ];
+  var OPEN_DOWS = [1,2,3,4,5,6]; // Mo–Sa
+  var DAY_NAMES = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+
+  function toMinutes(hhmm){ var p = hhmm.split(':'); return parseInt(p[0],10)*60 + parseInt(p[1],10); }
+
+  function renderVenues(){
+    var wrap = document.getElementById('venueRows');
+    if (!wrap) return;
+    var html = '';
+    VENUES.forEach(function(v){
+      html += '<div class="venue-row"><b>' + v.name + '</b><span class="t">ab ' + v.open + ' Uhr, bis spät</span></div>';
+    });
+    wrap.innerHTML = html;
+  }
+
+  function renderStatus(){
+    var now = new Date();
+    var dow = now.getDay();
+    var nowMin = now.getHours()*60 + now.getMinutes();
+    var badge = document.getElementById('statusBadge');
+    var text = document.getElementById('statusText');
+    var sub = document.getElementById('statusSub');
+    if (!badge) return;
+
+    if (OPEN_DOWS.indexOf(dow) === -1){
+      badge.className = 'status-badge unknown';
+      text.textContent = 'Für ' + DAY_NAMES[dow] + ' keine Zeiten hinterlegt';
+      sub.textContent = 'Geöffnet ist Mo–Sa. Für ' + DAY_NAMES[dow] + ' liegen keine Angaben vor — bitte anfragen.';
+      return;
+    }
+
+    var firstOpen = toMinutes(VENUES[0].open); // 16:00
+    if (nowMin >= firstOpen){
+      badge.className = 'status-badge open';
+      text.textContent = 'Wahrscheinlich geöffnet';
+      sub.textContent = 'Fondue-Jurte seit ' + VENUES[0].open + ' Uhr offen, Outdoor Bar seit ' + VENUES[1].open + ' Uhr — genaue Schliesszeit ist nicht kommuniziert ("bis spät").';
+    } else {
+      badge.className = 'status-badge soon';
+      text.textContent = 'Öffnet heute später';
+      sub.textContent = 'Fondue-Jurte öffnet heute um ' + VENUES[0].open + ' Uhr, Outdoor Bar um ' + VENUES[1].open + ' Uhr.';
+    }
+  }
+
+  renderVenues();
+  renderStatus();
+  setInterval(renderStatus, 60000);
+})();
+</script>
+</body>
+</html>

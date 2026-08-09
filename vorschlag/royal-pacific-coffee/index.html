@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Pacific Coffee GmbH — Vietnamesischer Kaffee direkt importiert, Winterthur</title>
+<meta name="description" content="Royal Pacific Coffee GmbH in Winterthur: Direktimport von Kaffee, Kakao, Oolong-Tee und Pfeffer aus Vietnam. Magenschonender, UTZ-zertifizierter Kaffee — probieren in der Café-Bar an der Wartstrasse 3.">
+<meta property="og:title" content="Royal Pacific Coffee GmbH — Vietnamesischer Kaffee, direkt importiert">
+<meta property="og:description" content="Schweizer führendes Handelsunternehmen für vietnamesische Kaffeespezialitäten. Direktimport, Café-Bar, Wartstrasse 3, Winterthur.">
+<meta property="og:type" content="business.business">
+<meta property="og:locale" content="de_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,680&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Royal Pacific Coffee GmbH",
+  "image": "",
+  "telephone": "+41 79 549 91 99",
+  "email": "info@royal-coffee.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wartstrasse 3",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "url": "https://www.royal-coffee.ch",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "13:30", "closes": "18:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "18:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:30", "closes": "16:00"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "reviewCount": "48"
+  },
+  "sameAs": ["https://www.facebook.com/royalcoffee.ch/"]
+}
+</script>
+<style>
+  :root{
+    --bg:#0e1912;
+    --surface:#162419;
+    --fg:#f3ede2;
+    --muted:#b9c2b3;
+    --brand:#cf7038;
+    --accent:#cf9a3c;
+    --line: rgba(243,237,226,0.14);
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Fraunces', Georgia, serif;
+    font-optical-sizing:auto;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .mono{font-family:'JetBrains Mono', ui-monospace, monospace;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  h1,h2,h3{font-weight:680; margin:0 0 .4em; letter-spacing:-0.01em;}
+  p{margin:0 0 1em;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.25rem, 4vw, 3rem);}
+  section{padding-block:clamp(3.5rem, 8vw, 7rem);}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+
+  /* header */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(14,25,18,0.86);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{display:flex; align-items:center; justify-content:space-between; padding-block:.9rem;}
+  .brandmark{display:flex; align-items:baseline; gap:.55rem; text-decoration:none;}
+  .brandmark .rpc{font-size:clamp(1.05rem,1.6vw,1.3rem); font-weight:680; letter-spacing:.01em;}
+  .brandmark .sub{font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
+  nav.primary{display:flex; gap:clamp(1rem,2vw,2rem); font-family:'JetBrains Mono',monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase;}
+  nav.primary a{text-decoration:none; color:var(--muted); padding:.3rem 0; border-bottom:1px solid transparent;}
+  nav.primary a:hover{color:var(--fg); border-color:var(--accent);}
+  .navcall{display:none;}
+  @media (min-width:720px){
+    .navcall{display:inline-flex; align-items:center; gap:.4rem; font-family:'JetBrains Mono',monospace; font-size:.72rem; text-decoration:none; color:var(--bg); background:var(--accent); padding:.55rem .9rem; border-radius:3px; letter-spacing:.04em;}
+  }
+  .menu-toggle{display:none;}
+  @media (max-width:719px){
+    nav.primary{position:fixed; inset:56px 0 auto 0; background:var(--surface); flex-direction:column; padding:1rem clamp(1.25rem,4vw,3rem) 1.4rem; border-bottom:1px solid var(--line); transform:translateY(-8px); opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease;}
+    nav.primary.open{opacity:1; pointer-events:auto; transform:translateY(0);}
+    nav.primary a{padding:.55rem 0; border-bottom:1px solid var(--line);}
+    .menu-toggle{display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; background:none; border:1px solid var(--line); border-radius:4px; color:var(--fg); font-size:1rem;}
+  }
+
+  /* hero */
+  .hero{padding-block: clamp(3rem,9vw,6rem) clamp(2.5rem,6vw,4rem); position:relative; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns: 1.35fr .95fr; gap:clamp(2rem,5vw,4rem); align-items:end;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+  .kicker{font-family:'JetBrains Mono',monospace; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; display:flex; align-items:center; gap:.6rem;}
+  .kicker::before{content:""; width:26px; height:1px; background:var(--accent); display:inline-block;}
+  h1.hero-h{font-size:clamp(2.6rem, 6.4vw, 5.2rem); line-height:.98; margin-bottom:1rem;}
+  h1.hero-h em{font-style:italic; color:var(--brand);}
+  .hero-lede{font-size:clamp(1rem,1.5vw,1.2rem); color:var(--muted); max-width:44ch; font-family:system-ui,sans-serif; font-size:clamp(1rem,1.4vw,1.12rem); line-height:1.65;}
+  .hero-cta{display:flex; gap:.9rem; flex-wrap:wrap; margin-top:1.8rem;}
+  .btn{font-family:'JetBrains Mono',monospace; font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; padding:.85rem 1.35rem; border-radius:3px; display:inline-flex; align-items:center; gap:.5rem;}
+  .btn.primary{background:var(--brand); color:#0e1912;}
+  .btn.ghost{border:1px solid var(--line); color:var(--fg);}
+  .btn.primary:hover{background:#a5551f; color:#fff8f1;}
+  .btn.ghost:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* open badge */
+  .openbadge{
+    border:1px solid var(--line); border-radius:8px; padding:1.2rem 1.3rem; background:var(--surface);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .openbadge .row1{display:flex; align-items:center; gap:.55rem; margin-bottom:.5rem;}
+  .dot{width:9px; height:9px; border-radius:50%; background:#5a6b53; flex:none;}
+  .dot.on{background:#7fbf5e; box-shadow:0 0 0 3px rgba(127,191,94,0.18);}
+  .dot.off{background:#c1652f; box-shadow:0 0 0 3px rgba(193,101,47,0.16);}
+  .openbadge .status{font-size:.85rem; letter-spacing:.03em; text-transform:uppercase; font-weight:600;}
+  .openbadge .detail{font-size:.72rem; color:var(--muted); letter-spacing:.02em;}
+  .openbadge .next{font-size:.72rem; color:var(--muted); margin-top:.5rem; padding-top:.5rem; border-top:1px solid var(--line);}
+
+  /* usp strip */
+  .usp-strip{border-top:1px solid var(--line); border-bottom:1px solid var(--line); overflow:hidden; background:var(--surface);}
+  .usp-track{display:flex; gap:0; width:max-content;}
+  .usp-track span{
+    font-family:'JetBrains Mono',monospace; font-size:.78rem; letter-spacing:.05em; text-transform:uppercase;
+    padding:1rem 2.2rem; white-space:nowrap; border-right:1px solid var(--line); color:var(--muted);
+  }
+  .usp-track span::before{content:"—  "; color:var(--accent);}
+
+  /* section heading pattern */
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-bottom:clamp(2rem,4vw,3rem); flex-wrap:wrap;}
+  .sec-num{font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--accent); letter-spacing:.1em;}
+  h2.sec-title{font-size:clamp(1.9rem,4vw,3rem); max-width:16ch;}
+
+  /* route / signature module */
+  .route{position:relative;}
+  .route-line{position:relative; padding-left:0;}
+  .route-item{
+    display:grid; grid-template-columns: 34px 1fr; gap:1.2rem; position:relative; padding-bottom:clamp(2.2rem,5vw,3.4rem);
+  }
+  .route-item:last-child{padding-bottom:0;}
+  .route-item .node{position:relative;}
+  .route-item .node::before{
+    content:""; position:absolute; left:16px; top:34px; bottom:-2.2rem; width:1px; background:var(--line);
+  }
+  .route-item:last-child .node::before{display:none;}
+  .node-dot{
+    width:34px; height:34px; border-radius:50%; border:1px solid var(--accent); background:var(--bg);
+    display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--accent);
+  }
+  .route-item .content h3{font-size:clamp(1.2rem,2.4vw,1.6rem); margin-bottom:.35rem;}
+  .route-item .content .place{font-family:'JetBrains Mono',monospace; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:.5rem; display:block;}
+  .route-item .content p{color:var(--muted); font-family:system-ui,sans-serif; max-width:56ch; font-size:1rem;}
+  .route-item.highlight .node-dot{background:var(--brand); border-color:var(--brand); color:#0e1912;}
+
+  /* about / quote */
+  .about-block{display:grid; grid-template-columns: .8fr 1.2fr; gap:clamp(2rem,5vw,4rem);}
+  @media (max-width:860px){.about-block{grid-template-columns:1fr;}}
+  blockquote{
+    font-size:clamp(1.4rem,3vw,2rem); line-height:1.32; margin:0; font-style:italic; font-weight:560;
+    border-left:2px solid var(--brand); padding-left:1.4rem; color:var(--fg);
+  }
+  .about-copy{font-family:system-ui,sans-serif; color:var(--muted); font-size:1.05rem; line-height:1.75;}
+  .about-copy strong{color:var(--fg);}
+
+  /* cafe bar */
+  .cafe-panel{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:clamp(1.8rem,4vw,3rem);
+    display:grid; grid-template-columns: 1fr 1fr; gap:clamp(2rem,4vw,3rem);
+  }
+  @media (max-width:760px){.cafe-panel{grid-template-columns:1fr;}}
+  .cafe-panel h2{font-size:clamp(1.7rem,3.4vw,2.3rem);}
+  .cafe-panel ul{list-style:none; margin:0; padding:0; font-family:system-ui,sans-serif; color:var(--muted);}
+  .cafe-panel ul li{padding:.55rem 0; border-top:1px solid var(--line); display:flex; gap:.7rem; align-items:baseline;}
+  .cafe-panel ul li:first-child{border-top:none;}
+  .cafe-panel ul li::before{content:"○"; color:var(--accent); font-size:.6rem; transform:translateY(-2px);}
+
+  /* hours + map */
+  .hourmap{display:grid; grid-template-columns: .95fr 1.15fr; gap:clamp(2rem,4vw,3.5rem);}
+  @media (max-width:860px){.hourmap{grid-template-columns:1fr;}}
+  table.hours{width:100%; border-collapse:collapse; font-family:'JetBrains Mono',monospace; font-size:.9rem;}
+  table.hours td{padding:.75rem 0; border-top:1px solid var(--line); vertical-align:top;}
+  table.hours tr:first-child td{border-top:none;}
+  table.hours td.days{color:var(--fg); font-weight:600; width:34%;}
+  table.hours td.time{color:var(--muted); text-align:right;}
+  tr.today td{color:var(--accent);}
+  .contact-lines{margin-top:1.6rem; font-family:system-ui,sans-serif; font-size:1rem; color:var(--muted);}
+  .contact-lines a{color:var(--fg); text-decoration:none; border-bottom:1px solid var(--line);}
+  .contact-lines a:hover{border-color:var(--accent); color:var(--accent);}
+  .contact-lines p{margin:.3rem 0;}
+  .mapbox{border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; background:var(--surface);}
+  .mapbox iframe{width:100%; height:100%; border:0; filter:grayscale(0.25) contrast(1.05);}
+
+  /* rating + social */
+  .rating-row{display:flex; flex-wrap:wrap; gap:2.5rem; align-items:center; justify-content:space-between; border-top:1px solid var(--line); padding-top:2.2rem; margin-top:2.5rem;}
+  .rating-num{font-size:clamp(2.2rem,5vw,3rem); font-weight:680;}
+  .rating-num sup{font-size:.4em; color:var(--muted); font-weight:400; margin-left:.4rem;}
+  .rating-note{font-family:system-ui,sans-serif; color:var(--muted); font-size:.92rem; max-width:32ch;}
+  .social-links{display:flex; gap:1rem; font-family:'JetBrains Mono',monospace; font-size:.78rem;}
+  .social-links a{text-decoration:none; border:1px solid var(--line); padding:.5rem .9rem; border-radius:3px; color:var(--fg);}
+  .social-links a:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* footer */
+  footer{border-top:1px solid var(--line); padding-block:2.4rem clamp(5rem,10vw,2.8rem);}
+  .foot-grid{display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:flex-end;}
+  .foot-note{font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--muted); letter-spacing:.02em;}
+  .foot-brand{font-size:1.2rem; font-weight:680;}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* sticky mobile bar */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:50; display:none;
+    background:var(--surface); border-top:1px solid var(--line);
+    padding:.7rem clamp(1rem,4vw,2rem); align-items:center; justify-content:center;
+  }
+  @media (max-width:719px){ .mobile-bar{display:flex;} body{padding-bottom:64px;} }
+  .mobile-bar a{
+    width:100%; text-align:center; background:var(--brand); color:#0e1912; text-decoration:none;
+    padding:.85rem; border-radius:6px; font-family:'JetBrains Mono',monospace; font-size:.82rem; letter-spacing:.05em; text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brandmark" href="#top">
+      <span class="rpc">Royal Pacific Coffee</span>
+      <span class="sub">seit Vietnam</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">☰</button>
+    <nav class="primary" id="primaryNav">
+      <a href="#route">Route</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#cafe">Café-Bar</a>
+      <a href="#besuch">Öffnungszeiten</a>
+    </nav>
+    <a class="navcall" href="tel:+41795499199">+41 79 549 91 99</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Direktimport · Vietnam → Winterthur</p>
+        <h1 class="hero-h">Kaffee, der<br>seinen <em>Weg</em><br>erzählt.</h1>
+        <p class="hero-lede">Royal Pacific Coffee GmbH ist ein Schweizer Handelsunternehmen für vietnamesische Kaffeespezialitäten — Direktimport und Verkauf von hochwertigem Kaffee, Kakao, Oolong-Tee, Pfeffer und Spezialitäten aus Vietnam, mit eigener Café-Bar zum Probieren an der Wartstrasse 3.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="tel:+41795499199">Anrufen</a>
+          <a class="btn ghost" href="#besuch">Café-Bar besuchen</a>
+        </div>
+      </div>
+      <div class="openbadge reveal" id="openBadge" aria-live="polite">
+        <div class="row1"><span class="dot" id="openDot"></span><span class="status" id="openStatus">Status wird geladen …</span></div>
+        <div class="detail" id="openDetail"></div>
+        <div class="next" id="openNext"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="usp-strip" aria-label="Vorzüge">
+    <div class="usp-track" id="uspTrack">
+      <span>Direktimport aus Vietnam</span>
+      <span>Magenschonender und säurearmer Kaffee</span>
+      <span>UTZ-zertifiziert</span>
+      <span>Hybrid Kaffeeladen &amp; Café Bar</span>
+      <span>Kostenloses WiFi</span>
+    </div>
+  </div>
+
+  <section id="route">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="sec-num">01 — Herkunft</span>
+          <h2 class="sec-title">Vom Anbau in Vietnam bis zur Tasse in Winterthur</h2>
+        </div>
+      </div>
+      <div class="route">
+        <div class="route-line">
+          <div class="route-item reveal">
+            <div class="node"><div class="node-dot mono">01</div></div>
+            <div class="content">
+              <span class="place">Vietnam</span>
+              <h3>Ursprung &amp; Anbau</h3>
+              <p>Der Kaffee, der Kakao, Oolong-Tee und Pfeffer, die Royal Pacific Coffee führt, stammen aus Vietnam — Spezialitäten aus dem Ursprungsland, ausgewählt für hochwertige Qualität.</p>
+            </div>
+          </div>
+          <div class="route-item reveal">
+            <div class="node"><div class="node-dot mono">02</div></div>
+            <div class="content">
+              <span class="place">Handel</span>
+              <h3>Direktimport in die Schweiz</h3>
+              <p>Royal Pacific Coffee GmbH importiert direkt und verkauft die Ware als Schweizer Handelsunternehmen — ohne Umweg über Zwischenhändler. Der Kaffee ist UTZ-zertifiziert.</p>
+            </div>
+          </div>
+          <div class="route-item highlight reveal">
+            <div class="node"><div class="node-dot mono">03</div></div>
+            <div class="content">
+              <span class="place">Wartstrasse 3, Winterthur</span>
+              <h3>Probieren in der Café-Bar</h3>
+              <p>An der eigenen Café-Bar wird der importierte Kaffee ausgeschenkt und verkostet — magenschonend, säurearm, in gemütlicher Atmosphäre mit kostenlosem WiFi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">02 — Über uns</span>
+      </div>
+      <div class="about-block reveal">
+        <blockquote>„Schweizer führendes Handelsunternehmen für vietnamesische Kaffeespezialitäten.“</blockquote>
+        <div class="about-copy">
+          <p><strong>Direktimport und Verkauf</strong> von hochwertigem Kaffee, Kakao, Oolong-Tee, Pfeffer und Spezialitäten aus Vietnam — das ist der Kern von Royal Pacific Coffee GmbH. Der Kaffee ist UTZ-zertifiziert, magenschonend und säurearm.</p>
+          <p>Aus dem reinen Handelsgeschäft ist ein hybrider Ort geworden: Kaffeeladen und Café-Bar zugleich, an der Wartstrasse 3 in Winterthur, wo Import und Genuss unter einem Dach zusammenkommen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cafe">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">03 — Café-Bar</span>
+        <h2 class="sec-title">Ein Handelshaus zum Reinsetzen</h2>
+      </div>
+      <div class="cafe-panel reveal">
+        <div>
+          <h2>Kaffeeladen &amp; Café-Bar in einem</h2>
+          <p style="font-family:system-ui,sans-serif; color:var(--muted); max-width:46ch;">Wer den importierten Kaffee nicht nur kaufen, sondern auch verkosten möchte, setzt sich an die Café-Bar an der Wartstrasse 3 — mitten im Handelsgeschäft von Royal Pacific Coffee.</p>
+        </div>
+        <ul>
+          <li>Direktimport aus Vietnam</li>
+          <li>Magenschonender und säurearmer Kaffee</li>
+          <li>UTZ-zertifiziert</li>
+          <li>Hybrid Kaffeeladen &amp; Café Bar</li>
+          <li>Kostenloses WiFi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="besuch">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">04 — Besuch</span>
+        <h2 class="sec-title">Öffnungszeiten &amp; Lage</h2>
+      </div>
+      <div class="hourmap reveal">
+        <div>
+          <table class="hours" id="hoursTable">
+            <tbody>
+              <tr data-days="Mo"><td class="days">Mo</td><td class="time">13:30–18:30</td></tr>
+              <tr data-days="Di–Fr"><td class="days">Di–Fr</td><td class="time">09:00–12:00, 13:30–18:30</td></tr>
+              <tr data-days="Sa"><td class="days">Sa</td><td class="time">09:30–16:00</td></tr>
+              <tr data-days="So"><td class="days">So</td><td class="time">geschlossen</td></tr>
+            </tbody>
+          </table>
+          <div class="contact-lines">
+            <p>Wartstrasse 3, 8400 Winterthur</p>
+            <p><a href="tel:+41795499199">+41 79 549 91 99</a></p>
+            <p><a href="mailto:info@royal-coffee.ch">info@royal-coffee.ch</a></p>
+          </div>
+          <div class="rating-row">
+            <div>
+              <div class="rating-num">4.2<sup>/5</sup></div>
+              <p class="rating-note">48 Google-Bewertungen</p>
+            </div>
+            <div class="social-links">
+              <a href="https://www.facebook.com/royalcoffee.ch/" target="_blank" rel="noopener">Facebook</a>
+            </div>
+          </div>
+        </div>
+        <div class="mapbox">
+          <iframe src="https://maps.google.com/maps?q=Royal%20Pacific%20Coffee%20GmbH%20Wartstrasse%203%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Royal Pacific Coffee GmbH, Wartstrasse 3, Winterthur" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Royal Pacific Coffee GmbH</div>
+      <p class="foot-note">Wartstrasse 3, 8400 Winterthur · +41 79 549 91 99 · info@royal-coffee.ch</p>
+    </div>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41795499199">Jetzt anrufen — +41 79 549 91 99</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // mobile nav toggle
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('primaryNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  // reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.14});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // --- Signature module: "Jetzt offen?" live badge computed from real hours data ---
+  // Data verbatim from JSON hours array:
+  var HOURS = [
+    { days: [1], label: "Mo", ranges: [[13*60+30, 18*60+30]] },
+    { days: [2,3,4,5], label: "Di–Fr", ranges: [[9*60, 12*60], [13*60+30, 18*60+30]] },
+    { days: [6], label: "Sa", ranges: [[9*60+30, 16*60]] },
+    { days: [0], label: "So", ranges: [] }
+  ];
+
+  function findDayRule(dow){
+    for(var i=0;i<HOURS.length;i++){
+      if(HOURS[i].days.indexOf(dow) !== -1) return HOURS[i];
+    }
+    return null;
+  }
+  function fmt(mins){
+    var h = Math.floor(mins/60), m = mins%60;
+    return (h<10?'0':'')+h + ':' + (m<10?'0':'')+m;
+  }
+
+  function updateOpenBadge(){
+    var dot = document.getElementById('openDot');
+    var statusEl = document.getElementById('openStatus');
+    var detailEl = document.getElementById('openDetail');
+    var nextEl = document.getElementById('openNext');
+    if(!dot) return;
+
+    var now = new Date();
+    // Europe/Zurich local time approximation via toLocaleString
+    var zurich;
+    try{
+      zurich = new Date(now.toLocaleString('en-US', {timeZone:'Europe/Zurich'}));
+    }catch(e){ zurich = now; }
+    var dow = zurich.getDay();
+    var mins = zurich.getHours()*60 + zurich.getMinutes();
+
+    var rule = findDayRule(dow);
+    var isOpen = false;
+    var currentRangeEnd = null;
+    var nextOpenText = "";
+
+    if(rule && rule.ranges.length){
+      for(var i=0;i<rule.ranges.length;i++){
+        if(mins >= rule.ranges[i][0] && mins < rule.ranges[i][1]){
+          isOpen = true; currentRangeEnd = rule.ranges[i][1]; break;
+        }
+      }
+    }
+
+    if(isOpen){
+      dot.className = 'dot on';
+      statusEl.textContent = 'Jetzt geöffnet';
+      detailEl.textContent = 'Heute (' + rule.label + ') bis ' + fmt(currentRangeEnd) + ' Uhr';
+    } else {
+      dot.className = 'dot off';
+      statusEl.textContent = 'Momentan geschlossen';
+      // find next opening: check remaining ranges today, then following days up to 7
+      var found = null;
+      if(rule){
+        for(var j=0;j<rule.ranges.length;j++){
+          if(mins < rule.ranges[j][0]){ found = {label:'heute', time: fmt(rule.ranges[j][0])}; break; }
+        }
+      }
+      if(!found){
+        for(var d=1; d<=7; d++){
+          var nd = (dow + d) % 7;
+          var r2 = findDayRule(nd);
+          if(r2 && r2.ranges.length){
+            found = {label: r2.label, time: fmt(r2.ranges[0][0])};
+            break;
+          }
+        }
+      }
+      detailEl.textContent = 'Wartstrasse 3, Winterthur';
+      if(found){
+        nextOpenText = 'Nächste Öffnung: ' + found.label + ' ab ' + found.time + ' Uhr';
+      }
+    }
+    nextEl.textContent = nextOpenText;
+
+    // highlight today's row in hours table
+    var dayLabelForRow = rule ? rule.label : '';
+    document.querySelectorAll('#hoursTable tr').forEach(function(tr){
+      tr.classList.toggle('today', tr.getAttribute('data-days') === dayLabelForRow);
+    });
+  }
+
+  updateOpenBadge();
+  setInterval(updateOpenBadge, 60000);
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kafisatz Bar Café Press · Winterthur — Ihr Treffpunkt in der Altstadt</title>
+<meta name="description" content="Kafisatz Bar Café Press, Spitalgasse 1, 8400 Winterthur. Treffpunkt mit sonniger Terrasse, regionalen Zutaten, Kaffee, Mittagessen und Apéro. 4.3 ★ bei 1130 Google-Bewertungen. Tel. +41 52 202 46 00.">
+<meta property="og:title" content="Kafisatz Bar Café Press, Winterthur">
+<meta property="og:description" content="Ihr Treffpunkt in Winterthur — Kaffee, Mittagessen und Apéro mit regionalen Zutaten, drinnen und auf sonniger Terrasse.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kafisatz.ch/">
+<meta property="og:image" content="https://kafisatz.ch/wp-content/uploads/2025/11/hauptbild-web-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Kafisatz Bar Café Press",
+  "url": "https://kafisatz.ch/",
+  "image": "https://kafisatz.ch/wp-content/uploads/2024/01/kafisatz-logo-weiss.png",
+  "telephone": "+41 52 202 46 00",
+  "email": "info@kafisatz.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Spitalgasse 1",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday"], "opens": "08:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday"], "opens": "07:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday"], "opens": "08:00", "closes": "23:59" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "07:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "08:30", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "12:00", "closes": "22:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "1130"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#faf8f3;
+    --surface:#ffffff;
+    --fg:#1a1a18;
+    --muted:#55524a;
+    --brand:#a9382b;
+    --accent:#2a4d6e;
+    --rule: rgba(26,26,24,0.18);
+    --maxw:1240px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.75vw + 12.8px, 17.5px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Source Serif 4', ui-serif, Georgia, serif; font-weight:600; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  ::selection{ background:var(--brand); color:#fff; }
+  a[href^="tel:"], a[href^="mailto:"]{ text-underline-offset:2px; }
+  section[id]{ scroll-margin-top:6.4rem; }
+  .kicker{
+    font-family:'IBM Plex Mono', ui-monospace, monospace; font-weight:600;
+    text-transform:uppercase; letter-spacing:0.12em; font-size:0.72rem; color:var(--brand);
+  }
+  .rule{ border:none; border-top:2px solid var(--fg); margin:0; }
+  .rule.thin{ border-top:1px solid var(--rule); }
+  .skip-link{ position:absolute; left:0.6rem; top:-3rem; z-index:100; background:var(--fg); color:#fff; padding:0.6rem 1rem; font-weight:700; text-decoration:none; transition:top .2s ease; }
+  .skip-link:focus{ top:0.6rem; }
+
+  /* ---------- Masthead ---------- */
+  header.masthead{ position:sticky; top:0; z-index:60; background:var(--bg); }
+  .masthead-top{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.6rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--muted); }
+  .masthead-main{ padding:0.8rem 0 0.9rem; display:flex; align-items:baseline; justify-content:space-between; gap:1.2rem; flex-wrap:wrap; }
+  .masthead-title{ font-family:'Source Serif 4',serif; font-weight:700; font-size:clamp(2rem,5.5vw,3.6rem); letter-spacing:-0.01em; text-decoration:none; color:var(--fg); }
+  .masthead-strap{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; color:var(--muted); text-align:right; max-width:24ch; }
+  nav.section-bar{ display:flex; gap:1.2rem; flex-wrap:wrap; padding:0.7rem 0; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; }
+  nav.section-bar a{ text-decoration:none; color:var(--fg); font-weight:600; padding-bottom:2px; }
+  nav.section-bar a:hover{ border-bottom:2px solid var(--brand); }
+  nav.section-bar a[aria-current="true"]{ color:var(--brand); border-bottom:2px solid var(--brand); }
+  .navtoggle{ display:none; background:var(--fg); color:var(--bg); border:none; padding:0.5rem 1rem; font-weight:700; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; }
+
+  /* ---------- Hero / lead story ---------- */
+  .lead{ padding:clamp(1.6rem,4vw,3rem) 0; }
+  .lead-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(1.6rem,4vw,3rem); align-items:start; }
+  .lead h1{ font-size:clamp(2.1rem,4.6vw,3.6rem); line-height:1.06; margin-top:0.5rem; }
+  .deck{ font-size:clamp(1.02rem,1.6vw,1.25rem); color:var(--muted); font-weight:500; margin-top:0.9rem; max-width:48ch; }
+  .byline{ font-family:'IBM Plex Mono',monospace; font-size:0.74rem; color:var(--muted); margin-top:1.2rem; display:flex; gap:1.2rem; flex-wrap:wrap; }
+  .lead-cta{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.4rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:700; text-decoration:none; padding:0.8rem 1.4rem; border:2px solid var(--fg); }
+  .btn.solid{ background:var(--fg); color:var(--bg); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  figure.lead-photo{ margin:0; border:1px solid var(--rule); }
+  figure.lead-photo img{ width:100%; height:clamp(240px,32vw,420px); object-fit:cover; }
+  figure.lead-photo figcaption{ font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--muted); padding:0.5rem 0.7rem; border-top:1px solid var(--rule); }
+
+  /* ---------- Ribbon (signature module: jetzt offen) ---------- */
+  .ribbon{ background:var(--fg); color:var(--bg); padding:0.9rem 0; }
+  .ribbon-inner{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:0.82rem; font-weight:600; }
+  .ribbon .tag{ background:var(--brand); color:#fff; padding:0.25rem 0.6rem; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; }
+  .ribbon .dot{ width:0.6rem; height:0.6rem; border-radius:50%; background:#7fbf6a; display:inline-block; }
+  .ribbon.closed .dot{ background:#d97a6a; }
+
+  /* ---------- Kurzmeldungen (news briefs, built from real USPs) ---------- */
+  .brief-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:0; border-top:2px solid var(--fg); }
+  .brief{ padding:1.3rem 1.4rem; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+  .brief:last-child{ border-right:none; }
+  .brief .kicker{ display:block; margin-bottom:0.4rem; }
+  .brief h3{ font-size:1.05rem; line-height:1.3; }
+
+  /* ---------- Pull-quote break ---------- */
+  .pull-quote{ text-align:center; padding:clamp(2.4rem,6vw,4rem) 0; }
+  .pull-quote blockquote{ margin:0; font-family:'Source Serif 4',serif; font-weight:600; font-style:italic; font-size:clamp(1.7rem,4.4vw,2.8rem); line-height:1.25; max-width:24ch; margin-inline:auto; }
+  .pull-quote .attribution{ display:block; margin-top:1rem; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-style:normal; }
+
+  /* ---------- Section shell ---------- */
+  section{ padding:clamp(2rem,5vw,3.6rem) 0; }
+  .section-head{ margin-bottom:clamp(1.3rem,3vw,2rem); }
+  .section-head h2{ font-size:clamp(1.6rem,3vw,2.3rem); }
+  .section-head .kicker{ display:block; margin-bottom:0.4rem; }
+
+  /* ---------- About article + sidebar ---------- */
+  .article-grid{ display:grid; grid-template-columns:1.6fr 1fr; gap:clamp(1.6rem,4vw,3rem); align-items:start; }
+  .article-body{ column-width: 280px; column-gap: 2.2rem; }
+  .article-body p{ margin:0 0 1rem; }
+  .article-body p:first-child::first-letter{
+    font-family:'Source Serif 4',serif; font-weight:700; font-size:3.4rem; float:left;
+    line-height:0.85; padding-right:0.5rem; padding-top:0.2rem; color:var(--brand);
+  }
+  .sidebar{ background:var(--surface); border:1px solid var(--rule); padding:1.3rem 1.4rem; }
+  .sidebar h3{ font-size:1.05rem; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.8rem; }
+  .sidebar ul{ margin:0; padding:0; list-style:none; display:grid; gap:0.65rem; }
+  .sidebar li{ padding-top:0.65rem; border-top:1px solid var(--rule); font-weight:600; font-size:0.92rem; }
+  .sidebar li:first-child{ border-top:none; padding-top:0; }
+
+  /* ---------- Gallery / photo essay ---------- */
+  .photo-credit{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--muted); margin:-0.6rem 0 1.4rem; }
+  .photo-essay{ display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:0.6rem; margin-bottom:0.6rem; }
+  .photo-essay figure:first-child{ grid-row:span 2; }
+  .photo-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:0.6rem; }
+  .photo-essay figure, .photo-grid figure{ margin:0; border:1px solid var(--rule); overflow:hidden; position:relative; }
+  .photo-essay img, .photo-grid img{ width:100%; height:100%; min-height:150px; object-fit:cover; display:block; transition:transform .35s ease; }
+  .photo-essay figure:first-child img{ min-height:100%; }
+  .photo-essay figure:hover img, .photo-grid figure:hover img{ transform:scale(1.05); }
+  @media (prefers-reduced-motion: reduce){ .photo-essay figure:hover img, .photo-grid figure:hover img{ transform:none; } }
+  figure.pe figcaption, .photo-grid figcaption{
+    position:absolute; left:0; right:0; bottom:0; background:rgba(26,26,24,0.72); color:#fff;
+    font-family:'IBM Plex Mono',monospace; font-size:0.66rem; padding:0.3rem 0.5rem;
+  }
+
+  /* ---------- Menu / classifieds columns ---------- */
+  .menu-columns{ column-width:260px; column-gap:2.2rem; }
+  .menu-block{ break-inside:avoid; margin-bottom:1.6rem; }
+  .menu-block h3{ font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.82rem; color:var(--brand); border-bottom:2px solid var(--fg); padding-bottom:0.4rem; margin-bottom:0.7rem; }
+  .menu-block ul{ list-style:none; margin:0; padding:0; }
+  .menu-block li{ padding:0.5rem 0; border-bottom:1px dotted var(--rule); font-weight:600; }
+  .menu-block li .d{ display:block; font-weight:400; color:var(--muted); font-size:0.88rem; margin-top:0.15rem; }
+  .menu-block li .p{ float:right; font-weight:700; color:var(--brand); }
+  .menu-note{ font-size:0.85rem; color:var(--muted); margin-top:0.8rem; }
+
+  /* ---------- Hours table (TV-guide style) ---------- */
+  table.hours{ width:100%; border-collapse:collapse; }
+  table.hours th{ text-align:left; font-family:'IBM Plex Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; padding-bottom:0.6rem; border-bottom:2px solid var(--fg); }
+  table.hours td{ padding:0.7rem 0.4rem 0.7rem 0; border-bottom:1px solid var(--rule); font-weight:600; }
+  table.hours tr.today td{ background:rgba(169,56,43,0.06); font-weight:800; }
+  table.hours td:first-child{ font-family:'IBM Plex Mono',monospace; font-weight:600; }
+
+  /* ---------- Ratings infographic ---------- */
+  .stat-strip{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); }
+  .stat-box{ background:var(--surface); padding:1.6rem 1.6rem; }
+  .stat-box .n{ font-family:'Source Serif 4',serif; font-weight:700; font-size:clamp(2.2rem,5vw,3.2rem); color:var(--brand); line-height:1; }
+  .stat-box p{ margin:0.5rem 0 0; font-weight:600; color:var(--muted); }
+  .stat-bar{ height:10px; background:var(--rule); margin-top:0.9rem; overflow:hidden; }
+  .stat-bar span{ display:block; height:100%; width:0; background:var(--brand); transition:width 1.1s ease; }
+  .reveal.in .stat-bar span{ width:var(--fill, 0%); }
+  @media (prefers-reduced-motion: reduce){ .stat-bar span{ transition:none; width:var(--fill, 0%); } }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{ display:grid; gap:0; border-top:2px solid var(--fg); }
+  .faq-item{ border-bottom:1px solid var(--rule); padding:1.1rem 0; }
+  .faq-item h3{ font-size:1.02rem; display:flex; gap:0.6rem; align-items:baseline; }
+  .faq-item h3 .q-mark{ font-family:'IBM Plex Mono',monospace; color:var(--brand); font-weight:700; }
+  .faq-item p{ margin:0.5rem 0 0; color:var(--muted); max-width:64ch; }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1.3fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .contact-card{ border:1px solid var(--rule); padding:clamp(1.4rem,3vw,2rem); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .contact-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .contact-card .row span.k{ font-family:'IBM Plex Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); }
+  .contact-card a{ text-decoration:none; font-weight:700; }
+  .contact-card a:hover{ color:var(--brand); }
+  .mapwrap{ border:1px solid var(--rule); overflow:hidden; }
+  .mapwrap iframe{ width:100%; height:100%; min-height:290px; border:0; display:block; }
+
+  /* ---------- Footer ---------- */
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:var(--bg); }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:600; font-size:0.88rem; }
+  footer.site .kicker{ color:#d99a8c; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.75; font-family:'IBM Plex Mono',monospace; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:#d99a8c; }
+  .footer-columns{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.6rem; margin-top:1.4rem; padding-top:1.4rem; border-top:1px solid rgba(255,255,255,0.16); }
+  .footer-columns h4{ font-family:'IBM Plex Mono',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:#d99a8c; margin:0 0 0.7rem; }
+  .footer-columns ul{ list-style:none; margin:0; padding:0; display:grid; gap:0.5rem; font-size:0.85rem; }
+  .back-to-top{ display:inline-block; margin-top:1.6rem; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.06em; color:#d99a8c; }
+
+  @media print{
+    .callbar, .navtoggle, header.masthead, .ribbon{ display:none; }
+    body{ background:#fff; color:#000; }
+    a{ text-decoration:underline; }
+  }
+
+  /* ---------- Sticky call bar ---------- */
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.85rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:700; font-family:'IBM Plex Mono',monospace; font-size:0.9rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.2rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:900px){
+    .lead-grid{ grid-template-columns:1fr; }
+    .article-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .masthead-main{ flex-direction:column; align-items:flex-start; gap:0.3rem; }
+    .masthead-strap{ text-align:left; }
+  }
+  @media (max-width:720px){
+    nav.section-bar{ display:none; }
+    header.masthead.open nav.section-bar{ display:flex; flex-direction:column; gap:0.6rem; padding-bottom:0.9rem; }
+    .navtoggle{ display:inline-block; }
+    .article-body{ column-width:100%; }
+    .menu-columns{ column-width:100%; }
+    .photo-essay{ grid-template-columns:1fr 1fr; }
+    .photo-essay figure:first-child{ grid-column:span 2; grid-row:auto; }
+    .brief-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:480px){
+    .brief-grid{ grid-template-columns:1fr; }
+    .photo-essay{ grid-template-columns:1fr; }
+    .photo-essay figure:first-child{ grid-column:auto; }
+  }
+  @media (max-width:400px){
+    .masthead-title{ font-size:1.9rem; }
+    .lead h1{ font-size:1.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Zum Inhalt springen</a>
+
+<header class="masthead" id="siteheader">
+  <div class="wrap masthead-top">
+    <span id="dateline">Ausgabe von heute · Winterthur</span>
+    <span>Spitalgasse 1, 8400 Winterthur</span>
+  </div>
+  <hr class="rule">
+  <div class="wrap masthead-main">
+    <a class="masthead-title" href="#top">KAFISATZ</a>
+    <p class="masthead-strap">Bar · Café · Press — Ihr Treffpunkt in Winterthur</p>
+  </div>
+  <hr class="rule thin">
+  <div class="wrap" style="display:flex; align-items:center; justify-content:space-between;">
+    <nav class="section-bar" id="pillnav" aria-label="Rubriken">
+      <a href="#standort">Standort</a>
+      <a href="#kurzmeldungen">Kurzmeldungen</a>
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#oeffnungszeiten">Öffnungszeiten</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#fragen">Fragen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Rubriken</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- LEAD STORY -->
+  <section class="lead">
+    <div class="wrap lead-grid">
+      <div>
+        <p class="kicker reveal">Treffpunkt Winterthur · Altstadt</p>
+        <h1 class="reveal">Ihr Treffpunkt in Winterthur.</h1>
+        <p class="deck reveal">Das Café spezialisiert sich auf Kaffee, Mittagessen und Apéro mit
+        regionalen Zutaten, drinnen und auf sonniger Terrasse.</p>
+        <div class="byline reveal">
+          <span>Spitalgasse 1, 8400 Winterthur</span>
+          <span>+41 52 202 46 00</span>
+        </div>
+        <div class="lead-cta reveal">
+          <a class="btn solid" href="tel:+41522024600">Anrufen</a>
+          <a class="btn ghost" href="#speisekarte">Zur Speisekarte ↓</a>
+        </div>
+      </div>
+      <figure class="lead-photo reveal">
+        <img src="https://kafisatz.ch/wp-content/uploads/2025/11/hauptbild-web-1.jpg" alt="Kafisatz Bar Café Press in Winterthur" loading="eager"
+          onerror="this.closest('figure').style.display='none'">
+        <figcaption>Kafisatz, Spitalgasse 1, 8400 Winterthur</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: Jetzt offen ribbon, computed from real hours incl. Fr/Sa past midnight -->
+  <div class="ribbon" id="ribbon">
+    <div class="wrap ribbon-inner">
+      <span class="tag">Live</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span id="ribbon-text">Status wird berechnet …</span>
+    </div>
+  </div>
+
+  <!-- STANDORT / ABOUT -->
+  <section id="standort">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Reportage</span>
+        <h2>Kaffee, Mittagessen und Apéro — mit regionalen Zutaten</h2>
+      </div>
+      <div class="article-grid">
+        <div class="article-body reveal">
+          <p>Das Café spezialisiert sich auf Kaffee, Mittagessen und Apéro mit regionalen
+          Zutaten, drinnen und auf sonniger Terrasse. Als Treffpunkt in Winterthurs Altstadt
+          bringt der Kafisatz Bar-Service von morgens bis spät in den Abend mit einer Karte,
+          die auf Antipasti, Salate, Suppen, Quiches und Focaccias setzt.</p>
+          <p>Die verlängerten Öffnungszeiten am Wochenende machen den Kafisatz zu einem festen
+          Punkt im Ausgang der Altstadt — von der ersten Tasse Kaffee am Morgen bis zum letzten
+          Apéro am Abend. Als etablierter Treffpunkt in der Winterthurer Altstadt sind zudem
+          Geschenkkarten erhältlich.</p>
+        </div>
+        <aside class="sidebar reveal">
+          <h3>Auf einen Blick</h3>
+          <ul>
+            <li>Treffpunkt mit sonniger Terrasse</li>
+            <li>Fokus auf regionale Zutaten</li>
+            <li>Kaffee-Spezialität des Hauses</li>
+            <li>Voller Barservice vom Frühstück bis spät abends</li>
+            <li>Geschenkkarten erhältlich</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- KURZMELDUNGEN — four briefs built directly from the real USP list -->
+  <section id="kurzmeldungen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Kurzmeldungen</span>
+        <h2>Vier Zeilen über den Kafisatz</h2>
+      </div>
+      <div class="brief-grid reveal">
+        <div class="brief">
+          <span class="kicker">Nº 1</span>
+          <h3>Treffpunkt mit sonniger Terrasse</h3>
+        </div>
+        <div class="brief">
+          <span class="kicker">Nº 2</span>
+          <h3>Regionale Zutaten im Fokus</h3>
+        </div>
+        <div class="brief">
+          <span class="kicker">Nº 3</span>
+          <h3>Kaffee als Spezialität des Hauses</h3>
+        </div>
+        <div class="brief">
+          <span class="kicker">Nº 4</span>
+          <h3>Voller Barservice — vom Frühstück bis spät abends</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <div class="pull-quote">
+    <div class="wrap">
+      <blockquote class="reveal">
+        „Ihr Treffpunkt in Winterthur.“
+        <span class="attribution">— Kafisatz Bar Café Press</span>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Bildstrecke</span>
+        <h2>Impressionen aus dem Kafisatz</h2>
+      </div>
+      <p class="photo-credit reveal">Alle Fotos: kafisatz.ch</p>
+
+      <div class="photo-essay reveal">
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2025/12/hummus-1.png" alt="Impression 01 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 01</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2025/12/catering-sepia.jpg" alt="Impression 02 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 02</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2025/12/team1.jpg" alt="Impression 03 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 03</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2025/07/home-2.jpg" alt="Impression 04 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 04</figcaption>
+        </figure>
+      </div>
+
+      <div class="photo-grid reveal">
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2025/11/michela-port.2.jpg" alt="Impression 05 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 05</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2024/02/impressionen-8.jpg" alt="Impression 06 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 06</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2024/02/impressionen-7.jpg" alt="Impression 07 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 07</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2024/02/impressionen-6.jpg" alt="Impression 08 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 08</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2024/02/impressionen-5.jpg" alt="Impression 09 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 09</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2024/02/impressionen-4.jpg" alt="Impression 10 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 10</figcaption>
+        </figure>
+        <figure class="pe">
+          <img src="https://kafisatz.ch/wp-content/uploads/2024/02/impressionen-1.jpg" alt="Impression 11 aus dem Kafisatz" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Impression 11</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEISEKARTE -->
+  <section id="speisekarte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Rubrik Küche</span>
+        <h2>Speisekarte</h2>
+      </div>
+      <div class="menu-columns reveal">
+        <div class="menu-block">
+          <h3>Antipasti</h3>
+          <ul><li>Antipasti-Platten</li></ul>
+        </div>
+        <div class="menu-block">
+          <h3>Kalte &amp; warme Snacks</h3>
+          <ul><li>Kalte &amp; warme Snacks</li></ul>
+        </div>
+        <div class="menu-block">
+          <h3>Speisen</h3>
+          <ul>
+            <li>Salate</li>
+            <li>Suppen</li>
+            <li>Quiches</li>
+            <li>Focaccias</li>
+          </ul>
+        </div>
+      </div>
+      <p class="menu-note reveal">Einzelne Preise sind uns für diese Positionen nicht vorgelegen —
+      die Kategorien entsprechen der tatsächlichen Karte des Hauses.</p>
+    </div>
+  </section>
+
+  <!-- ÖFFNUNGSZEITEN -->
+  <section id="oeffnungszeiten">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Programm der Woche</span>
+        <h2>Öffnungszeiten</h2>
+      </div>
+      <table class="hours reveal">
+        <thead><tr><th>Tag</th><th>Zeit</th></tr></thead>
+        <tbody id="hours-body">
+          <tr data-days="1"><td>Mo</td><td>08:00–00:00</td></tr>
+          <tr data-days="2"><td>Di</td><td>07:00–00:00</td></tr>
+          <tr data-days="3,4"><td>Mi–Do</td><td>08:00–00:00</td></tr>
+          <tr data-days="5"><td>Fr</td><td>07:00–01:00</td></tr>
+          <tr data-days="6"><td>Sa</td><td>08:30–01:00</td></tr>
+          <tr data-days="0"><td>So</td><td>12:00–22:00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BEWERTUNGEN -->
+  <section id="bewertungen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Stimmen</span>
+        <h2>Was Gäste sagen</h2>
+      </div>
+      <div class="stat-strip reveal">
+        <div class="stat-box">
+          <p class="n">4.3</p>
+          <p>von 5 Sternen auf Google</p>
+          <div class="stat-bar" id="rating-bar" style="--fill:86%;"><span></span></div>
+        </div>
+        <div class="stat-box">
+          <p class="n">1&#8239;130</p>
+          <p>Google-Bewertungen insgesamt</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — answers sourced strictly from the JSON fields above -->
+  <section id="fragen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Nachgefragt</span>
+        <h2>Häufige Fragen</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <h3><span class="q-mark">F</span> Gibt es eine Terrasse?</h3>
+          <p>Ja — der Kafisatz ist als Treffpunkt mit sonniger Terrasse beschrieben, drinnen und
+          draussen nutzbar.</p>
+        </div>
+        <div class="faq-item">
+          <h3><span class="q-mark">F</span> Woher stammen die Zutaten?</h3>
+          <p>Das Café legt den Fokus auf regionale Zutaten — bei Kaffee, Mittagessen und Apéro.</p>
+        </div>
+        <div class="faq-item">
+          <h3><span class="q-mark">F</span> Bis wann hat der Kafisatz am Freitag offen?</h3>
+          <p>Freitags von 07:00 bis 01:00 Uhr — die längsten Öffnungszeiten der Woche neben dem
+          Samstag.</p>
+        </div>
+        <div class="faq-item">
+          <h3><span class="q-mark">F</span> Gibt es auch Apéro am Abend?</h3>
+          <p>Ja — Kaffee, Mittagessen und Apéro gehören laut Beschreibung zum Angebot, mit vollem
+          Barservice bis spät in den Abend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Anschrift &amp; Kontakt</span>
+        <h2>Kontakt &amp; Lage</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="row"><span class="k">Adresse</span><span>Spitalgasse 1, 8400 Winterthur</span></div>
+          <div class="row"><span class="k">Telefon</span><a href="tel:+41522024600">+41 52 202 46 00</a></div>
+          <div class="row"><span class="k">E-Mail</span><a href="mailto:info@kafisatz.ch">info@kafisatz.ch</a></div>
+          <div class="row"><span class="k">Web</span><a href="https://kafisatz.ch/" target="_blank" rel="noopener">kafisatz.ch</a></div>
+          <div class="row"><span class="k">Anfahrt</span><span>In der Winterthurer Altstadt, direkt über die Karte rechts auffindbar.</span></div>
+          <div class="lead-cta" style="margin-top:0.2rem;">
+            <a class="btn ghost" style="padding:0.6rem 1.1rem; font-size:0.85rem;"
+               href="https://maps.google.com/maps?daddr=Spitalgasse%201%2C%208400%20Winterthur" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte Kafisatz" loading="lazy"
+            src="https://maps.google.com/maps?q=Kafisatz%20Spitalgasse%201%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p class="kicker">Kafisatz Bar Café Press</p>
+    <div class="foot-grid">
+      <div>Kafisatz Bar Café Press<br>Spitalgasse 1, 8400 Winterthur</div>
+      <div><a href="tel:+41522024600">+41 52 202 46 00</a><br><a href="mailto:info@kafisatz.ch">info@kafisatz.ch</a></div>
+      <div>Mo 08–00 · Di 07–00 · Mi–Do 08–00<br>Fr 07–01 · Sa 08:30–01 · So 12–22</div>
+    </div>
+    <div class="footer-columns">
+      <div>
+        <h4>Rubriken</h4>
+        <ul>
+          <li><a href="#standort">Standort</a></li>
+          <li><a href="#kurzmeldungen">Kurzmeldungen</a></li>
+          <li><a href="#speisekarte">Speisekarte</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service</h4>
+        <ul>
+          <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
+          <li><a href="#bewertungen">Bewertungen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Direkt</h4>
+        <ul>
+          <li><a href="tel:+41522024600">Anrufen</a></li>
+          <li><a href="mailto:info@kafisatz.ch">E-Mail schreiben</a></li>
+          <li><a href="https://kafisatz.ch/" target="_blank" rel="noopener">kafisatz.ch</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="back-to-top" href="#top">↑ Zum Seitenanfang</a>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+41522024600" aria-label="Kafisatz anrufen">☎ Anrufen · +41 52 202 46 00</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* Masthead dateline — real "today", formatted like a paper's dateline */
+  var datelineEl = document.getElementById('dateline');
+  if (datelineEl) {
+    try {
+      var d = new Date();
+      var fmt = new Intl.DateTimeFormat('de-CH', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+      datelineEl.textContent = fmt.format(d) + ' · Winterthur';
+    } catch(e) { /* keep fallback text */ }
+  }
+
+  /* SIGNATURE MODULE: "Jetzt offen" — computed live from the real weekly hours,
+     including the Fr/Sa blocks that run past midnight. */
+  var blocks = {
+    1: { open: 8*60,  close: 24*60 },        // Mo 08:00–00:00
+    2: { open: 7*60,  close: 24*60 },        // Di 07:00–00:00
+    3: { open: 8*60,  close: 24*60 },        // Mi 08:00–00:00
+    4: { open: 8*60,  close: 24*60 },        // Do 08:00–00:00
+    5: { open: 7*60,  close: 25*60 },        // Fr 07:00–01:00 (+1)
+    6: { open: 8*60+30, close: 25*60 },      // Sa 08:30–01:00 (+1)
+    0: { open: 12*60, close: 22*60 }         // So 12:00–22:00
+  };
+  var dayNames = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+
+  function computeStatus(){
+    var now = new Date();
+    var day = now.getDay();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var isOpen = false;
+    var todays = blocks[day];
+    if (todays && mins >= todays.open && mins < Math.min(todays.close, 24*60)) {
+      isOpen = true;
+    }
+    var prevDay = (day + 6) % 7;
+    var prev = blocks[prevDay];
+    if (prev && prev.close > 24*60 && mins < (prev.close - 24*60)) {
+      isOpen = true;
+    }
+    var ribbon = document.getElementById('ribbon');
+    var text = document.getElementById('ribbon-text');
+    if (isOpen) {
+      ribbon.classList.remove('closed');
+      var closeToday = todays ? todays.close : null;
+      var closeLabel = '';
+      if (closeToday !== null) {
+        var hh = Math.floor((closeToday % (24*60)) / 60);
+        var mm = closeToday % 60;
+        closeLabel = ' — heute geöffnet bis ' + (hh < 10 ? '0'+hh : hh) + ':' + (mm < 10 ? '0'+mm : mm) + ' Uhr.';
+      }
+      text.textContent = 'Jetzt geöffnet' + closeLabel;
+    } else {
+      ribbon.classList.add('closed');
+      text.textContent = todays
+        ? 'Gerade geschlossen — heute ab ' + dayNames[day] + ' ' + Math.floor(todays.open/60) + ':' + (todays.open%60===0?'00':todays.open%60) + ' Uhr geöffnet.'
+        : 'Heute geschlossen.';
+    }
+    document.querySelectorAll('#hours-body tr').forEach(function(row){
+      var rowDays = row.getAttribute('data-days').split(',').map(Number);
+      row.classList.toggle('today', rowDays.indexOf(day) !== -1);
+    });
+  }
+  computeStatus();
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Rubriken scrollspy — highlights the section currently in view in the nav bar */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.section-bar a'));
+  var spySections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if ('IntersectionObserver' in window && spySections.length) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var id = '#' + en.target.id;
+        navLinks.forEach(function(a){
+          a.setAttribute('aria-current', a.getAttribute('href') === id ? 'true' : 'false');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    spySections.forEach(function(sec){ spy.observe(sec); });
+  }
+})();
+</script>
+
+</body>
+</html>
