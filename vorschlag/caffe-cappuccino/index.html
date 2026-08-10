@@ -185,6 +185,16 @@
   .hero-stat .num{ font-size:clamp(2.4rem,3vw+1rem,3.6rem); font-weight:700; line-height:1; }
   .hero-stat .cap{ font-family:'IBM Plex Mono', monospace; font-size:.78rem; color:var(--muted); margin-top:.5em; text-transform:uppercase; letter-spacing:.06em;}
 
+  /* ===== hero plate ===== */
+  .heroplate{ padding-top:clamp(8px,1.5vw,18px); }
+  .heroplate-frame{ position:relative; border:1px solid var(--fg); padding:clamp(10px,1.4vw,18px); background:var(--surface); }
+  .heroplate-frame img{ display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; }
+  .heroplate-meta{ display:flex; justify-content:space-between; gap:1.5em; flex-wrap:wrap;
+    margin-top:clamp(10px,1.4vw,16px); font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+  .heroplate-meta .lot{ color:var(--fg); }
+  @media (max-width:640px){ .heroplate-frame{ padding:8px; } .heroplate-meta{ font-size:.66rem; } }
+
   /* ===== exhibition wall ===== */
   .wall{
     position:relative;
@@ -399,6 +409,22 @@
           <div class="cap">Internationale Biersorten im Haus</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- HERO PLATE -->
+  <section class="heroplate">
+    <div class="wrap">
+      <figure class="heroplate-frame reveal" style="margin:0;">
+        <img src="hero-cappuccino.webp" width="1376" height="768"
+             alt="Cappuccino mit dem Schriftzug Winterthur in Kakaopulver auf dem Milchschaum"
+             fetchpriority="high" decoding="async"
+             onerror="var p=this.closest('.heroplate'); if(p)p.style.display='none';">
+        <figcaption class="heroplate-meta">
+          <span class="lot">Cappuccino, Caffè Ferrari</span>
+          <span>Illustration · Gestaltungsvorschlag, kein Foto des Betriebs</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
