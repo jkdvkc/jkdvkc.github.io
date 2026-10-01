@@ -140,10 +140,11 @@
   .hero h1 .hl{color:var(--cyan)}
   .hero p.lead{color:var(--muted);font-size:clamp(1rem,1.6vw,1.18rem);max-width:46ch;margin:20px 0 26px}
   .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
-  .trust-row{display:flex;flex-wrap:wrap;gap:22px;font-family:'JetBrains Mono';font-size:.8rem;color:var(--muted)}
+  .trust-row{display:flex;flex-wrap:wrap;gap:12px 22px;font-family:'JetBrains Mono';font-size:.8rem;color:var(--muted)}
   .trust-row b{color:var(--ink);font-weight:700}
   .trust-row span{display:flex;align-items:center;gap:8px}
   .trust-row span::before{content:"";width:6px;height:6px;background:var(--cyan);border-radius:50%}
+  .proof-note{max-width:78ch;margin-top:8px;color:var(--muted);font-size:.78rem}
   .service-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px auto 0}
   .service-path{display:block;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--panel);transition:border-color .2s,transform .2s}
   .service-path:hover{border-color:var(--cyan);transform:translateY(-2px)}
@@ -273,9 +274,12 @@
     </a>
     <a href="#kontakt" class="btn btn-ghost">Anfrage senden</a>
   </div>
-  <div class="trust-row" aria-label="Berufserfahrung">
+  <div class="trust-row" aria-label="Erfahrung und Kundenfeedback">
     <span><b>15+</b> Jahre IT-Erfahrung</span>
+    <span><b>3’000+</b> betreute Kundinnen und Kunden</span>
+    <span><b>&gt;97%</b> Kundenzufriedenheit</span>
   </div>
+  <p class="proof-note">Erfahrungs- und Zufriedenheitsangaben beziehen sich auf meine bisherige IT-Arbeit und Kundenprojekte; Bewertungen einzelner Plattformen werden separat ausgewiesen.</p>
 </section>
 
 <section class="wrap service-paths" aria-label="IT-Dienstleistungen">
