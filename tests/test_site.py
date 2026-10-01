@@ -83,6 +83,12 @@ class SiteMetadataTests(unittest.TestCase):
                 self.assertTrue(metadata.canonical)
                 self.assertEqual(metadata.meta.get("robots"), ["index, follow"])
 
+    def test_confirmed_experience_metrics_are_visible_on_homepage(self):
+        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("3’000+</b> betreute Kundinnen und Kunden", homepage)
+        self.assertIn("&gt;97%</b> Kundenzufriedenheit", homepage)
+        self.assertIn("Erfahrungs- und Zufriedenheitsangaben beziehen sich auf meine bisherige IT-Arbeit und Kundenprojekte", homepage)
+
     def test_json_ld_is_valid_json(self):
         for page in ROOT.glob("**/*.html"):
             for raw in parse_page(page).jsonld:
