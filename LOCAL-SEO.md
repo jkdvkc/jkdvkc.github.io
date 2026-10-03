@@ -4,7 +4,7 @@ The website changes do not edit Google, directory, or analytics accounts. Comple
 
 ## Google Business Profile
 
-- Confirm that the existing profile belongs to David / Swiss Net Tech and uses the exact real-world business name; do not add keywords to the name.
+- Confirm that the existing profile belongs to David / Jakoda Dienstleistungen and uses the exact real-world business name; do not add keywords to the name.
 - Because this is a service-area business and customers are not received at the registered home address, configure the profile as a service-area business and hide the address from public display. Add only areas that are genuinely served. Do not invent a public storefront or opening hours.
 - Confirm the primary category, telephone, website (`https://jakoda.ch/`) and actual services in the profile. Keep the displayed business details consistent with the website and legal registration.
 - Ask real customers for an honest review after completed work, using Google's own review link. Never offer incentives, filter for positive reviews, write reviews for customers or combine review counts from Ricardo, Jaspravim and Google.

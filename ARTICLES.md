@@ -35,7 +35,7 @@ The weekly recurrence belongs to Jarvis, not this static website repository. Thi
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Specific question and useful outcome | Swiss Net Tech</title>
+  <title>Specific question and useful outcome | Jakoda Dienstleistungen</title>
   <meta name="description" content="A factual one-sentence summary of the answer.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://jakoda.ch/ratgeber/short-topic-slug/">

@@ -1,4 +1,4 @@
-# Swiss Net Tech website
+# Jakoda Dienstleistungen website
 
 Static German-Swiss website for IT support in Winterthur and the Ostschweiz, deployed through GitHub Pages at `jakoda.ch`.
 
