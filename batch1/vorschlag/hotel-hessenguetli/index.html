@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Hessengüetli – Winterthur · 052 234 32 32</title>
+<meta name="description" content="Hotel Hessengüetli in Winterthur. Telefon 052 234 32 32. Bewertung 4.1 aus 47 Google-Rezensionen. Die eigene Website ist derzeit durch robots.txt gesperrt.">
+<meta property="og:title" content="Hotel Hessengüetli, Winterthur">
+<meta property="og:description" content="Hotel in Winterthur. Telefon 052 234 32 32. Nur bestätigte Angaben.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Hessengüetli",
+  "telephone": "+41 52 234 32 32",
+  "address": { "@type": "PostalAddress", "addressLocality": "Winterthur", "addressCountry": "CH" },
+  "url": "https://hessengueetli.ch/",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.1", "reviewCount": "47" }
+}
+</script>
+<style>
+  :root{
+    --bg:#f6ecd9;
+    --surface:#fbf5e8;
+    --fg:#2c2013;
+    --muted:#5b4a34;
+    --brand:#4d6238;
+    --accent:#a8532f;
+    --line:#c9b590;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Literata',Georgia,serif;
+    font-size:clamp(15px,0.9vw + 12px,17px);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Literata',Georgia,serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0;
+    color:var(--fg);
+  }
+  h1{font-size:clamp(2.4rem,6.2vw + 1rem,4.6rem);}
+  h2{font-size:clamp(1.5rem,2.6vw + 1rem,2.1rem);}
+  h3{font-size:clamp(1.05rem,1.2vw + 1rem,1.25rem);}
+  p{margin:0 0 1em;color:var(--muted);}
+  a{color:inherit;}
+  .hand{font-family:'Caveat',cursive;font-weight:600;color:var(--accent);}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--fg);color:var(--bg);padding:0.75em 1.2em;z-index:200;}
+  .skip-link:focus{left:1rem;top:1rem;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:clamp(1.2rem,4vw,3rem);}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,236,217,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding-block:0.9rem;}
+  .brandmark{font-weight:600;font-size:clamp(1rem,1.4vw + 0.7rem,1.2rem);}
+  .nav-call{
+    border:1.5px solid var(--brand);color:var(--brand);
+    padding:0.5em 1em;border-radius:2px;
+    font-size:0.85rem;font-weight:600;text-decoration:none;
+  }
+  .nav-call:hover{background:var(--brand);color:#fff;}
+  .nav-links{
+    display:flex;gap:clamp(1rem,2vw,1.6rem);align-items:center;
+    list-style:none;margin:0;padding:0;font-size:0.9rem;
+  }
+  .nav-links a{text-decoration:none;font-weight:600;}
+  .nav-links a:hover{color:var(--accent);}
+  @media (max-width:700px){
+    .nav-links{display:none;}
+  }
+
+  /* fence divider */
+  .fence{
+    height:22px;
+    background-image:repeating-linear-gradient(90deg, var(--muted) 0 4px, transparent 4px 22px);
+    background-position:bottom;
+    opacity:0.45;
+  }
+
+  main{display:block;}
+  section{padding-block:clamp(2.6rem,7vw,5rem);}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.is-visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1!important;transform:none!important;transition:none!important;} }
+
+  /* the plot: dashed-border beds */
+  .plot{
+    border:2px dashed var(--line);
+    border-radius:10px;
+    background:var(--surface);
+    padding:clamp(1.6rem,3.5vw,2.6rem);
+  }
+
+  /* hero */
+  .hero-plot{position:relative;}
+  .hero-plot .eyebrow{
+    font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--brand);font-weight:600;display:block;margin-bottom:0.8em;
+  }
+  .margin-note{
+    margin-top:1.6rem;
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    color:var(--accent);
+    transform:rotate(-1deg);
+    max-width:32em;
+  }
+  .hero-facts{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1.6rem;font-family:'Literata',serif;font-size:0.98rem;color:var(--fg);}
+  .hero-facts strong{font-weight:600;}
+
+  /* fakten posts row */
+  .posts{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:center;}
+  .post{
+    text-align:center;min-width:8.5em;
+    padding-top:0.4rem;
+  }
+  .post .cap{
+    width:1.1em;height:1.1em;margin:0 auto 0.6em;
+    background:var(--brand);
+    border-radius:2px 2px 50% 50%;
+  }
+  .post .k{display:block;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);}
+  .post .v{font-weight:600;font-size:1.05rem;margin-top:0.3em;}
+
+  /* garden beds: honest gap */
+  .beds{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;}
+  .bed{
+    flex:1 1 12em;
+    border:2px dashed var(--line);
+    border-radius:8px;
+    padding:1.2em 1.3em;
+    background:transparent;
+  }
+  .bed .label{font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);}
+  .bed .name{display:block;margin-top:0.3em;font-weight:600;color:var(--fg);}
+  .bed .seed{font-family:'Caveat',cursive;color:var(--accent);font-size:1.15rem;margin-top:0.4em;display:block;}
+
+  /* signature: gate / map toggle */
+  .gate-box{text-align:center;}
+  .gate-btn{
+    display:inline-flex;align-items:center;gap:0.6em;
+    background:var(--brand);color:#fff;
+    padding:0.9em 1.6em;border:0;border-radius:4px;
+    font-family:'Literata',serif;font-size:1rem;font-weight:600;
+    cursor:pointer;
+  }
+  .gate-btn:hover{background:var(--accent);}
+  .gate-icon{transition:transform .35s ease;display:inline-block;}
+  .gate-btn[aria-expanded="true"] .gate-icon{transform:rotate(-35deg);}
+  @media (prefers-reduced-motion:reduce){ .gate-icon{transition:none;} }
+  .map-frame{
+    border:2px solid var(--line);border-radius:8px;overflow:hidden;
+    aspect-ratio:16/9;max-width:44em;margin:2rem auto 0;
+    max-height:0;opacity:0;
+    transition:max-height .5s ease, opacity .5s ease;
+  }
+  .map-frame.open{max-height:600px;opacity:1;}
+  @media (prefers-reduced-motion:reduce){ .map-frame{transition:none;} }
+  .map-frame iframe{width:100%;height:100%;border:0;display:block;min-height:220px;}
+
+  .call-big{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem;
+  }
+  .call-big a.phone{
+    font-family:'Literata',serif;font-weight:600;
+    font-size:clamp(1.4rem,3vw,2rem);
+    color:var(--accent);text-decoration:none;
+  }
+
+  footer{background:var(--fg);color:var(--bg);padding-block:3rem;}
+  footer a{color:inherit;text-decoration:underline;}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-end;}
+  .foot-note{font-size:0.8rem;opacity:0.6;margin-top:2rem;}
+
+  .call-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:100;display:none;
+    background:var(--accent);
+  }
+  .call-bar a{
+    display:flex;align-items:center;justify-content:center;gap:0.6em;
+    padding:1em;color:#fff;font-weight:600;font-size:0.95rem;text-decoration:none;
+    font-family:'Literata',serif;
+  }
+  @media (max-width:700px){
+    .call-bar{display:block;}
+    body{padding-bottom:3.6rem;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.map-frame{max-height:600px!important;opacity:1!important;}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="wrap nav-row">
+    <div class="brandmark">Hotel Hessengüetli</div>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-links">
+        <li><a href="#fakten">Fakten</a></li>
+        <li><a href="#lage">Lage</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-call" href="tel:+41522343232">052 234 32 32</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="plot hero-plot">
+        <span class="eyebrow">Hotel · Winterthur</span>
+        <h1>Hotel Hessengüetli</h1>
+        <p class="margin-note">Notiz am Rand: „Güetli“ bezeichnet im Schweizerdeutschen ein kleines Grundstück, ein Gut im Kleinen.</p>
+        <div class="hero-facts">
+          <span>Ort: <strong>Winterthur</strong></span>
+          <span>Telefon: <strong>052 234 32 32</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <section class="reveal" id="fakten">
+    <div class="wrap">
+      <h2 style="text-align:center;">Was auf dem Grundstück steht</h2>
+      <div class="posts" style="margin-top:2.2rem;">
+        <div class="post"><span class="cap"></span><span class="k">Kategorie</span><span class="v">Hotel</span></div>
+        <div class="post"><span class="cap"></span><span class="k">Ort</span><span class="v">Winterthur</span></div>
+        <div class="post"><span class="cap"></span><span class="k">Telefon</span><span class="v">052 234 32 32</span></div>
+        <div class="post"><span class="cap"></span><span class="k">Bewertung</span><span class="v">4.1 · 47 Rezensionen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <section class="reveal">
+    <div class="wrap">
+      <h2 style="text-align:center;">Was auf diesem Feld noch nicht wächst</h2>
+      <p style="max-width:36em;margin:0.8rem auto 0;text-align:center;">Die eigene Website ist derzeit per robots.txt gesperrt. Statt Beete mit Vermutungen zu bepflanzen, lassen wir sie sichtbar leer.</p>
+      <div class="beds">
+        <div class="bed"><span class="label">nicht publiziert</span><span class="name">Zimmer</span><span class="seed">noch nicht gesät</span></div>
+        <div class="bed"><span class="label">nicht publiziert</span><span class="name">Preise</span><span class="seed">noch nicht gesät</span></div>
+        <div class="bed"><span class="label">nicht publiziert</span><span class="name">Adresse</span><span class="seed">noch nicht gesät</span></div>
+        <div class="bed"><span class="label">nicht publiziert</span><span class="name">Öffnungszeiten</span><span class="seed">noch nicht gesät</span></div>
+        <div class="bed"><span class="label">nicht publiziert</span><span class="name">Fotos</span><span class="seed">noch nicht gesät</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <section class="reveal" id="lage">
+    <div class="wrap gate-box">
+      <h2>Wo liegt das Güetli?</h2>
+      <p style="max-width:34em;margin:0.8rem auto 1.6rem;">Eine genaue Adresse ist nicht öffentlich verzeichnet. Das Tor öffnet die Karte:</p>
+      <button class="gate-btn" type="button" id="gateBtn" aria-expanded="false" aria-controls="gateMap">
+        <span class="gate-icon" aria-hidden="true">⌐</span> Karte öffnen
+      </button>
+      <div class="map-frame" id="gateMap">
+        <iframe title="Karte: Hotel Hessengüetli, Winterthur" loading="lazy" src="https://maps.google.com/maps?q=Hotel%20Hesseng%C3%BCetli%2C%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="fence" aria-hidden="true"></div>
+
+  <section class="reveal" id="kontakt">
+    <div class="wrap">
+      <div class="plot call-big">
+        <div>
+          <h2>Anfragen? Am besten direkt.</h2>
+          <p style="margin-top:0.6rem;">Ohne Online-Formular führt der kürzeste Weg über das Telefon.</p>
+        </div>
+        <a class="phone" href="tel:+41522343232">052 234 32 32</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brandmark">Hotel Hessengüetli</div>
+        <p style="opacity:0.8;margin-top:0.6rem;">Winterthur · <a href="tel:+41522343232">052 234 32 32</a></p>
+      </div>
+      <div><p style="opacity:0.8;">Bewertung: 4.1 aus 47 Google-Rezensionen.</p></div>
+    </div>
+    <p class="foot-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<div class="call-bar">
+  <a href="tel:+41522343232">Anrufen · 052 234 32 32</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var gateBtn = document.getElementById('gateBtn');
+  var gateMap = document.getElementById('gateMap');
+  gateBtn.addEventListener('click', function(){
+    var open = gateBtn.getAttribute('aria-expanded') === 'true';
+    gateBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    gateMap.classList.toggle('open', !open);
+  });
+})();
+</script>
+</body>
+</html>

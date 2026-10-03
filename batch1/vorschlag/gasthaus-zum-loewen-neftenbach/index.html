@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gasthaus zum Löwen Neftenbach – Wirtschaft &amp; Übernachten</title>
+<meta name="description" content="Gasthaus zum Löwen in Neftenbach: traditionelles Landgasthaus mit Restaurant und Zimmer. Zürichstrasse 37, 8413 Neftenbach.">
+<meta property="og:title" content="Gasthaus zum Löwen Neftenbach – zwei Türen, ein Haus">
+<meta property="og:description" content="Traditionelles Landgasthaus in Neftenbach mit Restaurant und Zimmer.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://static.wixstatic.com/media/c20812_be88db6ebb5f403dacf7f7197059dcae~mv2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Gasthaus zum Löwen Neftenbach",
+  "description": "Traditionelles Landgasthaus mit drei Hauptangeboten: Unterkunft, Restaurant und Wirtshaus.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zürichstrasse 37",
+    "postalCode": "8413",
+    "addressLocality": "Neftenbach",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41523173535",
+  "email": "info@loewen-neftenbach.ch",
+  "url": "https://www.loewen-neftenbach.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "220"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#0f1622;
+    --surface:#161f30;
+    --fg:#f3ede0;
+    --muted:#a3adc0;
+    --brand:#c99a3e;
+    --accent:#a13a2f;
+    --line:rgba(243,237,224,0.14);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Libre Franklin',system-ui,sans-serif;
+    font-size:clamp(15px,0.85vw + 12px,17px);
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.05;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2.6rem,6.6vw + 1rem,5.6rem);}
+  h2{font-size:clamp(1.9rem,3.4vw + 1rem,3rem);}
+  h3{font-size:clamp(1.2rem,1.5vw + 1rem,1.7rem);}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#1a1408;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:3px;}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:150;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1rem,4vw,2.6rem);
+    background:rgba(15,22,34,0.9);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Cormorant Garamond',serif;font-size:1.4rem;letter-spacing:0.04em;font-weight:600;}
+  .brand-mark span{color:var(--brand);}
+  nav.primary{display:flex;gap:clamp(0.8rem,2vw,1.7rem);align-items:center;}
+  nav.primary a.nav-link{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;text-decoration:none;color:var(--muted);}
+  nav.primary a.nav-link:hover{color:var(--fg);}
+  .call-pill{background:var(--brand);color:#1a1408;padding:0.5em 1.15em;text-decoration:none;font-size:0.82rem;font-weight:700;white-space:nowrap;}
+  .mobile-menu{display:none;}
+  @media (max-width:780px){
+    nav.primary a.nav-link{display:none;}
+    .mobile-menu{display:block;position:relative;}
+    .mobile-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);color:var(--fg);padding:0.4em 0.7em;font-size:0.78rem;}
+    .mobile-menu summary::-webkit-details-marker{display:none;}
+    .mobile-menu-panel{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--line);padding:0.9rem;display:flex;flex-direction:column;gap:0.8rem;min-width:170px;z-index:10;}
+    .mobile-menu-panel a{text-decoration:none;color:var(--fg);font-size:0.9rem;}
+  }
+
+  main{display:block;}
+  section{padding:clamp(4.2rem,8vw,6.8rem) clamp(1.1rem,5vw,4rem);position:relative;}
+  .section-inner{max-width:1100px;margin:0 auto;}
+  .kicker{text-transform:uppercase;letter-spacing:0.18em;font-size:0.75rem;color:var(--brand);font-weight:700;margin-bottom:0.9em;display:block;}
+
+  /* HERO — hanging inn sign with CSS lion crest */
+  #hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:6rem;
+    background:radial-gradient(ellipse at 50% 0%,rgba(201,154,62,0.12),transparent 60%),linear-gradient(180deg,#0b1119,var(--bg) 60%);text-align:center;}
+  .crest-wrap{display:flex;justify-content:center;margin-bottom:1.6rem;}
+  .crest{position:relative;width:120px;height:140px;}
+  .shield{
+    position:absolute;inset:0;background:linear-gradient(180deg,#1c2740,#131c2c);
+    border:2px solid var(--brand);
+    clip-path:polygon(50% 0%,100% 0%,100% 55%,50% 100%,0% 55%,0% 0%);
+  }
+  .lion{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:64px;height:64px;}
+  .lion .mane{position:absolute;inset:0;border-radius:50%;background:
+      radial-gradient(circle at 50% 50%, transparent 34%, var(--accent) 35%, var(--accent) 55%, transparent 56%);
+  }
+  .lion .mane::before,.lion .mane::after{content:'';position:absolute;top:50%;left:50%;width:100%;height:14%;background:var(--accent);transform-origin:0% 50%;}
+  .lion .mane::before{transform:translate(-50%,-50%) rotate(45deg);}
+  .lion .mane::after{transform:translate(-50%,-50%) rotate(-45deg);}
+  .lion .head{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:var(--brand);}
+  .lion .ear{position:absolute;top:24%;width:9px;height:9px;border-radius:50%;background:var(--brand);}
+  .lion .ear.l{left:30%;}
+  .lion .ear.r{right:30%;}
+  .lion .eye{position:absolute;top:47%;width:4px;height:4px;border-radius:50%;background:#1a1408;}
+  .lion .eye.l{left:39%;}
+  .lion .eye.r{right:39%;}
+  .lion .snout{position:absolute;left:50%;bottom:24%;transform:translateX(-50%);width:10px;height:7px;border-radius:0 0 6px 6px;background:#1a1408;}
+  .lion .paw{position:absolute;bottom:-6px;width:12px;height:8px;border-radius:0 0 6px 6px;background:var(--brand);}
+  .lion .paw.l{left:14%;}
+  .lion .paw.r{right:14%;}
+  .lion .tail{position:absolute;right:-8px;top:60%;width:22px;height:6px;background:var(--brand);border-radius:100px;transform:rotate(-24deg);transform-origin:0% 50%;}
+  .crest-ribbon{
+    margin:0 auto;margin-top:-10px;width:min(180px,64%);background:var(--brand);color:#1a1408;
+    font-family:'Cormorant Garamond',serif;font-size:0.74rem;letter-spacing:0.2em;text-transform:uppercase;
+    text-align:center;padding:0.35em 0.6em;position:relative;z-index:2;
+  }
+  #hero .lead{max-width:34em;margin:0 auto;font-size:clamp(1.02rem,1.1vw + 0.7rem,1.22rem);color:var(--muted);}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.1rem;justify-content:center;}
+  .btn{display:inline-block;padding:0.85em 1.7em;text-decoration:none;font-weight:700;font-size:0.92rem;border:1px solid transparent;}
+  .btn-brand{background:var(--brand);color:#1a1408;}
+  .btn-outline{border-color:var(--line);color:var(--fg);}
+  .rating-chip{display:inline-flex;align-items:center;gap:0.5em;font-size:0.82rem;color:var(--muted);border:1px solid var(--line);padding:0.4em 0.9em;margin-top:1.8rem;}
+  .rating-chip b{color:var(--brand);}
+
+  /* KURZ facts strip */
+  #kurz{padding-top:0;padding-bottom:0;}
+  .facts-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:700px){ .facts-strip{grid-template-columns:1fr;} }
+  .fact{background:var(--bg);padding:2rem 1.4rem;text-align:center;}
+  .fact-num{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);color:var(--brand);font-weight:700;line-height:1;}
+  .fact-label{display:block;margin-top:0.5rem;font-size:0.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+
+  /* FAQ */
+  .faq-list{margin-top:1.8rem;display:flex;flex-direction:column;gap:0;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{cursor:pointer;padding:1.1em 0.2em;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';color:var(--brand);font-size:1.3rem;flex:none;}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin:0 0.2em 1.1em;color:var(--muted);max-width:38em;}
+  .faq-item a{color:var(--brand);}
+
+  /* ZWEI TÜREN — structural + signature module */
+  #tueren{background:var(--surface);}
+  .doors{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);margin-top:2.4rem;border:1px solid var(--line);}
+  @media (max-width:760px){ .doors{grid-template-columns:1fr;} }
+  .door{background:var(--bg);position:relative;padding:0;overflow:hidden;}
+  .door-frame{
+    margin:1.6rem auto 0;width:min(220px,70%);aspect-ratio:2/3;
+    border:3px solid var(--brand);border-radius:110px 110px 6px 6px;
+    background:linear-gradient(160deg,#1c2740,#0f1520);
+    display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.4rem;
+    transition:transform 0.4s ease, box-shadow 0.4s ease;transform-origin:0% 50%;
+  }
+  .door:hover .door-frame, .door:focus-within .door-frame{transform:perspective(600px) rotateY(-8deg);box-shadow:12px 10px 24px rgba(0,0,0,0.35);}
+  @media (prefers-reduced-motion:reduce){ .door-frame{transition:none;} .door:hover .door-frame, .door:focus-within .door-frame{transform:none;} }
+  .door-frame .handle{width:8px;height:8px;border-radius:50%;background:var(--brand);position:relative;left:28%;}
+  .door-body{padding:1.6rem 1.8rem 2.4rem;text-align:center;}
+  .door-body h3{margin-bottom:0.5rem;}
+  .door-body p{color:var(--muted);font-size:0.94rem;max-width:26em;margin:0 auto 1.2em;}
+  .door-toggle{
+    border:1px solid var(--brand);background:transparent;color:var(--brand);
+    padding:0.6em 1.3em;font-family:inherit;font-size:0.85rem;cursor:pointer;font-weight:700;
+    text-transform:uppercase;letter-spacing:0.06em;
+  }
+  .door-toggle[aria-expanded="true"]{background:var(--brand);color:#1a1408;}
+  .door-detail{
+    margin:1.2rem auto 0;max-width:30em;border-top:1px dashed var(--line);padding-top:1.1rem;
+    font-size:0.92rem;color:var(--fg);display:none;text-align:left;
+  }
+  .door-detail.is-open{display:block;}
+  .door-detail a{color:var(--brand);text-decoration:underline;}
+
+  /* ABOUT */
+  #ueber .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(1.6rem,4vw,3.2rem);align-items:start;}
+  @media (max-width:820px){ #ueber .about-grid{grid-template-columns:1fr;} }
+  .usp-list{list-style:none;margin:1.4rem 0 0;padding:0;display:flex;flex-direction:column;gap:0.7rem;}
+  .usp-list li{padding-left:1.4em;position:relative;color:var(--muted);}
+  .usp-list li::before{content:'—';position:absolute;left:0;color:var(--brand);}
+  .frame-img{border:1px solid var(--line);padding:8px;background:var(--surface);}
+  .frame-img img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+
+  /* GALERIE */
+  #galerie{background:var(--surface);}
+  .gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.7rem;margin-top:2.2rem;}
+  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:520px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+  .gallery-grid figure{margin:0;border:1px solid var(--line);overflow:hidden;}
+  .gallery-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform 0.5s ease;}
+  .gallery-grid figure:hover img, .gallery-grid figure:focus-within img{transform:scale(1.06);}
+  @media (prefers-reduced-motion:reduce){ .gallery-grid img{transition:none;} .gallery-grid figure:hover img{transform:none;} }
+
+  /* LAGE */
+  #lage iframe{width:100%;height:320px;border:0;margin-top:1.8rem;filter:grayscale(0.4) invert(0.9) contrast(0.92);}
+  .lage-meta{display:flex;flex-wrap:wrap;gap:1.8rem;margin-top:1.2rem;font-size:0.93rem;color:var(--muted);}
+  .lage-meta strong{color:var(--fg);display:block;font-family:'Cormorant Garamond',serif;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.2em;}
+
+  footer{padding:2.6rem clamp(1.1rem,5vw,4rem) 7rem;border-top:1px solid var(--line);font-size:0.82rem;color:var(--muted);}
+  footer .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;margin-bottom:1.4rem;}
+  footer strong{color:var(--fg);font-family:'Cormorant Garamond',serif;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+  .mobile-bar a{flex:1;text-align:center;color:#1a1408;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.92rem;}
+  @media (min-width:761px){ .mobile-bar{display:none;} }
+  @media (max-width:760px){ footer{padding-bottom:5.5rem;} }
+
+  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Zum <span>Löwen</span> Neftenbach</div>
+  <nav class="primary" aria-label="Hauptnavigation">
+    <a class="nav-link" href="#tueren">Wirtschaft &amp; Zimmer</a>
+    <a class="nav-link" href="#galerie">Galerie</a>
+    <a class="nav-link" href="#faq">Fragen</a>
+    <a class="nav-link" href="#lage">Lage</a>
+    <details class="mobile-menu">
+      <summary>Menü</summary>
+      <div class="mobile-menu-panel">
+        <a href="#tueren">Wirtschaft &amp; Zimmer</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#faq">Fragen</a>
+        <a href="#lage">Lage</a>
+      </div>
+    </details>
+    <a class="call-pill" href="tel:+41523173535">Anrufen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="crest-wrap">
+        <div class="crest">
+          <div class="shield"></div>
+          <div class="lion">
+            <div class="mane"></div>
+            <div class="head"></div>
+            <div class="ear l"></div>
+            <div class="ear r"></div>
+            <div class="eye l"></div>
+            <div class="eye r"></div>
+            <div class="snout"></div>
+            <div class="paw l"></div>
+            <div class="paw r"></div>
+            <div class="tail"></div>
+          </div>
+        </div>
+      </div>
+      <div class="crest-ribbon">Neftenbach</div>
+      <span class="kicker" style="justify-content:center;margin-top:1.4rem;">Zürichstrasse 37, Neftenbach</span>
+      <h1>Ein Haus.<br>Zwei Türen.</h1>
+      <p class="lead">Traditionelles Landgasthaus mit drei Hauptangeboten: Unterkunft, Restaurant
+        und Wirtshaus.</p>
+      <div class="hero-cta">
+        <a class="btn btn-brand" href="#tueren">Wirtschaft oder Zimmer wählen</a>
+        <a class="btn btn-outline" href="tel:+41523173535">+41 52 317 35 35</a>
+      </div>
+      <div class="rating-chip"><b>4.3</b> · 220 Google-Bewertungen</div>
+    </div>
+  </section>
+
+  <section id="kurz" data-reveal>
+    <div class="section-inner">
+      <div class="facts-strip">
+        <div class="fact"><span class="fact-num">4.3</span><span class="fact-label">Google-Bewertung</span></div>
+        <div class="fact"><span class="fact-num">220</span><span class="fact-label">Google-Bewertungen</span></div>
+        <div class="fact"><span class="fact-num">3</span><span class="fact-label">Angebote: Unterkunft, Restaurant, Wirtshaus</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tueren" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Signature Modul</span>
+      <h2>Welche Tür wählen Sie?</h2>
+      <p style="margin-top:1rem;color:var(--muted);max-width:38em;">Der Löwen ist ein Haus mit
+        zwei Eingängen: die Wirtschaft für Restaurant-Gäste, das Zimmer für Übernachtungsgäste.
+        Wählen Sie eine Tür – wir bereiten die passende Anfrage vor.</p>
+      <div class="doors">
+        <div class="door">
+          <div class="door-frame"><span class="handle"></span></div>
+          <div class="door-body">
+            <h3>Wirtschaft</h3>
+            <p>Restaurant vor Ort, traditionelles Landgasthaus.</p>
+            <button type="button" class="door-toggle" data-door="wirtschaft" aria-expanded="false" aria-controls="detail-wirtschaft">Tisch anfragen</button>
+            <div class="door-detail" id="detail-wirtschaft">
+              <p id="preview-wirtschaft"></p>
+              <p><a id="mailto-wirtschaft" href="mailto:info@loewen-neftenbach.ch">Als E-Mail öffnen</a> ·
+                <a href="tel:+41523173535">oder anrufen</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="door">
+          <div class="door-frame"><span class="handle"></span></div>
+          <div class="door-body">
+            <h3>Übernachten</h3>
+            <p>Zimmer verfügbar im traditionellen Landgasthaus.</p>
+            <button type="button" class="door-toggle" data-door="zimmer" aria-expanded="false" aria-controls="detail-zimmer">Zimmer anfragen</button>
+            <div class="door-detail" id="detail-zimmer">
+              <p id="preview-zimmer"></p>
+              <p><a id="mailto-zimmer" href="mailto:info@loewen-neftenbach.ch">Als E-Mail öffnen</a> ·
+                <a href="tel:+41523173535">oder anrufen</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber" data-reveal>
+    <div class="section-inner about-grid">
+      <div>
+        <span class="kicker">Über uns</span>
+        <h2>Traditionelles Landgasthaus in Neftenbach.</h2>
+        <p style="margin-top:1rem;color:var(--muted);">Traditionelles Landgasthaus mit drei
+          Hauptangeboten: Unterkunft, Restaurant und Wirtshaus.</p>
+        <ul class="usp-list">
+          <li>Traditionelles Landgasthaus</li>
+          <li>Zimmer verfügbar</li>
+          <li>Restaurant vor Ort</li>
+          <li>Social Media präsent</li>
+        </ul>
+      </div>
+      <div class="frame-img">
+        <img src="https://static.wixstatic.com/media/c20812_6a0ff24c91fa48068097ec80b7408b2d~mv2.png" alt="Gasthaus zum Löwen Neftenbach" loading="lazy" onerror="this.closest('.frame-img').style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Eindrücke</span>
+      <h2>Aus dem Gasthaus.</h2>
+      <div class="gallery-grid">
+        <figure><img src="https://static.wixstatic.com/media/c20812_be88db6ebb5f403dacf7f7197059dcae~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_e98e9c6e9a194f4ab95a22b429b5eaf9f000.jpg" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_62cd71e4f69e4c789f6536b75d322e43~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_6525948cc1874580992efa256c5f41db~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_5d322e43~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_1b0598084f3f4b4aae36c1ad0075d8c6~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_15e8250ae87b4061ae6d5bc828f6e3e0~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_bfbf4230c3594bc0a8490871cac25920~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/c20812_f76577172c1d41a99f6332b8d125d6d1~mv2.png" alt="Gasthaus zum Löwen Neftenbach Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Gut zu wissen</span>
+      <h2>Häufige Fragen.</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Was bietet der Löwen genau an?</summary>
+          <p>Ein traditionelles Landgasthaus mit drei Hauptangeboten: Unterkunft, Restaurant
+            und Wirtshaus.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie viele Zimmer gibt es und was kosten sie?</summary>
+          <p>Zimmer sind verfügbar. Zimmertypen und Preise sind nicht veröffentlicht – bitte
+            direkt anrufen oder eine Nachricht schreiben.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wann hat die Wirtschaft geöffnet?</summary>
+          <p>Öffnungszeiten sind nicht veröffentlicht – bitte direkt anrufen: <a href="tel:+41523173535">+41 52 317 35 35</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ist der Löwen auf Social Media zu finden?</summary>
+          <p>Ja, auf Instagram unter <a href="https://www.instagram.com/leo_deinrestaurant/" target="_blank" rel="noopener">@leo_deinrestaurant</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Lage</span>
+      <h2>Zürichstrasse 37, Neftenbach</h2>
+      <div class="lage-meta">
+        <span><strong>Adresse</strong>Zürichstrasse 37, 8413 Neftenbach</span>
+        <span><strong>Ort</strong>Neftenbach</span>
+        <span><strong>Telefon</strong><a href="tel:+41523173535">+41 52 317 35 35</a></span>
+        <span><strong>E-Mail</strong><a href="mailto:info@loewen-neftenbach.ch">info@loewen-neftenbach.ch</a></span>
+        <span><strong>Instagram</strong><a href="https://www.instagram.com/leo_deinrestaurant/" target="_blank" rel="noopener">@leo_deinrestaurant</a></span>
+        <span><strong>Bewertung</strong>4.3 · 220 Google-Bewertungen</span>
+      </div>
+      <iframe src="https://maps.google.com/maps?q=Gasthaus%20zum%20L%C3%B6wen%2C%20Z%C3%BCrichstrasse%2037%2C%20Neftenbach&amp;z=16&amp;output=embed" loading="lazy" title="Karte Gasthaus zum Löwen Neftenbach"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Gasthaus zum Löwen Neftenbach</strong><br>
+      Zürichstrasse 37, 8413 Neftenbach<br>
+      <a href="tel:+41523173535">+41 52 317 35 35</a><br>
+      <a href="mailto:info@loewen-neftenbach.ch">info@loewen-neftenbach.ch</a>
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.loewen-neftenbach.ch/" target="_blank" rel="noopener">loewen-neftenbach.ch</a>
+    </div>
+  </div>
+  <p>Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41523173535">Jetzt anrufen · +41 52 317 35 35</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // scroll reveal
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.12});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---- Zwei Türen: honest enquiry composer built only from real contact facts ----
+  var facts = {
+    name: 'Gasthaus zum Löwen Neftenbach',
+    address: 'Zürichstrasse 37, 8413 Neftenbach',
+    phone: '+41 52 317 35 35',
+    email: 'info@loewen-neftenbach.ch'
+  };
+
+  var doorTexts = {
+    wirtschaft: {
+      subject: 'Tischreservation Wirtschaft',
+      preview: 'Anfrage für einen Tisch in der Wirtschaft, ' + facts.name + '.',
+      body: 'Guten Tag\n\nIch möchte gerne einen Tisch in der Wirtschaft reservieren.\n' +
+        'Bitte um Rückmeldung zu Verfügbarkeit und Öffnungszeiten.\n\n' + facts.name + '\n' +
+        facts.address + '\nTelefon: ' + facts.phone
+    },
+    zimmer: {
+      subject: 'Zimmeranfrage',
+      preview: 'Anfrage zu einer Übernachtung im ' + facts.name + '.',
+      body: 'Guten Tag\n\nIch interessiere mich für eine Übernachtung.\n' +
+        'Bitte um Rückmeldung zu Verfügbarkeit und Zimmerpreisen.\n\n' + facts.name + '\n' +
+        facts.address + '\nTelefon: ' + facts.phone
+    }
+  };
+
+  var toggles = document.querySelectorAll('.door-toggle');
+  toggles.forEach(function(btn){
+    var key = btn.getAttribute('data-door');
+    var detail = document.getElementById('detail-' + key);
+    var preview = document.getElementById('preview-' + key);
+    var mailto = document.getElementById('mailto-' + key);
+    var text = doorTexts[key];
+    preview.textContent = text.preview;
+    mailto.setAttribute('href', 'mailto:' + facts.email + '?subject=' + encodeURIComponent(text.subject) + '&body=' + encodeURIComponent(text.body));
+
+    btn.addEventListener('click', function(){
+      var isOpen = detail.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

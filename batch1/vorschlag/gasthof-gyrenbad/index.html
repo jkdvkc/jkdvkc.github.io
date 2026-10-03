@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gasthof Gyrenbad – Landgasthaus seit dem 17. Jahrhundert, Turbenthal</title>
+<meta name="description" content="Gasthof Gyrenbad ob Turbenthal: historisches Landgasthaus mit 5 Zimmertypen, Feuerkeller-Grill und Brunch. Girenbadstrasse 133, 8488 Gyrenbad ob Turbenthal.">
+<meta property="og:title" content="Gasthof Gyrenbad – seit dem 17. Jahrhundert über dem Tal">
+<meta property="og:description" content="Historisches Landgasthaus mit 5 echten Zimmertypen, Feuerkeller-Grill und Brunch-Service in Gyrenbad ob Turbenthal.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://static.wixstatic.com/media/b9b6ed_7ed21bdb16e24856889416fc27d835da%7Emv2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Gasthof Gyrenbad",
+  "description": "Seit dem 17. Jahrhundert ein Landgasthaus und Architektur-Juwel mit gemütlicher Atmosphäre, eingebettet in die Landschaft. Modernes Angebot mit Klassizität vereint.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Girenbadstrasse 133",
+    "postalCode": "8488",
+    "addressLocality": "Gyrenbad ob Turbenthal",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41523851566",
+  "email": "info@gyrenbad.ch",
+  "url": "https://www.gyrenbad.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "735"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#f5eee2;
+    --surface:#ffffff;
+    --fg:#2c2013;
+    --muted:#6a5b46;
+    --brand:#a5462a;
+    --accent:#5c6b47;
+    --line:rgba(44,32,19,0.14);
+    --shadow:0 18px 32px -20px rgba(44,32,19,0.35);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Karla',system-ui,sans-serif;
+    font-size:clamp(15px,0.85vw + 12px,17.5px);
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.05;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2.6rem,6.4vw + 1rem,5.4rem);font-weight:600;font-optical-sizing:auto;}
+  h2{font-size:clamp(1.9rem,3.2vw + 1rem,2.9rem);}
+  h3{font-size:clamp(1.15rem,1.4vw + 1rem,1.5rem);}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  header{
+    position:sticky;top:0;z-index:150;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1rem,4vw,2.6rem);
+    background:rgba(245,238,226,0.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;}
+  .brand-mark em{font-style:italic;color:var(--brand);}
+  nav.primary{display:flex;gap:clamp(0.8rem,2vw,1.7rem);align-items:center;}
+  nav.primary a.nav-link{font-size:0.86rem;text-decoration:none;color:var(--muted);}
+  nav.primary a.nav-link:hover{color:var(--fg);}
+  .call-pill{background:var(--brand);color:#fff;padding:0.55em 1.2em;border-radius:100px;text-decoration:none;font-size:0.86rem;font-weight:700;white-space:nowrap;}
+  .mobile-menu{display:none;}
+  @media (max-width:800px){
+    nav.primary a.nav-link{display:none;}
+    .mobile-menu{display:block;position:relative;}
+    .mobile-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);color:var(--fg);padding:0.4em 0.7em;border-radius:6px;font-size:0.8rem;}
+    .mobile-menu summary::-webkit-details-marker{display:none;}
+    .mobile-menu-panel{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:0.9rem;display:flex;flex-direction:column;gap:0.8rem;min-width:170px;z-index:10;box-shadow:var(--shadow);}
+    .mobile-menu-panel a{text-decoration:none;color:var(--fg);font-size:0.92rem;}
+  }
+
+  /* PFAD — elevation rail, hillside device */
+.pfad{position:fixed;right:clamp(0.4rem,2vw,1.4rem);top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:0.55rem;border-left:2px solid var(--line);padding-left:0.8rem;}
+.pfad button{background:none;border:none;color:var(--muted);font-size:0.68rem;text-transform:uppercase;letter-spacing:0.07em;text-align:left;cursor:pointer;padding:0.28rem 0;position:relative;font-family:'Karla',sans-serif;}
+.pfad button::before{content:'';position:absolute;left:-0.95rem;top:0.42rem;width:7px;height:7px;border-radius:50%;background:var(--line);}
+.pfad button[aria-current="true"]{color:var(--fg);font-weight:700;}
+.pfad button[aria-current="true"]::before{background:var(--brand);}
+@media (max-width:960px){ .pfad{display:none;} }
+
+main{display:block;}
+  section{padding:clamp(4rem,8vw,6.5rem) clamp(1.1rem,5vw,4rem);position:relative;}
+  .section-inner{max-width:1150px;margin:0 auto;}
+  .kicker{text-transform:uppercase;letter-spacing:0.16em;font-size:0.76rem;color:var(--brand);font-weight:700;margin-bottom:0.9em;display:block;}
+
+  /* HERO — hillside layered */
+  #hero{
+    position:relative;padding-top:clamp(5rem,10vw,7rem);overflow:hidden;
+    background:linear-gradient(180deg,#f9f2e6,var(--bg));
+  }
+  .ridge{position:absolute;left:0;right:0;bottom:0;height:64%;
+    background:linear-gradient(180deg,transparent,rgba(92,107,71,0.14));
+    clip-path:polygon(0 42%,12% 30%,26% 46%,40% 22%,55% 38%,68% 18%,82% 34%,100% 12%,100% 100%,0 100%);
+  }
+  .ridge.ridge-2{opacity:0.6;height:48%;clip-path:polygon(0 55%,15% 40%,32% 58%,48% 32%,63% 50%,80% 28%,100% 44%,100% 100%,0 100%);}
+  #hero .hero-inner{position:relative;z-index:2;max-width:1150px;margin:0 auto;}
+  #hero p.lead{max-width:34em;font-size:clamp(1.02rem,1.1vw + 0.7rem,1.22rem);color:var(--muted);margin-top:1.1rem;}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.1rem;}
+  .btn{display:inline-block;padding:0.85em 1.7em;border-radius:100px;text-decoration:none;font-weight:700;font-size:0.94rem;border:1px solid transparent;}
+  .btn-brand{background:var(--brand);color:#fff;}
+  .btn-outline{border-color:var(--fg);color:var(--fg);}
+  .rating-chip{display:inline-flex;align-items:center;gap:0.5em;font-size:0.85rem;color:var(--muted);border:1px solid var(--line);padding:0.45em 0.9em;border-radius:100px;margin-top:1.8rem;background:var(--surface);}
+  .rating-chip b{color:var(--brand);}
+  .hero-town{font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);}
+
+  /* TERRACES — alternating offset sections (hillside device) */
+  .terrace{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center;}
+  @media (max-width:860px){ .terrace{grid-template-columns:1fr;} }
+  .terrace.offset-right{padding-top:clamp(1rem,3vw,2.5rem);}
+  .terrace.offset-left .terrace-media{order:2;}
+  @media (max-width:860px){ .terrace.offset-left .terrace-media{order:0;} }
+  .terrace-media{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);}
+  .terrace-media img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+  .terrace ul.usp-list{list-style:none;margin:1.3rem 0 0;padding:0;display:flex;flex-direction:column;gap:0.65rem;}
+  .terrace ul.usp-list li{padding-left:1.5em;position:relative;color:var(--muted);}
+  .terrace ul.usp-list li::before{content:'⛰';position:absolute;left:0;font-size:0.85em;}
+
+  #geschichte{background:var(--surface);}
+
+  /* ZIMMERVERGLEICH signature module */
+  #zimmer{background:linear-gradient(180deg,var(--bg),#f9f2e6);}
+  .comparator-controls{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:1.8rem;}
+  .filter-btn{
+    border:1px solid var(--line);background:var(--surface);color:var(--fg);
+    padding:0.6em 1.2em;border-radius:100px;font-size:0.88rem;cursor:pointer;font-family:inherit;font-weight:600;
+  }
+  .filter-btn[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand);}
+  .sort-toggle{margin-left:auto;display:flex;align-items:center;gap:0.6em;font-size:0.85rem;color:var(--muted);}
+  .sort-toggle select{border:1px solid var(--line);border-radius:8px;padding:0.5em 0.8em;font-family:inherit;background:var(--surface);color:var(--fg);}
+  .room-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:2rem;}
+  .room-card{
+    background:var(--surface);border-radius:14px;padding:1.5rem;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:0.7rem;border-top:4px solid var(--accent);
+    transition:transform 0.25s ease;
+  }
+  .room-card.is-hidden{display:none;}
+  .room-card .room-price{font-family:'Fraunces',serif;font-size:1.55rem;color:var(--brand);font-weight:600;}
+  .room-card .price-detail{font-size:0.83rem;color:var(--muted);}
+  .room-card .cap-tag{align-self:flex-start;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;background:rgba(92,107,71,0.14);color:var(--accent);padding:0.3em 0.7em;border-radius:100px;font-weight:700;}
+  .room-card .room-desc{font-size:0.92rem;color:var(--muted);margin:0;}
+  .room-note{margin-top:1.6rem;font-size:0.85rem;color:var(--muted);border-left:3px solid var(--accent);padding-left:1em;max-width:42em;}
+
+  /* FAQ */
+  .faq-list{margin-top:1.8rem;display:flex;flex-direction:column;gap:0;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{cursor:pointer;padding:1.1em 0.2em;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';color:var(--brand);font-size:1.3rem;flex:none;}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin:0 0.2em 1.1em;color:var(--muted);max-width:38em;}
+
+  .mehr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
+  @media (max-width:760px){ .mehr-grid{grid-template-columns:1fr;} }
+  .mehr-card{border-top-color:var(--brand);}
+
+  /* AUSSTATTUNG */
+  #ausstattung ul{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 1.8rem;}
+  @media (max-width:640px){ #ausstattung ul{grid-template-columns:1fr;} }
+  #ausstattung li{display:flex;gap:0.8em;align-items:flex-start;font-size:0.96rem;background:var(--surface);border-radius:10px;padding:0.9em 1.1em;box-shadow:var(--shadow);}
+  #ausstattung li::before{content:'✓';color:var(--accent);font-weight:700;flex:none;}
+
+  /* GALERIE staggered */
+  #galerie{background:var(--surface);}
+  .stagger-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem;}
+  @media (max-width:760px){ .stagger-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:460px){ .stagger-grid{grid-template-columns:1fr;} }
+  .stagger-grid figure{margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+  .stagger-grid figure:nth-child(2n){transform:translateY(clamp(0px,2vw,22px));}
+  @media (max-width:460px){ .stagger-grid figure:nth-child(2n){transform:none;} }
+  .stagger-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
+
+  /* LAGE */
+  #lage{background:var(--bg);}
+  #lage iframe{width:100%;height:340px;border:0;border-radius:14px;margin-top:1.8rem;box-shadow:var(--shadow);}
+  .lage-meta{display:flex;flex-wrap:wrap;gap:1.8rem;margin-top:1.4rem;font-size:0.94rem;color:var(--muted);}
+  .lage-meta strong{color:var(--fg);display:block;font-family:'Fraunces',serif;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.2em;}
+
+  footer{padding:2.6rem clamp(1.1rem,5vw,4rem) 7rem;border-top:1px solid var(--line);font-size:0.84rem;color:var(--muted);background:var(--surface);}
+  footer .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;margin-bottom:1.4rem;}
+  footer strong{color:var(--fg);font-family:'Fraunces',serif;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+  .mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.94rem;}
+  @media (min-width:761px){ .mobile-bar{display:none;} }
+  @media (max-width:760px){ footer{padding-bottom:5.5rem;} }
+
+  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">Gasthof <em>Gyrenbad</em></div>
+  <nav class="primary" aria-label="Hauptnavigation">
+    <a class="nav-link" href="#geschichte">Geschichte</a>
+    <a class="nav-link" href="#zimmer">Zimmer</a>
+    <a class="nav-link" href="#ausstattung">Ausstattung</a>
+    <a class="nav-link" href="#galerie">Galerie</a>
+    <a class="nav-link" href="#lage">Lage</a>
+    <details class="mobile-menu">
+      <summary>Menü</summary>
+      <div class="mobile-menu-panel">
+        <a href="#geschichte">Geschichte</a>
+        <a href="#zimmer">Zimmer</a>
+        <a href="#anfrage">Anfrage</a>
+        <a href="#ausstattung">Ausstattung</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#lage">Lage</a>
+      </div>
+    </details>
+    <a class="call-pill" href="tel:+41523851566">Anrufen</a>
+  </nav>
+</header>
+
+<div class="pfad" aria-label="Wegmarken auf der Seite">
+  <button type="button" data-target="#geschichte" aria-current="false">Geschichte</button>
+  <button type="button" data-target="#feuerkeller" aria-current="false">Feuerkeller</button>
+  <button type="button" data-target="#mehr" aria-current="false">Mehr</button>
+  <button type="button" data-target="#zimmer" aria-current="false">Zimmer</button>
+  <button type="button" data-target="#ausstattung" aria-current="false">Ausstattung</button>
+  <button type="button" data-target="#galerie" aria-current="false">Galerie</button>
+  <button type="button" data-target="#lage" aria-current="false">Lage</button>
+</div>
+
+<main id="main">
+
+  <section id="hero">
+    <div class="ridge ridge-2" aria-hidden="true"></div>
+    <div class="ridge" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <span class="hero-town">Gyrenbad ob Turbenthal</span>
+      <h1>Seit dem 17. Jahrhundert<br>über dem Tal.</h1>
+      <p class="lead">Historisches Landgasthaus und Architektur-Juwel mit gemütlicher Atmosphäre,
+        eingebettet in die Landschaft. Modernes Angebot vereint mit Klassizität.</p>
+      <div class="hero-cta">
+        <a class="btn btn-brand" href="#zimmer">5 Zimmertypen vergleichen</a>
+        <a class="btn btn-outline" href="tel:+41523851566">+41 52 385 15 66</a>
+      </div>
+      <div class="rating-chip"><b>4.6</b> · 735 Google-Bewertungen</div>
+    </div>
+  </section>
+
+  <section id="geschichte" data-reveal>
+    <div class="section-inner terrace">
+      <div>
+        <span class="kicker">Ein Haus mit Geschichte</span>
+        <h2>Architektur-Juwel, gewachsen über Jahrhunderte.</h2>
+        <p style="margin-top:1rem;color:var(--muted);">Seit dem 17. Jahrhundert ein Landgasthaus
+          und Architektur-Juwel mit gemütlicher Atmosphäre, eingebettet in die Landschaft. Modernes
+          Angebot mit Klassizität vereint.</p>
+        <ul class="usp-list">
+          <li>Historisches Gasthaus seit 17. Jahrhundert</li>
+          <li>Seminarräume und Ausstellungen</li>
+          <li>E-Bike-Tour-Informationen</li>
+        </ul>
+      </div>
+      <div class="terrace-media">
+        <img src="https://static.wixstatic.com/media/b9b6ed_7ed21bdb16e24856889416fc27d835da%7Emv2.jpg" alt="Gasthof Gyrenbad Aussenansicht" loading="lazy" onerror="this.closest('.terrace-media').style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section id="feuerkeller" data-reveal>
+    <div class="section-inner terrace offset-left offset-right">
+      <div class="terrace-media">
+        <img src="https://static.wixstatic.com/media/b9b6ed_0343ce7c53f747838954415a84cb3aee~mv2.png" alt="Feuerkeller mit offenem Grill" loading="lazy" onerror="this.closest('.terrace-media').style.display='none'">
+      </div>
+      <div>
+        <span class="kicker">Küche &amp; Feuerkeller</span>
+        <h2>Moderne Küche, offener Grill.</h2>
+        <p style="margin-top:1rem;color:var(--muted);">Moderne Küche mit Grill im Feuerkeller,
+          dazu Wein- und Wild-Paarungen. An Freitagen, Samstagen und Sonntagen gibt es
+          Brunch-Service.</p>
+        <ul class="usp-list">
+          <li>Moderne Küche mit Grill im Feuerkeller</li>
+          <li>Wein- und Wild-Paarungen</li>
+          <li>Brunch-Service (Fr, Sa, So)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="mehr" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Mehr als Übernachten</span>
+      <h2>Was das Haus sonst noch bietet.</h2>
+      <div class="mehr-grid">
+        <article class="room-card mehr-card">
+          <h3 style="font-size:1.2rem;">Seminarräume</h3>
+          <p class="room-desc">Seminarräume und Ausstellungen im Haus.</p>
+        </article>
+        <article class="room-card mehr-card">
+          <h3 style="font-size:1.2rem;">Wein &amp; Wild</h3>
+          <p class="room-desc">Wein- und Wild-Paarungen in der Küche.</p>
+        </article>
+        <article class="room-card mehr-card">
+          <h3 style="font-size:1.2rem;">E-Bike-Touren</h3>
+          <p class="room-desc">E-Bike-Tour-Informationen für Gäste.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="zimmer" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Signature Modul</span>
+      <h2>5 Zimmertypen, echte Preise.</h2>
+      <p style="margin-top:1rem;color:var(--muted);max-width:40em;">Filtern Sie nach Personenzahl
+        oder Badezimmer-Typ – alle Preise und Beschreibungen stammen unverändert aus der
+        Zimmerliste des Hauses.</p>
+      <div class="comparator-controls" role="group" aria-label="Zimmer filtern">
+        <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">Alle Zimmer</button>
+        <button type="button" class="filter-btn" data-filter="1" aria-pressed="false">1 Person</button>
+        <button type="button" class="filter-btn" data-filter="2" aria-pressed="false">2 Personen</button>
+        <button type="button" class="filter-btn" data-filter="privat" aria-pressed="false">Privates Bad</button>
+        <button type="button" class="filter-btn" data-filter="gemeinschaft" aria-pressed="false">Gemeinschaftsbad</button>
+        <div class="sort-toggle">
+          <label for="sort-select">Sortieren</label>
+          <select id="sort-select">
+            <option value="default">Reihenfolge Haus</option>
+            <option value="price-asc">Preis aufsteigend</option>
+          </select>
+        </div>
+      </div>
+      <div class="room-grid" id="room-grid">
+        <article class="room-card" data-cap="1" data-bath="privat" data-price="112.5">
+          <span class="cap-tag">1 Person</span>
+          <h3>Einzelzimmer</h3>
+          <p class="room-desc">Zimmer mit privatem Bad</p>
+          <div class="room-price">CHF 112.50</div>
+          <div class="price-detail">pro Nacht</div>
+        </article>
+        <article class="room-card" data-cap="2" data-bath="privat" data-price="122.5">
+          <span class="cap-tag">1–2 Personen</span>
+          <h3>Grandlit-Zimmer</h3>
+          <p class="room-desc">Zimmer mit Grossbett und privatem Bad</p>
+          <div class="room-price">CHF 122.50–166.–</div>
+          <div class="price-detail">pro Nacht</div>
+        </article>
+        <article class="room-card" data-cap="2" data-bath="privat" data-price="122.5">
+          <span class="cap-tag">1–2 Personen</span>
+          <h3>Doppelzimmer</h3>
+          <p class="room-desc">Zimmer mit privatem Bad</p>
+          <div class="room-price">CHF 122.50–196.–</div>
+          <div class="price-detail">pro Nacht</div>
+        </article>
+        <article class="room-card" data-cap="1" data-bath="gemeinschaft" data-price="69">
+          <span class="cap-tag">1 Person</span>
+          <h3>Economy Einzelzimmer</h3>
+          <p class="room-desc">Zimmer mit Gemeinschaftsbad</p>
+          <div class="room-price">CHF 69.–</div>
+          <div class="price-detail">pro Nacht</div>
+        </article>
+        <article class="room-card" data-cap="2" data-bath="gemeinschaft" data-price="79">
+          <span class="cap-tag">1–2 Personen</span>
+          <h3>Economy Grandlit-Zimmer</h3>
+          <p class="room-desc">Zimmer mit Gemeinschaftsbad</p>
+          <div class="room-price">CHF 79.–122.50</div>
+          <div class="price-detail">pro Nacht</div>
+        </article>
+      </div>
+      <p class="room-note">Zimmerpreise gelten pro Nacht und beinhalten Frühstück, Wi-Fi und
+        Kurtaxe – ausser bei den Economy-Zimmern. Dort ist Frühstück optional für CHF 20 pro
+        Person buchbar. Langfristige Aufenthalte können nach Absprache arrangiert werden.</p>
+    </div>
+  </section>
+
+  <section id="ausstattung" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Inklusive</span>
+      <h2>Was im Zimmerpreis dabei ist.</h2>
+      <ul>
+        <li>Frühstück inklusive (Zimmer mit Bad)</li>
+        <li>Wi-Fi inklusive</li>
+        <li>Kurtaxe inklusive</li>
+        <li>Optionales Frühstück: CHF 20 pro Person (Economy Zimmer)</li>
+        <li>Feuerkeller mit offenem Grill</li>
+        <li>Brunch-Service</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="anfrage" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Zimmer anfragen</span>
+      <h2>Anfrage zusammenstellen.</h2>
+      <p style="margin-top:1rem;color:var(--muted);max-width:40em;">Zimmertyp und Personenzahl
+        wählen – wir stellen daraus eine Anfrage für Anruf oder E-Mail zusammen. Alle Preise
+        stammen aus der Zimmerliste oben.</p>
+      <div class="comparator-controls" style="margin-top:1.8rem;">
+        <div class="sort-toggle" style="margin-left:0;">
+          <label for="req-room">Zimmer</label>
+          <select id="req-room">
+            <option value="Einzelzimmer|CHF 112.50 pro Nacht">Einzelzimmer – CHF 112.50</option>
+            <option value="Grandlit-Zimmer|CHF 122.50–166 pro Nacht (1–2 Personen)">Grandlit-Zimmer – CHF 122.50–166.–</option>
+            <option value="Doppelzimmer|CHF 122.50–196 pro Nacht (1–2 Personen)">Doppelzimmer – CHF 122.50–196.–</option>
+            <option value="Economy Einzelzimmer|CHF 69 pro Nacht">Economy Einzelzimmer – CHF 69.–</option>
+            <option value="Economy Grandlit-Zimmer|CHF 79–122.50 pro Nacht (1–2 Personen)">Economy Grandlit-Zimmer – CHF 79–122.50</option>
+          </select>
+        </div>
+        <div class="sort-toggle">
+          <label for="req-guests">Personen</label>
+          <select id="req-guests">
+            <option value="1">1 Person</option>
+            <option value="2">2 Personen</option>
+          </select>
+        </div>
+      </div>
+      <div class="room-note" id="req-preview" style="border-left-color:var(--brand);margin-top:1.6rem;"></div>
+      <div class="hero-cta" style="margin-top:1.2rem;">
+        <a class="btn btn-brand" id="req-mailto" href="mailto:info@gyrenbad.ch">Als E-Mail öffnen</a>
+        <a class="btn btn-outline" href="tel:+41523851566">Lieber anrufen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Gut zu wissen</span>
+      <h2>Häufige Fragen.</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Ist das Frühstück im Preis inbegriffen?</summary>
+          <p>Bei Zimmern mit privatem Bad ja. Bei Economy-Zimmern ist Frühstück optional für
+            CHF 20 pro Person buchbar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es Wi-Fi und ist die Kurtaxe inbegriffen?</summary>
+          <p>Ja, Wi-Fi und Kurtaxe sind inklusive – ausser bei den Economy-Zimmern.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es Brunch?</summary>
+          <p>Ja, Brunch-Service an Freitagen, Samstagen und Sonntagen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Sind längere Aufenthalte möglich?</summary>
+          <p>Ja, langfristige Aufenthalte können nach Absprache arrangiert werden.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Eindrücke</span>
+      <h2>Haus, Landschaft, Details.</h2>
+      <div class="stagger-grid">
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_8fb5448117e4470ba082887a9facc6ee~mv2.jpg" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_968775be947c45d4a7a0555490a02c68~mv2.jpg" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_8018f68e4727461b93b422f856980913~mv2.png" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_648500359d7948b5925b03ffc73effb3~mv2.png" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_0e62008f25414ca8932fcb2adbdce443~mv2.png" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_0609e80fb4a64d67bc211d1e4adac1de~mv2.png" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_1dd2f209c73149408a1de5376f56076d~mv2.jpg" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_483f2ca347a04ed2bed7ad6fe79128~mv2.jpg" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://static.wixstatic.com/media/b9b6ed_fea87f46be034d65aaf46a1b2d635b36~mv2.jpg" alt="Gasthof Gyrenbad Eindruck" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Lage</span>
+      <h2>Girenbadstrasse 133, Gyrenbad ob Turbenthal</h2>
+      <div class="lage-meta">
+        <span><strong>Adresse</strong>Girenbadstrasse 133, 8488 Gyrenbad ob Turbenthal</span>
+        <span><strong>Ort</strong>Turbenthal</span>
+        <span><strong>Telefon</strong><a href="tel:+41523851566">+41 52 385 15 66</a></span>
+        <span><strong>E-Mail</strong><a href="mailto:info@gyrenbad.ch">info@gyrenbad.ch</a></span>
+        <span><strong>Bewertung</strong>4.6 · 735 Google-Bewertungen</span>
+      </div>
+      <iframe src="https://maps.google.com/maps?q=Gasthof%20Gyrenbad%2C%20Girenbadstrasse%20133%2C%20Gyrenbad%20ob%20Turbenthal&amp;z=16&amp;output=embed" loading="lazy" title="Karte Gasthof Gyrenbad"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Gasthof Gyrenbad</strong><br>
+      Girenbadstrasse 133, 8488 Gyrenbad ob Turbenthal<br>
+      <a href="tel:+41523851566">+41 52 385 15 66</a><br>
+      <a href="mailto:info@gyrenbad.ch">info@gyrenbad.ch</a>
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.gyrenbad.ch/" target="_blank" rel="noopener">gyrenbad.ch</a>
+    </div>
+  </div>
+  <p>Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41523851566">Jetzt anrufen · +41 52 385 15 66</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // scroll reveal
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---- Pfad: elevation-rail scrollspy ----
+  var pfadButtons = document.querySelectorAll('.pfad button');
+  var pfadSections = Array.prototype.map.call(pfadButtons, function(btn){
+    return document.querySelector(btn.getAttribute('data-target'));
+  });
+  pfadButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.querySelector(btn.getAttribute('data-target'));
+      if(target){ target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'}); }
+    });
+  });
+  if('IntersectionObserver' in window){
+    var pfadSpy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = '#' + entry.target.id;
+        var btn = document.querySelector('.pfad button[data-target="' + id + '"]');
+        if(btn){ btn.setAttribute('aria-current', entry.isIntersecting ? 'true' : 'false'); }
+      });
+    }, {threshold:0.35});
+    pfadSections.forEach(function(s){ if(s){ pfadSpy.observe(s); } });
+  }
+
+  // ---- Zimmervergleich: filter + sort over the 5 real room types ----
+  var filterButtons = document.querySelectorAll('.filter-btn');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.room-card'));
+  var grid = document.getElementById('room-grid');
+  var sortSelect = document.getElementById('sort-select');
+  var activeFilter = 'all';
+
+  function matchesFilter(card, filter){
+    if(filter === 'all') return true;
+    if(filter === '1') return card.getAttribute('data-cap') === '1';
+    if(filter === '2') return card.getAttribute('data-cap') === '2';
+    if(filter === 'privat') return card.getAttribute('data-bath') === 'privat';
+    if(filter === 'gemeinschaft') return card.getAttribute('data-bath') === 'gemeinschaft';
+    return true;
+  }
+
+  function applyFilter(){
+    cards.forEach(function(card){
+      card.classList.toggle('is-hidden', !matchesFilter(card, activeFilter));
+    });
+  }
+
+  function applySort(){
+    var mode = sortSelect.value;
+    var sorted = cards.slice();
+    if(mode === 'price-asc'){
+      sorted.sort(function(a, b){
+        return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
+      });
+    }
+    sorted.forEach(function(card){ grid.appendChild(card); });
+  }
+
+  filterButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterButtons.forEach(function(b){ b.setAttribute('aria-pressed', 'false'); });
+      btn.setAttribute('aria-pressed', 'true');
+      activeFilter = btn.getAttribute('data-filter');
+      applyFilter();
+    });
+  });
+  sortSelect.addEventListener('change', applySort);
+
+  // ---- Anfrage composer: assembles room + guest choice into a mailto: request ----
+  var reqRoom = document.getElementById('req-room');
+  var reqGuests = document.getElementById('req-guests');
+  var reqPreview = document.getElementById('req-preview');
+  var reqMailto = document.getElementById('req-mailto');
+
+  function renderRequest(){
+    var parts = reqRoom.value.split('|');
+    var roomName = parts[0], roomPrice = parts[1];
+    var guests = reqGuests.value;
+    var subject = 'Zimmeranfrage: ' + roomName;
+    var body = 'Guten Tag\n\nIch interessiere mich für: ' + roomName + ' (' + roomPrice + ')\n' +
+      'Personen: ' + guests + '\n\nBitte um Rückmeldung zur Verfügbarkeit.\n\n' +
+      'Gasthof Gyrenbad, Girenbadstrasse 133, 8488 Gyrenbad ob Turbenthal\nTelefon: +41 52 385 15 66';
+    reqPreview.textContent = roomName + ' · ' + roomPrice + ' · ' + guests + ' Person(en)';
+    reqMailto.setAttribute('href', 'mailto:info@gyrenbad.ch?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
+  }
+  reqRoom.addEventListener('change', renderRequest);
+  reqGuests.addEventListener('change', renderRequest);
+  renderRequest();
+
+})();
+</script>
+
+</body>
+</html>

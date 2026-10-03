@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#eef1f2">
+<title>Zum Hinteren Hecht – Café-Bar &amp; Coworking in der Winterthurer Altstadt</title>
+<meta name="description" content="Café-Bar und kreative Coworking-Räume mitten in der Winterthurer Altstadt. Tagsüber Schreibtisch, abends Bar – Tösstalstrasse 2, 8400 Winterthur.">
+<meta property="og:title" content="Zum Hinteren Hecht – Café-Bar &amp; Coworking, Winterthur Altstadt">
+<meta property="og:description" content="Gemütliche Café-Bar und kreative Coworking-Räume. Galerie, Anlässe und exklusive Raummieten in der historischen Altstadt von Winterthur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zumhinterenhecht.ch/">
+<meta property="og:image" content="https://zumhinterenhecht.ch/wp-content/themes/zumhinterenhecht/images/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Zum Hinteren Hecht",
+  "image": "https://zumhinterenhecht.ch/wp-content/themes/zumhinterenhecht/images/logo.svg",
+  "url": "https://zumhinterenhecht.ch/",
+  "telephone": "+41 52 212 29 05",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tösstalstrasse 2",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "08:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "20:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "325" },
+  "sameAs": ["https://www.instagram.com/zumhinterenhecht/", "https://www.facebook.com/zumhinterenhecht/"]
+}
+</script>
+<style>
+  :root{
+    --bg:#eef1f2;
+    --surface:#ffffff;
+    --fg:#14181a;
+    --muted:#454b4e;
+    --brand:#2f5aa8;
+    --accent:#b1502f;
+    --grid-line:rgba(20,24,26,0.11);
+    --grid-line-strong:rgba(20,24,26,0.22);
+    --unit:44px;
+    --radius:2px;
+    --maxw:1240px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:"Public Sans",system-ui,sans-serif;
+    font-size:clamp(15px,0.95vw + 12px,17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:"Unbounded",sans-serif;font-weight:600;line-height:1.05;margin:0;}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--brand);
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(18px,4vw,48px);}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  /* ---------- graph-paper backdrop (hard constraint: plan-grid device) ---------- */
+  .blueprint{
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(var(--grid-line-strong) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px);
+    background-size:
+      var(--unit) var(--unit),
+      var(--unit) var(--unit),
+      calc(var(--unit)*5) calc(var(--unit)*5),
+      calc(var(--unit)*5) calc(var(--unit)*5);
+    background-position:-1px -1px;
+  }
+
+  .ruler{
+    height:22px;
+    overflow:hidden;
+    background:
+      repeating-linear-gradient(90deg, var(--grid-line-strong) 0 1px, transparent 1px calc(var(--unit)*5));
+    border-bottom:1px solid var(--grid-line-strong);
+    display:flex;
+    align-items:flex-end;
+  }
+  .ruler span{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10px;
+    color:var(--muted);
+    padding-left:4px;
+    width:calc(var(--unit)*5);
+    flex:none;
+  }
+
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(238,241,242,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--grid-line-strong);
+  }
+  .headbar{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding-block:14px;
+  }
+  .brand-mark{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .brand-mark img{width:34px;height:34px;object-fit:contain;}
+  .brand-mark strong{font-family:"Unbounded",sans-serif;font-weight:600;font-size:18px;}
+  nav.primary{display:flex;align-items:center;gap:clamp(10px,2vw,26px);}
+  nav.primary a{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--fg);
+    padding:6px 2px;
+    border-bottom:1px solid transparent;
+  }
+  nav.primary a:hover{border-color:var(--accent);}
+  .status-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    padding:6px 12px;
+    border:1px solid var(--grid-line-strong);
+    border-radius:999px;
+    background:var(--surface);
+  }
+  .status-dot{width:8px;height:8px;border-radius:50%;background:#8a8272;flex:none;}
+  .status-badge[data-open="true"] .status-dot{background:#2c7a3e;box-shadow:0 0 0 3px rgba(44,122,62,.18);}
+  .status-badge[data-open="false"] .status-dot{background:#a13a2d;}
+  .call-btn{
+    display:none;
+  }
+  @media (min-width:640px){
+    .call-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--brand);color:#fff;text-decoration:none;
+      font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.05em;
+      padding:9px 16px;border-radius:2px;
+    }
+  }
+
+  main.plan{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:clamp(16px,2vw,28px);
+    padding-block:clamp(28px,4vw,52px) 40px;
+  }
+  main.plan > section{grid-column:1/-1;position:relative;}
+
+  .room{
+    background:var(--surface);
+    border:1px solid var(--grid-line-strong);
+    padding:clamp(20px,3vw,40px);
+    position:relative;
+  }
+  .room-tag{
+    position:absolute;top:-13px;left:16px;
+    background:var(--bg);
+    padding:0 8px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    border:1px solid var(--grid-line-strong);
+  }
+
+  /* Hero */
+  .hero{grid-column:1/-1;}
+  .hero .room{padding-top:clamp(40px,6vw,64px);}
+  .hero h1{
+    font-size:clamp(2.3rem,5.4vw,4.4rem);
+    max-width:16ch;
+    margin-top:14px;
+  }
+  .hero .lede{
+    max-width:52ch;
+    font-size:clamp(1rem,1.4vw,1.2rem);
+    color:var(--muted);
+    margin-top:18px;
+  }
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:14px 28px;
+    margin-top:32px;
+    padding-top:24px;
+    border-top:1px dashed var(--grid-line-strong);
+  }
+  .hero-meta div{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);}
+  .hero-meta strong{display:block;color:var(--fg);font-family:"Public Sans",sans-serif;font-size:14.5px;font-weight:600;margin-top:2px;}
+  .hero-icon{
+    position:absolute;right:clamp(16px,3vw,44px);top:clamp(16px,3vw,40px);
+    width:52px;height:52px;object-fit:contain;opacity:.9;
+  }
+
+  /* Mode switch — signature module */
+  .switcher{grid-column:1/-1;}
+  .switch-shell{
+    display:grid;grid-template-columns:1fr 1fr;
+    border:1px solid var(--grid-line-strong);
+    background:var(--surface);
+  }
+  .switch-btn{
+    all:unset;cursor:pointer;
+    display:flex;flex-direction:column;gap:6px;
+    padding:clamp(18px,3vw,30px);
+    text-align:left;
+    border-right:1px solid var(--grid-line-strong);
+  }
+  .switch-btn:last-child{border-right:none;}
+  .switch-btn .num{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);}
+  .switch-btn .lbl{font-family:"Unbounded",sans-serif;font-weight:600;font-size:clamp(1.2rem,2.2vw,1.6rem);}
+  .switch-btn .sub{font-size:13.5px;color:var(--muted);}
+  .switch-btn[aria-pressed="true"]{background:var(--brand);color:#fff;}
+  .switch-btn[aria-pressed="true"] .num,
+  .switch-btn[aria-pressed="true"] .sub{color:rgba(255,255,255,.82);}
+  .switch-btn:focus-visible{outline-offset:-3px;}
+  .switch-note{
+    padding:14px clamp(18px,3vw,30px);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    color:var(--muted);
+    border-top:1px dashed var(--grid-line-strong);
+  }
+
+  /* Panels that reflow with mode */
+  .panels{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,1fr);gap:inherit;}
+  .panel{grid-column:span 12;transition:none;}
+  @media(min-width:800px){
+    .panel{grid-column:span 6;}
+  }
+  .panel .room{height:100%;}
+  .panel ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px;}
+  .panel li{
+    display:flex;gap:10px;font-size:15px;
+    padding-bottom:10px;border-bottom:1px solid var(--grid-line);
+  }
+  .panel li::before{content:"—";color:var(--accent);flex:none;font-family:"IBM Plex Mono",monospace;}
+  .panel[hidden]{display:none;}
+  main.plan[data-mode="ausgehen"] .panel-arbeiten{order:2;}
+  main.plan[data-mode="ausgehen"] .panel-ausgehen{order:1;}
+  main.plan[data-mode="arbeiten"] .panel-arbeiten{order:1;}
+  main.plan[data-mode="arbeiten"] .panel-ausgehen{order:2;}
+
+  /* About */
+  .about{grid-column:1/-1;}
+  @media(min-width:900px){
+    .about{grid-column:1/8;}
+    .about ~ .note{grid-column:8/-1;}
+  }
+  .about p{max-width:60ch;color:var(--fg);}
+  .note .room{background:var(--bg);}
+
+  /* Hours table */
+  .hours-grid{grid-column:1/-1;}
+  @media(min-width:900px){ .hours-grid{grid-column:1/6;} }
+  table.hours{width:100%;border-collapse:collapse;margin-top:18px;}
+  table.hours th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--grid-line-strong);}
+  table.hours td{padding:11px 0;border-bottom:1px solid var(--grid-line);font-family:"IBM Plex Mono",monospace;font-size:14.5px;}
+  table.hours tr[data-today="true"] td{color:var(--brand);font-weight:600;}
+  table.hours tr[data-today="true"]{background:rgba(47,90,168,.06);}
+  .status-line{
+    margin-top:20px;padding:14px 16px;
+    border:1px solid var(--grid-line-strong);
+    font-family:"IBM Plex Mono",monospace;font-size:13.5px;
+    display:flex;align-items:center;gap:10px;
+  }
+
+  .badges{grid-column:1/-1;}
+  @media(min-width:900px){ .badges{grid-column:6/-1;} }
+  .badges .room{display:flex;flex-wrap:wrap;gap:28px;align-items:center;}
+  .badge-icon{width:64px;height:64px;object-fit:contain;flex:none;}
+  .rating-block{display:flex;flex-direction:column;gap:6px;}
+  .stars{color:var(--accent);font-size:20px;letter-spacing:2px;}
+  .rating-num{font-family:"Unbounded",sans-serif;font-weight:600;font-size:1.8rem;}
+  .rating-sub{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);}
+
+  /* Location */
+  .location{grid-column:1/-1;}
+  .loc-grid{display:grid;gap:24px;}
+  @media(min-width:900px){ .loc-grid{grid-template-columns:1.1fr 1fr;} }
+  .loc-grid iframe{width:100%;height:320px;border:1px solid var(--grid-line-strong);filter:grayscale(.15);}
+  .addr-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px;}
+  .addr-list dt{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);}
+  .addr-list dd{margin:2px 0 0;font-size:15.5px;}
+  .social-row{display:flex;gap:12px;margin-top:22px;}
+  .social-row a{
+    border:1px solid var(--grid-line-strong);
+    padding:9px 16px;text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+    display:inline-block;
+  }
+  .social-row a:hover{border-color:var(--brand);color:var(--brand);}
+
+  footer.site{
+    border-top:1px solid var(--grid-line-strong);
+    margin-top:20px;
+    padding-block:34px 100px;
+  }
+  .foot-grid{display:grid;gap:22px;}
+  @media(min-width:760px){ .foot-grid{grid-template-columns:2fr 1fr 1fr;} }
+  footer.site h3{font-size:15px;font-family:"Unbounded",sans-serif;}
+  footer.site p, footer.site a{font-size:13.5px;color:var(--muted);text-decoration:none;}
+  footer.site a:hover{color:var(--brand);}
+  .fine{
+    margin-top:26px;padding-top:18px;border-top:1px dashed var(--grid-line-strong);
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;
+  }
+
+  /* mobile bottom bar */
+  .mobile-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    display:flex;
+    background:var(--brand);
+    box-shadow:0 -4px 18px rgba(0,0,0,.18);
+  }
+  .mobile-bar a{
+    flex:1;text-align:center;color:#fff;text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.06em;
+    padding:14px 8px;text-transform:uppercase;
+  }
+  .mobile-bar a.primary{background:var(--accent);}
+  @media(min-width:640px){ .mobile-bar{display:none;} }
+  body{padding-bottom:64px;}
+  @media(min-width:640px){ body{padding-bottom:0;} }
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.is-visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+  }
+
+  @media(max-width:359px){
+    .switch-shell{grid-template-columns:1fr;}
+    .switch-btn{border-right:none;border-bottom:1px solid var(--grid-line-strong);}
+  }
+</style>
+</head>
+<body class="blueprint">
+
+<div class="ruler mono" aria-hidden="true">
+  <span>00</span><span>05</span><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span><span>35</span><span>40</span><span>45</span><span>50</span><span>55</span>
+</div>
+
+<header class="site">
+  <div class="wrap headbar">
+    <a class="brand-mark" href="#top">
+      <img src="https://zumhinterenhecht.ch/wp-content/themes/zumhinterenhecht/images/logo.svg" alt="Zum Hinteren Hecht Logo" onerror="this.parentElement.removeChild(this)">
+      <strong>Zum Hinteren Hecht</strong>
+    </a>
+    <nav class="primary" aria-label="Hauptnavigation">
+      <a href="#modus">Modus</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#zeiten">Zeiten</a>
+      <a href="#standort">Standort</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span class="status-badge" id="statusBadge" data-open="false">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="statusText">Öffnungsstatus wird geladen …</span>
+      </span>
+      <a class="call-btn" href="tel:+41522122905">Anrufen</a>
+    </div>
+  </div>
+</header>
+
+<main class="plan" id="top" data-mode="arbeiten">
+
+  <section class="hero reveal">
+    <div class="room">
+      <span class="room-tag">Raum 01 — Eingang</span>
+      <p class="eyebrow">Gemütliche Café-Bar und kreative Coworking-Räume</p>
+      <h1>Ein Haus, zwei Rhythmen: arbeiten und ausgehen.</h1>
+      <p class="lede">Zur Hinteren Hecht ist eine café-bar und bietet kreative Coworking-Räume in der Winterthurer Altstadt. Das Lokal verfügt über einen Shop, eine Galerie und ist ideal für exklusive Raummieten.</p>
+      <img class="hero-icon" src="https://zumhinterenhecht.ch/wp-content/uploads/2020/04/cropped-icon-270x270.png" alt="" onerror="this.remove()">
+      <div class="hero-meta">
+        <div>Adresse<strong>Tösstalstrasse 2, 8400 Winterthur</strong></div>
+        <div>Telefon<strong><a href="tel:+41522122905">+41 52 212 29 05</a></strong></div>
+        <div>Google-Bewertung<strong>4.8 · 325 Rezensionen</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="switcher reveal" id="modus" aria-label="Ansicht wählen">
+    <div class="switch-shell">
+      <button class="switch-btn" id="btnArbeiten" type="button" aria-pressed="true">
+        <span class="num mono">A</span>
+        <span class="lbl">Tagsüber: Arbeiten</span>
+        <span class="sub">Coworking, Ruhe, Kaffee, Raummiete</span>
+      </button>
+      <button class="switch-btn" id="btnAusgehen" type="button" aria-pressed="false">
+        <span class="num mono">B</span>
+        <span class="lbl">Abends: Ausgehen</span>
+        <span class="sub">Bar, Galerie, Anlässe, Gesellschaft</span>
+      </button>
+    </div>
+    <div class="switch-note">Diese Seite stellt sich um: Inhalte und Reihenfolge wechseln je nach gewähltem Modus.</div>
+  </section>
+
+  <div class="panels" id="panels">
+    <section class="panel panel-arbeiten reveal">
+      <div class="room">
+        <span class="room-tag">Raum 02 — Arbeiten</span>
+        <h2>Coworking mit Café-Bar</h2>
+        <ul>
+          <li>Kreative Coworking-Räume mit Café-Bar</li>
+          <li>Exklusive Raummieten für Sitzungen und Anlässe</li>
+          <li>Mitten in der historischen Winterthurer Altstadt</li>
+          <li>Shop vor Ort</li>
+        </ul>
+      </div>
+    </section>
+    <section class="panel panel-ausgehen reveal">
+      <div class="room">
+        <span class="room-tag">Raum 03 — Ausgehen</span>
+        <h2>Bar, Galerie und Community</h2>
+        <ul>
+          <li>Café-Bar für den Feierabend</li>
+          <li>Galerie und kulturelle Anlässe</li>
+          <li>Exklusive Raummieten auch für private Feiern</li>
+          <li>Mitten in der historischen Winterthurer Altstadt</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section class="about reveal" id="ueber">
+    <div class="room">
+      <span class="room-tag">Raum 04 — Über uns</span>
+      <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem);">Über den Hecht</h2>
+      <p>Zur Hinteren Hecht ist eine café-bar und bietet kreative Coworking-Räume in der Winterthurer Altstadt. Das Lokal verfügt über einen Shop, eine Galerie und ist ideal für exklusive Raummieten.</p>
+    </div>
+  </section>
+
+  <section class="note reveal">
+    <div class="room">
+      <span class="room-tag">Raum 05 — Notiz</span>
+      <h3 style="font-size:1.05rem;">Auf einen Blick</h3>
+      <dl style="margin:14px 0 0;display:grid;gap:12px;">
+        <div><dt class="mono" style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Lage</dt><dd style="margin:2px 0 0;">Winterthurer Altstadt</dd></div>
+        <div><dt class="mono" style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Nutzung</dt><dd style="margin:2px 0 0;">Café-Bar, Coworking, Galerie, Raummiete</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="hours-grid reveal" id="zeiten">
+    <div class="room">
+      <span class="room-tag">Raum 06 — Öffnungszeiten</span>
+      <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem);">Öffnungszeiten</h2>
+      <table class="hours" id="hoursTable">
+        <thead><tr><th scope="col">Tage</th><th scope="col">Uhrzeit</th></tr></thead>
+        <tbody>
+          <tr data-days="1,2,3,4"><td>Mo–Do</td><td class="mono">08:00–23:00</td></tr>
+          <tr data-days="5"><td>Fr</td><td class="mono">08:00–01:00</td></tr>
+          <tr data-days="6"><td>Sa</td><td class="mono">09:00–01:00</td></tr>
+          <tr data-days="0"><td>So</td><td class="mono">10:00–20:00</td></tr>
+        </tbody>
+      </table>
+      <div class="status-line">
+        <span class="status-dot" id="statusDot2" aria-hidden="true" style="width:9px;height:9px;border-radius:50%;background:#8a8272;"></span>
+        <span id="statusTextLong">Öffnungsstatus wird geladen …</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="badges reveal">
+    <div class="room">
+      <span class="room-tag">Raum 07 — Kennzahlen</span>
+      <div class="rating-block">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="rating-num">4.8 <span class="mono" style="font-size:14px;color:var(--muted);">/ 5</span></div>
+        <div class="rating-sub">325 Google-Bewertungen</div>
+      </div>
+      <img class="badge-icon" src="https://zumhinterenhecht.ch/wp-content/uploads/2020/04/opening2.svg" alt="" onerror="this.remove()">
+    </div>
+  </section>
+
+  <section class="location reveal" id="standort">
+    <div class="room">
+      <span class="room-tag">Raum 08 — Standort</span>
+      <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem);">Standort</h2>
+      <div class="loc-grid" style="margin-top:18px;">
+        <iframe src="https://maps.google.com/maps?q=T%C3%B6sstalstrasse%202%2C%208400%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Karte: Tösstalstrasse 2, 8400 Winterthur" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+          <dl class="addr-list">
+            <div><dt>Adresse</dt><dd>Tösstalstrasse 2, 8400 Winterthur</dd></div>
+            <div><dt>Telefon</dt><dd><a href="tel:+41522122905">+41 52 212 29 05</a></dd></div>
+          </dl>
+          <div class="social-row">
+            <a href="https://www.instagram.com/zumhinterenhecht/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/zumhinterenhecht/" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site blueprint">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Zum Hinteren Hecht</h3>
+        <p>Tösstalstrasse 2, 8400 Winterthur</p>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <p><a href="tel:+41522122905">+41 52 212 29 05</a></p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <p><a href="https://www.instagram.com/zumhinterenhecht/" target="_blank" rel="noopener">Instagram</a></p>
+        <p><a href="https://www.facebook.com/zumhinterenhecht/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <div class="fine">
+      <span>Design-Vorschlag · unverbindliches Muster</span>
+      <span>Gestaltet auf einem Plan-Raster, Winterthurer Altstadt</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" role="navigation" aria-label="Mobile Schnellaktionen">
+  <a href="tel:+41522122905" class="primary">Anrufen</a>
+  <a href="#standort">Standort</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- real opening-hours data (verbatim from JSON) ---------- */
+  var HOURS = [
+    { days:"Mo–Do", time:"08:00–23:00" },
+    { days:"Fr", time:"08:00–01:00" },
+    { days:"Sa", time:"09:00–01:00" },
+    { days:"So", time:"10:00–20:00" }
+  ];
+  var DAY_MAP = { "Mo":1, "Di":2, "Mi":3, "Do":4, "Fr":5, "Sa":6, "So":0 };
+  var WEEK_ORDER = [1,2,3,4,5,6,0];
+  var DAY_NAME = { 0:"Sonntag",1:"Montag",2:"Dienstag",3:"Mittwoch",4:"Donnerstag",5:"Freitag",6:"Samstag" };
+
+  function expandDays(str){
+    if(str.indexOf("–") > -1){
+      var parts = str.split("–");
+      var a = DAY_MAP[parts[0].trim()], b = DAY_MAP[parts[1].trim()];
+      var si = WEEK_ORDER.indexOf(a), ei = WEEK_ORDER.indexOf(b);
+      var out = [];
+      for(var i = si; i <= ei; i++){ out.push(WEEK_ORDER[i]); }
+      return out;
+    }
+    return [DAY_MAP[str.trim()]];
+  }
+  function toMinutes(t){
+    var bits = t.trim().split(":");
+    return parseInt(bits[0],10) * 60 + parseInt(bits[1],10);
+  }
+  function parseRanges(str){
+    return str.split(",").map(function(part){
+      var pieces = part.trim().split("–");
+      return [toMinutes(pieces[0]), toMinutes(pieces[1])];
+    });
+  }
+  var schedule = HOURS.map(function(row){
+    return { days: expandDays(row.days), ranges: parseRanges(row.time) };
+  });
+
+  function pad(n){ return n < 10 ? "0" + n : "" + n; }
+  function fmt(mins){
+    mins = ((mins % 1440) + 1440) % 1440;
+    return pad(Math.floor(mins/60)) + ":" + pad(mins % 60);
+  }
+
+  function getStatus(now){
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    for(var offset = 0; offset >= -1; offset--){
+      var d = new Date(now);
+      d.setDate(d.getDate() + offset);
+      var dow = d.getDay();
+      var entry = null;
+      for(var i=0;i<schedule.length;i++){ if(schedule[i].days.indexOf(dow) > -1){ entry = schedule[i]; break; } }
+      if(!entry) continue;
+      for(var r=0;r<entry.ranges.length;r++){
+        var start = entry.ranges[r][0], end = entry.ranges[r][1];
+        if(end <= start){ end += 1440; }
+        var minsSince = (offset === 0) ? nowMin : nowMin + 1440;
+        if(minsSince >= start && minsSince < end){
+          return { open:true, closesAt: fmt(end) };
+        }
+      }
+    }
+    return { open:false };
+  }
+
+  function nextOpening(now){
+    for(var add = 0; add <= 8; add++){
+      var d = new Date(now);
+      d.setDate(d.getDate() + add);
+      d.setHours(0,0,0,0);
+      var dow = d.getDay();
+      var entry = null;
+      for(var i=0;i<schedule.length;i++){ if(schedule[i].days.indexOf(dow) > -1){ entry = schedule[i]; break; } }
+      if(!entry) continue;
+      for(var r=0;r<entry.ranges.length;r++){
+        var openDate = new Date(d.getTime() + entry.ranges[r][0] * 60000);
+        if(openDate > now){
+          return { date: openDate, dayName: DAY_NAME[dow], time: fmt(entry.ranges[r][0]) };
+        }
+      }
+    }
+    return null;
+  }
+
+  function render(){
+    var now = new Date();
+    var status = getStatus(now);
+    var badge = document.getElementById("statusBadge");
+    var text = document.getElementById("statusText");
+    var textLong = document.getElementById("statusTextLong");
+    var dot2 = document.getElementById("statusDot2");
+
+    if(status.open){
+      badge.setAttribute("data-open","true");
+      text.textContent = "Jetzt geöffnet · bis " + status.closesAt;
+      textLong.textContent = "Jetzt geöffnet · schliesst um " + status.closesAt + " Uhr.";
+      if(dot2) dot2.style.background = "#2c7a3e";
+    } else {
+      badge.setAttribute("data-open","false");
+      var next = nextOpening(now);
+      if(next){
+        var msg = "Geschlossen · öffnet " + next.dayName + " um " + next.time + " Uhr";
+        text.textContent = msg;
+        textLong.textContent = msg + ".";
+      } else {
+        text.textContent = "Aktuell geschlossen";
+        textLong.textContent = "Aktuell geschlossen.";
+      }
+      if(dot2) dot2.style.background = "#a13a2d";
+    }
+
+    var todayDow = now.getDay();
+    var rows = document.querySelectorAll("#hoursTable tbody tr");
+    rows.forEach(function(row){
+      var days = row.getAttribute("data-days").split(",").map(Number);
+      row.setAttribute("data-today", days.indexOf(todayDow) > -1 ? "true" : "false");
+    });
+  }
+  render();
+  setInterval(render, 60000);
+
+  /* ---------- mode switch: reflows the page (signature module) ---------- */
+  var main = document.getElementById("top");
+  var btnA = document.getElementById("btnArbeiten");
+  var btnB = document.getElementById("btnAusgehen");
+
+  function setMode(mode){
+    main.setAttribute("data-mode", mode);
+    btnA.setAttribute("aria-pressed", mode === "arbeiten" ? "true" : "false");
+    btnB.setAttribute("aria-pressed", mode === "ausgehen" ? "true" : "false");
+  }
+  btnA.addEventListener("click", function(){ setMode("arbeiten"); });
+  btnB.addEventListener("click", function(){ setMode("ausgehen"); });
+
+  /* default view: before 17:00 show Arbeiten, otherwise Ausgehen */
+  var startHour = new Date().getHours();
+  setMode(startHour < 17 ? "arbeiten" : "ausgehen");
+
+  /* ---------- scroll reveals ---------- */
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+</body>
+</html>

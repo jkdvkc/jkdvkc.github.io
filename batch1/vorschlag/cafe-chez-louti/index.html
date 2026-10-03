@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café chez Louti Winterthur · Hausgemachte Bagels &amp; Toasts</title>
+<meta name="description" content="Café chez Louti in Winterthur: hausgemachte Bagels, Toasts und Gebäck, Frühstück und Mittagessen in entspannter Atmosphäre. 5.0 von 5 Sternen bei 33 Google-Bewertungen.">
+<meta property="og:title" content="Café chez Louti, Winterthur">
+<meta property="og:description" content="Hausgemachte Bagels und Toasts mit kreativen Belägen — Frühstück und Mittagessen zum Verweilen.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café chez Louti",
+  "servesCuisine": "Café/Bakery",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "33"
+  },
+  "sameAs": [
+    "https://www.instagram.com/cafechezlouti/",
+    "https://www.facebook.com/61576108365937"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#fbf1de;
+    --surface:#fffaf0;
+    --fg:#3a2415;
+    --muted:#6e4f36;
+    --brand:#e2792e;
+    --accent:#7a8f4c;
+    --dough:#e7bd7c;
+    --dough-dark:#c68f4a;
+    --maxw:1180px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(15px, 0.85vw + 12.5px, 17.5px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Fraunces', ui-serif, Georgia, serif; font-weight:600; margin:0; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:clamp(1.1rem,4vw,3rem); }
+  :focus-visible{ outline:3px solid var(--brand); outline-offset:3px; }
+  .eyebrow{ font-weight:800; text-transform:uppercase; letter-spacing:0.14em; font-size:0.72rem; color:var(--accent); }
+
+  /* seeds: designed dot scatter, not noise */
+  .seeds{ position:relative; }
+  .seeds::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:
+      radial-gradient(circle, var(--fg) 1.4px, transparent 1.6px);
+    background-size: 26px 22px;
+    background-position: 4px 6px;
+    opacity:0.06;
+  }
+
+  header.site{ position:sticky; top:0; z-index:50; background:var(--bg); padding:0.9rem 0; border-bottom:2px solid rgba(58,36,21,0.08); }
+  .navrow{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .logo{ font-family:'Fraunces', serif; font-weight:700; font-size:1.35rem; display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+  .logo .ring{ width:1.4rem; height:1.4rem; border-radius:50%; border:5px solid var(--brand); display:inline-block; }
+  nav.pill-nav{ display:flex; gap:0.3rem; flex-wrap:wrap; }
+  nav.pill-nav a{ text-decoration:none; font-weight:700; font-size:0.82rem; padding:0.5rem 0.9rem; border-radius:999px; }
+  nav.pill-nav a:hover{ background:rgba(226,121,46,0.14); }
+  .navtoggle{ display:none; background:var(--fg); color:var(--bg); border:none; border-radius:999px; padding:0.5rem 1rem; font-weight:700; cursor:pointer; }
+
+  /* HERO — bagel ring */
+  .hero{ padding:clamp(2rem,6vw,4rem) 0 clamp(2.4rem,6vw,4.2rem); overflow:hidden; }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(1.8rem,4vw,3rem); align-items:center; }
+  .hero h1{ font-size:clamp(2.5rem,5.6vw,4.4rem); line-height:1.02; }
+  .hero h1 em{ font-style:normal; color:var(--brand); }
+  .hero .sub{ font-size:clamp(1rem,1.5vw,1.2rem); color:var(--muted); font-weight:600; max-width:38ch; margin-top:1rem; }
+  .cta-row{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:1.6rem; }
+  .btn{ display:inline-flex; align-items:center; gap:0.5rem; font-weight:800; text-decoration:none; padding:0.85rem 1.5rem; border-radius:999px; border:2px solid var(--fg); }
+  .btn.solid{ background:var(--fg); color:var(--bg); }
+  .btn.ghost{ background:transparent; color:var(--fg); }
+  .btn:hover{ transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .btn:hover{ transform:none; } }
+  .rating-chip{ display:inline-flex; align-items:baseline; gap:0.45rem; background:var(--surface); border:2px solid var(--fg); border-radius:999px; padding:0.5rem 1.05rem; font-weight:800; font-size:0.85rem; margin-top:1.4rem; }
+  .rating-chip b{ font-family:'Fraunces',serif; font-size:1.15rem; color:var(--brand); }
+
+  /* the bagel — pure CSS ring with sesame */
+  .bagel-wrap{ display:flex; align-items:center; justify-content:center; position:relative; }
+  .bagel{
+    width:clamp(210px,26vw,320px); height:clamp(210px,26vw,320px);
+    border-radius:50%;
+    background: radial-gradient(circle at 32% 28%, #f3d29a, var(--dough) 55%, var(--dough-dark) 100%);
+    position:relative;
+    box-shadow: inset 0 -14px 26px rgba(120,70,20,0.35), inset 0 10px 18px rgba(255,255,255,0.45), 0 22px 40px rgba(58,36,21,0.18);
+  }
+  .bagel::after{
+    content:""; position:absolute; inset:0; border-radius:50%;
+    background-image: radial-gradient(circle, #fff7e6 2.6px, transparent 2.8px);
+    background-size: 22px 20px;
+    background-position: 6px 10px;
+    opacity:0.65;
+  }
+  .bagel .hole{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:36%; height:36%; border-radius:50%;
+    background: var(--bg);
+    box-shadow: inset 0 6px 14px rgba(58,36,21,0.3);
+  }
+  .bagel{ transition:transform .4s ease; }
+  .bagel-wrap:hover .bagel{ transform:rotate(8deg); }
+  @media (prefers-reduced-motion: reduce){ .bagel-wrap:hover .bagel{ transform:none; } }
+
+  /* mini legend under builder for text alternative */
+  .cs-legend{ list-style:none; margin:1rem 0 0; padding:0; display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; font-size:0.8rem; font-weight:700; color:var(--muted); }
+  .cs-legend li{ display:flex; align-items:center; gap:0.4rem; }
+  .cs-legend .swatch{ width:0.7rem; height:0.7rem; border-radius:50%; display:inline-block; }
+
+  section{ padding:clamp(2.2rem,6vw,4.2rem) 0; }
+  .section-head{ margin-bottom:clamp(1.5rem,3vw,2.2rem); max-width:60ch; }
+  .section-head h2{ font-size:clamp(1.7rem,3.4vw,2.5rem); }
+  .section-head p{ color:var(--muted); font-weight:600; margin-top:0.6rem; }
+
+  /* about */
+  .about-band{ background:var(--surface); border-top:2px solid rgba(58,36,21,0.08); border-bottom:2px solid rgba(58,36,21,0.08); }
+  .about-band p.lead{ font-size:clamp(1.05rem,1.9vw,1.35rem); max-width:62ch; font-weight:600; }
+
+  /* usp toppings row */
+  .topping-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+  .topping-card{ background:var(--surface); border:2px solid rgba(58,36,21,0.1); border-radius:20px; padding:1.2rem 1.3rem; }
+  .topping-card .dot{ width:0.7rem; height:0.7rem; border-radius:50%; background:var(--brand); margin-bottom:0.6rem; }
+  .topping-card p{ margin:0; font-weight:700; font-size:0.95rem; }
+
+  /* SIGNATURE MODULE — bagel builder (cross-section) */
+  .builder{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(1.6rem,4vw,3rem); align-items:center; }
+  .picker{ display:flex; flex-direction:column; gap:0.6rem; }
+  .picker button{
+    text-align:left; font-family:'Nunito Sans',sans-serif; font-weight:700; font-size:0.95rem;
+    background:var(--surface); border:2px solid rgba(58,36,21,0.12); border-radius:16px;
+    padding:0.85rem 1.1rem; cursor:pointer; color:var(--fg);
+  }
+  .picker button .price{ float:right; color:var(--brand); font-weight:800; }
+  .picker button[aria-pressed="true"]{ border-color:var(--brand); background:#fff3e2; }
+  .cross-section{ display:flex; flex-direction:column; align-items:center; gap:0; }
+  .cs-half{
+    width:clamp(220px,30vw,330px); height:clamp(90px,13vw,130px);
+    background: radial-gradient(ellipse at center, #f6e2b8, var(--dough) 70%, var(--dough-dark) 100%);
+    border-radius: 0 0 130px 130px / 0 0 90px 90px;
+    position:relative;
+    box-shadow: inset 0 -10px 18px rgba(120,70,20,0.3);
+  }
+  .cs-half::after{
+    content:""; position:absolute; left:14%; right:14%; top:14%; bottom:20%;
+    background: rgba(255,255,255,0.28); border-radius:50%;
+  }
+  .cs-layers{ display:flex; flex-direction:column-reverse; gap:6px; width:clamp(220px,30vw,330px); margin-top:6px; min-height:56px; align-items:center; }
+  .cs-layer{ height:14px; width:88%; border-radius:8px; }
+  .cs-top{
+    width:clamp(220px,30vw,330px); height:clamp(60px,8vw,86px);
+    background: radial-gradient(ellipse at center, #f6e2b8, var(--dough) 70%, var(--dough-dark) 100%);
+    border-radius: 130px 130px 0 0 / 90px 90px 0 0;
+    margin-top:6px;
+    box-shadow: inset 0 10px 16px rgba(255,255,255,0.4);
+    position:relative;
+  }
+  .cs-top::after{
+    content:""; position:absolute; inset:0; border-radius:130px 130px 0 0 / 90px 90px 0 0;
+    background-image: radial-gradient(circle, #fff7e6 2.2px, transparent 2.4px);
+    background-size: 20px 16px; background-position:5px 4px; opacity:0.7;
+  }
+  .cs-desc{ text-align:center; margin-top:1rem; font-weight:700; color:var(--muted); max-width:36ch; }
+  .cs-desc b{ color:var(--fg); font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; display:block; margin-bottom:0.2rem; }
+
+  /* menu */
+  .menu-tabs{ display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:1.6rem; }
+  .menu-tabs button{ font-family:'Fraunces',serif; font-weight:600; font-size:0.95rem; border:2px solid var(--fg); background:transparent; color:var(--fg); padding:0.55rem 1.2rem; border-radius:999px; cursor:pointer; }
+  .menu-tabs button[aria-pressed="true"]{ background:var(--fg); color:var(--bg); }
+  .menu-panel[hidden]{ display:none; }
+  .menu-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1rem; }
+  .menu-item{ border-radius:18px; padding:1.2rem 1.3rem; border:2px solid rgba(58,36,21,0.1); background:var(--surface); display:flex; flex-direction:column; gap:0.35rem; }
+  .menu-item .row{ display:flex; justify-content:space-between; gap:0.6rem; align-items:baseline; }
+  .menu-item h4{ font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; }
+  .menu-item .price{ font-weight:800; color:var(--brand); white-space:nowrap; }
+  .menu-item p{ margin:0; color:var(--muted); font-size:0.9rem; font-weight:600; }
+
+  /* reviews */
+  .review-strip{ display:flex; align-items:center; gap:clamp(1.2rem,3vw,2rem); background:var(--fg); color:var(--bg); border-radius:28px; padding:clamp(1.6rem,4vw,2.6rem); flex-wrap:wrap; }
+  .review-strip .stars{ font-size:clamp(2.2rem,5vw,3.2rem); color:var(--dough); font-family:'Fraunces',serif; font-weight:700; }
+  .review-strip p{ margin:0; font-weight:600; max-width:40ch; }
+
+  /* find us */
+  .find-wrap{ display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(1.4rem,3vw,2.4rem); align-items:stretch; }
+  .find-card{ background:var(--surface); border-radius:24px; padding:clamp(1.4rem,3vw,2rem); border:2px solid rgba(58,36,21,0.1); display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+  .find-card .row{ display:flex; flex-direction:column; gap:0.15rem; }
+  .find-card .row span.k{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:800; color:var(--accent); }
+  .find-card a{ text-decoration:none; font-weight:800; }
+  .find-card a:hover{ color:var(--brand); }
+  .find-card .honest{ font-size:0.85rem; font-weight:600; color:var(--muted); border-top:1px solid rgba(58,36,21,0.12); padding-top:0.8rem; margin-top:0.2rem; }
+  .mapwrap{ border-radius:24px; overflow:hidden; border:2px solid rgba(58,36,21,0.1); }
+  .mapwrap iframe{ width:100%; height:100%; min-height:280px; border:0; display:block; }
+  .social-row{ display:flex; gap:0.6rem; flex-wrap:wrap; }
+  .social-row a{ display:inline-flex; align-items:center; gap:0.4rem; text-decoration:none; font-weight:800; background:var(--bg); border:2px solid var(--fg); border-radius:999px; padding:0.5rem 1rem; font-size:0.85rem; }
+  .social-row a:hover{ background:var(--brand); color:#fff; border-color:var(--brand); }
+
+  footer.site{ padding:clamp(2rem,4vw,3rem) 0 6rem; background:var(--fg); color:var(--bg); }
+  footer.site .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; font-weight:700; font-size:0.88rem; }
+  footer.site .disclaimer{ margin-top:1.6rem; font-size:0.75rem; opacity:0.75; }
+  footer.site a{ text-decoration:none; }
+  footer.site a:hover{ color:var(--dough); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--brand); color:#fff; padding:0.85rem 1rem; align-items:center; justify-content:center; gap:0.6rem; text-decoration:none; font-weight:800; font-family:'Fraunces',serif; font-size:1rem; }
+  @media (max-width:720px){ .callbar{ display:flex; } body{ padding-bottom:4.2rem; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .bagel-wrap{ order:-1; }
+    .builder{ grid-template-columns:1fr; }
+    .find-wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width:720px){
+    nav.pill-nav{ display:none; }
+    header.site.open nav.pill-nav{ display:flex; flex-basis:100%; padding-top:0.8rem; flex-direction:column; }
+    .navtoggle{ display:inline-block; }
+  }
+  @media (max-width:400px){ .hero h1{ font-size:2.1rem; } }
+</style>
+</head>
+<body>
+
+<header class="site" id="siteheader">
+  <div class="wrap navrow">
+    <a class="logo" href="#top"><span class="ring"></span>chez Louti</a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="pillnav">Menü</button>
+    <nav class="pill-nav" id="pillnav" aria-label="Hauptnavigation">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#baue">Baue deinen Bagel</a>
+      <a href="#karte">Karte</a>
+      <a href="#bewertung">Bewertungen</a>
+      <a href="#finden">Finden</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow reveal">Café · Bagels · Toasts · Winterthur</p>
+        <h1 class="reveal">Hausgemachte <em>Bagels</em>, jeden Tag frisch belegt.</h1>
+        <p class="sub reveal">Café chez Louti ist ein charmantes Café, das sich auf Bagels, Toast
+        und Gebäck spezialisiert hat. Frühstück und Mittagsgerichte, Kaffee und andere Getränke
+        in entspannter Atmosphäre.</p>
+        <div class="cta-row reveal">
+          <a class="btn solid" href="https://www.instagram.com/cafechezlouti/" target="_blank" rel="noopener">Auf Instagram ansehen</a>
+          <a class="btn ghost" href="#karte">Zur Karte ↓</a>
+        </div>
+        <div class="rating-chip reveal"><b>5.0</b>&nbsp;/ 5 · 33 Google-Bewertungen</div>
+      </div>
+      <div class="bagel-wrap reveal" aria-hidden="true">
+        <div class="bagel"><div class="hole"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-band seeds" id="ueber-uns">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Belegt statt banal</h2>
+      </div>
+      <p class="lead reveal">Café chez Louti serviert Bagels, Toasts und Gebäck mit kreativen,
+      hausgemachten Belägen — von Avocado und Hummus bis Brie mit Honig. Dazu Frühstück,
+      Mittagsgerichte, Kaffee und weitere Getränke, alles in entspannter Atmosphäre.</p>
+      <div class="topping-row reveal" style="margin-top:2rem;">
+        <div class="topping-card"><span class="dot"></span><p>Hausgemachte Bagels und Gebäck</p></div>
+        <div class="topping-card"><span class="dot"></span><p>Frühstück und Mittagsservice</p></div>
+        <div class="topping-card"><span class="dot"></span><p>Avocado- und Gourmet-Bagel-Varianten</p></div>
+        <div class="topping-card"><span class="dot"></span><p>Auf Lieferplattformen verfügbar</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE MODULE: bagel builder / cross-section -->
+  <section id="baue">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Baue deinen Bagel</h2>
+        <p>Ein Bagel auswählen und den Belag im Querschnitt sehen — direkt aus der echten Karte.</p>
+      </div>
+      <div class="builder reveal">
+        <div class="picker" role="group" aria-label="Bagel auswählen" id="bagel-picker">
+          <button type="button" data-target="avocado" aria-pressed="true">Avocado Bagel <span class="price">CHF 11.50</span></button>
+          <button type="button" data-target="mozz">Mozzarella-Pesto Bagel <span class="price">CHF 10.50</span></button>
+          <button type="button" data-target="grilled">Grilled Cheese Toast <span class="price">CHF 9.50</span></button>
+          <button type="button" data-target="turkey">Turkey Ham Toast <span class="price">CHF 9.50</span></button>
+        </div>
+        <div>
+          <div class="cross-section" aria-hidden="true">
+            <div class="cs-top"></div>
+            <div class="cs-layers" id="cs-layers"></div>
+            <div class="cs-half"></div>
+          </div>
+          <p class="cs-desc" id="cs-desc"><b>Avocado Bagel</b>Hummus, avocado, and tomatoes</p>
+          <ul class="cs-legend" id="cs-legend" aria-hidden="true"></ul>
+        </div>
+      </div>
+      <p class="cs-desc" style="margin-top:1.6rem; font-size:0.85rem;">Alle vier Beläge stammen
+      unverändert aus der Karte oben — Farben dienen nur der Illustration, nicht der Zutatenliste.</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="karte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Die Karte</h2>
+        <p>Bagels &amp; Toasts sowie Getränke — genau wie im Café serviert.</p>
+      </div>
+      <div class="menu-tabs reveal" role="tablist" aria-label="Menü-Kategorien" id="menu-tabs">
+        <button type="button" role="tab" aria-pressed="true" data-tab="bagels">Bagels &amp; Toasts</button>
+        <button type="button" role="tab" aria-pressed="false" data-tab="drinks">Getränke</button>
+      </div>
+      <div class="menu-panel" data-panel="bagels">
+        <div class="menu-list">
+          <div class="menu-item reveal">
+            <div class="row"><h4>Avocado Bagel</h4><span class="price">CHF 11.50</span></div>
+            <p>Hummus, avocado, and tomatoes</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="row"><h4>Mozzarella-Pesto Bagel</h4><span class="price">CHF 10.50</span></div>
+            <p>Tomatoes, pesto, and mozzarella</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="row"><h4>Grilled Cheese Toast</h4><span class="price">CHF 9.50</span></div>
+            <p>Brie, honey, and mustard</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="row"><h4>Turkey Ham Toast</h4><span class="price">CHF 9.50</span></div>
+            <p>Cheese, turkey ham, and egg</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-panel" data-panel="drinks" hidden>
+        <div class="menu-list">
+          <div class="menu-item reveal">
+            <div class="row"><h4>Coffee, Tea, Matcha Latte</h4></div>
+            <p>Various hot beverages</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="row"><h4>Milk Drinks, Smoothies</h4></div>
+            <p>Cold beverage options</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="bewertung">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <p class="stars">5.0 ★</p>
+        <p>33 Google-Bewertungen — ohne Auswahl, ohne Kürzung, direkt von Google übernommen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIND US -->
+  <section id="finden">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Finden &amp; folgen</h2>
+        <p>Café chez Louti Winterthur.</p>
+      </div>
+      <div class="find-wrap">
+        <div class="find-card reveal">
+          <div class="row">
+            <span class="k">Social</span>
+            <div class="social-row">
+              <a href="https://www.instagram.com/cafechezlouti/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.facebook.com/61576108365937" target="_blank" rel="noopener">Facebook</a>
+            </div>
+          </div>
+          <p class="honest">Adresse, Telefonnummer und Öffnungszeiten sind aktuell nicht öffentlich
+          hinterlegt — für aktuelle Infos lohnt sich ein Blick auf Instagram oder Facebook.</p>
+        </div>
+        <div class="mapwrap reveal">
+          <iframe title="Karte Café chez Louti" loading="lazy"
+            src="https://maps.google.com/maps?q=Caf%C3%A9%20chez%20Louti%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>Café chez Louti<br>Winterthur</div>
+      <div><a href="https://www.instagram.com/cafechezlouti/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/61576108365937" target="_blank" rel="noopener">Facebook</a></div>
+      <div>5.0 ★ · 33 Google-Bewertungen</div>
+    </div>
+    <p class="disclaimer">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="callbar" href="https://www.instagram.com/cafechezlouti/" target="_blank" rel="noopener" aria-label="Café chez Louti auf Instagram">📷 Instagram folgen</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var navtoggle = document.getElementById('navtoggle');
+  var header = document.getElementById('siteheader');
+  if (navtoggle) {
+    navtoggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      navtoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* Bagel builder — real menu data only */
+  var bagelData = {
+    avocado: { title:'Avocado Bagel', desc:'Hummus, avocado, and tomatoes', layers:['#6f8f3f','#e2792e','#c94f3a'] },
+    mozz:    { title:'Mozzarella-Pesto Bagel', desc:'Tomatoes, pesto, and mozzarella', layers:['#c94f3a','#5f7a3a','#f2e6c4'] },
+    grilled: { title:'Grilled Cheese Toast', desc:'Brie, honey, and mustard', layers:['#f2d98a','#e0a52a','#d7c14a'] },
+    turkey:  { title:'Turkey Ham Toast', desc:'Cheese, turkey ham, and egg', layers:['#f0c94a','#d98a7a','#f4e08a'] }
+  };
+  var picker = document.getElementById('bagel-picker');
+  var layersEl = document.getElementById('cs-layers');
+  var descEl = document.getElementById('cs-desc');
+  var legendEl = document.getElementById('cs-legend');
+  function renderBagel(key){
+    var d = bagelData[key];
+    if (!d) return;
+    layersEl.innerHTML = '';
+    legendEl.innerHTML = '';
+    d.layers.forEach(function(color){
+      var s = document.createElement('div');
+      s.className = 'cs-layer';
+      s.style.background = color;
+      layersEl.appendChild(s);
+      var li = document.createElement('li');
+      var sw = document.createElement('span');
+      sw.className = 'swatch';
+      sw.style.background = color;
+      li.appendChild(sw);
+      legendEl.appendChild(li);
+    });
+    descEl.innerHTML = '<b>' + d.title + '</b>' + d.desc;
+  }
+  if (picker) {
+    picker.querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        picker.querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+        btn.setAttribute('aria-pressed','true');
+        renderBagel(btn.getAttribute('data-target'));
+      });
+    });
+  }
+  renderBagel('avocado');
+
+  /* Menu tabs */
+  var tabBtns = document.querySelectorAll('.menu-tabs button');
+  var panels = document.querySelectorAll('.menu-panel');
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabBtns.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+      var target = btn.getAttribute('data-tab');
+      panels.forEach(function(p){ p.hidden = p.getAttribute('data-panel') !== target; });
+    });
+  });
+
+  /* Scroll reveals */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

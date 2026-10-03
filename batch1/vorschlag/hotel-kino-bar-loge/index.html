@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOGE Hotel Kino Bar Winterthur – Zimmer, Bar &amp; Arthouse-Kino inklusive</title>
+<meta name="description" content="LOGE Winterthur: Hotel, Bar und Arthouse-Kino unter einem Dach. Hotelgäste erhalten kostenlosen Kinoeintritt und einen Tagespass ÖV. Oberer Graben 6, Winterthur.">
+<meta property="og:title" content="LOGE Hotel Kino Bar – der Kinoeintritt gehört zum Zimmer">
+<meta property="og:description" content="Hotel, Bar und Arthouse-Kino unter einem Dach in Winterthur. Kostenloser Kinoeintritt und ÖV-Tagespass für Hotelgäste.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.hotelloge.ch/wp-content/uploads/2026/04/Terrasse_web-05_2019.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "LOGE Hotel Kino Bar",
+  "description": "LOGE kombiniert ein Hotel mit einer Bar und einem Arthouse-Kino. Hotelgäste erhalten kostenlosen Zugang zu Filmvorführungen und einen kostenlosen Tagespass für die öffentlichen Verkehrsmittel.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Oberer Graben 6",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41525507310",
+  "email": "info@hotelloge.ch",
+  "url": "https://www.hotelloge.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "204"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Kostenloser Kinoeintritt", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kostenloser Tagespass Öffentliche Verkehrsmittel", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Bar im Haus", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Arthouse-Kino", "value": true }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#0d0a10;
+    --surface:#191319;
+    --fg:#f3ecd9;
+    --muted:#b7abae;
+    --brand:#ad3223;
+    --accent:#d7a23f;
+    --beam:rgba(215,162,63,0.10);
+    --line:rgba(243,236,217,0.14);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:'Source Serif 4',Georgia,serif;
+    font-size:clamp(15px,0.9vw + 12px,17px);
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Oswald',system-ui,sans-serif;text-transform:uppercase;letter-spacing:0.04em;font-weight:600;line-height:1.02;margin:0;color:var(--fg);}
+  h1{font-size:clamp(2.6rem,7vw + 1rem,6rem);font-weight:700;}
+  h2{font-size:clamp(1.9rem,3.6vw + 1rem,3.1rem);}
+  h3{font-size:clamp(1.15rem,1.5vw + 1rem,1.5rem);}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:0.8em 1.2em;z-index:200;font-family:'Oswald',sans-serif;}
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:150;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem clamp(1rem,4vw,2.6rem);
+    background:rgba(13,10,16,0.9);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Oswald',sans-serif;font-size:1.3rem;letter-spacing:0.14em;text-transform:uppercase;}
+  .brand-mark span{color:var(--accent);}
+  nav.primary{display:flex;gap:clamp(0.8rem,2vw,1.7rem);align-items:center;}
+  nav.primary a.nav-link{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;color:var(--muted);}
+  nav.primary a.nav-link:hover{color:var(--fg);}
+  .call-pill{background:var(--brand);color:#fff;padding:0.5em 1.1em;text-decoration:none;font-size:0.8rem;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;}
+  .mobile-menu{display:none;}
+  @media (max-width:780px){
+    nav.primary a.nav-link{display:none;}
+    .mobile-menu{display:block;position:relative;}
+    .mobile-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);color:var(--fg);padding:0.4em 0.7em;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;font-family:'Oswald',sans-serif;}
+    .mobile-menu summary::-webkit-details-marker{display:none;}
+    .mobile-menu-panel{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--line);padding:0.8rem;display:flex;flex-direction:column;gap:0.7rem;min-width:160px;z-index:10;}
+    .mobile-menu-panel a{text-decoration:none;color:var(--fg);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.03em;}
+  }
+
+  main{display:block;}
+  section{padding:clamp(4.2rem,9vw,7rem) clamp(1.1rem,5vw,4rem);position:relative;}
+  .section-inner{max-width:1100px;margin:0 auto;}
+  .kicker{text-transform:uppercase;letter-spacing:0.2em;font-size:0.76rem;color:var(--accent);font-weight:600;margin-bottom:0.9em;display:block;font-family:'Oswald',sans-serif;}
+
+  /* HERO — curtain + beam */
+  #hero{
+    min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+    padding-top:6rem;overflow:hidden;
+    background:
+      linear-gradient(100deg, transparent 0%, transparent 46%, var(--beam) 48%, var(--beam) 62%, transparent 64%),
+      radial-gradient(ellipse at 20% 100%, rgba(173,50,35,0.28), transparent 55%),
+      linear-gradient(180deg,#0a0709,#0d0a10 55%,#120d13);
+  }
+  .curtain{position:absolute;top:0;bottom:0;width:14%;background:repeating-linear-gradient(90deg,#7c1f15,#7c1f15 6px,#5c1610 6px,#5c1610 12px);box-shadow:inset -14px 0 30px rgba(0,0,0,0.55);}
+  .curtain.left{left:0;border-radius:0 0 40% 0;}
+  .curtain.right{right:0;transform:scaleX(-1);border-radius:0 0 40% 0;}
+  @media (max-width:640px){ .curtain{width:7%;} }
+  #hero .hero-inner{max-width:1100px;margin:0 auto;padding:0 clamp(1.4rem,7vw,4rem);position:relative;z-index:2;}
+  .ticket-tag{
+    display:inline-flex;align-items:center;gap:0.6em;border:1px dashed var(--accent);color:var(--accent);
+    font-family:'Oswald',sans-serif;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;
+    padding:0.5em 1em;margin-bottom:1.3rem;
+  }
+  #hero p.lead{max-width:36em;font-size:clamp(1.02rem,1.2vw + 0.7rem,1.25rem);color:var(--muted);margin-top:1.1rem;}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.1rem;}
+  .btn{display:inline-block;padding:0.85em 1.6em;text-decoration:none;font-weight:600;font-size:0.92rem;border:1px solid transparent;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.05em;}
+  .btn-brand{background:var(--brand);color:#fff;}
+  .btn-outline{border-color:var(--line);color:var(--fg);}
+  .rating-chip{display:inline-flex;align-items:center;gap:0.5em;font-size:0.82rem;color:var(--muted);border:1px solid var(--line);padding:0.4em 0.9em;margin-top:1.8rem;font-family:'Oswald',sans-serif;}
+  .rating-chip b{color:var(--accent);}
+
+  /* THREE REELS */
+  #konzept{background:var(--surface);}
+  .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.2rem;}
+  @media (max-width:800px){ .reels{grid-template-columns:1fr;} }
+  .reel{background:var(--bg);padding:2rem 1.6rem;position:relative;}
+  .reel::before{content:attr(data-n);position:absolute;top:1.4rem;right:1.5rem;font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:700;color:rgba(243,236,217,0.06);}
+  .reel h3{color:var(--accent);margin-bottom:0.6rem;}
+  .reel p{color:var(--muted);font-size:0.95rem;margin:0;}
+
+  /* SPIELPLAN — signature module */
+  #spielplan{background:linear-gradient(180deg,var(--bg),#140f16);}
+  .board{
+    margin-top:2.2rem;border:1px solid var(--line);background:rgba(255,255,255,0.02);
+    padding:clamp(1.3rem,3vw,2.2rem);
+  }
+  .board-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.6rem;border-bottom:1px dashed var(--line);padding-bottom:1rem;margin-bottom:1.4rem;}
+  .board-head .now{font-family:'Oswald',sans-serif;font-size:0.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+  .board-head .now b{color:var(--fg);}
+  .status-rows{display:flex;flex-direction:column;gap:0;}
+  .status-row{display:grid;grid-template-columns:1fr auto auto;gap:1rem;align-items:center;padding:0.95em 0.2em;border-top:1px solid var(--line);}
+  .status-row:first-child{border-top:none;}
+  .status-row .label{font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:0.02em;}
+  .status-row .times{color:var(--muted);font-size:0.85rem;}
+  .dot-badge{display:inline-flex;align-items:center;gap:0.5em;font-family:'Oswald',sans-serif;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;padding:0.35em 0.8em;border:1px solid var(--line);white-space:nowrap;}
+  .dot-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--muted);}
+  .dot-badge.open{color:#bfe6bd;border-color:rgba(140,214,132,0.4);}
+  .dot-badge.open::before{background:#7fd479;}
+  .dot-badge.closed{color:var(--muted);}
+  .dot-badge.unknown{color:var(--accent);border-color:rgba(215,162,63,0.4);}
+  .dot-badge.unknown::before{background:var(--accent);}
+  .board-note{margin-top:1.3rem;font-size:0.85rem;color:var(--muted);border-left:2px solid var(--accent);padding-left:0.9em;}
+
+  /* ABOUT / GALLERY */
+  #ueber{background:var(--surface);}
+  .split{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center;}
+  @media (max-width:840px){ .split{grid-template-columns:1fr;} }
+  .frame-img{border:1px solid var(--line);padding:8px;background:var(--bg);}
+  .frame-img img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+  .usp-list{list-style:none;margin:1.4rem 0 0;padding:0;display:flex;flex-direction:column;gap:0.7rem;}
+  .usp-list li{padding-left:1.4em;position:relative;color:var(--muted);}
+  .usp-list li::before{content:'▸';position:absolute;left:0;color:var(--brand);}
+
+  /* ZIMMER (honest, sparse) */
+  #zimmer .room-honest{
+    margin-top:2rem;border:1px dashed var(--line);padding:clamp(1.4rem,3vw,2.2rem);
+    display:flex;flex-wrap:wrap;gap:1.6rem;justify-content:space-between;align-items:center;
+  }
+  #zimmer .room-honest .big{font-family:'Oswald',sans-serif;font-size:clamp(2.4rem,5vw,3.4rem);color:var(--accent);line-height:1;}
+  #zimmer .room-honest .big small{display:block;font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.4rem;font-family:'Oswald',sans-serif;}
+  #zimmer .room-honest p{max-width:26em;color:var(--muted);margin:0;font-size:0.92rem;}
+
+  /* AUSSTATTUNG as ticket stub */
+  #ausstattung{background:var(--surface);}
+  .stub-list{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:640px){ .stub-list{grid-template-columns:1fr;} }
+  .stub-list li{background:var(--bg);padding:1.1rem 1.3rem;font-size:0.95rem;display:flex;align-items:center;gap:0.7em;}
+  .stub-list li::before{content:'🎟';filter:grayscale(1) brightness(1.6);font-size:0.9em;}
+
+  /* PROGRAMME table */
+  #programm table{width:100%;border-collapse:collapse;margin-top:1.8rem;}
+  #programm td{padding:0.85em 0.4em;border-top:1px solid var(--line);font-size:0.93rem;}
+  #programm td:first-child{color:var(--muted);width:45%;}
+  #programm tr:last-child td{border-bottom:1px solid var(--line);}
+
+  /* ANFRAGE composer */
+  .composer-grid{display:flex;flex-wrap:wrap;gap:1.4rem;}
+  .chk{display:flex;align-items:center;gap:0.6em;font-size:0.95rem;cursor:pointer;}
+  .chk input{width:16px;height:16px;accent-color:var(--brand);}
+
+  /* GALERIE */
+  #galerie{background:var(--surface);}
+  .still-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2.2rem;}
+  @media (max-width:640px){ .still-row{grid-template-columns:1fr;} }
+  .still{margin:0;border:1px solid var(--line);background:var(--bg);padding:8px;}
+  .still img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+  .still figcaption{font-size:0.8rem;color:var(--muted);padding:0.7em 0.3em 0.2em;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.06em;}
+
+  /* FAQ */
+  .faq-list{margin-top:1.8rem;display:flex;flex-direction:column;gap:0;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{cursor:pointer;padding:1.1em 0.2em;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Oswald',sans-serif;text-transform:none;letter-spacing:0;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';color:var(--accent);font-size:1.3rem;flex:none;}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin:0 0.2em 1.1em;color:var(--muted);max-width:38em;}
+
+  /* LAGE */
+  #lage iframe{width:100%;height:320px;border:0;margin-top:1.8rem;filter:grayscale(0.4) invert(0.9) contrast(0.92);}
+  .lage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start;margin-top:1.2rem;}
+  @media (max-width:760px){ .lage-grid{grid-template-columns:1fr;} }
+  .lage-meta{display:flex;flex-direction:column;gap:0.9rem;font-size:0.93rem;color:var(--muted);}
+  .lage-meta strong{color:var(--fg);display:block;font-family:'Oswald',sans-serif;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.2em;}
+  .own-map{border:1px solid var(--line);padding:6px;background:var(--bg);}
+  .own-map img{width:100%;display:block;}
+
+  footer{padding:2.6rem clamp(1.1rem,5vw,4rem) 7rem;border-top:1px solid var(--line);font-size:0.82rem;color:var(--muted);}
+  footer .foot-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;margin-bottom:1.4rem;}
+  footer strong{color:var(--fg);font-family:'Oswald',sans-serif;letter-spacing:0.03em;}
+
+  .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--brand);display:flex;}
+  .mobile-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:0.95rem;font-weight:700;font-size:0.9rem;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.04em;}
+  @media (min-width:761px){ .mobile-bar{display:none;} }
+  @media (max-width:760px){ footer{padding-bottom:5.5rem;} }
+
+  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease, transform 0.6s ease;}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="brand-mark">LOGE <span>Hotel · Bar · Kino</span></div>
+  <nav class="primary" aria-label="Hauptnavigation">
+    <a class="nav-link" href="#spielplan">Spielplan</a>
+    <a class="nav-link" href="#zimmer">Zimmer</a>
+    <a class="nav-link" href="#anfrage">Anfrage</a>
+    <a class="nav-link" href="#galerie">Galerie</a>
+    <a class="nav-link" href="#lage">Lage</a>
+    <details class="mobile-menu">
+      <summary>Menü</summary>
+      <div class="mobile-menu-panel">
+        <a href="#spielplan">Spielplan</a>
+        <a href="#zimmer">Zimmer</a>
+        <a href="#anfrage">Anfrage</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#lage">Lage</a>
+      </div>
+    </details>
+    <a class="call-pill" href="tel:+41525507310">Anrufen</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section id="hero">
+    <div class="curtain left" aria-hidden="true"></div>
+    <div class="curtain right" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <span class="ticket-tag">Admit One · Hotelgäste</span>
+      <h1>Der Kinoeintritt<br>gehört zum Zimmer.</h1>
+      <p class="lead">LOGE kombiniert ein Hotel mit einer Bar und einem Arthouse-Kino. Hotelgäste
+        erhalten kostenlosen Zugang zu Filmvorführungen und einen kostenlosen Tagespass für die
+        öffentlichen Verkehrsmittel.</p>
+      <div class="hero-cta">
+        <a class="btn btn-brand" href="#spielplan">Wer hat gerade offen?</a>
+        <a class="btn btn-outline" href="tel:+41525507310">+41 52 550 73 10</a>
+      </div>
+      <div class="rating-chip"><b>4.5</b> · 204 Google-Bewertungen</div>
+    </div>
+  </section>
+
+  <section id="konzept" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Drei Rollen, ein Haus</span>
+      <h2>Kein Hotel mit Kino nebenan. Ein Haus mit drei Rollen.</h2>
+      <div class="reels">
+        <div class="reel" data-n="01"><h3>Hotel</h3><p>ca. 17 Zimmer im Haus, mitten in Winterthur.</p></div>
+        <div class="reel" data-n="02"><h3>Bar</h3><p>Bar im Haus, geöffnet mit eigenen Tageszeiten – siehe Spielplan.</p></div>
+        <div class="reel" data-n="03"><h3>Arthouse-Kino</h3><p>Programmkino im selben Gebäude, für Hotelgäste kostenlos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="spielplan" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Signature Modul</span>
+      <h2>Was hat gerade offen?</h2>
+      <p style="margin-top:1rem;color:var(--muted);max-width:38em;">Rezeption, Check-in und Bar
+        haben unterschiedliche Zeiten. Der Status unten wird direkt aus den echten Öffnungszeiten
+        berechnet – jetzt, in diesem Moment.</p>
+      <div class="board">
+        <div class="board-head">
+          <span class="now">Heute ist <b id="now-day">–</b>, <b id="now-time">–</b> Uhr</span>
+          <span class="now" id="now-updating">wird laufend berechnet</span>
+        </div>
+        <div class="status-rows" id="status-rows"></div>
+        <p class="board-note">Kino: täglich ab 13:30 Uhr oder 30 Minuten vor der ersten Vorführung.
+          Da die erste Vorführung von Tag zu Tag variiert, zeigen wir hier keinen berechneten
+          Live-Status dafür – bitte Vorführzeit direkt beim Kino erfragen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber" data-reveal>
+    <div class="section-inner split">
+      <div>
+        <span class="kicker">Über LOGE</span>
+        <h2>Ein Haus, das nicht wählen musste.</h2>
+        <p style="margin-top:1rem;color:var(--muted);">LOGE kombiniert ein Hotel mit einer Bar und
+          einem Arthouse-Kino. Hotelgäste erhalten kostenlosen Zugang zu Filmvorführungen und einen
+          kostenlosen Tagespass für die öffentlichen Verkehrsmittel.</p>
+        <ul class="usp-list">
+          <li>Einzigartiges Konzept: Hotel + Kino + Bar</li>
+          <li>Kostenloser Kinoeintritt für Hotelgäste</li>
+          <li>Kostenloser Tagespass Öffentliche Verkehrsmittel</li>
+          <li>Arthouse-Kino Programmkino</li>
+        </ul>
+      </div>
+      <div class="frame-img">
+        <img src="https://www.hotelloge.ch/wp-content/uploads/2026/04/Terrasse_web-05_2019.jpg" alt="Terrasse des LOGE Hotel Kino Bar" loading="lazy" onerror="this.closest('.frame-img').style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section id="zimmer" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Zimmer</span>
+      <h2>Wohnen über dem Kinosaal.</h2>
+      <div class="room-honest">
+        <div class="big">~17<small>Zimmer im Haus</small></div>
+        <p>Zimmertypen, Preise und Check-out-Zeit sind auf der Website des Hauses nicht
+          veröffentlicht. Für aktuelle Verfügbarkeit und Preise bitte direkt anrufen oder
+          eine E-Mail schreiben – wir bestätigen keine Zahl, die wir nicht schwarz auf weiss
+          gesehen haben.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="anfrage" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Direkt anfragen</span>
+      <h2>Anfrage zusammenstellen.</h2>
+      <p style="margin-top:1rem;color:var(--muted);max-width:38em;">Wählen Sie, wofür Sie sich
+        interessieren – wir stellen daraus eine E-Mail-Anfrage an das Haus zusammen. Keine Daten
+        werden erfunden, nur die Kontaktangaben aus dieser Seite verwendet.</p>
+      <div class="board" style="margin-top:1.8rem;">
+        <div class="composer-grid">
+          <label class="chk"><input type="checkbox" value="Zimmer" checked> Zimmer</label>
+          <label class="chk"><input type="checkbox" value="Kinoprogramm"> Kinoprogramm</label>
+          <label class="chk"><input type="checkbox" value="Bar / Reservation"> Bar / Reservation</label>
+        </div>
+        <div class="board-note" id="anfrage-preview" style="border-left-color:var(--brand);"></div>
+        <div class="hero-cta" style="margin-top:1.2rem;">
+          <a class="btn btn-brand" id="mailto-link" href="mailto:info@hotelloge.ch">Als E-Mail öffnen</a>
+          <a class="btn btn-outline" href="tel:+41525507310">Lieber anrufen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ausstattung" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Im Ticketpreis</span>
+      <h2>Was inklusive ist.</h2>
+      <ul class="stub-list">
+        <li>Kostenloser Kinoeintritt</li>
+        <li>Kostenloser Tagespass Öffentliche Verkehrsmittel</li>
+        <li>Bar im Haus</li>
+        <li>Arthouse-Kino</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="programm" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Vollständiger Spielplan</span>
+      <h2>Alle Öffnungszeiten.</h2>
+      <table>
+        <tr><td>Rezeption täglich</td><td>14:00–22:00</td></tr>
+        <tr><td>Check-in täglich</td><td>15:00–22:00</td></tr>
+        <tr><td>Bar Mo–Do</td><td>15:00–22:00</td></tr>
+        <tr><td>Bar Fr</td><td>16:00–00:30</td></tr>
+        <tr><td>Bar Sa</td><td>13:00–01:00</td></tr>
+        <tr><td>Bar So</td><td>13:00–20:00</td></tr>
+        <tr><td>Kino täglich</td><td>ab 13:30 oder 30 Min. vor erster Vorführung</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="galerie" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Aus dem Haus</span>
+      <h2>Kino, Bar, Sommerpause.</h2>
+      <div class="still-row">
+        <figure class="still">
+          <img src="https://www.hotelloge.ch/wp-content/uploads/2026/04/Loge-Kinowerbung-6.2-768x432.jpg" alt="Kinowerbung LOGE" loading="lazy" onerror="this.closest('.still').style.display='none'">
+          <figcaption>Programmkino im Haus</figcaption>
+        </figure>
+        <figure class="still">
+          <img src="https://www.hotelloge.ch/wp-content/uploads/2024/07/Sommerpause-1-768x543.png" alt="Sommerpause LOGE" loading="lazy" onerror="this.closest('.still').style.display='none'">
+          <figcaption>Ankündigung Sommerpause</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Gut zu wissen</span>
+      <h2>Häufige Fragen.</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Ist der Kinoeintritt wirklich im Zimmerpreis inbegriffen?</summary>
+          <p>Ja. Hotelgäste erhalten kostenlosen Zugang zu Filmvorführungen im hauseigenen
+            Arthouse-Kino.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Gibt es auch einen ÖV-Vorteil?</summary>
+          <p>Ja. Hotelgäste erhalten zusätzlich einen kostenlosen Tagespass für die
+            öffentlichen Verkehrsmittel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wann kann ich einchecken?</summary>
+          <p>Check-in ist täglich von 15:00 bis 22:00 Uhr. Die Rezeption ist täglich von
+            14:00 bis 22:00 Uhr besetzt.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie viele Zimmer hat das Haus, und was kosten sie?</summary>
+          <p>Rund 17 Zimmer. Zimmertypen und Preise sind nicht veröffentlicht – bitte direkt
+            anfragen.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="lage" data-reveal>
+    <div class="section-inner">
+      <span class="kicker">Lage</span>
+      <h2>Oberer Graben 6, Winterthur</h2>
+      <div class="lage-grid">
+        <div>
+          <div class="lage-meta">
+            <span><strong>Adresse</strong>Oberer Graben 6, CH-8400 Winterthur</span>
+            <span><strong>Telefon</strong><a href="tel:+41525507310">+41 52 550 73 10</a></span>
+            <span><strong>E-Mail</strong><a href="mailto:info@hotelloge.ch">info@hotelloge.ch</a></span>
+            <span><strong>Bewertung</strong>4.5 · 204 Google-Bewertungen</span>
+          </div>
+          <iframe src="https://maps.google.com/maps?q=LOGE%20Hotel%20Kino%20Bar%2C%20Oberer%20Graben%206%2C%20Winterthur&amp;z=16&amp;output=embed" loading="lazy" title="Karte LOGE Hotel Kino Bar Winterthur"></iframe>
+        </div>
+        <div class="own-map">
+          <img src="https://www.hotelloge.ch/wp-content/uploads/2017/10/map-of-loge-1300px.png" alt="Hauseigener Lageplan des LOGE" loading="lazy" onerror="this.closest('.own-map').style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>LOGE Hotel Kino Bar</strong><br>
+      Oberer Graben 6, CH-8400 Winterthur<br>
+      <a href="tel:+41525507310">+41 52 550 73 10</a><br>
+      <a href="mailto:info@hotelloge.ch">info@hotelloge.ch</a>
+    </div>
+    <div>
+      <strong>Website</strong><br>
+      <a href="https://www.hotelloge.ch/" target="_blank" rel="noopener">hotelloge.ch</a>
+    </div>
+  </div>
+  <p>Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525507310">Jetzt anrufen · +41 52 550 73 10</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // scroll reveal
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.12});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---- Spielplan: live status computed from real hours data ----
+  var DAY_NAMES = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+
+  function toMinutes(hhmm){
+    var p = hhmm.split(':');
+    return parseInt(p[0],10) * 60 + parseInt(p[1],10);
+  }
+
+  // returns true if now (minutes since midnight, plus day index) falls in a range
+  // that may cross midnight, given the range applies to specific days.
+  function isOpenNow(now, dayIdx, days, startStr, endStr){
+    var start = toMinutes(startStr), end = toMinutes(endStr);
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    var appliesToday = days.indexOf(dayIdx) !== -1;
+    var appliesYesterday = days.indexOf((dayIdx + 6) % 7) !== -1;
+    if(end > start){
+      // same-day range
+      return appliesToday && nowMin >= start && nowMin < end;
+    } else {
+      // crosses midnight
+      if(appliesToday && nowMin >= start) return true;
+      if(appliesYesterday && nowMin < end) return true;
+      return false;
+    }
+  }
+
+  var now = new Date();
+  var dayIdx = now.getDay(); // 0 = Sonntag
+
+  var entries = [
+    { label:'Rezeption', times:'täglich 14:00–22:00', days:[0,1,2,3,4,5,6], start:'14:00', end:'22:00' },
+    { label:'Check-in', times:'täglich 15:00–22:00', days:[0,1,2,3,4,5,6], start:'15:00', end:'22:00' },
+    { label:'Bar', times: barTimesForToday(dayIdx), days: barDaysForToday(dayIdx).days, start: barDaysForToday(dayIdx).start, end: barDaysForToday(dayIdx).end }
+  ];
+
+  function barDaysForToday(idx){
+    // Mo-Do 1-4: 15:00-22:00 | Fr 5: 16:00-00:30 | Sa 6: 13:00-01:00 | So 0: 13:00-20:00
+    if(idx >= 1 && idx <= 4) return { days:[1,2,3,4], start:'15:00', end:'22:00' };
+    if(idx === 5) return { days:[5], start:'16:00', end:'00:30' };
+    if(idx === 6) return { days:[6], start:'13:00', end:'01:00' };
+    return { days:[0], start:'13:00', end:'20:00' };
+  }
+  function barTimesForToday(idx){
+    if(idx >= 1 && idx <= 4) return 'Mo–Do 15:00–22:00';
+    if(idx === 5) return 'Fr 16:00–00:30';
+    if(idx === 6) return 'Sa 13:00–01:00';
+    return 'So 13:00–20:00';
+  }
+
+  // Bar needs its "yesterday" rule checked separately, since Fr/Sa ranges cross midnight.
+  function barOpenNow(now){
+    var idx = now.getDay();
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    var todayRule = barDaysForToday(idx);
+    var yestRule = barDaysForToday((idx + 6) % 7);
+
+    var tStart = toMinutes(todayRule.start), tEnd = toMinutes(todayRule.end);
+    var openViaToday = tEnd > tStart ? (nowMin >= tStart && nowMin < tEnd) : (nowMin >= tStart);
+
+    var yStart = toMinutes(yestRule.start), yEnd = toMinutes(yestRule.end);
+    var yesterdayCrossesMidnight = yEnd <= yStart;
+    var openViaYesterday = yesterdayCrossesMidnight && nowMin < yEnd;
+
+    return openViaToday || openViaYesterday;
+  }
+
+  var statusRows = document.getElementById('status-rows');
+  var results = [
+    { label:'Rezeption', times:'täglich, 14:00–22:00 Uhr', open: isOpenNow(now, dayIdx, [0,1,2,3,4,5,6], '14:00','22:00') },
+    { label:'Check-in', times:'täglich, 15:00–22:00 Uhr', open: isOpenNow(now, dayIdx, [0,1,2,3,4,5,6], '15:00','22:00') },
+    { label:'Bar', times: barTimesForToday(dayIdx) + ' Uhr', open: barOpenNow(now) }
+  ];
+
+  results.forEach(function(r){
+    var row = document.createElement('div');
+    row.className = 'status-row';
+    var badgeClass = r.open ? 'open' : 'closed';
+    var badgeText = r.open ? 'Jetzt offen' : 'Jetzt geschlossen';
+    row.innerHTML =
+      '<span class="label">' + r.label + '</span>' +
+      '<span class="times">' + r.times + '</span>' +
+      '<span class="dot-badge ' + badgeClass + '">' + badgeText + '</span>';
+    statusRows.appendChild(row);
+  });
+
+  var kinoRow = document.createElement('div');
+  kinoRow.className = 'status-row';
+  kinoRow.innerHTML =
+    '<span class="label">Kino</span>' +
+    '<span class="times">ab 13:30 oder 30 Min. vor erster Vorführung</span>' +
+    '<span class="dot-badge unknown">Programm beachten</span>';
+  statusRows.appendChild(kinoRow);
+
+  document.getElementById('now-day').textContent = DAY_NAMES[dayIdx];
+  document.getElementById('now-time').textContent =
+    (now.getHours() < 10 ? '0' : '') + now.getHours() + ':' + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
+
+  // ---- Anfrage composer: builds a mailto: from real contact data only ----
+  var checkboxes = document.querySelectorAll('.chk input');
+  var preview = document.getElementById('anfrage-preview');
+  var mailtoLink = document.getElementById('mailto-link');
+
+  function renderAnfrage(){
+    var chosen = [];
+    checkboxes.forEach(function(cb){ if(cb.checked) chosen.push(cb.value); });
+    var subject = chosen.length ? 'Anfrage: ' + chosen.join(', ') : 'Anfrage LOGE Hotel Kino Bar';
+    var body = 'Guten Tag\n\nIch interessiere mich für: ' + (chosen.length ? chosen.join(', ') : '–') +
+      '\n\nBitte um Rückmeldung.\n\nAdresse: Oberer Graben 6, CH-8400 Winterthur\nTelefon: +41 52 550 73 10';
+    preview.textContent = 'Betreff: ' + subject;
+    mailtoLink.setAttribute('href', 'mailto:info@hotelloge.ch?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
+  }
+  checkboxes.forEach(function(cb){ cb.addEventListener('change', renderAnfrage); });
+  renderAnfrage();
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Auszeit — Galerie-Café in Veltheim, Winterthur</title>
+<meta name="description" content="Café Auszeit in Veltheim, geführt von Lisa Kehrer: Galerie-Ausstellungen, angenehme Atmosphäre, persönliche Führung. Wülflingerstrasse 77, 8400 Winterthur.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Café Auszeit — Veltheim, Winterthur">
+<meta property="og:description" content="Gemütliches Café mit Galerie und angenehmer Atmosphäre, geführt von Lisa Kehrer.">
+<meta property="og:url" content="https://cafe-auszeit.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Auszeit",
+  "url": "https://cafe-auszeit.ch/",
+  "telephone": "+41 52 222 43 43",
+  "servesCuisine": "Café",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wülflingerstrasse 77",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "176"
+  },
+  "sameAs": ["https://www.instagram.com/cafe.auszeit/", "https://www.facebook.com/Auszeit.Winterthur/"]
+}
+</script>
+<style>
+  :root{
+    --bg:#f6f4ef;
+    --surface:#ece7dd;
+    --fg:#2a2823;
+    --muted:#83796c;
+    --brand:#a9785e;
+    --accent:#7c8a78;
+    --line: rgba(42,40,35,.13);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:'Work Sans', system-ui, sans-serif;
+    font-weight:300;
+    font-size:clamp(15px, .8vw + .6rem, 18px);
+    line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{ font-family:'Newsreader', Georgia, serif; font-weight:400; line-height:1.15; margin:0; }
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--brand); outline-offset:4px;}
+
+  .gutter{max-width:640px; margin:0 auto; padding-inline:clamp(24px,8vw,0px);}
+
+  header.site{position:fixed; top:0; left:0; right:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:clamp(20px,3vw,32px) clamp(20px,5vw,48px); pointer-events:none;}
+  header.site *{pointer-events:auto;}
+  .wordmark{font-family:'Newsreader',serif; font-style:italic; font-size:clamp(1rem,.6vw+.85rem,1.2rem); text-decoration:none; color:var(--fg); letter-spacing:.01em;}
+  .header-call{font-size:.82rem; text-decoration:none; color:var(--muted); border-bottom:1px solid var(--line); padding-bottom:.15em;}
+  .header-call:hover{color:var(--brand); border-color:var(--brand);}
+
+  /* dot rail nav */
+  .dots-nav{position:fixed; right:clamp(14px,2.6vw,34px); top:50%; transform:translateY(-50%); z-index:50; display:flex; flex-direction:column; gap:14px;}
+  .dots-nav a{
+    width:9px; height:9px; border-radius:50%; background:transparent; border:1.4px solid var(--muted);
+    display:block; position:relative;
+  }
+  .dots-nav a.active{background:var(--brand); border-color:var(--brand);}
+  .dots-nav a .tip{
+    position:absolute; right:150%; top:50%; transform:translateY(-50%);
+    white-space:nowrap; font-size:.75rem; color:var(--muted); opacity:0; transition:opacity .2s;
+  }
+  .dots-nav a:hover .tip, .dots-nav a:focus-visible .tip{opacity:1;}
+  @media (max-width:700px){ .dots-nav{display:none;} }
+
+  main{display:block;}
+  section{
+    min-height:100svh; display:flex; flex-direction:column; justify-content:center;
+    padding-block:clamp(90px,12vw,140px);
+  }
+  .idea-eyebrow{
+    font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--brand);
+    margin-bottom:clamp(20px,4vw,32px);
+  }
+  section h2{font-size:clamp(1.9rem,3vw+1rem,3.1rem); max-width:16ch;}
+  section .lead{color:var(--muted); font-size:clamp(1rem,.4vw+.95rem,1.15rem); margin-top:1.1em; max-width:46ch;}
+
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity 1.2s ease, transform 1.2s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* HERO */
+  .hero{align-items:flex-start;}
+  .hero h1{font-size:clamp(3rem,7vw+1rem,6.5rem); font-style:italic; font-weight:400;}
+  .hero .tag{color:var(--muted); font-size:clamp(1.05rem,.5vw+1rem,1.3rem); margin-top:.9em; max-width:36ch;}
+  .breath-module{display:flex; align-items:center; gap:1.1em; margin-top:clamp(40px,6vw,64px);}
+  .breath-circle{
+    width:34px; height:34px; border-radius:50%; border:1.4px solid var(--accent);
+    flex:none;
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .breath-circle{ animation:breathe 8s ease-in-out infinite; }
+  }
+  @keyframes breathe{
+    0%,100%{ transform:scale(.7); background:transparent; }
+    50%{ transform:scale(1); background:var(--accent); opacity:.5; }
+  }
+  .breath-text{font-size:.85rem; color:var(--muted);}
+  .breath-text strong{color:var(--fg); font-variant-numeric:tabular-nums; font-weight:600;}
+
+  /* ABOUT / GALERIE / ATMO — reused idea-screen pattern */
+  .idea-screen .gutter > *{max-width:52ch;}
+
+  /* rating */
+  .rating-line{display:flex; align-items:baseline; gap:.9em; margin-top:.4em;}
+  .rating-num{font-family:'Newsreader',serif; font-size:clamp(2.6rem,4vw+1rem,4rem); color:var(--brand);}
+  .rating-of{color:var(--muted); font-size:.95rem;}
+
+  /* contact */
+  .contact-list{list-style:none; margin:1.6em 0 0; padding:0;}
+  .contact-list li{padding-block:.7em; border-top:1px solid var(--line); display:flex; gap:1.2em; font-size:.98rem;}
+  .contact-list .label{color:var(--muted); min-width:6.5rem; font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; padding-top:.15em;}
+  .contact-list a{text-decoration:none; font-weight:500;}
+  .contact-list a:hover{color:var(--brand);}
+  .hours-note{margin-top:1.4em; font-size:.92rem; color:var(--muted); max-width:46ch;}
+  .btn{display:inline-flex; align-items:center; gap:.5em; padding:.85em 1.6em; border-radius:2px; text-decoration:none; font-weight:500; font-size:.92rem; border:1px solid var(--fg); margin-top:1.8em;}
+  .btn:hover{border-color:var(--brand); color:var(--brand);}
+  .map-frame{margin-top:clamp(36px,5vw,56px); border:1px solid var(--line); max-width:640px; aspect-ratio:16/9;}
+  .map-frame iframe{width:100%; height:100%; border:0; filter:saturate(.5) brightness(1.02);}
+
+  /* socials closing screen */
+  .socials-row{display:flex; gap:1.6em; margin-top:1.6em;}
+  .socials-row a{text-decoration:none; font-size:.95rem; border-bottom:1px solid var(--line); padding-bottom:.2em;}
+  .socials-row a:hover{color:var(--brand); border-color:var(--brand);}
+
+  footer.site{padding:clamp(40px,6vw,64px) clamp(20px,5vw,48px) clamp(96px,10vw,64px); border-top:1px solid var(--line); text-align:center;}
+  footer.site .fmark{font-family:'Newsreader',serif; font-style:italic; font-size:1.1rem;}
+  footer.site .legal{margin-top:1em; font-size:.78rem; color:var(--muted);}
+
+  .mobile-bar{display:none;}
+  @media (max-width:700px){
+    .mobile-bar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--fg); padding:.8em 1em; padding-bottom:max(.8em, env(safe-area-inset-bottom)); gap:.7em;}
+    .mobile-bar a{flex:1; text-align:center; padding:.85em; border-radius:2px; text-decoration:none; font-weight:600; font-size:.9rem; color:var(--bg);}
+    .mobile-bar .call{background:var(--brand);}
+    .mobile-bar .route{background:transparent; border:1px solid rgba(246,244,239,.4);}
+    body{padding-bottom:76px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="wordmark" href="#top">Café Auszeit</a>
+  <a class="header-call" href="tel:+41522224343">052 222 43 43</a>
+</header>
+
+<nav class="dots-nav" aria-label="Seitenabschnitte">
+  <a href="#top" data-target="top" aria-label="Anfang"><span class="tip">Anfang</span></a>
+  <a href="#ueber" data-target="ueber" aria-label="Über uns"><span class="tip">Über uns</span></a>
+  <a href="#galerie" data-target="galerie" aria-label="Galerie"><span class="tip">Galerie</span></a>
+  <a href="#atmosphaere" data-target="atmosphaere" aria-label="Atmosphäre"><span class="tip">Atmosphäre</span></a>
+  <a href="#bewertung" data-target="bewertung" aria-label="Bewertung"><span class="tip">Bewertung</span></a>
+  <a href="#besuch" data-target="besuch" aria-label="Besuch"><span class="tip">Besuch</span></a>
+</nav>
+
+<main id="top">
+
+  <!-- ONE IDEA: arrival -->
+  <section class="hero" id="top-anchor">
+    <div class="gutter">
+      <p class="idea-eyebrow reveal">Veltheim, Winterthur</p>
+      <h1 class="reveal">Auszeit.</h1>
+      <p class="tag reveal">Gemütliches Café mit Galerie und angenehmer Atmosphäre.</p>
+      <div class="breath-module reveal" aria-live="off">
+        <span class="breath-circle" aria-hidden="true"></span>
+        <span class="breath-text">Deine Auszeit hier läuft: <strong id="stopwatch">0:00</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONE IDEA: who runs it -->
+  <section class="idea-screen" id="ueber">
+    <div class="gutter reveal">
+      <p class="idea-eyebrow">Über das Café</p>
+      <h2>Geführt von Lisa Kehrer.</h2>
+      <p class="lead">Café Auszeit ist ein charmantes Café in Veltheim — persönlich geführt, mit dem Fokus auf Gemütlichkeit.</p>
+    </div>
+  </section>
+
+  <!-- ONE IDEA: the gallery -->
+  <section class="idea-screen" id="galerie">
+    <div class="gutter reveal">
+      <p class="idea-eyebrow">Nebenan</p>
+      <h2>Eine Galerie, kein Zufall.</h2>
+      <p class="lead">Das Lokal zeigt Galerie-Ausstellungen — ein Café, das auch Raum für Kunst gibt.</p>
+    </div>
+  </section>
+
+  <!-- ONE IDEA: atmosphere -->
+  <section class="idea-screen" id="atmosphaere">
+    <div class="gutter reveal">
+      <p class="idea-eyebrow">Atmosphäre</p>
+      <h2>Langsam ankommen dürfen.</h2>
+      <p class="lead">Eine angenehme, gemütliche Atmosphäre mit persönlicher Führung — das ist der ganze Anspruch.</p>
+    </div>
+  </section>
+
+  <!-- ONE IDEA: rating, stated small and factual -->
+  <section class="idea-screen" id="bewertung">
+    <div class="gutter reveal">
+      <p class="idea-eyebrow">Auf Google</p>
+      <div class="rating-line">
+        <span class="rating-num">4.7</span>
+        <span class="rating-of">von 5, aus 176 Rezensionen</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONE IDEA: visit -->
+  <section class="idea-screen" id="besuch">
+    <div class="gutter reveal">
+      <p class="idea-eyebrow">Vorbeikommen</p>
+      <h2>Wülflingerstrasse 77.</h2>
+      <ul class="contact-list">
+        <li><span class="label">Adresse</span><span>Wülflingerstrasse 77, 8400 Winterthur</span></li>
+        <li><span class="label">Telefon</span><a href="tel:+41522224343">+41 52 222 43 43</a></li>
+      </ul>
+      <p class="hours-note">Öffnungszeiten sind uns nicht bekannt — am einfachsten kurz anrufen oder auf Instagram nachsehen.</p>
+      <div class="socials-row">
+        <a href="https://www.instagram.com/cafe.auszeit/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/Auszeit.Winterthur/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <a class="btn" href="tel:+41522224343">052 222 43 43 anrufen</a>
+      <div class="map-frame">
+        <iframe title="Café Auszeit auf der Karte" loading="lazy"
+          src="https://maps.google.com/maps?q=W%C3%BClflingerstrasse%2077%2C%208400%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <span class="fmark">Café Auszeit</span>
+  <p class="legal">Wülflingerstrasse 77, 8400 Winterthur · Design-Vorschlag · unverbindliches Muster</p>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+41522224343">Anrufen</a>
+  <a class="route" href="https://maps.google.com/maps?q=W%C3%BClflingerstrasse%2077%2C%208400%20Winterthur&amp;z=16" target="_blank" rel="noopener">Route</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* signature module: no hours exist for Café Auszeit, so instead of a
+     badge this counts real, live elapsed time — your own "Auszeit" (time
+     out) since landing on the page — matching what the name means. */
+  var startedAt = Date.now();
+  var stopwatchEl = document.getElementById("stopwatch");
+  function tick(){
+    var secs = Math.floor((Date.now() - startedAt) / 1000);
+    var m = Math.floor(secs / 60);
+    var s = secs % 60;
+    stopwatchEl.textContent = m + ":" + (s < 10 ? "0" : "") + s;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* dot-rail nav: highlights current section, click scrolls smoothly */
+  var sections = document.querySelectorAll("main section[id], section#top-anchor");
+  var idSections = document.querySelectorAll("#ueber, #galerie, #atmosphaere, #bewertung, #besuch");
+  var dots = document.querySelectorAll(".dots-nav a");
+  var heroEl = document.getElementById("top-anchor");
+
+  function setActive(id){
+    dots.forEach(function(d){ d.classList.toggle("active", d.getAttribute("data-target") === id); });
+  }
+  if("IntersectionObserver" in window){
+    var targets = [heroEl].concat(Array.prototype.slice.call(idSections));
+    var navIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var id = entry.target.id === "top-anchor" ? "top" : entry.target.id;
+          setActive(id);
+        }
+      });
+    }, { threshold: 0.5 });
+    targets.forEach(function(t){ if(t) navIO.observe(t); });
+  }
+
+  /* slow scroll reveals */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els = document.querySelectorAll(".reveal");
+  if(reduce || !("IntersectionObserver" in window)){
+    els.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add("in"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.2, rootMargin: "0px 0px -60px 0px" });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

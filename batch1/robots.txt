@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Search discovery for ChatGPT; this is separate from model training.
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://jakoda.ch/sitemap.xml

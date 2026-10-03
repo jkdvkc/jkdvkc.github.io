@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMMA Bett und Bistro – Boutique-B&amp;B mit Bistro, Altstadt Winterthur</title>
+<meta name="description" content="EMMA Bett und Bistro: Boutique-B&B mit angeschlossenem Bistro in der Altstadt Winterthur. Lokal, saisonal und nachhaltig. Oberer Graben 8, CH-8400 Winterthur.">
+<meta property="og:title" content="EMMA Bett und Bistro – zwei Seiten, ein Haus">
+<meta property="og:description" content="Boutique-B&B mit eigenem Bistro in der Altstadt Winterthur. Lokal beschaffte, saisonale und nachhaltige Produkte.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://emma-bb.ch/wp-content/uploads/2020/06/Titelbild-scaled.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "EMMA Bett und Bistro",
+  "description": "Boutique-B&B in der Altstadt Winterthurs mit angeschlossenem Bistro. Lokal beschaffte, saisonale und nachhaltige Produkte. Bistro Dienstag bis Samstag von 20:00 bis 22:00 geöffnet.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Oberer Graben 8",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "telephone": "+41 52 521 37 31",
+  "email": "info@emma-bb.ch",
+  "url": "https://emma-bb.ch/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "106"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "WLAN gratis", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private Badezimmer mit vollständiger Ausstattung", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Minibar/Kühlschrank", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Angeschlossenes Bistro", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Haustierfreundlich (CHF 20 pro Aufenthalt)", "value": true }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#f7f1e7;
+    --surface:#ffffff;
+    --fg:#241a12;
+    --muted:#66594a;
+    --line:rgba(36,26,18,0.14);
+    --brand-bett:#728249;
+    --accent-bett:#c78a49;
+    --brand-bistro:#b3492f;
+    --accent-bistro:#dba444;
+    --dark:#241a12;
+    --on-dark:#f6efe2;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Manrope',system-ui,sans-serif;
+    font-size:clamp(15px,0.3vw + 14.4px,17.5px);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Bricolage Grotesque',system-ui,sans-serif;
+    font-weight:700;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  h1{font-size:clamp(2.5rem,6vw + 1rem,5.2rem);}
+  h2{font-size:clamp(1.9rem,3.2vw + 1rem,2.9rem);}
+  h3{font-size:clamp(1.15rem,1.1vw + 1rem,1.5rem);}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .skip-link{
+    position:absolute; left:-999px; top:0; background:var(--brand-bistro); color:#fff;
+    padding:0.7em 1.2em; z-index:200; border-radius:0 0 6px 0;
+  }
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:3px solid var(--accent-bistro); outline-offset:3px;}
+
+  header.site{
+    position:sticky; top:0; z-index:100;
+    background:rgba(247,241,231,0.94); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-wrap{
+    max-width:1200px; margin:0 auto; padding:0.9em 1.4em;
+    display:flex; align-items:center; justify-content:space-between; gap:1em; position:relative;
+  }
+  .brand-mark{ display:flex; align-items:center; gap:0.6em; text-decoration:none; }
+  .brand-mark img{ height:26px; width:auto; }
+  .brand-mark span{ font-family:'Bricolage Grotesque'; font-weight:700; font-size:1.15rem; color:var(--fg); }
+  nav.links{ display:flex; gap:1.6em; list-style:none; margin:0; padding:0; }
+  nav.links a{ text-decoration:none; font-weight:600; font-size:0.94rem; color:var(--fg); }
+  nav.links a:hover{ color:var(--brand-bistro); }
+  .nav-cta{
+    background:var(--brand-bistro); color:#fff; padding:0.55em 1.1em; border-radius:999px;
+    font-weight:600; font-size:0.9rem; text-decoration:none; white-space:nowrap;
+  }
+  .menu-toggle{
+    display:none; background:transparent; border:1px solid var(--line); border-radius:8px;
+    width:42px; height:38px; align-items:center; justify-content:center; cursor:pointer;
+    flex-direction:column; gap:4px;
+  }
+  .menu-toggle span{ display:block; width:20px; height:2px; background:var(--fg); }
+
+  main{ display:block; }
+  section{ padding:clamp(3.2rem,6.5vw,5.5rem) 1.4em; }
+  .wrap{ max-width:1160px; margin:0 auto; }
+
+  /* Hero */
+  .hero .wrap{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:3rem; align-items:center; }
+  .hero-eyebrow{ color:var(--brand-bistro); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-size:0.8rem; }
+  .hero h1{ margin-top:0.5em; }
+  .hero .lead{ max-width:46ch; margin-top:1.1em; color:var(--muted); font-size:clamp(1.05rem,0.6vw + 0.95rem,1.25rem); }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:0.9em; margin-top:2em; }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5em; padding:0.85em 1.5em;
+    border-radius:12px; font-weight:700; text-decoration:none; font-size:0.97rem;
+    border:2px solid transparent; cursor:pointer; font-family:'Manrope';
+  }
+  .btn-primary{ background:var(--brand-bistro); color:#fff; }
+  .btn-primary:hover{ filter:brightness(1.08); }
+  .btn-ghost{ border-color:var(--fg); color:var(--fg); background:transparent; }
+  .btn-ghost:hover{ background:rgba(36,26,18,0.06); }
+  .rating-inline{ display:inline-flex; align-items:center; gap:0.6em; margin-top:1.6em; color:var(--muted); font-size:0.92rem; }
+  .rating-inline strong{ color:var(--fg); font-family:'Bricolage Grotesque'; font-size:1.2rem; }
+  .hero-photo{ border-radius:22px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/5; background:var(--surface); }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:900px){ .hero .wrap{ grid-template-columns:1fr; } .hero-photo{ order:-1; aspect-ratio:16/9; } }
+
+  /* About */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:3rem; align-items:start; }
+  .usp-list{ list-style:none; margin:1.4em 0 0; padding:0; display:grid; gap:0.8em; }
+  .usp-list li{ display:flex; gap:0.8em; align-items:flex-start; font-weight:500; }
+  .usp-list li::before{ content:"·"; color:var(--brand-bistro); font-weight:800; font-size:1.6em; line-height:0.5; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* Switch */
+  .switch-section{ text-align:center; }
+  .switch-kicker{ color:var(--muted); font-size:0.95rem; max-width:48ch; margin:0.8em auto 0; }
+  .switch-tabs{
+    display:inline-flex; margin-top:2em; border-radius:999px; background:var(--surface);
+    border:1px solid var(--line); padding:0.35em; gap:0.35em;
+  }
+  .switch-btn{
+    border:0; background:transparent; padding:0.85em 2em; border-radius:999px; cursor:pointer;
+    font-family:'Bricolage Grotesque'; font-weight:700; font-size:1.05rem; color:var(--muted);
+  }
+  .switch-btn[aria-pressed="true"]{ color:#fff; }
+  .switch-btn.bett[aria-pressed="true"]{ background:var(--brand-bett); }
+  .switch-btn.bistro[aria-pressed="true"]{ background:var(--brand-bistro); }
+  @media (max-width:420px){ .switch-tabs{ flex-direction:column; width:100%; } .switch-btn{ width:100%; } }
+
+  /* Track panels */
+  .track{ padding-top:clamp(3rem,6vw,5rem); padding-bottom:clamp(3rem,6vw,5rem); }
+  .track-bett{ background:var(--bg); color:var(--fg); }
+  .track-bistro{ background:var(--dark); color:var(--on-dark); }
+  .track[hidden]{ display:none; }
+  @media (prefers-reduced-motion:no-preference){
+    .track{ animation:fadein 0.5s ease; }
+  }
+  @keyframes fadein{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+
+  .track-kicker{ font-weight:700; text-transform:uppercase; letter-spacing:0.09em; font-size:0.8rem; }
+  .track-bett .track-kicker{ color:var(--brand-bett); }
+  .track-bistro .track-kicker{ color:var(--accent-bistro); }
+
+  /* Rooms (Bett) */
+  .rooms-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:1.6rem; margin-top:2.2em; }
+  .room-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1.7em;
+    display:flex; flex-direction:column; gap:0.8em;
+  }
+  .room-card .m2{
+    align-self:flex-start; background:var(--bg); border:1px solid var(--line); color:var(--muted);
+    font-size:0.78rem; font-weight:700; padding:0.3em 0.8em; border-radius:999px;
+  }
+  .room-card p{ color:var(--muted); font-size:0.93rem; margin:0; }
+  .room-card .price{ margin-top:auto; padding-top:0.7em; border-top:1px dashed var(--line); font-weight:700; font-size:0.95rem; color:var(--fg); }
+  .room-card .price small{ display:block; font-weight:500; color:var(--muted); font-size:0.78rem; margin-top:0.2em; }
+
+  .amen-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0.9em 1.6em; margin-top:2.2em; }
+  .amen{ display:flex; gap:0.7em; align-items:flex-start; padding:0.7em 0; border-bottom:1px solid var(--line); }
+  .amen-icon{
+    flex:none; width:26px; height:26px; border-radius:50%; background:var(--brand-bett); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;
+  }
+
+  /* Composer (Bett) */
+  .composer{
+    margin-top:2.4em; background:var(--surface); border:1px solid var(--line);
+    border-radius:18px; padding:clamp(1.4em,3vw,2.2em); display:grid; gap:1.3em;
+  }
+  .composer-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1.1em; }
+  .field{ display:flex; flex-direction:column; gap:0.5em; }
+  .field label{ font-size:0.84rem; font-weight:700; color:var(--muted); }
+  .field select, .field input{
+    background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:10px;
+    padding:0.7em 0.85em; font-size:0.96rem; font-family:inherit;
+  }
+  .field-check{ display:flex; flex-direction:row; align-items:center; gap:0.6em; }
+  .field-check input{ width:auto; }
+  .composer-output{
+    background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:1.1em 1.3em;
+    font-size:0.92rem; color:var(--fg); white-space:pre-line; min-height:3em;
+  }
+  .composer-actions{ display:flex; flex-wrap:wrap; gap:0.9em; }
+
+  /* Bistro track content */
+  .bistro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; margin-top:1.6em; }
+  .open-badge{
+    display:inline-flex; align-items:center; gap:0.6em; padding:0.5em 1em; border-radius:999px;
+    font-weight:700; font-size:0.85rem; margin-top:1em; border:1px solid rgba(246,239,226,0.3);
+  }
+  .open-badge.is-open{ background:rgba(219,164,68,0.18); color:var(--accent-bistro); }
+  .open-badge.is-closed{ background:rgba(246,239,226,0.08); color:var(--on-dark); }
+  .hours-table{ width:100%; border-collapse:collapse; margin-top:1.4em; }
+  .hours-table td{ padding:0.65em 0; border-bottom:1px solid rgba(246,239,226,0.14); font-size:0.95rem; }
+  .hours-table td:first-child{ font-weight:700; }
+  .hours-table td:last-child{ text-align:right; color:rgba(246,239,226,0.8); }
+  .kitchen-note{ margin-top:1em; font-size:0.86rem; color:rgba(246,239,226,0.7); }
+  .concept-card{
+    background:rgba(246,239,226,0.06); border:1px solid rgba(246,239,226,0.16);
+    border-radius:16px; padding:1.6em;
+  }
+  .concept-card h3{ color:var(--accent-bistro); }
+  @media (max-width:820px){ .bistro-grid{ grid-template-columns:1fr; } }
+
+  /* Location */
+  .location .wrap{ display:grid; grid-template-columns:1fr 1.3fr; gap:2.4rem; align-items:start; }
+  .contact-block{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:1.8em; }
+  .contact-block dt{ font-size:0.76rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); margin-top:1.1em; }
+  .contact-block dt:first-child{ margin-top:0; }
+  .contact-block dd{ margin:0.2em 0 0; font-weight:700; }
+  .contact-block a{ text-decoration:none; color:var(--brand-bistro); }
+  .map-frame{ border-radius:16px; overflow:hidden; border:1px solid var(--line); }
+  .map-frame iframe{ width:100%; height:320px; border:0; display:block; }
+  @media (max-width:820px){ .location .wrap{ grid-template-columns:1fr; } }
+
+  footer{ background:var(--dark); color:var(--on-dark); padding:3rem 1.4em 6.5rem; }
+  footer .wrap{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:2.4rem; }
+  footer h3{ color:#fff; font-size:1.05rem; }
+  footer a{ color:rgba(246,239,226,0.8); text-decoration:none; }
+  footer a:hover{ color:var(--accent-bistro); }
+  .footer-legal{ margin-top:2.4rem; padding-top:1.6rem; border-top:1px solid rgba(246,239,226,0.14); font-size:0.82rem; color:rgba(246,239,226,0.6); }
+  @media (max-width:760px){ footer .wrap{ grid-template-columns:1fr; } }
+
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:150; display:none;
+    background:var(--dark); border-top:1px solid rgba(246,239,226,0.18);
+    padding:0.7em 1em; align-items:center; justify-content:center;
+  }
+  .mobile-bar a{
+    display:flex; align-items:center; justify-content:center; gap:0.5em; width:100%;
+    background:var(--accent-bistro); color:#241a12; padding:0.85em; border-radius:999px;
+    font-weight:800; text-decoration:none;
+  }
+  @media (max-width:640px){
+    .mobile-bar{ display:flex; }
+    body{ padding-bottom:4.6rem; }
+    nav.links{
+      display:none; position:absolute; left:0; right:0; top:100%;
+      background:var(--surface); border-bottom:1px solid var(--line);
+      flex-direction:column; gap:0; padding:0.5em 1.4em 1em;
+    }
+    nav.links.open{ display:flex; }
+    nav.links a{ padding:0.8em 0; border-bottom:1px solid var(--line); }
+    .nav-cta{ display:none; }
+    .menu-toggle{ display:flex; }
+  }
+  @media (max-width:380px){
+    .hero-actions .btn, .composer-actions .btn{ width:100%; justify-content:center; }
+  }
+
+  [data-reveal]{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:no-preference){
+    [data-reveal]{ opacity:0; transform:translateY(18px); transition:opacity 0.7s ease, transform 0.7s ease; }
+    [data-reveal].is-visible{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site">
+  <div class="nav-wrap">
+    <a class="brand-mark" href="#main">
+      <img id="logo-img" src="https://emma-bb.ch/wp-content/uploads/2020/05/logo_quer_blau.svg" alt="EMMA Bett und Bistro Logo" onerror="this.style.display='none';">
+      <span>EMMA</span>
+    </a>
+    <nav class="links" id="nav-links" aria-label="Hauptnavigation">
+      <a href="#über">Über EMMA</a>
+      <a href="#wahl">Bett / Bistro</a>
+      <a href="#lage">Lage</a>
+    </nav>
+    <a class="nav-cta" href="tel:+41525213731">Anrufen</a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" data-reveal>
+    <div class="wrap">
+      <div>
+        <span class="hero-eyebrow">Oberer Graben 8 · Altstadt Winterthur</span>
+        <h1>EMMA ist kein Zimmer.<br>EMMA ist ein Haus.</h1>
+        <p class="lead">Boutique-B&amp;B mit eigenem Bistro in der Altstadt Winterthurs. Lokal beschaffte, saisonale und nachhaltige Produkte, getragen von Toleranz, Transparenz und Qualität.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#wahl">Bett oder Bistro entdecken</a>
+          <a class="btn btn-ghost" href="tel:+41525213731">+41 52 521 37 31</a>
+        </div>
+        <div class="rating-inline">
+          <strong>4.6 / 5</strong> <span>· 106 Google-Bewertungen</span>
+        </div>
+      </div>
+      <div class="hero-photo" id="hero-photo-wrap">
+        <img src="https://emma-bb.ch/wp-content/uploads/2020/06/Titelbild-scaled.jpg" alt="EMMA Bett und Bistro" onerror="document.getElementById('hero-photo-wrap').style.display='none';">
+      </div>
+    </div>
+  </section>
+
+  <section id="über" data-reveal>
+    <div class="wrap about-grid">
+      <div>
+        <span class="track-kicker" style="color:var(--brand-bistro);">Über EMMA</span>
+        <h2 style="margin-top:0.4em;">Toleranz, Transparenz, Qualität</h2>
+        <p style="margin-top:1.1em;max-width:56ch;color:var(--muted);">EMMA Bett und Bistro ist ein Boutique-B&amp;B in der Altstadt Winterthurs mit angeschlossenem Bistro. Das Konzept betont Toleranz, Transparenz und Qualität mit lokal beschafften, saisonalen und nachhaltigen Produkten. Das Bistro serviert warme Speisen und ist Dienstag bis Samstag von 20:00 bis 22:00 geöffnet.</p>
+      </div>
+      <ul class="usp-list">
+        <li>Boutique-B&amp;B mit eigenem Bistro</li>
+        <li>Lokal und nachhaltig</li>
+        <li>Zentrale Lage in der Altstadt</li>
+        <li>Gartenzimmer mit Balkon</li>
+        <li>Haustierfreundlich</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="switch-section" id="wahl" data-reveal>
+    <div class="wrap">
+      <span class="track-kicker" style="color:var(--brand-bistro);">Zwei Seiten, ein Haus</span>
+      <h2 style="margin-top:0.4em;">Bett oder Bistro?</h2>
+      <p class="switch-kicker">EMMA lässt sich zu zweit lesen: als Ort zum Übernachten und als Ort zum Essen. Wählen Sie eine Seite — oder beide.</p>
+      <div class="switch-tabs" role="group" aria-label="Bett oder Bistro anzeigen">
+        <button class="switch-btn bett" id="btn-bett" type="button" aria-pressed="true">🛏 Bett</button>
+        <button class="switch-btn bistro" id="btn-bistro" type="button" aria-pressed="false">🍽 Bistro</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="track track-bett" id="track-bett">
+    <section>
+      <div class="wrap">
+        <span class="track-kicker">Die Zimmer</span>
+        <h2 style="margin-top:0.4em;">Drei Zimmer über dem Bistro</h2>
+        <div class="rooms-grid" id="room-cards"></div>
+
+        <span class="track-kicker" style="display:block;margin-top:3em;">Ausstattung</span>
+        <h2 style="margin-top:0.4em;">Was jedes Zimmer mitbringt</h2>
+        <div class="amen-grid" id="amen-grid"></div>
+
+        <span class="track-kicker" style="display:block;margin-top:3em;">Zimmeranfrage</span>
+        <h2 style="margin-top:0.4em;">Anfrage zusammenstellen</h2>
+        <p style="margin-top:0.7em;color:var(--muted);max-width:56ch;">Wählen Sie Zimmer, Belegung und Daten — wir bereiten eine E-Mail mit den passenden Preisangaben vor.</p>
+        <div class="composer">
+          <div class="composer-row">
+            <div class="field">
+              <label for="room-select">Zimmer</label>
+              <select id="room-select"></select>
+            </div>
+            <div class="field">
+              <label for="occupancy">Belegung</label>
+              <select id="occupancy">
+                <option value="Einzeln">Einzeln</option>
+                <option value="Doppelt" selected>Doppelt</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="checkin">Anreise</label>
+              <input type="date" id="checkin">
+            </div>
+            <div class="field">
+              <label for="checkout">Abreise</label>
+              <input type="date" id="checkout">
+            </div>
+          </div>
+          <div class="field-check">
+            <input type="checkbox" id="pet">
+            <label for="pet" style="font-weight:500;color:var(--fg);">Mit Haustier (+ CHF 20 pro Aufenthalt)</label>
+          </div>
+          <div class="composer-output" id="composer-output" aria-live="polite"></div>
+          <div class="composer-actions">
+            <a class="btn btn-primary" id="mail-btn" href="#">Als E-Mail senden</a>
+            <a class="btn btn-ghost" href="tel:+41525213731">Lieber anrufen: +41 52 521 37 31</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="track track-bistro" id="track-bistro" hidden>
+    <section>
+      <div class="wrap">
+        <span class="track-kicker">Das Bistro</span>
+        <h2 style="margin-top:0.4em;">Warme Küche, lokale Zutaten</h2>
+        <div id="open-badge-wrap"></div>
+        <div class="bistro-grid">
+          <div>
+            <table class="hours-table" id="hours-table"></table>
+            <p class="kitchen-note" id="kitchen-note"></p>
+          </div>
+          <div class="concept-card">
+            <h3>Lokal und nachhaltige Speisen</h3>
+            <p style="margin-top:0.6em;color:rgba(246,239,226,0.85);">Saisonale und lokal beschaffte Produkte. Das Bistro ist Teil desselben Hauses wie die Zimmer darüber — ein Konzept, keine zwei Betriebe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="location" id="lage" data-reveal>
+    <div class="wrap">
+      <div class="contact-block">
+        <h2 style="font-size:clamp(1.5rem,2vw + 1rem,2rem);">Kontakt &amp; Lage</h2>
+        <dl style="margin:1.2em 0 0;">
+          <dt>Adresse</dt>
+          <dd>Oberer Graben 8, CH–8400 Winterthur</dd>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+41525213731">+41 52 521 37 31</a></dd>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@emma-bb.ch">info@emma-bb.ch</a></dd>
+        </dl>
+      </div>
+      <div class="map-frame">
+        <iframe title="Karte EMMA Bett und Bistro Winterthur" loading="lazy" src="https://maps.google.com/maps?q=EMMA%20Bett%20und%20Bistro%20Winterthur&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>EMMA Bett und Bistro</h3>
+      <p style="margin-top:0.8em;font-size:0.92rem;max-width:38ch;">Oberer Graben 8, CH–8400 Winterthur — Boutique-B&amp;B mit eigenem Bistro, lokal und nachhaltig.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p style="margin-top:0.8em;"><a href="tel:+41525213731">+41 52 521 37 31</a></p>
+      <p><a href="mailto:info@emma-bb.ch">info@emma-bb.ch</a></p>
+      <p><a href="https://emma-bb.ch/" target="_blank" rel="noopener">emma-bb.ch</a></p>
+    </div>
+    <div>
+      <h3>Direkt</h3>
+      <p style="margin-top:0.8em;"><a href="#wahl">Bett oder Bistro</a></p>
+      <p><a href="#lage">Anfahrt</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    Design-Vorschlag · unverbindliches Muster
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+41525213731">📞 +41 52 521 37 31 anrufen</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var rooms = [
+    { name:"Gartenzimmer", desc:"30 m², Gartensicht mit Sitzbereich im Zimmer.", capacity:2,
+      single:"CHF 145", double:"CHF 160" },
+    { name:"Doppelzimmer 1. Etage", desc:"30 m², 1. Etage mit Gartensicht, nur über Treppen erreichbar.", capacity:2,
+      single:"CHF 130", double:"CHF 145" },
+    { name:"Dachzimmer", desc:"25 m², 2. Etage mit Blick über die Hinterhofgärten Winterthurs, nur über Treppen erreichbar.", capacity:2,
+      single:"CHF 130", double:"CHF 145" }
+  ];
+
+  var amenities = [
+    "WLAN gratis",
+    "Doppelbett",
+    "Private Badezimmer mit vollständiger Ausstattung",
+    "Minibar/Kühlschrank",
+    "Wasserkocher",
+    "Flachbild-TV",
+    "Angeschlossenes Bistro",
+    "Haustierfreundlich (CHF 20 pro Aufenthalt)"
+  ];
+
+  var hours = [
+    { days:"Mo", time:"geschlossen" },
+    { days:"Di", time:"08:00–17:30" },
+    { days:"Mi–Sa", time:"08:00–22:00" },
+    { days:"So", time:"09:00–17:00" }
+  ];
+  var kitchenNoteText = "Warme Küche schliesst 1 Stunde vor Schliessung.";
+
+  // Render room cards
+  var roomGrid = document.getElementById("room-cards");
+  rooms.forEach(function(r){
+    var card = document.createElement("article");
+    card.className = "room-card";
+    card.innerHTML =
+      '<span class="m2">' + r.desc.split(",")[0] + '</span>' +
+      '<h3>' + r.name + '</h3>' +
+      '<p>' + r.desc + '</p>' +
+      '<div class="price">Einzeln ' + r.single + ' · Doppelt ' + r.double + '<small>+ CHF 20 Haustier pro Aufenthalt</small></div>';
+    roomGrid.appendChild(card);
+  });
+
+  // Render amenities
+  var amenGrid = document.getElementById("amen-grid");
+  amenities.forEach(function(a){
+    var row = document.createElement("div");
+    row.className = "amen";
+    row.innerHTML = '<span class="amen-icon" aria-hidden="true">✓</span><span>' + a + '</span>';
+    amenGrid.appendChild(row);
+  });
+
+  // Populate composer select
+  var roomSelect = document.getElementById("room-select");
+  rooms.forEach(function(r){
+    var opt = document.createElement("option");
+    opt.value = r.name;
+    opt.textContent = r.name;
+    roomSelect.appendChild(opt);
+  });
+
+  var occupancy = document.getElementById("occupancy");
+  var checkin = document.getElementById("checkin");
+  var checkout = document.getElementById("checkout");
+  var pet = document.getElementById("pet");
+  var output = document.getElementById("composer-output");
+  var mailBtn = document.getElementById("mail-btn");
+
+  function fmtDate(v){
+    if(!v) return null;
+    var d = new Date(v + "T00:00:00");
+    if(isNaN(d)) return null;
+    return d.toLocaleDateString("de-CH", { day:"2-digit", month:"2-digit", year:"numeric" });
+  }
+
+  function findRoom(name){
+    for(var i=0;i<rooms.length;i++){ if(rooms[i].name === name) return rooms[i]; }
+    return rooms[0];
+  }
+
+  function updateComposer(){
+    var room = findRoom(roomSelect.value);
+    var occ = occupancy.value;
+    var price = occ === "Einzeln" ? room.single : room.double;
+    var ci = fmtDate(checkin.value);
+    var co = fmtDate(checkout.value);
+    var petOn = pet.checked;
+
+    var lines = [
+      "Zimmer: " + room.name,
+      "Belegung: " + occ + " (" + price + ")"
+    ];
+    if(ci) lines.push("Anreise: " + ci);
+    if(co) lines.push("Abreise: " + co);
+    if(petOn) lines.push("Mit Haustier: + CHF 20 pro Aufenthalt");
+    output.textContent = lines.join("\n");
+
+    var subject = "Zimmeranfrage – " + room.name;
+    var bodyLines = [
+      "Guten Tag",
+      "",
+      "Ich interessiere mich für folgendes Zimmer bei EMMA Bett und Bistro:",
+      "Zimmer: " + room.name,
+      "Belegung: " + occ + " (" + price + ")"
+    ];
+    if(ci) bodyLines.push("Anreise: " + ci);
+    if(co) bodyLines.push("Abreise: " + co);
+    if(petOn) bodyLines.push("Mit Haustier: + CHF 20 pro Aufenthalt");
+    bodyLines.push("", "Freundliche Grüsse");
+
+    mailBtn.setAttribute("href", "mailto:info@emma-bb.ch?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n")));
+  }
+  [roomSelect, occupancy, checkin, checkout, pet].forEach(function(el){
+    el.addEventListener("change", updateComposer);
+    el.addEventListener("input", updateComposer);
+  });
+  updateComposer();
+
+  // Render hours table
+  var hoursTable = document.getElementById("hours-table");
+  hours.forEach(function(h){
+    var row = document.createElement("tr");
+    row.innerHTML = "<td>" + h.days + "</td><td>" + h.time + "</td>";
+    hoursTable.appendChild(row);
+  });
+  document.getElementById("kitchen-note").textContent = kitchenNoteText;
+
+  // Open-now badge, computed from real hours
+  function computeOpenState(now){
+    var day = now.getDay(); // 0 Sun .. 6 Sat
+    var mapRow = null;
+    hours.forEach(function(h){
+      var days = h.days;
+      var set = [];
+      if(days.indexOf("–") > -1){
+        var parts = days.split("–");
+        var order = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+        var start = order.indexOf(parts[0]);
+        var end = order.indexOf(parts[1]);
+        if(start > -1 && end > -1){
+          var i = start;
+          while(true){
+            set.push(i);
+            if(i === end) break;
+            i = (i + 1) % 7;
+          }
+        }
+      } else {
+        var order2 = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+        var idx = order2.indexOf(days);
+        if(idx > -1) set.push(idx);
+      }
+      if(set.indexOf(day) > -1) mapRow = h;
+    });
+    if(!mapRow || mapRow.time === "geschlossen"){
+      return { open:false, label:"Heute geschlossen" };
+    }
+    var range = mapRow.time.split("–");
+    var startParts = range[0].split(":").map(Number);
+    var endParts = range[1].split(":").map(Number);
+    var startMin = startParts[0]*60 + startParts[1];
+    var endMin = endParts[0]*60 + endParts[1];
+    var nowMin = now.getHours()*60 + now.getMinutes();
+    if(nowMin >= startMin && nowMin < endMin){
+      return { open:true, label:"Heute geöffnet bis " + mapRow.time.split("–")[1] + " Uhr" };
+    }
+    return { open:false, label:"Heute geschlossen (Öffnungszeit " + mapRow.time + ")" };
+  }
+
+  var badgeWrap = document.getElementById("open-badge-wrap");
+  var state = computeOpenState(new Date());
+  var badge = document.createElement("span");
+  badge.className = "open-badge " + (state.open ? "is-open" : "is-closed");
+  badge.textContent = (state.open ? "● " : "○ ") + state.label;
+  badgeWrap.appendChild(badge);
+
+  // Bett/Bistro switch
+  var btnBett = document.getElementById("btn-bett");
+  var btnBistro = document.getElementById("btn-bistro");
+  var trackBett = document.getElementById("track-bett");
+  var trackBistro = document.getElementById("track-bistro");
+
+  function showTrack(mode){
+    if(mode === "bett"){
+      trackBett.hidden = false;
+      trackBistro.hidden = true;
+      btnBett.setAttribute("aria-pressed","true");
+      btnBistro.setAttribute("aria-pressed","false");
+    } else {
+      trackBett.hidden = true;
+      trackBistro.hidden = false;
+      btnBett.setAttribute("aria-pressed","false");
+      btnBistro.setAttribute("aria-pressed","true");
+    }
+  }
+  btnBett.addEventListener("click", function(){ showTrack("bett"); });
+  btnBistro.addEventListener("click", function(){ showTrack("bistro"); });
+
+  // Mobile nav toggle
+  var menuToggle = document.getElementById("menu-toggle");
+  var navLinks = document.getElementById("nav-links");
+  menuToggle.addEventListener("click", function(){
+    var isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+  navLinks.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Scroll reveal
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.15 });
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ el.classList.add("is-visible"); });
+  }
+})();
+</script>
+</body>
+</html>

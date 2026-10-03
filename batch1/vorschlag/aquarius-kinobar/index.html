@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquarius Kinobar Winterthur — Bar im Foyer des Kiwi Kinos</title>
+<meta name="description" content="Aquarius Kinobar am Neumarkt 11 in Winterthur: Cocktails vor und nach dem Film, mehrere Lounges, Terrasse und Raum für Anlässe im Foyer des Kiwi Kinos.">
+<meta property="og:title" content="Aquarius Kinobar — Kinobar &amp; Lounges im Herzen von Winterthur">
+<meta property="og:description" content="Bar im Foyer des Kiwi Centers am Neumarkt: Lounges, Terrasse, Cocktails mit Kino-Ticket-Rabatt und Raum für eigene Anlässe.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-4-2.jpg">
+<meta property="og:locale" content="de_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Aquarius Kinobar",
+  "image": "https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-4-2.jpg",
+  "url": "https://www.aquariusbar.ch/",
+  "telephone": "+41 52 203 44 44",
+  "email": "info@aquariusbar.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Neumarkt 11",
+    "postalCode": "8400",
+    "addressLocality": "Winterthur",
+    "addressCountry": "CH"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.1",
+    "reviewCount": "168"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "17:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "17:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "18:00", "closes": "01:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "16:00", "closes": "22:00" }
+  ],
+  "sameAs": ["https://www.facebook.com/AQUARIUSBARLOUNGE/"]
+}
+</script>
+<style>
+/* ============================= RESET ============================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; color: inherit; }
+h1,h2,h3,h4,p { margin: 0; }
+
+/* ============================= TOKENS ============================= */
+:root{
+  --bg: #0b1420;
+  --surface: #142234;
+  --fg: #f5efe3;
+  --muted: #b6c3d6;
+  --brand: #2b5f8e;
+  --accent: #e8d4b8;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --maxw: 1180px;
+  --edge: clamp(1.25rem, 5vw, 3.5rem);
+}
+
+/* ============================= BASE TYPE ============================= */
+body{
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: clamp(15px, 0.95vw + 0.6rem, 18px);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.eyebrow{
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: clamp(.72rem, .5vw + .55rem, .85rem);
+  color: var(--accent);
+}
+h2.section-title{
+  font-family: var(--font-display);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 3.4vw + 1rem, 3.6rem);
+  line-height: 1.02;
+  color: var(--fg);
+}
+.section-lede{
+  color: var(--muted);
+  max-width: 46ch;
+  font-size: clamp(1rem, .3vw + .9rem, 1.15rem);
+}
+
+/* focus */
+:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================= LAYOUT HELPERS ============================= */
+.wrap{ max-width: var(--maxw); margin: 0 auto; padding-inline: var(--edge); }
+main section{ padding-block: clamp(3.5rem, 7vw, 7rem); }
+.stub-divider{
+  height: 1px;
+  background-image: repeating-linear-gradient(90deg, var(--muted) 0 10px, transparent 10px 20px);
+  opacity: .35;
+}
+
+/* reveal-on-scroll */
+.reveal{ opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible{ opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* buttons */
+.btn{
+  display: inline-flex; align-items: center; gap: .5em;
+  font-family: var(--font-mono);
+  font-size: .95rem;
+  letter-spacing: .03em;
+  padding: .85em 1.5em;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+.btn:hover{ transform: translateY(-2px); }
+.btn-primary{ background: var(--accent); color: #201607; font-weight: 700; }
+.btn-primary:hover{ background: #f2e3c9; }
+.btn-ghost{ background: transparent; color: var(--fg); border-color: var(--muted); }
+.btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+
+/* ============================= HEADER / NAV ============================= */
+header{
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(11,20,32,.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(230,212,184,.15);
+}
+.nav-inner{
+  display: flex; align-items: center; justify-content: space-between;
+  padding-block: .9rem;
+}
+.wordmark{
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 1.4vw + .8rem, 1.7rem);
+  letter-spacing: .06em;
+  color: var(--fg);
+}
+.wordmark span{ color: var(--accent); }
+nav.primary-nav ul{ display: flex; gap: clamp(1rem, 2vw, 2.1rem); }
+nav.primary-nav a{
+  font-size: .92rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  transition: color .18s ease;
+}
+nav.primary-nav a:hover{ color: var(--accent); }
+.nav-call{
+  display: flex; align-items: center; gap: 1.4rem;
+}
+.nav-call .btn{ padding: .6em 1.1em; font-size: .85rem; }
+.hamburger{
+  display: none;
+  background: none; border: 1px solid var(--muted); border-radius: 2px;
+  width: 42px; height: 38px;
+  color: var(--fg);
+  font-size: 1.2rem;
+}
+@media (max-width: 780px){
+  nav.primary-nav{
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid rgba(230,212,184,.15);
+    max-height: 0; overflow: hidden; transition: max-height .3s ease;
+  }
+  nav.primary-nav.open{ max-height: 320px; }
+  nav.primary-nav ul{ flex-direction: column; padding: 1.2rem var(--edge); gap: 1rem; }
+  .hamburger{ display: inline-flex; align-items: center; justify-content: center; }
+  .nav-call .btn-ghost{ display: none; }
+}
+
+/* ============================= HERO (typographic, no photo) ============================= */
+.hero{
+  position: relative;
+  padding-block: clamp(4rem, 10vw, 8rem) clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 8%, rgba(232,212,184,.16), transparent 65%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(43,95,142,.35), transparent 70%);
+}
+.hero-glow{
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 50% 0%, rgba(232,212,184,.14), transparent 55%);
+  animation: pulse 6s ease-in-out infinite;
+}
+@keyframes pulse{ 0%,100%{ opacity: .6; } 50%{ opacity: 1; } }
+@media (prefers-reduced-motion: reduce){ .hero-glow{ animation: none; } }
+.hero-content{ position: relative; text-align: center; }
+.hero-eyebrow{
+  display: inline-flex; align-items: center; gap: .6em;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  margin-bottom: 1.4rem;
+}
+.hero-eyebrow::before, .hero-eyebrow::after{ content: ''; width: 2rem; height: 1px; background: var(--accent); opacity: .6; }
+.hero-title{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--fg);
+  line-height: .92;
+  letter-spacing: .01em;
+  font-size: clamp(3.2rem, 11vw, 8.5rem);
+  text-shadow: 0 0 60px rgba(232,212,184,.25);
+}
+.hero-title .line2{ color: var(--accent); }
+.hero-tagline{
+  margin: 1.6rem auto 0;
+  max-width: 42ch;
+  color: var(--muted);
+  font-size: clamp(1.05rem, .5vw + .95rem, 1.35rem);
+}
+.hero-meta{
+  margin-top: 2.4rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.6rem;
+  font-family: var(--font-mono); font-size: .88rem; color: var(--muted);
+}
+.hero-meta strong{ color: var(--accent); }
+.hero-ctas{
+  margin-top: 2.6rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+}
+.rating-stub{
+  margin: 2.2rem auto 0;
+  display: inline-flex; align-items: center; gap: .9rem;
+  border: 1px dashed rgba(182,195,214,.5);
+  padding: .7rem 1.3rem;
+  border-radius: 2px;
+  font-family: var(--font-mono); font-size: .9rem;
+  color: var(--fg);
+}
+.rating-stub .stars{ color: var(--accent); letter-spacing: .1em; }
+
+/* ============================= MARQUEE STATUS STRIP ============================= */
+.marquee-strip{
+  background: var(--accent);
+  color: #1c1305;
+  overflow: hidden;
+  border-top: 3px solid var(--bg);
+  border-bottom: 3px solid var(--bg);
+}
+.marquee-track{
+  display: flex;
+  width: max-content;
+  animation: scroll-left 32s linear infinite;
+}
+@media (prefers-reduced-motion: reduce){ .marquee-track{ animation: none; } }
+@keyframes scroll-left{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+.marquee-track span{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  padding-inline: 1.4rem;
+  white-space: nowrap;
+  display: inline-flex; align-items: center; gap: .6rem;
+}
+.marquee-track span::after{ content: '★'; font-size: .7em; opacity: .6; }
+.marquee-track .status-open{ color: #123a0d; }
+.marquee-track .status-closed{ color: #4a1414; }
+
+/* ============================= ABOUT ============================= */
+.about-grid{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+}
+.about-photo{
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  border: 1px solid rgba(230,212,184,.2);
+}
+.about-photo img{ width: 100%; height: 100%; object-fit: cover; }
+.about-photo::after{
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(11,20,32,.85));
+  pointer-events: none;
+}
+.about-copy p{ color: var(--fg); margin-top: 1.2rem; font-size: clamp(1rem, .3vw + .95rem, 1.12rem); }
+.usp-list{ margin-top: 2rem; display: grid; gap: .9rem; }
+.usp-list li{
+  position: relative;
+  padding: .9rem 1rem .9rem 2.2rem;
+  border-top: 1px dashed rgba(182,195,214,.4);
+  font-size: .98rem;
+  color: var(--fg);
+}
+.usp-list li::before{
+  content: '▸';
+  position: absolute; left: 0; top: .85rem;
+  color: var(--accent);
+}
+
+/* ============================= GALLERY ============================= */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 12vw;
+  gap: .6rem;
+}
+.gallery-item{ overflow: hidden; border-radius: 3px; position: relative; }
+.gallery-item img{
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s ease;
+}
+.gallery-item:hover img{ transform: scale(1.06); }
+.gallery-item.g1{ grid-column: span 3; grid-row: span 2; }
+.gallery-item.g2{ grid-column: span 3; grid-row: span 1; }
+.gallery-item.g3{ grid-column: span 3; grid-row: span 1; }
+.gallery-item.g4{ grid-column: span 2; grid-row: span 2; }
+.gallery-item.g5{ grid-column: span 2; grid-row: span 2; }
+.gallery-item.g6{ grid-column: span 2; grid-row: span 2; }
+.gallery-item.g7{ grid-column: span 3; grid-row: span 1; }
+.gallery-item.g8{ grid-column: span 3; grid-row: span 1; }
+@media (max-width: 900px){
+  .gallery-grid{ grid-template-columns: repeat(2, 1fr); grid-auto-rows: 32vw; }
+  .gallery-item{ grid-column: span 1 !important; grid-row: span 1 !important; }
+}
+
+/* ============================= MENU / GETRÄNKE ============================= */
+.menu-section{ background: var(--surface); }
+.menu-intro{ display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
+.ticket-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.6rem 0;
+  border-top: 1px dashed rgba(182,195,214,.4);
+}
+.ticket-row:last-of-type{ border-bottom: 1px dashed rgba(182,195,214,.4); }
+.ticket-name{ font-family: var(--font-display); letter-spacing: .02em; font-size: clamp(1.3rem, 1.6vw + .7rem, 1.9rem); text-transform: uppercase; }
+.ticket-desc{ color: var(--muted); margin-top: .3rem; font-size: .96rem; }
+.ticket-price{
+  font-family: var(--font-mono); font-weight: 700; color: var(--accent);
+  font-size: clamp(1.1rem, 1vw + .8rem, 1.4rem);
+  border: 1px solid var(--accent);
+  padding: .5em 1em;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.ticket-price-label{ display: block; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .3em; text-align: center; }
+.promo-graphic{ margin-top: 2.5rem; max-width: 340px; }
+.promo-graphic img{ width: 100%; border-radius: 4px; }
+
+/* ============================= COMPOSER (event enquiry) ============================= */
+.composer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+.composer-form{ display: grid; gap: 1.3rem; }
+.field{ display: grid; gap: .5rem; }
+.field label{ font-family: var(--font-mono); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.field select, .field input{
+  background: var(--surface);
+  border: 1px solid rgba(182,195,214,.4);
+  color: var(--fg);
+  padding: .8em 1em;
+  border-radius: 2px;
+  width: 100%;
+}
+.field select:focus, .field input:focus{ border-color: var(--accent); }
+.composer-preview{
+  background: var(--surface);
+  border: 1px solid rgba(230,212,184,.25);
+  border-radius: 4px;
+  padding: 1.6rem;
+  position: relative;
+}
+.composer-preview::before{
+  content: 'Vorschau der Anfrage';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+#composerText{
+  width: 100%;
+  min-height: 220px;
+  background: transparent;
+  border: none;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: .92rem;
+  line-height: 1.7;
+  resize: vertical;
+}
+.composer-ctas{ margin-top: 1.4rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ============================= LOCATION ============================= */
+.location-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+.hours-table{ width: 100%; border-collapse: collapse; margin-top: 1.4rem; }
+.hours-table td{ padding: .7rem 0; border-top: 1px dashed rgba(182,195,214,.4); font-family: var(--font-mono); font-size: .95rem; }
+.hours-table td:last-child{ text-align: right; color: var(--accent); }
+.map-frame{ border-radius: 4px; overflow: hidden; border: 1px solid rgba(230,212,184,.2); aspect-ratio: 4/3; }
+.map-frame iframe{ width: 100%; height: 100%; border: 0; }
+.contact-list{ margin-top: 1.6rem; display: grid; gap: .6rem; font-size: 1rem; }
+.contact-list a:hover{ color: var(--accent); }
+
+/* ============================= FOOTER ============================= */
+footer{
+  background: var(--surface);
+  border-top: 1px solid rgba(230,212,184,.15);
+  padding-block: 3rem clamp(5.5rem, 8vw, 3rem);
+}
+.footer-grid{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+.footer-note{ margin-top: 2.5rem; color: var(--muted); font-size: .82rem; font-family: var(--font-mono); }
+.footer-logo img{ height: 34px; opacity: .85; }
+
+/* ============================= STICKY MOBILE BAR ============================= */
+.sticky-call{
+  display: none;
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  background: var(--accent);
+  color: #1c1305;
+  padding: .9rem var(--edge);
+  align-items: center; justify-content: center; gap: .6rem;
+  font-family: var(--font-mono); font-weight: 700; letter-spacing: .04em;
+  box-shadow: 0 -6px 20px rgba(0,0,0,.35);
+}
+@media (max-width: 640px){ .sticky-call{ display: flex; } body{ padding-bottom: 3.6rem; } }
+
+/* ============================= RESPONSIVE ============================= */
+@media (max-width: 900px){
+  .about-grid, .composer, .location-grid{ grid-template-columns: 1fr; }
+  .about-photo{ order: -1; aspect-ratio: 16/10; }
+}
+@media (max-width: 480px){
+  .hero-title{ font-size: clamp(2.6rem, 15vw, 4.2rem); }
+  .ticket-row{ grid-template-columns: 1fr; }
+  .ticket-price{ justify-self: start; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">AQUARIUS<span>.</span></a>
+    <nav class="primary-nav" id="primaryNav">
+      <ul>
+        <li><a href="#konzept">Konzept</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#getraenke">Getränke</a></li>
+        <li><a href="#anlass">Anlässe</a></li>
+        <li><a href="#standort">Standort</a></li>
+      </ul>
+    </nav>
+    <div class="nav-call">
+      <a class="btn btn-ghost" href="tel:+41522034444">+41 52 203 44 44</a>
+      <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü öffnen">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================= HERO — typographic, no photo ============================= -->
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-content">
+      <p class="hero-eyebrow">Foyer · Kiwi Kinos · Neumarkt</p>
+      <h1 class="hero-title">AQUARIUS<br><span class="line2">KINOBAR</span></h1>
+      <p class="hero-tagline">Kinobar &amp; Lounges im Herzen von Winterthur.</p>
+      <p class="hero-meta">
+        <span><strong>Neumarkt 11</strong>, 8400 Winterthur</span>
+        <span>Cocktails mit Kino-Ticket-Rabatt</span>
+      </p>
+      <div class="rating-stub">
+        <span class="stars">★★★★</span>
+        <span>4.1 · 168 Google-Bewertungen</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+41522034444">Tisch reservieren</a>
+        <a class="btn btn-ghost" href="#anlass">Anlass anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= MARQUEE STATUS STRIP (signature module 1) ============================= -->
+  <div class="marquee-strip" aria-live="polite">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+
+  <!-- ============================= ABOUT / KONZEPT ============================= -->
+  <section id="konzept">
+    <div class="wrap about-grid reveal">
+      <div class="about-photo">
+        <img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-4-2.jpg" alt="Bar-Lounge im Aquarius Kinobar mit warmer Beleuchtung" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Das Konzept</p>
+        <h2 class="section-title">Ein Foyer, das zur Bar wird</h2>
+        <p>Aquarius Kinobar ist eine stilvolle Bar im Foyer des Kino Kiwi Centers am Neumarkt. Mit verschiedenen Lounges, Terrasse und Barhoek bietet sie einen eleganten Treffpunkt mit Capacitäten für Gruppen. Das Lokal ist bekannt für Cocktails und als Veranstaltungsort mit besonderem Kino-Bar-Konzept.</p>
+        <ul class="usp-list">
+          <li>Integriert ins Kiwi Kinos-Foyer mit Kino-Erlebnis</li>
+          <li>Mehrere Lounge-Bereiche und Terrassem</li>
+          <li>Zentrums-Lage am Neumarkt</li>
+          <li>Cocktails mit Kino-Ticket-Rabatt</li>
+          <li>Raucher- und Nichtraucher-Bereiche</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= GALLERY ============================= -->
+  <section id="galerie">
+    <div class="wrap reveal">
+      <p class="eyebrow">Impressionen</p>
+      <h2 class="section-title">Lounges, Terrasse, Saal</h2>
+      <div class="gallery-grid" style="margin-top:2.4rem;">
+        <figure class="gallery-item g1"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-10.jpg" alt="Lounge-Bereich der Aquarius Kinobar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g2"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-8.jpg" alt="Barbereich mit Gästen" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g3"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Maedelsabend-Elvis-220622-05.jpg" alt="Veranstaltung in der Aquarius Kinobar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g4"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-6.jpg" alt="Sitzbereich der Bar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g5"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-230906-7.jpg" alt="Innenraum mit Lounge-Möbeln" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g6"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-Garten-2023-01-800.jpg" alt="Garten der Aquarius Kinobar" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g7"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-Terrasse-2.jpg" alt="Terrasse am Neumarkt" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+        <figure class="gallery-item g8"><img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aquarius-Terrasse-3.jpg" alt="Terrassensitzplätze" loading="lazy" onerror="this.closest('.gallery-item').style.display='none'"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= MENU / GETRÄNKE ============================= -->
+  <section id="getraenke" class="menu-section">
+    <div class="wrap reveal">
+      <div class="menu-intro">
+        <div>
+          <p class="eyebrow">Cocktails</p>
+          <h2 class="section-title">Zur Vorstellung, ermässigt</h2>
+          <p class="section-lede">Mit gültigem Kino-Ticket gibt es Rabatt auf die Cocktailkarte.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:2.4rem;">
+        <div class="ticket-row">
+          <div>
+            <p class="ticket-name">Cocktails mit Kino-Ticket-Rabatt</p>
+            <p class="ticket-desc">CHF 3 Rabatt auf alle Cocktails</p>
+          </div>
+          <div>
+            <span class="ticket-price-label">Ermässigung</span>
+            <span class="ticket-price">CHF -3.00</span>
+          </div>
+        </div>
+        <div class="ticket-row">
+          <div>
+            <p class="ticket-name">Margarita</p>
+            <p class="ticket-desc">1-Liter, CHF 6 Rabatt mit Kino-Ticket</p>
+          </div>
+          <div>
+            <span class="ticket-price-label">Ermässigung</span>
+            <span class="ticket-price">CHF -6.00</span>
+          </div>
+        </div>
+      </div>
+
+      <figure class="promo-graphic">
+        <img src="https://www.aquariusbar.ch/wp-content/uploads/2023/09/Aqua-Cocktails-Ermaessigung-Web.png" alt="Übersicht Cocktail-Ermässigung mit Kino-Ticket" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================= COMPOSER — event enquiry (signature module 2) ============================= -->
+  <section id="anlass">
+    <div class="wrap reveal">
+      <p class="eyebrow">Anlässe &amp; Gruppen</p>
+      <h2 class="section-title">Euer Anlass im Foyer</h2>
+      <p class="section-lede">Lounges, Terrasse und Barhoek lassen sich für Gruppen und Anlässe nutzen. Wählt Anlass und Gruppengrösse — wir bauen euch daraus eine Anfrage, bereit zum Versenden.</p>
+
+      <div class="composer" style="margin-top:2.6rem;">
+        <div class="composer-form">
+          <div class="field">
+            <label for="occasion">Art des Anlasses</label>
+            <select id="occasion">
+              <option value="Firmenapéro">Firmenapéro</option>
+              <option value="Geburtstag">Geburtstag</option>
+              <option value="Teamanlass">Teamanlass</option>
+              <option value="Filmvorführung mit Apéro">Filmvorführung mit Apéro</option>
+              <option value="Weihnachtsfeier">Weihnachtsfeier</option>
+              <option value="Anderer Anlass">Anderer Anlass</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="headcount">Ungefähre Gruppengrösse</label>
+            <select id="headcount">
+              <option value="bis 10 Personen">bis 10 Personen</option>
+              <option value="10–20 Personen">10–20 Personen</option>
+              <option value="20–40 Personen">20–40 Personen</option>
+              <option value="40+ Personen">40+ Personen</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="evdate">Wunschdatum (optional)</label>
+            <input type="date" id="evdate">
+          </div>
+          <div class="field">
+            <label for="evname">Name (optional)</label>
+            <input type="text" id="evname" placeholder="Für die Anrede in der Anfrage">
+          </div>
+          <div class="composer-ctas">
+            <a class="btn btn-primary" id="mailCta" href="mailto:info@aquariusbar.ch">Per E-Mail anfragen</a>
+            <a class="btn btn-ghost" href="tel:+41522034444">Direkt anrufen</a>
+          </div>
+        </div>
+
+        <div class="composer-preview">
+          <textarea id="composerText" readonly></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= LOCATION ============================= -->
+  <section id="standort">
+    <div class="wrap location-grid reveal">
+      <div>
+        <p class="eyebrow">Standort</p>
+        <h2 class="section-title">Am Neumarkt, mitten in Winterthur</h2>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Mo–Di</td><td>Geschlossen</td></tr>
+            <tr><td>Mi–Do</td><td>17:00–23:00</td></tr>
+            <tr><td>Fr</td><td>17:00–01:00</td></tr>
+            <tr><td>Sa</td><td>18:00–01:00</td></tr>
+            <tr><td>So</td><td>16:00–22:00</td></tr>
+          </tbody>
+        </table>
+        <div class="contact-list">
+          <a href="https://maps.google.com/maps?q=Aquarius%20Kinobar%20Winterthur&z=16" target="_blank" rel="noopener">Neumarkt 11, 8400 Winterthur</a>
+          <a href="tel:+41522034444">+41 52 203 44 44</a>
+          <a href="mailto:info@aquariusbar.ch">info@aquariusbar.ch</a>
+          <a href="https://www.facebook.com/AQUARIUSBARLOUNGE/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Aquarius%20Kinobar%20Winterthur&amp;z=16&amp;output=embed" title="Karte: Aquarius Kinobar, Neumarkt 11, Winterthur" loading="lazy" onerror="this.parentElement.style.display='none'"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="https://www.aquariusbar.ch/wp-content/uploads/2021/08/aquarius-logo-inv-210705-600px.png" alt="Aquarius Kinobar Logo" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div class="contact-list">
+        <span>Neumarkt 11, 8400 Winterthur</span>
+        <a href="tel:+41522034444">+41 52 203 44 44</a>
+        <a href="mailto:info@aquariusbar.ch">info@aquariusbar.ch</a>
+        <a href="https://www.facebook.com/AQUARIUSBARLOUNGE/" target="_blank" rel="noopener">facebook.com/AQUARIUSBARLOUNGE</a>
+      </div>
+    </div>
+    <p class="footer-note">Design-Vorschlag · unverbindliches Muster</p>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+41522034444">☎ Jetzt anrufen — +41 52 203 44 44</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- nav toggle ---------- */
+  var hamburger = document.getElementById('hamburgerBtn');
+  var nav = document.getElementById('primaryNav');
+  if(hamburger && nav){
+    hamburger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ nav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ================= MARQUEE STATUS — derived from hours in JSON ================= */
+  // windows in weekly minutes, Monday=0 .. Sunday=6, matching the hours table verbatim
+  var windows = [
+    { day: 'Mi', open: '17:00', close: '23:00', start: 2*1440 + 17*60, end: 2*1440 + 23*60 },
+    { day: 'Do', open: '17:00', close: '23:00', start: 3*1440 + 17*60, end: 3*1440 + 23*60 },
+    { day: 'Fr', open: '17:00', close: '01:00', start: 4*1440 + 17*60, end: 5*1440 + 1*60 },
+    { day: 'Sa', open: '18:00', close: '01:00', start: 5*1440 + 18*60, end: 6*1440 + 1*60 },
+    { day: 'So', open: '16:00', close: '22:00', start: 6*1440 + 16*60, end: 6*1440 + 22*60 }
+  ];
+  var WEEK = 7*1440;
+
+  function pad(n){ return n < 10 ? '0'+n : ''+n; }
+
+  function computeStatus(){
+    var now = new Date();
+    var dow = (now.getDay() + 6) % 7; // Mon=0..Sun=6
+    var nowMin = dow*1440 + now.getHours()*60 + now.getMinutes();
+
+    for(var i=0;i<windows.length;i++){
+      var w = windows[i];
+      if(nowMin >= w.start && nowMin < w.end){
+        var remaining = w.end - nowMin;
+        return { open: true, closeAt: w.close, remaining: remaining };
+      }
+    }
+    // find next opening
+    var best = null, bestDelta = Infinity;
+    for(var j=0;j<windows.length;j++){
+      var w2 = windows[j];
+      var delta = w2.start - nowMin;
+      if(delta < 0) delta += WEEK;
+      if(delta < bestDelta){ bestDelta = delta; best = w2; }
+    }
+    return { open: false, nextDay: best.day, nextOpen: best.open };
+  }
+
+  function renderMarquee(){
+    var track = document.getElementById('marqueeTrack');
+    if(!track) return;
+    var s = computeStatus();
+    var statusText;
+    if(s.open){
+      var h = Math.floor(s.remaining/60), m = s.remaining%60;
+      statusText = 'Jetzt geöffnet — schliesst um ' + s.closeAt + ' Uhr (' + h + 'h ' + pad(m) + 'min)';
+    } else {
+      statusText = 'Aktuell geschlossen — öffnet ' + s.nextDay + ' um ' + s.nextOpen + ' Uhr';
+    }
+    var items = [
+      statusText,
+      'Mi–Do 17:00–23:00',
+      'Fr 17:00–01:00',
+      'Sa 18:00–01:00',
+      'So 16:00–22:00',
+      'Neumarkt 11, Winterthur'
+    ];
+    var cls = s.open ? 'status-open' : 'status-closed';
+    var html = '<span class="'+cls+'">'+items[0]+'</span>';
+    for(var k=1;k<items.length;k++){ html += '<span>'+items[k]+'</span>'; }
+    // duplicate the sequence for a seamless scroll loop
+    track.innerHTML = html + html;
+  }
+  renderMarquee();
+  setInterval(renderMarquee, 60000);
+
+  /* ================= EVENT-ENQUIRY COMPOSER ================= */
+  var occasionEl = document.getElementById('occasion');
+  var headcountEl = document.getElementById('headcount');
+  var dateEl = document.getElementById('evdate');
+  var nameEl = document.getElementById('evname');
+  var textEl = document.getElementById('composerText');
+  var mailCta = document.getElementById('mailCta');
+
+  function formatDate(iso){
+    if(!iso) return '';
+    var parts = iso.split('-');
+    if(parts.length !== 3) return iso;
+    return parts[2] + '.' + parts[1] + '.' + parts[0];
+  }
+
+  function composeMessage(){
+    var occasion = occasionEl.value;
+    var headcount = headcountEl.value;
+    var date = formatDate(dateEl.value);
+    var name = nameEl.value.trim();
+
+    var greeting = 'Guten Tag';
+    var lines = [];
+    lines.push(greeting);
+    lines.push('');
+    lines.push('Wir möchten gerne einen Anlass bei euch anfragen:');
+    lines.push('');
+    lines.push('Art des Anlasses: ' + occasion);
+    lines.push('Gruppengrösse: ' + headcount);
+    if(date) lines.push('Wunschdatum: ' + date);
+    lines.push('');
+    lines.push('Bitte meldet euch mit verfügbaren Optionen bei uns.');
+    lines.push('');
+    lines.push('Freundliche Grüsse');
+    if(name) lines.push(name);
+
+    var body = lines.join('\n');
+    textEl.value = body;
+
+    var subject = 'Anfrage Anlass — ' + occasion + ' (' + headcount + ')';
+    mailCta.href = 'mailto:info@aquariusbar.ch?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  [occasionEl, headcountEl, dateEl, nameEl].forEach(function(el){
+    if(el) el.addEventListener('input', composeMessage);
+  });
+  composeMessage();
+
+})();
+</script>
+</body>
+</html>
